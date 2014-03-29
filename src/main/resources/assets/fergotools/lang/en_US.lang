@@ -1,0 +1,111 @@
+itemGroup.tabFergoTools=Fergoman123's Tools: Tools
+itemGroup.tabFergoBlocks=Fergoman123's Tools: Blocks
+itemGroup.tabFergoFurnaces=Fergoman123's Tools: Furnaces
+itemGroup.tabFergoArmor=Fergoman123's Tools: Armor
+itemGroup.tabFergoItems=Fergoman123's Tools: Items
+
+item.quartzPickaxe.name=Quartz Pickaxe
+item.quartzShovel.name=Quartz Shovel
+item.quartzAxe.name=Quartz Axe
+item.quartzHoe.name=Quartz Hoe
+item.quartzSword.name=Quartz Sword
+
+item.obsidianPickaxe.name=Obsidian Pickaxe
+item.obsidianShovel.name=Obsidian Shovel
+item.obsidianAxe.name=Obsidian Axe
+item.obsidianHoe.name=Obsidian Hoe
+item.obsidianSword.name=Obsidian Sword
+
+item.emeraldPickaxe.name=Emerald Pickaxe
+item.emeraldShovel.name=Emerald Shovel
+item.emeraldAxe.name=Emerald Axe
+item.emeraldHoe.name=Emerald Hoe
+item.emeraldSword.name=Emerald Sword
+
+item.lapisPickaxe.name=Lapis Pickaxe
+item.lapisShovel.name=Lapis Shovel
+item.lapisAxe.name=Lapis Axe
+item.lapisHoe.name=Lapis Hoe
+item.lapisSword.name=Lapis Sword
+
+item.bronzePickaxe.name=Bronze Pickaxe
+item.bronzeShovel.name=Bronze Shovel
+item.bronzeAxe.name=Bronze Axe
+item.bronzeHoe.name=Bronze Hoe
+item.bronzeSword.name=Bronze Sword
+
+item.coalPickaxe.name=Coal Pickaxe
+item.coalShovel.name=Coal Shovel
+item.coalAxe.name=Coal Axe
+item.coalHoe.name=Coal Hoe
+item.coalSword.name=Coal Sword
+
+item.glowstonePickaxe.name=Glowstone Pickaxe
+item.glowstoneShovel.name=Glowstone Shovel
+item.glowstoneAxe.name=Glowstone Axe
+item.glowstoneHoe.name=Glowstone Hoe
+item.glowstoneSword.name=Glowstone Sword
+
+item.adamantiumPickaxe.name=Adamantium Pickaxe
+item.adamantiumShovel.name=Adamantium Shovel
+item.adamantiumAxe.name=Adamantium Axe
+item.adamantiumHoe.name=Adamantium Hoe
+item.adamantiumSword.name=Adamantium Sword
+
+item.expShard.name=Experience Shard
+item.ingotObsidian.name=Obsidian Ingot
+item.emeraldCrystal.name=Emerald Crystal
+item.lapisCrystal.name=Lapis Crystal
+item.ingotBronze.name=Bronze Ingot
+item.ingotCoal.name=Coal Ingot
+item.ingotGlowstone.name=Glowstone Ingot
+item.ingotAdamantium.name=Adamantium Ingot
+
+item.quartzHelmet.name=Quartz Helmet
+item.quartzChestplate.name=Quartz Chestplate
+item.quartzLeggings.name=Quartz Leggings
+item.quartzBoots.name=Quartz Boots
+
+item.emeraldHelmet.name=Emerald Helmet
+item.emeraldChestplate.name=Emerald Chestplate
+item.emeraldLeggings.name=Emerald Leggings
+item.emeraldBoots.name=Emerald Boots
+
+item.lapisHelmet.name=Lapis Helmet
+item.lapisChestplate.name=Lapis Chestplate
+item.lapisLeggings.name=Lapis Leggings
+item.lapisBoots.name=Lapis Boots
+
+tile.oreExperience.name=Experience Ore
+tile.oreObsidian.name=Obsidian Ore
+tile.oreEmeraldCrystal.name=Emerald Crystal Ore
+tile.oreLapisCrystal.name=Lapis Crystal Ore
+tile.oreBronze.name=Bronze Ore
+tile.oreAdamantium.name=Adamantium Ore
+
+tile.blockExperience.name=Experience Block
+tile.blockObsidian.name=Obsidian Block
+tile.blockEmeraldCrystal.name=Emerald Crystal Block
+tile.blockLapisCrystal.name=Lapis Crystal Block
+tile.blockBronze.name=Bronze Block
+tile.blockCoal.name=Coal Block
+tile.blockGlowstone.name=Glowstone Block
+tile.blockAdamantium.name=Adamantium Block
+
+tile.quartzFurnaceIdle.name=Quartz Furnace
+tile.obsidianFurnaceIdle.name=Obsidian Furnace
+tile.emeraldCrystalFurnaceIdle.name=Emerald Crystal Furnace
+tile.lapisCrystalFurnaceIdle.name=Lapis Crystal Furnace
+tile.bronzeFurnaceIdle.name=Bronze Furnace
+tile.coalFurnaceIdle.name=Coal Furnace
+tile.glowstoneFurnaceIdle.name=Glowstone Furnace
+tile.adamantiumFurnaceIdle.name=Adamantium Furnace
+
+container.quartzFurnace=Quartz Furnace
+container.obsidianFurnace=Obsidian Furnace
+container.emeraldCrystalFurnace=Emerald Crystal Furnace
+container.lapisCrystalFurnace=Lapis Crystal Furnace
+container.bronzeFurnace=Bronze Furnace
+container.coalFurnace=Coal Furnace
+container.glowstoneFurnace=Glowstone Furnace
+container.adamantiumFurnace=Adamantium Furnace

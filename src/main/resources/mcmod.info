@@ -1,0 +1,16 @@
+[
+{
+  "modid": "FergoTools",
+  "name": "Fergoman123's Tools",
+  "description": "Adds new Tools, Armor and Furnaces",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["Fergoman123"],
+  "credits": "by Michael 'Fergoman123' Ferguson",
+  "logoFile": "/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
