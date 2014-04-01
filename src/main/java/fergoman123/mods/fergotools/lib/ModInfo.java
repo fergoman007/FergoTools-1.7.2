@@ -4,7 +4,7 @@ public class ModInfo {
 	
 	public static final String modid = "FergoTools";
     public static final String name = "Fergoman123's Tools";
-    public static final String version = "1.0.2";
+    public static final String version = "2.0.0";
     
     public static final String channel = modid;
     

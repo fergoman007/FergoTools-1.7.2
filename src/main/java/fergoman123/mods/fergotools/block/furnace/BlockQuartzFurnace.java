@@ -1,13 +1,7 @@
 package fergoman123.mods.fergotools.block.furnace;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.Strings;
-import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
-import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -24,8 +18,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import java.util.Random;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
+import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
 
 public class BlockQuartzFurnace extends BlockContainer
 {
@@ -106,7 +105,7 @@ public class BlockQuartzFurnace extends BlockContainer
     {
         this.blockIcon = par1IconRegister.registerIcon(FurnaceTextures.quartzFurnaceSide);
         this.iconFront = par1IconRegister.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.quartzFurnaceActive : FurnaceTextures.quartzFurnaceIdle));
-        this.iconTop = par1IconRegister.registerIcon(Reference.textureLoc + Strings.quartzFurnace[2]);
+        this.iconTop = par1IconRegister.registerIcon(FurnaceTextures.quartzFurnaceSide);
     }
    
     public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)

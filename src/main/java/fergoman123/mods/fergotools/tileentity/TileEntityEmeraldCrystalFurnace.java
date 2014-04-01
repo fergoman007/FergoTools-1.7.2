@@ -1,21 +1,27 @@
 package fergoman123.mods.fergotools.tileentity;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.block.furnace.BlockEmeraldCrystalFurnace;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.block.furnace.BlockEmeraldCrystalFurnace;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.lib.strings.TileStrings;
 
 /**
  * Created by Fergoman123 on 25/03/2014.
@@ -101,7 +107,7 @@ public class TileEntityEmeraldCrystalFurnace extends TileEntity implements ISide
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.containers[2];
+        return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containers[2];
     }
 
     public boolean hasCustomInventoryName()
@@ -117,7 +123,7 @@ public class TileEntityEmeraldCrystalFurnace extends TileEntity implements ISide
     public void readFromNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.readFromNBT(par1NBTTagCompound);
-        NBTTagList nbttaglist = par1NBTTagCompound.getTagList(Strings.items, 10);
+        NBTTagList nbttaglist = par1NBTTagCompound.getTagList(TileStrings.items, 10);
         this.slots = new ItemStack[this.getSizeInventory()];
 
         for (int i = 0; i < nbttaglist.tagCount(); ++i)

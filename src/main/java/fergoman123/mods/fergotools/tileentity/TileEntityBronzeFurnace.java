@@ -1,21 +1,27 @@
 package fergoman123.mods.fergotools.tileentity;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.block.furnace.BlockBronzeFurnace;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.block.furnace.BlockBronzeFurnace;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.lib.strings.TileStrings;
 
 public class TileEntityBronzeFurnace extends TileEntity implements
 		ISidedInventory {
@@ -82,7 +88,7 @@ public class TileEntityBronzeFurnace extends TileEntity implements
 	}
 
 	public String getInventoryName() {
-		return this.hasCustomInventoryName() ? this.localizedName : Strings.containers[4];
+		return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containers[4];
 	}
 
 	public boolean hasCustomInventoryName() {
@@ -95,43 +101,43 @@ public class TileEntityBronzeFurnace extends TileEntity implements
 
 	public void readFromNBT(NBTTagCompound tagCompound) {
 		super.readFromNBT(tagCompound);
-		NBTTagList list = tagCompound.getTagList(Strings.items, 10);
+		NBTTagList list = tagCompound.getTagList(TileStrings.items, 10);
 		this.slots = new ItemStack[this.getSizeInventory()];
 
 		for (int i = 0; i < list.tagCount(); ++i) {
 			NBTTagCompound compound = (NBTTagCompound) list.getCompoundTagAt(i);
-			byte b0 = compound.getByte(Strings.slot);
+			byte b0 = compound.getByte(TileStrings.slot);
 
 			if (b0 >= 0 && b0 < this.slots.length) {
 				this.slots[b0] = ItemStack.loadItemStackFromNBT(compound);
 			}
 		}
 
-		this.burnTime = tagCompound.getShort(Strings.burnTime);
-		this.cookTime = tagCompound.getShort(Strings.cookTime);
+		this.burnTime = tagCompound.getShort(TileStrings.burnTime);
+		this.cookTime = tagCompound.getShort(TileStrings.cookTime);
 		this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 
-		if (tagCompound.hasKey(Strings.customName)) {
-			this.localizedName = tagCompound.getString(Strings.customName);
+		if (tagCompound.hasKey(TileStrings.customName)) {
+			this.localizedName = tagCompound.getString(TileStrings.customName);
 		}
 	}
 
 	public void writeToNBT(NBTTagCompound tagCompound) {
 		super.writeToNBT(tagCompound);
-		tagCompound.setShort(Strings.burnTime, (short) this.burnTime);
-		tagCompound.setShort(Strings.cookTime, (short) this.cookTime);
+		tagCompound.setShort(TileStrings.burnTime, (short) this.burnTime);
+		tagCompound.setShort(TileStrings.cookTime, (short) this.cookTime);
 		NBTTagList list = new NBTTagList();
 
 		for (int i = 0; i < this.slots.length; ++i) {
 			if (this.slots[i] != null) {
 				NBTTagCompound compound = new NBTTagCompound();
-				compound.setByte(Strings.slot, (byte) i);
+				compound.setByte(TileStrings.slot, (byte) i);
 				this.slots[i].writeToNBT(compound);
 				list.appendTag(compound);
 			}
 		}
 
-		tagCompound.setTag(Strings.items, list);
+		tagCompound.setTag(TileStrings.items, list);
 	}
 
 	public int getInventoryStackLimit() {

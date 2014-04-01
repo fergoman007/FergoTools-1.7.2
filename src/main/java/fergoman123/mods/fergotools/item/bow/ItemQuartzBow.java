@@ -1,9 +1,5 @@
 package fergoman123.mods.fergotools.item.bow;
 
-import scala.Predef.ArrowAssoc;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import static cpw.mods.fml.relauncher.Side.CLIENT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
@@ -19,16 +15,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.lib.textures.BowTextures;
 
 public class ItemQuartzBow extends ItemBow {
 	
-	public static final String[] pullArray = new String[]{"_1", "_2", ""};
+	public static final String[] pullArray = new String[]{"_1", "_2", "_3"};
 	
 	@SideOnly(CLIENT)
-	private IIcon[] texture;
-	
-	public static String unlocalizedName = Strings.bows[0];
-	
+	private IIcon[] texture = new IIcon[3];
 	public ItemQuartzBow()
 	{
 		super();
@@ -146,12 +141,12 @@ public class ItemQuartzBow extends ItemBow {
 	
 	public void registerIcons(IIconRegister register)
 	{
-		this.itemIcon = register.registerIcon(Reference.textureLoc + this.unlocalizedName + "_0");
+		this.itemIcon = register.registerIcon(BowTextures.quartzBowStandy);
 		this.texture = new IIcon[pullArray.length];
-		for(int i = 0; i < this.texture.length; ++i)
-		{
-			this.texture[i] = register.registerIcon(Reference.textureLoc + this.unlocalizedName + "_" + i);
-		}
+		
+		this.texture[0] = register.registerIcon(BowTextures.quartzBowPull1);
+		this.texture[1] = register.registerIcon(BowTextures.quartzBowPull2);
+		this.texture[2] = register.registerIcon(BowTextures.quartzBowPull3);
 	}
 	
 	public IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining)

@@ -1,14 +1,16 @@
 package fergoman123.mods.fergotools.gui;
 
-import fergoman123.mods.fergotools.gui.container.ContainerEmeraldCrystalFurnace;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.Strings;
-import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
+
+import fergoman123.mods.fergotools.gui.container.ContainerEmeraldCrystalFurnace;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
 
 /**
  * Created by Fergoman123 on 25/03/2014.
@@ -16,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 public class GuiEmeraldCrystalFurnace extends GuiContainer{
 
     private Object[] obj = new Object[0];
-    private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + Strings.furnaceGuiTexture);
+    private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + GuiStrings.furnaceGuiTexture);
     private TileEntityEmeraldCrystalFurnace furnace;
 
     public GuiEmeraldCrystalFurnace(InventoryPlayer player, TileEntityEmeraldCrystalFurnace furnace)

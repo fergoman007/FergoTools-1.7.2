@@ -1,16 +1,29 @@
 package fergoman123.mods.fergotools.handler;
 
+import static fergoman123.mods.fergotools.util.RegisterUtil.registerBlock;
+import static fergoman123.mods.fergotools.util.RegisterUtil.registerGuiHandler;
+import static fergoman123.mods.fergotools.util.RegisterUtil.registerItem;
+import static fergoman123.mods.fergotools.util.RegisterUtil.registerTileEntity;
+import static fergoman123.mods.fergotools.util.RegisterUtil.registerWorldGenerator;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ModBlocks;
 import fergoman123.mods.fergotools.item.ModItems;
-import fergoman123.mods.fergotools.lib.strings.Strings;
-import fergoman123.mods.fergotools.tileentity.*;
+import fergoman123.mods.fergotools.lib.strings.ArmorStrings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
+import fergoman123.mods.fergotools.lib.strings.BowStrings;
+import fergoman123.mods.fergotools.lib.strings.FurnaceStrings;
+import fergoman123.mods.fergotools.lib.strings.ItemStrings;
+import fergoman123.mods.fergotools.lib.strings.TileStrings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityCoalFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityGlowstoneFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityObsidianFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
 
-import static fergoman123.mods.fergotools.util.RegisterUtil.*;
-
-/**
- * Created by Fergoman123 on 17/03/14.
- */
 public class RegHandler {
 
     public static GuiHandler handler = new GuiHandler();
@@ -18,155 +31,163 @@ public class RegHandler {
 
     public static void registerBlocks()
     {
-        registerBlock(ModBlocks.oreExperience, Strings.ores[0]);
-        registerBlock(ModBlocks.oreObsidian, Strings.ores[1]);
-        registerBlock(ModBlocks.oreEmeraldCrystal, Strings.ores[2]);
-        registerBlock(ModBlocks.oreLapisCrystal, Strings.ores[3]);
-        registerBlock(ModBlocks.oreBronze, Strings.ores[4]);
-        registerBlock(ModBlocks.oreAdamantium, Strings.ores[5]);
+        registerBlock(ModBlocks.oreExperience, BlockStrings.ores[0]);
+        registerBlock(ModBlocks.oreObsidian, BlockStrings.ores[1]);
+        registerBlock(ModBlocks.oreEmeraldCrystal, BlockStrings.ores[2]);
+        registerBlock(ModBlocks.oreLapisCrystal, BlockStrings.ores[3]);
+        registerBlock(ModBlocks.oreBronze, BlockStrings.ores[4]);
+        registerBlock(ModBlocks.oreAdamantium, BlockStrings.ores[5]);
 
-        registerBlock(ModBlocks.blockExperience, Strings.blocks[0]);
-        registerBlock(ModBlocks.blockObsidian, Strings.blocks[1]);
-        registerBlock(ModBlocks.blockEmeraldCrystal, Strings.blocks[2]);
-        registerBlock(ModBlocks.blockLapisCrystal, Strings.blocks[3]);
-        registerBlock(ModBlocks.blockBronze, Strings.blocks[4]);
-        registerBlock(ModBlocks.blockCoal, Strings.blocks[5]);
-        registerBlock(ModBlocks.blockGlowstone, Strings.blocks[6]);
-        registerBlock(ModBlocks.blockAdamantium, Strings.blocks[7]);
+        registerBlock(ModBlocks.blockExperience, BlockStrings.blocks[0]);
+        registerBlock(ModBlocks.blockObsidian, BlockStrings.blocks[1]);
+        registerBlock(ModBlocks.blockEmeraldCrystal, BlockStrings.blocks[2]);
+        registerBlock(ModBlocks.blockLapisCrystal, BlockStrings.blocks[3]);
+        registerBlock(ModBlocks.blockBronze, BlockStrings.blocks[4]);
+        registerBlock(ModBlocks.blockCoal, BlockStrings.blocks[5]);
+        registerBlock(ModBlocks.blockGlowstone, BlockStrings.blocks[6]);
+        registerBlock(ModBlocks.blockAdamantium, BlockStrings.blocks[7]);
+        registerBlock(ModBlocks.blockSilkGem, BlockStrings.blocks[8]);
 
-        registerBlock(ModBlocks.quartzFurnaceIdle, Strings.quartzFurnace[0]);
-        registerBlock(ModBlocks.obsidianFurnaceIdle, Strings.obsidianFurnace[0]);
-        registerBlock(ModBlocks.emeraldCrystalFurnaceIdle, Strings.emeraldCrystalFurnace[0]);
-        registerBlock(ModBlocks.lapisCrystalFurnaceIdle, Strings.lapisCrystalFurnace[0]);
-        registerBlock(ModBlocks.bronzeFurnaceIdle, Strings.bronzeFurnace[0]);
-        registerBlock(ModBlocks.coalFurnaceIdle, Strings.coalFurnace[0]);
-        registerBlock(ModBlocks.glowstoneFurnaceIdle, Strings.glowstoneFurnace[0]);
-        registerBlock(ModBlocks.adamantiumFurnaceIdle, Strings.adamantiumFurnace[0]);
+        registerBlock(ModBlocks.quartzFurnaceIdle, FurnaceStrings.quartzFurnace[0]);
+        registerBlock(ModBlocks.obsidianFurnaceIdle, FurnaceStrings.obsidianFurnace[0]);
+        registerBlock(ModBlocks.emeraldCrystalFurnaceIdle, FurnaceStrings.emeraldCrystalFurnace[0]);
+        registerBlock(ModBlocks.lapisCrystalFurnaceIdle, FurnaceStrings.lapisCrystalFurnace[0]);
+        registerBlock(ModBlocks.bronzeFurnaceIdle, FurnaceStrings.bronzeFurnace[0]);
+        registerBlock(ModBlocks.coalFurnaceIdle, FurnaceStrings.coalFurnace[0]);
+        registerBlock(ModBlocks.glowstoneFurnaceIdle, FurnaceStrings.glowstoneFurnace[0]);
+        registerBlock(ModBlocks.adamantiumFurnaceIdle, FurnaceStrings.adamantiumFurnace[0]);
 
-        registerBlock(ModBlocks.quartzFurnaceActive, Strings.quartzFurnace[1]);
-        registerBlock(ModBlocks.obsidianFurnaceActive, Strings.obsidianFurnace[1]);
-        registerBlock(ModBlocks.emeraldCrystalFurnaceActive, Strings.emeraldCrystalFurnace[1]);
-        registerBlock(ModBlocks.lapisCrystalFurnaceActive, Strings.lapisCrystalFurnace[1]);
-        registerBlock(ModBlocks.bronzeFurnaceActive, Strings.bronzeFurnace[1]);
-        registerBlock(ModBlocks.coalFurnaceActive, Strings.coalFurnace[1]);
-        registerBlock(ModBlocks.glowstoneFurnaceActive, Strings.glowstoneFurnace[1]);
-        registerBlock(ModBlocks.adamantiumFurnaceActive, Strings.adamantiumFurnace[1]);
+        registerBlock(ModBlocks.quartzFurnaceActive, FurnaceStrings.quartzFurnace[1]);
+        registerBlock(ModBlocks.obsidianFurnaceActive, FurnaceStrings.obsidianFurnace[1]);
+        registerBlock(ModBlocks.emeraldCrystalFurnaceActive, FurnaceStrings.emeraldCrystalFurnace[1]);
+        registerBlock(ModBlocks.lapisCrystalFurnaceActive, FurnaceStrings.lapisCrystalFurnace[1]);
+        registerBlock(ModBlocks.bronzeFurnaceActive, FurnaceStrings.bronzeFurnace[1]);
+        registerBlock(ModBlocks.coalFurnaceActive, FurnaceStrings.coalFurnace[1]);
+        registerBlock(ModBlocks.glowstoneFurnaceActive, FurnaceStrings.glowstoneFurnace[1]);
+        registerBlock(ModBlocks.adamantiumFurnaceActive, FurnaceStrings.adamantiumFurnace[1]);
     }
 
     public static void registerTileEntities()
     {
-        registerTileEntity(TileEntityQuartzFurnace.class, Strings.tilePrefix + "QuartzFurnace");
-        registerTileEntity(TileEntityObsidianFurnace.class, Strings.tilePrefix + "ObsidianFurnace");
-        registerTileEntity(TileEntityEmeraldCrystalFurnace.class, Strings.tilePrefix + "EmeraldCrystalFurnace");
-        registerTileEntity(TileEntityLapisCrystalFurnace.class, Strings.tilePrefix + "LapisCrystalFurnace");
-        registerTileEntity(TileEntityBronzeFurnace.class, Strings.tilePrefix + "BronzeFurnace");
-        registerTileEntity(TileEntityCoalFurnace.class, Strings.tilePrefix + "CoalFurnace");
-        registerTileEntity(TileEntityGlowstoneFurnace.class, Strings.tilePrefix + "GlowstoneFurnace");
-        registerTileEntity(TileEntityAdamantiumFurnace.class, Strings.tilePrefix + "AdamantiumFurnace");
+        registerTileEntity(TileEntityQuartzFurnace.class, TileStrings.tilePrefix + "QuartzFurnace");
+        registerTileEntity(TileEntityObsidianFurnace.class, TileStrings.tilePrefix + "ObsidianFurnace");
+        registerTileEntity(TileEntityEmeraldCrystalFurnace.class, TileStrings.tilePrefix + "EmeraldCrystalFurnace");
+        registerTileEntity(TileEntityLapisCrystalFurnace.class, TileStrings.tilePrefix + "LapisCrystalFurnace");
+        registerTileEntity(TileEntityBronzeFurnace.class, TileStrings.tilePrefix + "BronzeFurnace");
+        registerTileEntity(TileEntityCoalFurnace.class, TileStrings.tilePrefix + "CoalFurnace");
+        registerTileEntity(TileEntityGlowstoneFurnace.class, TileStrings.tilePrefix + "GlowstoneFurnace");
+        registerTileEntity(TileEntityAdamantiumFurnace.class, TileStrings.tilePrefix + "AdamantiumFurnace");
     }
 
     public static void registerItems()
     {
-        registerItem(ModItems.quartzPickaxe, Strings.quartzTool[0]);
-        registerItem(ModItems.quartzShovel, Strings.quartzTool[1]);
-        registerItem(ModItems.quartzAxe, Strings.quartzTool[2]);
-        registerItem(ModItems.quartzHoe, Strings.quartzTool[3]);
-        registerItem(ModItems.quartzSword, Strings.quartzTool[4]);
+        registerItem(ModItems.quartzPickaxe, ToolStrings.quartzTool[0]);
+        registerItem(ModItems.quartzShovel, ToolStrings.quartzTool[1]);
+        registerItem(ModItems.quartzAxe, ToolStrings.quartzTool[2]);
+        registerItem(ModItems.quartzHoe, ToolStrings.quartzTool[3]);
+        registerItem(ModItems.quartzSword, ToolStrings.quartzTool[4]);
 
-        registerItem(ModItems.obsidianPickaxe, Strings.obsidianTool[0]);
-        registerItem(ModItems.obsidianShovel, Strings.obsidianTool[1]);
-        registerItem(ModItems.obsidianAxe, Strings.obsidianTool[2]);
-        registerItem(ModItems.obsidianHoe, Strings.obsidianTool[3]);
-        registerItem(ModItems.obsidianSword, Strings.obsidianTool[4]);
+        registerItem(ModItems.obsidianPickaxe, ToolStrings.obsidianTool[0]);
+        registerItem(ModItems.obsidianShovel, ToolStrings.obsidianTool[1]);
+        registerItem(ModItems.obsidianAxe, ToolStrings.obsidianTool[2]);
+        registerItem(ModItems.obsidianHoe, ToolStrings.obsidianTool[3]);
+        registerItem(ModItems.obsidianSword, ToolStrings.obsidianTool[4]);
 
-        registerItem(ModItems.emeraldPickaxe, Strings.emeraldTool[0]);
-        registerItem(ModItems.emeraldShovel, Strings.emeraldTool[1]);
-        registerItem(ModItems.emeraldAxe, Strings.emeraldTool[2]);
-        registerItem(ModItems.emeraldHoe, Strings.emeraldTool[3]);
-        registerItem(ModItems.emeraldSword, Strings.emeraldTool[4]);
+        registerItem(ModItems.emeraldPickaxe, ToolStrings.emeraldTool[0]);
+        registerItem(ModItems.emeraldShovel, ToolStrings.emeraldTool[1]);
+        registerItem(ModItems.emeraldAxe, ToolStrings.emeraldTool[2]);
+        registerItem(ModItems.emeraldHoe, ToolStrings.emeraldTool[3]);
+        registerItem(ModItems.emeraldSword, ToolStrings.emeraldTool[4]);
 
-        registerItem(ModItems.lapisPickaxe, Strings.lapisTool[0]);
-        registerItem(ModItems.lapisShovel, Strings.lapisTool[1]);
-        registerItem(ModItems.lapisAxe, Strings.lapisTool[2]);
-        registerItem(ModItems.lapisHoe, Strings.lapisTool[3]);
-        registerItem(ModItems.lapisSword, Strings.lapisTool[4]);
+        registerItem(ModItems.lapisPickaxe, ToolStrings.lapisTool[0]);
+        registerItem(ModItems.lapisShovel, ToolStrings.lapisTool[1]);
+        registerItem(ModItems.lapisAxe, ToolStrings.lapisTool[2]);
+        registerItem(ModItems.lapisHoe, ToolStrings.lapisTool[3]);
+        registerItem(ModItems.lapisSword, ToolStrings.lapisTool[4]);
 
-        registerItem(ModItems.bronzePickaxe, Strings.bronzeTool[0]);
-        registerItem(ModItems.bronzeShovel, Strings.bronzeTool[1]);
-        registerItem(ModItems.bronzeAxe, Strings.bronzeTool[2]);
-        registerItem(ModItems.bronzeHoe, Strings.bronzeTool[3]);
-        registerItem(ModItems.bronzeSword, Strings.bronzeTool[4]);
+        registerItem(ModItems.bronzePickaxe, ToolStrings.bronzeTool[0]);
+        registerItem(ModItems.bronzeShovel, ToolStrings.bronzeTool[1]);
+        registerItem(ModItems.bronzeAxe, ToolStrings.bronzeTool[2]);
+        registerItem(ModItems.bronzeHoe, ToolStrings.bronzeTool[3]);
+        registerItem(ModItems.bronzeSword, ToolStrings.bronzeTool[4]);
 
-        registerItem(ModItems.coalPickaxe, Strings.coalTool[0]);
-        registerItem(ModItems.coalShovel, Strings.coalTool[1]);
-        registerItem(ModItems.coalAxe, Strings.coalTool[2]);
-        registerItem(ModItems.coalHoe, Strings.coalTool[3]);
-        registerItem(ModItems.coalSword, Strings.coalTool[4]);
+        registerItem(ModItems.coalPickaxe, ToolStrings.coalTool[0]);
+        registerItem(ModItems.coalShovel, ToolStrings.coalTool[1]);
+        registerItem(ModItems.coalAxe, ToolStrings.coalTool[2]);
+        registerItem(ModItems.coalHoe, ToolStrings.coalTool[3]);
+        registerItem(ModItems.coalSword, ToolStrings.coalTool[4]);
 
-        registerItem(ModItems.glowstonePickaxe, Strings.glowstoneTool[0]);
-        registerItem(ModItems.glowstoneShovel, Strings.glowstoneTool[1]);
-        registerItem(ModItems.glowstoneAxe, Strings.glowstoneTool[2]);
-        registerItem(ModItems.glowstoneHoe, Strings.glowstoneTool[3]);
-        registerItem(ModItems.glowstoneSword, Strings.glowstoneTool[4]);
+        registerItem(ModItems.glowstonePickaxe, ToolStrings.glowstoneTool[0]);
+        registerItem(ModItems.glowstoneShovel, ToolStrings.glowstoneTool[1]);
+        registerItem(ModItems.glowstoneAxe, ToolStrings.glowstoneTool[2]);
+        registerItem(ModItems.glowstoneHoe, ToolStrings.glowstoneTool[3]);
+        registerItem(ModItems.glowstoneSword, ToolStrings.glowstoneTool[4]);
 
-        registerItem(ModItems.adamantiumPickaxe, Strings.adamantiumTool[0]);
-        registerItem(ModItems.adamantiumShovel, Strings.adamantiumTool[1]);
-        registerItem(ModItems.adamantiumAxe, Strings.adamantiumTool[2]);
-        registerItem(ModItems.adamantiumHoe, Strings.adamantiumTool[3]);
-        registerItem(ModItems.adamantiumSword, Strings.adamantiumTool[4]);
-
-        registerItem(ModItems.obsidianIngot, Strings.modItems[0]);
-        registerItem(ModItems.emeraldCrystal, Strings.modItems[1]);
-        registerItem(ModItems.lapisCrystal, Strings.modItems[2]);
-        registerItem(ModItems.bronzeIngot, Strings.modItems[3]);
-        registerItem(ModItems.coalIngot, Strings.modItems[4]);
-        registerItem(ModItems.glowstoneIngot, Strings.modItems[5]);
-        registerItem(ModItems.adamantiumIngot, Strings.modItems[6]);
-        registerItem(ModItems.expShard, Strings.modItems[7]);
-
-        registerItem(ModItems.quartzHelmet, Strings.quartzArmorKey[0]);
-        registerItem(ModItems.quartzChestplate, Strings.quartzArmorKey[1]);
-        registerItem(ModItems.quartzLeggings, Strings.quartzArmorKey[2]);
-        registerItem(ModItems.quartzBoots, Strings.quartzArmorKey[3]);
-
-        registerItem(ModItems.obsidianHelmet, Strings.obsidianArmorKey[0]);
-        registerItem(ModItems.obsidianChestplate, Strings.obsidianArmorKey[1]);
-        registerItem(ModItems.obsidianLeggings, Strings.obsidianArmorKey[2]);
-        registerItem(ModItems.obsidianBoots, Strings.obsidianArmorKey[3]);
-
-        registerItem(ModItems.emeraldHelmet, Strings.emeraldArmorKey[0]);
-        registerItem(ModItems.emeraldChestplate, Strings.emeraldArmorKey[1]);
-        registerItem(ModItems.emeraldLeggings, Strings.emeraldArmorKey[2]);
-        registerItem(ModItems.emeraldBoots, Strings.emeraldArmorKey[3]);
-
-        registerItem(ModItems.lapisHelmet, Strings.lapisArmorKey[0]);
-        registerItem(ModItems.lapisChestplate, Strings.lapisArmorKey[1]);
-        registerItem(ModItems.lapisLeggings, Strings.lapisArmorKey[2]);
-        registerItem(ModItems.lapisBoots, Strings.lapisArmorKey[3]);
-
-        registerItem(ModItems.bronzeHelmet, Strings.bronzeArmorKey[0]);
-        registerItem(ModItems.bronzeChestplate, Strings.bronzeArmorKey[1]);
-        registerItem(ModItems.bronzeLeggings, Strings.bronzeArmorKey[2]);
-        registerItem(ModItems.bronzeBoots, Strings.bronzeArmorKey[3]);
-
-        registerItem(ModItems.coalHelmet, Strings.coalArmorKey[0]);
-        registerItem(ModItems.coalChestplate, Strings.coalArmorKey[1]);
-        registerItem(ModItems.coalLeggings, Strings.coalArmorKey[2]);
-        registerItem(ModItems.coalBoots, Strings.coalArmorKey[3]);
-
-        registerItem(ModItems.glowstoneHelmet, Strings.glowstoneArmorKey[0]);
-        registerItem(ModItems.glowstoneChestplate, Strings.glowstoneArmorKey[1]);
-        registerItem(ModItems.glowstoneLeggings, Strings.glowstoneArmorKey[2]);
-        registerItem(ModItems.glowstoneBoots, Strings.glowstoneArmorKey[3]);
+        registerItem(ModItems.adamantiumPickaxe, ToolStrings.adamantiumTool[0]);
+        registerItem(ModItems.adamantiumShovel, ToolStrings.adamantiumTool[1]);
+        registerItem(ModItems.adamantiumAxe, ToolStrings.adamantiumTool[2]);
+        registerItem(ModItems.adamantiumHoe, ToolStrings.adamantiumTool[3]);
+        registerItem(ModItems.adamantiumSword, ToolStrings.adamantiumTool[4]);
         
-        registerItem(ModItems.quartzBow, Strings.bows[0]);
-//        registerItem(ModItems.obsidianBow, Strings.bows[1]);
-//        registerItem(ModItems.emeraldBow, Strings.bows[2]);
-//        registerItem(ModItems.lapisBow, Strings.bows[3]);
-//        registerItem(ModItems.bronzeBow, Strings.bows[4]);
-//        registerItem(ModItems.coalBow, Strings.bows[5]);
-//        registerItem(ModItems.glowstoneBow, Strings.bows[6]);
-//        registerItem(ModItems.adamantiumBow, Strings.bows[7]);
+        registerItem(ModItems.silkPickaxe, ToolStrings.silkTool[0]);
+        registerItem(ModItems.silkShovel, ToolStrings.silkTool[1]);
+        registerItem(ModItems.silkAxe, ToolStrings.silkTool[2]);
+        registerItem(ModItems.silkHoe, ToolStrings.silkTool[3]);
+        registerItem(ModItems.silkSword, ToolStrings.silkTool[4]);
+
+        registerItem(ModItems.obsidianIngot, ItemStrings.modItems[0]);
+        registerItem(ModItems.emeraldCrystal, ItemStrings.modItems[1]);
+        registerItem(ModItems.lapisCrystal, ItemStrings.modItems[2]);
+        registerItem(ModItems.bronzeIngot, ItemStrings.modItems[3]);
+        registerItem(ModItems.coalIngot, ItemStrings.modItems[4]);
+        registerItem(ModItems.glowstoneIngot, ItemStrings.modItems[5]);
+        registerItem(ModItems.adamantiumIngot, ItemStrings.modItems[6]);
+        registerItem(ModItems.expShard, ItemStrings.modItems[7]);
+        registerItem(ModItems.silkGem, ItemStrings.modItems[8]);
+
+        registerItem(ModItems.quartzHelmet, ArmorStrings.quartzArmorKey[0]);
+        registerItem(ModItems.quartzChestplate, ArmorStrings.quartzArmorKey[1]);
+        registerItem(ModItems.quartzLeggings, ArmorStrings.quartzArmorKey[2]);
+        registerItem(ModItems.quartzBoots, ArmorStrings.quartzArmorKey[3]);
+
+        registerItem(ModItems.obsidianHelmet, ArmorStrings.obsidianArmorKey[0]);
+        registerItem(ModItems.obsidianChestplate, ArmorStrings.obsidianArmorKey[1]);
+        registerItem(ModItems.obsidianLeggings, ArmorStrings.obsidianArmorKey[2]);
+        registerItem(ModItems.obsidianBoots, ArmorStrings.obsidianArmorKey[3]);
+
+        registerItem(ModItems.emeraldHelmet, ArmorStrings.emeraldArmorKey[0]);
+        registerItem(ModItems.emeraldChestplate, ArmorStrings.emeraldArmorKey[1]);
+        registerItem(ModItems.emeraldLeggings, ArmorStrings.emeraldArmorKey[2]);
+        registerItem(ModItems.emeraldBoots, ArmorStrings.emeraldArmorKey[3]);
+
+        registerItem(ModItems.lapisHelmet, ArmorStrings.lapisArmorKey[0]);
+        registerItem(ModItems.lapisChestplate, ArmorStrings.lapisArmorKey[1]);
+        registerItem(ModItems.lapisLeggings, ArmorStrings.lapisArmorKey[2]);
+        registerItem(ModItems.lapisBoots, ArmorStrings.lapisArmorKey[3]);
+
+        registerItem(ModItems.bronzeHelmet, ArmorStrings.bronzeArmorKey[0]);
+        registerItem(ModItems.bronzeChestplate, ArmorStrings.bronzeArmorKey[1]);
+        registerItem(ModItems.bronzeLeggings, ArmorStrings.bronzeArmorKey[2]);
+        registerItem(ModItems.bronzeBoots, ArmorStrings.bronzeArmorKey[3]);
+
+        registerItem(ModItems.coalHelmet, ArmorStrings.coalArmorKey[0]);
+        registerItem(ModItems.coalChestplate, ArmorStrings.coalArmorKey[1]);
+        registerItem(ModItems.coalLeggings, ArmorStrings.coalArmorKey[2]);
+        registerItem(ModItems.coalBoots, ArmorStrings.coalArmorKey[3]);
+
+        registerItem(ModItems.glowstoneHelmet, ArmorStrings.glowstoneArmorKey[0]);
+        registerItem(ModItems.glowstoneChestplate, ArmorStrings.glowstoneArmorKey[1]);
+        registerItem(ModItems.glowstoneLeggings, ArmorStrings.glowstoneArmorKey[2]);
+        registerItem(ModItems.glowstoneBoots, ArmorStrings.glowstoneArmorKey[3]);
+        
+        registerItem(ModItems.quartzBow, BowStrings.bows[0]);
+        registerItem(ModItems.obsidianBow, BowStrings.bows[1]);
+        registerItem(ModItems.emeraldBow, BowStrings.bows[2]);
+        registerItem(ModItems.lapisBow, BowStrings.bows[3]);
+        registerItem(ModItems.bronzeBow, BowStrings.bows[4]);
+        registerItem(ModItems.coalBow, BowStrings.bows[5]);
+        registerItem(ModItems.glowstoneBow, BowStrings.bows[6]);
+        registerItem(ModItems.adamantiumBow, BowStrings.bows[7]);
 
     }
 

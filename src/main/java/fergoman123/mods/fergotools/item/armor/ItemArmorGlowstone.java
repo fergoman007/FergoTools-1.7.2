@@ -1,10 +1,11 @@
-package fergoman123.mods.fergotools.item;
+package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.item.ModItems;
+import fergoman123.mods.fergotools.lib.strings.ArmorStrings;
 
 public class ItemArmorGlowstone extends ItemArmor {
 	
@@ -17,12 +18,12 @@ public class ItemArmorGlowstone extends ItemArmor {
 	{
 		if(stack.getItem() == ModItems.glowstoneHelmet || stack.getItem() == ModItems.glowstoneChestplate || stack.getItem() == ModItems.glowstoneBoots)
 		{
-			return Strings.glowstoneArmorRender[0];
+			return ArmorStrings.glowstoneArmorRender[0];
 		}
 		
 		if(stack.getItem() == ModItems.glowstoneLeggings)
 		{
-			return Strings.glowstoneArmorRender[1];
+			return ArmorStrings.glowstoneArmorRender[1];
 		}
 		else
 		{

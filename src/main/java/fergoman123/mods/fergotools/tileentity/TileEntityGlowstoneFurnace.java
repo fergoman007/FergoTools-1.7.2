@@ -1,21 +1,27 @@
 package fergoman123.mods.fergotools.tileentity;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.block.furnace.BlockGlowstoneFurnace;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.block.furnace.BlockGlowstoneFurnace;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.lib.strings.TileStrings;
 
 public class TileEntityGlowstoneFurnace extends TileEntity implements ISidedInventory{
 	
@@ -126,7 +132,7 @@ public class TileEntityGlowstoneFurnace extends TileEntity implements ISidedInve
      */
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.containers[6];
+        return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containers[6];
     }
 
     /**
@@ -152,13 +158,13 @@ public class TileEntityGlowstoneFurnace extends TileEntity implements ISidedInve
     public void readFromNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.readFromNBT(par1NBTTagCompound);
-        NBTTagList nbttaglist = par1NBTTagCompound.getTagList(Strings.items, 10);
+        NBTTagList nbttaglist = par1NBTTagCompound.getTagList(TileStrings.items, 10);
         this.slots = new ItemStack[this.getSizeInventory()];
 
         for (int i = 0; i < nbttaglist.tagCount(); ++i)
         {
             NBTTagCompound nbttagcompound1 = (NBTTagCompound)nbttaglist.getCompoundTagAt(i);
-            byte b0 = nbttagcompound1.getByte(Strings.slot);
+            byte b0 = nbttagcompound1.getByte(TileStrings.slot);
 
             if (b0 >= 0 && b0 < this.slots.length)
             {
@@ -166,13 +172,13 @@ public class TileEntityGlowstoneFurnace extends TileEntity implements ISidedInve
             }
         }
 
-        this.burnTime = par1NBTTagCompound.getShort(Strings.burnTime);
-        this.cookTime = par1NBTTagCompound.getShort(Strings.cookTime);
+        this.burnTime = par1NBTTagCompound.getShort(TileStrings.burnTime);
+        this.cookTime = par1NBTTagCompound.getShort(TileStrings.cookTime);
         this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 
-        if (par1NBTTagCompound.hasKey(Strings.customName))
+        if (par1NBTTagCompound.hasKey(TileStrings.customName))
         {
-            this.localizedName = par1NBTTagCompound.getString(Strings.customName);
+            this.localizedName = par1NBTTagCompound.getString(TileStrings.customName);
         }
     }
 
@@ -182,8 +188,8 @@ public class TileEntityGlowstoneFurnace extends TileEntity implements ISidedInve
     public void writeToNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.writeToNBT(par1NBTTagCompound);
-        par1NBTTagCompound.setShort(Strings.burnTime, (short)this.burnTime);
-        par1NBTTagCompound.setShort(Strings.cookTime, (short)this.cookTime);
+        par1NBTTagCompound.setShort(TileStrings.burnTime, (short)this.burnTime);
+        par1NBTTagCompound.setShort(TileStrings.cookTime, (short)this.cookTime);
         NBTTagList nbttaglist = new NBTTagList();
 
         for (int i = 0; i < this.slots.length; ++i)
@@ -191,17 +197,17 @@ public class TileEntityGlowstoneFurnace extends TileEntity implements ISidedInve
             if (this.slots[i] != null)
             {
                 NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte(Strings.slot, (byte)i);
+                nbttagcompound1.setByte(TileStrings.slot, (byte)i);
                 this.slots[i].writeToNBT(nbttagcompound1);
                 nbttaglist.appendTag(nbttagcompound1);
             }
         }
 
-        par1NBTTagCompound.setTag(Strings.items, nbttaglist);
+        par1NBTTagCompound.setTag(TileStrings.items, nbttaglist);
 
         if (this.hasCustomInventoryName())
         {
-            par1NBTTagCompound.setString(Strings.customName, this.localizedName);
+            par1NBTTagCompound.setString(TileStrings.customName, this.localizedName);
         }
     }
 

@@ -19,6 +19,6 @@ public class BlockOreLapisCrystal extends Block{
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return ModItems.emeraldCrystal;
+        return ModItems.lapisCrystal;
     }
 }

@@ -1,11 +1,11 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.item.ModItems;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.item.ModItems;
+import fergoman123.mods.fergotools.lib.strings.ArmorStrings;
 
 public class ItemArmorBronze extends ItemArmor{
 	
@@ -18,12 +18,12 @@ public class ItemArmorBronze extends ItemArmor{
 	{
 		if(stack.getItem() == ModItems.bronzeHelmet || stack.getItem() == ModItems.bronzeChestplate || stack.getItem() == ModItems.bronzeBoots)
 		{
-			return Strings.bronzeArmorRender[0];
+			return ArmorStrings.bronzeArmorRender[0];
 		}
 		
 		if(stack.getItem() == ModItems.bronzeLeggings)
 		{
-			return Strings.bronzeArmorRender[1];
+			return ArmorStrings.bronzeArmorRender[1];
 		}
 		else
 		{

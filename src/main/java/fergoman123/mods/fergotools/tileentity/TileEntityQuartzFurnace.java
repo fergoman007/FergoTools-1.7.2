@@ -1,10 +1,5 @@
 package fergoman123.mods.fergotools.tileentity;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.block.furnace.BlockQuartzFurnace;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -21,6 +16,12 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.block.furnace.BlockQuartzFurnace;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.lib.strings.TileStrings;
 
 public class TileEntityQuartzFurnace extends TileEntity implements ISidedInventory
 {
@@ -34,7 +35,7 @@ public class TileEntityQuartzFurnace extends TileEntity implements ISidedInvento
     public int currentItemBurnTime;
     public int cookTime;
 
-    public int furnaceSpeed = 200;
+    public int furnaceSpeed = 125;
     
     private String localizedName;
 
@@ -104,7 +105,7 @@ public class TileEntityQuartzFurnace extends TileEntity implements ISidedInvento
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.containers[0];
+        return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containers[0];
     }
 
     public boolean hasCustomInventoryName()
@@ -120,7 +121,7 @@ public class TileEntityQuartzFurnace extends TileEntity implements ISidedInvento
     public void readFromNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.readFromNBT(par1NBTTagCompound);
-        NBTTagList nbttaglist = par1NBTTagCompound.getTagList(Strings.items, 10);
+        NBTTagList nbttaglist = par1NBTTagCompound.getTagList(TileStrings.items, 10);
         this.slots = new ItemStack[this.getSizeInventory()];
 
         for (int i = 0; i < nbttaglist.tagCount(); ++i)
@@ -178,7 +179,7 @@ public class TileEntityQuartzFurnace extends TileEntity implements ISidedInvento
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int par1)
     {
-        return this.cookTime * par1 / furnaceSpeed;
+        return this.cookTime * par1 / 200;
     }
 
     @SideOnly(Side.CLIENT)

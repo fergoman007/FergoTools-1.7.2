@@ -9,15 +9,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import fergoman123.mods.fergotools.block.ModBlocks;
 import fergoman123.mods.fergotools.item.ModItems;
 
-/**
- * 
- * @author Fergoman123
- * 
- * @category Crafting 
- *
- */
-
-public class CraftingHandler {
+public class RecipesHandler {
 	
 	public static void init()
 	{
@@ -142,14 +134,28 @@ public class CraftingHandler {
         addRecipe(new ItemStack(ModItems.glowstoneSword), new Object[]{" x ", " x ", " y ", 'x', new ItemStack(ModItems.glowstoneIngot), 'y', new ItemStack(Items.stick)});
         addRecipe(new ItemStack(ModItems.glowstoneSword), new Object[]{"  x", "  x", "  y", 'x', new ItemStack(ModItems.glowstoneIngot), 'y', new ItemStack(Items.stick)});
         
+        addRecipe(new ItemStack(ModItems.silkPickaxe), new Object[]{"xxx", " y ", " y ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkShovel), new Object[]{"x  ", "y  ", "y  ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkShovel), new Object[]{" x ", " y ", " y ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkShovel), new Object[]{"  x", "  y", "  y", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkAxe), new Object[]{"xx ", "xy ", " y ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkAxe), new Object[]{" xx", " yx", " y ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkAxe), new Object[]{"xx ", "yx ", "y  ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkHoe), new Object[]{"xx ", " y ", " y ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkHoe), new Object[]{" xx", " y ", " y ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkHoe), new Object[]{"xx ", "y  ", "y  ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkSword), new Object[]{"x  ", "x  ", "y  ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkSword), new Object[]{" x ", " x ", " y ", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        addRecipe(new ItemStack(ModItems.silkSword), new Object[]{"  x", "  x", "  y", 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)});
+        
         addRecipe(new ItemStack(ModBlocks.quartzFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(Blocks.quartz_block, 1, 0)});
         addRecipe(new ItemStack(ModBlocks.obsidianFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockObsidian)});
-//        addRecipe(new ItemStack(ModBlocks.emeraldCrystalFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockEmeraldCrystal)});
-//        addRecipe(new ItemStack(ModBlocks.lapisCrystalFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockLapisCrystal)});
-//        addRecipe(new ItemStack(ModBlocks.bronzeFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockBronze)});
-//        addRecipe(new ItemStack(ModBlocks.adamantiumFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockAdamantium)});
-//        addRecipe(new ItemStack(ModBlocks.coalFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockCoal)});
-//        addRecipe(new ItemStack(ModBlocks.glowstoneFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockGlowstone)});
+        addRecipe(new ItemStack(ModBlocks.emeraldCrystalFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockEmeraldCrystal)});
+        addRecipe(new ItemStack(ModBlocks.lapisCrystalFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockLapisCrystal)});
+        addRecipe(new ItemStack(ModBlocks.bronzeFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockBronze)});
+        addRecipe(new ItemStack(ModBlocks.adamantiumFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockAdamantium)});
+        addRecipe(new ItemStack(ModBlocks.coalFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockCoal)});
+        addRecipe(new ItemStack(ModBlocks.glowstoneFurnaceIdle), new Object[]{"xxx", "x x", "xxx", 'x', new ItemStack(ModBlocks.blockGlowstone)});
 
         addSmelting(ModBlocks.oreObsidian, new ItemStack(ModItems.obsidianIngot), 2.5f);
         addSmelting(ModBlocks.oreEmeraldCrystal, new ItemStack(ModItems.emeraldCrystal), 2.5f);
@@ -200,8 +206,8 @@ public class CraftingHandler {
 		addRecipe(new ItemStack(ModItems.glowstoneLeggings), new Object[]{"xxx", "x x", "x x", 'x', ModItems.glowstoneIngot});
 		addRecipe(new ItemStack(ModItems.glowstoneBoots), new Object[]{"x x", "x x", 'x', ModItems.glowstoneIngot});
 		
-//		addRecipe(new ItemStack(ModItems.quartzBow), new Object[]{" #X", "# X", " #X", 'X', Item.silk, '#', Item.netherQuartz});
-//		addRecipe(new ItemStack(ModItems.obsidianBow), new Object[]{" #X", "# X", " #X", 'X', Item.silk, '#', ModItems.obsidianIngot});
+		addRecipe(new ItemStack(ModItems.quartzBow), new Object[]{" #X", "# X", " #X", 'X', Items.string, '#', Items.quartz});
+		addRecipe(new ItemStack(ModItems.obsidianBow), new Object[]{" #X", "# X", " #X", 'X', Items.string, '#', ModItems.obsidianIngot});
 //		addRecipe(new ItemStack(ModItems.emeraldBow), new Object[]{" #X", "# X", " #X", 'X', Item.silk, '#', ModItems.emeraldCrystal});
 //		addRecipe(new ItemStack(ModItems.lapisBow), new Object[]{" #X", "# X", " #X", 'X', Item.silk, '#', ModItems.lapisCrystal});
 //		addRecipe(new ItemStack(ModItems.bronzeBow), new Object[]{" #X", "# X", " #X", 'X', Item.silk, '#', ModItems.bronzeIngot});

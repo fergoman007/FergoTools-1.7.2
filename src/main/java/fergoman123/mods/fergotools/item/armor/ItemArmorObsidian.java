@@ -1,11 +1,11 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.item.ModItems;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.item.ModItems;
+import fergoman123.mods.fergotools.lib.strings.ArmorStrings;
 
 public class ItemArmorObsidian extends ItemArmor{
 	
@@ -18,12 +18,12 @@ public class ItemArmorObsidian extends ItemArmor{
 	{
 		if(is.getItem() == ModItems.obsidianHelmet || is.getItem() == ModItems.obsidianChestplate || is.getItem() == ModItems.obsidianBoots)
 		{
-			return Strings.obsidianArmorRender[0];
+			return ArmorStrings.obsidianArmorRender[0];
 		}
 		
 		if(is.getItem() == ModItems.obsidianLeggings)
 		{
-			return Strings.obsidianArmorRender[1];
+			return ArmorStrings.obsidianArmorRender[1];
 		}
 		else
 		{

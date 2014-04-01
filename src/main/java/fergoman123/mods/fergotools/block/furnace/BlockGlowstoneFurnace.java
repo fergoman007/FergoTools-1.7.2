@@ -136,11 +136,11 @@ public class BlockGlowstoneFurnace extends BlockContainer
 
         if (active)
         {
-            par1World.setBlock(par2, par3, par4, ModBlocks.quartzFurnaceActive);
+            par1World.setBlock(par2, par3, par4, ModBlocks.glowstoneFurnaceActive);
         }
         else
         {
-            par1World.setBlock(par2, par3, par4, ModBlocks.quartzFurnaceIdle);
+            par1World.setBlock(par2, par3, par4, ModBlocks.glowstoneFurnaceIdle);
         }
 
         keepInventory = false;

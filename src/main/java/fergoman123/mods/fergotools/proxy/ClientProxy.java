@@ -6,9 +6,6 @@ import fergoman123.mods.fergotools.handler.GuiHandler;
 
 public class ClientProxy extends CommonProxy{
 	
-	public static GuiHandler handler = new GuiHandler();
-	public static EventHandler event = new EventHandler();
-	
 	public int addArmor(String armor)
     {
         return RenderingRegistry.addNewArmourRendererPrefix(armor);

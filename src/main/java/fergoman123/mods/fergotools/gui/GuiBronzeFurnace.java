@@ -1,18 +1,20 @@
 package fergoman123.mods.fergotools.gui;
 
-import fergoman123.mods.fergotools.gui.container.ContainerBronzeFurnace;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.Strings;
-import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
+
+import fergoman123.mods.fergotools.gui.container.ContainerBronzeFurnace;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
 
 public class GuiBronzeFurnace extends GuiContainer {
 	
-	private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + Strings.furnaceGuiTexture);
+	private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + GuiStrings.furnaceGuiTexture);
 	private TileEntityBronzeFurnace furnace;
 	
 	public GuiBronzeFurnace(InventoryPlayer player, TileEntityBronzeFurnace entity)

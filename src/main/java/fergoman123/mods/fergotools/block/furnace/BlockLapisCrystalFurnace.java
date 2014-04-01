@@ -1,12 +1,7 @@
 package fergoman123.mods.fergotools.block.furnace;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.Strings;
-import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -23,8 +18,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import java.util.Random;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.textures.BlockTextures;
+import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
 
 public class BlockLapisCrystalFurnace extends BlockContainer
 {
@@ -103,9 +103,9 @@ public class BlockLapisCrystalFurnace extends BlockContainer
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(Reference.textureLoc + Strings.blocks[3]);
+        this.blockIcon = par1IconRegister.registerIcon(BlockTextures.blockLapisCrystal);
         this.iconFront = par1IconRegister.registerIcon(Reference.textureLoc + (this.isActive ? "lapisCrystalFurnaceActive" : "lapisCrystalFurnaceIdle"));
-        this.iconTop = par1IconRegister.registerIcon(Reference.textureLoc + Strings.blocks[3]);
+        this.iconTop = par1IconRegister.registerIcon(BlockTextures.blockLapisCrystal);
     }
 
     public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
@@ -137,11 +137,11 @@ public class BlockLapisCrystalFurnace extends BlockContainer
 
         if (active)
         {
-            par1World.setBlock(par2, par3, par4, ModBlocks.quartzFurnaceActive);
+            par1World.setBlock(par2, par3, par4, ModBlocks.lapisCrystalFurnaceActive);
         }
         else
         {
-            par1World.setBlock(par2, par3, par4, ModBlocks.quartzFurnaceIdle);
+            par1World.setBlock(par2, par3, par4, ModBlocks.lapisCrystalFurnaceIdle);
         }
 
         keepInventory = false;

@@ -20,7 +20,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockCoalFurnace;
-import fergoman123.mods.fergotools.lib.strings.Strings;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
 
 public class TileEntityCoalFurnace extends TileEntity implements ISidedInventory
 {
@@ -131,7 +131,7 @@ public class TileEntityCoalFurnace extends TileEntity implements ISidedInventory
      */
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.containers[5];
+        return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containers[5];
     }
 
     /**

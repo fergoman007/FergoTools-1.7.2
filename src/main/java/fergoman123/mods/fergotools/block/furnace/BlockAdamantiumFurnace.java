@@ -6,6 +6,8 @@ import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
+import fergoman123.mods.fergotools.lib.textures.ToolTextures;
 import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -104,7 +106,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
     public void registerBlockIcons(IIconRegister par1IconRegister)
     {
         this.blockIcon = par1IconRegister.registerIcon(Reference.textureLoc + "blockAdamantium");
-        this.iconFront = par1IconRegister.registerIcon(Reference.textureLoc + (this.isActive ? "adamantiumFurnaceActive" : "adamantiumFurnaceIdle"));
+        this.iconFront = par1IconRegister.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.adamantiumFurnaceActive : FurnaceTextures.adamantiumFurnaceIdle));
         this.iconTop = par1IconRegister.registerIcon(Reference.textureLoc + "blockAdamantium");
     }
    

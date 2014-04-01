@@ -1,11 +1,11 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.item.ModItems;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.item.ModItems;
+import fergoman123.mods.fergotools.lib.strings.ArmorStrings;
 
 public class ItemArmorLapis extends  ItemArmor{
 	
@@ -18,12 +18,12 @@ public class ItemArmorLapis extends  ItemArmor{
 	{
 		if(stack.getItem() == ModItems.lapisHelmet || stack.getItem() == ModItems.lapisChestplate || stack.getItem() == ModItems.lapisBoots)
 		{
-			return Strings.lapisArmorRender[0];
+			return ArmorStrings.lapisArmorRender[0];
 		}
 		
 		if(stack.getItem() == ModItems.lapisLeggings)
 		{
-			return Strings.lapisArmorRender[1];
+			return ArmorStrings.lapisArmorRender[1];
 		}
 		else
 		{

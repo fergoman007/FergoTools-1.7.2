@@ -1,13 +1,7 @@
 package fergoman123.mods.fergotools.block.furnace;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.lib.strings.Strings;
-import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -24,8 +18,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import java.util.Random;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.textures.BlockTextures;
+import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
 
 /**
  * Created by Fergoman123 on 25/03/2014.
@@ -102,9 +101,9 @@ public class BlockEmeraldCrystalFurnace extends BlockContainer{
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(Reference.textureLoc + Strings.blocks[2]);
+        this.blockIcon = register.registerIcon(BlockTextures.blockEmeraldCrystal);
         this.iconFront = register.registerIcon(Reference.textureLoc + (this.isActive ? "emeraldCrystalFurnaceActive" : "emeraldCrystalFurnaceIdle"));
-        this.iconTop = register.registerIcon(Reference.textureLoc + Strings.blocks[2]);
+        this.iconTop = register.registerIcon(BlockTextures.blockEmeraldCrystal);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)

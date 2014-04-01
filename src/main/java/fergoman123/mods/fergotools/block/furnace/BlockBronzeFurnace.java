@@ -1,11 +1,7 @@
 package fergoman123.mods.fergotools.block.furnace;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -22,8 +18,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import java.util.Random;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.textures.BlockTextures;
+import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
+import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
 
 public class BlockBronzeFurnace extends BlockContainer
 {
@@ -101,9 +103,9 @@ public class BlockBronzeFurnace extends BlockContainer
 		@SideOnly(Side.CLIENT)
 		public void registerBlockIcons(IIconRegister register)
 		{
-			this.blockIcon = register.registerIcon(Reference.textureLoc + "blockBronze");
-			this.iconFront = register.registerIcon(Reference.textureLoc + (this.isActive ? "bronzeFurnaceActive" : "bronzeFurnaceIdle"));
-			this.iconTop = register.registerIcon(Reference.textureLoc + "blockBronze");
+			this.blockIcon = register.registerIcon(BlockTextures.blockBronze);
+			this.iconFront = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.bronzeFurnaceActive : FurnaceTextures.bronzeFurnaceIdle));
+			this.iconTop = register.registerIcon(BlockTextures.blockBronze);
 		}
 		
 		public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9)

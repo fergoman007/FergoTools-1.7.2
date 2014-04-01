@@ -1,21 +1,27 @@
 package fergoman123.mods.fergotools.tileentity;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.block.furnace.BlockLapisCrystalFurnace;
-import fergoman123.mods.fergotools.lib.strings.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.block.furnace.BlockLapisCrystalFurnace;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.lib.strings.TileStrings;
 
 public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedInventory {
 
@@ -97,7 +103,7 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
 	
 	public String getInventoryName()
 	{
-		return this.hasCustomInventoryName() ? this.localizedName : Strings.containers[3];
+		return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containers[3];
 	}
 	
 	public boolean hasCustomInventoryName()
@@ -113,13 +119,13 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
 	public void readFromNBT(NBTTagCompound tagCompound)
 	{
 		super.readFromNBT(tagCompound);
-		NBTTagList list = tagCompound.getTagList(Strings.items, 10);
+		NBTTagList list = tagCompound.getTagList(TileStrings.items, 10);
 		this.slots = new ItemStack[this.getSizeInventory()];
 		
 		for(int i = 0; i < list.tagCount(); ++i)
 		{
 			NBTTagCompound compound = (NBTTagCompound)list.getCompoundTagAt(i);
-			byte b0 = compound.getByte(Strings.slot);
+			byte b0 = compound.getByte(TileStrings.slot);
 			
 			if(b0 >= 0 && b0 < this.slots.length)
 			{
@@ -127,21 +133,21 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
 			}
 		}
 		
-		this.burnTime = tagCompound.getShort(Strings.burnTime);
-		this.cookTime = tagCompound.getShort(Strings.cookTime);
+		this.burnTime = tagCompound.getShort(TileStrings.burnTime);
+		this.cookTime = tagCompound.getShort(TileStrings.cookTime);
 		this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 		
-		if(tagCompound.hasKey(Strings.customName))
+		if(tagCompound.hasKey(TileStrings.customName))
 		{
-			this.localizedName = tagCompound.getString(Strings.customName);
+			this.localizedName = tagCompound.getString(TileStrings.customName);
 		}
 	}
 	
 	public void writeToNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.writeToNBT(par1NBTTagCompound);
-        par1NBTTagCompound.setShort(Strings.burnTime, (short)this.burnTime);
-        par1NBTTagCompound.setShort(Strings.cookTime, (short)this.cookTime);
+        par1NBTTagCompound.setShort(TileStrings.burnTime, (short)this.burnTime);
+        par1NBTTagCompound.setShort(TileStrings.cookTime, (short)this.cookTime);
         NBTTagList nbttaglist = new NBTTagList();
 
         for (int i = 0; i < this.slots.length; ++i)
@@ -149,17 +155,17 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
             if (this.slots[i] != null)
             {
                 NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte(Strings.slot, (byte)i);
+                nbttagcompound1.setByte(TileStrings.slot, (byte)i);
                 this.slots[i].writeToNBT(nbttagcompound1);
                 nbttaglist.appendTag(nbttagcompound1);
             }
         }
 
-        par1NBTTagCompound.setTag(Strings.items, nbttaglist);
+        par1NBTTagCompound.setTag(TileStrings.items, nbttaglist);
 
         if (this.hasCustomInventoryName())
         {
-            par1NBTTagCompound.setString(Strings.customName, this.localizedName);
+            par1NBTTagCompound.setString(TileStrings.customName, this.localizedName);
         }
     }
 	
