@@ -1,5 +1,8 @@
 package fergoman123.mods.fergotools.gui.container;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -8,18 +11,15 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
 
 public class ContainerAdamantiumFurnace extends Container
 {
-    private TileEntityAdamantiumFurnace furnace;
+    private FergoToolsTileEntity.TileEntityAdamantiumFurnace furnace;
     private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
 
-    public ContainerAdamantiumFurnace(InventoryPlayer par1InventoryPlayer, TileEntityAdamantiumFurnace par2TileEntityFurnaceTutorial)
+    public ContainerAdamantiumFurnace(InventoryPlayer par1InventoryPlayer, FergoToolsTileEntity.TileEntityAdamantiumFurnace par2TileEntityFurnaceTutorial)
     {
         this.furnace = par2TileEntityFurnaceTutorial;
         this.addSlotToContainer(new Slot(par2TileEntityFurnaceTutorial, 0, 56, 17));
@@ -136,7 +136,7 @@ public class ContainerAdamantiumFurnace extends Container
                         return null;
                     }
                 }
-                else if (TileEntityAdamantiumFurnace.isItemFuel(itemstack1))
+                else if (FergoToolsTileEntity.TileEntityAdamantiumFurnace.isItemFuel(itemstack1))
                 {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false))
                     {

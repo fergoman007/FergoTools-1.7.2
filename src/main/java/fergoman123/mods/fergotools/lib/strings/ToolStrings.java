@@ -11,6 +11,8 @@ public class ToolStrings {
     public static final String[] coalTool = {"coalPickaxe", "coalShovel", "coalAxe", "coalHoe", "coalSword"};
     public static final String[] adamantiumTool = {"adamantiumPickaxe", "adamantiumShovel", "adamantiumAxe", "adamantiumHoe", "adamantiumSword"};
     public static final String[] silkTool = {"silkPickaxe", "silkShovel", "silkAxe", "silkHoe", "silkSword"};
-    
+
+    public static final String[] hammers = {"quartzHammer", "obsidianHammer", "emeraldHammer", "lapisHammer", "bronzeHammer", "coalHammer", "glowstoneHammer", "adamantiumHammer"};
+
     public static final String[] donator = {};
 }

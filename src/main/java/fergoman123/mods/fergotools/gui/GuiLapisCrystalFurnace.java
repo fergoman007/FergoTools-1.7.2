@@ -1,24 +1,22 @@
 package fergoman123.mods.fergotools.gui;
 
+import fergoman123.mods.fergotools.gui.container.ContainerLapisCrystalFurnace;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
 import org.lwjgl.opengl.GL11;
-
-import fergoman123.mods.fergotools.gui.container.ContainerLapisCrystalFurnace;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.GuiStrings;
-import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
 
 public class GuiLapisCrystalFurnace extends GuiContainer{
 
     private Object[] obj = new Object[0];
 	private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + GuiStrings.furnaceGuiTexture);
-	private TileEntityLapisCrystalFurnace furnace;
+	private FergoToolsTileEntity.TileEntityLapisCrystalFurnace furnace;
 	
-	public GuiLapisCrystalFurnace(InventoryPlayer player, TileEntityLapisCrystalFurnace entity)
+	public GuiLapisCrystalFurnace(InventoryPlayer player, FergoToolsTileEntity.TileEntityLapisCrystalFurnace entity)
 	{
 		super(new ContainerLapisCrystalFurnace(player, entity));
 		this.furnace = entity;

@@ -5,10 +5,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
 import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
-import fergoman123.mods.fergotools.lib.textures.ToolTextures;
-import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -118,7 +116,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
         }
         else if(!par5EntityPlayer.isSneaking())
         {
-        	TileEntityAdamantiumFurnace var10 = (TileEntityAdamantiumFurnace) par1World.getTileEntity(par2, par3, par4);
+        	FergoToolsTileEntity.TileEntityAdamantiumFurnace var10 = (FergoToolsTileEntity.TileEntityAdamantiumFurnace) par1World.getTileEntity(par2, par3, par4);
         	if(var10 != null)
         	{
         		par5EntityPlayer.openGui(FergoTools.instance, 7, par1World, par2, par3, par4);
@@ -193,7 +191,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
 
     public TileEntity createNewTileEntity(World par1World, int var)
     {
-        return new TileEntityAdamantiumFurnace();
+        return new FergoToolsTileEntity.TileEntityAdamantiumFurnace();
     }
 
     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
@@ -222,7 +220,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
 
         if (par6ItemStack.hasDisplayName())
         {
-            ((TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
+            ((FergoToolsTileEntity.TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
         }
     }
 
@@ -230,7 +228,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
     {
         if (!keepInventory)
         {
-            TileEntityAdamantiumFurnace tileentityfurnace = (TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4);
+            FergoToolsTileEntity.TileEntityAdamantiumFurnace tileentityfurnace = (FergoToolsTileEntity.TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4);
 
             if (tileentityfurnace != null)
             {

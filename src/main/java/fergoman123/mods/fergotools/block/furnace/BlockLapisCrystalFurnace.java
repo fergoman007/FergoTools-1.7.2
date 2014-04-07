@@ -1,7 +1,12 @@
 package fergoman123.mods.fergotools.block.furnace;
 
-import java.util.Random;
-
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.textures.BlockTextures;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -18,13 +23,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.textures.BlockTextures;
-import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
+
+import java.util.Random;
 
 public class BlockLapisCrystalFurnace extends BlockContainer
 {
@@ -116,7 +116,7 @@ public class BlockLapisCrystalFurnace extends BlockContainer
         }
         else if(!par5EntityPlayer.isSneaking())
         {
-            TileEntityLapisCrystalFurnace var10 = (TileEntityLapisCrystalFurnace) par1World.getTileEntity(par2, par3, par4);
+            FergoToolsTileEntity.TileEntityLapisCrystalFurnace var10 = (FergoToolsTileEntity.TileEntityLapisCrystalFurnace) par1World.getTileEntity(par2, par3, par4);
             if(var10 != null)
             {
                 par5EntityPlayer.openGui(FergoTools.instance, 3, par1World, par2, par3, par4);
@@ -191,7 +191,7 @@ public class BlockLapisCrystalFurnace extends BlockContainer
 
     public TileEntity createNewTileEntity(World par1World, int var1)
     {
-        return new TileEntityLapisCrystalFurnace();
+        return new FergoToolsTileEntity.TileEntityLapisCrystalFurnace();
     }
 
     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
@@ -220,7 +220,7 @@ public class BlockLapisCrystalFurnace extends BlockContainer
 
         if (par6ItemStack.hasDisplayName())
         {
-            ((TileEntityLapisCrystalFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
+            ((FergoToolsTileEntity.TileEntityLapisCrystalFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
         }
     }
 
@@ -228,7 +228,7 @@ public class BlockLapisCrystalFurnace extends BlockContainer
     {
         if (!keepInventory)
         {
-            TileEntityLapisCrystalFurnace tileentityfurnace = (TileEntityLapisCrystalFurnace)par1World.getTileEntity(par2, par3, par4);
+            FergoToolsTileEntity.TileEntityLapisCrystalFurnace tileentityfurnace = (FergoToolsTileEntity.TileEntityLapisCrystalFurnace)par1World.getTileEntity(par2, par3, par4);
 
             if (tileentityfurnace != null)
             {

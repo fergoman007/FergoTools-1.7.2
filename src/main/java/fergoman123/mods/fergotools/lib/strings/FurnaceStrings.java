@@ -10,5 +10,6 @@ public class FurnaceStrings {
     public static final String[] glowstoneFurnace = {"glowstoneFurnaceIdle", "glowstoneFurnaceActive"};
     public static final String[] coalFurnace = {"coalFurnaceIdle", "coalFurnaceActive"};
 	public static final String[] adamantiumFurnace = {"adamantiumFurnaceIdle", "adamantiumFurnaceActive"};
+    public static final String[] silkFurnace = {"silkFurnaceActive", "silkFurnaceActive"};
 
 }

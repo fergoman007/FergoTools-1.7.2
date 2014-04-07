@@ -1,32 +1,20 @@
 package fergoman123.mods.fergotools.handler;
 
-import static fergoman123.mods.fergotools.util.RegisterUtil.registerBlock;
-import static fergoman123.mods.fergotools.util.RegisterUtil.registerGuiHandler;
-import static fergoman123.mods.fergotools.util.RegisterUtil.registerItem;
-import static fergoman123.mods.fergotools.util.RegisterUtil.registerTileEntity;
-import static fergoman123.mods.fergotools.util.RegisterUtil.registerWorldGenerator;
+import cpw.mods.fml.common.network.IGuiHandler;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.gui.*;
+import fergoman123.mods.fergotools.gui.container.*;
 import fergoman123.mods.fergotools.item.ModItems;
-import fergoman123.mods.fergotools.lib.strings.ArmorStrings;
-import fergoman123.mods.fergotools.lib.strings.BlockStrings;
-import fergoman123.mods.fergotools.lib.strings.BowStrings;
-import fergoman123.mods.fergotools.lib.strings.FurnaceStrings;
-import fergoman123.mods.fergotools.lib.strings.ItemStrings;
-import fergoman123.mods.fergotools.lib.strings.TileStrings;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
-import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityCoalFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityGlowstoneFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityObsidianFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
+import fergoman123.mods.fergotools.lib.strings.*;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+
+import static fergoman123.mods.fergotools.util.RegisterUtil.*;
 
 public class RegHandler {
-
-    public static GuiHandler handler = new GuiHandler();
     public static EventHandler event = new EventHandler();
 
     public static void registerBlocks()
@@ -69,14 +57,14 @@ public class RegHandler {
 
     public static void registerTileEntities()
     {
-        registerTileEntity(TileEntityQuartzFurnace.class, TileStrings.tilePrefix + "QuartzFurnace");
-        registerTileEntity(TileEntityObsidianFurnace.class, TileStrings.tilePrefix + "ObsidianFurnace");
-        registerTileEntity(TileEntityEmeraldCrystalFurnace.class, TileStrings.tilePrefix + "EmeraldCrystalFurnace");
-        registerTileEntity(TileEntityLapisCrystalFurnace.class, TileStrings.tilePrefix + "LapisCrystalFurnace");
-        registerTileEntity(TileEntityBronzeFurnace.class, TileStrings.tilePrefix + "BronzeFurnace");
-        registerTileEntity(TileEntityCoalFurnace.class, TileStrings.tilePrefix + "CoalFurnace");
-        registerTileEntity(TileEntityGlowstoneFurnace.class, TileStrings.tilePrefix + "GlowstoneFurnace");
-        registerTileEntity(TileEntityAdamantiumFurnace.class, TileStrings.tilePrefix + "AdamantiumFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityQuartzFurnace.class, TileStrings.tilePrefix + "QuartzFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityObsidianFurnace.class, TileStrings.tilePrefix + "ObsidianFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace.class, TileStrings.tilePrefix + "EmeraldCrystalFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityLapisCrystalFurnace.class, TileStrings.tilePrefix + "LapisCrystalFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityBronzeFurnace.class, TileStrings.tilePrefix + "BronzeFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityCoalFurnace.class, TileStrings.tilePrefix + "CoalFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityGlowstoneFurnace.class, TileStrings.tilePrefix + "GlowstoneFurnace");
+        registerTileEntity(FergoToolsTileEntity.TileEntityAdamantiumFurnace.class, TileStrings.tilePrefix + "AdamantiumFurnace");
     }
 
     public static void registerItems()
@@ -135,6 +123,9 @@ public class RegHandler {
         registerItem(ModItems.silkHoe, ToolStrings.silkTool[3]);
         registerItem(ModItems.silkSword, ToolStrings.silkTool[4]);
 
+        registerItem(ModItems.quartzHammer, ToolStrings.hammers[0]);
+        registerItem(ModItems.obsidianHammer, ToolStrings.hammers[1]);
+
         registerItem(ModItems.obsidianIngot, ItemStrings.modItems[0]);
         registerItem(ModItems.emeraldCrystal, ItemStrings.modItems[1]);
         registerItem(ModItems.lapisCrystal, ItemStrings.modItems[2]);
@@ -191,9 +182,46 @@ public class RegHandler {
 
     }
 
+    public static class GuiHandler implements IGuiHandler {
+
+        @Override
+        public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+            TileEntity entity = world.getTileEntity(x, y, z);
+            switch(ID)
+            {
+                case 0: return new ContainerQuartzFurnace(player.inventory, (FergoToolsTileEntity.TileEntityQuartzFurnace) entity);
+                case 1: return new ContainerObsidianFurnace(player.inventory, (FergoToolsTileEntity.TileEntityObsidianFurnace)entity);
+                case 2: return new ContainerEmeraldCrystalFurnace(player.inventory, (FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace)entity);
+                case 3: return new ContainerLapisCrystalFurnace(player.inventory, (FergoToolsTileEntity.TileEntityLapisCrystalFurnace)entity);
+                case 4: return new ContainerBronzeFurnace(player.inventory, (FergoToolsTileEntity.TileEntityBronzeFurnace)entity);
+                case 5: return new ContainerCoalFurnace(player.inventory, (FergoToolsTileEntity.TileEntityCoalFurnace)entity);
+                case 6: return new ContainerGlowstoneFurnace(player.inventory, (FergoToolsTileEntity.TileEntityGlowstoneFurnace)entity);
+                case 7: return new ContainerAdamantiumFurnace(player.inventory, (FergoToolsTileEntity.TileEntityAdamantiumFurnace)entity);
+            }
+            return null;
+        }
+
+        @Override
+        public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+            TileEntity entity = world.getTileEntity(x, y, z);
+            switch(ID)
+            {
+                case 0: return new GuiQuartzFurnace(player.inventory, (FergoToolsTileEntity.TileEntityQuartzFurnace) entity);
+                case 1: return new GuiObsidianFurnace(player.inventory, (FergoToolsTileEntity.TileEntityObsidianFurnace)entity);
+                case 2: return new GuiEmeraldCrystalFurnace(player.inventory, (FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace)entity);
+                case 3: return new GuiLapisCrystalFurnace(player.inventory, (FergoToolsTileEntity.TileEntityLapisCrystalFurnace)entity);
+                case 4: return new GuiBronzeFurnace(player.inventory, (FergoToolsTileEntity.TileEntityBronzeFurnace)entity);
+                case 5: return new GuiCoalFurnace(player.inventory, (FergoToolsTileEntity.TileEntityCoalFurnace)entity);
+                case 6: return new GuiGlowstoneFurnace(player.inventory, (FergoToolsTileEntity.TileEntityGlowstoneFurnace)entity);
+                case 7: return new GuiAdamantiumFurnace(player.inventory, (FergoToolsTileEntity.TileEntityAdamantiumFurnace)entity);
+            }
+            return null;
+        }
+    }
+
     public static void registerGuiHandlers()
     {
-        registerGuiHandler(FergoTools.instance, handler);
+        registerGuiHandler(FergoTools.instance, new GuiHandler());
     }
 
     public static void registerWorldGen()

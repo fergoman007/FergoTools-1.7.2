@@ -5,8 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.tileentity.TileEntityCoalFurnace;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -170,7 +169,7 @@ public class BlockCoalFurnace extends BlockContainer
         }
         else if(!par5EntityPlayer.isSneaking())
         {
-        	TileEntityCoalFurnace var10 = (TileEntityCoalFurnace) par1World.getTileEntity(par2, par3, par4);
+            FergoToolsTileEntity.TileEntityCoalFurnace var10 = (FergoToolsTileEntity.TileEntityCoalFurnace) par1World.getTileEntity(par2, par3, par4);
         	if(var10 != null)
         	{
         		par5EntityPlayer.openGui(FergoTools.instance, 5, par1World, par2, par3, par4);
@@ -255,7 +254,7 @@ public class BlockCoalFurnace extends BlockContainer
      */
     public TileEntity createNewTileEntity(World par1World, int var2)
     {
-        return new TileEntityCoalFurnace();
+        return new FergoToolsTileEntity.TileEntityCoalFurnace();
     }
 
     /**
@@ -287,7 +286,7 @@ public class BlockCoalFurnace extends BlockContainer
 
         if (par6ItemStack.hasDisplayName())
         {
-            ((TileEntityCoalFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
+            ((FergoToolsTileEntity.TileEntityCoalFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
         }
     }
 
@@ -300,7 +299,7 @@ public class BlockCoalFurnace extends BlockContainer
     {
         if (!keepInventory)
         {
-            TileEntityCoalFurnace tileentityfurnace = (TileEntityCoalFurnace)par1World.getTileEntity(par2, par3, par4);
+            FergoToolsTileEntity.TileEntityCoalFurnace tileentityfurnace = (FergoToolsTileEntity.TileEntityCoalFurnace)par1World.getTileEntity(par2, par3, par4);
 
             if (tileentityfurnace != null)
             {

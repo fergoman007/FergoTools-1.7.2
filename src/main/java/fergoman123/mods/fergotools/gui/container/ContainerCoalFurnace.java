@@ -1,5 +1,8 @@
 package fergoman123.mods.fergotools.gui.container;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -8,19 +11,15 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.tileentity.TileEntityCoalFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
 
 public class ContainerCoalFurnace extends Container
 {
-    private TileEntityCoalFurnace furnace;
+    private FergoToolsTileEntity.TileEntityCoalFurnace furnace;
     private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
 
-    public ContainerCoalFurnace(InventoryPlayer par1InventoryPlayer, TileEntityCoalFurnace entity)
+    public ContainerCoalFurnace(InventoryPlayer par1InventoryPlayer, FergoToolsTileEntity.TileEntityCoalFurnace entity)
     {
         this.furnace = entity;
         this.addSlotToContainer(new Slot(entity, 0, 56, 17));
@@ -137,7 +136,7 @@ public class ContainerCoalFurnace extends Container
                         return null;
                     }
                 }
-                else if (TileEntityQuartzFurnace.isItemFuel(itemstack1))
+                else if (FergoToolsTileEntity.TileEntityQuartzFurnace.isItemFuel(itemstack1))
                 {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false))
                     {

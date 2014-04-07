@@ -9,7 +9,9 @@ public class TabStrings {
                 "tabFergoFurnaces",
                 "tabFergoItems",
                 "tabFergoArmor",
-                "tabFergoBows"
+                "tabFergoBows",
+                "tabFergoHammers",
+                "tabFergoExcavators"
         };
 
 }

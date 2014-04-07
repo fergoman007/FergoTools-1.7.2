@@ -113,6 +113,9 @@ item.bowCoal.name=Coal Bow
 item.bowGlowstone.name=Glowstone Bow
 item.bowAdamantium.name=Adamantium Bow
 
+item.quartzHammer.name=Quartz Hammer
+item.obsidianHammer.name=Obsidian Hammer
+
 tile.oreExperience.name=Experience Ore
 tile.oreObsidian.name=Obsidian Ore
 tile.oreEmeraldCrystal.name=Emerald Crystal Ore

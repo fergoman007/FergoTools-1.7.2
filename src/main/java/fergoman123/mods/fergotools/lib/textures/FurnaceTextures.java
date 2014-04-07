@@ -28,4 +28,7 @@ public class FurnaceTextures {
 
     public static final String adamantiumFurnaceIdle = FurnaceStrings.adamantiumFurnace[0];
     public static final String adamantiumFurnaceActive = FurnaceStrings.adamantiumFurnace[1];
+
+    public static final String silkFurnaceIdle = FurnaceStrings.silkFurnace[0];
+    public static final String silkFurnaceActive = FurnaceStrings.silkFurnace[1];
 }

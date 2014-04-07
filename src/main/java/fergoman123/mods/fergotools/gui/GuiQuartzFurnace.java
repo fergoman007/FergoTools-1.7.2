@@ -1,16 +1,14 @@
 package fergoman123.mods.fergotools.gui;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.gui.container.ContainerQuartzFurnace;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.*;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.gui.container.ContainerQuartzFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
+import org.lwjgl.opengl.GL11;
 
 @SideOnly(Side.CLIENT)
 public class GuiQuartzFurnace extends GuiContainer
@@ -18,9 +16,9 @@ public class GuiQuartzFurnace extends GuiContainer
 
     private Object[] obj = new Object[0];
     private static final ResourceLocation furnaceGuiTextures = new ResourceLocation("textures/gui/container/furnace.png");
-    private TileEntityQuartzFurnace furnaceInventory;
+    private FergoToolsTileEntity.TileEntityQuartzFurnace furnaceInventory;
 
-    public GuiQuartzFurnace(InventoryPlayer par1InventoryPlayer, TileEntityQuartzFurnace par2TileEntityFurnace)
+    public GuiQuartzFurnace(InventoryPlayer par1InventoryPlayer, FergoToolsTileEntity.TileEntityQuartzFurnace par2TileEntityFurnace)
     {
         super(new ContainerQuartzFurnace(par1InventoryPlayer, par2TileEntityFurnace));
         this.furnaceInventory = par2TileEntityFurnace;

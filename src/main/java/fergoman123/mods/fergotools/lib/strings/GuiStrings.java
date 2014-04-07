@@ -11,7 +11,8 @@ public class GuiStrings {
 	            "container.bronzeFurnace",//4
 	            "container.coalFurnace",//5
 	            "container.glowstoneFurnace",//6
-	            "container.adamantiumFurnace"//7
+	            "container.adamantiumFurnace",//7
+                "container.silkFurnace"//8
 	    };
 	
 	public static final String containerInventory = "container.inventory";

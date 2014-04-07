@@ -1,8 +1,5 @@
 package fergoman123.mods.fergotools.lib.ints;
 
-/**
- * Created by Fergoman123 on 16/03/14.
- */
 public class GuiInts {
 
     public static final int guiQuartFurnaceId = 0;
@@ -13,4 +10,12 @@ public class GuiInts {
     public static final int guiCoalFurnaceId = 5;
     public static final int guiGlowstoneFurnaceId = 6;
     public static final int guiAdamantiumFurnaceId = 7;
+    //8
+    //9
+    //10
+    //11
+    //12
+    //13
+    //14
+    //15
 }

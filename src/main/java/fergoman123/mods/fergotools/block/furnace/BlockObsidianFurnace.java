@@ -1,16 +1,11 @@
 package fergoman123.mods.fergotools.block.furnace;
 
-import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import static cpw.mods.fml.relauncher.Side.CLIENT;
-
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.tileentity.TileEntityObsidianFurnace;
-import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
+import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -29,6 +24,8 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.Random;
+
+import static cpw.mods.fml.relauncher.Side.CLIENT;
 
 /**
  * Created by Fergoman123 on 24/03/2014.
@@ -120,7 +117,7 @@ public class BlockObsidianFurnace extends BlockContainer {
         }
         else if (!player.isSneaking())
         {
-            TileEntityObsidianFurnace  furnace = (TileEntityObsidianFurnace)world.getTileEntity(x, y, z);
+            FergoToolsTileEntity.TileEntityObsidianFurnace  furnace = (FergoToolsTileEntity.TileEntityObsidianFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
                 player.openGui(FergoTools.instance, 1, world, x, y, z);
@@ -195,7 +192,7 @@ public class BlockObsidianFurnace extends BlockContainer {
 
     public TileEntity createNewTileEntity(World world, int var1)
     {
-        return new TileEntityObsidianFurnace();
+        return new FergoToolsTileEntity.TileEntityObsidianFurnace();
     }
 
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack stack)
@@ -224,7 +221,7 @@ public class BlockObsidianFurnace extends BlockContainer {
 
         if (stack.hasDisplayName())
         {
-            ((TileEntityObsidianFurnace)world.getTileEntity(x, y, z)).setGuiDisplayName(stack.getDisplayName());
+            ((FergoToolsTileEntity.TileEntityObsidianFurnace)world.getTileEntity(x, y, z)).setGuiDisplayName(stack.getDisplayName());
         }
     }
 
@@ -232,7 +229,7 @@ public class BlockObsidianFurnace extends BlockContainer {
     {
         if (!keepInventory)
         {
-            TileEntityObsidianFurnace tileentityfurnace = (TileEntityObsidianFurnace)par1World.getTileEntity(par2, par3, par4);
+            FergoToolsTileEntity.TileEntityObsidianFurnace tileentityfurnace = (FergoToolsTileEntity.TileEntityObsidianFurnace)par1World.getTileEntity(par2, par3, par4);
 
             if (tileentityfurnace != null)
             {
