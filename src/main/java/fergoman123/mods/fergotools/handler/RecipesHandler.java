@@ -1,8 +1,8 @@
 package fergoman123.mods.fergotools.handler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.item.ModItems;
+import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.util.item.Recipes;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;

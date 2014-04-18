@@ -14,6 +14,7 @@ public class BlockTextures {
     public static final String oreLapisCrystal =  Reference.textureLoc + BlockStrings.ores[3];
     public static final String oreBronze =  Reference.textureLoc + BlockStrings.ores[4];
     public static final String oreAdamantium = Reference.textureLoc +  BlockStrings.ores[5];
+    public static final String oreRedstone = Reference.textureLoc + BlockStrings.ores[6];
 
     public static final String blockExperience = Reference.textureLoc +  BlockStrings.blocks[0];
     public static final String blockObsidian =  Reference.textureLoc + BlockStrings.blocks[1];
@@ -24,4 +25,5 @@ public class BlockTextures {
     public static final String blockGlowstone =  Reference.textureLoc + BlockStrings.blocks[6];
     public static final String blockAdamantium =  Reference.textureLoc + BlockStrings.blocks[7];
     public static final String blockSilkGem = Reference.textureLoc + BlockStrings.blocks[8];
+    public static final String blockRedstone = Reference.textureLoc + BlockStrings.blocks[9];
 }

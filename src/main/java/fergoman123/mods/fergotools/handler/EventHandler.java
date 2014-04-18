@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.handler;
 
 import cpw.mods.fml.common.IWorldGenerator;
-import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.gen.WorldGen.WorldGenEndMinable;
 import fergoman123.mods.fergotools.gen.WorldGen.WorldGenNetherMinable;
 import net.minecraft.world.World;

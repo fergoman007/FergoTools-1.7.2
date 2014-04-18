@@ -17,4 +17,5 @@ public class ItemTextures {
     public static final String adamantiumIngot = Reference.textureLoc + ItemStrings.modItems[6];
     public static final String expShard = Reference.textureLoc + ItemStrings.modItems[7];
     public static final String silkGem = Reference.textureLoc + ItemStrings.modItems[8];
+    public static final String redstoneCrystal = Reference.textureLoc + ItemStrings.modItems[9];
 }

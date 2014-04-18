@@ -3,9 +3,9 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
+import fergoman123.mods.fergotools.tileentity.TileEntityGlowstoneFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -115,7 +115,7 @@ public class BlockGlowstoneFurnace extends BlockContainer
         }
         else if(!par5EntityPlayer.isSneaking())
         {
-            FergoToolsTileEntity.TileEntityGlowstoneFurnace var10 = (FergoToolsTileEntity.TileEntityGlowstoneFurnace) par1World.getTileEntity(par2, par3, par4);
+            TileEntityGlowstoneFurnace var10 = (TileEntityGlowstoneFurnace) par1World.getTileEntity(par2, par3, par4);
             if(var10 != null)
             {
                 par5EntityPlayer.openGui(FergoTools.instance, 6, par1World, par2, par3, par4);
@@ -190,7 +190,7 @@ public class BlockGlowstoneFurnace extends BlockContainer
 
     public TileEntity createNewTileEntity(World par1World, int var1)
     {
-        return new FergoToolsTileEntity.TileEntityGlowstoneFurnace();
+        return new TileEntityGlowstoneFurnace();
     }
 
     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
@@ -219,7 +219,7 @@ public class BlockGlowstoneFurnace extends BlockContainer
 
         if (par6ItemStack.hasDisplayName())
         {
-            ((FergoToolsTileEntity.TileEntityGlowstoneFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
+            ((TileEntityGlowstoneFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
         }
     }
 
@@ -227,7 +227,7 @@ public class BlockGlowstoneFurnace extends BlockContainer
     {
         if (!keepInventory)
         {
-            FergoToolsTileEntity.TileEntityGlowstoneFurnace tileentityfurnace = (FergoToolsTileEntity.TileEntityGlowstoneFurnace)par1World.getTileEntity(par2, par3, par4);
+            TileEntityGlowstoneFurnace tileentityfurnace = (TileEntityGlowstoneFurnace)par1World.getTileEntity(par2, par3, par4);
 
             if (tileentityfurnace != null)
             {

@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.util.item;
 
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.item.ModItems;
+import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -37,6 +37,7 @@ public class Recipes {
     public static final Object[] blockAdamantium = new Object[]{recipeBlock, 'x', new ItemStack(ModItems.adamantiumIngot)};
     public static final Object[] blockExperience = new Object[]{recipeBlock, 'x', new ItemStack(Items.experience_bottle)};
     public static final Object[] blockSilkGem = new Object[]{recipeBlock, 'x', new ItemStack(ModItems.silkGem)};
+    public static final Object[] blockRedstone = new Object[]{recipeBlock, 'x', new ItemStack(ModItems.redstoneCrystal)};
 
     public static final Object[] expBottle = new Object[]{recipeBlock, 'x', new ItemStack(ModItems.expShard)};
 
@@ -94,6 +95,12 @@ public class Recipes {
     public static final Object[] silkHoe = new Object[]{recipeHoe, 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)};
     public static final Object[] silkSword = new Object[]{recipeSword, 'x', new ItemStack(ModItems.silkGem), 'y', new ItemStack(Items.stick)};
 
+    public static final Object[] redstonePickaxe = new Object[]{recipePickaxe, 'x', new ItemStack(ModItems.redstoneCrystal), 'y', new ItemStack(Items.stick)};
+    public static final Object[] redstoneShovel = new Object[]{recipeShovel, 'x', new ItemStack(ModItems.redstoneCrystal), 'y', new ItemStack(Items.stick)};
+    public static final Object[] redstoneAxe = new Object[]{recipeAxe, 'x', new ItemStack(ModItems.redstoneCrystal), 'y', new ItemStack(Items.stick)};
+    public static final Object[] redstoneHoe = new Object[]{recipeHoe, 'x', new ItemStack(ModItems.redstoneCrystal), 'y', new ItemStack(Items.stick)};
+    public static final Object[] redstoneSword = new Object[]{recipeSword, 'x', new ItemStack(ModItems.redstoneCrystal), 'y', new ItemStack(Items.stick)};
+
     public static final Object[] quartzFurnace = new Object[]{recipeFurnace, 'x', new ItemStack(Blocks.quartz_block, 1, 0)};
     public static final Object[] obsidianFurnace = new Object[]{recipeFurnace, 'x', new ItemStack(ModBlocks.blockObsidian)};
     public static final Object[] emeraldCrystalFurnace = new Object[]{recipeFurnace, 'x', new ItemStack(ModBlocks.blockEmeraldCrystal)};
@@ -102,6 +109,7 @@ public class Recipes {
     public static final Object[] coalFurnace = new Object[]{recipeFurnace, 'x', new ItemStack(ModBlocks.blockCoal)};
     public static final Object[] glowstoneFurnace = new Object[]{recipeFurnace, 'x', new ItemStack(ModBlocks.blockGlowstone)};
     public static final Object[] adamantiumFurnace = new Object[]{recipeFurnace, 'x', new ItemStack(ModBlocks.blockAdamantium)};
+    public static final Object[] redstoneFurnace = new Object[]{recipeFurnace, 'x', new ItemStack(ModBlocks.blockRedstone)};
 
     public static final Object[] quartzHelmet = new Object[]{recipeHelmet, 'x', Items.quartz};
     public static final Object[] quartzChestplate = new Object[]{recipeChestplate, 'x', Items.quartz};
@@ -139,6 +147,11 @@ public class Recipes {
     public static final Object[] glowstoneLeggings = new Object[]{recipeLeggings, 'x', ModItems.glowstoneIngot};
     public static final Object[] glowstoneBoots = new Object[]{recipeBoots, 'x', ModItems.glowstoneIngot};
 
+    public static final Object[] redstoneHelmet = new Object[]{recipeHelmet, 'x', ModItems.redstoneCrystal};
+    public static final Object[] redstoneChestplate = new Object[]{recipeChestplate, 'x', ModItems.redstoneCrystal};
+    public static final Object[] redstoneLeggings = new Object[]{recipeLeggings, 'x', ModItems.redstoneCrystal};
+    public static final Object[] redstoneBoots = new Object[]{recipeBoots, 'x', ModItems.redstoneCrystal};
+
     public static final Object[] quartzBow = new Object[]{recipeBow, 'X', Items.string, '#', Items.quartz};
     public static final Object[] obsidianBow =  new Object[]{recipeBow, 'X', Items.string, '#', ModItems.obsidianIngot};
     public static final Object[] emeraldBow = new Object[]{recipeBow, 'X', Items.string, '#', ModItems.emeraldCrystal};
@@ -147,6 +160,7 @@ public class Recipes {
     public static final Object[] coalBow = new Object[]{recipeBow, 'X', Items.string, '#', ModItems.coalIngot};
     public static final Object[] glowstoneBow = new Object[]{recipeBow, 'X', Items.string, '#', ModItems.glowstoneIngot};
     public static final Object[] adamantiumBow = new Object[]{recipeBow, 'X', Items.string, '#', ModItems.adamantiumIngot};
+    public static final Object[] redstoneBow = new Object[]{recipeBow, 'X', Items.string, '#', ModItems.redstoneCrystal};
 
 
 }

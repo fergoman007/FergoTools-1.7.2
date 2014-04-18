@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerAdamantiumFurnace;
-import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
+import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -14,9 +14,9 @@ import org.lwjgl.opengl.GL11;
 public class GuiAdamantiumFurnace extends GuiContainer
 {
     private static final ResourceLocation furnaceGuiTextures = new ResourceLocation("textures/gui/container/furnace.png");
-    private FergoToolsTileEntity.TileEntityAdamantiumFurnace furnaceInventory;
+    private TileEntityAdamantiumFurnace furnaceInventory;
 
-    public GuiAdamantiumFurnace(InventoryPlayer par1InventoryPlayer, FergoToolsTileEntity.TileEntityAdamantiumFurnace par2TileEntityFurnace)
+    public GuiAdamantiumFurnace(InventoryPlayer par1InventoryPlayer, TileEntityAdamantiumFurnace par2TileEntityFurnace)
     {
         super(new ContainerAdamantiumFurnace(par1InventoryPlayer, par2TileEntityFurnace));
         this.furnaceInventory = par2TileEntityFurnace;

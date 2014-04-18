@@ -68,6 +68,7 @@ item.ingotCoal.name=Coal Ingot
 item.ingotGlowstone.name=Glowstone Ingot
 item.ingotAdamantium.name=Adamantium Ingot
 item.silkGem.name=Silk Gem
+item.redstoneCrystal.name=Redstone Crystal
 
 item.quartzHelmet.name=Quartz Helmet
 item.quartzChestplate.name=Quartz Chestplate
@@ -122,6 +123,7 @@ tile.oreEmeraldCrystal.name=Emerald Crystal Ore
 tile.oreLapisCrystal.name=Lapis Crystal Ore
 tile.oreBronze.name=Bronze Ore
 tile.oreAdamantium.name=Adamantium Ore
+tile.oreRedstone.name=Redstone Crystal Ore
 
 tile.blockExperience.name=Experience Block
 tile.blockObsidian.name=Obsidian Block
@@ -132,6 +134,7 @@ tile.blockCoal.name=Coal Block
 tile.blockGlowstone.name=Glowstone Block
 tile.blockAdamantium.name=Adamantium Block
 tile.blockSilkGem.name=Silk Gem Block
+tile.blockRedstone.name=Redstone Crystal Block
 
 tile.quartzFurnaceIdle.name=Quartz Furnace
 tile.obsidianFurnaceIdle.name=Obsidian Furnace

@@ -15,6 +15,8 @@ public class ArmorStrings {
 	public static final String[] coalArmorKey = {"coalHelmet", "coalChestplate", "coalLeggings", "coalBoots"};
 	
 	public static final String[] glowstoneArmorKey = {"glowstoneHelmet", "glowstoneChestplate", "glowstoneLeggings", "glowstoneBoots"};
+
+    public static final String[] redstoneArmorKey = {"redstoneHelmet", "redstoneChestplate", "redstoneLeggings", "redstoneBoots"};
 	
 	public static final String[] quartzArmorRender = {"FergoTools:textures/armor/quartz_1.png", "FergoTools:textures/armor/quartz_2.png"};
     public static final String[] obsidianArmorRender = {"FergoTools:textures/armor/obsidian_1.png", "FergoTools:textures/armor/obsidian_2.png"};
@@ -23,5 +25,6 @@ public class ArmorStrings {
     public static final String[] bronzeArmorRender = {"FergoTools:textures/armor/bronze_1.png", "FergoTools:textures/armor/bronze_2.png"};
     public static final String[] coalArmorRender = {"FergoTools:textures/armor/coal_1.png", "FergoTools:textures/armor/coal_2.png"};
     public static final String[] glowstoneArmorRender = {"FergoTools:textures/armor/glowstone_1.png", "FergoTools:textures/armor/glowstone_2.png"};
+    public static final String[] redstoneArmorRender = {"FergoTools:textures/armor/redstone_1.png", "FergoTools:textures/armor/redstone_2.png"};
 
 }

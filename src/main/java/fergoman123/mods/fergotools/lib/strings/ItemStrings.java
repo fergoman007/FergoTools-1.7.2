@@ -12,7 +12,8 @@ public class ItemStrings {
     	"ingotGlowstone",//5
     	"ingotAdamantium",//6
     	"expShard",//7
-    	"silkGem"//8
+    	"silkGem",//8
+        "redstoneCrystal"//9
     	};
 
 }

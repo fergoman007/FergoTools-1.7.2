@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.gui;
 import fergoman123.mods.fergotools.gui.container.ContainerBronzeFurnace;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.strings.GuiStrings;
-import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
+import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -13,9 +13,9 @@ import org.lwjgl.opengl.GL11;
 public class GuiBronzeFurnace extends GuiContainer {
 	
 	private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + GuiStrings.furnaceGuiTexture);
-	private FergoToolsTileEntity.TileEntityBronzeFurnace furnace;
+	private TileEntityBronzeFurnace furnace;
 	
-	public GuiBronzeFurnace(InventoryPlayer player, FergoToolsTileEntity.TileEntityBronzeFurnace entity)
+	public GuiBronzeFurnace(InventoryPlayer player, TileEntityBronzeFurnace entity)
 	{
 		super(new ContainerBronzeFurnace(player, entity));
 		this.furnace = entity;

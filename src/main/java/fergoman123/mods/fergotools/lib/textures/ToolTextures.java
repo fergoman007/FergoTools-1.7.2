@@ -62,6 +62,12 @@ public class ToolTextures {
     public static final String silkHoe = Reference.textureLoc + ToolStrings.silkTool[3];
     public static final String silkSword = Reference.textureLoc + ToolStrings.silkTool[4];
 
+    public static final String redstonePickaxe = Reference.textureLoc + ToolStrings.redstoneTool[0];
+    public static final String redstoneShovel = Reference.textureLoc + ToolStrings.redstoneTool[1];
+    public static final String redstoneAxe = Reference.textureLoc + ToolStrings.redstoneTool[2];
+    public static final String redstoneHoe = Reference.textureLoc + ToolStrings.redstoneTool[3];
+    public static final String redstoneSword = Reference.textureLoc + ToolStrings.redstoneTool[4];
+
 
 
 

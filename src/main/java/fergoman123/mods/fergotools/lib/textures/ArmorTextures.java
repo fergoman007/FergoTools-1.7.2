@@ -42,4 +42,9 @@ public class ArmorTextures {
     public static final String glowstoneChestplate = Reference.textureLoc + ArmorStrings.glowstoneArmorKey[1];
     public static final String glowstoneLeggings = Reference.textureLoc + ArmorStrings.glowstoneArmorKey[2];
     public static final String glowstoneBoots = Reference.textureLoc + ArmorStrings.glowstoneArmorKey[3];
+
+    public static final String redstoneHelmet = Reference.textureLoc + ArmorStrings.redstoneArmorKey[0];
+    public static final String redstoneChestplate = Reference.textureLoc + ArmorStrings.redstoneArmorKey[1];
+    public static final String redstoneLeggings = Reference.textureLoc + ArmorStrings.redstoneArmorKey[2];
+    public static final String redstoneBoots = Reference.textureLoc + ArmorStrings.redstoneArmorKey[3];
 }

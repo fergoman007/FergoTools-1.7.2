@@ -22,6 +22,7 @@ public class ToolArmorMaterials {
     public static ToolMaterial adamantium;
     public static ToolMaterial donator;
     public static ToolMaterial silk;
+    public static ToolMaterial redstone;
 
     public static ArmorMaterial quartzArmor;
     public static ArmorMaterial obsidianArmor;
@@ -30,6 +31,13 @@ public class ToolArmorMaterials {
     public static ArmorMaterial bronzeArmor;
     public static ArmorMaterial coalArmor;
     public static ArmorMaterial glowstoneArmor;
+    public static ArmorMaterial redstoneArmor;
+
+    public static void init()
+    {
+        addToolMaterials();
+        addArmorMaterials();
+    }
 
     public static void addToolMaterials()
     {
@@ -41,8 +49,9 @@ public class ToolArmorMaterials {
         coal = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[5], ToolInts.harvestLvl, ToolInts.coalMaxDamage, ToolInts.coalEff, ToolInts.coalDamage, ToolInts.enchantability);
         glowstone = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[6], ToolInts.harvestLvl, ToolInts.glowstoneMaxDamage, ToolInts.glowstoneEff, ToolInts.glowstoneDamage, ToolInts.enchantability);
         adamantium = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[7], ToolInts.harvestLvl, ToolInts.adamantiumMaxDamage, ToolInts.adamantiumEff, ToolInts.adamantiumDamage, ToolInts.enchantability);
-        donator = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[8], 3, 20000, 10f, 10, 30);
-        silk = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[9], 3, 2500, 5f, 5, 30);
+        donator = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[8], ToolInts.harvestLvl, ToolInts.donatorMaxDamage, ToolInts.donatorEff, ToolInts.donatorDamage, ToolInts.enchantability);
+        silk = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[9], ToolInts.harvestLvl, ToolInts.silkMaxDamage, ToolInts.silkEff, ToolInts.silkDamage, ToolInts.enchantability);
+        redstone = EnumHelper.addToolMaterial(MaterialStrings.toolMaterials[10], ToolInts.harvestLvl, ToolInts.redstoneMaxDamage, ToolInts.redstoneEff, ToolInts.redstoneDamage, ToolInts.enchantability);
     }
 
     public static void addArmorMaterials() {
@@ -53,5 +62,6 @@ public class ToolArmorMaterials {
         bronzeArmor = EnumHelper.addArmorMaterial(MaterialStrings.armorMaterials[4], ArmorInts.bronzeArmorMaxDamage, ArmorInts.bronzeReduct, ArmorInts.enchantability);
         coalArmor = EnumHelper.addArmorMaterial(MaterialStrings.armorMaterials[5], ArmorInts.coalArmorMaxDamage, ArmorInts.coalReduct, ArmorInts.enchantability);
         glowstoneArmor = EnumHelper.addArmorMaterial(MaterialStrings.armorMaterials[6], ArmorInts.glowstoneArmorMaxDamage, ArmorInts.glowstoneReduct, ArmorInts.enchantability);
+        redstoneArmor = EnumHelper.addArmorMaterial(MaterialStrings.armorMaterials[7], ArmorInts.redstoneArmorMaxDamage, ArmorInts.redstoneReduct, ArmorInts.enchantability);
     }
 }

@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerGlowstoneFurnace;
-import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
+import fergoman123.mods.fergotools.tileentity.TileEntityGlowstoneFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -14,9 +14,9 @@ import org.lwjgl.opengl.GL11;
 public class GuiGlowstoneFurnace extends GuiContainer
 {
     private static final ResourceLocation furnaceGuiTextures = new ResourceLocation("textures/gui/container/furnace.png");
-    private FergoToolsTileEntity.TileEntityGlowstoneFurnace furnaceInventory;
+    private TileEntityGlowstoneFurnace furnaceInventory;
 
-    public GuiGlowstoneFurnace(InventoryPlayer par1InventoryPlayer, FergoToolsTileEntity.TileEntityGlowstoneFurnace par2TileEntityFurnace)
+    public GuiGlowstoneFurnace(InventoryPlayer par1InventoryPlayer, TileEntityGlowstoneFurnace par2TileEntityFurnace)
     {
         super(new ContainerGlowstoneFurnace(par1InventoryPlayer, par2TileEntityFurnace));
         this.furnaceInventory = par2TileEntityFurnace;

@@ -9,7 +9,8 @@ public class BlockStrings {
     	"oreEmeraldCrystal",//2
     	"oreLapisCrystal",//3
     	"oreBronze",//4
-    	"oreAdamantium"//5
+    	"oreAdamantium",//5
+        "oreRedstone"//6
     	};
 	
     public static final String[] blocks = 
@@ -22,6 +23,7 @@ public class BlockStrings {
 		"blockCoal",//5
 		"blockGlowstone",//6
 		"blockAdamantium",//7
-		"blockSilkGem"
+		"blockSilkGem",//8
+        "blockRedstone"//9
 		};
 }

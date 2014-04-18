@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.tabs;
 
-import fergoman123.mods.fergotools.block.ModBlocks;
-import fergoman123.mods.fergotools.item.ModItems;
+import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.strings.TabStrings;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -17,10 +17,8 @@ public class Tabs {
     public static CreativeTabs tabFergoItems;
     public static CreativeTabs tabFergoArmor;
     public static CreativeTabs tabFergoBows;
-    public static CreativeTabs tabFergoHammers;
-    public static CreativeTabs tabFergoExcavators;
 
-    public static void addTabs()
+    public static void init()
     {
         tabFergoTools = new TabFergoTools(TabStrings.tabs[0]);
         tabFergoBlocks = new TabFergoBlocks(TabStrings.tabs[1]);
@@ -28,7 +26,6 @@ public class Tabs {
         tabFergoItems = new TabFergoItems(TabStrings.tabs[3]);
         tabFergoArmor = new TabFergoArmor(TabStrings.tabs[4]);
         tabFergoBows = new TabFergoBows(TabStrings.tabs[5]);
-        tabFergoHammers = new TabFergoHammers(TabStrings.tabs[6]);
     }
 
     public static class TabFergoTools extends CreativeTabs
@@ -104,16 +101,6 @@ public class Tabs {
         public Item getTabIconItem()
         {
             return ModItems.quartzBow;
-        }
-    }
-
-    private static class TabFergoHammers extends CreativeTabs {
-        public TabFergoHammers(String label) {
-            super(label);
-        }
-
-        public Item getTabIconItem() {
-            return ModItems.quartzHammer;
         }
     }
 }

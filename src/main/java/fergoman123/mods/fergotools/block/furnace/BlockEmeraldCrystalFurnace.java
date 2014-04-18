@@ -3,10 +3,10 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.textures.BlockTextures;
-import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
+import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -114,7 +114,7 @@ public class BlockEmeraldCrystalFurnace extends BlockContainer{
         }
         else if (!player.isSneaking())
         {
-            FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace furnace = (FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace)world.getTileEntity(x, y, z);
+            TileEntityEmeraldCrystalFurnace furnace = (TileEntityEmeraldCrystalFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
                 player.openGui(FergoTools.instance, 2, world, x, y, z);
@@ -189,7 +189,7 @@ public class BlockEmeraldCrystalFurnace extends BlockContainer{
 
     public TileEntity createNewTileEntity(World par1World, int var1)
     {
-        return new FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace();
+        return new TileEntityEmeraldCrystalFurnace();
     }
 
     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase elb, ItemStack stack)
@@ -218,7 +218,7 @@ public class BlockEmeraldCrystalFurnace extends BlockContainer{
 
         if (stack.hasDisplayName())
         {
-            ((FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(stack.getDisplayName());
+            ((TileEntityEmeraldCrystalFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(stack.getDisplayName());
         }
     }
 
@@ -226,7 +226,7 @@ public class BlockEmeraldCrystalFurnace extends BlockContainer{
     {
         if (!keepInventory)
         {
-            FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace tileentityfurnace = (FergoToolsTileEntity.TileEntityEmeraldCrystalFurnace)par1World.getTileEntity(par2, par3, par4);
+            TileEntityEmeraldCrystalFurnace tileentityfurnace = (TileEntityEmeraldCrystalFurnace)par1World.getTileEntity(par2, par3, par4);
 
             if (tileentityfurnace != null)
             {

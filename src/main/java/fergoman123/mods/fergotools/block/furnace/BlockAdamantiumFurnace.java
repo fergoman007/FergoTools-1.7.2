@@ -3,10 +3,11 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.block.ModBlocks;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.textures.BlockTextures;
 import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
-import fergoman123.mods.fergotools.tileentity.FergoToolsTileEntity;
+import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -103,9 +104,9 @@ public class BlockAdamantiumFurnace extends BlockContainer
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(Reference.textureLoc + "blockAdamantium");
+        this.blockIcon = par1IconRegister.registerIcon(BlockTextures.blockAdamantium);
         this.iconFront = par1IconRegister.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.adamantiumFurnaceActive : FurnaceTextures.adamantiumFurnaceIdle));
-        this.iconTop = par1IconRegister.registerIcon(Reference.textureLoc + "blockAdamantium");
+        this.iconTop = par1IconRegister.registerIcon(BlockTextures.blockAdamantium);
     }
    
     public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
@@ -116,7 +117,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
         }
         else if(!par5EntityPlayer.isSneaking())
         {
-        	FergoToolsTileEntity.TileEntityAdamantiumFurnace var10 = (FergoToolsTileEntity.TileEntityAdamantiumFurnace) par1World.getTileEntity(par2, par3, par4);
+        	TileEntityAdamantiumFurnace var10 = (TileEntityAdamantiumFurnace) par1World.getTileEntity(par2, par3, par4);
         	if(var10 != null)
         	{
         		par5EntityPlayer.openGui(FergoTools.instance, 7, par1World, par2, par3, par4);
@@ -191,7 +192,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
 
     public TileEntity createNewTileEntity(World par1World, int var)
     {
-        return new FergoToolsTileEntity.TileEntityAdamantiumFurnace();
+        return new TileEntityAdamantiumFurnace();
     }
 
     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
@@ -220,7 +221,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
 
         if (par6ItemStack.hasDisplayName())
         {
-            ((FergoToolsTileEntity.TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
+            ((TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
         }
     }
 
@@ -228,7 +229,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
     {
         if (!keepInventory)
         {
-            FergoToolsTileEntity.TileEntityAdamantiumFurnace tileentityfurnace = (FergoToolsTileEntity.TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4);
+            TileEntityAdamantiumFurnace tileentityfurnace = (TileEntityAdamantiumFurnace)par1World.getTileEntity(par2, par3, par4);
 
             if (tileentityfurnace != null)
             {
