@@ -31,16 +31,10 @@ public class FergoMaterials extends Item{
         this.setCreativeTab(Tabs.tabFergoItems);
     }
 
+    @SuppressWarnings({"unchecked"})
     public boolean hasEffect(ItemStack stack, int pass)
     {
-        if (stack.getItemDamage() > 6 && stack.getItemDamage() < 8)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return stack.getItemDamage() > 6 && stack.getItemDamage() < 8;
     }
 
     @SideOnly(Side.CLIENT)

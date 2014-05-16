@@ -13,7 +13,7 @@ import org.lwjgl.opengl.GL11;
 public class GuiLapisCrystalFurnace extends GuiContainer{
 
     private Object[] obj = new Object[0];
-	private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + GuiStrings.furnaceGuiTexture);
+	private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + GuiStrings.lapisFurnaceGui);
 	private TileEntityLapisCrystalFurnace furnace;
 	
 	public GuiLapisCrystalFurnace(InventoryPlayer player, TileEntityLapisCrystalFurnace entity)

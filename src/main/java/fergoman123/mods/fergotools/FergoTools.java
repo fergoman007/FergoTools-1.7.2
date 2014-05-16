@@ -34,9 +34,9 @@ public class FergoTools {
     public void preInit(FMLPreInitializationEvent evt)
     {
         LogHelper.info("Pre Initialising Mod");
-        Tabs.initTabs();
-        UtilToolArmor.initMaterials();
-        ModItems.initItems();
+        Tabs.init();
+        UtilToolArmor.init();
+        ModItems.init();
         ModBlocks.initBlocks();
     }
 

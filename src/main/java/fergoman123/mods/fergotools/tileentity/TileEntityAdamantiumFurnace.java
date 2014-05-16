@@ -1,16 +1,19 @@
 package fergoman123.mods.fergotools.tileentity;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockAdamantiumFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
-import fergoman123.mods.fergoutil.helper.FurnaceTileHelper;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -103,13 +106,13 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
             byte b0 = nbttagcompound1.getByte(Strings.TileStrings.slot);
 
             if (b0 >= 0 && b0 < this.slots.length) {
-                this.slots[b0] = FurnaceTileHelper.loadItemStackFromNBT(nbttagcompound1);
+                this.slots[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
             }
         }
 
         this.burnTime = par1NBTTagCompound.getShort(Strings.TileStrings.burnTime);
         this.cookTime = par1NBTTagCompound.getShort(Strings.TileStrings.cookTime);
-        this.currentItemBurnTime = FurnaceTileHelper.getItemBurnTime(this.slots[1]);
+        this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 
         if (par1NBTTagCompound.hasKey(Strings.TileStrings.customName)) {
             this.localizedName = par1NBTTagCompound.getString(Strings.TileStrings.customName);
@@ -170,7 +173,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
 
         if (!this.worldObj.isRemote) {
             if (this.burnTime == 0 && this.canSmelt()) {
-                this.currentItemBurnTime = this.burnTime = FurnaceTileHelper.getItemBurnTime(this.slots[1]);
+                this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
 
                 if (this.burnTime > 0) {
                     flag1 = true;
@@ -242,7 +245,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
 
 
     public static boolean isItemFuel(ItemStack par0ItemStack) {
-        return FurnaceTileHelper.getItemBurnTime(par0ItemStack) > 0;
+        return getItemBurnTime(par0ItemStack) > 0;
     }
 
     public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
@@ -260,4 +263,46 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
     public boolean canInsertItem(int par1, ItemStack par2ItemStack, int par3) {return this.isItemValidForSlot(par1, par2ItemStack);}
 
     public boolean canExtractItem(int par1, ItemStack par2ItemStack, int par3) {return par3 != 0 || par1 != 1 || par2ItemStack.getItem() == Items.bucket;}
+
+    public static int getItemBurnTime(ItemStack stack)
+    {
+        if (stack == null)
+        {
+            return 0;
+        }
+        else
+        {
+            Item item = stack.getItem();
+
+            if (stack.getItem() instanceof ItemBlock && Block.getBlockFromItem(item) != null)
+            {
+                Block block = Block.getBlockFromItem(item);
+
+                if (block == Blocks.wooden_slab)
+                {
+                    return 150;
+                }
+
+                if (block.getMaterial() == Material.wood)
+                {
+                    return 300;
+                }
+
+                if (block == Blocks.coal_block)
+                {
+                    return 16000;
+                }
+            }
+
+            if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item instanceof ItemHoe && ((ItemHoe) item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item == Items.stick) return 100;
+            if (item == Items.coal) return 1600;
+            if (item == Items.lava_bucket) return 20000;
+            if (item == Item.getItemFromBlock(Blocks.sapling)) return 100;
+            if (item == Items.blaze_rod) return 2400;
+            return GameRegistry.getFuelValue(stack);
+        }
+    }
 }

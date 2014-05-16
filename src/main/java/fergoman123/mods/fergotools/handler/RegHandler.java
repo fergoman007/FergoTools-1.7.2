@@ -20,25 +20,18 @@ public class RegHandler {
 
     public static void init()
     {
-        RegisterHelper.registerBlock(ModBlocks.oreExperience, BlockStrings.oreExperience);
-        RegisterHelper.registerBlock(ModBlocks.oreObsidian, BlockStrings.oreObsidian);
-        RegisterHelper.registerBlock(ModBlocks.oreEmeraldCrystal, BlockStrings.oreEmeraldCrystal);
-        RegisterHelper.registerBlock(ModBlocks.oreLapisCrystal, BlockStrings.oreLapisCrystal);
-        RegisterHelper.registerBlock(ModBlocks.oreBronze, BlockStrings.oreBronze);
-        RegisterHelper.registerBlock(ModBlocks.oreAdamantium, BlockStrings.oreAdamantium);
-        RegisterHelper.registerBlock(ModBlocks.oreRedstone, BlockStrings.oreRedstone);
+        registerBlocks();
+        registerFurnaces();
+        registerArmor();
+        registerTools();
+        registerTileEntities();
+        registerItems();
+        registerBows();
+        registerOther();
+    }
 
-        RegisterHelper.registerBlock(ModBlocks.blockExperience, BlockStrings.blockExperience);
-        RegisterHelper.registerBlock(ModBlocks.blockObsidian, BlockStrings.blockObsidian);
-        RegisterHelper.registerBlock(ModBlocks.blockEmeraldCrystal, BlockStrings.blockEmeraldCrystal);
-        RegisterHelper.registerBlock(ModBlocks.blockLapisCrystal, BlockStrings.blockLapisCrystal);
-        RegisterHelper.registerBlock(ModBlocks.blockBronze, BlockStrings.blockBronze);
-        RegisterHelper.registerBlock(ModBlocks.blockCoal, BlockStrings.blockCoal);
-        RegisterHelper.registerBlock(ModBlocks.blockGlowstone, BlockStrings.blockGlowstone);
-        RegisterHelper.registerBlock(ModBlocks.blockAdamantium, BlockStrings.blockAdamantium);
-        RegisterHelper.registerBlock(ModBlocks.blockSilkGem, BlockStrings.blockSilkGem);
-        RegisterHelper.registerBlock(ModBlocks.blockRedstone, BlockStrings.blockRedstone);
-
+    public static void registerFurnaces()
+    {
         RegisterHelper.registerBlock(ModBlocks.quartzFurnaceIdle, FurnaceStrings.quartzFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.obsidianFurnaceIdle, FurnaceStrings.obsidianFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.emeraldCrystalFurnaceIdle, FurnaceStrings.emeraldCrystalFurnaceIdle);
@@ -60,18 +53,53 @@ public class RegHandler {
         RegisterHelper.registerBlock(ModBlocks.adamantiumFurnaceActive, FurnaceStrings.adamantiumFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.silkFurnaceActive, FurnaceStrings.silkFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceActive, FurnaceStrings.redstoneFurnaceActive);
+    }
 
-        RegisterHelper.registerTileEntity(TileEntityQuartzFurnace.class, TileStrings.tilePrefix + "QuartzFurnace");
-        RegisterHelper.registerTileEntity(TileEntityObsidianFurnace.class, TileStrings.tilePrefix + "ObsidianFurnace");
-        RegisterHelper.registerTileEntity(TileEntityEmeraldCrystalFurnace.class, TileStrings.tilePrefix + "EmeraldCrystalFurnace");
-        RegisterHelper.registerTileEntity(TileEntityLapisCrystalFurnace.class, TileStrings.tilePrefix + "LapisCrystalFurnace");
-        RegisterHelper.registerTileEntity(TileEntityBronzeFurnace.class, TileStrings.tilePrefix + "BronzeFurnace");
-        RegisterHelper.registerTileEntity(TileEntityCoalFurnace.class, TileStrings.tilePrefix + "CoalFurnace");
-        RegisterHelper.registerTileEntity(TileEntityGlowstoneFurnace.class, TileStrings.tilePrefix + "GlowstoneFurnace");
-        RegisterHelper.registerTileEntity(TileEntityAdamantiumFurnace.class, TileStrings.tilePrefix + "AdamantiumFurnace");
-        RegisterHelper.registerTileEntity(TileEntitySilkFurnace.class, TileStrings.tilePrefix + "SilkFurnace");
-        RegisterHelper.registerTileEntity(TileEntityRedstoneFurnace.class, TileStrings.tilePrefix + "RedstoneFurnace");
+    public static void registerArmor()
+    {
+        RegisterHelper.registerItem(ModItems.quartzHelmet, ArmorStrings.quartzHelmet);
+        RegisterHelper.registerItem(ModItems.quartzChestplate, ArmorStrings.quartzChest);
+        RegisterHelper.registerItem(ModItems.quartzLeggings, ArmorStrings.quartzLegs);
+        RegisterHelper.registerItem(ModItems.quartzBoots, ArmorStrings.quartzBoots);
 
+        RegisterHelper.registerItem(ModItems.obsidianHelmet, ArmorStrings.obsidianHelmet);
+        RegisterHelper.registerItem(ModItems.obsidianChestplate, ArmorStrings.obsidianChest);
+        RegisterHelper.registerItem(ModItems.obsidianLeggings, ArmorStrings.obsidianLegs);
+        RegisterHelper.registerItem(ModItems.obsidianBoots, ArmorStrings.obsidianBoots);
+
+        RegisterHelper.registerItem(ModItems.emeraldHelmet, ArmorStrings.emeraldHelmet);
+        RegisterHelper.registerItem(ModItems.emeraldChestplate, ArmorStrings.emeraldChest);
+        RegisterHelper.registerItem(ModItems.emeraldLeggings, ArmorStrings.emeraldLegs);
+        RegisterHelper.registerItem(ModItems.emeraldBoots, ArmorStrings.emeraldBoots);
+
+        RegisterHelper.registerItem(ModItems.lapisHelmet, ArmorStrings.lapisHelmet);
+        RegisterHelper.registerItem(ModItems.lapisChestplate, ArmorStrings.lapisChest);
+        RegisterHelper.registerItem(ModItems.lapisLeggings, ArmorStrings.lapisLegs);
+        RegisterHelper.registerItem(ModItems.lapisBoots, ArmorStrings.lapisBoots);
+
+        RegisterHelper.registerItem(ModItems.bronzeHelmet, ArmorStrings.bronzeHelmet);
+        RegisterHelper.registerItem(ModItems.bronzeChestplate, ArmorStrings.bronzeChest);
+        RegisterHelper.registerItem(ModItems.bronzeLeggings, ArmorStrings.bronzeLegs);
+        RegisterHelper.registerItem(ModItems.bronzeBoots, ArmorStrings.bronzeBoots);
+
+        RegisterHelper.registerItem(ModItems.coalHelmet, ArmorStrings.coalHelmet);
+        RegisterHelper.registerItem(ModItems.coalChestplate, ArmorStrings.coalChest);
+        RegisterHelper.registerItem(ModItems.coalLeggings, ArmorStrings.coalLegs);
+        RegisterHelper.registerItem(ModItems.coalBoots, ArmorStrings.coalBoots);
+//
+//        RegisterHelper.registerItem(ModItems.glowstoneHelmet, ArmorStrings.glowstoneHelmet);
+//        RegisterHelper.registerItem(ModItems.glowstoneChestplate, ArmorStrings.glowstoneChest);
+//        RegisterHelper.registerItem(ModItems.glowstoneLeggings, ArmorStrings.glowstoneLegs);
+//        RegisterHelper.registerItem(ModItems.glowstoneBoots, ArmorStrings.glowstoneBoots);
+//
+//        RegisterHelper.registerItem(ModItems.redstoneHelmet, ArmorStrings.redstoneHelmet);
+//        RegisterHelper.registerItem(ModItems.redstoneChestplate, ArmorStrings.redstoneChest);
+//        RegisterHelper.registerItem(ModItems.redstoneLeggings, ArmorStrings.redstoneLegs);
+//        RegisterHelper.registerItem(ModItems.redstoneBoots, ArmorStrings.redstoneBoots);
+    }
+
+    public static void registerTools()
+    {
         RegisterHelper.registerItem(ModItems.quartzPickaxe, ToolStrings.quartzPickaxe);
         RegisterHelper.registerItem(ModItems.quartzShovel, ToolStrings.quartzShovel);
         RegisterHelper.registerItem(ModItems.quartzAxe, ToolStrings.quartzAxe);
@@ -131,49 +159,24 @@ public class RegHandler {
         RegisterHelper.registerItem(ModItems.redstoneAxe, ToolStrings.redstoneAxe);
         RegisterHelper.registerItem(ModItems.redstoneHoe, ToolStrings.redstoneHoe);
         RegisterHelper.registerItem(ModItems.redstoneSword, ToolStrings.redstoneSword);
+    }
 
-        RegisterHelper.registerItem(ModItems.fergoMaterials, "ft");
+    public static void registerTileEntities()
+    {
+        RegisterHelper.registerTileEntity(TileEntityQuartzFurnace.class, TileStrings.tilePrefix + "QuartzFurnace");
+        RegisterHelper.registerTileEntity(TileEntityObsidianFurnace.class, TileStrings.tilePrefix + "ObsidianFurnace");
+        RegisterHelper.registerTileEntity(TileEntityEmeraldCrystalFurnace.class, TileStrings.tilePrefix + "EmeraldCrystalFurnace");
+        RegisterHelper.registerTileEntity(TileEntityLapisCrystalFurnace.class, TileStrings.tilePrefix + "LapisCrystalFurnace");
+        RegisterHelper.registerTileEntity(TileEntityBronzeFurnace.class, TileStrings.tilePrefix + "BronzeFurnace");
+        RegisterHelper.registerTileEntity(TileEntityCoalFurnace.class, TileStrings.tilePrefix + "CoalFurnace");
+        RegisterHelper.registerTileEntity(TileEntityGlowstoneFurnace.class, TileStrings.tilePrefix + "GlowstoneFurnace");
+        RegisterHelper.registerTileEntity(TileEntityAdamantiumFurnace.class, TileStrings.tilePrefix + "AdamantiumFurnace");
+        RegisterHelper.registerTileEntity(TileEntitySilkFurnace.class, TileStrings.tilePrefix + "SilkFurnace");
+        RegisterHelper.registerTileEntity(TileEntityRedstoneFurnace.class, TileStrings.tilePrefix + "RedstoneFurnace");
+    }
 
-        RegisterHelper.registerItem(ModItems.quartzHelmet, ArmorStrings.quartzArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.quartzChestplate, ArmorStrings.quartzArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.quartzLeggings, ArmorStrings.quartzArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.quartzBoots, ArmorStrings.quartzArmorKey[3]);
-
-        RegisterHelper.registerItem(ModItems.obsidianHelmet, ArmorStrings.obsidianArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.obsidianChestplate, ArmorStrings.obsidianArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.obsidianLeggings, ArmorStrings.obsidianArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.obsidianBoots, ArmorStrings.obsidianArmorKey[3]);
-
-        RegisterHelper.registerItem(ModItems.emeraldHelmet, ArmorStrings.emeraldArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.emeraldChestplate, ArmorStrings.emeraldArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.emeraldLeggings, ArmorStrings.emeraldArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.emeraldBoots, ArmorStrings.emeraldArmorKey[3]);
-
-        RegisterHelper.registerItem(ModItems.lapisHelmet, ArmorStrings.lapisArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.lapisChestplate, ArmorStrings.lapisArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.lapisLeggings, ArmorStrings.lapisArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.lapisBoots, ArmorStrings.lapisArmorKey[3]);
-
-        RegisterHelper.registerItem(ModItems.bronzeHelmet, ArmorStrings.bronzeArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.bronzeChestplate, ArmorStrings.bronzeArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.bronzeLeggings, ArmorStrings.bronzeArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.bronzeBoots, ArmorStrings.bronzeArmorKey[3]);
-
-        RegisterHelper.registerItem(ModItems.coalHelmet, ArmorStrings.coalArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.coalChestplate, ArmorStrings.coalArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.coalLeggings, ArmorStrings.coalArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.coalBoots, ArmorStrings.coalArmorKey[3]);
-
-        RegisterHelper.registerItem(ModItems.glowstoneHelmet, ArmorStrings.glowstoneArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.glowstoneChestplate, ArmorStrings.glowstoneArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.glowstoneLeggings, ArmorStrings.glowstoneArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.glowstoneBoots, ArmorStrings.glowstoneArmorKey[3]);
-
-        RegisterHelper.registerItem(ModItems.redstoneHelmet, ArmorStrings.redstoneArmorKey[0]);
-        RegisterHelper.registerItem(ModItems.redstoneChestplate, ArmorStrings.redstoneArmorKey[1]);
-        RegisterHelper.registerItem(ModItems.redstoneLeggings, ArmorStrings.redstoneArmorKey[2]);
-        RegisterHelper.registerItem(ModItems.redstoneBoots, ArmorStrings.redstoneArmorKey[3]);
-
+    public static void registerBows()
+    {
         RegisterHelper.registerItem(ModItems.quartzBow, BowStrings.bowQuartz);
         RegisterHelper.registerItem(ModItems.obsidianBow, BowStrings.bowObsidian);
         RegisterHelper.registerItem(ModItems.emeraldBow, BowStrings.bowEmerald);
@@ -182,9 +185,41 @@ public class RegHandler {
         RegisterHelper.registerItem(ModItems.coalBow, BowStrings.bowCoal);
         RegisterHelper.registerItem(ModItems.glowstoneBow, BowStrings.bowGlowstone);
         RegisterHelper.registerItem(ModItems.adamantiumBow, BowStrings.bowAdamantium);
+    }
 
+    public static void registerOther()
+    {
         RegisterHelper.registerGuiHandler(FergoTools.instance, handler);
         RegisterHelper.registerWorldGen(event, 0);
+    }
+
+    public static void registerItems()
+    {
+        RegisterHelper.registerItem(ModItems.fergoMaterials, "ft");
+    }
+
+
+
+    public static void registerBlocks()
+    {
+        RegisterHelper.registerBlock(ModBlocks.oreExperience, BlockStrings.oreExperience);
+        RegisterHelper.registerBlock(ModBlocks.oreObsidian, BlockStrings.oreObsidian);
+        RegisterHelper.registerBlock(ModBlocks.oreEmeraldCrystal, BlockStrings.oreEmeraldCrystal);
+        RegisterHelper.registerBlock(ModBlocks.oreLapisCrystal, BlockStrings.oreLapisCrystal);
+        RegisterHelper.registerBlock(ModBlocks.oreBronze, BlockStrings.oreBronze);
+        RegisterHelper.registerBlock(ModBlocks.oreAdamantium, BlockStrings.oreAdamantium);
+        RegisterHelper.registerBlock(ModBlocks.oreRedstone, BlockStrings.oreRedstone);
+
+        RegisterHelper.registerBlock(ModBlocks.blockExperience, BlockStrings.blockExperience);
+        RegisterHelper.registerBlock(ModBlocks.blockObsidian, BlockStrings.blockObsidian);
+        RegisterHelper.registerBlock(ModBlocks.blockEmeraldCrystal, BlockStrings.blockEmeraldCrystal);
+        RegisterHelper.registerBlock(ModBlocks.blockLapisCrystal, BlockStrings.blockLapisCrystal);
+        RegisterHelper.registerBlock(ModBlocks.blockBronze, BlockStrings.blockBronze);
+        RegisterHelper.registerBlock(ModBlocks.blockCoal, BlockStrings.blockCoal);
+        RegisterHelper.registerBlock(ModBlocks.blockGlowstone, BlockStrings.blockGlowstone);
+        RegisterHelper.registerBlock(ModBlocks.blockAdamantium, BlockStrings.blockAdamantium);
+        RegisterHelper.registerBlock(ModBlocks.blockSilkGem, BlockStrings.blockSilkGem);
+        RegisterHelper.registerBlock(ModBlocks.blockRedstone, BlockStrings.blockRedstone);
         }
 
     public static class GuiHandler implements IGuiHandler {

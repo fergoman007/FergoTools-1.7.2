@@ -9,7 +9,6 @@ import fergoman123.mods.fergotools.lib.Textures.BlockTextures;
 import fergoman123.mods.fergotools.lib.Textures.FurnaceTextures;
 import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
-import fergoman123.mods.fergoutil.helper.FurnaceHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -34,6 +33,8 @@ public class BlockBronzeFurnace extends BlockContainer
 
 	
 		private final Random rand = new Random();
+
+        private TileEntityBronzeFurnace furnace = new TileEntityBronzeFurnace();
 		
 		private final boolean isActive;
 		
@@ -57,8 +58,42 @@ public class BlockBronzeFurnace extends BlockContainer
 		public void onBlockAdded(World world, int x, int y, int z)
 		{
 			super.onBlockAdded(world, x, y, z);
-			FurnaceHelper.setDefaultDirection(world, x, y, z);
+			this.setDefaultDirection(world, x, y, z);
 		}
+
+    private void setDefaultDirection(World par1World, int par2, int par3, int par4)
+    {
+        if (!par1World.isRemote)
+        {
+            Block a = par1World.getBlock(par2, par3, par4 - 1);
+            Block b = par1World.getBlock(par2, par3, par4 + 1);
+            Block c = par1World.getBlock(par2 - 1, par3, par4);
+            Block d = par1World.getBlock(par2 + 1, par3, par4);
+            byte b0 = 3;
+
+            if (a.func_149730_j() && !b.func_149730_j())
+            {
+                b0 = 3;
+            }
+
+            if (b.func_149730_j() && !a.func_149730_j())
+            {
+                b0 = 2;
+            }
+
+            if (c.func_149730_j() && !d.func_149730_j())
+            {
+                b0 = 5;
+            }
+
+            if (d.func_149730_j() && !c.func_149730_j())
+            {
+                b0 = 4;
+            }
+
+            par1World.setBlockMetadataWithNotify(par2, par3, par4, b0, 2);
+        }
+    }
 		
 		@SideOnly(Side.CLIENT)
 		public IIcon getIcon(int par1, int par2)
@@ -70,8 +105,8 @@ public class BlockBronzeFurnace extends BlockContainer
 		
 		@SideOnly(Side.CLIENT)
 		public void registerBlockIcons(IIconRegister register)
-		{
-			this.blockIcon = register.registerIcon(BlockTextures.blockBronze);
+        {
+            this.blockIcon = register.registerIcon(BlockTextures.blockBronze);
 			this.iconFront = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.bronzeFurnaceActive : FurnaceTextures.bronzeFurnaceIdle));
 			this.iconTop = register.registerIcon(BlockTextures.blockBronze);
 		}
@@ -105,11 +140,11 @@ public class BlockBronzeFurnace extends BlockContainer
 			
 			if(active)
 			{
-				world.setBlock(x, y, z, ModBlocks.bronzeFurnaceActive);
+                world.setBlock(x, y, z, ModBlocks.bronzeFurnaceActive);
 			}
 			else
 			{
-				world.setBlock(x, y, z, ModBlocks.bronzeFurnaceIdle);
+                world.setBlock(x, y, z, ModBlocks.bronzeFurnaceIdle);
 			}
 			
 			keepInventory = false;
@@ -123,43 +158,43 @@ public class BlockBronzeFurnace extends BlockContainer
 		}
 		
 		@SideOnly(Side.CLIENT)
-		public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
+		public void randomDisplayTick(World world, int x, int y, int z, Random rand)
 	    {
 	        if (this.isActive)
 	        {
-	            int l = par1World.getBlockMetadata(par2, par3, par4);
-	            float f = (float)par2 + 0.5F;
-	            float f1 = (float)par3 + 0.0F + par5Random.nextFloat() * 6.0F / 16.0F;
-	            float f2 = (float)par4 + 0.5F;
+	            int l = world.getBlockMetadata(x, y, z);
+	            float f = (float)x + 0.5F;
+	            float f1 = (float)y + 0.0F + rand.nextFloat() * 6.0F / 16.0F;
+	            float f2 = (float)z + 0.5F;
 	            float f3 = 0.52F;
-	            float f4 = par5Random.nextFloat() * 0.6F - 0.3F;
+	            float f4 = rand.nextFloat() * 0.6F - 0.3F;
 
 	            if (l == 4)
 	            {
-	                par1World.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
-	                par1World.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
 	            }
 	            else if (l == 5)
 	            {
-	                par1World.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
-	                par1World.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
 	            }
 	            else if (l == 2)
 	            {
-	                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
-	                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
 	            }
 	            else if (l == 3)
 	            {
-	                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
-	                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+                    world.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
 	            }
 	        }
 	    }
 		
 		public TileEntity createNewTileEntity(World world, int var)
 		{
-			return new TileEntityBronzeFurnace();
+			return this.furnace;
 		}
 		
 		public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack itemstack)
@@ -168,22 +203,22 @@ public class BlockBronzeFurnace extends BlockContainer
 			
 			if(l == 0)
 			{
-				world.setBlockMetadataWithNotify(x, y, z, 2, 2);
+                world.setBlockMetadataWithNotify(x, y, z, 2, 2);
 			}
 			
 			if(l == 1)
 			{
-				world.setBlockMetadataWithNotify(x, y, z, 5, 2);
+                world.setBlockMetadataWithNotify(x, y, z, 5, 2);
 			}
 			
 			if(l == 2)
 			{
-				world.setBlockMetadataWithNotify(x, y, z, 3, 2);
+                world.setBlockMetadataWithNotify(x, y, z, 3, 2);
 			}
 			
 			if(l == 3)
 			{
-				world.setBlockMetadataWithNotify(x, y, z, 4, 2);
+                world.setBlockMetadataWithNotify(x, y, z, 4, 2);
 			}
 			
 			if(itemstack.hasDisplayName())

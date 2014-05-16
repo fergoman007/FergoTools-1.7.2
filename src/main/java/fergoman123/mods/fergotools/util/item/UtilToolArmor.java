@@ -33,7 +33,7 @@ public class UtilToolArmor {
     public static ArmorMaterial glowstoneArmor;
     public static ArmorMaterial redstoneArmor;
 
-    public static void initMaterials()
+    public static void init()
     {
         addToolMaterials();
         addArmorMaterials();

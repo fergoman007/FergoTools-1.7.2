@@ -19,7 +19,7 @@ public class Tabs {
     public static CreativeTabs tabFergoArmor;
     public static CreativeTabs tabFergoBows;
 
-    public static void initTabs()
+    public static void init()
     {
         tabFergoTools = new TabFergoTools(TabStrings.tabFergoTools);
         tabFergoBlocks = new TabFergoBlocks(TabStrings.tabFergoBlocks);

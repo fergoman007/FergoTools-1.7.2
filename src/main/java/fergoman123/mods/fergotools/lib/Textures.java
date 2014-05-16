@@ -1,10 +1,5 @@
 package fergoman123.mods.fergotools.lib;
-
-/**
- * Created by Fergoman123 on 03/05/2014.
- */
-import fergoman123.mods.fergotools.lib.Strings.BlockStrings;
-import fergoman123.mods.fergotools.lib.Strings.BowStrings;
+import fergoman123.mods.fergotools.lib.Strings.*;
 
 public class Textures {
 
@@ -21,69 +16,69 @@ public class Textures {
         public static final int bootSlot = 3;
         public static final int[] armorSlots = {helmetSlot, chestSlot, legSlot, bootSlot};
 
-        public static final String quartzArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.quartzToolMat + renderNum[0] + Strings.png;
-        public static final String quartzArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.quartzToolMat + renderNum[1] + Strings.png;
+        public static final String quartzArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.quartzToolMat + renderNum[0] + Strings.png;
+        public static final String quartzArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.quartzToolMat + renderNum[1] + Strings.png;
 
-        public static final String obsidianArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.obsidianToolMat + renderNum[0] + Strings.png;
-        public static final String obsidianArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.obsidianToolMat + renderNum[1] + Strings.png;
+        public static final String obsidianArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.obsidianToolMat + renderNum[0] + Strings.png;
+        public static final String obsidianArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.obsidianToolMat + renderNum[1] + Strings.png;
 
-        public static final String emeraldArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.emeraldToolMat + renderNum[0] + Strings.png;
-        public static final String emeraldArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.emeraldToolMat + renderNum[1] + Strings.png;
+        public static final String emeraldArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.emeraldToolMat + renderNum[0] + Strings.png;
+        public static final String emeraldArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.emeraldToolMat + renderNum[1] + Strings.png;
 
-        public static final String lapisArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.lapisToolMat + renderNum[0] + Strings.png;
-        public static final String lapisArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.lapisToolMat + renderNum[1] + Strings.png;
+        public static final String lapisArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.lapisToolMat + renderNum[0] + Strings.png;
+        public static final String lapisArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.lapisToolMat + renderNum[1] + Strings.png;
 
-        public static final String bronzeArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.bronzeToolMat + renderNum[0] + Strings.png;
-        public static final String bronzeArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.bronzeToolMat + renderNum[1] + Strings.png;
+        public static final String bronzeArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.bronzeToolMat + renderNum[0] + Strings.png;
+        public static final String bronzeArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.bronzeToolMat + renderNum[1] + Strings.png;
 
-        public static final String coalArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.coalToolMat + renderNum[0] + Strings.png;
-        public static final String coalArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.coalToolMat + renderNum[1] + Strings.png;
+        public static final String coalArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.coalToolMat + renderNum[0] + Strings.png;
+        public static final String coalArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.coalToolMat + renderNum[1] + Strings.png;
 
-        public static final String glowstoneArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.glowstoneToolMat + renderNum[0] + Strings.png;
-        public static final String glowstoneArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.glowstoneToolMat + renderNum[1] + Strings.png;
+        public static final String glowstoneArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.glowstoneToolMat + renderNum[0] + Strings.png;
+        public static final String glowstoneArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.glowstoneToolMat + renderNum[1] + Strings.png;
 
-        public static final String redstoneArmorRender1 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.redstoneToolMat + renderNum[0] + Strings.png;
-        public static final String redstoneArmorRender2 = Reference.textureLoc + Reference.dirArmor + Strings.MaterialStrings.redstoneToolMat + renderNum[1] + Strings.png;
+        public static final String redstoneArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.redstoneToolMat + renderNum[0] + Strings.png;
+        public static final String redstoneArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.redstoneToolMat + renderNum[1] + Strings.png;
 
-        public static final String quartzHelmet = Reference.textureLoc + Strings.ArmorStrings.quartzArmorKey[armorSlots[0]];
-        public static final String quartzChestplate = Reference.textureLoc + Strings.ArmorStrings.quartzArmorKey[armorSlots[1]];
-        public static final String quartzLeggings = Reference.textureLoc + Strings.ArmorStrings.quartzArmorKey[armorSlots[2]];
-        public static final String quartzBoots = Reference.textureLoc + Strings.ArmorStrings.quartzArmorKey[armorSlots[3]];
+        public static final String quartzHelmet = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[0]];
+        public static final String quartzChestplate = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[1]];
+        public static final String quartzLeggings = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[2]];
+        public static final String quartzBoots = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[3]];
 
-        public static final String obsidianHelmet = Reference.textureLoc + Strings.ArmorStrings.obsidianArmorKey[armorSlots[0]];
-        public static final String obsidianChestplate = Reference.textureLoc + Strings.ArmorStrings.obsidianArmorKey[armorSlots[1]];
-        public static final String obsidianLeggings = Reference.textureLoc + Strings.ArmorStrings.obsidianArmorKey[armorSlots[2]];
-        public static final String obsidianBoots = Reference.textureLoc + Strings.ArmorStrings.obsidianArmorKey[armorSlots[3]];
+        public static final String obsidianHelmet = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[0]];
+        public static final String obsidianChestplate = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[1]];
+        public static final String obsidianLeggings = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[2]];
+        public static final String obsidianBoots = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[3]];
 
-        public static final String emeraldHelmet = Reference.textureLoc + Strings.ArmorStrings.emeraldArmorKey[armorSlots[0]];
-        public static final String emeraldChestplate = Reference.textureLoc + Strings.ArmorStrings.emeraldArmorKey[armorSlots[1]];
-        public static final String emeraldLeggings = Reference.textureLoc + Strings.ArmorStrings.emeraldArmorKey[armorSlots[2]];
-        public static final String emeraldBoots = Reference.textureLoc + Strings.ArmorStrings.emeraldArmorKey[armorSlots[3]];
+        public static final String emeraldHelmet = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[0]];
+        public static final String emeraldChestplate = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[1]];
+        public static final String emeraldLeggings = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[2]];
+        public static final String emeraldBoots = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[3]];
 
-        public static final String lapisHelmet = Reference.textureLoc + Strings.ArmorStrings.lapisArmorKey[armorSlots[0]];
-        public static final String lapisChestplate = Reference.textureLoc + Strings.ArmorStrings.lapisArmorKey[armorSlots[1]];
-        public static final String lapisLeggings = Reference.textureLoc + Strings.ArmorStrings.lapisArmorKey[armorSlots[2]];
-        public static final String lapisBoots = Reference.textureLoc + Strings.ArmorStrings.lapisArmorKey[armorSlots[3]];
+        public static final String lapisHelmet = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[0]];
+        public static final String lapisChestplate = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[1]];
+        public static final String lapisLeggings = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[2]];
+        public static final String lapisBoots = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[3]];
 
-        public static final String bronzeHelmet = Reference.textureLoc + Strings.ArmorStrings.bronzeArmorKey[armorSlots[0]];
-        public static final String bronzeChestplate = Reference.textureLoc + Strings.ArmorStrings.bronzeArmorKey[armorSlots[1]];
-        public static final String bronzeLeggings = Reference.textureLoc + Strings.ArmorStrings.bronzeArmorKey[armorSlots[2]];
-        public static final String bronzeBoots = Reference.textureLoc + Strings.ArmorStrings.bronzeArmorKey[armorSlots[3]];
+        public static final String bronzeHelmet = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[0]];
+        public static final String bronzeChestplate = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[1]];
+        public static final String bronzeLeggings = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[2]];
+        public static final String bronzeBoots = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[3]];
 
-        public static final String coalHelmet = Reference.textureLoc + Strings.ArmorStrings.coalArmorKey[armorSlots[0]];
-        public static final String coalChestplate = Reference.textureLoc + Strings.ArmorStrings.coalArmorKey[armorSlots[1]];
-        public static final String coalLeggings = Reference.textureLoc + Strings.ArmorStrings.coalArmorKey[armorSlots[2]];
-        public static final String coalBoots = Reference.textureLoc + Strings.ArmorStrings.coalArmorKey[armorSlots[3]];
+        public static final String coalHelmet = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[0]];
+        public static final String coalChestplate = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[1]];
+        public static final String coalLeggings = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[2]];
+        public static final String coalBoots = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[3]];
 
-        public static final String glowstoneHelmet = Reference.textureLoc + Strings.ArmorStrings.glowstoneArmorKey[armorSlots[0]];
-        public static final String glowstoneChestplate = Reference.textureLoc + Strings.ArmorStrings.glowstoneArmorKey[armorSlots[1]];
-        public static final String glowstoneLeggings = Reference.textureLoc + Strings.ArmorStrings.glowstoneArmorKey[armorSlots[2]];
-        public static final String glowstoneBoots = Reference.textureLoc + Strings.ArmorStrings.glowstoneArmorKey[armorSlots[3]];
+        public static final String glowstoneHelmet = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[0]];
+        public static final String glowstoneChestplate = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[1]];
+        public static final String glowstoneLeggings = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[2]];
+        public static final String glowstoneBoots = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[3]];
 
-        public static final String redstoneHelmet = Reference.textureLoc + Strings.ArmorStrings.redstoneArmorKey[armorSlots[0]];
-        public static final String redstoneChestplate = Reference.textureLoc + Strings.ArmorStrings.redstoneArmorKey[armorSlots[1]];
-        public static final String redstoneLeggings = Reference.textureLoc + Strings.ArmorStrings.redstoneArmorKey[armorSlots[2]];
-        public static final String redstoneBoots = Reference.textureLoc + Strings.ArmorStrings.redstoneArmorKey[armorSlots[3]];
+        public static final String redstoneHelmet = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[0]];
+        public static final String redstoneChestplate = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[1]];
+        public static final String redstoneLeggings = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[2]];
+        public static final String redstoneBoots = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[3]];
     }
 
     public static class BlockTextures
@@ -160,95 +155,95 @@ public class Textures {
 
     public static class FurnaceTextures
     {
-        public static final String quartzFurnaceIdle = Strings.FurnaceStrings.quartzFurnaceIdle;
-        public static final String quartzFurnaceActive = Strings.FurnaceStrings.quartzFurnaceActive;
-        public static final String quartzFurnaceSide = Reference.textureLoc + Strings.FurnaceStrings.quartzFurnaceSide;
+        public static final String quartzFurnaceIdle = FurnaceStrings.quartzFurnaceIdle;
+        public static final String quartzFurnaceActive = FurnaceStrings.quartzFurnaceActive;
+        public static final String quartzFurnaceSide = Reference.textureLoc + FurnaceStrings.quartzFurnaceSide;
 
-        public static final String obsidianFurnaceIdle = Strings.FurnaceStrings.obsidianFurnaceIdle;
-        public static final String obsidianFurnaceActive = Strings.FurnaceStrings.obsidianFurnaceActive;
+        public static final String obsidianFurnaceIdle = FurnaceStrings.obsidianFurnaceIdle;
+        public static final String obsidianFurnaceActive = FurnaceStrings.obsidianFurnaceActive;
 
-        public static final String emeraldCrystalFurnaceIdle = Strings.FurnaceStrings.emeraldCrystalFurnaceIdle;
-        public static final String emeraldCrystalFurnaceActive = Strings.FurnaceStrings.emeraldCrystalFurnaceActive;
+        public static final String emeraldCrystalFurnaceIdle = FurnaceStrings.emeraldCrystalFurnaceIdle;
+        public static final String emeraldCrystalFurnaceActive = FurnaceStrings.emeraldCrystalFurnaceActive;
 
-        public static final String lapisCrystalFurnaceIdle = Strings.FurnaceStrings.lapisCrystalFurnaceIdle;
-        public static final String lapisCrystalFurnaceActive = Strings.FurnaceStrings.lapisCrystalFurnaceActive;
+        public static final String lapisCrystalFurnaceIdle = FurnaceStrings.lapisCrystalFurnaceIdle;
+        public static final String lapisCrystalFurnaceActive = FurnaceStrings.lapisCrystalFurnaceActive;
 
-        public static final String bronzeFurnaceIdle = Strings.FurnaceStrings.bronzeFurnaceIdle;
-        public static final String bronzeFurnaceActive = Strings.FurnaceStrings.bronzeFurnaceActive;
+        public static final String bronzeFurnaceIdle = FurnaceStrings.bronzeFurnaceIdle;
+        public static final String bronzeFurnaceActive = FurnaceStrings.bronzeFurnaceActive;
 
-        public static final String coalFurnaceIdle = Strings.FurnaceStrings.coalFurnaceIdle;
-        public static final String coalFurnaceActive = Strings.FurnaceStrings.coalFurnaceActive;
+        public static final String coalFurnaceIdle = FurnaceStrings.coalFurnaceIdle;
+        public static final String coalFurnaceActive = FurnaceStrings.coalFurnaceActive;
 
-        public static final String glowstoneFurnaceIdle = Strings.FurnaceStrings.glowstoneFurnaceIdle;
-        public static final String glowstoneFurnaceActive = Strings.FurnaceStrings.glowstoneFurnaceActive;
+        public static final String glowstoneFurnaceIdle = FurnaceStrings.glowstoneFurnaceIdle;
+        public static final String glowstoneFurnaceActive = FurnaceStrings.glowstoneFurnaceActive;
 
-        public static final String adamantiumFurnaceIdle = Strings.FurnaceStrings.adamantiumFurnaceIdle;
-        public static final String adamantiumFurnaceActive = Strings.FurnaceStrings.adamantiumFurnaceActive;
+        public static final String adamantiumFurnaceIdle = FurnaceStrings.adamantiumFurnaceIdle;
+        public static final String adamantiumFurnaceActive = FurnaceStrings.adamantiumFurnaceActive;
 
-        public static final String silkFurnaceIdle = Strings.FurnaceStrings.silkFurnaceIdle;
-        public static final String silkFurnaceActive = Strings.FurnaceStrings.silkFurnaceActive;
+        public static final String silkFurnaceIdle = FurnaceStrings.silkFurnaceIdle;
+        public static final String silkFurnaceActive = FurnaceStrings.silkFurnaceActive;
 
-        public static final String redstoneFurnaceIdle = Strings.FurnaceStrings.redstoneFurnaceIdle;
-        public static final String redstoneFurnaceActive = Strings.FurnaceStrings.redstoneFurnaceActive;
+        public static final String redstoneFurnaceIdle = FurnaceStrings.redstoneFurnaceIdle;
+        public static final String redstoneFurnaceActive = FurnaceStrings.redstoneFurnaceActive;
     }
 
     public static class ItemTextures
     {
-        public static final String obsidianIngot = Reference.textureLoc + Strings.ItemStrings.materials[0];
-        public static final String emeraldCrystal = Reference.textureLoc + Strings.ItemStrings.materials[1];
-        public static final String lapisCrystal = Reference.textureLoc + Strings.ItemStrings.materials[2];
-        public static final String bronzeIngot = Reference.textureLoc + Strings.ItemStrings.materials[3];
-        public static final String coalIngot = Reference.textureLoc + Strings.ItemStrings.materials[4];
-        public static final String glowstoneIngot = Reference.textureLoc + Strings.ItemStrings.materials[5];
-        public static final String adamantiumIngot = Reference.textureLoc + Strings.ItemStrings.materials[6];
-        public static final String expShard = Reference.textureLoc + Strings.ItemStrings.materials[7];
-        public static final String silkGem = Reference.textureLoc + Strings.ItemStrings.materials[8];
-        public static final String redstoneCrystal = Reference.textureLoc + Strings.ItemStrings.materials[9];
+        public static final String obsidianIngot = Reference.textureLoc + ItemStrings.materials[0];
+        public static final String emeraldCrystal = Reference.textureLoc + ItemStrings.materials[1];
+        public static final String lapisCrystal = Reference.textureLoc + ItemStrings.materials[2];
+        public static final String bronzeIngot = Reference.textureLoc + ItemStrings.materials[3];
+        public static final String coalIngot = Reference.textureLoc + ItemStrings.materials[4];
+        public static final String glowstoneIngot = Reference.textureLoc + ItemStrings.materials[5];
+        public static final String adamantiumIngot = Reference.textureLoc + ItemStrings.materials[6];
+        public static final String expShard = Reference.textureLoc + ItemStrings.materials[7];
+        public static final String silkGem = Reference.textureLoc + ItemStrings.materials[8];
+        public static final String redstoneCrystal = Reference.textureLoc + ItemStrings.materials[9];
     }
 
     public static class ToolTextures
     {
-        public static final String quartzPickaxe = Reference.textureLoc + Strings.ToolStrings.quartzPickaxe;
-        public static final String quartzShovel = Reference.textureLoc + Strings.ToolStrings.quartzShovel;
-        public static final String quartzAxe = Reference.textureLoc + Strings.ToolStrings.quartzAxe;
-        public static final String quartzHoe = Reference.textureLoc + Strings.ToolStrings.quartzHoe;
-        public static final String quartzSword = Reference.textureLoc + Strings.ToolStrings.quartzSword;
+        public static final String quartzPickaxe = Reference.textureLoc + ToolStrings.quartzPickaxe;
+        public static final String quartzShovel = Reference.textureLoc + ToolStrings.quartzShovel;
+        public static final String quartzAxe = Reference.textureLoc + ToolStrings.quartzAxe;
+        public static final String quartzHoe = Reference.textureLoc + ToolStrings.quartzHoe;
+        public static final String quartzSword = Reference.textureLoc + ToolStrings.quartzSword;
 
-        public static final String obsidianPickaxe = Reference.textureLoc + Strings.ToolStrings.obsidianPickaxe;
-        public static final String obsidianShovel = Reference.textureLoc + Strings.ToolStrings.obsidianShovel;
-        public static final String obsidianAxe = Reference.textureLoc + Strings.ToolStrings.obsidianAxe;
-        public static final String obsidianHoe = Reference.textureLoc + Strings.ToolStrings.obsidianHoe;
-        public static final String obsidianSword = Reference.textureLoc + Strings.ToolStrings.obsidianSword;
+        public static final String obsidianPickaxe = Reference.textureLoc + ToolStrings.obsidianPickaxe;
+        public static final String obsidianShovel = Reference.textureLoc + ToolStrings.obsidianShovel;
+        public static final String obsidianAxe = Reference.textureLoc + ToolStrings.obsidianAxe;
+        public static final String obsidianHoe = Reference.textureLoc + ToolStrings.obsidianHoe;
+        public static final String obsidianSword = Reference.textureLoc + ToolStrings.obsidianSword;
 
-        public static final String emeraldPickaxe = Reference.textureLoc + Strings.ToolStrings.emeraldPickaxe;
-        public static final String emeraldShovel = Reference.textureLoc + Strings.ToolStrings.emeraldShovel;
-        public static final String emeraldAxe = Reference.textureLoc + Strings.ToolStrings.emeraldAxe;
-        public static final String emeraldHoe = Reference.textureLoc + Strings.ToolStrings.emeraldHoe;
-        public static final String emeraldSword = Reference.textureLoc + Strings.ToolStrings.emeraldSword;
+        public static final String emeraldPickaxe = Reference.textureLoc + ToolStrings.emeraldPickaxe;
+        public static final String emeraldShovel = Reference.textureLoc + ToolStrings.emeraldShovel;
+        public static final String emeraldAxe = Reference.textureLoc + ToolStrings.emeraldAxe;
+        public static final String emeraldHoe = Reference.textureLoc + ToolStrings.emeraldHoe;
+        public static final String emeraldSword = Reference.textureLoc + ToolStrings.emeraldSword;
 
-        public static final String lapisPickaxe = Reference.textureLoc + Strings.ToolStrings.lapisPickaxe;
-        public static final String lapisShovel = Reference.textureLoc + Strings.ToolStrings.lapisShovel;
-        public static final String lapisAxe = Reference.textureLoc + Strings.ToolStrings.lapisAxe;
-        public static final String lapisHoe = Reference.textureLoc + Strings.ToolStrings.lapisHoe;
-        public static final String lapisSword = Reference.textureLoc + Strings.ToolStrings.lapisSword;
+        public static final String lapisPickaxe = Reference.textureLoc + ToolStrings.lapisPickaxe;
+        public static final String lapisShovel = Reference.textureLoc + ToolStrings.lapisShovel;
+        public static final String lapisAxe = Reference.textureLoc + ToolStrings.lapisAxe;
+        public static final String lapisHoe = Reference.textureLoc + ToolStrings.lapisHoe;
+        public static final String lapisSword = Reference.textureLoc + ToolStrings.lapisSword;
 
-        public static final String bronzePickaxe = Reference.textureLoc + Strings.ToolStrings.bronzePickaxe;
-        public static final String bronzeShovel = Reference.textureLoc + Strings.ToolStrings.bronzeShovel;
-        public static final String bronzeAxe = Reference.textureLoc + Strings.ToolStrings.bronzeAxe;
-        public static final String bronzeHoe = Reference.textureLoc + Strings.ToolStrings.bronzeHoe;
-        public static final String bronzeSword = Reference.textureLoc + Strings.ToolStrings.bronzeSword;
+        public static final String bronzePickaxe = Reference.textureLoc + ToolStrings.bronzePickaxe;
+        public static final String bronzeShovel = Reference.textureLoc + ToolStrings.bronzeShovel;
+        public static final String bronzeAxe = Reference.textureLoc + ToolStrings.bronzeAxe;
+        public static final String bronzeHoe = Reference.textureLoc + ToolStrings.bronzeHoe;
+        public static final String bronzeSword = Reference.textureLoc + ToolStrings.bronzeSword;
 
-        public static final String coalPickaxe = Reference.textureLoc + Strings.ToolStrings.coalPickaxe;
-        public static final String coalShovel = Reference.textureLoc + Strings.ToolStrings.coalShovel;
-        public static final String coalAxe = Reference.textureLoc + Strings.ToolStrings.coalAxe;
-        public static final String coalHoe = Reference.textureLoc + Strings.ToolStrings.coalHoe;
-        public static final String coalSword = Reference.textureLoc + Strings.ToolStrings.coalSword;
+        public static final String coalPickaxe = Reference.textureLoc + ToolStrings.coalPickaxe;
+        public static final String coalShovel = Reference.textureLoc + ToolStrings.coalShovel;
+        public static final String coalAxe = Reference.textureLoc + ToolStrings.coalAxe;
+        public static final String coalHoe = Reference.textureLoc + ToolStrings.coalHoe;
+        public static final String coalSword = Reference.textureLoc + ToolStrings.coalSword;
 
-        public static final String glowstonePickaxe = Reference.textureLoc + Strings.ToolStrings.glowstonePickaxe;
-        public static final String glowstoneShovel = Reference.textureLoc + Strings.ToolStrings.glowstoneShovel;
-        public static final String glowstoneAxe = Reference.textureLoc + Strings.ToolStrings.glowstoneAxe;
-        public static final String glowstoneHoe = Reference.textureLoc + Strings.ToolStrings.glowstoneHoe;
-        public static final String glowstoneSword = Reference.textureLoc + Strings.ToolStrings.glowstoneSword;
+        public static final String glowstonePickaxe = Reference.textureLoc + ToolStrings.glowstonePickaxe;
+        public static final String glowstoneShovel = Reference.textureLoc + ToolStrings.glowstoneShovel;
+        public static final String glowstoneAxe = Reference.textureLoc + ToolStrings.glowstoneAxe;
+        public static final String glowstoneHoe = Reference.textureLoc + ToolStrings.glowstoneHoe;
+        public static final String glowstoneSword = Reference.textureLoc + ToolStrings.glowstoneSword;
 
         public static final String adamantiumPickaxe = Reference.textureLoc + Strings.ToolStrings.adamantiumPickaxe;
         public static final String adamantiumShovel = Reference.textureLoc + Strings.ToolStrings.adamantiumShovel;
