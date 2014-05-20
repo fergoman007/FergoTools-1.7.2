@@ -3,6 +3,8 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerObsidianFurnace;
+import fergoman123.mods.fergotools.helper.ResLocHelper;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.tileentity.TileEntityObsidianFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
@@ -15,7 +17,7 @@ public class GuiObsidianFurnace extends GuiContainer
 {
 
     private Object[] obj = new Object[0];
-    private static final ResourceLocation furnaceGuiTextures = new ResourceLocation("textures/gui/container/furnace.png");
+    private static final ResourceLocation furnaceGuiTextures = ResLocHelper.getResourceLocation(Strings.GuiStrings.furnaceGuiTexture);
     private TileEntityObsidianFurnace furnaceInventory;
 
     public GuiObsidianFurnace(InventoryPlayer par1InventoryPlayer, TileEntityObsidianFurnace par2TileEntityFurnace)

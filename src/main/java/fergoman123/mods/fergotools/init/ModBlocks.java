@@ -3,9 +3,7 @@ package fergoman123.mods.fergotools.init;
 import fergoman123.mods.fergotools.block.furnace.*;
 import fergoman123.mods.fergotools.block.ore.*;
 import fergoman123.mods.fergotools.block.storage.*;
-import fergoman123.mods.fergotools.lib.Strings.BlockStrings;
 import fergoman123.mods.fergotools.lib.Strings.FurnaceStrings;
-import fergoman123.mods.fergotools.lib.Textures.BlockTextures;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import net.minecraft.block.Block;
 
@@ -65,28 +63,28 @@ public class ModBlocks {
     
 	public static void initBlocks()
 	{
-        oreExperience = new BlockOreExperience().setBlockName(BlockStrings.ores[0]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.oreExperience);
-        oreObsidian = new BlockOreObsidian().setBlockName(BlockStrings.ores[1]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.oreObsidian);
-        oreEmeraldCrystal = new BlockOreEmeraldCrystal().setBlockName(BlockStrings.ores[2]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.oreEmeraldCrystal);
-        oreLapisCrystal = new BlockOreLapisCrystal().setBlockName(BlockStrings.ores[3]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.oreLapisCrystal);
-        oreBronze = new BlockOreBronze().setBlockName(BlockStrings.ores[4]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.oreBronze);
-        oreAdamantium = new BlockOreAdamantium().setBlockName(BlockStrings.ores[5]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.oreAdamantium);
-        oreRedstone = new BlockOreRedstone().setBlockName(BlockStrings.ores[6]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.oreRedstone);
+        oreExperience = new BlockOreExperience();
+        oreObsidian = new BlockOreObsidian();
+        oreEmeraldCrystal = new BlockOreEmeraldCrystal();
+        oreLapisCrystal = new BlockOreLapisCrystal();
+        oreBronze = new BlockOreBronze();
+        oreAdamantium = new BlockOreAdamantium();
+        oreRedstone = new BlockOreRedstone();
 
 
-        blockExperience = new BlockExperience().setBlockName(BlockStrings.blocks[0]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockExperience);
-        blockObsidian = new BlockObsidianStorage().setBlockName(BlockStrings.blocks[1]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockObsidian);
-        blockEmeraldCrystal = new BlockEmeraldCrystal().setBlockName(BlockStrings.blocks[2]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockEmeraldCrystal);
-        blockLapisCrystal = new BlockLapisCrystal().setBlockName(BlockStrings.blocks[3]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockLapisCrystal);
-        blockBronze = new BlockBronze().setBlockName(BlockStrings.blocks[4]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockBronze);
-        blockCoal = new BlockCoalStorage().setBlockName(BlockStrings.blocks[5]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockCoal);
-        blockGlowstone = new BlockGlowstoneStorage().setBlockName(BlockStrings.blocks[6]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockGlowstone);
-        blockAdamantium = new BlockAdamantium().setBlockName(BlockStrings.blocks[7]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockAdamantium);
-        blockSilkGem = new BlockSilkGem().setBlockName(BlockStrings.blocks[8]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockSilkGem);
-        blockRedstone = new BlockRedstone().setBlockName(BlockStrings.blocks[9]).setHardness(2.5f).setResistance(50f).setCreativeTab(Tabs.tabFergoBlocks).setBlockTextureName(BlockTextures.blockRedstone);
+        blockExperience = new BlockExperience();
+        blockObsidian = new BlockObsidianStorage();
+        blockEmeraldCrystal = new BlockEmeraldCrystal();
+        blockLapisCrystal = new BlockLapisCrystal();
+        blockBronze = new BlockBronze();
+        blockCoal = new BlockCoalStorage();
+        blockGlowstone = new BlockGlowstoneStorage();
+        blockAdamantium = new BlockAdamantium();
+        blockSilkGem = new BlockSilkGem();
+        blockRedstone = new BlockRedstone();
 
-        quartzFurnaceIdle = new BlockQuartzFurnace(false).setBlockName(FurnaceStrings.quartzFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeStone).setCreativeTab(Tabs.tabFergoFurnaces);
-        quartzFurnaceActive = new BlockQuartzFurnace(true).setBlockName(FurnaceStrings.quartzFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeStone).setLightLevel(0.9f);
+        quartzFurnaceIdle = new BlockQuartzFurnace(false).setBlockName(FurnaceStrings.quartzFurnaceIdle).setCreativeTab(Tabs.tabFergoFurnaces);
+        quartzFurnaceActive = new BlockQuartzFurnace(true).setBlockName(FurnaceStrings.quartzFurnaceActive).setLightLevel(0.9f);
 
         obsidianFurnaceIdle = new BlockObsidianFurnace(false).setBlockName(FurnaceStrings.obsidianFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
         obsidianFurnaceActive = new BlockObsidianFurnace(true).setBlockName(FurnaceStrings.obsidianFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);

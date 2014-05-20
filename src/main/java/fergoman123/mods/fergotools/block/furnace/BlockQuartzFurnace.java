@@ -44,6 +44,9 @@ public class BlockQuartzFurnace extends BlockContainer
     public  BlockQuartzFurnace(boolean isActive)
     {
         super(Material.rock);
+        this.setHardness(2.5f);
+        this.setResistance(2000f);
+        this.setStepSound(Block.soundTypeStone);
         this.isActive = isActive;
     }
 

@@ -1,10 +1,11 @@
 package fergoman123.mods.fergotools.block.ore;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.Textures;
+import fergoman123.mods.fergotools.tabs.Tabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -20,6 +21,11 @@ public class BlockOreEmeraldCrystal extends Block{
     public BlockOreEmeraldCrystal()
     {
         super(Material.rock);
+        this.setBlockName(Strings.BlockStrings.oreEmeraldCrystal);
+        this.setHardness(2.5f);
+        this.setResistance(50f);
+        this.setCreativeTab(Tabs.tabFergoBlocks);
+        this.setBlockTextureName(Textures.BlockTextures.oreEmeraldCrystal);
     }
 
     public Item getItemDropped(int par1, Random rand, int par3)
@@ -28,24 +34,7 @@ public class BlockOreEmeraldCrystal extends Block{
     }
     public int damageDropped(int dmg){return 1;}
 
-    @Override
-    public int quantityDropped(int meta, int fortune, Random random) {
-
-        if (EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, stack) == 1)
-        {
-            return 3;
-        }
-        else if (EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, stack) == 2)
-        {
-            return 5;
-        }
-        else if (EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, stack) == 3)
-        {
-            return 7;
-        }
-        else
-        {
-            return 1;
-        }
+    public int quantityDropped(Random random) {
+        return 1;
     }
 }
