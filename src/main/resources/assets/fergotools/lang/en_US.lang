@@ -104,20 +104,20 @@ item.ft.bronzeArmor.chest.name=Bronze Chestplate
 item.ft.bronzeArmor.legs.name=Bronze Leggings
 item.ft.bronzeArmor.boots.name=Bronze Boots
 
-item.coalHelmet.name=Coal Helmet
-item.coalChestplate.name=Coal Chestplate
-item.coalLeggings.name=Coal Leggings
-item.coalBoots.name=Coal Boots
+item.ft.coalArmor.helmet.name=Coal Helmet
+item.ft.coalArmor.chest.name=Coal Chestplate
+item.ft.coalArmor.legs.name=Coal Leggings
+item.ft.coalArmor.boots.name=Coal Boots
 
-item.glowstoneHelmet.name=Glowstone Helmet
-item.glowstoneChestplate.name=Glowstone Chestplate
-item.glowstoneLeggings.name=Glowstone Leggings
-item.glowstoneBoots.name=Glowstone Boots
+item.ft.glowstoneArmor.helmet.name=Glowstone Helmet
+item.ft.glowstoneArmor.chest.name=Glowstone Chestplate
+item.ft.glowstoneArmor.legs.name=Glowstone Leggings
+item.ft.glowstoneArmor.boots.name=Glowstone Boots
 
-item.redstoneHelmet.name=Redstone Helmet
-item.redstoneChestplate.name=Redstone Chestplate
-item.redstoneLeggings.name=Redstone Leggings
-item.redstoneBoots.name=Redstone Boots
+item.ft.redstoneArmor.helmet.name=Redstone Helmet
+item.ft.redstoneArmor.chest.name=Redstone Chestplate
+item.ft.redstoneArmor.legs.name=Redstone Leggings
+item.ft.redstoneArmor.boots.name=Redstone Boots
 
 # Bows
 item.bowQuartz.name=Quartz Bow

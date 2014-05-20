@@ -3,6 +3,7 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.handler.TileHandler;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures.BlockTextures;
@@ -30,11 +31,7 @@ import java.util.Random;
 
 public class BlockBronzeFurnace extends BlockContainer
 {
-
-	
 		private final Random rand = new Random();
-
-        private TileEntityBronzeFurnace furnace = new TileEntityBronzeFurnace();
 		
 		private final boolean isActive;
 		
@@ -194,7 +191,7 @@ public class BlockBronzeFurnace extends BlockContainer
 		
 		public TileEntity createNewTileEntity(World world, int var)
 		{
-			return this.furnace;
+			return TileHandler.bronzeFurnace;
 		}
 		
 		public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack itemstack)

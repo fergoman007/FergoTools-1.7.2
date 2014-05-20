@@ -3,6 +3,7 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.handler.TileHandler;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures.BlockTextures;
@@ -194,7 +195,7 @@ public class BlockSilkFurnace extends BlockContainer{
 
     public TileEntity createNewTileEntity(World world, int par1)
     {
-        return new TileEntitySilkFurnace();
+        return TileHandler.silkFurnace;
     }
 
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack stack)

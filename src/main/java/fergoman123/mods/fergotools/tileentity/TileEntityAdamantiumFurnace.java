@@ -5,7 +5,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockAdamantiumFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
-import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,10 +18,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-/**
- * Created by Fergoman123 on 13/04/2014.
- */
-public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInventory {
+public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInventory{
 
     private static final int[] slots_top = new int[]{0};
     private static final int[] slots_bottom = new int[]{2, 1};
@@ -85,7 +81,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
     }
 
     public String getInventoryName() {
-        return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containerAdamantiumFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerAdamantiumFurnace;
     }
 
     public boolean hasCustomInventoryName() {

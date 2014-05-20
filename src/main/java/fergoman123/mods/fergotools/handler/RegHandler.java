@@ -1,22 +1,17 @@
 package fergoman123.mods.fergotools.handler;
 
-import cpw.mods.fml.common.network.IGuiHandler;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.gui.*;
-import fergoman123.mods.fergotools.gui.container.*;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Strings.*;
-import fergoman123.mods.fergotools.tileentity.*;
+import fergoman123.mods.fergotools.proxy.ClientProxy;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 
 public class RegHandler {
 
     public static EventHandler event = new EventHandler();
-    public static GuiHandler handler = new GuiHandler();
+    public static ClientProxy handler = new ClientProxy();
+    public static TileHandler tile;
 
     public static void init()
     {
@@ -86,16 +81,16 @@ public class RegHandler {
         RegisterHelper.registerItem(ModItems.coalChestplate, ArmorStrings.coalChest);
         RegisterHelper.registerItem(ModItems.coalLeggings, ArmorStrings.coalLegs);
         RegisterHelper.registerItem(ModItems.coalBoots, ArmorStrings.coalBoots);
-//
-//        RegisterHelper.registerItem(ModItems.glowstoneHelmet, ArmorStrings.glowstoneHelmet);
-//        RegisterHelper.registerItem(ModItems.glowstoneChestplate, ArmorStrings.glowstoneChest);
-//        RegisterHelper.registerItem(ModItems.glowstoneLeggings, ArmorStrings.glowstoneLegs);
-//        RegisterHelper.registerItem(ModItems.glowstoneBoots, ArmorStrings.glowstoneBoots);
-//
-//        RegisterHelper.registerItem(ModItems.redstoneHelmet, ArmorStrings.redstoneHelmet);
-//        RegisterHelper.registerItem(ModItems.redstoneChestplate, ArmorStrings.redstoneChest);
-//        RegisterHelper.registerItem(ModItems.redstoneLeggings, ArmorStrings.redstoneLegs);
-//        RegisterHelper.registerItem(ModItems.redstoneBoots, ArmorStrings.redstoneBoots);
+
+        RegisterHelper.registerItem(ModItems.glowstoneHelmet, ArmorStrings.glowstoneHelmet);
+        RegisterHelper.registerItem(ModItems.glowstoneChestplate, ArmorStrings.glowstoneChest);
+        RegisterHelper.registerItem(ModItems.glowstoneLeggings, ArmorStrings.glowstoneLegs);
+        RegisterHelper.registerItem(ModItems.glowstoneBoots, ArmorStrings.glowstoneBoots);
+
+        RegisterHelper.registerItem(ModItems.redstoneHelmet, ArmorStrings.redstoneHelmet);
+        RegisterHelper.registerItem(ModItems.redstoneChestplate, ArmorStrings.redstoneChest);
+        RegisterHelper.registerItem(ModItems.redstoneLeggings, ArmorStrings.redstoneLegs);
+        RegisterHelper.registerItem(ModItems.redstoneBoots, ArmorStrings.redstoneBoots);
     }
 
     public static void registerTools()
@@ -163,16 +158,16 @@ public class RegHandler {
 
     public static void registerTileEntities()
     {
-        RegisterHelper.registerTileEntity(TileEntityQuartzFurnace.class, TileStrings.tilePrefix + "QuartzFurnace");
-        RegisterHelper.registerTileEntity(TileEntityObsidianFurnace.class, TileStrings.tilePrefix + "ObsidianFurnace");
-        RegisterHelper.registerTileEntity(TileEntityEmeraldCrystalFurnace.class, TileStrings.tilePrefix + "EmeraldCrystalFurnace");
-        RegisterHelper.registerTileEntity(TileEntityLapisCrystalFurnace.class, TileStrings.tilePrefix + "LapisCrystalFurnace");
-        RegisterHelper.registerTileEntity(TileEntityBronzeFurnace.class, TileStrings.tilePrefix + "BronzeFurnace");
-        RegisterHelper.registerTileEntity(TileEntityCoalFurnace.class, TileStrings.tilePrefix + "CoalFurnace");
-        RegisterHelper.registerTileEntity(TileEntityGlowstoneFurnace.class, TileStrings.tilePrefix + "GlowstoneFurnace");
-        RegisterHelper.registerTileEntity(TileEntityAdamantiumFurnace.class, TileStrings.tilePrefix + "AdamantiumFurnace");
-        RegisterHelper.registerTileEntity(TileEntitySilkFurnace.class, TileStrings.tilePrefix + "SilkFurnace");
-        RegisterHelper.registerTileEntity(TileEntityRedstoneFurnace.class, TileStrings.tilePrefix + "RedstoneFurnace");
+        RegisterHelper.registerTileEntity(tile.quartzFurnaceClass, TileStrings.quartzFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.obsidianFurnaceClass, TileStrings.obsidianFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.emeraldCrystalFurnaceClass, TileStrings.emeraldCrystalFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.lapisCrystalClass, TileStrings.lapisCrystalFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.bronzeFurnaceClass, TileStrings.bronzeFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.coalFurnaceClass, TileStrings.coalFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.glowstoneFurnaceClass, TileStrings.glowstoneFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.adamantiumFurnaceClass, TileStrings.adamantiumFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.silkFurnaceClass, TileStrings.silkFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.redstoneFurnaceClass, TileStrings.redstoneFurnaceTile);
     }
 
     public static void registerBows()
@@ -221,46 +216,5 @@ public class RegHandler {
         RegisterHelper.registerBlock(ModBlocks.blockSilkGem, BlockStrings.blockSilkGem);
         RegisterHelper.registerBlock(ModBlocks.blockRedstone, BlockStrings.blockRedstone);
         }
-
-    public static class GuiHandler implements IGuiHandler {
-
-        @Override
-        public Object getServerGuiElement(int guiId, EntityPlayer player, World world, int x, int y, int z) {
-            TileEntity entity = world.getTileEntity(x, y, z);
-            switch(guiId)
-            {
-                case 0: return new ContainerQuartzFurnace(player.inventory, (TileEntityQuartzFurnace) entity);
-                case 1: return new ContainerObsidianFurnace(player.inventory, (TileEntityObsidianFurnace)entity);
-                case 2: return new ContainerEmeraldCrystalFurnace(player.inventory, (TileEntityEmeraldCrystalFurnace)entity);
-                case 3: return new ContainerLapisCrystalFurnace(player.inventory, (TileEntityLapisCrystalFurnace)entity);
-                case 4: return new ContainerBronzeFurnace(player.inventory, (TileEntityBronzeFurnace)entity);
-                case 5: return new ContainerCoalFurnace(player.inventory, (TileEntityCoalFurnace)entity);
-                case 6: return new ContainerGlowstoneFurnace(player.inventory, (TileEntityGlowstoneFurnace)entity);
-                case 7: return new ContainerAdamantiumFurnace(player.inventory, (TileEntityAdamantiumFurnace)entity);
-                case 8: return new ContainerSilkFurnace(player.inventory, (TileEntitySilkFurnace) entity);
-                case 9: return new ContainerRedstoneFurnace(player.inventory, (TileEntityRedstoneFurnace)entity);
-            }
-            return null;
 }
 
-        @Override
-        public Object getClientGuiElement(int guiId, EntityPlayer player, World world, int x, int y, int z)
-        {
-            TileEntity entity = world.getTileEntity(x, y, z);
-            switch(guiId)
-            {
-                case 0: return new GuiQuartzFurnace(player.inventory, (TileEntityQuartzFurnace) entity);
-                case 1: return new GuiObsidianFurnace(player.inventory, (TileEntityObsidianFurnace)entity);
-                case 2: return new GuiEmeraldCrystalFurnace(player.inventory, (TileEntityEmeraldCrystalFurnace)entity);
-                case 3: return new GuiLapisCrystalFurnace(player.inventory, (TileEntityLapisCrystalFurnace)entity);
-                case 4: return new GuiBronzeFurnace(player.inventory, (TileEntityBronzeFurnace)entity);
-                case 5: return new GuiCoalFurnace(player.inventory, (TileEntityCoalFurnace)entity);
-                case 6: return new GuiGlowstoneFurnace(player.inventory, (TileEntityGlowstoneFurnace)entity);
-                case 7: return new GuiAdamantiumFurnace(player.inventory, (TileEntityAdamantiumFurnace)entity);
-                case 8: return new GuiSilkFurnace(player.inventory, (TileEntitySilkFurnace) entity);
-                case 9: return new GuiRedstoneFurnace(player.inventory, (TileEntityRedstoneFurnace)entity);
-            }
-            return null;
-        }
-}
-}

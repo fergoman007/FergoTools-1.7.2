@@ -73,6 +73,16 @@ public class Strings {
         public static final String coalChest = locale.ftCoalArmor + locale.chest;
         public static final String coalLegs = locale.ftCoalArmor + locale.legs;
         public static final String coalBoots = locale.ftCoalArmor + locale.boots;
+
+        public static final String glowstoneHelmet = locale.ftGlowstoneArmor + locale.helmet;
+        public static final String glowstoneChest = locale.ftGlowstoneArmor + locale.chest;
+        public static final String glowstoneLegs = locale.ftGlowstoneArmor + locale.legs;
+        public static final String glowstoneBoots = locale.ftGlowstoneArmor + locale.boots;
+
+        public static final String redstoneHelmet = locale.ftRedstoneArmor + locale.helmet;
+        public static final String redstoneChest = locale.ftRedstoneArmor + locale.chest;
+        public static final String redstoneLegs = locale.ftRedstoneArmor + locale.legs;
+        public static final String redstoneBoots = locale.ftRedstoneArmor + locale.boots;
     }
 
     public static class ArmorKeys
@@ -276,6 +286,18 @@ public class Strings {
         public static final String customName = "CustomName";
         public static final String slot = "Slot";
         public static final String items = "Items";
+
+        public static final String quartzFurnaceTile = tilePrefix + "QuartzFurnace";
+        public static final String obsidianFurnaceTile = tilePrefix + "ObsidianFurnace";
+        public static final String emeraldCrystalFurnaceTile = tilePrefix + "EmeraldCrystalFurnace";
+        public static final String lapisCrystalFurnaceTile = tilePrefix + "LapisCrystalFurnace";
+        public static final String bronzeFurnaceTile = tilePrefix + "BronzeFurnace";
+        public static final String coalFurnaceTile = tilePrefix + "CoalFurnace";
+        public static final String glowstoneFurnaceTile = tilePrefix + "GlowstoneFurnace";
+        public static final String adamantiumFurnaceTile = tilePrefix + "AdamantiumFurnace";
+        public static final String silkFurnaceTile = tilePrefix + "SilkFurnace";
+        public static final String redstoneFurnaceTile = tilePrefix + "RedstoneFurnace";
+
     }
 
     public static class ToolStrings

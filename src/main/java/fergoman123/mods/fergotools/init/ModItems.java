@@ -173,7 +173,7 @@ public class ModItems{
 
     public static void addItems()
 	{
-		quartzPickaxe = new ItemQuartzPickaxe().setUnlocalizedName(ToolStrings.quartzPickaxe).setMaxDamage(UtilToolArmor.quartz.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.quartzPickaxe);
+		quartzPickaxe = new ItemQuartzPickaxe();
         quartzShovel = new ItemQuartzShovel().setUnlocalizedName(ToolStrings.quartzShovel).setMaxDamage(UtilToolArmor.quartz.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.quartzShovel);
         quartzAxe = new ItemQuartzAxe().setUnlocalizedName(ToolStrings.quartzAxe).setMaxDamage(UtilToolArmor.quartz.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.quartzAxe);
         quartzHoe = new ItemQuartzHoe().setUnlocalizedName(ToolStrings.quartzHoe).setMaxDamage(UtilToolArmor.quartz.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.quartzHoe);
@@ -278,16 +278,16 @@ public class ModItems{
         coalChestplate = new ItemArmorCoal(type.CHEST);
         coalLeggings = new ItemArmorCoal(type.LEGS);
         coalBoots = new ItemArmorCoal(type.BOOTS);
-//
-//        glowstoneHelmet = new ItemArmorGlowstone(0).setUnlocalizedName(Strings.ArmorStrings.glowstoneArmorKey[0]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.glowstoneHelmet);
-//        glowstoneChestplate = new ItemArmorGlowstone(1).setUnlocalizedName(Strings.ArmorStrings.glowstoneArmorKey[1]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.glowstoneChestplate);
-//        glowstoneLeggings = new ItemArmorGlowstone(2).setUnlocalizedName(Strings.ArmorStrings.glowstoneArmorKey[2]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.glowstoneLeggings);
-//        glowstoneBoots = new ItemArmorGlowstone(3).setUnlocalizedName(Strings.ArmorStrings.glowstoneArmorKey[3]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.glowstoneBoots);
-//
-//        redstoneHelmet = new ItemArmorRedstone(0).setUnlocalizedName(Strings.ArmorStrings.redstoneArmorKey[0]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.redstoneHelmet);
-//        redstoneChestplate = new ItemArmorRedstone(1).setUnlocalizedName(Strings.ArmorStrings.redstoneArmorKey[1]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.redstoneChestplate);
-//        redstoneLeggings = new ItemArmorRedstone(2).setUnlocalizedName(Strings.ArmorStrings.redstoneArmorKey[2]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.redstoneLeggings);
-//        redstoneBoots = new ItemArmorRedstone(3).setUnlocalizedName(Strings.ArmorStrings.redstoneArmorKey[3]).setCreativeTab(Tabs.tabFergoArmor).setTextureName(ArmorTextures.redstoneBoots);
+
+        glowstoneHelmet = new ItemArmorGlowstone(ArmorType.HELMET);
+        glowstoneChestplate = new ItemArmorGlowstone(ArmorType.CHEST);
+        glowstoneLeggings = new ItemArmorGlowstone(ArmorType.LEGS);
+        glowstoneBoots = new ItemArmorGlowstone(ArmorType.BOOTS);
+
+        redstoneHelmet = new ItemArmorRedstone(ArmorType.HELMET);
+        redstoneChestplate = new ItemArmorRedstone(ArmorType.CHEST);
+        redstoneLeggings = new ItemArmorRedstone(ArmorType.LEGS);
+        redstoneBoots = new ItemArmorRedstone(ArmorType.BOOTS);
 	}
 
 	public static void addBows() {
