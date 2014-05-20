@@ -162,6 +162,17 @@ tile.adamantiumFurnaceIdle.name=Adamantium Furnace
 tile.silkFurnaceIdle.name=Silk Furnace
 tile.redstoneFurnaceIdle.name=Redstone Furnace
 
+tile.quartzFurnaceActive.name=Quartz Furnace
+tile.obsidianFurnaceActive.name=Obsidian Furnace
+tile.emeraldCrystalFurnaceActive.name=Emerald Crystal Furnace
+tile.lapisCrystalFurnaceActive.name=Lapis Crystal Furnace
+tile.bronzeFurnaceActive.name=Bronze Furnace
+tile.coalFurnaceActive.name=Coal Furnace
+tile.glowstoneFurnaceActive.name=Glowstone Furnace
+tile.adamantiumFurnaceActive.name=Adamantium Furnace
+tile.silkFurnaceActive.name=Silk Furnace
+tile.redstoneFurnaceActive.name=Redstone Furnace
+
 # Gui Containers
 container.quartzFurnace=Quartz Furnace
 container.obsidianFurnace=Obsidian Furnace
