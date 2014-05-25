@@ -16,7 +16,7 @@ public class ItemObsidianShovel extends ItemSpade {
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack2.isItemEqual(new ItemStack(ModItems.fergoMaterials, 1, 0)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack2.isItemEqual(new ItemStack(ModItems.obsidianIngot)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 
 }

@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerQuartzFurnace;
-import fergoman123.mods.fergotools.helper.ResLocHelper;
+import fergoman123.mods.fergotools.helper.ResourceLocationHelper;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -17,7 +17,7 @@ public class GuiQuartzFurnace extends GuiContainer
 {
 
     private Object[] obj = new Object[0];
-    private static final ResourceLocation furnaceGuiTextures = ResLocHelper.getResourceLocation(GuiStrings.furnaceGuiTexture);
+    private static final ResourceLocation furnaceGuiTextures = ResourceLocationHelper.getResourceLocation(GuiStrings.furnaceGuiTexture);
     private TileEntityQuartzFurnace furnaceInventory;
 
     public GuiQuartzFurnace(InventoryPlayer par1InventoryPlayer, TileEntityQuartzFurnace par2TileEntityFurnace)

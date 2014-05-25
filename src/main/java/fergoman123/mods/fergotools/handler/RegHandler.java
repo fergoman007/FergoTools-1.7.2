@@ -2,6 +2,7 @@ package fergoman123.mods.fergotools.handler;
 
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModFluids;
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Strings.*;
 import fergoman123.mods.fergotools.proxy.ClientProxy;
@@ -23,6 +24,11 @@ public class RegHandler {
         registerItems();
         registerBows();
         registerOther();
+    }
+
+    public static void registerFluids()
+    {
+        RegisterHelper.registerFluid(ModFluids.liquidExpShard);
     }
 
     public static void registerFurnaces()
@@ -190,7 +196,17 @@ public class RegHandler {
 
     public static void registerItems()
     {
-        RegisterHelper.registerItem(ModItems.fergoMaterials, "ft");
+//        RegisterHelper.registerItem(ModItems.fergoMaterials, "ft");
+        RegisterHelper.registerItem(ModItems.obsidianIngot, ItemStrings.ingotObsidian);
+        RegisterHelper.registerItem(ModItems.emeraldCrystal, ItemStrings.emeraldCrystal);
+        RegisterHelper.registerItem(ModItems.lapisCrystal, ItemStrings.lapisCrystal);
+        RegisterHelper.registerItem(ModItems.bronzeIngot, ItemStrings.ingotBronze);
+        RegisterHelper.registerItem(ModItems.coalIngot, ItemStrings.ingotCoal);
+        RegisterHelper.registerItem(ModItems.glowstoneIngot, ItemStrings.ingotGlowstone);
+        RegisterHelper.registerItem(ModItems.adamantiumIngot, ItemStrings.ingotAdamantium);
+        RegisterHelper.registerItem(ModItems.silkGem, ItemStrings.silkGem);
+        RegisterHelper.registerItem(ModItems.redstoneCrystal, ItemStrings.redstoneCrystal);
+        RegisterHelper.registerItem(ModItems.expShard, ItemStrings.expShard);
     }
 
 
@@ -203,7 +219,7 @@ public class RegHandler {
         RegisterHelper.registerBlock(ModBlocks.oreLapisCrystal, BlockStrings.oreLapisCrystal);
         RegisterHelper.registerBlock(ModBlocks.oreBronze, BlockStrings.oreBronze);
         RegisterHelper.registerBlock(ModBlocks.oreAdamantium, BlockStrings.oreAdamantium);
-        RegisterHelper.registerBlock(ModBlocks.oreRedstone, BlockStrings.oreRedstone);
+        RegisterHelper.registerBlock(ModBlocks.oreRedstoneCrystal, BlockStrings.oreRedstoneCrystal);
 
         RegisterHelper.registerBlock(ModBlocks.blockExperience, BlockStrings.blockExperience);
         RegisterHelper.registerBlock(ModBlocks.blockObsidian, BlockStrings.blockObsidian);
@@ -214,7 +230,7 @@ public class RegHandler {
         RegisterHelper.registerBlock(ModBlocks.blockGlowstone, BlockStrings.blockGlowstone);
         RegisterHelper.registerBlock(ModBlocks.blockAdamantium, BlockStrings.blockAdamantium);
         RegisterHelper.registerBlock(ModBlocks.blockSilkGem, BlockStrings.blockSilkGem);
-        RegisterHelper.registerBlock(ModBlocks.blockRedstone, BlockStrings.blockRedstone);
+        RegisterHelper.registerBlock(ModBlocks.blockRedstone, BlockStrings.blockRedstoneCrystal);
         }
 }
 

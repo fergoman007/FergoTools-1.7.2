@@ -1,15 +1,17 @@
 package fergoman123.mods.fergotools.init;
 
-import fergoman123.mods.fergotools.item.FergoMaterials;
 import fergoman123.mods.fergotools.item.armor.*;
 import fergoman123.mods.fergotools.item.axe.*;
 import fergoman123.mods.fergotools.item.bow.*;
 import fergoman123.mods.fergotools.item.hoe.*;
+import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Strings.BowStrings;
 import fergoman123.mods.fergotools.lib.Strings.ToolStrings;
+import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.Textures.ToolTextures;
 import fergoman123.mods.fergotools.lib.ints.ToolInts;
 import fergoman123.mods.fergotools.tabs.Tabs;
@@ -82,18 +84,18 @@ public class ModItems{
     public static Item redstoneHoe;
     public static Item redstoneSword;
 
-//    public static Item obsidianIngot;
-//    public static Item emeraldCrystal;
-//    public static Item lapisCrystal;
-//    public static Item bronzeIngot;
-//    public static Item coalIngot;
-//    public static Item glowstoneIngot;
-//    public static Item adamantiumIngot;
-//    public static Item expShard;
-//    public static Item silkGem;
-//    public static Item redstoneCrystal;
+    public static Item obsidianIngot;
+    public static Item emeraldCrystal;
+    public static Item lapisCrystal;
+    public static Item bronzeIngot;
+    public static Item coalIngot;
+    public static Item glowstoneIngot;
+    public static Item adamantiumIngot;
+    public static Item expShard;
+    public static Item silkGem;
+    public static Item redstoneCrystal;
 
-    public static Item fergoMaterials;
+//    public static Item fergoMaterials;
 
     public static Item quartzHelmet;
     public static Item quartzChestplate;
@@ -233,18 +235,18 @@ public class ModItems{
         redstoneHoe = new ItemRedstoneHoe().setUnlocalizedName(ToolStrings.redstoneHoe).setMaxDamage(UtilToolArmor.redstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.redstoneHoe);
         redstoneSword = new ItemRedstoneSword().setUnlocalizedName(ToolStrings.redstoneSword).setMaxDamage(UtilToolArmor.redstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.redstoneSword);
 
-//		obsidianIngot = new ItemObsidianIngot().setUnlocalizedName(ItemStrings.ingotObsidian).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.obsidianIngot);
-//        emeraldCrystal = new ItemEmeraldCrystal().setUnlocalizedName(ItemStrings.emeraldCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.emeraldCrystal);
-//        lapisCrystal = new ItemLapisCrystal().setUnlocalizedName(ItemStrings.lapisCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.lapisCrystal);
-//        bronzeIngot = new ItemBronzeIngot().setUnlocalizedName(ItemStrings.ingotBronze).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.bronzeIngot);
-//        coalIngot = new ItemCoalIngot().setUnlocalizedName(ItemStrings.ingotCoal).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.coalIngot);
-//        glowstoneIngot = new ItemGlowstoneIngot().setUnlocalizedName(ItemStrings.ingotGlowstone).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.glowstoneIngot);
-//        adamantiumIngot = new ItemAdamantiumIngot().setUnlocalizedName(ItemStrings.ingotAdamantium).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.adamantiumIngot);
-//        expShard = new ItemExpShard().setUnlocalizedName(ItemStrings.expShard).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.expShard);
-//        silkGem = new ItemSilkGem().setUnlocalizedName(ItemStrings.silkGem).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.silkGem);
-//        redstoneCrystal = new ItemRedstoneCrystal().setUnlocalizedName(ItemStrings.redstoneCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(ItemTextures.redstoneCrystal);
+		obsidianIngot = new ItemObsidianIngot();
+        emeraldCrystal = new ItemEmeraldCrystal().setUnlocalizedName(Strings.ItemStrings.emeraldCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.emeraldCrystal);
+        lapisCrystal = new ItemLapisCrystal().setUnlocalizedName(Strings.ItemStrings.lapisCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.lapisCrystal);
+        bronzeIngot = new ItemBronzeIngot().setUnlocalizedName(Strings.ItemStrings.ingotBronze).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.bronzeIngot);
+        coalIngot = new ItemCoalIngot().setUnlocalizedName(Strings.ItemStrings.ingotCoal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.coalIngot);
+        glowstoneIngot = new ItemGlowstoneIngot().setUnlocalizedName(Strings.ItemStrings.ingotGlowstone).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.glowstoneIngot);
+        adamantiumIngot = new ItemAdamantiumIngot().setUnlocalizedName(Strings.ItemStrings.ingotAdamantium).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.adamantiumIngot);
+        expShard = new ItemExpShard().setUnlocalizedName(Strings.ItemStrings.expShard).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.expShard);
+        silkGem = new ItemSilkGem().setUnlocalizedName(Strings.ItemStrings.silkGem).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.silkGem);
+        redstoneCrystal = new ItemRedstoneCrystal().setUnlocalizedName(Strings.ItemStrings.redstoneCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.redstoneCrystal);
 
-        fergoMaterials = new FergoMaterials();
+//        fergoMaterials = new FergoMaterials();
 	}
 
 	public static void addArmor()

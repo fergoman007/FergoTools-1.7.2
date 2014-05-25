@@ -14,31 +14,31 @@ public class UtilItemStack {
     public static final ItemStack stickStack = new ItemStack(Items.stick);
     public static final ItemStack quartzStack = new ItemStack(Items.quartz);
     public static final ItemStack stringStack = new ItemStack(Items.string);
-    public static final ItemStack quartzBlock = new ItemStack(Blocks.quartz_block, 1, 0);
+    public static final ItemStack quartzBlock = new ItemStack(Blocks.quartz_block);
 
-    public static final ItemStack obsidianIngot9 = new ItemStack(ModItems.fergoMaterials, 9, 0);
-    public static final ItemStack emeraldCrystal9 = new ItemStack(ModItems.fergoMaterials, 9, 1);
-    public static final ItemStack lapisCrystal9 = new ItemStack(ModItems.fergoMaterials, 9, 2);
-    public static final ItemStack bronzeIngot9 = new ItemStack(ModItems.fergoMaterials, 9, 3);
-    public static final ItemStack adamantiumIngot9 = new ItemStack(ModItems.fergoMaterials, 9, 6);
-    public static final ItemStack coalIngot9 = new ItemStack(ModItems.fergoMaterials, 9, 4);
-    public static final ItemStack glowstoneIngot9 = new ItemStack(ModItems.fergoMaterials, 9, 5);
+    public static final ItemStack obsidianIngot9 = new ItemStack(ModItems.obsidianIngot, 9);
+    public static final ItemStack emeraldCrystal9 = new ItemStack(ModItems.emeraldCrystal, 9);
+    public static final ItemStack lapisCrystal9 = new ItemStack(ModItems.lapisCrystal, 9);
+    public static final ItemStack bronzeIngot9 = new ItemStack(ModItems.bronzeIngot, 9);
+    public static final ItemStack adamantiumIngot9 = new ItemStack(ModItems.adamantiumIngot, 9);
+    public static final ItemStack coalIngot9 = new ItemStack(ModItems.coalIngot, 9);
+    public static final ItemStack glowstoneIngot9 = new ItemStack(ModItems.glowstoneIngot, 9);
     public static final ItemStack expBottle9 = new ItemStack(Items.experience_bottle, 9);
-    public static final ItemStack silkGem9 = new ItemStack(ModItems.fergoMaterials, 9, 8);
-    public static final ItemStack expShard9 = new ItemStack(ModItems.fergoMaterials, 9, 7);
+    public static final ItemStack silkGem9 = new ItemStack(ModItems.silkGem, 9);
+    public static final ItemStack expShard9 = new ItemStack(ModItems.expShard, 9);
 
-    public static final ItemStack expShard5 = new ItemStack(ModItems.fergoMaterials, 5, 7);
+    public static final ItemStack expShard5 = new ItemStack(ModItems.expShard, 5);
 
-    public static final ItemStack obsidianIngot = new ItemStack(ModItems.fergoMaterials, 1, 0);
-    public static final ItemStack emeraldCrystal = new ItemStack(ModItems.fergoMaterials, 1, 1);
-    public static final ItemStack lapisCrystal = new ItemStack(ModItems.fergoMaterials, 1, 2);
-    public static final ItemStack bronzeIngot = new ItemStack(ModItems.fergoMaterials, 1, 3);
-    public static final ItemStack coalIngot = new ItemStack(ModItems.fergoMaterials, 1, 4);
-    public static final ItemStack glowstoneIngot = new ItemStack(ModItems.fergoMaterials, 1, 5);
-    public static final ItemStack adamantiumIngot = new ItemStack(ModItems.fergoMaterials, 1, 6);
-    public static final ItemStack expShard = new ItemStack(ModItems.fergoMaterials, 1, 7);
-    public static final ItemStack silkGem = new ItemStack(ModItems.fergoMaterials, 1, 8);
-    public static final ItemStack redstoneCrystal = new ItemStack(ModItems.fergoMaterials, 1, 9);
+    public static final ItemStack obsidianIngot = new ItemStack(ModItems.obsidianIngot);
+    public static final ItemStack emeraldCrystal = new ItemStack(ModItems.emeraldCrystal);
+    public static final ItemStack lapisCrystal = new ItemStack(ModItems.lapisCrystal);
+    public static final ItemStack bronzeIngot = new ItemStack(ModItems.bronzeIngot, 1, 3);
+    public static final ItemStack coalIngot = new ItemStack(ModItems.coalIngot, 1, 4);
+    public static final ItemStack glowstoneIngot = new ItemStack(ModItems.glowstoneIngot, 1, 5);
+    public static final ItemStack adamantiumIngot = new ItemStack(ModItems.adamantiumIngot, 1, 6);
+    public static final ItemStack expShard = new ItemStack(ModItems.expShard, 1, 7);
+    public static final ItemStack silkGem = new ItemStack(ModItems.silkGem);
+    public static final ItemStack redstoneCrystal = new ItemStack(ModItems.redstoneCrystal);
 
     public static final ItemStack blockObsidian = new ItemStack(ModBlocks.blockObsidian);
     public static final ItemStack blockEmeraldCrystal = new ItemStack(ModBlocks.blockEmeraldCrystal);

@@ -89,7 +89,7 @@ public class Textures {
         public static final String oreLapisCrystal =  Reference.textureLoc + BlockStrings.oreLapisCrystal;
         public static final String oreBronze =  Reference.textureLoc + BlockStrings.oreBronze;
         public static final String oreAdamantium = Reference.textureLoc +  BlockStrings.oreAdamantium;
-        public static final String oreRedstone = Reference.textureLoc + BlockStrings.oreRedstone;
+        public static final String oreRedstone = Reference.textureLoc + BlockStrings.oreRedstoneCrystal;
 
         public static final String blockExperience = Reference.textureLoc +  BlockStrings.blockExperience;
         public static final String blockObsidian =  Reference.textureLoc + BlockStrings.blockObsidian;
@@ -100,7 +100,7 @@ public class Textures {
         public static final String blockGlowstone =  Reference.textureLoc + BlockStrings.blockGlowstone;
         public static final String blockAdamantium =  Reference.textureLoc + BlockStrings.blockAdamantium;
         public static final String blockSilkGem = Reference.textureLoc + BlockStrings.blockSilkGem;
-        public static final String blockRedstone = Reference.textureLoc + BlockStrings.blockRedstone;
+        public static final String blockRedstone = Reference.textureLoc + BlockStrings.blockRedstoneCrystal;
     }
 
     public static class BowTextures

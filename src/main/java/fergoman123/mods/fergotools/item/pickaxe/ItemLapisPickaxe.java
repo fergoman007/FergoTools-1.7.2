@@ -17,6 +17,6 @@ public class ItemLapisPickaxe extends ItemPickaxe
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
     {
-        return stack2.isItemEqual(new ItemStack(ModItems.fergoMaterials, 1, 2)) || super.getIsRepairable(stack1, stack2);
+        return stack2.isItemEqual(new ItemStack(ModItems.lapisCrystal)) || super.getIsRepairable(stack1, stack2);
     }
 }

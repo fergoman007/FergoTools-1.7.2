@@ -15,7 +15,7 @@ public class ModBlocks {
     public static Block oreBronze;
     public static Block oreAdamantium;
     public static Block oreExperience;
-    public static Block oreRedstone;
+    public static Block oreRedstoneCrystal;
 
     public static Block blockExperience;
     public static Block blockObsidian;
@@ -69,7 +69,7 @@ public class ModBlocks {
         oreLapisCrystal = new BlockOreLapisCrystal();
         oreBronze = new BlockOreBronze();
         oreAdamantium = new BlockOreAdamantium();
-        oreRedstone = new BlockOreRedstone();
+        oreRedstoneCrystal = new BlockOreRedstone();
 
 
         blockExperience = new BlockExperience();

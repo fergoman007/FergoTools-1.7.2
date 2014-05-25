@@ -15,6 +15,6 @@ public class ItemRedstoneAxe extends ItemAxe{
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
     {
-        return stack2.isItemEqual(new ItemStack(ModItems.fergoMaterials, 1, 9)) || super.getIsRepairable(stack1, stack2);
+        return stack2.isItemEqual(new ItemStack(ModItems.redstoneCrystal)) || super.getIsRepairable(stack1, stack2);
     }
 }

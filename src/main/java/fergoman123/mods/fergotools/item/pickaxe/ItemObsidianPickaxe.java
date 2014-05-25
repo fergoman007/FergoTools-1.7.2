@@ -17,6 +17,6 @@ public class ItemObsidianPickaxe extends ItemPickaxe
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
     {
-        return stack2.isItemEqual(new ItemStack(ModItems.fergoMaterials, 1, 0)) || super.getIsRepairable(stack1, stack2);
+        return stack2.isItemEqual(new ItemStack(ModItems.obsidianIngot)) || super.getIsRepairable(stack1, stack2);
     }
 }

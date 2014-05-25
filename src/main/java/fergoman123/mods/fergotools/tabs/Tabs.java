@@ -78,7 +78,7 @@ public class Tabs {
 
         public Item getTabIconItem()
         {
-            return ModItems.fergoMaterials;
+            return ModItems.expShard;
         }
 
         public ItemStack getIconItemStack()

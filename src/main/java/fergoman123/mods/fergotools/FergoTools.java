@@ -9,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import fergoman123.mods.fergotools.handler.RecipeHandler;
 import fergoman123.mods.fergotools.handler.RegHandler;
+import fergoman123.mods.fergotools.handler.WorldGenerationHandler;
 import fergoman123.mods.fergotools.helper.LogHelper;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
@@ -38,6 +39,7 @@ public class FergoTools {
         UtilToolArmor.init();
         ModItems.init();
         ModBlocks.initBlocks();
+        WorldGenerationHandler.initBiomes();
     }
 
 	@EventHandler

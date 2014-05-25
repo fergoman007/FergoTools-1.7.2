@@ -17,6 +17,6 @@ public class ItemEmeraldPickaxe extends ItemPickaxe
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
     {
-        return stack2.isItemEqual(new ItemStack(ModItems.fergoMaterials, 1, 1)) || super.getIsRepairable(stack1, stack2);
+        return stack2.isItemEqual(new ItemStack(ModItems.emeraldCrystal)) || super.getIsRepairable(stack1, stack2);
     }
 }

@@ -16,7 +16,7 @@ public class ItemBronzeAxe extends ItemAxe {
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack2.isItemEqual(new ItemStack(ModItems.fergoMaterials, 1, 3)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack2.isItemEqual(new ItemStack(ModItems.bronzeIngot)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 
 }

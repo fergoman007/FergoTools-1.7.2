@@ -113,9 +113,9 @@ public class Strings {
         public static final String oreLapisCrystal = "oreLapisCrystal";
         public static final String oreBronze = "oreBronze";
         public static final String oreAdamantium = "oreAdamantium";
-        public static final String oreRedstone = "oreRedstone";
+        public static final String oreRedstoneCrystal = "oreRedstoneCrystal";
 
-        public static final String[] ores = {oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreRedstone};
+        public static final String[] ores = {oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreRedstoneCrystal};
 
         public static final String blockExperience = "blockExperience";
         public static final String blockObsidian = "blockObsidian";
@@ -126,7 +126,7 @@ public class Strings {
         public static final String blockGlowstone = "blockGlowstone";
         public static final String blockAdamantium = "blockAdamantium";
         public static final String blockSilkGem = "blockSilkGem";
-        public static final String blockRedstone = "blockRedstone";
+        public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
 
         public static final String[] blocks =
                 {
@@ -139,7 +139,7 @@ public class Strings {
                         blockGlowstone,
                         blockAdamantium,
                         blockSilkGem,
-                        blockRedstone
+                        blockRedstoneCrystal
                 };
     }
 
