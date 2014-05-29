@@ -1,5 +1,7 @@
 package fergoman123.mods.fergotools.init;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import fergoman123.mods.fergotools.item.Hammer;
 import fergoman123.mods.fergotools.item.armor.*;
 import fergoman123.mods.fergotools.item.axe.*;
 import fergoman123.mods.fergotools.item.bow.*;
@@ -17,7 +19,6 @@ import fergoman123.mods.fergotools.lib.ints.ToolInts;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.item.ArmorType;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class ModItems{
@@ -146,24 +147,7 @@ public class ModItems{
     public static Item glowstoneBow;
     public static Item adamantiumBow;
 
-    public static Block oreObsidian;
-    public static Block oreEmeraldCrystal;
-    public static Block oreLapisCrystal;
-    public static Block oreBronze;
-    public static Block oreAdamantium;
-    public static Block oreExperience;
-    public static Block oreRedstone;
-
-    public static Block blockExperience;
-    public static Block blockObsidian;
-    public static Block blockEmeraldCrystal;
-    public static Block blockLapisCrystal;
-    public static Block blockBronze;
-    public static Block blockCoal;
-    public static Block blockGlowstone;
-    public static Block blockAdamantium;
-    public static Block blockSilkGem;
-    public static Block blockRedstone;
+    public static Item hammer;
 
     public static ArmorType type;
 
@@ -242,11 +226,13 @@ public class ModItems{
         coalIngot = new ItemCoalIngot().setUnlocalizedName(Strings.ItemStrings.ingotCoal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.coalIngot);
         glowstoneIngot = new ItemGlowstoneIngot().setUnlocalizedName(Strings.ItemStrings.ingotGlowstone).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.glowstoneIngot);
         adamantiumIngot = new ItemAdamantiumIngot().setUnlocalizedName(Strings.ItemStrings.ingotAdamantium).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.adamantiumIngot);
-        expShard = new ItemExpShard().setUnlocalizedName(Strings.ItemStrings.expShard).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.expShard);
+        expShard = new ItemExpShardFood();
         silkGem = new ItemSilkGem().setUnlocalizedName(Strings.ItemStrings.silkGem).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.silkGem);
         redstoneCrystal = new ItemRedstoneCrystal().setUnlocalizedName(Strings.ItemStrings.redstoneCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.redstoneCrystal);
 
 //        fergoMaterials = new FergoMaterials();
+        hammer = new Hammer();
+        GameRegistry.registerItem(hammer, "hammer");
 	}
 
 	public static void addArmor()

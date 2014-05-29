@@ -38,7 +38,6 @@ public class FergoTools {
         UtilToolArmor.init();
         ModItems.init();
         ModBlocks.initBlocks();
-        RegHandler.registerBiomes();
     }
 
 	@EventHandler

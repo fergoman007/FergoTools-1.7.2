@@ -67,22 +67,22 @@ item.redstoneAxe.name=Redstone Axe
 item.redstoneHoe.name=Redstone Hoe
 
 # Crafting Materials
-item.ft.expShard.name=Experience Shard
-item.ft.ingotObsidian.name=Obsidian Ingot
-item.ft.emeraldCrystal.name=Emerald Crystal
-item.ft.lapisCrystal.name=Lapis Crystal
-item.ft.ingotBronze.name=Bronze Ingot
-item.ft.ingotCoal.name=Coal Ingot
-item.ft.ingotGlowstone.name=Glowstone Ingot
-item.ft.ingotAdamantium.name=Adamantium Ingot
-item.ft.silkGem.name=Silk Gem
-item.ft.redstoneCrystal.name=Redstone Crystal
+item.FergoTools:expShard.name=Experience Shard
+item.FergoTools:ingotObsidian.name=Obsidian Ingot
+item.FergoTools:emeraldCrystal.name=Emerald Crystal
+item.FergoTools:lapisCrystal.name=Lapis Crystal
+item.FergoTools:ingotBronze.name=Bronze Ingot
+item.FergoTools:ingotCoal.name=Coal Ingot
+item.FergoTools:ingotGlowstone.name=Glowstone Ingot
+item.FergoTools:ingotAdamantium.name=Adamantium Ingot
+item.FergoTools:silkGem.name=Silk Gem
+item.FergoTools:redstoneCrystal.name=Redstone Crystal
 
 # Armor
-item.ft.quartzArmor.helmet.name=Quartz Helmet
-item.ft.quartzArmor.chest.name=Quartz Chestplate
-item.ft.quartzArmor.legs.name=Quartz Leggings
-item.ft.quartzArmor.boots.name=Quartz Boots
+item.quartzHelmet.name=Quartz Helmet
+item.quartzChestplate.name=Quartz Chestplate
+item.quartzLeggings.name=Quartz Leggings
+item.quartzBoots.name=Quartz Boots
 
 item.ft.obsidianArmor.helmet.name=Obsidian Helmet
 item.ft.obsidianArmor.chest.name=Obsidian Chestplate
@@ -130,25 +130,25 @@ item.bowGlowstone.name=Glowstone Bow
 item.bowAdamantium.name=Adamantium Bow
 
 # Ores
-tile.oreExperience.name=Experience Ore
-tile.oreObsidian.name=Obsidian Ore
-tile.oreEmeraldCrystal.name=Emerald Crystal Ore
-tile.oreLapisCrystal.name=Lapis Crystal Ore
-tile.oreBronze.name=Bronze Ore
-tile.oreAdamantium.name=Adamantium Ore
-tile.oreRedstone.name=Redstone Crystal Ore
+tile.FergoTools:oreExperience.name=Experience Ore
+tile.FergoTools:oreObsidian.name=Obsidian Ore
+tile.FergoTools:oreEmeraldCrystal.name=Emerald Crystal Ore
+tile.FergoTools:oreLapisCrystal.name=Lapis Crystal Ore
+tile.FergoTools:oreBronze.name=Bronze Ore
+tile.FergoTools:oreAdamantium.name=Adamantium Ore
+tile.FergoTools:oreRedstoneCrystal.name=Redstone Crystal Ore
 
 # Blocks
-tile.blockExperience.name=Experience Block
-tile.blockObsidian.name=Obsidian Block
-tile.blockEmeraldCrystal.name=Emerald Crystal Block
-tile.blockLapisCrystal.name=Lapis Crystal Block
-tile.blockBronze.name=Bronze Block
-tile.blockCoal.name=Coal Block
-tile.blockGlowstone.name=Glowstone Block
-tile.blockAdamantium.name=Adamantium Block
-tile.blockSilkGem.name=Silk Gem Block
-tile.blockRedstone.name=Redstone Crystal Block
+tile.FergoTools:blockExperience.name=Experience Block
+tile.FergoTools:blockObsidian.name=Obsidian Block
+tile.FergoTools:blockEmeraldCrystal.name=Emerald Crystal Block
+tile.FergoTools:blockLapisCrystal.name=Lapis Crystal Block
+tile.FergoTools:blockBronze.name=Bronze Block
+tile.FergoTools:blockCoal.name=Coal Block
+tile.FergoTools:blockGlowstone.name=Glowstone Block
+tile.FergoTools:blockAdamantium.name=Adamantium Block
+tile.FergoTools:blockSilkGem.name=Silk Gem Block
+tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
 
 # Furnaces
 tile.quartzFurnaceIdle.name=Quartz Furnace

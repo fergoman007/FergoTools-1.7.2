@@ -17,17 +17,30 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.2-2.0.1"
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+version = config.mod_version
 group= "fergoman123.mods.fergotools" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "FergoTools"
 
 minecraft {
-    version = "1.7.2-10.12.1.1082"
-    assetDir = "eclipse/assets"
+    version = config.minecraft_version + "-" + config.forge_version
+    assetDir = "run/assets"
+
+    replaceIn "lib/ModInfo.java"
+    replace "@version@", config.mod_version
 }
 
+version = "${config.minecraft_version}-${config.mod_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
+
 dependencies {
-    compile files('build/libs/FergoUtil-1.7.2-1.7.2-1.1-DEV.jar')
+    compile files('libs/FergoUtil-1.7.2-1.7.2-1.0.0.jar')
 }
 
 processResources

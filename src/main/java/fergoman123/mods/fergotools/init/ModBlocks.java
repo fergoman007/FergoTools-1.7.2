@@ -58,8 +58,8 @@ public class ModBlocks {
     public static Block redstoneFurnaceIdle;
     public static Block redstoneFurnaceActive;
 
-    public static Block maceratorIdle;
-    public static Block maceratorActive;
+//    public static Block maceratorIdle;
+//    public static Block maceratorActive;
     
 	public static void initBlocks()
 	{

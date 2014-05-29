@@ -4,9 +4,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockLapisCrystalFurnace;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
-import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
-import fergoman123.mods.fergotools.lib.Strings.TileStrings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,16 +22,16 @@ import net.minecraft.tileentity.TileEntity;
  * Created by Fergoman123 on 13/04/2014.
  */
 public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedInventory {
-
-    private static final int[] slots_top = new int[]{0};
-    private static final int[] slots_bottom = new int[]{2, 1};
-    private static final int[] slots_sides = new int[]{1};
+    private static final int[] slots_top = new int[] {0};
+    private static final int[] slots_bottom = new int[] {2, 1};
+    private static final int[] slots_sides = new int[] {1};
 
     private ItemStack[] slots = new ItemStack[3];
 
     public int burnTime;
-    public int cookTime;
     public int currentItemBurnTime;
+    public int cookTime;
+
 
     private String localizedName;
 
@@ -48,11 +47,11 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
 
     public ItemStack decrStackSize(int par1, int par2)
     {
-        if(this.slots[par1] != null)
+        if (this.slots[par1] != null)
         {
             ItemStack itemstack;
 
-            if(this.slots[par1].stackSize <= par2)
+            if (this.slots[par1].stackSize <= par2)
             {
                 itemstack = this.slots[par1];
                 this.slots[par1] = null;
@@ -62,7 +61,7 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
             {
                 itemstack = this.slots[par1].splitStack(par2);
 
-                if(this.slots[par1].stackSize == 0)
+                if (this.slots[par1].stackSize == 0)
                 {
                     this.slots[par1] = null;
                 }
@@ -78,7 +77,7 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
 
     public ItemStack getStackInSlotOnClosing(int par1)
     {
-        if(this.slots[par1] != null)
+        if (this.slots[par1] != null)
         {
             ItemStack itemstack = this.slots[par1];
             this.slots[par1] = null;
@@ -90,19 +89,19 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
         }
     }
 
-    public void setInventorySlotContents(int par1, ItemStack itemstack)
+    public void setInventorySlotContents(int par1, ItemStack par2ItemStack)
     {
-        this.slots[par1] = itemstack;
+        this.slots[par1] = par2ItemStack;
 
-        if(itemstack != null && itemstack.stackSize > this.getInventoryStackLimit())
+        if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit())
         {
-            itemstack.stackSize = this.getInventoryStackLimit();
+            par2ItemStack.stackSize = this.getInventoryStackLimit();
         }
     }
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : GuiStrings.containerLapisCrystalFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerLapisCrystalFurnace;
     }
 
     public boolean hasCustomInventoryName()
@@ -110,43 +109,43 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
         return this.localizedName != null && this.localizedName.length() > 0;
     }
 
-    public void setGuiDisplayName(String displayName)
+    public void setGuiDisplayName(String par1Str)
     {
-        this.localizedName = displayName;
+        this.localizedName = par1Str;
     }
 
-    public void readFromNBT(NBTTagCompound tagCompound)
+    public void readFromNBT(NBTTagCompound par1NBTTagCompound)
     {
-        super.readFromNBT(tagCompound);
-        NBTTagList list = tagCompound.getTagList(TileStrings.items, 10);
+        super.readFromNBT(par1NBTTagCompound);
+        NBTTagList nbttaglist = par1NBTTagCompound.getTagList(Strings.TileStrings.items, 10);
         this.slots = new ItemStack[this.getSizeInventory()];
 
-        for(int i = 0; i < list.tagCount(); ++i)
+        for (int i = 0; i < nbttaglist.tagCount(); ++i)
         {
-            NBTTagCompound compound = (NBTTagCompound)list.getCompoundTagAt(i);
-            byte b0 = compound.getByte("Slot");
+            NBTTagCompound nbttagcompound1 = (NBTTagCompound)nbttaglist.getCompoundTagAt(i);
+            byte b0 = nbttagcompound1.getByte(Strings.TileStrings.slot);
 
-            if(b0 >= 0 && b0 < this.slots.length)
+            if (b0 >= 0 && b0 < this.slots.length)
             {
-                this.slots[b0] = ItemStack.loadItemStackFromNBT(compound);
+                this.slots[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
             }
         }
 
-        this.burnTime = tagCompound.getShort("BurnTime");
-        this.cookTime = tagCompound.getShort("CookTime");
+        this.burnTime = par1NBTTagCompound.getShort(Strings.TileStrings.burnTime);
+        this.cookTime = par1NBTTagCompound.getShort(Strings.TileStrings.cookTime);
         this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 
-        if(tagCompound.hasKey("CustomName"))
+        if (par1NBTTagCompound.hasKey(Strings.TileStrings.customName))
         {
-            this.localizedName = tagCompound.getString("CustomName");
+            this.localizedName = par1NBTTagCompound.getString(Strings.TileStrings.customName);
         }
     }
 
     public void writeToNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.writeToNBT(par1NBTTagCompound);
-        par1NBTTagCompound.setShort(TileStrings.burnTime, (short)this.burnTime);
-        par1NBTTagCompound.setShort(TileStrings.cookTime, (short)this.cookTime);
+        par1NBTTagCompound.setShort(Strings.TileStrings.burnTime, (short)this.burnTime);
+        par1NBTTagCompound.setShort(Strings.TileStrings.cookTime, (short)this.cookTime);
         NBTTagList nbttaglist = new NBTTagList();
 
         for (int i = 0; i < this.slots.length; ++i)
@@ -154,17 +153,17 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
             if (this.slots[i] != null)
             {
                 NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte(TileStrings.slot, (byte)i);
+                nbttagcompound1.setByte(Strings.TileStrings.slot, (byte)i);
                 this.slots[i].writeToNBT(nbttagcompound1);
                 nbttaglist.appendTag(nbttagcompound1);
             }
         }
 
-        par1NBTTagCompound.setTag(TileStrings.items, nbttaglist);
+        par1NBTTagCompound.setTag(Strings.TileStrings.items, nbttaglist);
 
         if (this.hasCustomInventoryName())
         {
-            par1NBTTagCompound.setString(TileStrings.customName, this.localizedName);
+            par1NBTTagCompound.setString(Strings.TileStrings.customName, this.localizedName);
         }
     }
 
@@ -172,23 +171,23 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
     {
         return 64;
     }
-
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int par1)
     {
-        return this.cookTime * par1 / FurnaceInts.lapisFurnaceSpeed;
+        return this.cookTime * par1 / FurnaceInts.quartzFurnaceSpeed;
     }
 
     @SideOnly(Side.CLIENT)
     public int getBurnTimeRemainingScaled(int par1)
     {
-        if(this.currentItemBurnTime == 0)
+        if (this.currentItemBurnTime == 0)
         {
             this.currentItemBurnTime = FurnaceInts.lapisFurnaceSpeed;
         }
 
         return this.burnTime * par1 / this.currentItemBurnTime;
     }
+
 
     public boolean isBurning()
     {
@@ -197,10 +196,10 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
 
     public void updateEntity()
     {
-        boolean flag = this.isBurning();
+        boolean flag = this.burnTime > 0;
         boolean flag1 = false;
 
-        if (this.isBurning())
+        if (this.burnTime > 0)
         {
             --this.burnTime;
         }
@@ -211,7 +210,7 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
             {
                 this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
 
-                if (this.isBurning())
+                if (this.burnTime > 0)
                 {
                     flag1 = true;
 
@@ -243,7 +242,7 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
                 this.cookTime = 0;
             }
 
-            if (flag != this.isBurning())
+            if (flag != this.burnTime > 0)
             {
                 flag1 = true;
                 BlockLapisCrystalFurnace.updateFurnaceBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
@@ -258,71 +257,70 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
 
     public boolean canSmelt()
     {
-        if(this.slots[0] == null)
+        if (this.slots[0] == null)
         {
             return false;
         }
         else
         {
             ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
-            if(itemstack == null) return false;
-            if(this.slots[2] == null) return true;
-            if(!this.slots[2].isItemEqual(itemstack)) return false;
+            if (itemstack == null) return false;
+            if (this.slots[2] == null) return true;
+            if (!this.slots[2].isItemEqual(itemstack)) return false;
             int result = slots[2].stackSize + itemstack.stackSize;
             return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
-
         }
     }
 
     public void smeltItem()
     {
-        if(this.canSmelt())
+        if (this.canSmelt())
         {
             ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
 
-            if(this.slots[2] == null)
+            if (this.slots[2] == null)
             {
                 this.slots[2] = itemstack.copy();
             }
-            else if(this.slots[2].isItemEqual(itemstack))
+            else if (this.slots[2].isItemEqual(itemstack))
             {
                 slots[2].stackSize += itemstack.stackSize;
             }
 
             --this.slots[0].stackSize;
 
-            if(this.slots[0].stackSize <= 0)
+            if (this.slots[0].stackSize <= 0)
             {
                 this.slots[0] = null;
             }
         }
     }
 
-    public static int getItemBurnTime(ItemStack itemstack)
+    public static int getItemBurnTime(ItemStack stack)
     {
-        if(itemstack == null)
+        if (stack == null)
         {
             return 0;
         }
         else
         {
-            Item item = itemstack.getItem();
+            Item item = stack.getItem();
 
-            if(itemstack.getItem() instanceof ItemBlock && Block.getBlockFromItem(item) != null)
+            if (stack.getItem() instanceof ItemBlock && Block.getBlockFromItem(item) != null)
             {
                 Block block = Block.getBlockFromItem(item);
 
-                if(block == Blocks.wooden_slab)
+                if (block == Blocks.wooden_slab)
                 {
                     return 150;
                 }
 
-                if(block.getMaterial() == Material.wood)
+                if (block.getMaterial() == Material.wood)
                 {
                     return 300;
                 }
 
-                if(block == Blocks.coal_block)
+                if (block == Blocks.coal_block)
                 {
                     return 16000;
                 }
@@ -336,26 +334,27 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
             if (item == Items.lava_bucket) return 20000;
             if (item == Item.getItemFromBlock(Blocks.sapling)) return 100;
             if (item == Items.blaze_rod) return 2400;
-            return GameRegistry.getFuelValue(itemstack);
+            return GameRegistry.getFuelValue(stack);
         }
     }
 
-    public static boolean isItemFuel(ItemStack itemstack)
+    public static boolean isItemFuel(ItemStack par0ItemStack)
     {
-        return getItemBurnTime(itemstack) > 0;
+        return getItemBurnTime(par0ItemStack) > 0;
     }
 
-    public boolean isUseableByPlayer(EntityPlayer player)
+    public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
     {
-        return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : player.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
+        return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : par1EntityPlayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
     }
 
-    public void openInventory(){}
-    public void closeInventory(){}
+    public void openInventory() {}
 
-    public boolean isItemValidForSlot(int par1, ItemStack itemstack)
+    public void closeInventory() {}
+
+    public boolean isItemValidForSlot(int par1, ItemStack par2ItemStack)
     {
-        return par1 == 2 ? false : (par1 == 1 ? isItemFuel(itemstack) : true);
+        return par1 == 2 ? false : (par1 == 1 ? isItemFuel(par2ItemStack) : true);
     }
 
     public int[] getAccessibleSlotsFromSide(int par1)
@@ -363,13 +362,13 @@ public class TileEntityLapisCrystalFurnace extends TileEntity implements ISidedI
         return par1 == 0 ? slots_bottom : (par1 == 1 ? slots_top : slots_sides);
     }
 
-    public boolean canInsertItem(int par1, ItemStack itemstack, int par3)
+    public boolean canInsertItem(int par1, ItemStack par2ItemStack, int par3)
     {
-        return this.isItemValidForSlot(par1, itemstack);
+        return this.isItemValidForSlot(par1, par2ItemStack);
     }
 
-    public boolean canExtractItem(int par1, ItemStack itemstack, int par3)
+    public boolean canExtractItem(int par1, ItemStack par2ItemStack, int par3)
     {
-        return par3 != 0 || par1 != 1 || itemstack.getItem() == Items.bucket;
+        return par3 != 0 || par1 != 1 || par2ItemStack.getItem() == Items.bucket;
     }
 }
