@@ -1,5 +1,8 @@
 package fergoman123.mods.fergotools.lib;
 
+import fergoman123.mods.fergotools.helper.ResourceLocationHelper;
+import net.minecraft.util.ResourceLocation;
+
 /**
  * Created by Fergoman123 on 03/05/2014.
  */
@@ -209,9 +212,14 @@ public class Strings {
         public static final String containerMacerator = "container.macerator";
 
         public static final String containerInventory = "container.inventory";
+
         public static final String furnaceGuiTexture = "furnaceGui" + png;
         public static final String lapisFurnaceGui = "lapisFurnaceGui" + png;
-        public static final String vanillaFurnace = "textures/gui/container/furnace" + png;
+        public static final String lapisFurnaceGuiLoc = Reference.textureLocGui + lapisFurnaceGui;
+        public static final String vanillaFurnaceTexture = "textures/gui/container/furnace" + png;
+
+        public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getResourceLocation(lapisFurnaceGuiLoc);
+        public static final ResourceLocation vanillaFurnace = ResourceLocationHelper.getVanillaResourceLocation(vanillaFurnaceTexture);
     }
 
     public static class ItemStrings

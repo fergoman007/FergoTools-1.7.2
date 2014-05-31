@@ -3,13 +3,11 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerRedstoneFurnace;
-import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.tileentity.TileEntityRedstoneFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 /**
@@ -19,7 +17,6 @@ import org.lwjgl.opengl.GL11;
 public class GuiRedstoneFurnace extends GuiContainer
 {
     private Object[] obj = new Object[0];
-    private static final ResourceLocation texture = new ResourceLocation(Reference.textureLocGui, Reference.dirGui + GuiStrings.furnaceGuiTexture);
     private TileEntityRedstoneFurnace furnace;
 
     public GuiRedstoneFurnace(InventoryPlayer player, TileEntityRedstoneFurnace furnace)
@@ -38,7 +35,7 @@ public class GuiRedstoneFurnace extends GuiContainer
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(texture);
+        this.mc.getTextureManager().bindTexture(GuiStrings.vanillaFurnace);
         int k = (this.width - this.xSize) / 2;
         int l = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);

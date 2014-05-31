@@ -17,4 +17,9 @@ public class ResourceLocationHelper {
     {
         return getResourceLocation(Reference.textureLocGui, path);
     }
+
+    public static ResourceLocation getVanillaResourceLocation(String path)
+    {
+        return new ResourceLocation(path);
+    }
 }

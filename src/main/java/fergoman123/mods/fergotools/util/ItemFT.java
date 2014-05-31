@@ -17,7 +17,7 @@ public class ItemFT extends Item{
     public ItemFT()
     {
         super();
-        this.maxStackSize = 1;
+        this.maxStackSize = 64;
         this.setCreativeTab(Tabs.tabFergoItems);
         this.setNoRepair();
     }

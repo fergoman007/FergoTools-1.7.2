@@ -3,13 +3,11 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerObsidianFurnace;
-import fergoman123.mods.fergotools.helper.ResourceLocationHelper;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.tileentity.TileEntityObsidianFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 @SideOnly(Side.CLIENT)
@@ -17,7 +15,6 @@ public class GuiObsidianFurnace extends GuiContainer
 {
 
     private Object[] obj = new Object[0];
-    private static final ResourceLocation furnaceGuiTextures = ResourceLocationHelper.getResourceLocation(Strings.GuiStrings.furnaceGuiTexture);
     private TileEntityObsidianFurnace furnaceInventory;
 
     public GuiObsidianFurnace(InventoryPlayer par1InventoryPlayer, TileEntityObsidianFurnace par2TileEntityFurnace)
@@ -42,7 +39,7 @@ public class GuiObsidianFurnace extends GuiContainer
     protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(furnaceGuiTextures);
+        this.mc.getTextureManager().bindTexture(Strings.GuiStrings.vanillaFurnace);
         int k = (this.width - this.xSize) / 2;
         int l = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);

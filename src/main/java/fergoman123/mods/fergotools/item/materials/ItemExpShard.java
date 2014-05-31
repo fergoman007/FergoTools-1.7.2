@@ -25,24 +25,13 @@ public class ItemExpShard extends ItemFT {
         this.setCreativeTab(Tabs.tabFergoItems);
     }
 
-    @Override
-    public ItemStack onEaten(ItemStack stack, World world, EntityPlayer player) {
-
-        --stack.stackSize;
-        world.playSoundAtEntity(player, "rand.burp", 0.5f, world.rand.nextFloat() * 0.1f + 0.9f);
-        this.onFoodEaten(stack, world, player);
-        return stack;
-    }
-
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
     {
-        player.setItemInUse(stack, this.getMaxItemUseDuration(stack));
-        return stack;
-    }
-    public void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {
         EntityXPOrb orb = new EntityXPOrb(world, player.posX, player.posY, player.posZ, 1);
-        world.spawnEntityInWorld(orb);
-        orb.isDead = true;
+
+        --stack.stackSize;
+        player.addExperience(3 + rand.nextInt(20));
+        return stack;
     }
 
     public boolean hasEffect(ItemStack stack, int pass)

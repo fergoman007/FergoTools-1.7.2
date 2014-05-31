@@ -20,6 +20,7 @@ public class ItemQuartzPickaxe extends ItemPickaxe
         this.setMaxDamage(UtilToolArmor.quartz.getMaxUses());
         this.setCreativeTab(Tabs.tabFergoTools);
         this.setTextureName(Textures.ToolTextures.quartzPickaxe);
+        this.setMaxStackSize(1);
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
