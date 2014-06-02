@@ -64,4 +64,16 @@ public class UtilToolArmor {
         glowstoneArmor = EnumHelper.addArmorMaterial(MaterialStrings.glowstoneArmor, ArmorInts.glowstoneArmorMaxDamage, ArmorInts.glowstoneReduct, ArmorInts.enchantability);
         redstoneArmor = EnumHelper.addArmorMaterial(MaterialStrings.redstoneArmor, ArmorInts.redstoneArmorMaxDamage, ArmorInts.redstoneReduct, ArmorInts.enchantability);
     }
+
+    public static int getQuartzMaxUses(){return quartz.getMaxUses();}
+    public static int getObsidianMaxUses(){return obsidian.getMaxUses();}
+    public static int getEmeraldMaxUses(){return emerald.getMaxUses();}
+    public static int getLapisMaxUses(){return lapis.getMaxUses();}
+    public static int getBronzeMaxUses(){return bronze.getMaxUses();}
+    public static int getCoalMaxUses(){return coal.getMaxUses();}
+    public static int getGlowstoneMaxUses(){return glowstone.getMaxUses();}
+    public static int getAdamantiumMaxUses(){return adamantium.getMaxUses();}
+    public static int getDonatorMaxUses(){return donator.getMaxUses();}
+    public static int getSilkMaxUses(){return silk.getMaxUses();}
+    public static int getRedstoneMaxUses(){return redstone.getMaxUses();}
 }

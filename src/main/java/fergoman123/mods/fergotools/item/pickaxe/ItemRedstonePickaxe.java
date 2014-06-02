@@ -1,6 +1,7 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
@@ -13,6 +14,8 @@ public class ItemRedstonePickaxe extends ItemPickaxe {
     public ItemRedstonePickaxe()
     {
         super(UtilToolArmor.redstone);
+        this.setUnlocalizedName(Strings.ToolStrings.redstonePickaxe);
+        this.setMaxDamage(UtilToolArmor.getRedstoneMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)

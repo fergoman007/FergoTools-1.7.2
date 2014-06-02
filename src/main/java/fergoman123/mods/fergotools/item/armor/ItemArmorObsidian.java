@@ -1,67 +1,22 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.lib.Strings;
-import fergoman123.mods.fergotools.lib.Strings.ArmorStrings;
 import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.item.ArmorType;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 
 /**
  * Created by Fergoman123 on 13/04/2014.
  */
-public class ItemArmorObsidian extends ItemArmor {
+public class ItemArmorObsidian extends ItemArmorFT {
 
-    public ItemArmorObsidian(ArmorType type)
-    {
-        super(UtilToolArmor.obsidianArmor, FergoTools.proxy.addArmor(Strings.MaterialStrings.obsidianToolMat), type.ordinal());
-        this.setCreativeTab(Tabs.tabFergoArmor);
-        if (armorType == 0)
-        {
-            this.setUnlocalizedName(ArmorStrings.obsidianHelmet);
-        }
-        else if (armorType == 1)
-        {
-            this.setUnlocalizedName(ArmorStrings.obsidianChest);
-        }
-        else if (armorType == 2)
-        {
-            this.setUnlocalizedName(ArmorStrings.obsidianLegs);
-        }
-        else if (armorType == 3)
-        {
-            this.setUnlocalizedName(ArmorStrings.obsidianBoots);
-        }
-
-    }
-
-    public void registerIcons(IIconRegister register)
-    {
-        if (armorType == 0)
-        {
-            this.itemIcon = register.registerIcon(ArmorTextures.obsidianHelmet);
-        }
-
-        if (armorType == 1)
-        {
-            this.itemIcon = register.registerIcon(ArmorTextures.obsidianChestplate);
-        }
-
-        if (armorType == 2)
-        {
-            this.itemIcon = register.registerIcon(ArmorTextures.obsidianLeggings);
-        }
-
-        if (armorType == 3)
-        {
-            this.itemIcon = register.registerIcon(ArmorTextures.obsidianBoots);
-        }
+    public ItemArmorObsidian(ArmorType type) {
+        super("obsidian", UtilToolArmor.obsidianArmor, type);
     }
 
     public String getArmorTexture(ItemStack is, Entity entity, int slot, String type)
@@ -81,4 +36,13 @@ public class ItemArmorObsidian extends ItemArmor {
         }
     }
 
+    @Override
+    public ArmorProperties getProperties(EntityLivingBase player, ItemStack armor, DamageSource source, double damage, int slot) {
+        return null;
+    }
+
+    @Override
+    public void damageArmor(EntityLivingBase entity, ItemStack stack, DamageSource source, int damage, int slot) {
+
+    }
 }

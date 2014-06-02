@@ -1,6 +1,7 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +17,8 @@ public class ItemSilkHoe extends ItemHoe {
     public ItemSilkHoe()
     {
         super(UtilToolArmor.silk);
+        this.setUnlocalizedName(Strings.ToolStrings.silkHoe);
+        this.setMaxDamage(UtilToolArmor.silk.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)

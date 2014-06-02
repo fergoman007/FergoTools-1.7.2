@@ -1,17 +1,20 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import net.minecraft.item.ItemHoe;
+import fergoman123.mods.fergotools.util.tool.HoeGeneric;
 import net.minecraft.item.ItemStack;
 
 /**
  * Created by Fergoman123 on 14/04/2014.
  */
-public class ItemBronzeHoe extends ItemHoe {
+public class ItemBronzeHoe extends HoeGeneric {
 
     public ItemBronzeHoe() {
         super(UtilToolArmor.bronze);
+        this.setUnlocalizedName(Strings.ToolStrings.bronzeHoe);
+        this.setMaxDamage(UtilToolArmor.bronze.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)

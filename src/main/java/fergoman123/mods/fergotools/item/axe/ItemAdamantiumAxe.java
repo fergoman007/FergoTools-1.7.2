@@ -3,8 +3,8 @@ package fergoman123.mods.fergotools.item.axe;
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
@@ -12,11 +12,13 @@ import java.util.List;
 /**
  * Created by Fergoman123 on 13/04/2014.
  */
-public class ItemAdamantiumAxe extends ItemAxe {
+public class ItemAdamantiumAxe extends AxeGeneric {
 
     public ItemAdamantiumAxe()
     {
         super(UtilToolArmor.adamantium);
+        this.setUnlocalizedName(Strings.ToolStrings.adamantiumAxe);
+        this.setMaxDamage(UtilToolArmor.adamantium.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)

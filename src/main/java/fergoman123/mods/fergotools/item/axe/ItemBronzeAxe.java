@@ -1,17 +1,20 @@
 package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import net.minecraft.item.ItemAxe;
+import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.item.ItemStack;
 
 /**
  * Created by Fergoman123 on 13/04/2014.
  */
-public class ItemBronzeAxe extends ItemAxe {
+public class ItemBronzeAxe extends AxeGeneric {
 
     public ItemBronzeAxe() {
         super(UtilToolArmor.bronze);
+        this.setUnlocalizedName(Strings.ToolStrings.bronzeAxe);
+        this.setMaxDamage(UtilToolArmor.bronze.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)

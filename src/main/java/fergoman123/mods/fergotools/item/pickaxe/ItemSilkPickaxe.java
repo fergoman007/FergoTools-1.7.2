@@ -1,21 +1,24 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 /**
  * Created by Fergoman123 on 13/04/2014.
  */
-public class ItemSilkPickaxe extends ItemPickaxe {
+public class ItemSilkPickaxe extends PickaxeGeneric {
 
     public ItemSilkPickaxe()
     {
         super(UtilToolArmor.silk);
+        this.setUnlocalizedName(Strings.ToolStrings.silkPickaxe);
+        this.setMaxDamage(UtilToolArmor.getSilkMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)

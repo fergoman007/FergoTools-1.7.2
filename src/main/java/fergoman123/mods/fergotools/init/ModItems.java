@@ -158,14 +158,14 @@ public class ModItems{
 		quartzPickaxe = new ItemQuartzPickaxe();
         quartzShovel = new ItemQuartzShovel();
         quartzAxe = new ItemQuartzAxe();
-        quartzHoe = new ItemQuartzHoe().setUnlocalizedName(ToolStrings.quartzHoe).setMaxDamage(UtilToolArmor.quartz.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.quartzHoe);
-        quartzSword = new ItemQuartzSword().setUnlocalizedName(ToolStrings.quartzSword).setMaxDamage(UtilToolArmor.quartz.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.quartzSword);
-		
-		obsidianPickaxe = new ItemObsidianPickaxe().setUnlocalizedName(ToolStrings.obsidianPickaxe).setMaxDamage(UtilToolArmor.obsidian.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.obsidianPickaxe);
-        obsidianShovel = new ItemObsidianShovel().setUnlocalizedName(ToolStrings.obsidianShovel).setMaxDamage(UtilToolArmor.obsidian.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.obsidianShovel);
-        obsidianAxe = new ItemObsidianAxe().setUnlocalizedName(ToolStrings.obsidianAxe).setMaxDamage(UtilToolArmor.obsidian.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.obsidianAxe);
-        obsidianHoe = new ItemObsidianHoe().setUnlocalizedName(ToolStrings.obsidianHoe).setMaxDamage(UtilToolArmor.obsidian.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.obsidianHoe);
-        obsidianSword = new ItemObsidianSword().setUnlocalizedName(ToolStrings.obsidianSword).setMaxDamage(UtilToolArmor.obsidian.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.obsidianSword);
+        quartzHoe = new ItemQuartzHoe();
+        quartzSword = new ItemQuartzSword();
+
+		obsidianPickaxe = new ItemObsidianPickaxe();
+        obsidianShovel = new ItemObsidianShovel();
+        obsidianAxe = new ItemObsidianAxe();
+        obsidianHoe = new ItemObsidianHoe();
+        obsidianSword = new ItemObsidianSword();
 
         emeraldPickaxe = new ItemEmeraldPickaxe().setUnlocalizedName(ToolStrings.emeraldPickaxe).setMaxDamage(UtilToolArmor.emerald.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.emeraldPickaxe);
         emeraldShovel = new ItemEmeraldShovel().setUnlocalizedName(ToolStrings.emeraldShovel).setMaxDamage(UtilToolArmor.emerald.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.emeraldShovel);
