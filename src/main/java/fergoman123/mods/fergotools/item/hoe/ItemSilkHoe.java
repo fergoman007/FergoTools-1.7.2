@@ -9,9 +9,6 @@ import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class ItemSilkHoe extends ItemHoe {
 
     public ItemSilkHoe()

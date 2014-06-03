@@ -1,21 +1,21 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
-public class ItemSilkShovel extends ItemSpade {
+public class ItemSilkShovel extends ShovelGeneric {
 
     public ItemSilkShovel()
     {
         super(UtilToolArmor.silk);
+        this.setUnlocalizedName(Strings.ToolStrings.silkShovel);
+        this.setMaxDamage(UtilToolArmor.getSilkMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)

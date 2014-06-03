@@ -8,14 +8,9 @@ import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
-import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Strings.BowStrings;
-import fergoman123.mods.fergotools.lib.Strings.ToolStrings;
-import fergoman123.mods.fergotools.lib.Textures;
-import fergoman123.mods.fergotools.lib.Textures.ToolTextures;
 import fergoman123.mods.fergotools.lib.ints.ToolInts;
 import fergoman123.mods.fergotools.tabs.Tabs;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.item.ArmorType;
 import net.minecraft.item.Item;
 
@@ -167,64 +162,64 @@ public class ModItems{
         obsidianHoe = new ItemObsidianHoe();
         obsidianSword = new ItemObsidianSword();
 
-        emeraldPickaxe = new ItemEmeraldPickaxe().setUnlocalizedName(ToolStrings.emeraldPickaxe).setMaxDamage(UtilToolArmor.emerald.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.emeraldPickaxe);
-        emeraldShovel = new ItemEmeraldShovel().setUnlocalizedName(ToolStrings.emeraldShovel).setMaxDamage(UtilToolArmor.emerald.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.emeraldShovel);
-        emeraldAxe = new ItemEmeraldAxe().setUnlocalizedName(ToolStrings.emeraldAxe).setMaxDamage(UtilToolArmor.emerald.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.emeraldAxe);
-        emeraldHoe = new ItemEmeraldHoe().setUnlocalizedName(ToolStrings.emeraldHoe).setMaxDamage(UtilToolArmor.emerald.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.emeraldHoe);
-        emeraldSword = new ItemEmeraldSword().setUnlocalizedName(ToolStrings.emeraldSword).setMaxDamage(UtilToolArmor.emerald.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.emeraldSword);
+        emeraldPickaxe = new ItemEmeraldPickaxe();
+        emeraldShovel = new ItemEmeraldShovel();
+        emeraldAxe = new ItemEmeraldAxe();
+        emeraldHoe = new ItemEmeraldHoe();
+        emeraldSword = new ItemEmeraldSword();
 
-        lapisPickaxe = new ItemLapisPickaxe().setUnlocalizedName(ToolStrings.lapisPickaxe).setMaxDamage(UtilToolArmor.lapis.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.lapisPickaxe);
-        lapisShovel = new ItemLapisShovel().setUnlocalizedName(ToolStrings.lapisShovel).setMaxDamage(UtilToolArmor.lapis.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.lapisShovel);
-        lapisAxe = new ItemLapisAxe().setUnlocalizedName(ToolStrings.lapisAxe).setMaxDamage(UtilToolArmor.lapis.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.lapisAxe);
-        lapisHoe = new ItemLapisHoe().setUnlocalizedName(ToolStrings.lapisHoe).setMaxDamage(UtilToolArmor.lapis.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.lapisHoe);
-        lapisSword = new ItemLapisSword().setUnlocalizedName(ToolStrings.lapisSword).setMaxDamage(UtilToolArmor.lapis.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.lapisSword);
+        lapisPickaxe = new ItemLapisPickaxe();
+        lapisShovel = new ItemLapisShovel();
+        lapisAxe = new ItemLapisAxe();
+        lapisHoe = new ItemLapisHoe();
+        lapisSword = new ItemLapisSword();
 
-        bronzePickaxe = new ItemBronzePickaxe().setUnlocalizedName(ToolStrings.bronzePickaxe).setMaxDamage(UtilToolArmor.bronze.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.bronzePickaxe);
-        bronzeShovel = new ItemBronzeShovel().setUnlocalizedName(ToolStrings.bronzeShovel).setMaxDamage(UtilToolArmor.bronze.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.bronzeShovel);
-        bronzeAxe = new ItemBronzeAxe().setUnlocalizedName(ToolStrings.bronzeAxe).setMaxDamage(UtilToolArmor.bronze.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.bronzeAxe);
-        bronzeHoe = new ItemBronzeHoe().setUnlocalizedName(ToolStrings.bronzeHoe).setMaxDamage(UtilToolArmor.bronze.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.bronzeHoe);
-        bronzeSword = new ItemBronzeSword().setUnlocalizedName(ToolStrings.bronzeSword).setMaxDamage(UtilToolArmor.bronze.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.bronzeSword);
+        bronzePickaxe = new ItemBronzePickaxe();
+        bronzeShovel = new ItemBronzeShovel();
+        bronzeAxe = new ItemBronzeAxe();
+        bronzeHoe = new ItemBronzeHoe();
+        bronzeSword = new ItemBronzeSword();
 		
-		coalPickaxe = new ItemCoalPickaxe().setUnlocalizedName(ToolStrings.coalPickaxe).setMaxDamage(UtilToolArmor.coal.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.coalPickaxe);
-        coalShovel = new ItemCoalShovel().setUnlocalizedName(ToolStrings.coalShovel).setMaxDamage(UtilToolArmor.coal.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.coalShovel);
-        coalAxe = new ItemCoalAxe().setUnlocalizedName(ToolStrings.coalAxe).setMaxDamage(UtilToolArmor.coal.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.coalAxe);
-        coalHoe = new ItemCoalHoe().setUnlocalizedName(ToolStrings.coalHoe).setMaxDamage(UtilToolArmor.coal.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.coalHoe);
-        coalSword = new ItemCoalSword().setUnlocalizedName(ToolStrings.coalSword).setMaxDamage(UtilToolArmor.coal.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.coalSword);
+		coalPickaxe = new ItemCoalPickaxe();
+        coalShovel = new ItemCoalShovel();
+        coalAxe = new ItemCoalAxe();
+        coalHoe = new ItemCoalHoe();
+        coalSword = new ItemCoalSword();
 
-        glowstonePickaxe = new ItemGlowstonePickaxe().setUnlocalizedName(ToolStrings.glowstonePickaxe).setMaxDamage(UtilToolArmor.glowstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.glowstonePickaxe);
-        glowstoneShovel = new ItemGlowstoneShovel().setUnlocalizedName(ToolStrings.glowstoneShovel).setMaxDamage(UtilToolArmor.glowstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.glowstoneShovel);
-        glowstoneAxe = new ItemGlowstoneAxe().setUnlocalizedName(ToolStrings.glowstoneAxe).setMaxDamage(UtilToolArmor.glowstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.glowstoneAxe);
-        glowstoneHoe = new ItemGlowstoneHoe().setUnlocalizedName(ToolStrings.glowstoneHoe).setMaxDamage(UtilToolArmor.glowstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.glowstoneHoe);
-        glowstoneSword = new ItemGlowstoneSword().setUnlocalizedName(ToolStrings.glowstoneSword).setMaxDamage(UtilToolArmor.glowstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.glowstoneSword);
+        glowstonePickaxe = new ItemGlowstonePickaxe();
+        glowstoneShovel = new ItemGlowstoneShovel();
+        glowstoneAxe = new ItemGlowstoneAxe();
+        glowstoneHoe = new ItemGlowstoneHoe();
+        glowstoneSword = new ItemGlowstoneSword();
 
-        adamantiumPickaxe = new ItemAdamantiumPickaxe().setUnlocalizedName(ToolStrings.adamantiumPickaxe).setMaxDamage(UtilToolArmor.adamantium.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.adamantiumPickaxe);
-        adamantiumShovel = new  ItemAdamantiumShovel().setUnlocalizedName(ToolStrings.adamantiumShovel).setMaxDamage(UtilToolArmor.adamantium.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.adamantiumShovel);
-        adamantiumAxe = new ItemAdamantiumAxe().setUnlocalizedName(ToolStrings.adamantiumAxe).setMaxDamage(UtilToolArmor.adamantium.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.adamantiumAxe);
-        adamantiumHoe = new ItemAdamantiumHoe().setUnlocalizedName(ToolStrings.adamantiumHoe).setMaxDamage(UtilToolArmor.adamantium.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.adamantiumHoe);
-        adamantiumSword = new ItemAdamantiumSword().setUnlocalizedName(ToolStrings.adamantiumSword).setMaxDamage(UtilToolArmor.adamantium.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.adamantiumSword);
+        adamantiumPickaxe = new ItemAdamantiumPickaxe();
+        adamantiumShovel = new  ItemAdamantiumShovel();
+        adamantiumAxe = new ItemAdamantiumAxe();
+        adamantiumHoe = new ItemAdamantiumHoe();
+        adamantiumSword = new ItemAdamantiumSword();
 
-        silkPickaxe = new ItemSilkPickaxe().setUnlocalizedName(ToolStrings.silkPickaxe).setMaxDamage(UtilToolArmor.silk.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.silkPickaxe);
-        silkShovel = new ItemSilkShovel().setUnlocalizedName(ToolStrings.silkShovel).setMaxDamage(UtilToolArmor.silk.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.silkShovel);
-        silkAxe = new ItemSilkAxe().setUnlocalizedName(ToolStrings.silkAxe).setMaxDamage(UtilToolArmor.silk.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.silkAxe);
-        silkHoe = new ItemSilkHoe().setUnlocalizedName(ToolStrings.silkHoe).setMaxDamage(UtilToolArmor.silk.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.silkHoe);
-        silkSword = new ItemSilkSword().setUnlocalizedName(ToolStrings.silkSword).setMaxDamage(UtilToolArmor.silk.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.silkSword);
+        silkPickaxe = new ItemSilkPickaxe();
+        silkShovel = new ItemSilkShovel();
+        silkAxe = new ItemSilkAxe();
+        silkHoe = new ItemSilkHoe();
+        silkSword = new ItemSilkSword();
 
-        redstonePickaxe = new ItemRedstonePickaxe().setUnlocalizedName(ToolStrings.redstonePickaxe).setMaxDamage(UtilToolArmor.redstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.redstonePickaxe);
-        redstoneShovel = new ItemRedstoneShovel().setUnlocalizedName(ToolStrings.redstoneShovel).setMaxDamage(UtilToolArmor.redstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.redstoneShovel);
-        redstoneAxe = new ItemRedstoneAxe().setUnlocalizedName(ToolStrings.redstoneAxe).setMaxDamage(UtilToolArmor.redstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.redstoneAxe);
-        redstoneHoe = new ItemRedstoneHoe().setUnlocalizedName(ToolStrings.redstoneHoe).setMaxDamage(UtilToolArmor.redstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.redstoneHoe);
-        redstoneSword = new ItemRedstoneSword().setUnlocalizedName(ToolStrings.redstoneSword).setMaxDamage(UtilToolArmor.redstone.getMaxUses()).setCreativeTab(Tabs.tabFergoTools).setTextureName(ToolTextures.redstoneSword);
+        redstonePickaxe = new ItemRedstonePickaxe();
+        redstoneShovel = new ItemRedstoneShovel();
+        redstoneAxe = new ItemRedstoneAxe();
+        redstoneHoe = new ItemRedstoneHoe();
+        redstoneSword = new ItemRedstoneSword();
 
 		obsidianIngot = new ItemObsidianIngot();
-        emeraldCrystal = new ItemEmeraldCrystal().setUnlocalizedName(Strings.ItemStrings.emeraldCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.emeraldCrystal);
-        lapisCrystal = new ItemLapisCrystal().setUnlocalizedName(Strings.ItemStrings.lapisCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.lapisCrystal);
-        bronzeIngot = new ItemBronzeIngot().setUnlocalizedName(Strings.ItemStrings.ingotBronze).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.bronzeIngot);
-        coalIngot = new ItemCoalIngot().setUnlocalizedName(Strings.ItemStrings.ingotCoal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.coalIngot);
-        glowstoneIngot = new ItemGlowstoneIngot().setUnlocalizedName(Strings.ItemStrings.ingotGlowstone).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.glowstoneIngot);
-        adamantiumIngot = new ItemAdamantiumIngot().setUnlocalizedName(Strings.ItemStrings.ingotAdamantium).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.adamantiumIngot);
+        emeraldCrystal = new ItemEmeraldCrystal();
+        lapisCrystal = new ItemLapisCrystal();
+        bronzeIngot = new ItemBronzeIngot();
+        coalIngot = new ItemCoalIngot();
+        glowstoneIngot = new ItemGlowstoneIngot();
+        adamantiumIngot = new ItemAdamantiumIngot();
         expShard = new ItemExpShard();
-        silkGem = new ItemSilkGem().setUnlocalizedName(Strings.ItemStrings.silkGem).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.silkGem);
-        redstoneCrystal = new ItemRedstoneCrystal().setUnlocalizedName(Strings.ItemStrings.redstoneCrystal).setCreativeTab(Tabs.tabFergoItems).setTextureName(Textures.ItemTextures.redstoneCrystal);
+        silkGem = new ItemSilkGem();
+        redstoneCrystal = new ItemRedstoneCrystal();
 
 //        fergoMaterials = new FergoMaterials();
 	}

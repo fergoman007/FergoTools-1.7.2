@@ -12,12 +12,13 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Fergoman123 on 22/05/2014.
  */
-public class ShovelGeneric extends ItemSpade{
+public abstract class ShovelGeneric extends ItemSpade{
 
     public ShovelGeneric(ToolMaterial material) {
         super(material);
         this.setMaxStackSize(1);
         this.setCreativeTab(Tabs.tabFergoTools);
+        this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
     public String getUnlocalizedName()
@@ -25,9 +26,9 @@ public class ShovelGeneric extends ItemSpade{
         return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
-    public String getUnlcalizedName(ItemStack stack)
+    public String getUnlocalizedName(ItemStack stack)
     {
-        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
     @SideOnly(Side.CLIENT)

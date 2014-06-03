@@ -12,11 +12,13 @@ import net.minecraft.item.ItemSword;
 /**
  * Created by Fergoman123 on 22/05/2014.
  */
-public class SwordGeneric extends ItemSword{
+public abstract class SwordGeneric extends ItemSword{
+
     public SwordGeneric(ToolMaterial material) {
         super(material);
         this.setMaxStackSize(1);
         this.setCreativeTab(Tabs.tabFergoTools);
+        this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
     public String getUnlocalizedName()
@@ -24,9 +26,9 @@ public class SwordGeneric extends ItemSword{
         return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
-    public String getUnlcalizedName(ItemStack stack)
+    public String getUnlocalizedName(ItemStack stack)
     {
-        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
     @SideOnly(Side.CLIENT)

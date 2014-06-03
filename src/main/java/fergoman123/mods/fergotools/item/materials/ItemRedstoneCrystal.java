@@ -12,6 +12,5 @@ public class ItemRedstoneCrystal extends ItemFT{
     {
         super();
         this.setUnlocalizedName(Strings.ItemStrings.redstoneCrystal);
-        this.setMaxStackSize(64);
     }
 }

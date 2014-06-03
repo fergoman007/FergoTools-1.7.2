@@ -9,9 +9,6 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-/**
- * Created by Fergoman123 on 13/04/2014.
- */
 public class ItemAdamantiumPickaxe extends PickaxeGeneric {
 
     public ItemAdamantiumPickaxe() {

@@ -9,13 +9,14 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-public class PickaxeGeneric extends ItemPickaxe
+public abstract class PickaxeGeneric extends ItemPickaxe
 {
 
     public PickaxeGeneric(ToolMaterial material) {
         super(material);
         this.setMaxStackSize(1);
         this.setCreativeTab(Tabs.tabFergoTools);
+        this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
     public String getUnlocalizedName()
@@ -23,9 +24,9 @@ public class PickaxeGeneric extends ItemPickaxe
         return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
-    public String getUnlcalizedName(ItemStack stack)
+    public String getUnlocalizedName(ItemStack stack)
     {
-        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
     @SideOnly(Side.CLIENT)

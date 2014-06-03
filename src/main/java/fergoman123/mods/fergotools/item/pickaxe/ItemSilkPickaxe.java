@@ -9,9 +9,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-/**
- * Created by Fergoman123 on 13/04/2014.
- */
 public class ItemSilkPickaxe extends PickaxeGeneric {
 
     public ItemSilkPickaxe()

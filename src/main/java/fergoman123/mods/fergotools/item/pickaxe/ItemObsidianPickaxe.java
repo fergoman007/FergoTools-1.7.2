@@ -6,9 +6,6 @@ import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 13/04/2014.
- */
 public class ItemObsidianPickaxe extends ItemPickaxe
 {
     public ItemObsidianPickaxe()

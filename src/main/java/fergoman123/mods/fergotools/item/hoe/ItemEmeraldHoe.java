@@ -6,9 +6,6 @@ import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.HoeGeneric;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class ItemEmeraldHoe extends HoeGeneric {
 
     public ItemEmeraldHoe() {

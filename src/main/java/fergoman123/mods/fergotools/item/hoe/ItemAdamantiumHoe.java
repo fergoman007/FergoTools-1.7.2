@@ -9,9 +9,6 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class ItemAdamantiumHoe extends HoeGeneric {
 
     public ItemAdamantiumHoe() {
