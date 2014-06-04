@@ -4,6 +4,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Strings.BowStrings;
 import fergoman123.mods.fergotools.lib.Textures.BowTextures;
+import fergoman123.mods.fergotools.util.ItemBowFT;
+import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -11,7 +13,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -21,7 +22,7 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
 import static cpw.mods.fml.relauncher.Side.CLIENT;
 
-public class ItemBronzeBow extends ItemBow {
+public class ItemBronzeBow extends ItemBowFT {
 
     public static final String[] pullArray = new String[]{"_1", "_2", "_3"};
 
@@ -30,6 +31,8 @@ public class ItemBronzeBow extends ItemBow {
     public ItemBronzeBow()
     {
         super();
+        this.setUnlocalizedName(BowStrings.bowBronze);
+        this.setMaxDamage(UtilToolArmor.getBronzeMaxUses());
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

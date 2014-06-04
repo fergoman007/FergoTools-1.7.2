@@ -3,10 +3,10 @@ package fergoman123.mods.fergotools.item.pickaxe;
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import net.minecraft.item.ItemPickaxe;
+import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.item.ItemStack;
 
-public class ItemRedstonePickaxe extends ItemPickaxe {
+public class ItemRedstonePickaxe extends PickaxeGeneric {
 
     public ItemRedstonePickaxe()
     {

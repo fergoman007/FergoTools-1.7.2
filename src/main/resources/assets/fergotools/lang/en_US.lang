@@ -7,64 +7,124 @@ itemGroup.tabFergoItems=Fergoman123's Tools: Items
 itemGroup.tabFergoBows=Fergoman123's Tools: Bows
 
 # Tools
-item.quartzPickaxe.name=Quartz Pickaxe
-item.quartzShovel.name=Quartz Shovel
-item.quartzAxe.name=Quartz Axe
-item.quartzHoe.name=Quartz Hoe
-item.quartzSword.name=Quartz Sword
+item.FergoTools:quartzPickaxe.name=Quartz Pickaxe
+item.FergoTools:quartzShovel.name=Quartz Shovel
+item.FergoTools:quartzAxe.name=Quartz Axe
+item.FergoTools:quartzHoe.name=Quartz Hoe
+item.FergoTools:quartzSword.name=Quartz Sword
 
-item.obsidianPickaxe.name=Obsidian Pickaxe
-item.obsidianShovel.name=Obsidian Shovel
-item.obsidianAxe.name=Obsidian Axe
-item.obsidianHoe.name=Obsidian Hoe
-item.obsidianSword.name=Obsidian Sword
+item.FergoTools:obsidianPickaxe.name=Obsidian Pickaxe
+item.FergoTools:obsidianShovel.name=Obsidian Shovel
+item.FergoTools:obsidianAxe.name=Obsidian Axe
+item.FergoTools:obsidianHoe.name=Obsidian Hoe
+item.FergoTools:obsidianSword.name=Obsidian Sword
 
-item.emeraldPickaxe.name=Emerald Pickaxe
-item.emeraldShovel.name=Emerald Shovel
-item.emeraldAxe.name=Emerald Axe
-item.emeraldHoe.name=Emerald Hoe
-item.emeraldSword.name=Emerald Sword
+item.FergoTools:emeraldPickaxe.name=Emerald Pickaxe
+item.FergoTools:emeraldShovel.name=Emerald Shovel
+item.FergoTools:emeraldAxe.name=Emerald Axe
+item.FergoTools:emeraldHoe.name=Emerald Hoe
+item.FergoTools:emeraldSword.name=Emerald Sword
 
-item.lapisPickaxe.name=Lapis Pickaxe
-item.lapisShovel.name=Lapis Shovel
-item.lapisAxe.name=Lapis Axe
-item.lapisHoe.name=Lapis Hoe
-item.lapisSword.name=Lapis Sword
+item.FergoTools:lapisPickaxe.name=Lapis Pickaxe
+item.FergoTools:lapisShovel.name=Lapis Shovel
+item.FergoTools:lapisAxe.name=Lapis Axe
+item.FergoTools:lapisHoe.name=Lapis Hoe
+item.FergoTools:lapisSword.name=Lapis Sword
 
-item.bronzePickaxe.name=Bronze Pickaxe
-item.bronzeShovel.name=Bronze Shovel
-item.bronzeAxe.name=Bronze Axe
-item.bronzeHoe.name=Bronze Hoe
-item.bronzeSword.name=Bronze Sword
+item.FergoTools:bronzePickaxe.name=Bronze Pickaxe
+item.FergoTools:bronzeShovel.name=Bronze Shovel
+item.FergoTools:bronzeAxe.name=Bronze Axe
+item.FergoTools:bronzeHoe.name=Bronze Hoe
+item.FergoTools:bronzeSword.name=Bronze Sword
 
-item.coalPickaxe.name=Coal Pickaxe
-item.coalShovel.name=Coal Shovel
-item.coalAxe.name=Coal Axe
-item.coalHoe.name=Coal Hoe
-item.coalSword.name=Coal Sword
+item.FergoTools:coalPickaxe.name=Coal Pickaxe
+item.FergoTools:coalShovel.name=Coal Shovel
+item.FergoTools:coalAxe.name=Coal Axe
+item.FergoTools:coalHoe.name=Coal Hoe
+item.FergoTools:coalSword.name=Coal Sword
 
-item.glowstonePickaxe.name=Glowstone Pickaxe
-item.glowstoneShovel.name=Glowstone Shovel
-item.glowstoneAxe.name=Glowstone Axe
-item.glowstoneHoe.name=Glowstone Hoe
-item.glowstoneSword.name=Glowstone Sword
+item.FergoTools:glowstonePickaxe.name=Glowstone Pickaxe
+item.FergoTools:glowstoneShovel.name=Glowstone Shovel
+item.FergoTools:glowstoneAxe.name=Glowstone Axe
+item.FergoTools:glowstoneHoe.name=Glowstone Hoe
+item.FergoTools:glowstoneSword.name=Glowstone Sword
 
-item.adamantiumPickaxe.name=Adamantium Pickaxe
-item.adamantiumShovel.name=Adamantium Shovel
-item.adamantiumAxe.name=Adamantium Axe
-item.adamantiumHoe.name=Adamantium Hoe
-item.adamantiumSword.name=Adamantium Sword
+item.FergoTools:adamantiumPickaxe.name=Adamantium Pickaxe
+item.FergoTools:adamantiumShovel.name=Adamantium Shovel
+item.FergoTools:adamantiumAxe.name=Adamantium Axe
+item.FergoTools:adamantiumHoe.name=Adamantium Hoe
+item.FergoTools:adamantiumSword.name=Adamantium Sword
 
-item.silkPickaxe.name=Silk Pickaxe
-item.silkShovel.name=Silk Shovel
-item.silkAxe.name=Silk Axe
-item.silkHoe.name=Silk Hoe
-item.silkSword.name=Silk Sword
+item.FergoTools:silkPickaxe.name=Silk Pickaxe
+item.FergoTools:silkShovel.name=Silk Shovel
+item.FergoTools:silkAxe.name=Silk Axe
+item.FergoTools:silkHoe.name=Silk Hoe
+item.FergoTools:silkSword.name=Silk Sword
 
-item.redstonePickaxe.name=Redstone Pickaxe
-item.redstoneShovel.name=Redstone Shovel
-item.redstoneAxe.name=Redstone Axe
-item.redstoneHoe.name=Redstone Hoe
+item.FergoTools:redstonePickaxe.name=Redstone Pickaxe
+item.FergoTools:redstoneShovel.name=Redstone Shovel
+item.FergoTools:redstoneAxe.name=Redstone Axe
+item.FergoTools:redstoneHoe.name=Redstone Hoe
+item.FergoTools:redstoneSword.name=Redstone Sword
+
+# Armor
+item.FergoTools:quartzHelmet.name=Quartz Helmet
+item.FergoTools:quartzChestplate.name=Quartz Chestplate
+item.FergoTools:quartzLeggings.name=Quartz Leggings
+item.FergoTools:quartzBoots.name=Quartz Boots
+
+item.FergoTools:obsidianHelmet.name=Obsidian Helmet
+item.FergoTools:obsidianChestplate.name=Obsidian Chestplate
+item.FergoTools:obsidianLeggings.name=Obsidian Leggings
+item.FergoTools:obsidianBoots.name=Obsidian Boots
+
+item.FergoTools:emeraldHelmet.name=Emerald Helmet
+item.FergoTools:emeraldChestplate.name=Emerald Chestplate
+item.FergoTools:emeraldLeggings.name=Emerald Leggings
+item.FergoTools:emeraldBoots.name=Emerald Boots
+
+item.FergoTools:lapisHelmet.name=Lapis Helmet
+item.FergoTools:lapisChestplate.name=Lapis Chestplate
+item.FergoTools:lapisLeggings.name=Lapis Leggings
+item.FergoTools:lapisBoots.name=Lapis Boots
+
+item.FergoTools:bronzeHelmet.name=Bronze Helmet
+item.FergoTools:bronzeChestplate.name=Bronze Chestplate
+item.FergoTools:bronzeLeggings.name=Bronze Leggings
+item.FergoTools:bronzeBoots.name=Bronze Boots
+
+item.FergoTools:coalHelmet.name=Coal Helmet
+item.FergoTools:coalChestplate.name=Coal Chestplate
+item.FergoTools:coalLeggings.name=Coal Leggings
+item.FergoTools:coalBoots.name=Coal Boots
+
+item.FergoTools:glowstoneHelmet.name=Glowstone Helmet
+item.FergoTools:glowstoneChestplate.name=Glowstone Chestplate
+item.FergoTools:glowstoneLeggings.name=Glowstone Leggings
+item.FergoTools:glowstoneBoots.name=Glowstone Boots
+
+item.FergoTools:redstoneHelmet.name=Redstone Helmet
+item.FergoTools:redstoneChestplate.name=Redstone Chestplate
+item.FergoTools:redstoneLeggings.name=Redstone Leggings
+item.FergoTools:redstoneBoots.name=Redstone Boots
+
+# Blocks
+tile.FergoTools:oreExperience.name=Experience Ore
+tile.FergoTools:oreObsidian.name=Obsidian Ore
+tile.FergoTools:oreEmeraldCrystal.name=Emerald Crystal Ore
+tile.FergoTools:oreLapisCrystal.name=Lapis Crystal Ore
+tile.FergoTools:oreRedstoneCrystal.name=Redstone Crystal Ore
+tile.FergoTools:oreAdamantium.name=Adamantium Ore
+
+tile.FergoTools:blockObsidian.name=Obsidian Block
+tile.FergoTools:blockEmeraldCrystal.name=Emerald Crystal Block
+tile.FergoTools:blockLapisCrystal.name=Lapis Crystal Block
+tile.FergoTools:blockBronze.name=Bronze Block
+tile.FergoTools:blockCoal.name=Coal Block
+tile.FergoTools:blockGlowstone.name=Glowstone Block
+tile.FergoTools:blockAdamantium.name=Adamantium Block
+tile.FergoTools:blockSilkGem.name=Silk Block
+tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
 
 # Crafting Materials
 item.FergoTools:expShard.name=Experience Shard
@@ -78,77 +138,15 @@ item.FergoTools:ingotAdamantium.name=Adamantium Ingot
 item.FergoTools:silkGem.name=Silk Gem
 item.FergoTools:redstoneCrystal.name=Redstone Crystal
 
-# Armor
-item.quartzHelmet.name=Quartz Helmet
-item.quartzChestplate.name=Quartz Chestplate
-item.quartzLeggings.name=Quartz Leggings
-item.quartzBoots.name=Quartz Boots
-
-item.ft.obsidianArmor.helmet.name=Obsidian Helmet
-item.ft.obsidianArmor.chest.name=Obsidian Chestplate
-item.ft.obsidianArmor.legs.name=Obsidian Leggings
-item.ft.obsidianArmor.boots.name=Obsidian Boots
-
-item.ft.emeraldArmor.helmet.name=Emerald Helmet
-item.ft.emeraldArmor.chest.name=Emerald Chestplate
-item.ft.emeraldArmor.legs.name=Emerald Leggings
-item.ft.emeraldArmor.boots.name=Emerald Boots
-
-item.ft.lapisArmor.helmet.name=Lapis Helmet
-item.ft.lapisArmor.chest.name=Lapis Chestplate
-item.ft.lapisArmor.legs.name=Lapis Leggings
-item.ft.lapisArmor.boots.name=Lapis Boots
-
-item.ft.bronzeArmor.helmet.name=Bronze Helmet
-item.ft.bronzeArmor.chest.name=Bronze Chestplate
-item.ft.bronzeArmor.legs.name=Bronze Leggings
-item.ft.bronzeArmor.boots.name=Bronze Boots
-
-item.ft.coalArmor.helmet.name=Coal Helmet
-item.ft.coalArmor.chest.name=Coal Chestplate
-item.ft.coalArmor.legs.name=Coal Leggings
-item.ft.coalArmor.boots.name=Coal Boots
-
-item.ft.glowstoneArmor.helmet.name=Glowstone Helmet
-item.ft.glowstoneArmor.chest.name=Glowstone Chestplate
-item.ft.glowstoneArmor.legs.name=Glowstone Leggings
-item.ft.glowstoneArmor.boots.name=Glowstone Boots
-
-item.ft.redstoneArmor.helmet.name=Redstone Helmet
-item.ft.redstoneArmor.chest.name=Redstone Chestplate
-item.ft.redstoneArmor.legs.name=Redstone Leggings
-item.ft.redstoneArmor.boots.name=Redstone Boots
-
 # Bows
-item.bowQuartz.name=Quartz Bow
-item.bowObsidian.name=Obsidian Bow
-item.bowEmerald.name=Emerald Bow
-item.bowLapis.name=Lapis Bow
-item.bowBronze.name=Bronze Bow
-item.bowCoal.name=Coal Bow
-item.bowGlowstone.name=Glowstone Bow
-item.bowAdamantium.name=Adamantium Bow
-
-# Ores
-tile.FergoTools:oreExperience.name=Experience Ore
-tile.FergoTools:oreObsidian.name=Obsidian Ore
-tile.FergoTools:oreEmeraldCrystal.name=Emerald Crystal Ore
-tile.FergoTools:oreLapisCrystal.name=Lapis Crystal Ore
-tile.FergoTools:oreBronze.name=Bronze Ore
-tile.FergoTools:oreAdamantium.name=Adamantium Ore
-tile.FergoTools:oreRedstoneCrystal.name=Redstone Crystal Ore
-
-# Blocks
-tile.FergoTools:blockExperience.name=Experience Block
-tile.FergoTools:blockObsidian.name=Obsidian Block
-tile.FergoTools:blockEmeraldCrystal.name=Emerald Crystal Block
-tile.FergoTools:blockLapisCrystal.name=Lapis Crystal Block
-tile.FergoTools:blockBronze.name=Bronze Block
-tile.FergoTools:blockCoal.name=Coal Block
-tile.FergoTools:blockGlowstone.name=Glowstone Block
-tile.FergoTools:blockAdamantium.name=Adamantium Block
-tile.FergoTools:blockSilkGem.name=Silk Gem Block
-tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
+item.FergoTools:bowQuartz.name=Quartz Bow
+item.FergoTools:bowObsidian.name=Obsidian Bow
+item.FergoTools:bowEmerald.name=Emerald Bow
+item.FergoTools:bowLapis.name=Lapis Bow
+item.FergoTools:bowBronze.name=Bronze Bow
+item.FergoTools:bowCoal.name=Coal Bow
+item.FergoTools:bowGlowstone.name=Glowstone Bow
+item.FergoTools:bowAdamantium.name=Adamantium Bow
 
 # Furnaces
 tile.quartzFurnaceIdle.name=Quartz Furnace

@@ -9,9 +9,6 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 23/05/2014.
- */
 public class ItemFT extends Item{
 
     public ItemFT()

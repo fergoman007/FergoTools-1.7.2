@@ -1,33 +1,39 @@
 package fergoman123.mods.fergotools.util;
 
-import fergoman123.mods.fergoutil.util.IFurnaceTile;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-/**
- * Created by Fergoman123 on 02/06/2014.
- */
-public abstract class TileEntityFurnaceFT extends TileEntity implements ISidedInventory, IFurnaceTile{
+public abstract class TileEntityFurnaceFT extends TileEntity implements ISidedInventory{
 
-
-    public abstract void setGuiDisplayName(String displayName);
-    public abstract boolean canSmelt();
-    public abstract void smeltItem();
-    public abstract int[] getAccessibleSlotsFromSide(int var1);
-    public abstract boolean canInsertItem(int var1, ItemStack var2, int var3);
-    public abstract boolean canExtractItem(int var1, ItemStack var2, int var3);
     public abstract int getSizeInventory();
-    public abstract ItemStack getStackInSlot(int var1);
-    public abstract ItemStack decrStackSize(int var1, int var2);
-    public abstract ItemStack getStackInSlotOnClosing(int var1);
-    public abstract void setInventorySlotContents(int par1, ItemStack stack);
+    public abstract ItemStack getStackInSlot(int slot);
+    public abstract ItemStack decrStackSize(int par1, int par2);
+    public abstract ItemStack getStackInSlotOnClosing(int slot);
+    public abstract void setInventorySlotContents(int slot, ItemStack stack);
     public abstract String getInventoryName();
     public abstract boolean hasCustomInventoryName();
+    public abstract void setGuiDisplayName(String displayName);
     public abstract int getInventoryStackLimit();
-    public abstract boolean isUseableByPlayer(EntityPlayer var1);
+
+    @SideOnly(Side.CLIENT)
+    public abstract int getCookProgressScaled(int par1);
+
+    @SideOnly(Side.CLIENT)
+    public abstract int getBurnTimeRemainingScaled(int par1);
+
+    public abstract boolean isBurning();
+    public abstract void updateEntity();
+    public abstract boolean canSmelt();
+    public abstract void smeltItem();
+    public abstract boolean isUseableByPlayer(EntityPlayer player);
     public abstract void openInventory();
     public abstract void closeInventory();
-    public abstract boolean isItemValidForSlot(int var1, ItemStack var2);
+    public abstract boolean isItemValidForSlot(int slot, ItemStack stack);
+    public abstract int[] getAccessibleSlotsFromSide(int slot);
+    public abstract boolean canInsertItem(int par1, ItemStack stack, int par3);
+    public abstract boolean canExtractItem(int par1, ItemStack stack, int par3);
 }

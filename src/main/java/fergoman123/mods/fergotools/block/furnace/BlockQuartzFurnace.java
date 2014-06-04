@@ -8,8 +8,8 @@ import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures.FurnaceTextures;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
+import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -27,7 +27,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockQuartzFurnace extends BlockContainer
+public class BlockQuartzFurnace extends BlockFurnaceFT
 {
     private final Random rand = new Random();
 
@@ -61,7 +61,7 @@ public class BlockQuartzFurnace extends BlockContainer
         this.setDefaultDirection(par1World, par2, par3, par4);
     }
 
-    private void setDefaultDirection(World par1World, int par2, int par3, int par4)
+    public void setDefaultDirection(World par1World, int par2, int par3, int par4)
     {
         if (!par1World.isRemote)
         {

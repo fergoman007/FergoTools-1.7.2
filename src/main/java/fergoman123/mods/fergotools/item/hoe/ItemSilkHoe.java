@@ -3,13 +3,13 @@ package fergoman123.mods.fergotools.item.hoe;
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.tool.HoeGeneric;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemSilkHoe extends ItemHoe {
+public class ItemSilkHoe extends HoeGeneric {
 
     public ItemSilkHoe()
     {

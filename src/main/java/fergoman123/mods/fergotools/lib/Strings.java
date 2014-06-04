@@ -215,7 +215,7 @@ public class Strings {
 
         public static final String furnaceGuiTexture = "furnaceGui" + png;
         public static final String lapisFurnaceGui = "lapisFurnaceGui" + png;
-        public static final String lapisFurnaceGuiLoc = Reference.textureLocGui + lapisFurnaceGui;
+        public static final String lapisFurnaceGuiLoc = "textures/gui/" + lapisFurnaceGui;
         public static final String vanillaFurnaceTexture = "textures/gui/container/furnace" + png;
 
         public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getResourceLocation(lapisFurnaceGuiLoc);

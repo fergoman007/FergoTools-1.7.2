@@ -4,6 +4,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Strings.BowStrings;
 import fergoman123.mods.fergotools.lib.Textures.BowTextures;
+import fergoman123.mods.fergotools.util.ItemBowFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -11,7 +12,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -21,7 +21,7 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
 import static cpw.mods.fml.relauncher.Side.CLIENT;
 
-public class ItemQuartzBow extends ItemBow {
+public class ItemQuartzBow extends ItemBowFT {
 
     public static final String[] pullArray = new String[]{"_1", "_2", "_3"};
 
@@ -30,6 +30,12 @@ public class ItemQuartzBow extends ItemBow {
     public ItemQuartzBow()
     {
         super();
+        this.setUnlocalizedName(BowStrings.bowQuartz);
+    }
+
+    public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
+    {
+        return stack2.isItemEqual(new ItemStack(Items.quartz)) || super.getIsRepairable(stack1, stack2);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

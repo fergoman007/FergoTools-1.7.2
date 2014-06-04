@@ -8,9 +8,6 @@ import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
-import fergoman123.mods.fergotools.lib.Strings.BowStrings;
-import fergoman123.mods.fergotools.lib.ints.ToolInts;
-import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergoutil.item.ArmorType;
 import net.minecraft.item.Item;
 
@@ -268,14 +265,14 @@ public class ModItems{
 	}
 
 	public static void addBows() {
-        quartzBow = new ItemQuartzBow().setUnlocalizedName(BowStrings.bowQuartz).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.quartzMaxDamage).setMaxStackSize(1);
-        obsidianBow = new ItemObsidianBow().setUnlocalizedName(BowStrings.bowObsidian).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.obsidianMaxDamage).setMaxStackSize(1);
-        emeraldBow = new ItemEmeraldBow().setUnlocalizedName(BowStrings.bowEmerald).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.emeraldMaxDamage).setMaxStackSize(1);
-        lapisBow = new ItemLapisBow().setUnlocalizedName(BowStrings.bowLapis).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.lapisMaxDamage).setMaxStackSize(1);
-        bronzeBow = new ItemBronzeBow().setUnlocalizedName(BowStrings.bowBronze).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.bronzeMaxDamage).setMaxStackSize(1);
-        coalBow = new ItemCoalBow().setUnlocalizedName(BowStrings.bowCoal).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.coalMaxDamage).setMaxStackSize(1);
-        glowstoneBow = new ItemGlowstoneBow().setUnlocalizedName(BowStrings.bowGlowstone).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.glowstoneMaxDamage).setMaxStackSize(1);
-        adamantiumBow = new ItemAdamantiumBow().setUnlocalizedName(BowStrings.bowAdamantium).setCreativeTab(Tabs.tabFergoBows).setMaxDamage(ToolInts.adamantiumMaxDamage).setMaxStackSize(1);
+        quartzBow = new ItemQuartzBow();
+        obsidianBow = new ItemObsidianBow();
+        emeraldBow = new ItemEmeraldBow();
+        lapisBow = new ItemLapisBow();
+        bronzeBow = new ItemBronzeBow();
+        coalBow = new ItemCoalBow();
+        glowstoneBow = new ItemGlowstoneBow();
+        adamantiumBow = new ItemAdamantiumBow();
     }
 
 }

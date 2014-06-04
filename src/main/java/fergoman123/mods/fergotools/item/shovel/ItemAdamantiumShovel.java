@@ -3,8 +3,8 @@ package fergoman123.mods.fergotools.item.shovel;
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
@@ -12,10 +12,12 @@ import java.util.List;
 /**
  * Created by Fergoman123 on 14/04/2014.
  */
-public class ItemAdamantiumShovel extends ItemSpade {
+public class ItemAdamantiumShovel extends ShovelGeneric {
 
     public ItemAdamantiumShovel() {
         super(UtilToolArmor.adamantium);
+        this.setUnlocalizedName(Strings.ToolStrings.adamantiumShovel);
+        this.setMaxDamage(UtilToolArmor.getAdamantiumMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
