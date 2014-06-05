@@ -10,9 +10,6 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import org.lwjgl.opengl.GL11;
 
-/**
- * Created by Fergoman123 on 22/04/2014.
- */
 @SideOnly(Side.CLIENT)
 public class GuiRedstoneFurnace extends GuiContainer
 {

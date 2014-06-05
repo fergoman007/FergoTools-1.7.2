@@ -3,6 +3,7 @@ package fergoman123.mods.fergotools.util;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.tabs.Tabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -24,7 +25,9 @@ public abstract class BlockFurnaceFT extends BlockContainer {
         this.setHardness(2.5f);
         this.setResistance(2000f);
         this.setStepSound(Block.soundTypeStone);
+        this.setCreativeTab(Tabs.tabFergoFurnaces);
     }
+
 
     public abstract Item getItemDropped(int par1, Random rand, int par3);
 

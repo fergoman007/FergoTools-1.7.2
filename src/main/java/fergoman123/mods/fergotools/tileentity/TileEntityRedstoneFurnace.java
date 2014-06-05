@@ -18,9 +18,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-/**
- * Created by Fergoman123 on 22/04/2014.
- */
 public class TileEntityRedstoneFurnace extends TileEntity implements ISidedInventory
 {
 
@@ -220,7 +217,7 @@ public class TileEntityRedstoneFurnace extends TileEntity implements ISidedInven
         {
             ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
             if (stack == null) return false;
-            if (this.slots[2] == null);
+            if (this.slots[2] == null) return true;
             if (!this.slots[2].isItemEqual(stack)) return false;
             int result = slots[2].stackSize + stack.stackSize;
             return (result <= getInventoryStackLimit() && result <= stack.getMaxStackSize());

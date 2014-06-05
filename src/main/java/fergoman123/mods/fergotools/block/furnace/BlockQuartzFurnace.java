@@ -133,6 +133,8 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
         }
     }
 
+
+
     public static void updateFurnaceBlockState(boolean active, World par1World, int par2, int par3, int par4)
     {
         int l = par1World.getBlockMetadata(par2, par3, par4);
@@ -278,10 +280,9 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
         super.breakBlock(par1World, par2, par3, par4, block, par6);
     }
-    
-    public boolean hasComparatorInputOverride()
-    {
-        return true;
+
+    public boolean hasComparatorInputOverride() {
+        return false;
     }
 
     public int getComparatorInputOverride(World par1World, int par2, int par3, int par4, int par5)
