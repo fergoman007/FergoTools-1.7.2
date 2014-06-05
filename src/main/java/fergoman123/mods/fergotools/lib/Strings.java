@@ -199,26 +199,29 @@ public class Strings {
 
     public static class GuiStrings
     {
-        public static final String containerQuartzFurnace = "container.quartzFurnace";
-        public static final String containerObsidianFurnace = "container.obsidianFurnace";
-        public static final String containerEmeraldCrystalFurnace = "container.emeraldCrystalFurnace";
-        public static final String containerLapisCrystalFurnace = "container.lapisCrystalFurnace";
-        public static final String containerBronzeFurnace = "container.bronzeFurnace";
-        public static final String containerCoalFurnace = "container.coalFurnace";
-        public static final String containerGlowstoneFurnace = "container.glowstoneFurnace";
-        public static final String containerAdamantiumFurnace = "container.adamantiumFurnace";
-        public static final String containerSilkFurnace = "container.silkFurnace";
-        public static final String containerRedstoneFurnace = "container.redstoneFurnace";
-        public static final String containerMacerator = "container.macerator";
+        public static final String containerQuartzFurnace = "container.FergoTools:quartzFurnace";
+        public static final String containerObsidianFurnace = "container.FergoTools:obsidianFurnace";
+        public static final String containerEmeraldCrystalFurnace = "container.FergoTools:emeraldCrystalFurnace";
+        public static final String containerLapisCrystalFurnace = "container.FergoTools:lapisCrystalFurnace";
+        public static final String containerBronzeFurnace = "container.FergoTools:bronzeFurnace";
+        public static final String containerCoalFurnace = "container.FergoTools:coalFurnace";
+        public static final String containerGlowstoneFurnace = "container.FergoTools:glowstoneFurnace";
+        public static final String containerAdamantiumFurnace = "container.FergoTools:adamantiumFurnace";
+        public static final String containerSilkFurnace = "container.FergoTools:silkFurnace";
+        public static final String containerRedstoneFurnace = "container.FergoTools:redstoneFurnace";
+        public static final String containerMacerator = "container.FergoTools:macerator";
 
         public static final String containerInventory = "container.inventory";
 
         public static final String furnaceGuiTexture = "furnaceGui" + png;
         public static final String lapisFurnaceGui = "lapisFurnaceGui" + png;
+        public static final String redstoneFurnaceGui = "redstoneFurnaceGui" + png;
         public static final String lapisFurnaceGuiLoc = "textures/gui/" + lapisFurnaceGui;
+        public static final String redstoneFurnaceGuiLoc = Reference.dirGui + redstoneFurnaceGui;
         public static final String vanillaFurnaceTexture = "textures/gui/container/furnace" + png;
 
         public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getResourceLocation(lapisFurnaceGuiLoc);
+        public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getResourceLocation(redstoneFurnaceGuiLoc);
         public static final ResourceLocation vanillaFurnace = ResourceLocationHelper.getVanillaResourceLocation(vanillaFurnaceTexture);
     }
 

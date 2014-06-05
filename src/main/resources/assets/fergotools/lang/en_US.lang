@@ -123,7 +123,7 @@ tile.FergoTools:blockBronze.name=Bronze Block
 tile.FergoTools:blockCoal.name=Coal Block
 tile.FergoTools:blockGlowstone.name=Glowstone Block
 tile.FergoTools:blockAdamantium.name=Adamantium Block
-tile.FergoTools:blockSilkGem.name=Silk Block
+tile.FergoTools:blockSilkGem.name=Silk Gem Block
 tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
 
 # Crafting Materials
@@ -172,13 +172,13 @@ tile.silkFurnaceActive.name=Silk Furnace
 tile.redstoneFurnaceActive.name=Redstone Furnace
 
 # Gui Containers
-container.quartzFurnace=Quartz Furnace
-container.obsidianFurnace=Obsidian Furnace
-container.emeraldCrystalFurnace=Emerald Crystal Furnace
-container.lapisCrystalFurnace=Lapis Crystal Furnace
-container.bronzeFurnace=Bronze Furnace
-container.coalFurnace=Coal Furnace
-container.glowstoneFurnace=Glowstone Furnace
-container.adamantiumFurnace=Adamantium Furnace
-container.silkFurnace=Silk Furnace
-container.redstoneFurnace=Redstone Furnace
+container.FergoTools:quartzFurnace=Quartz Furnace
+container.FergoTools:obsidianFurnace=Obsidian Furnace
+container.FergoTools:emeraldCrystalFurnace=Emerald Crystal Furnace
+container.FergoTools:lapisCrystalFurnace=Lapis Crystal Furnace
+container.FergoTools:bronzeFurnace=Bronze Furnace
+container.FergoTools:coalFurnace=Coal Furnace
+container.FergoTools:glowstoneFurnace=Glowstone Furnace
+container.FergoTools:adamantiumFurnace=Adamantium Furnace
+container.FergoTools:silkFurnace=Silk Furnace
+container.FergoTools:redstoneFurnace=Redstone Furnace
