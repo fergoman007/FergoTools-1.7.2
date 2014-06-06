@@ -18,6 +18,7 @@ public class TileHandler {
     public static TileEntityAdamantiumFurnace adamantiumFurnace = new TileEntityAdamantiumFurnace();
     public static TileEntitySilkFurnace silkFurnace = new TileEntitySilkFurnace();
     public static TileEntityRedstoneFurnace redstoneFurnace = new TileEntityRedstoneFurnace();
+    public static TileEntityMacerator macerator = new TileEntityMacerator();
 
     public static Class<? extends TileEntity> quartzFurnaceClass = TileEntityQuartzFurnace.class;
     public static Class<? extends TileEntity> obsidianFurnaceClass = TileEntityObsidianFurnace.class;
@@ -29,4 +30,5 @@ public class TileHandler {
     public static Class<? extends TileEntity> adamantiumFurnaceClass = TileEntityAdamantiumFurnace.class;
     public static Class<? extends TileEntity> silkFurnaceClass = TileEntitySilkFurnace.class;
     public static Class<? extends TileEntity> redstoneFurnaceClass = TileEntityRedstoneFurnace.class;
+    public static Class<? extends TileEntity> maceratorClass = TileEntityMacerator.class;
 }

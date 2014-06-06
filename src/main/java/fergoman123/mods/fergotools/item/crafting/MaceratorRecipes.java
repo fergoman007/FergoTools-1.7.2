@@ -12,9 +12,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
- * Created by Fergoman123 on 12/05/2014.
- */
 public class MaceratorRecipes {
 
     private static final MaceratorRecipes smeltingBase = new MaceratorRecipes();
@@ -26,39 +23,39 @@ public class MaceratorRecipes {
 
     private MaceratorRecipes()
     {
-        this.func_151393_a(Blocks.iron_ore, new ItemStack(Items.iron_ingot, 2), 1.4F);
-        this.func_151393_a(Blocks.gold_ore, new ItemStack(Items.gold_ingot, 2), 2.0F);
-        this.func_151393_a(Blocks.diamond_ore, new ItemStack(Items.diamond, 2), 2.0F);
-        this.func_151393_a(Blocks.sand, new ItemStack(Blocks.glass, 2), 0.2F);
-        this.func_151396_a(Items.porkchop, new ItemStack(Items.cooked_porkchop, 2), 0.70F);
-        this.func_151396_a(Items.beef, new ItemStack(Items.cooked_beef, 2), 0.70F);
-        this.func_151396_a(Items.chicken, new ItemStack(Items.cooked_chicken, 2), 0.70F);
-        this.func_151393_a(Blocks.cobblestone, new ItemStack(Blocks.stone, 2), 0.2F);
-        this.func_151396_a(Items.clay_ball, new ItemStack(Items.brick, 2), 0.6F);
-        this.func_151393_a(Blocks.clay, new ItemStack(Blocks.hardened_clay, 2), 0.70F);
-        this.func_151393_a(Blocks.cactus, new ItemStack(Items.dye, 2, 2), 0.4F);
-        this.func_151393_a(Blocks.log, new ItemStack(Items.coal, 2, 1), 0.30F);
-        this.func_151393_a(Blocks.log2, new ItemStack(Items.coal, 2, 1), 0.30F);
-        this.func_151393_a(Blocks.emerald_ore, new ItemStack(Items.emerald, 2), 2.0F);
-        this.func_151396_a(Items.potato, new ItemStack(Items.baked_potato, 2), 0.70F);
-        this.func_151393_a(Blocks.netherrack, new ItemStack(Items.netherbrick, 2), 0.2F);
+        this.func_151393_a(Blocks.iron_ore, new ItemStack(Items.iron_ingot, 2), 0.7F);
+        this.func_151393_a(Blocks.gold_ore, new ItemStack(Items.gold_ingot, 2), 1.0F);
+        this.func_151393_a(Blocks.diamond_ore, new ItemStack(Items.diamond, 2), 1.0F);
+        this.func_151393_a(Blocks.sand, new ItemStack(Blocks.glass, 2), 0.1F);
+        this.func_151396_a(Items.porkchop, new ItemStack(Items.cooked_porkchop, 2), 0.35F);
+        this.func_151396_a(Items.beef, new ItemStack(Items.cooked_beef, 2), 0.35F);
+        this.func_151396_a(Items.chicken, new ItemStack(Items.cooked_chicken, 2), 0.35F);
+        this.func_151393_a(Blocks.cobblestone, new ItemStack(Blocks.stone, 2), 0.1F);
+        this.func_151396_a(Items.clay_ball, new ItemStack(Items.brick, 2), 0.3F);
+        this.func_151393_a(Blocks.clay, new ItemStack(Blocks.hardened_clay, 2), 0.35F);
+        this.func_151393_a(Blocks.cactus, new ItemStack(Items.dye, 2, 2), 0.2F);
+        this.func_151393_a(Blocks.log, new ItemStack(Items.coal, 2, 1), 0.15F);
+        this.func_151393_a(Blocks.log2, new ItemStack(Items.coal, 2, 1), 0.15F);
+        this.func_151393_a(Blocks.emerald_ore, new ItemStack(Items.emerald, 2), 1.0F);
+        this.func_151396_a(Items.potato, new ItemStack(Items.baked_potato, 2), 0.35F);
+        this.func_151393_a(Blocks.netherrack, new ItemStack(Items.netherbrick, 2), 0.1F);
         ItemFishFood.FishType[] afishtype = ItemFishFood.FishType.values();
         int i = afishtype.length;
 
         for (int j = 0; j < i; ++j)
         {
-            ItemFishFood.FishType fishType = afishtype[j];
+            ItemFishFood.FishType fishtype = afishtype[j];
 
-            if (fishType.func_150973_i())
+            if (fishtype.func_150973_i())
             {
-                this.func_151394_a(new ItemStack(Items.fish, 2, fishType.func_150976_a()), new ItemStack(Items.cooked_fished, 2, fishType.func_150976_a()), 0.7f);
+                this.func_151394_a(new ItemStack(Items.fish, 2, fishtype.func_150976_a()), new ItemStack(Items.cooked_fished, 2, fishtype.func_150976_a()), 0.35F);
             }
         }
 
-        this.func_151393_a(Blocks.coal_ore, new ItemStack(Items.coal), 0.2f);
-        this.func_151393_a(Blocks.redstone_ore, new ItemStack(Items.redstone), 1.4f);
-        this.func_151393_a(Blocks.lapis_ore, new ItemStack(Items.dye, 2, 4), 0.4f);
-        this.func_151393_a(Blocks.quartz_ore, new ItemStack(Items.quartz), 0.4f);
+        this.func_151393_a(Blocks.coal_ore, new ItemStack(Items.coal, 2), 0.1F);
+        this.func_151393_a(Blocks.redstone_ore, new ItemStack(Items.redstone, 2), 0.7F);
+        this.func_151393_a(Blocks.lapis_ore, new ItemStack(Items.dye, 2, 4), 0.2F);
+        this.func_151393_a(Blocks.quartz_ore, new ItemStack(Items.quartz, 2), 0.2F);
     }
 
     public void func_151393_a(Block block, ItemStack stack, float xp)
@@ -68,10 +65,9 @@ public class MaceratorRecipes {
 
     public void func_151396_a(Item item, ItemStack stack, float xp)
     {
-
+        this.func_151394_a(new ItemStack(item, 1, 32767), stack, xp);
     }
 
-    @SuppressWarnings("unchecked")
     public void func_151394_a(ItemStack stack1, ItemStack stack2, float xp)
     {
         this.smeltingList.put(stack1, stack2);
@@ -103,22 +99,25 @@ public class MaceratorRecipes {
 
     public Map getSmeltingList(){return this.smeltingList;}
 
-    public float func_151398_b(ItemStack stack)
+    public float func_151398_b(ItemStack p_151398_1_)
     {
-        float ret = stack.getItem().getSmeltingExperience(stack);
+        float ret = p_151398_1_.getItem().getSmeltingExperience(p_151398_1_);
         if (ret != -1) return ret;
 
         Iterator iterator = this.experienceList.entrySet().iterator();
         Entry entry;
 
-        do {
+        do
+        {
             if (!iterator.hasNext())
             {
-                return 0.0f;
+                return 0.0F;
             }
+
             entry = (Entry)iterator.next();
         }
-        while (!this.func_151397_a(stack, (ItemStack)entry.getKey()));
+        while (!this.func_151397_a(p_151398_1_, (ItemStack)entry.getKey()));
+
         return ((Float)entry.getValue()).floatValue();
     }
 }

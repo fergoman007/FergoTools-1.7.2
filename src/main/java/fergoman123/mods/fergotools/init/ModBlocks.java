@@ -58,8 +58,8 @@ public class ModBlocks {
     public static Block redstoneFurnaceIdle;
     public static Block redstoneFurnaceActive;
 
-//    public static Block maceratorIdle;
-//    public static Block maceratorActive;
+    public static Block maceratorIdle;
+    public static Block maceratorActive;
     
 	public static void initBlocks()
 	{
@@ -112,6 +112,9 @@ public class ModBlocks {
 
         redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setBlockName(FurnaceStrings.redstoneFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
         redstoneFurnaceActive = new BlockRedstoneFurnace(true).setBlockName(FurnaceStrings.redstoneFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
+
+        maceratorIdle = new BlockMacerator(false).setBlockName(FurnaceStrings.maceratorIdle).setCreativeTab(Tabs.tabFergoFurnaces);
+        maceratorActive = new BlockMacerator(true).setBlockName(FurnaceStrings.maceratorActive).setLightLevel(0.9f);
 	}
 
 

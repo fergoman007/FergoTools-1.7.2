@@ -37,6 +37,8 @@ public class RegHandler {
         RegisterHelper.registerBlock(ModBlocks.adamantiumFurnaceIdle, FurnaceStrings.adamantiumFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.silkFurnaceIdle, FurnaceStrings.silkFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceIdle, FurnaceStrings.redstoneFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.maceratorIdle, FurnaceStrings.maceratorIdle);
+
 
         RegisterHelper.registerBlock(ModBlocks.quartzFurnaceActive, FurnaceStrings.quartzFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.obsidianFurnaceActive, FurnaceStrings.obsidianFurnaceActive);
@@ -48,6 +50,7 @@ public class RegHandler {
         RegisterHelper.registerBlock(ModBlocks.adamantiumFurnaceActive, FurnaceStrings.adamantiumFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.silkFurnaceActive, FurnaceStrings.silkFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceActive, FurnaceStrings.redstoneFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.maceratorActive, FurnaceStrings.maceratorActive);
     }
 
     public static void registerArmor()
@@ -168,6 +171,7 @@ public class RegHandler {
         RegisterHelper.registerTileEntity(tile.adamantiumFurnaceClass, TileStrings.adamantiumFurnaceTile);
         RegisterHelper.registerTileEntity(tile.silkFurnaceClass, TileStrings.silkFurnaceTile);
         RegisterHelper.registerTileEntity(tile.redstoneFurnaceClass, TileStrings.redstoneFurnaceTile);
+        RegisterHelper.registerTileEntity(tile.maceratorClass, TileStrings.maceratorTile);
     }
 
     public static void registerBows()

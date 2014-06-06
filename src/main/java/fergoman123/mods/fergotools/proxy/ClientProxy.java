@@ -35,6 +35,7 @@ public class ClientProxy extends CommonProxy implements IGuiHandler{
             case 7: return new ContainerAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace)entity);
             case 8: return new ContainerSilkFurnace(inventory, (TileEntitySilkFurnace)entity);
             case 9: return new ContainerRedstoneFurnace(inventory, (TileEntityRedstoneFurnace)entity);
+            case 10: return new ContainerMacerator(inventory, (TileEntityMacerator)entity);
         }
         return null;
     }
@@ -56,6 +57,7 @@ public class ClientProxy extends CommonProxy implements IGuiHandler{
             case 7: return new GuiAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace)entity);
             case 8: return new GuiSilkFurnace(inventory, (TileEntitySilkFurnace)entity);
             case 9: return new GuiRedstoneFurnace(inventory, (TileEntityRedstoneFurnace)entity);
+            case 10: return new GuiMacerator(inventory, (TileEntityMacerator)entity);
         }
         return null;
     }

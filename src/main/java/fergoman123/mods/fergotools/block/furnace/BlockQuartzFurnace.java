@@ -38,15 +38,10 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
     private IIcon iconTop;
     @SideOnly(Side.CLIENT)
     private IIcon iconFront;
-    
-    
 
-    public  BlockQuartzFurnace(boolean isActive)
+    public BlockQuartzFurnace(boolean isActive)
     {
         super(Material.rock);
-        this.setHardness(2.5f);
-        this.setResistance(2000f);
-        this.setStepSound(Block.soundTypeStone);
         this.isActive = isActive;
     }
 
@@ -282,7 +277,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
     }
 
     public boolean hasComparatorInputOverride() {
-        return false;
+        return true;
     }
 
     public int getComparatorInputOverride(World par1World, int par2, int par3, int par4, int par5)

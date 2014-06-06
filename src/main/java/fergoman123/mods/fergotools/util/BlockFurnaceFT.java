@@ -3,7 +3,8 @@ package fergoman123.mods.fergotools.util;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -25,7 +26,6 @@ public abstract class BlockFurnaceFT extends BlockContainer {
         this.setHardness(2.5f);
         this.setResistance(2000f);
         this.setStepSound(Block.soundTypeStone);
-        this.setCreativeTab(Tabs.tabFergoFurnaces);
     }
 
 
@@ -51,4 +51,9 @@ public abstract class BlockFurnaceFT extends BlockContainer {
     public abstract int getComparatorInputOverride(World world, int x, int y, int z, int par5);
 
     public abstract Item getItem(World world, int x, int y, int z);
+
+    public String getUnlocalizedName()
+    {
+        return String.format("tile.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+    }
 }

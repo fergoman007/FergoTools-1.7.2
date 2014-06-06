@@ -308,6 +308,7 @@ public class Strings {
         public static final String adamantiumFurnaceTile = tilePrefix + "AdamantiumFurnace";
         public static final String silkFurnaceTile = tilePrefix + "SilkFurnace";
         public static final String redstoneFurnaceTile = tilePrefix + "RedstoneFurnace";
+        public static final String maceratorTile = tilePrefix + "Macerator";
 
     }
 
