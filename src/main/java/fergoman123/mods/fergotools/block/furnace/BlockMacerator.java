@@ -3,9 +3,10 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.handler.TileHandler;
 import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModTiles;
 import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.tileentity.TileEntityMacerator;
 import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import net.minecraft.block.Block;
@@ -26,10 +27,9 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 05/06/2014.
- */
-public class BlockMacerator extends BlockFurnaceFT {
+public class BlockMacerator extends BlockFurnaceFT{
+
+    public static Object modInstance = FergoTools.instance;
 
     private final Random rand = new Random();
 
@@ -48,8 +48,8 @@ public class BlockMacerator extends BlockFurnaceFT {
         this.isActive = isActive;
     }
 
-    @Override
-    public Item getItemDropped(int par1, Random rand, int par3) {
+    public Item getItemDropped(int par1, Random rand, int par3)
+    {
         return Item.getItemFromBlock(ModBlocks.maceratorIdle);
     }
 
@@ -59,8 +59,7 @@ public class BlockMacerator extends BlockFurnaceFT {
         this.setDefaultDirection(world, x, y, z);
     }
 
-    @Override
-    public void setDefaultDirection(World world, int x, int y, int z)
+    private void setDefaultDirection(World world, int x, int y, int z)
     {
         if (!world.isRemote)
         {
@@ -94,22 +93,21 @@ public class BlockMacerator extends BlockFurnaceFT {
         }
     }
 
-    @Override
-    public IIcon getIcon(int par1, int par2) {
-       if (par2 == 0)
-           par2 =3;
-        return par1 == 1 ? this.iconTop : (par1 == 0 ? this.iconTop : (par1 != par2 ? this.blockIcon : this.iconFront));
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int side, int meta)
+    {
+        if (meta == 0)
+            meta = 3;
+        return side == 1 ? this.iconTop : (side == 0 ? this.iconTop : (side != meta ? this.blockIcon : this.iconFront));
     }
 
-    @Override
     public void registerBlockIcons(IIconRegister register)
     {
         this.blockIcon = register.registerIcon("iron_block");
-        this.iconFront = register.registerIcon(Reference.textureLoc + (this.isActive ? "maceratorActive" : "maceratorIdle"));
+        this.iconFront = register.registerIcon(Reference.textureLoc + (this.isActive ? Strings.FurnaceStrings.maceratorActive : Strings.FurnaceStrings.maceratorIdle));
         this.iconTop = register.registerIcon("iron_block");
     }
 
-    @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
     {
         if (world.isRemote)
@@ -121,7 +119,7 @@ public class BlockMacerator extends BlockFurnaceFT {
             TileEntityMacerator macerator = (TileEntityMacerator)world.getTileEntity(x, y, z);
             if (macerator != null)
             {
-                player.openGui(FergoTools.instance, 10, world, x, y, z);
+                player.openGui(modInstance, 10, world, x, y, z);
             }
             return true;
         }
@@ -156,80 +154,81 @@ public class BlockMacerator extends BlockFurnaceFT {
         }
     }
 
-    @Override
-    public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
+    {
         if (this.isActive)
         {
-            int l = world.getBlockMetadata(x, y, z);
-            float f = (float)x + 0.5F;
-            float f1 = (float)y + 0.0F + rand.nextFloat() * 6.0F / 16.0F;
-            float f2 = (float)z + 0.5F;
+            int l = par1World.getBlockMetadata(par2, par3, par4);
+            float f = (float)par2 + 0.5F;
+            float f1 = (float)par3 + 0.0F + par5Random.nextFloat() * 6.0F / 16.0F;
+            float f2 = (float)par4 + 0.5F;
             float f3 = 0.52F;
-            float f4 = rand.nextFloat() * 0.6F - 0.3F;
+            float f4 = par5Random.nextFloat() * 0.6F - 0.3F;
 
             if (l == 4)
             {
-                world.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
-                world.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 5)
             {
-                world.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
-                world.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 2)
             {
-                world.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
-                world.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 3)
             {
-                world.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
-                world.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
             }
         }
     }
 
     @Override
-    public TileEntity createNewTileEntity(World world, int var) {
-        return TileHandler.macerator;
+    public TileEntity createNewTileEntity(World var1, int var2) {
+        return ModTiles.macerator;
     }
 
-    @Override
-    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack stack) {
-        int l = MathHelper.floor_double((double)(elb.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+    public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
+    {
+        int l = MathHelper.floor_double((double) (par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
         if (l == 0)
         {
-            world.setBlockMetadataWithNotify(x, y, z, 2, 2);
+            par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
         }
 
         if (l == 1)
         {
-            world.setBlockMetadataWithNotify(x, y, z, 5, 2);
+            par1World.setBlockMetadataWithNotify(par2, par3, par4, 5, 2);
         }
 
         if (l == 2)
         {
-            world.setBlockMetadataWithNotify(x, y, z, 3, 2);
+            par1World.setBlockMetadataWithNotify(par2, par3, par4, 3, 2);
         }
 
         if (l == 3)
         {
-            world.setBlockMetadataWithNotify(x, y, z, 4, 2);
+            par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
         }
 
-        if (stack.hasDisplayName())
+        if (par6ItemStack.hasDisplayName())
         {
-            ((TileEntityMacerator)world.getTileEntity(x, y, z)).setGuiDisplayName(stack.getDisplayName());
+            ((TileEntityMacerator)par1World.getTileEntity(par2, par3, par4)).setGuiDisplayName(par6ItemStack.getDisplayName());
         }
     }
 
-    public void breakBlock(World world, int x, int y, int z, Block block, int oldBlock)
+    public void breakBlock(World par1World, int par2, int par3, int par4, Block block, int par6)
     {
         if (!keepInventory)
         {
-            TileEntityMacerator macerator = (TileEntityMacerator)world.getTileEntity(x, y, z);
+            TileEntityMacerator macerator = (TileEntityMacerator)par1World.getTileEntity(par2, par3, par4);
 
             if (macerator != null)
             {
@@ -253,7 +252,7 @@ public class BlockMacerator extends BlockFurnaceFT {
                             }
 
                             itemstack.stackSize -= k1;
-                            EntityItem entityitem = new EntityItem(world, (double)((float)x + f), (double)((float)y + f1), (double)((float)z + f2), new ItemStack(itemstack.getItem(), k1, itemstack.getItemDamage()));
+                            EntityItem entityitem = new EntityItem(par1World, (double)((float)par2 + f), (double)((float)par3 + f1), (double)((float)par4 + f2), new ItemStack(itemstack.getItem(), k1, itemstack.getItemDamage()));
 
                             if (itemstack.hasTagCompound())
                             {
@@ -264,16 +263,16 @@ public class BlockMacerator extends BlockFurnaceFT {
                             entityitem.motionX = (double)((float)this.rand.nextGaussian() * f3);
                             entityitem.motionY = (double)((float)this.rand.nextGaussian() * f3 + 0.2F);
                             entityitem.motionZ = (double)((float)this.rand.nextGaussian() * f3);
-                            world.spawnEntityInWorld(entityitem);
+                            par1World.spawnEntityInWorld(entityitem);
                         }
                     }
                 }
 
-                world.func_147453_f(x, y, z, block);
+                par1World.func_147453_f(par2, par3, par4, block);
             }
         }
 
-        super.breakBlock(world, x, y, z, block, oldBlock);
+        super.breakBlock(par1World, par2, par3, par4, block, par6);
     }
 
     public boolean hasComparatorInputOverride(){return true;}
@@ -283,6 +282,7 @@ public class BlockMacerator extends BlockFurnaceFT {
         return Container.calcRedstoneFromInventory((IInventory)world.getTileEntity(x, y, z));
     }
 
+    @SideOnly(Side.CLIENT)
     public Item getItem(World world, int x, int y, int z)
     {
         return Item.getItemFromBlock(ModBlocks.maceratorIdle);

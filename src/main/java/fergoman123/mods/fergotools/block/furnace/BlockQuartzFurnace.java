@@ -3,13 +3,13 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.handler.TileHandler;
 import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModTiles;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures.FurnaceTextures;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
-import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -27,7 +27,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockQuartzFurnace extends BlockFurnaceFT
+public class BlockQuartzFurnace extends BlockContainer
 {
     private final Random rand = new Random();
 
@@ -192,7 +192,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
     public TileEntity createNewTileEntity(World par1World, int var1)
     {
-        return TileHandler.quartzFurnace;
+        return ModTiles.quartzFurnace;
     }
 
     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)

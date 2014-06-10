@@ -3,118 +3,102 @@ package fergoman123.mods.fergotools.init;
 import fergoman123.mods.fergotools.block.furnace.*;
 import fergoman123.mods.fergotools.block.ore.*;
 import fergoman123.mods.fergotools.block.storage.*;
+import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Strings.FurnaceStrings;
 import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.util.BlockFT;
+import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
 
 public class ModBlocks {
-	
-	public static Block oreObsidian;
-    public static Block oreEmeraldCrystal;
-    public static Block oreLapisCrystal;
-    public static Block oreBronze;
-    public static Block oreAdamantium;
-    public static Block oreExperience;
-    public static Block oreRedstoneCrystal;
 
-    public static Block blockExperience;
-    public static Block blockObsidian;
-    public static Block blockEmeraldCrystal;
-    public static Block blockLapisCrystal;
-    public static Block blockBronze;
-    public static Block blockCoal;
-    public static Block blockGlowstone;
-    public static Block blockAdamantium;
-    public static Block blockSilkGem;
-    public static Block blockRedstone;
+    public static final BlockFT oreObsidian = new BlockOreObsidian();
+    public static final BlockFT oreEmeraldCrystal = new BlockOreEmeraldCrystal();
+    public static final BlockFT oreLapisCrystal = new BlockOreLapisCrystal();
+    public static final BlockFT oreBronze = new BlockOreBronze();
+    public static final BlockFT oreAdamantium = new BlockOreAdamantium();
+    public static final BlockFT oreExperience = new BlockOreExperience();
+    public static final BlockFT oreRedstoneCrystal = new BlockOreRedstone();
 
-    public static Block quartzFurnaceIdle;
-    public static Block quartzFurnaceActive;
+    public static final BlockFT blockExperience = new BlockExperience();
+    public static final BlockFT blockObsidian = new BlockObsidianStorage();
+    public static final BlockFT blockEmeraldCrystal = new BlockEmeraldCrystal();
+    public static final BlockFT blockLapisCrystal = new BlockLapisCrystal();
+    public static final BlockFT blockBronze = new BlockBronze();
+    public static final BlockFT blockCoal = new BlockCoalStorage();
+    public static final BlockFT blockGlowstone = new BlockGlowstoneStorage();
+    public static final BlockFT blockAdamantium = new BlockAdamantium();
+    public static final BlockFT blockSilkGem = new BlockSilkGem();
+    public static final BlockFT blockRedstone = new BlockRedstone();
 
-    public static Block obsidianFurnaceIdle;
-    public static Block obsidianFurnaceActive;
+    public static final Block quartzFurnaceIdle = new BlockQuartzFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.quartzFurnaceIdle);
+    public static final Block obsidianFurnaceIdle = new BlockObsidianFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.obsidianFurnaceIdle);
+    public static final Block emeraldCrystalFurnaceIdle = new BlockEmeraldCrystalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.emeraldCrystalFurnaceIdle);
+    public static final Block lapisCrystalFurnaceIdle = new BlockLapisCrystalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.lapisCrystalFurnaceIdle);
+    public static final Block bronzeFurnaceIdle = new BlockBronzeFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.bronzeFurnaceIdle);
+    public static final Block coalFurnaceIdle = new BlockCoalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.coalFurnaceIdle);
+    public static final Block glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.glowstoneFurnaceIdle);
+    public static final Block adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.adamantiumFurnaceIdle);
+    public static final Block silkFurnaceIdle = new BlockSilkFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.silkFurnaceIdle);
+    public static final Block redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.redstoneFurnaceIdle);
+    public static final Block maceratorIdle = new BlockMacerator(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.maceratorIdle);
 
-    public static Block emeraldCrystalFurnaceIdle;
-    public static Block emeraldCrystalFurnaceActive;
-
-    public static Block lapisCrystalFurnaceIdle;
-    public static Block lapisCrystalFurnaceActive;
-
-    public static Block bronzeFurnaceIdle;
-    public static Block bronzeFurnaceActive;
-
-    public static Block glowstoneFurnaceIdle;
-    public static Block glowstoneFurnaceActive;
-
-    public static Block coalFurnaceIdle;
-    public static Block coalFurnaceActive;
-
-    public static Block adamantiumFurnaceIdle;
-    public static Block adamantiumFurnaceActive;
-
-    public static Block silkFurnaceIdle;
-    public static Block silkFurnaceActive;
-
-    public static Block redstoneFurnaceIdle;
-    public static Block redstoneFurnaceActive;
-
-    public static Block maceratorIdle;
-    public static Block maceratorActive;
+    public static final Block quartzFurnaceActive = new BlockQuartzFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.quartzFurnaceActive);
+    public static final Block obsidianFurnaceActive = new BlockObsidianFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.obsidianFurnaceActive);
+    public static final Block emeraldCrystalFurnaceActive = new BlockEmeraldCrystalFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.emeraldCrystalFurnaceActive);
+    public static final Block lapisCrystalFurnaceActive = new BlockLapisCrystalFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.lapisCrystalFurnaceActive);
+    public static final Block bronzeFurnaceActive = new BlockBronzeFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.bronzeFurnaceActive);
+    public static final Block coalFurnaceActive = new BlockCoalFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.coalFurnaceActive);
+    public static final Block glowstoneFurnaceActive = new BlockGlowstoneFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.glowstoneFurnaceActive);
+    public static final Block adamantiumFurnaceActive = new BlockAdamantiumFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.adamantiumFurnaceActive);
+    public static final Block silkFurnaceActive = new BlockSilkFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.silkFurnaceActive);
+    public static final Block redstoneFurnaceActive = new BlockRedstoneFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.redstoneFurnaceActive);
+    public static final Block maceratorActive = new BlockMacerator(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.maceratorActive);
     
-	public static void initBlocks()
+	public static void init()
 	{
-        oreExperience = new BlockOreExperience();
-        oreObsidian = new BlockOreObsidian();
-        oreEmeraldCrystal = new BlockOreEmeraldCrystal();
-        oreLapisCrystal = new BlockOreLapisCrystal();
-        oreBronze = new BlockOreBronze();
-        oreAdamantium = new BlockOreAdamantium();
-        oreRedstoneCrystal = new BlockOreRedstone();
+        RegisterHelper.registerBlock(ModBlocks.oreExperience, Strings.BlockStrings.oreExperience);
+        RegisterHelper.registerBlock(ModBlocks.oreObsidian, Strings.BlockStrings.oreObsidian);
+        RegisterHelper.registerBlock(ModBlocks.oreEmeraldCrystal, Strings.BlockStrings.oreEmeraldCrystal);
+        RegisterHelper.registerBlock(ModBlocks.oreLapisCrystal, Strings.BlockStrings.oreLapisCrystal);
+        RegisterHelper.registerBlock(ModBlocks.oreBronze, Strings.BlockStrings.oreBronze);
+        RegisterHelper.registerBlock(ModBlocks.oreAdamantium, Strings.BlockStrings.oreAdamantium);
+        RegisterHelper.registerBlock(ModBlocks.oreRedstoneCrystal, Strings.BlockStrings.oreRedstoneCrystal);
 
+        RegisterHelper.registerBlock(ModBlocks.blockExperience, Strings.BlockStrings.blockExperience);
+        RegisterHelper.registerBlock(ModBlocks.blockObsidian, Strings.BlockStrings.blockObsidian);
+        RegisterHelper.registerBlock(ModBlocks.blockEmeraldCrystal, Strings.BlockStrings.blockEmeraldCrystal);
+        RegisterHelper.registerBlock(ModBlocks.blockLapisCrystal, Strings.BlockStrings.blockLapisCrystal);
+        RegisterHelper.registerBlock(ModBlocks.blockBronze, Strings.BlockStrings.blockBronze);
+        RegisterHelper.registerBlock(ModBlocks.blockCoal, Strings.BlockStrings.blockCoal);
+        RegisterHelper.registerBlock(ModBlocks.blockGlowstone, Strings.BlockStrings.blockGlowstone);
+        RegisterHelper.registerBlock(ModBlocks.blockAdamantium, Strings.BlockStrings.blockAdamantium);
+        RegisterHelper.registerBlock(ModBlocks.blockSilkGem, Strings.BlockStrings.blockSilkGem);
+        RegisterHelper.registerBlock(ModBlocks.blockRedstone, Strings.BlockStrings.blockRedstoneCrystal);
 
-        blockExperience = new BlockExperience();
-        blockObsidian = new BlockObsidianStorage();
-        blockEmeraldCrystal = new BlockEmeraldCrystal();
-        blockLapisCrystal = new BlockLapisCrystal();
-        blockBronze = new BlockBronze();
-        blockCoal = new BlockCoalStorage();
-        blockGlowstone = new BlockGlowstoneStorage();
-        blockAdamantium = new BlockAdamantium();
-        blockSilkGem = new BlockSilkGem();
-        blockRedstone = new BlockRedstone();
+        RegisterHelper.registerBlock(ModBlocks.quartzFurnaceIdle, FurnaceStrings.quartzFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.obsidianFurnaceIdle, FurnaceStrings.obsidianFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.emeraldCrystalFurnaceIdle, FurnaceStrings.emeraldCrystalFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.lapisCrystalFurnaceIdle, FurnaceStrings.lapisCrystalFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.bronzeFurnaceIdle, FurnaceStrings.bronzeFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.coalFurnaceIdle, FurnaceStrings.coalFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.glowstoneFurnaceIdle, FurnaceStrings.glowstoneFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.adamantiumFurnaceIdle, FurnaceStrings.adamantiumFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.silkFurnaceIdle, FurnaceStrings.silkFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceIdle, FurnaceStrings.redstoneFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.maceratorIdle, FurnaceStrings.maceratorIdle);
 
-        quartzFurnaceIdle = new BlockQuartzFurnace(false).setBlockName(FurnaceStrings.quartzFurnaceIdle).setCreativeTab(Tabs.tabFergoFurnaces);
-        quartzFurnaceActive = new BlockQuartzFurnace(true).setBlockName(FurnaceStrings.quartzFurnaceActive).setLightLevel(0.9f);
-
-        obsidianFurnaceIdle = new BlockObsidianFurnace(false).setBlockName(FurnaceStrings.obsidianFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        obsidianFurnaceActive = new BlockObsidianFurnace(true).setBlockName(FurnaceStrings.obsidianFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        emeraldCrystalFurnaceIdle = new BlockEmeraldCrystalFurnace(false).setBlockName(FurnaceStrings.emeraldCrystalFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        emeraldCrystalFurnaceActive = new BlockEmeraldCrystalFurnace(true).setBlockName(FurnaceStrings.emeraldCrystalFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        lapisCrystalFurnaceIdle = new BlockLapisCrystalFurnace(false).setBlockName(FurnaceStrings.lapisCrystalFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        lapisCrystalFurnaceActive = new BlockLapisCrystalFurnace(true).setBlockName(FurnaceStrings.lapisCrystalFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        bronzeFurnaceIdle = new BlockBronzeFurnace(false).setBlockName(FurnaceStrings.bronzeFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        bronzeFurnaceActive = new BlockBronzeFurnace(true).setBlockName(FurnaceStrings.bronzeFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        coalFurnaceIdle = new BlockCoalFurnace(false).setBlockName(FurnaceStrings.coalFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        coalFurnaceActive = new BlockCoalFurnace(true).setBlockName(FurnaceStrings.coalFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false).setBlockName(FurnaceStrings.glowstoneFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        glowstoneFurnaceActive = new BlockGlowstoneFurnace(true).setBlockName(FurnaceStrings.glowstoneFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false).setBlockName(FurnaceStrings.adamantiumFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        adamantiumFurnaceActive = new BlockAdamantiumFurnace(true).setBlockName(FurnaceStrings.adamantiumFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        silkFurnaceIdle = new BlockSilkFurnace(false).setBlockName(FurnaceStrings.silkFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        silkFurnaceActive = new BlockSilkFurnace(true).setBlockName(FurnaceStrings.silkFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setBlockName(FurnaceStrings.redstoneFurnaceIdle).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setCreativeTab(Tabs.tabFergoFurnaces);
-        redstoneFurnaceActive = new BlockRedstoneFurnace(true).setBlockName(FurnaceStrings.redstoneFurnaceActive).setHardness(3.5f).setResistance(2000f).setStepSound(Block.soundTypeMetal).setLightLevel(0.9f);
-
-        maceratorIdle = new BlockMacerator(false).setBlockName(FurnaceStrings.maceratorIdle).setCreativeTab(Tabs.tabFergoFurnaces);
-        maceratorActive = new BlockMacerator(true).setBlockName(FurnaceStrings.maceratorActive).setLightLevel(0.9f);
+        RegisterHelper.registerBlock(ModBlocks.quartzFurnaceActive, FurnaceStrings.quartzFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.obsidianFurnaceActive, FurnaceStrings.obsidianFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.emeraldCrystalFurnaceActive, FurnaceStrings.emeraldCrystalFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.lapisCrystalFurnaceActive, FurnaceStrings.lapisCrystalFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.bronzeFurnaceActive, FurnaceStrings.bronzeFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.coalFurnaceActive, FurnaceStrings.coalFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.glowstoneFurnaceActive, FurnaceStrings.glowstoneFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.adamantiumFurnaceActive, FurnaceStrings.adamantiumFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.silkFurnaceActive, FurnaceStrings.silkFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceActive, FurnaceStrings.redstoneFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.maceratorActive, FurnaceStrings.maceratorActive);
 	}
 
 

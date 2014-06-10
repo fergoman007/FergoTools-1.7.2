@@ -207,7 +207,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
         }
     }
 
-    private boolean canSmelt() {
+    public boolean canSmelt() {
         if (this.slots[0] == null) {
             return false;
         } else {

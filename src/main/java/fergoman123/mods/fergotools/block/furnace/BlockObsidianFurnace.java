@@ -3,10 +3,11 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.handler.TileHandler;
 import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModTiles;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Textures.*;
+import fergoman123.mods.fergotools.lib.Textures.BlockTextures;
+import fergoman123.mods.fergotools.lib.Textures.FurnaceTextures;
 import fergoman123.mods.fergotools.tileentity.TileEntityObsidianFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -63,7 +64,7 @@ public class BlockObsidianFurnace extends BlockContainer {
         this.setDefaultDirection(world, x, y, z);
     }
 
-    private void setDefaultDirection(World world, int x, int y, int z) {
+    public void setDefaultDirection(World world, int x, int y, int z) {
         if (!world.isRemote)
         {
             Block a = world.getBlock(x, y, z - 1);
@@ -194,7 +195,7 @@ public class BlockObsidianFurnace extends BlockContainer {
 
     public TileEntity createNewTileEntity(World world, int var1)
     {
-        return TileHandler.obsidianFurnace;
+        return ModTiles.obsidianFurnace;
     }
 
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack stack)

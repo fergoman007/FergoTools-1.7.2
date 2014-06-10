@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 /**
  * Created by Fergoman123 on 23/05/2014.
  */
-public class BlockFT extends Block{
+public abstract class BlockFT extends Block{
 
     public BlockFT()
     {

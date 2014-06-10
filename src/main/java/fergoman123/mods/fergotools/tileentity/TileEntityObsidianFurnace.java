@@ -3,9 +3,9 @@ package fergoman123.mods.fergotools.tileentity;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockObsidianFurnace;
-import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.lib.Strings.TileStrings;
+import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -232,7 +232,7 @@ public class TileEntityObsidianFurnace extends TileEntity implements ISidedInven
         }
     }
 
-    private boolean canSmelt()
+    public boolean canSmelt()
     {
         if (this.slots[0] == null)
         {

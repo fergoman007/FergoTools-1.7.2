@@ -3,8 +3,8 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.handler.TileHandler;
 import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModTiles;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures.BlockTextures;
 import fergoman123.mods.fergotools.lib.Textures.FurnaceTextures;
@@ -58,7 +58,7 @@ public class BlockBronzeFurnace extends BlockContainer
 			this.setDefaultDirection(world, x, y, z);
 		}
 
-    private void setDefaultDirection(World par1World, int par2, int par3, int par4)
+    public void setDefaultDirection(World par1World, int par2, int par3, int par4)
     {
         if (!par1World.isRemote)
         {
@@ -191,7 +191,7 @@ public class BlockBronzeFurnace extends BlockContainer
 		
 		public TileEntity createNewTileEntity(World world, int var)
 		{
-			return TileHandler.bronzeFurnace;
+			return ModTiles.bronzeFurnace;
 		}
 		
 		public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack itemstack)

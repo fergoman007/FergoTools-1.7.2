@@ -4,24 +4,22 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockMacerator;
-import fergoman123.mods.fergotools.item.crafting.MaceratorRecipes;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
-import fergoman123.mods.fergotools.util.TileEntityFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.*;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.tileentity.TileEntity;
 
-/**
- * Created by Fergoman123 on 05/06/2014.
- */
-public class TileEntityMacerator extends TileEntityFurnaceFT{
-
+public class TileEntityMacerator extends TileEntity implements ISidedInventory
+{
     private static final int[] slots_top = new int[]{0};
     private static final int[] slots_bottom = new int[]{2, 1};
     private static final int[] slots_sides = new int[]{1};
@@ -34,18 +32,18 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
 
     private String localizedName;
 
-    public int getSizeInventory()
-    {
+    @Override
+    public int getSizeInventory() {
         return this.slots.length;
     }
 
-    public ItemStack getStackInSlot(int slot)
-    {
-        return this.slots[slot];
+    @Override
+    public ItemStack getStackInSlot(int var1) {
+        return this.slots[var1];
     }
 
-    public ItemStack decrStackSize(int par1, int par2)
-    {
+    @Override
+    public ItemStack decrStackSize(int par1, int par2) {
         if (this.slots[par1] != null)
         {
             ItemStack stack;
@@ -64,6 +62,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
                 {
                     this.slots[par1] = null;
                 }
+
                 return stack;
             }
         }
@@ -73,12 +72,12 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
         }
     }
 
-    public ItemStack getStackInSlotOnClosing(int slot)
+    public ItemStack getStackInSlotOnClosing(int par1)
     {
-        if (this.slots[slot] != null)
+        if (this.slots[par1] != null)
         {
-            ItemStack stack = this.slots[slot];
-            this.slots[slot] = null;
+            ItemStack stack = this.slots[par1];
+            this.slots[par1] = null;
             return stack;
         }
         else
@@ -99,11 +98,11 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : "container.FergoTools:macerator";
+        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerMacerator;
     }
 
-    @Override
-    public boolean hasCustomInventoryName() {
+    public boolean hasCustomInventoryName()
+    {
         return this.localizedName != null && this.localizedName.length() > 0;
     }
 
@@ -115,17 +114,17 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
     public void readFromNBT(NBTTagCompound compound)
     {
         super.readFromNBT(compound);
-        NBTTagList nbttaglist = compound.getTagList(Strings.TileStrings.items, 10);
+        NBTTagList list = compound.getTagList(Strings.TileStrings.items, 10);
         this.slots = new ItemStack[this.getSizeInventory()];
 
-        for (int i = 0; i < nbttaglist.tagCount(); ++i)
+        for (int i = 0; i < list.tagCount(); ++i)
         {
-            NBTTagCompound nbttagcompound1 = (NBTTagCompound)nbttaglist.getCompoundTagAt(i);
-            byte b0 = nbttagcompound1.getByte(Strings.TileStrings.slot);
+            NBTTagCompound compound1 = (NBTTagCompound)list.getCompoundTagAt(i);
+            byte b0 = compound1.getByte(Strings.TileStrings.slot);
 
             if (b0 >= 0 && b0 < this.slots.length)
             {
-                this.slots[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+                this.slots[b0] = ItemStack.loadItemStackFromNBT(compound1);
             }
         }
 
@@ -144,20 +143,20 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
         super.writeToNBT(compound);
         compound.setShort(Strings.TileStrings.burnTime, (short)this.burnTime);
         compound.setShort(Strings.TileStrings.cookTime, (short)this.cookTime);
-        NBTTagList nbttaglist = new NBTTagList();
+        NBTTagList list = new NBTTagList();
 
         for (int i = 0; i < this.slots.length; ++i)
         {
             if (this.slots[i] != null)
             {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte(Strings.TileStrings.slot, (byte)i);
-                this.slots[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
+                NBTTagCompound compound1 = new NBTTagCompound();
+                compound1.setByte(Strings.TileStrings.slot, (byte)i);
+                this.slots[i].writeToNBT(compound1);
+                list.appendTag(compound1);
             }
         }
 
-        compound.setTag(Strings.TileStrings.items, nbttaglist);
+        compound.setTag(Strings.TileStrings.items, list);
 
         if (this.hasCustomInventoryName())
         {
@@ -165,23 +164,26 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
         }
     }
 
-    public int getInventoryStackLimit(){return 64;}
-
-    @SideOnly(Side.CLIENT)
-    public int getCookProgressScaled(int par1)
+    public int getInventoryStackLimit()
     {
-        return this.cookTime * par1 / FurnaceInts.maceratorSpeed;
+        return 64;
     }
 
     @SideOnly(Side.CLIENT)
-    public int getBurnTimeRemainingScaled(int par1)
+    public int getCookProgressScaled(int time)
+    {
+        return this.cookTime * time / FurnaceInts.maceratorSpeed;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public int getBurnTimeRemainingScaled(int time)
     {
         if (this.currentItemBurnTime == 0)
         {
             this.currentItemBurnTime = FurnaceInts.maceratorSpeed;
         }
 
-        return this.burnTime * par1 / this.currentItemBurnTime;
+        return this.burnTime * time / this.currentItemBurnTime;
     }
 
     public boolean isBurning(){return this.burnTime > 0;}
@@ -191,7 +193,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
         boolean flag = this.isBurning();
         boolean flag1 = false;
 
-        if (this.burnTime > 0)
+        if (this.isBurning())
         {
             --this.burnTime;
         }
@@ -202,7 +204,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
             {
                 this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
 
-                if (this.burnTime > 0)
+                if (this.isBurning())
                 {
                     flag1 = true;
 
@@ -234,10 +236,10 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
                 this.cookTime = 0;
             }
 
-            if (flag != this.burnTime > 0)
+            if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockMacerator.updateMaceratorBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                BlockMacerator.updateMaceratorBlockState(this.isBurning(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
 
@@ -255,12 +257,12 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
         }
         else
         {
-            ItemStack itemstack = MaceratorRecipes.smelting().getSmeltingResult(this.slots[0]);
-            if (itemstack == null) return false;
+            ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
+            if (stack == null)return false;
             if (this.slots[2] == null) return true;
-            if (!this.slots[2].isItemEqual(itemstack)) return false;
-            int result = slots[2].stackSize + itemstack.stackSize;
-            return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
+            if (!this.slots[2].isItemEqual(stack))return false;
+            int result = slots[2].stackSize + stack.stackSize*2;
+            return (result <= getInventoryStackLimit() && result <= stack.getMaxStackSize());
         }
     }
 
@@ -268,15 +270,16 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
     {
         if (this.canSmelt())
         {
-            ItemStack itemstack = MaceratorRecipes.smelting().getSmeltingResult(this.slots[0]);
+            ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
 
             if (this.slots[2] == null)
             {
-                this.slots[2] = itemstack.copy();
+                this.slots[2] = stack.copy();
+                this.slots[2].stackSize*=2;
             }
-            else if (this.slots[2].isItemEqual(itemstack))
+            else if (this.slots[2].isItemEqual(stack))
             {
-                slots[2].stackSize += itemstack.stackSize;
+                slots[2].stackSize += stack.stackSize*2;
             }
 
             --this.slots[0].stackSize;
@@ -359,7 +362,8 @@ public class TileEntityMacerator extends TileEntityFurnaceFT{
         return this.isItemValidForSlot(par1, par2ItemStack);
     }
 
-    public boolean canExtractItem(int par1, ItemStack par2ItemStack, int par3) {
+    public boolean canExtractItem(int par1, ItemStack par2ItemStack, int par3)
+    {
         return par3 != 0 || par1 != 1 || par2ItemStack.getItem() == Items.bucket;
     }
 }

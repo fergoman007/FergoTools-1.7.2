@@ -4,9 +4,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockGlowstoneFurnace;
-import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.lib.Strings.TileStrings;
+import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -322,7 +322,7 @@ public class TileEntityGlowstoneFurnace extends TileEntity implements ISidedInve
     /**
      * Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
      */
-    private boolean canSmelt()
+    public boolean canSmelt()
     {
         if (this.slots[0] == null)
         {

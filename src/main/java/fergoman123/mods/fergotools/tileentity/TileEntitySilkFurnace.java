@@ -4,8 +4,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockSilkFurnace;
-import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
+import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -21,7 +21,7 @@ import net.minecraft.tileentity.TileEntity;
 /**
  * Created by Fergoman123 on 13/04/2014.
  */
-public class TileEntitySilkFurnace extends TileEntity implements ISidedInventory {
+public class TileEntitySilkFurnace extends TileEntity implements ISidedInventory{
     private static final int[] slots_top = new int[]{0};
     private static final int[] slots_bottom = new int[]{2, 1};
     private static final int[] slots_sides = new int[]{1};
@@ -209,7 +209,7 @@ public class TileEntitySilkFurnace extends TileEntity implements ISidedInventory
         }
     }
 
-    private boolean canSmelt() {
+    public boolean canSmelt() {
         if (this.slots[0] == null) {
             return false;
         } else {

@@ -7,17 +7,20 @@ import fergoman123.mods.fergotools.block.furnace.BlockQuartzFurnace;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.lib.Strings.TileStrings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
-import fergoman123.mods.fergotools.util.TileEntityFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-public class TileEntityQuartzFurnace extends TileEntityFurnaceFT{
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityQuartzFurnace extends TileEntity implements ISidedInventory {
+
     private static final int[] slots_top = new int[] {0};
     private static final int[] slots_bottom = new int[] {2, 1};
     private static final int[] slots_sides = new int[] {1};

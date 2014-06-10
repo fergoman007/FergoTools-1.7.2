@@ -12,6 +12,7 @@ import fergoman123.mods.fergotools.handler.RegHandler;
 import fergoman123.mods.fergotools.helper.LogHelper;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.init.ModTiles;
 import fergoman123.mods.fergotools.lib.ModInfo;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.packet.PacketPipeline;
@@ -37,13 +38,14 @@ public class FergoTools {
         Tabs.init();
         UtilToolArmor.init();
         ModItems.init();
-        ModBlocks.initBlocks();
+        ModBlocks.init();
     }
 
 	@EventHandler
     public void load(FMLInitializationEvent evt)
     {
         LogHelper.info("Initialising Registration and Packet Handler");
+        ModTiles.init();
         RegHandler.init();
         RecipeHandler.initRecipes();
         RecipeHandler.initSmeltingRecipes();

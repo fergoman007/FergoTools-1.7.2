@@ -1,6 +1,5 @@
 package fergoman123.mods.fergotools.proxy;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.network.IGuiHandler;
 import fergoman123.mods.fergotools.gui.*;
 import fergoman123.mods.fergotools.gui.container.*;
@@ -10,20 +9,28 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-/**
- * Created by Fergoman123 on 03/04/2014.
- */
 public class ClientProxy extends CommonProxy implements IGuiHandler{
-    public int addArmor(String armor)
-    {
-        return RenderingRegistry.addNewArmourRendererPrefix(armor);
+
+    @Override
+    public int addArmor(String armor) {
+        return super.addArmor(armor);
     }
 
     @Override
-    public Object getServerGuiElement(int guiId, EntityPlayer player, World world, int x, int y, int z) {
+    public void initSounds() {
+        super.initSounds();
+    }
+
+    @Override
+    public void initRenderers() {
+        super.initRenderers();
+    }
+
+    @Override
+    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity entity = world.getTileEntity(x, y, z);
         InventoryPlayer inventory = player.inventory;
-        switch(guiId)
+        switch (ID)
         {
             case 0: return new ContainerQuartzFurnace(inventory, (TileEntityQuartzFurnace)entity);
             case 1: return new ContainerObsidianFurnace(inventory, (TileEntityObsidianFurnace)entity);
@@ -41,11 +48,10 @@ public class ClientProxy extends CommonProxy implements IGuiHandler{
     }
 
     @Override
-    public Object getClientGuiElement(int guiId, EntityPlayer player, World world, int x, int y, int z)
-    {
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity entity = world.getTileEntity(x, y, z);
         InventoryPlayer inventory = player.inventory;
-        switch(guiId)
+        switch (ID)
         {
             case 0: return new GuiQuartzFurnace(inventory, (TileEntityQuartzFurnace)entity);
             case 1: return new GuiObsidianFurnace(inventory, (TileEntityObsidianFurnace)entity);
