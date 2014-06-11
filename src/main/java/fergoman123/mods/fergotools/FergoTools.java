@@ -7,8 +7,10 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import fergoman123.mods.fergotools.handler.ConfigHandler;
 import fergoman123.mods.fergotools.handler.RecipeHandler;
 import fergoman123.mods.fergotools.handler.RegHandler;
+import fergoman123.mods.fergotools.handler.WorldHandler;
 import fergoman123.mods.fergotools.helper.LogHelper;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
@@ -19,6 +21,8 @@ import fergoman123.mods.fergotools.packet.PacketPipeline;
 import fergoman123.mods.fergotools.proxy.CommonProxy;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+
+import java.io.File;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.version, dependencies = ModInfo.dep)
 public class FergoTools {
@@ -35,10 +39,12 @@ public class FergoTools {
     public void preInit(FMLPreInitializationEvent evt)
     {
         LogHelper.info("Pre Initialising Mod");
+        ConfigHandler.init(evt.getModConfigurationDirectory().getAbsolutePath() + File.separator + ModInfo.modid + File.separator);
         Tabs.init();
         UtilToolArmor.init();
         ModItems.init();
         ModBlocks.init();
+        WorldHandler.init();
     }
 
 	@EventHandler
