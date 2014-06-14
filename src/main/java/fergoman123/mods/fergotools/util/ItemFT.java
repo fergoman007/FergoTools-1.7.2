@@ -9,7 +9,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemFT extends Item{
+public abstract class ItemFT extends Item{
 
     public ItemFT()
     {

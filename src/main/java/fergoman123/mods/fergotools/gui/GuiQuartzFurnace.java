@@ -5,8 +5,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerQuartzFurnace;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
+import fergoman123.mods.fergoutil.helper.GuiHelper;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import org.lwjgl.opengl.GL11;
 
@@ -14,7 +14,6 @@ import org.lwjgl.opengl.GL11;
 public class GuiQuartzFurnace extends GuiContainer
 {
     private TileEntityQuartzFurnace furnace;
-    private Object[] obj = new Object[0];
 
     public GuiQuartzFurnace(InventoryPlayer par1InventoryPlayer, TileEntityQuartzFurnace par2TileEntityFurnace)
     {
@@ -27,9 +26,9 @@ public class GuiQuartzFurnace extends GuiContainer
      */
     public void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-        String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : I18n.format(furnace.getInventoryName(), obj);
+        String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
         fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-        fontRendererObj.drawString(I18n.format(GuiStrings.containerInventory, obj), 8, ySize - 96 + 2, 4210752);
+        fontRendererObj.drawString(GuiHelper.format(GuiStrings.containerInventory), 8, ySize - 96 + 2, 4210752);
     }
 
     /**
@@ -38,7 +37,7 @@ public class GuiQuartzFurnace extends GuiContainer
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        mc.getTextureManager().bindTexture(GuiStrings.vanillaFurnace);
+        GuiHelper.bindTexture(GuiStrings.vanillaFurnace);
         int k = (width - xSize) / 2;
         int l = (height - ySize) / 2;
         drawTexturedModalRect(k, l, 0, 0, xSize, ySize);

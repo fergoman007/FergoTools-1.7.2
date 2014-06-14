@@ -8,4 +8,5 @@ public class Defaults {
     public static final boolean spawnMonstersDefault = false;
     public static final boolean spawnAnimalsDefault = false;
     public static final int oreDensityDefault = 1;
+    public static final int worldHeightDefault = 80;
 }

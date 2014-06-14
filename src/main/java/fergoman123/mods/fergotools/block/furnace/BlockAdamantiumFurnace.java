@@ -9,9 +9,9 @@ import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures.BlockTextures;
 import fergoman123.mods.fergotools.lib.Textures.FurnaceTextures;
 import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
+import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -29,7 +29,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockAdamantiumFurnace extends BlockContainer
+public class BlockAdamantiumFurnace extends BlockFurnaceFT
 {
     private final Random rand = new Random();
 
@@ -100,7 +100,7 @@ public class BlockAdamantiumFurnace extends BlockContainer
             
         return side == 1 ? this.iconTop : (side == 0 ? this.iconTop : (side != meta ? this.blockIcon : this.iconFront));
     }
-    
+
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister register)
     {

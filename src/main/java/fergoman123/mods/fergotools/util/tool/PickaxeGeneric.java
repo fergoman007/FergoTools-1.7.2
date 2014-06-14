@@ -5,11 +5,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergoutil.helper.NameHelper;
+import fergoman123.mods.fergoutil.item.ITool;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-public abstract class PickaxeGeneric extends ItemPickaxe
+public abstract class PickaxeGeneric extends ItemPickaxe implements ITool
 {
 
     public PickaxeGeneric(ToolMaterial material) {

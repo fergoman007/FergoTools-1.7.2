@@ -144,6 +144,8 @@ public class Strings {
                         blockSilkGem,
                         blockRedstoneCrystal
                 };
+
+        public static final String blockPortalFT = "blockPortalFT";
     }
 
     public static class BowStrings
@@ -251,6 +253,8 @@ public class Strings {
                         silkGem,//8
                         redstoneCrystal//9
                 };
+
+        public static final String ignitor = "ignitor";
     }
 
     public static class MaterialStrings
