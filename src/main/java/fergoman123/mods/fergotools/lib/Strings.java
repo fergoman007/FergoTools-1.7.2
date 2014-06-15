@@ -380,4 +380,12 @@ public class Strings {
 
         public static final String[] donator = {};
     }
+
+    public static class NBT
+    {
+        public static final String UUID_MOST_SIG = "UUIDMostSig";
+        public static final String UUID_LEAST_SIG = "UUIDLeastSig";
+
+        public static final String bagOpen = "bagOpen";
+    }
 }

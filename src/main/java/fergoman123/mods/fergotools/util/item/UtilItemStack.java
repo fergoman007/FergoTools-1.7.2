@@ -6,9 +6,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 26/04/2014.
- */
 public class UtilItemStack {
 
     public static final ItemStack stickStack = new ItemStack(Items.stick);
@@ -32,11 +29,11 @@ public class UtilItemStack {
     public static final ItemStack obsidianIngot = new ItemStack(ModItems.obsidianIngot);
     public static final ItemStack emeraldCrystal = new ItemStack(ModItems.emeraldCrystal);
     public static final ItemStack lapisCrystal = new ItemStack(ModItems.lapisCrystal);
-    public static final ItemStack bronzeIngot = new ItemStack(ModItems.bronzeIngot, 1, 3);
-    public static final ItemStack coalIngot = new ItemStack(ModItems.coalIngot, 1, 4);
-    public static final ItemStack glowstoneIngot = new ItemStack(ModItems.glowstoneIngot, 1, 5);
-    public static final ItemStack adamantiumIngot = new ItemStack(ModItems.adamantiumIngot, 1, 6);
-    public static final ItemStack expShard = new ItemStack(ModItems.expShard, 1, 7);
+    public static final ItemStack bronzeIngot = new ItemStack(ModItems.bronzeIngot);
+    public static final ItemStack coalIngot = new ItemStack(ModItems.coalIngot);
+    public static final ItemStack glowstoneIngot = new ItemStack(ModItems.glowstoneIngot);
+    public static final ItemStack adamantiumIngot = new ItemStack(ModItems.adamantiumIngot);
+    public static final ItemStack expShard = new ItemStack(ModItems.expShard);
     public static final ItemStack silkGem = new ItemStack(ModItems.silkGem);
     public static final ItemStack redstoneCrystal = new ItemStack(ModItems.redstoneCrystal);
 
@@ -130,47 +127,47 @@ public class UtilItemStack {
     public static final ItemStack quartzLeggings = new ItemStack(ModItems.quartzLeggings);
     public static final ItemStack quartzBoots = new ItemStack(ModItems.quartzBoots);
 
-    public static ItemStack obsidianHelmet = new ItemStack(ModItems.obsidianHelmet);
-    public static ItemStack obsidianChestplate = new ItemStack(ModItems.obsidianBoots);
-    public static ItemStack obsidianLeggings = new ItemStack(ModItems.obsidianBoots);
-    public static ItemStack obsidianBoots = new ItemStack(ModItems.obsidianBoots);
+    public static final ItemStack obsidianHelmet = new ItemStack(ModItems.obsidianHelmet);
+    public static final ItemStack obsidianChestplate = new ItemStack(ModItems.obsidianBoots);
+    public static final ItemStack obsidianLeggings = new ItemStack(ModItems.obsidianBoots);
+    public static final ItemStack obsidianBoots = new ItemStack(ModItems.obsidianBoots);
 
-    public static ItemStack emeraldHelmet = new ItemStack(ModItems.emeraldBoots);
-    public static ItemStack emeraldChestplate = new ItemStack(ModItems.emeraldBoots);
-    public static ItemStack emeraldLeggings = new ItemStack(ModItems.emeraldBoots);
-    public static ItemStack emeraldBoots = new ItemStack(ModItems.emeraldBoots);
+    public static final ItemStack emeraldHelmet = new ItemStack(ModItems.emeraldBoots);
+    public static final ItemStack emeraldChestplate = new ItemStack(ModItems.emeraldBoots);
+    public static final ItemStack emeraldLeggings = new ItemStack(ModItems.emeraldBoots);
+    public static final ItemStack emeraldBoots = new ItemStack(ModItems.emeraldBoots);
 
-    public static ItemStack lapisHelmet = new ItemStack(ModItems.lapisBoots);
-    public static ItemStack lapisChestplate = new ItemStack(ModItems.lapisBoots);
-    public static ItemStack lapisLeggings = new ItemStack(ModItems.lapisBoots);
-    public static ItemStack lapisBoots = new ItemStack(ModItems.lapisBoots);
+    public static final ItemStack lapisHelmet = new ItemStack(ModItems.lapisBoots);
+    public static final ItemStack lapisChestplate = new ItemStack(ModItems.lapisBoots);
+    public static final ItemStack lapisLeggings = new ItemStack(ModItems.lapisBoots);
+    public static final ItemStack lapisBoots = new ItemStack(ModItems.lapisBoots);
 
-    public static ItemStack bronzeHelmet = new ItemStack(ModItems.bronzeBoots);
-    public static ItemStack bronzeChestplate = new ItemStack(ModItems.bronzeBoots);
-    public static ItemStack bronzeLeggings = new ItemStack(ModItems.bronzeBoots);
-    public static ItemStack bronzeBoots = new ItemStack(ModItems.bronzeBoots);
+    public static final ItemStack bronzeHelmet = new ItemStack(ModItems.bronzeBoots);
+    public static final ItemStack bronzeChestplate = new ItemStack(ModItems.bronzeBoots);
+    public static final ItemStack bronzeLeggings = new ItemStack(ModItems.bronzeBoots);
+    public static final ItemStack bronzeBoots = new ItemStack(ModItems.bronzeBoots);
 
-    public static ItemStack coalHelmet = new ItemStack(ModItems.coalBoots);
-    public static ItemStack coalChestplate = new ItemStack(ModItems.coalBoots);
-    public static ItemStack coalLeggings = new ItemStack(ModItems.coalBoots);
-    public static ItemStack coalBoots = new ItemStack(ModItems.coalBoots);
+    public static final ItemStack coalHelmet = new ItemStack(ModItems.coalBoots);
+    public static final ItemStack coalChestplate = new ItemStack(ModItems.coalBoots);
+    public static final ItemStack coalLeggings = new ItemStack(ModItems.coalBoots);
+    public static final ItemStack coalBoots = new ItemStack(ModItems.coalBoots);
 
-    public static ItemStack glowstoneHelmet = new ItemStack(ModItems.glowstoneBoots);
-    public static ItemStack glowstoneChestplate = new ItemStack(ModItems.glowstoneBoots);
-    public static ItemStack glowstoneLeggings = new ItemStack(ModItems.glowstoneBoots);
-    public static ItemStack glowstoneBoots = new ItemStack(ModItems.glowstoneBoots);
+    public static final ItemStack glowstoneHelmet = new ItemStack(ModItems.glowstoneBoots);
+    public static final ItemStack glowstoneChestplate = new ItemStack(ModItems.glowstoneBoots);
+    public static final ItemStack glowstoneLeggings = new ItemStack(ModItems.glowstoneBoots);
+    public static final ItemStack glowstoneBoots = new ItemStack(ModItems.glowstoneBoots);
 
-    public static ItemStack redstoneHelmet = new ItemStack(ModItems.redstoneBoots);
-    public static ItemStack redstoneChestplate = new ItemStack(ModItems.redstoneBoots);
-    public static ItemStack redstoneLeggings = new ItemStack(ModItems.redstoneBoots);
-    public static ItemStack redstoneBoots = new ItemStack(ModItems.redstoneBoots);
+    public static final ItemStack redstoneHelmet = new ItemStack(ModItems.redstoneBoots);
+    public static final ItemStack redstoneChestplate = new ItemStack(ModItems.redstoneBoots);
+    public static final ItemStack redstoneLeggings = new ItemStack(ModItems.redstoneBoots);
+    public static final ItemStack redstoneBoots = new ItemStack(ModItems.redstoneBoots);
 
-    public static ItemStack quartzBow = new ItemStack(ModItems.obsidianBow);
-    public static ItemStack obsidianBow = new ItemStack(ModItems.obsidianBow);
-    public static ItemStack emeraldBow = new ItemStack(ModItems.emeraldBow);
-    public static ItemStack lapisBow = new ItemStack(ModItems.lapisBow);
-    public static ItemStack bronzeBow = new ItemStack(ModItems.bronzeBow);
-    public static ItemStack coalBow = new ItemStack(ModItems.coalBow);
-    public static ItemStack glowstoneBow = new ItemStack(ModItems.glowstoneBow);
-    public static ItemStack adamantiumBow = new ItemStack(ModItems.adamantiumBow);
+    public static final ItemStack quartzBow = new ItemStack(ModItems.obsidianBow);
+    public static final ItemStack obsidianBow = new ItemStack(ModItems.obsidianBow);
+    public static final ItemStack emeraldBow = new ItemStack(ModItems.emeraldBow);
+    public static final ItemStack lapisBow = new ItemStack(ModItems.lapisBow);
+    public static final ItemStack bronzeBow = new ItemStack(ModItems.bronzeBow);
+    public static final ItemStack coalBow = new ItemStack(ModItems.coalBow);
+    public static final ItemStack glowstoneBow = new ItemStack(ModItems.glowstoneBow);
+    public static final ItemStack adamantiumBow = new ItemStack(ModItems.adamantiumBow);
 }

@@ -1,10 +1,10 @@
 # Creative Tabs
-itemGroup.tabFergoTools=Fergoman123's Tools: Tools
-itemGroup.tabFergoBlocks=Fergoman123's Tools: Blocks
-itemGroup.tabFergoFurnaces=Fergoman123's Tools: Furnaces
-itemGroup.tabFergoArmor=Fergoman123's Tools: Armor
-itemGroup.tabFergoItems=Fergoman123's Tools: Items
-itemGroup.tabFergoBows=Fergoman123's Tools: Bows
+#itemGroup.tabFergoTools=Fergoman123's Tools: Tools
+#itemGroup.tabFergoBlocks=Fergoman123's Tools: Blocks
+#itemGroup.tabFergoFurnaces=Fergoman123's Tools: Furnaces
+#itemGroup.tabFergoArmor=Fergoman123's Tools: Armor
+#itemGroup.tabFergoItems=Fergoman123's Tools: Items
+#itemGroup.tabFergoBows=Fergoman123's Tools: Bows
 
 # Tools
 item.FergoTools:quartzPickaxe.name=Quartz Pickaxe

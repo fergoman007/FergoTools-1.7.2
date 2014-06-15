@@ -10,7 +10,7 @@ import fergoman123.mods.fergotools.util.BlockFT;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
 
-public class ModBlocks {
+public class ModBlocks{
 
     public static final BlockFT oreObsidian = new BlockOreObsidian();
     public static final BlockFT oreEmeraldCrystal = new BlockOreEmeraldCrystal();

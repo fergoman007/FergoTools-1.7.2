@@ -1,12 +1,10 @@
 package fergoman123.mods.fergotools.handler;
 
 import fergoman123.mods.fergotools.init.ModBlocks;
-import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.util.item.UtilItemStack;
 import fergoman123.mods.fergotools.util.item.UtilRecipeList;
 import fergoman123.mods.fergoutil.helper.RecipeHelper;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 
 public class RecipeHandler {
 
@@ -128,10 +126,10 @@ public class RecipeHandler {
 		RecipeHelper.addRecipe(UtilItemStack.quartzLeggings, UtilRecipeList.quartzLeggings);
 		RecipeHelper.addRecipe(UtilItemStack.quartzBoots, UtilRecipeList.quartzBoots);
 		
-		RecipeHelper.addRecipe(new ItemStack(ModItems.obsidianHelmet), UtilRecipeList.obsidianHelmet);
-		RecipeHelper.addRecipe(new ItemStack(ModItems.obsidianChestplate), UtilRecipeList.obsidianChestplate);
-		RecipeHelper.addRecipe(new ItemStack(ModItems.obsidianLeggings), UtilRecipeList.obsidianLeggings);
-		RecipeHelper.addRecipe(new ItemStack(ModItems.obsidianBoots), UtilRecipeList.obsidianBoots);
+		RecipeHelper.addRecipe(UtilItemStack.obsidianHelmet, UtilRecipeList.obsidianHelmet);
+		RecipeHelper.addRecipe(UtilItemStack.obsidianChestplate, UtilRecipeList.obsidianChestplate);
+		RecipeHelper.addRecipe(UtilItemStack.obsidianLeggings, UtilRecipeList.obsidianLeggings);
+		RecipeHelper.addRecipe(UtilItemStack.obsidianBoots, UtilRecipeList.obsidianBoots);
 		
 		RecipeHelper.addRecipe(UtilItemStack.emeraldHelmet, UtilRecipeList.emeraldHelmet);
 		RecipeHelper.addRecipe(UtilItemStack.emeraldChestplate, UtilRecipeList.emeraldChestplate);
