@@ -1,6 +1,5 @@
 package fergoman123.mods.fergotools.init;
 
-import fergoman123.mods.fergotools.item.ItemBag;
 import fergoman123.mods.fergotools.item.armor.*;
 import fergoman123.mods.fergotools.item.axe.*;
 import fergoman123.mods.fergotools.item.bow.*;
@@ -9,10 +8,10 @@ import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
-import fergoman123.mods.fergotools.lib.Strings.ItemStrings;
-import fergoman123.mods.fergotools.lib.Strings.ToolStrings;
 import fergoman123.mods.fergotools.lib.Strings.ArmorStrings;
 import fergoman123.mods.fergotools.lib.Strings.BowStrings;
+import fergoman123.mods.fergotools.lib.Strings.ItemStrings;
+import fergoman123.mods.fergotools.lib.Strings.ToolStrings;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.ItemBowFT;
 import fergoman123.mods.fergotools.util.ItemFT;
@@ -93,7 +92,6 @@ public class ModItems{
     public static final ItemFT silkGem = new ItemSilkGem();
     public static final ItemFT redstoneCrystal = new ItemRedstoneCrystal();
 
-    public static final ItemFT bag = new ItemBag();
     public static final ItemArmorFT quartzHelmet = new ItemArmorQuartz(helmet);
     public static final ItemArmorFT obsidianHelmet = new ItemArmorObsidian(helmet);
     public static final ItemArmorFT emeraldHelmet = new ItemArmorEmerald(helmet);
@@ -260,7 +258,5 @@ public class ModItems{
         RegisterHelper.registerItem(coalBow, BowStrings.bowCoal);
         RegisterHelper.registerItem(glowstoneBow, BowStrings.bowGlowstone);
         RegisterHelper.registerItem(adamantiumBow, BowStrings.bowAdamantium);
-
-        RegisterHelper.registerItem(bag, "bag");
 	}
 }
