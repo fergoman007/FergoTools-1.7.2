@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemGlowstoneAxe extends AxeGeneric {
 
+    public static ItemGlowstoneAxe instance = new ItemGlowstoneAxe();
+
     public ItemGlowstoneAxe() {
         super(UtilToolArmor.glowstone);
         this.setUnlocalizedName(ToolStrings.glowstoneAxe);

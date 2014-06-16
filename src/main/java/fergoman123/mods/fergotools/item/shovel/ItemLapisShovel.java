@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemLapisShovel extends ShovelGeneric {
 
+    public static ItemLapisShovel instance = new ItemLapisShovel();
+
     public ItemLapisShovel() {
         super(UtilToolArmor.lapis);
         this.setUnlocalizedName(Strings.ToolStrings.lapisShovel);

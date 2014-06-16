@@ -29,7 +29,7 @@ public class ModBlocks{
     public static final BlockFT blockGlowstone = new BlockGlowstoneStorage();
     public static final BlockFT blockAdamantium = new BlockAdamantium();
     public static final BlockFT blockSilkGem = new BlockSilkGem();
-    public static final BlockFT blockRedstone = new BlockRedstone();
+    public static final BlockFT blockRedstoneCrystal = new BlockRedstone();
 
     public static final Block quartzFurnaceIdle = new BlockQuartzFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.quartzFurnaceIdle);
     public static final Block obsidianFurnaceIdle = new BlockObsidianFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.obsidianFurnaceIdle);
@@ -74,7 +74,7 @@ public class ModBlocks{
         RegisterHelper.registerBlock(ModBlocks.blockGlowstone, Strings.BlockStrings.blockGlowstone);
         RegisterHelper.registerBlock(ModBlocks.blockAdamantium, Strings.BlockStrings.blockAdamantium);
         RegisterHelper.registerBlock(ModBlocks.blockSilkGem, Strings.BlockStrings.blockSilkGem);
-        RegisterHelper.registerBlock(ModBlocks.blockRedstone, Strings.BlockStrings.blockRedstoneCrystal);
+        RegisterHelper.registerBlock(ModBlocks.blockRedstoneCrystal, Strings.BlockStrings.blockRedstoneCrystal);
 
         RegisterHelper.registerBlock(ModBlocks.quartzFurnaceIdle, FurnaceStrings.quartzFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.obsidianFurnaceIdle, FurnaceStrings.obsidianFurnaceIdle);

@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemObsidianShovel extends ShovelGeneric {
 
+    public static ItemObsidianShovel instance = new ItemObsidianShovel();
+
     public ItemObsidianShovel() {
         super(UtilToolArmor.obsidian);
         this.setUnlocalizedName(Strings.ToolStrings.obsidianShovel);

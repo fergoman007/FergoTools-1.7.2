@@ -14,6 +14,8 @@ import net.minecraft.world.World;
  */
 public class ItemSilkAxe extends AxeGeneric {
 
+    public static ItemSilkAxe instance = new ItemSilkAxe();
+
     public ItemSilkAxe()
     {
         super(UtilToolArmor.silk);

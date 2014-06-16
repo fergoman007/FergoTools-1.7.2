@@ -11,6 +11,8 @@ import java.util.List;
 
 public class ItemAdamantiumPickaxe extends PickaxeGeneric {
 
+    public static ItemAdamantiumPickaxe instance = new ItemAdamantiumPickaxe();
+
     public ItemAdamantiumPickaxe() {
         super(UtilToolArmor.adamantium);
         this.setUnlocalizedName(Strings.ToolStrings.adamantiumPickaxe);

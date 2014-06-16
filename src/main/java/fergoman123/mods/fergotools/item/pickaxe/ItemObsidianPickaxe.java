@@ -8,6 +8,9 @@ import net.minecraft.item.ItemStack;
 
 public class ItemObsidianPickaxe extends PickaxeGeneric
 {
+
+    public static ItemObsidianPickaxe instance = new ItemObsidianPickaxe();
+
     public ItemObsidianPickaxe()
     {
         super(UtilToolArmor.obsidian);

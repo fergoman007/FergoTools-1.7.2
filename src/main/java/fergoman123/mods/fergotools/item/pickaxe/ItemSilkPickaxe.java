@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 
 public class ItemSilkPickaxe extends PickaxeGeneric {
 
+    public static ItemSilkPickaxe instance = new ItemSilkPickaxe();
+
     public ItemSilkPickaxe()
     {
         super(UtilToolArmor.silk);

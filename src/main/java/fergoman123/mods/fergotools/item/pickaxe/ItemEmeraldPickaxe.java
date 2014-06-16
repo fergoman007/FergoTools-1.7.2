@@ -8,6 +8,9 @@ import net.minecraft.item.ItemStack;
 
 public class ItemEmeraldPickaxe extends PickaxeGeneric
 {
+
+    public static ItemEmeraldPickaxe instance = new ItemEmeraldPickaxe();
+
     public ItemEmeraldPickaxe()
     {
         super(UtilToolArmor.emerald);

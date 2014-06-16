@@ -182,5 +182,6 @@ public class RecipeHandler {
         RecipeHelper.addBlockSmelting(Blocks.coal_block, UtilItemStack.coalIngot, 1.0f);
         RecipeHelper.addBlockSmelting(Blocks.glowstone, UtilItemStack.glowstoneIngot, 1.0f);
         RecipeHelper.addBlockSmelting(ModBlocks.oreAdamantium, UtilItemStack.adamantiumIngot, 1.0f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreRedstoneCrystal, UtilItemStack.redstoneCrystal, 1.0f);
     }
 }

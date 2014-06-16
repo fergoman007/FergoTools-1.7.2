@@ -9,10 +9,9 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class ItemAdamantiumShovel extends ShovelGeneric {
+
+    public static ItemAdamantiumShovel instance = new ItemAdamantiumShovel();
 
     public ItemAdamantiumShovel() {
         super(UtilToolArmor.adamantium);

@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemEmeraldShovel extends ShovelGeneric {
 
+    public static ItemEmeraldShovel instance = new ItemEmeraldShovel();
+
     public ItemEmeraldShovel() {
         super(UtilToolArmor.emerald);
         this.setUnlocalizedName(Strings.ToolStrings.emeraldShovel);

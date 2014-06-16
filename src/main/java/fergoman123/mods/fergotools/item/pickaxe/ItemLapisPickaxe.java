@@ -8,6 +8,9 @@ import net.minecraft.item.ItemStack;
 
 public class ItemLapisPickaxe extends PickaxeGeneric
 {
+
+    public static ItemLapisPickaxe instance = new ItemLapisPickaxe();
+
     public ItemLapisPickaxe()
     {
         super(UtilToolArmor.lapis);

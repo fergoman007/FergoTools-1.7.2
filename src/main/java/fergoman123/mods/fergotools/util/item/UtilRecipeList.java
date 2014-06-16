@@ -139,7 +139,7 @@ public class UtilRecipeList {
     public static final Object[] redstoneLeggings = new Object[]{RecipeArray.getLeggingsRecipe(), charX, UtilItemStack.redstoneCrystal};
     public static final Object[] redstoneBoots = new Object[]{RecipeArray.getBootsRecipe(), charX, UtilItemStack.redstoneCrystal};
 
-    // Bowa
+    // Bows
     public static final Object[] quartzBow = new Object[]{RecipeArray.getBowRecipe(), charY, UtilItemStack.quartzStack, charX, UtilItemStack.stringStack};
     public static final Object[] obsidianBow = new Object[]{RecipeArray.getBowRecipe(), charY, UtilItemStack.obsidianIngot, charX, UtilItemStack.stringStack};
     public static final Object[] emeraldBow = new Object[]{RecipeArray.getBowRecipe(), charY, UtilItemStack.emeraldCrystal, charX, UtilItemStack.stringStack};

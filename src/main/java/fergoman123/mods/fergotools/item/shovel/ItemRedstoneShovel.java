@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemRedstoneShovel extends ShovelGeneric {
 
+    public static ItemRedstoneShovel instance = new ItemRedstoneShovel();
+
     public ItemRedstoneShovel()
     {
         super(UtilToolArmor.redstone);

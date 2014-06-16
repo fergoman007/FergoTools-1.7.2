@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemObsidianAxe extends AxeGeneric {
 
+    public static ItemObsidianAxe instance = new ItemObsidianAxe();
+
     public ItemObsidianAxe() {
         super(UtilToolArmor.obsidian);
         this.setUnlocalizedName(Strings.ToolStrings.obsidianAxe);

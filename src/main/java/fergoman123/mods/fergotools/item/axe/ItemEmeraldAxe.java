@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemEmeraldAxe extends AxeGeneric {
 
+    public static ItemEmeraldAxe instance = new ItemEmeraldAxe();
+
     public ItemEmeraldAxe() {
         super(UtilToolArmor.emerald);
         this.setUnlocalizedName(Strings.ToolStrings.emeraldAxe);

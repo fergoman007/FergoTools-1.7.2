@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemQuartzShovel extends ShovelGeneric {
 
+    public static ItemQuartzShovel instance = new ItemQuartzShovel();
+
     public ItemQuartzShovel() {
         super(UtilToolArmor.quartz);
         this.setUnlocalizedName(Strings.ToolStrings.quartzShovel);

@@ -14,6 +14,8 @@ import java.util.List;
  */
 public class ItemAdamantiumAxe extends AxeGeneric {
 
+    public static ItemAdamantiumAxe instance = new ItemAdamantiumAxe();
+
     public ItemAdamantiumAxe()
     {
         super(UtilToolArmor.adamantium);

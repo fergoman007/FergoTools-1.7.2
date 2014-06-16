@@ -10,6 +10,8 @@ import net.minecraft.item.ItemStack;
  * Created by Fergoman123 on 14/04/2014.
  */
 public class ItemRedstoneAxe extends AxeGeneric{
+
+    public static ItemRedstoneAxe instance = new ItemRedstoneAxe();
     public ItemRedstoneAxe() {
         super(UtilToolArmor.redstone);
         this.setUnlocalizedName(Strings.ToolStrings.redstoneAxe);

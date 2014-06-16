@@ -8,6 +8,9 @@ import net.minecraft.item.ItemStack;
 
 public class ItemCoalPickaxe extends PickaxeGeneric
 {
+
+    public static ItemCoalPickaxe instance = new ItemCoalPickaxe();
+
     public ItemCoalPickaxe()
     {
         super(UtilToolArmor.coal);

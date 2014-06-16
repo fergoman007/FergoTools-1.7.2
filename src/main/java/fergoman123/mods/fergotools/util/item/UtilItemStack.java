@@ -46,7 +46,7 @@ public class UtilItemStack {
     public static final ItemStack blockExperience = new ItemStack(ModBlocks.blockExperience);
     public static final ItemStack blockSilkGem = new ItemStack(ModBlocks.blockSilkGem);
     public static final ItemStack blockAdamantium = new ItemStack(ModBlocks.blockAdamantium);
-    public static final ItemStack blockRedstone = new ItemStack(ModBlocks.blockRedstone);
+    public static final ItemStack blockRedstone = new ItemStack(ModBlocks.blockRedstoneCrystal);
 
     public static final ItemStack expBottle = new ItemStack(Items.experience_bottle);
 

@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemBronzeShovel extends ShovelGeneric{
 
+    public static ItemBronzeShovel instance = new ItemBronzeShovel();
+
     public ItemBronzeShovel() {
         super(UtilToolArmor.bronze);
         this.setUnlocalizedName(Strings.ToolStrings.bronzeShovel);

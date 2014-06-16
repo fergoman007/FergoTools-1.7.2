@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemGlowstoneShovel extends ShovelGeneric {
 
+    public static ItemGlowstoneShovel instance = new ItemGlowstoneShovel();
+
     public ItemGlowstoneShovel() {
         super(UtilToolArmor.glowstone);
         this.setUnlocalizedName(Strings.ToolStrings.glowstoneShovel);

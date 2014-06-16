@@ -1,8 +1,5 @@
 package fergoman123.mods.fergotools.util.item;
 
-/**
- * Created by Fergoman123 on 03/04/2014.
- */
 public class UtilRecipe {
 
     public static final String[] pickaxeRecipe = new String[]{"xxx", " y ", " y "};

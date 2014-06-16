@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemQuartzAxe extends AxeGeneric {
 
+    public static ItemQuartzAxe instance = new ItemQuartzAxe();
+
     public ItemQuartzAxe() {
         super(UtilToolArmor.quartz);
         this.setUnlocalizedName(Strings.ToolStrings.quartzAxe);
