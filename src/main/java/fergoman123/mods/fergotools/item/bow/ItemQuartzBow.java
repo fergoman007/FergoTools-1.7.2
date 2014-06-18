@@ -23,6 +23,8 @@ import static cpw.mods.fml.relauncher.Side.CLIENT;
 
 public class ItemQuartzBow extends ItemBowFT {
 
+    public static ItemQuartzBow instance = new ItemQuartzBow();
+
     public static final String[] pullArray = new String[]{"_1", "_2", "_3"};
 
     @SideOnly(CLIENT)

@@ -11,6 +11,8 @@ import java.util.List;
 
 public class ItemAdamantiumSword extends SwordGeneric {
 
+    public static ItemAdamantiumSword instance = new ItemAdamantiumSword();
+
     public ItemAdamantiumSword() {
         super(UtilToolArmor.adamantium);
         this.setUnlocalizedName(Strings.ToolStrings.adamantiumSword);

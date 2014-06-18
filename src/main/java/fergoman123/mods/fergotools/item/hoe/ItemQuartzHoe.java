@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemQuartzHoe extends HoeGeneric {
 
+    public static ItemQuartzHoe instance = new ItemQuartzHoe();
+
     public ItemQuartzHoe() {
         super(UtilToolArmor.quartz);
         this.setUnlocalizedName(Strings.ToolStrings.quartzHoe);

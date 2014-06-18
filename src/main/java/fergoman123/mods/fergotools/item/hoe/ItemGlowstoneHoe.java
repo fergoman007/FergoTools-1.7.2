@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemGlowstoneHoe extends HoeGeneric {
 
+    public static ItemGlowstoneHoe instance = new ItemGlowstoneHoe();
+
     public ItemGlowstoneHoe() {
         super(UtilToolArmor.glowstone);
         this.setUnlocalizedName(Strings.ToolStrings.glowstoneHoe);

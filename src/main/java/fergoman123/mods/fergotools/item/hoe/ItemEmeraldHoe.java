@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemEmeraldHoe extends HoeGeneric {
 
+    public static ItemEmeraldHoe instance = new ItemEmeraldHoe();
+
     public ItemEmeraldHoe() {
         super(UtilToolArmor.emerald);
         this.setUnlocalizedName(Strings.ToolStrings.emeraldHoe);

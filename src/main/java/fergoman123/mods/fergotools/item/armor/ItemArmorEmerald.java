@@ -13,6 +13,11 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorEmerald extends ItemArmorFT {
 
+    public static ItemArmorEmerald instanceHelmet = new ItemArmorEmerald(ArmorType.HELMET);
+    public static ItemArmorEmerald instanceChest = new ItemArmorEmerald(ArmorType.CHEST);
+    public static ItemArmorEmerald instanceLegs = new ItemArmorEmerald(ArmorType.LEGS);
+    public static ItemArmorEmerald instanceBoots = new ItemArmorEmerald(ArmorType.BOOTS);
+
     public ItemArmorEmerald(ArmorType type)
     {
         super("emerald",  UtilToolArmor.emeraldArmor, type);

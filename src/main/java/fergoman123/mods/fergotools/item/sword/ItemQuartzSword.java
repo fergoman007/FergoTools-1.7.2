@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemQuartzSword extends SwordGeneric {
 
+    public static ItemQuartzSword instance = new ItemQuartzSword();
+
     public ItemQuartzSword() {
         super(UtilToolArmor.quartz);
         this.setUnlocalizedName(Strings.ToolStrings.quartzSword);

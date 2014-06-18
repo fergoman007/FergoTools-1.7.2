@@ -11,6 +11,11 @@ import net.minecraft.item.ItemStack;
 
 public class ItemArmorQuartz extends ItemArmorFT{
 
+    public static ItemArmorQuartz instanceHelmet = new ItemArmorQuartz(ArmorType.HELMET);
+    public static ItemArmorQuartz instanceChest = new ItemArmorQuartz(ArmorType.CHEST);
+    public static ItemArmorQuartz instanceLegs = new ItemArmorQuartz(ArmorType.LEGS);
+    public static ItemArmorQuartz instanceBoots = new ItemArmorQuartz(ArmorType.BOOTS);
+
     public ItemArmorQuartz(ArmorType type)
     {
         super("quartz", UtilToolArmor.quartzArmor ,type);

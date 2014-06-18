@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemLapisHoe extends HoeGeneric {
 
+    public static ItemLapisHoe instance = new ItemLapisHoe();
+
     public ItemLapisHoe() {
         super(UtilToolArmor.lapis);
         this.setUnlocalizedName(Strings.ToolStrings.lapisHoe);

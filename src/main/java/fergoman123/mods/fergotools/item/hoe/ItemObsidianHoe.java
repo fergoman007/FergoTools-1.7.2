@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemObsidianHoe extends HoeGeneric {
 
+    public static ItemObsidianHoe instance = new ItemObsidianHoe();
+
     public ItemObsidianHoe() {
         super(UtilToolArmor.obsidian);
         this.setUnlocalizedName(Strings.ToolStrings.obsidianHoe);

@@ -10,6 +10,11 @@ import net.minecraft.item.ItemStack;
 
 public class ItemArmorGlowstone extends ItemArmorFT {
 
+    public static ItemArmorGlowstone instanceHelmet = new ItemArmorGlowstone(ArmorType.HELMET);
+    public static ItemArmorGlowstone instanceChest = new ItemArmorGlowstone(ArmorType.CHEST);
+    public static ItemArmorGlowstone instanceLegs = new ItemArmorGlowstone(ArmorType.LEGS);
+    public static ItemArmorGlowstone instanceBoots = new ItemArmorGlowstone(ArmorType.BOOTS);
+
     public ItemArmorGlowstone(ArmorType type)
     {
         super("glowstone", UtilToolArmor.glowstoneArmor, type);

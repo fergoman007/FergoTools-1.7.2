@@ -1,13 +1,12 @@
 package fergoman123.mods.fergotools.util;
 
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergoutil.block.IBlockFurnace;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 
-public abstract class BlockFurnaceFT extends BlockContainer implements IBlockFurnace{
+public abstract class BlockFurnaceFT extends BlockContainer{
 
 
     public BlockFurnaceFT(Material material) {

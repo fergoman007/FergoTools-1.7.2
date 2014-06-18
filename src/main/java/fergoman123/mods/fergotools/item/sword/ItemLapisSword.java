@@ -7,6 +7,7 @@ import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.item.ItemStack;
 
 public class ItemLapisSword extends SwordGeneric {
+    public static ItemLapisSword instance = new ItemLapisSword();
 
     public ItemLapisSword() {
         super(UtilToolArmor.lapis);

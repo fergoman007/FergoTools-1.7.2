@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 
 public class ItemSilkHoe extends HoeGeneric {
 
+    public static ItemSilkHoe instance = new ItemSilkHoe();
+
     public ItemSilkHoe()
     {
         super(UtilToolArmor.silk);

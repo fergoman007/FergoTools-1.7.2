@@ -4,6 +4,8 @@ import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.ItemFT;
 
 public class ItemEmeraldCrystal extends ItemFT{
+
+    public static ItemEmeraldCrystal instance = new ItemEmeraldCrystal();
     public ItemEmeraldCrystal()
     {
         super();

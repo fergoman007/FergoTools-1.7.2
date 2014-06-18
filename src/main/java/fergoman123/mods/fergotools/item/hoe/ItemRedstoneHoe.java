@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemRedstoneHoe extends HoeGeneric{
 
+    public static ItemRedstoneHoe instance = new ItemRedstoneHoe();
+
     public ItemRedstoneHoe()
     {
         super(UtilToolArmor.redstone);

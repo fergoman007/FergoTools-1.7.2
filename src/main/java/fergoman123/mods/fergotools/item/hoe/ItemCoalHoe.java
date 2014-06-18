@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemCoalHoe extends HoeGeneric {
 
+    public static ItemCoalHoe instance = new ItemCoalHoe();
+
     public ItemCoalHoe()
     {
         super(UtilToolArmor.coal);

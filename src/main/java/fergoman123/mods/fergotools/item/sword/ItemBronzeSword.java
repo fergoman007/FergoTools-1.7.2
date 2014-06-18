@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBronzeSword extends SwordGeneric {
 
+    public static ItemBronzeSword instance = new ItemBronzeSword();
+
     public ItemBronzeSword() {
         super(UtilToolArmor.bronze);
         this.setUnlocalizedName(Strings.ToolStrings.bronzeSword);

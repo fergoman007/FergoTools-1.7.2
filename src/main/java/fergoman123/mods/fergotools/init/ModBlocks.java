@@ -12,24 +12,24 @@ import net.minecraft.block.Block;
 
 public class ModBlocks{
 
-    public static final BlockFT oreObsidian = new BlockOreObsidian();
-    public static final BlockFT oreEmeraldCrystal = new BlockOreEmeraldCrystal();
-    public static final BlockFT oreLapisCrystal = new BlockOreLapisCrystal();
-    public static final BlockFT oreBronze = new BlockOreBronze();
-    public static final BlockFT oreAdamantium = new BlockOreAdamantium();
-    public static final BlockFT oreExperience = new BlockOreExperience();
-    public static final BlockFT oreRedstoneCrystal = new BlockOreRedstone();
+    public static final BlockFT oreObsidian = BlockOreObsidian.instance;
+    public static final BlockFT oreEmeraldCrystal = BlockOreEmeraldCrystal.instance;
+    public static final BlockFT oreLapisCrystal = BlockOreLapisCrystal.instance;
+    public static final BlockFT oreBronze = BlockOreBronze.instance;
+    public static final BlockFT oreAdamantium = BlockOreAdamantium.instance;
+    public static final BlockFT oreExperience = BlockOreExperience.instance;
+    public static final BlockFT oreRedstoneCrystal = BlockOreRedstoneCrystal.instance;
 
-    public static final BlockFT blockExperience = new BlockExperience();
-    public static final BlockFT blockObsidian = new BlockObsidianStorage();
-    public static final BlockFT blockEmeraldCrystal = new BlockEmeraldCrystal();
-    public static final BlockFT blockLapisCrystal = new BlockLapisCrystal();
-    public static final BlockFT blockBronze = new BlockBronze();
-    public static final BlockFT blockCoal = new BlockCoalStorage();
-    public static final BlockFT blockGlowstone = new BlockGlowstoneStorage();
-    public static final BlockFT blockAdamantium = new BlockAdamantium();
-    public static final BlockFT blockSilkGem = new BlockSilkGem();
-    public static final BlockFT blockRedstoneCrystal = new BlockRedstone();
+    public static final BlockFT blockExperience = BlockExperience.instance;
+    public static final BlockFT blockObsidian = BlockObsidianStorage.instance;
+    public static final BlockFT blockEmeraldCrystal = BlockEmeraldCrystal.instance;
+    public static final BlockFT blockLapisCrystal = BlockLapisCrystal.instance;
+    public static final BlockFT blockBronze = BlockBronze.instance;
+    public static final BlockFT blockCoal = BlockCoalStorage.instance;
+    public static final BlockFT blockGlowstone = BlockGlowstoneStorage.instance;
+    public static final BlockFT blockAdamantium = BlockAdamantium.instance;
+    public static final BlockFT blockSilkGem = BlockSilkGem.instance;
+    public static final BlockFT blockRedstoneCrystal = BlockRedstoneCrystal.instance;
 
     public static final Block quartzFurnaceIdle = new BlockQuartzFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.quartzFurnaceIdle);
     public static final Block obsidianFurnaceIdle = new BlockObsidianFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.obsidianFurnaceIdle);

@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class BlockAdamantium extends BlockFT{
 
+    public static BlockAdamantium instance = new BlockAdamantium();
+
     public BlockAdamantium()
     {
         super(Material.iron);

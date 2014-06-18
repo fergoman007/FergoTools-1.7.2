@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class BlockOreAdamantium extends BlockFT{
 
+    public static BlockOreAdamantium instance = new BlockOreAdamantium();
+
     public BlockOreAdamantium() {
         super(Material.rock);
         this.setBlockName(Strings.BlockStrings.oreAdamantium);

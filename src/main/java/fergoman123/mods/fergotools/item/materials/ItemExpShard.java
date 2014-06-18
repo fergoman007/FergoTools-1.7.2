@@ -11,6 +11,8 @@ import java.util.Random;
 
 public class ItemExpShard extends ItemFT {
 
+    public static ItemExpShard instance = new ItemExpShard();
+
     private final Random rand = new Random();
 
     public ItemExpShard() {

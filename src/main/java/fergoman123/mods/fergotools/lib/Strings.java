@@ -201,17 +201,20 @@ public class Strings {
 
     public static class GuiStrings
     {
-        public static final String containerQuartzFurnace = "container.FergoTools:quartzFurnace";
-        public static final String containerObsidianFurnace = "container.FergoTools:obsidianFurnace";
-        public static final String containerEmeraldCrystalFurnace = "container.FergoTools:emeraldCrystalFurnace";
-        public static final String containerLapisCrystalFurnace = "container.FergoTools:lapisCrystalFurnace";
-        public static final String containerBronzeFurnace = "container.FergoTools:bronzeFurnace";
-        public static final String containerCoalFurnace = "container.FergoTools:coalFurnace";
-        public static final String containerGlowstoneFurnace = "container.FergoTools:glowstoneFurnace";
-        public static final String containerAdamantiumFurnace = "container.FergoTools:adamantiumFurnace";
-        public static final String containerSilkFurnace = "container.FergoTools:silkFurnace";
-        public static final String containerRedstoneFurnace = "container.FergoTools:redstoneFurnace";
-        public static final String containerMacerator = "container.FergoTools:macerator";
+        public static final String modPrefix = Reference.textureLoc;
+        public static final String containerPrefix = "container.";
+
+        public static final String containerQuartzFurnace = containerPrefix + modPrefix + "quartzFurnace";
+        public static final String containerObsidianFurnace = containerPrefix + modPrefix + "obsidianFurnace";
+        public static final String containerEmeraldCrystalFurnace = containerPrefix + modPrefix + "emeraldCrystalFurnace";
+        public static final String containerLapisCrystalFurnace = containerPrefix + modPrefix + "lapisCrystalFurnace";
+        public static final String containerBronzeFurnace = containerPrefix + modPrefix + "bronzeFurnace";
+        public static final String containerCoalFurnace = containerPrefix + modPrefix + "coalFurnace";
+        public static final String containerGlowstoneFurnace = containerPrefix + modPrefix + "glowstoneFurnace";
+        public static final String containerAdamantiumFurnace = containerPrefix + modPrefix + "adamantiumFurnace";
+        public static final String containerSilkFurnace = containerPrefix + modPrefix + "silkFurnace";
+        public static final String containerRedstoneFurnace = containerPrefix + modPrefix + "redstoneFurnace";
+        public static final String containerMacerator = containerPrefix + modPrefix + "macerator";
 
         public static final String containerInventory = "container.inventory";
 

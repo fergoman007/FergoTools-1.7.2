@@ -23,6 +23,8 @@ import static cpw.mods.fml.relauncher.Side.CLIENT;
 
 public  class ItemEmeraldBow extends ItemBowFT {
 
+    public static ItemEmeraldBow instance = new ItemEmeraldBow();
+
     public static final String[] pullArray = new String[] {"_1", "_2", "_3"};
 
     @SideOnly(CLIENT)

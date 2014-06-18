@@ -13,6 +13,11 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorCoal extends ItemArmorFT {
 
+    public static ItemArmorCoal instanceHelmet = new ItemArmorCoal(ArmorType.HELMET);
+    public static ItemArmorCoal instanceChest = new ItemArmorCoal(ArmorType.CHEST);
+    public static ItemArmorCoal instanceLegs = new ItemArmorCoal(ArmorType.LEGS);
+    public static ItemArmorCoal instanceBoots = new ItemArmorCoal(ArmorType.BOOTS);
+
     public ItemArmorCoal(ArmorType type)
     {
         super("coal", UtilToolArmor.coalArmor, type);

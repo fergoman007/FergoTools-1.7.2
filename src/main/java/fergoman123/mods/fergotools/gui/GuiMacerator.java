@@ -3,8 +3,8 @@ package fergoman123.mods.fergotools.gui;
 import fergoman123.mods.fergotools.gui.container.ContainerMacerator;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.tileentity.TileEntityMacerator;
+import fergoman123.mods.fergoutil.helper.GuiHelper;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import org.lwjgl.opengl.GL11;
 
@@ -28,9 +28,9 @@ public class GuiMacerator extends GuiContainer{
     @Override
     public void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-        String s = this.macerator.hasCustomInventoryName() ? this.macerator.getInventoryName() : I18n.format(this.macerator.getInventoryName(), obj);
+        String s = this.macerator.hasCustomInventoryName() ? this.macerator.getInventoryName() : GuiHelper.format(this.macerator.getInventoryName());
         fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-        fontRendererObj.drawString(I18n.format(Strings.GuiStrings.containerInventory, obj), 8, ySize - 96 + 2, 4210752);
+        fontRendererObj.drawString(GuiHelper.format(Strings.GuiStrings.containerInventory), 8, ySize - 96 + 2, 4210752);
     }
 
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)

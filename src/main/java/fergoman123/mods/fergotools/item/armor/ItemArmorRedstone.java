@@ -11,8 +11,12 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Fergoman123 on 14/04/2014.
  */
-public class ItemArmorRedstone extends ItemArmorFT
-{
+public class ItemArmorRedstone extends ItemArmorFT{
+
+    public static ItemArmorRedstone instanceHelmet = new ItemArmorRedstone(ArmorType.HELMET);
+    public static ItemArmorRedstone instanceChest = new ItemArmorRedstone(ArmorType.CHEST);
+    public static ItemArmorRedstone instanceLegs = new ItemArmorRedstone(ArmorType.LEGS);
+    public static ItemArmorRedstone instanceBoots = new ItemArmorRedstone(ArmorType.BOOTS);
 
     public ItemArmorRedstone(ArmorType type) {
         super("redstone", UtilToolArmor.redstoneArmor, type);

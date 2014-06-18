@@ -14,6 +14,8 @@ import java.util.Random;
  */
 public class BlockOreEmeraldCrystal extends BlockFT{
 
+    public static BlockOreEmeraldCrystal instance = new BlockOreEmeraldCrystal();
+
     public BlockOreEmeraldCrystal()
     {
         super(Material.rock);

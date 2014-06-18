@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class BlockBronze extends BlockFT{
 
+    public static BlockBronze instance = new BlockBronze();
+
     public BlockBronze()
     {
         super(Material.iron);

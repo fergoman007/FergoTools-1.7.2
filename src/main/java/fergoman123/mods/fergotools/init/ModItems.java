@@ -17,14 +17,8 @@ import fergoman123.mods.fergotools.util.ItemBowFT;
 import fergoman123.mods.fergotools.util.ItemFT;
 import fergoman123.mods.fergotools.util.tool.*;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
-import fergoman123.mods.fergoutil.item.ArmorType;
 
 public class ModItems{
-
-    public static ArmorType helmet = ArmorType.HELMET;
-    public static ArmorType chestplate = ArmorType.CHEST;
-    public static ArmorType leggings = ArmorType.LEGS;
-    public static ArmorType boots = ArmorType.BOOTS;
 
     public static final PickaxeGeneric quartzPickaxe = ItemQuartzPickaxe.instance;
     public static final PickaxeGeneric obsidianPickaxe = ItemObsidianPickaxe.instance;
@@ -59,83 +53,83 @@ public class ModItems{
     public static final AxeGeneric silkAxe = ItemSilkAxe.instance;
     public static final AxeGeneric redstoneAxe = ItemRedstoneAxe.instance;
 
-    public static final HoeGeneric quartzHoe = ItemQuartzHoe;
-    public static final HoeGeneric obsidianHoe = ItemObsidianHoe;
-    public static final HoeGeneric emeraldHoe = ItemEmeraldHoe;
-    public static final HoeGeneric lapisHoe = ItemLapisHoe;
-    public static final HoeGeneric bronzeHoe = ItemBronzeHoe;
-    public static final HoeGeneric coalHoe = ItemCoalHoe;
-    public static final HoeGeneric glowstoneHoe = ItemGlowstoneHoe;
-    public static final HoeGeneric adamantiumHoe = ItemAdamantiumHoe;
-    public static final HoeGeneric silkHoe = ItemSilkHoe;
-    public static final HoeGeneric redstoneHoe = ItemRedstoneHoe;
+    public static final HoeGeneric quartzHoe = ItemQuartzHoe.instance;
+    public static final HoeGeneric obsidianHoe = ItemObsidianHoe.instance;
+    public static final HoeGeneric emeraldHoe = ItemEmeraldHoe.instance;
+    public static final HoeGeneric lapisHoe = ItemLapisHoe.instance;
+    public static final HoeGeneric bronzeHoe = ItemBronzeHoe.instance;
+    public static final HoeGeneric coalHoe = ItemCoalHoe.instance;
+    public static final HoeGeneric glowstoneHoe = ItemGlowstoneHoe.instance;
+    public static final HoeGeneric adamantiumHoe = ItemAdamantiumHoe.instance;
+    public static final HoeGeneric silkHoe = ItemSilkHoe.instance;
+    public static final HoeGeneric redstoneHoe = ItemRedstoneHoe.instance;
 
-    public static final SwordGeneric quartzSword = ItemQuartzSword;
-    public static final SwordGeneric obsidianSword = ItemObsidianSword;
-    public static final SwordGeneric emeraldSword = ItemEmeraldSword;
-    public static final SwordGeneric lapisSword = ItemLapisSword;
-    public static final SwordGeneric bronzeSword = ItemBronzeSword;
-    public static final SwordGeneric coalSword = ItemCoalSword;
-    public static final SwordGeneric glowstoneSword = ItemGlowstoneSword;
-    public static final SwordGeneric adamantiumSword = ItemAdamantiumSword;
-    public static final SwordGeneric silkSword = ItemSilkSword;
-    public static final SwordGeneric redstoneSword = ItemRedstoneSword;
+    public static final SwordGeneric quartzSword = ItemQuartzSword.instance;
+    public static final SwordGeneric obsidianSword = ItemObsidianSword.instance;
+    public static final SwordGeneric emeraldSword = ItemEmeraldSword.instance;
+    public static final SwordGeneric lapisSword = ItemLapisSword.instance;
+    public static final SwordGeneric bronzeSword = ItemBronzeSword.instance;
+    public static final SwordGeneric coalSword = ItemCoalSword.instance;
+    public static final SwordGeneric glowstoneSword = ItemGlowstoneSword.instance;
+    public static final SwordGeneric adamantiumSword = ItemAdamantiumSword.instance;
+    public static final SwordGeneric silkSword = ItemSilkSword.instance;
+    public static final SwordGeneric redstoneSword = ItemRedstoneSword.instance;
 
-    public static final ItemFT obsidianIngot = ItemObsidianIngot;
-    public static final ItemFT emeraldCrystal = ItemEmeraldCrystal;
-    public static final ItemFT lapisCrystal = ItemLapisCrystal;
-    public static final ItemFT bronzeIngot = ItemBronzeIngot;
-    public static final ItemFT coalIngot = ItemCoalIngot;
-    public static final ItemFT glowstoneIngot = ItemGlowstoneIngot;
-    public static final ItemFT adamantiumIngot = ItemAdamantiumIngot;
-    public static final ItemFT expShard = ItemExpShard;
-    public static final ItemFT silkGem = ItemSilkGem;
-    public static final ItemFT redstoneCrystal = ItemRedstoneCrystal;
+    public static final ItemFT obsidianIngot = ItemObsidianIngot.instance;
+    public static final ItemFT emeraldCrystal = ItemEmeraldCrystal.instance;
+    public static final ItemFT lapisCrystal = ItemLapisCrystal.instance;
+    public static final ItemFT bronzeIngot = ItemBronzeIngot.instance;
+    public static final ItemFT coalIngot = ItemCoalIngot.instance;
+    public static final ItemFT glowstoneIngot = ItemGlowstoneIngot.instance;
+    public static final ItemFT adamantiumIngot = ItemAdamantiumIngot.instance;
+    public static final ItemFT expShard = ItemExpShard.instance;
+    public static final ItemFT silkGem = ItemSilkGem.instance;
+    public static final ItemFT redstoneCrystal = ItemRedstoneCrystal.instance;
 
-    public static final ItemArmorFT quartzHelmet = ItemArmorQuartz(helmet);
-    public static final ItemArmorFT obsidianHelmet = ItemArmorObsidian(helmet);
-    public static final ItemArmorFT emeraldHelmet = ItemArmorEmerald(helmet);
-    public static final ItemArmorFT lapisHelmet = ItemArmorLapis(helmet);
-    public static final ItemArmorFT bronzeHelmet = ItemArmorBronze(helmet);
-    public static final ItemArmorFT coalHelmet = ItemArmorCoal(helmet);
-    public static final ItemArmorFT glowstoneHelmet = ItemArmorGlowstone(helmet);
-    public static final ItemArmorFT redstoneHelmet = ItemArmorRedstone(helmet);
+    public static final ItemArmorFT quartzHelmet = ItemArmorQuartz.instanceHelmet;
+    public static final ItemArmorFT obsidianHelmet = ItemArmorObsidian.instanceHelmet;
+    public static final ItemArmorFT emeraldHelmet = ItemArmorEmerald.instanceHelmet;
+    public static final ItemArmorFT lapisHelmet = ItemArmorLapis.instanceHelmet;
+    public static final ItemArmorFT bronzeHelmet = ItemArmorBronze.instanceHelmet;
+    public static final ItemArmorFT coalHelmet = ItemArmorCoal.instanceHelmet;
+    public static final ItemArmorFT glowstoneHelmet = ItemArmorGlowstone.instanceHelmet;
+    public static final ItemArmorFT redstoneHelmet = ItemArmorRedstone.instanceHelmet;
 
-    public static final ItemArmorFT quartzChestplate = ItemArmorQuartz(chestplate);
-    public static final ItemArmorFT obsidianChestplate = ItemArmorObsidian(chestplate);
-    public static final ItemArmorFT emeraldChestplate = ItemArmorEmerald(chestplate);
-    public static final ItemArmorFT lapisChestplate = ItemArmorLapis(chestplate);
-    public static final ItemArmorFT bronzeChestplate = ItemArmorBronze(chestplate);
-    public static final ItemArmorFT coalChestplate = ItemArmorCoal(chestplate);
-    public static final ItemArmorFT glowstoneChestplate = ItemArmorGlowstone(chestplate);
-    public static final ItemArmorFT redstoneChestplate = ItemArmorRedstone(chestplate);
+    public static final ItemArmorFT quartzChestplate = ItemArmorQuartz.instanceChest;
+    public static final ItemArmorFT obsidianChestplate = ItemArmorObsidian.instanceChest;
+    public static final ItemArmorFT emeraldChestplate = ItemArmorEmerald.instanceChest;
+    public static final ItemArmorFT lapisChestplate = ItemArmorLapis.instanceChest;
+    public static final ItemArmorFT bronzeChestplate = ItemArmorBronze.instanceChest;
+    public static final ItemArmorFT coalChestplate = ItemArmorCoal.instanceChest;
+    public static final ItemArmorFT glowstoneChestplate = ItemArmorGlowstone.instanceChest;
+    public static final ItemArmorFT redstoneChestplate = ItemArmorRedstone.instanceChest;
 
-    public static final ItemArmorFT quartzLeggings = ItemArmorQuartz(leggings);
-    public static final ItemArmorFT obsidianLeggings = ItemArmorObsidian(leggings);
-    public static final ItemArmorFT emeraldLeggings = ItemArmorEmerald(leggings);
-    public static final ItemArmorFT lapisLeggings = ItemArmorLapis(leggings);
-    public static final ItemArmorFT bronzeLeggings = ItemArmorBronze(leggings);
-    public static final ItemArmorFT coalLeggings = ItemArmorCoal(leggings);
-    public static final ItemArmorFT glowstoneLeggings = ItemArmorGlowstone(leggings);
-    public static final ItemArmorFT redstoneLeggings = ItemArmorRedstone(leggings);
+    public static final ItemArmorFT quartzLeggings = ItemArmorQuartz.instanceLegs;
+    public static final ItemArmorFT obsidianLeggings = ItemArmorObsidian.instanceLegs;
+    public static final ItemArmorFT emeraldLeggings = ItemArmorEmerald.instanceLegs;
+    public static final ItemArmorFT lapisLeggings = ItemArmorLapis.instanceLegs;
+    public static final ItemArmorFT bronzeLeggings = ItemArmorBronze.instanceLegs;
+    public static final ItemArmorFT coalLeggings = ItemArmorCoal.instanceLegs;
+    public static final ItemArmorFT glowstoneLeggings = ItemArmorGlowstone.instanceLegs;
+    public static final ItemArmorFT redstoneLeggings = ItemArmorRedstone.instanceLegs;
 
-    public static final ItemArmorFT quartzBoots = ItemArmorQuartz(boots);
-    public static final ItemArmorFT obsidianBoots = ItemArmorObsidian(boots);
-    public static final ItemArmorFT emeraldBoots = ItemArmorEmerald(boots);
-    public static final ItemArmorFT lapisBoots = ItemArmorLapis(boots);
-    public static final ItemArmorFT bronzeBoots = ItemArmorBronze(boots);
-    public static final ItemArmorFT coalBoots = ItemArmorCoal(boots);
-    public static final ItemArmorFT glowstoneBoots = ItemArmorGlowstone(boots);
-    public static final ItemArmorFT redstoneBoots = ItemArmorRedstone(boots);
+    public static final ItemArmorFT quartzBoots = ItemArmorQuartz.instanceBoots;
+    public static final ItemArmorFT obsidianBoots = ItemArmorObsidian.instanceBoots;
+    public static final ItemArmorFT emeraldBoots = ItemArmorEmerald.instanceBoots;
+    public static final ItemArmorFT lapisBoots = ItemArmorLapis.instanceBoots;
+    public static final ItemArmorFT bronzeBoots = ItemArmorBronze.instanceBoots;
+    public static final ItemArmorFT coalBoots = ItemArmorCoal.instanceBoots;
+    public static final ItemArmorFT glowstoneBoots = ItemArmorGlowstone.instanceBoots;
+    public static final ItemArmorFT redstoneBoots = ItemArmorRedstone.instanceBoots;
 
-    public static final ItemBowFT quartzBow = ItemQuartzBow;
-    public static final ItemBowFT obsidianBow = ItemObsidianBow;
-    public static final ItemBowFT emeraldBow = ItemEmeraldBow;
-    public static final ItemBowFT lapisBow = ItemLapisBow;
-    public static final ItemBowFT bronzeBow = ItemBronzeBow;
-    public static final ItemBowFT coalBow = ItemCoalBow;
-    public static final ItemBowFT glowstoneBow = ItemGlowstoneBow;
-    public static final ItemBowFT adamantiumBow = ItemAdamantiumBow;
+    public static final ItemBowFT quartzBow = ItemQuartzBow.instance;
+    public static final ItemBowFT obsidianBow = ItemObsidianBow.instance;
+    public static final ItemBowFT emeraldBow = ItemEmeraldBow.instance;
+    public static final ItemBowFT lapisBow = ItemLapisBow.instance;
+    public static final ItemBowFT bronzeBow = ItemBronzeBow.instance;
+    public static final ItemBowFT coalBow = ItemCoalBow.instance;
+    public static final ItemBowFT glowstoneBow = ItemGlowstoneBow.instance;
+    public static final ItemBowFT adamantiumBow = ItemAdamantiumBow.instance;
 
     public static void init()
 	{

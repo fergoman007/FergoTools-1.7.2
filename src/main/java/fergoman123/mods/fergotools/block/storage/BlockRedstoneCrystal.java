@@ -11,9 +11,11 @@ import java.util.Random;
 /**
  * Created by Fergoman123 on 14/04/2014.
  */
-public class BlockRedstone extends BlockFT{
+public class BlockRedstoneCrystal extends BlockFT{
 
-    public BlockRedstone()
+    public static BlockRedstoneCrystal instance = new BlockRedstoneCrystal();
+
+    public BlockRedstoneCrystal()
     {
         super(Material.iron);
         this.setBlockName(Strings.BlockStrings.blockRedstoneCrystal);

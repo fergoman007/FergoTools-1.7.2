@@ -14,6 +14,8 @@ import net.minecraft.world.World;
  */
 public class ItemSilkSword extends SwordGeneric {
 
+    public static ItemSilkSword instance = new ItemSilkSword();
+
     public ItemSilkSword() {
         super(UtilToolArmor.silk);
         this.setUnlocalizedName(Strings.ToolStrings.silkSword);

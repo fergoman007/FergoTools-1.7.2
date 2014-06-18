@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemRedstoneSword extends SwordGeneric {
 
+    public static ItemRedstoneSword instance = new ItemRedstoneSword();
+
     public ItemRedstoneSword()
     {
         super(UtilToolArmor.redstone);

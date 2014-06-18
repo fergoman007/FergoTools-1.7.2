@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class BlockObsidianStorage extends BlockFT{
 
+    public static BlockObsidianStorage instance = new BlockObsidianStorage();
+
     public BlockObsidianStorage()
     {
         super(Material.iron);

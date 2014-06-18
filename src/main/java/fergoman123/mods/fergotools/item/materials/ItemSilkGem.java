@@ -5,6 +5,8 @@ import fergoman123.mods.fergotools.util.ItemFT;
 
 public class ItemSilkGem extends ItemFT{
 
+    public static ItemSilkGem instance = new ItemSilkGem();
+
     public ItemSilkGem()
     {
         super();

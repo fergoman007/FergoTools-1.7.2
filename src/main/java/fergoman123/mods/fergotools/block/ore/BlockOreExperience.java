@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class BlockOreExperience extends BlockFT{
 
+    public static BlockOreExperience instance = new BlockOreExperience();
+
     public BlockOreExperience()
     {
         super();

@@ -13,6 +13,11 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorObsidian extends ItemArmorFT {
 
+    public static ItemArmorObsidian instanceHelmet = new ItemArmorObsidian(ArmorType.HELMET);
+    public static ItemArmorObsidian instanceChest = new ItemArmorObsidian(ArmorType.CHEST);
+    public static ItemArmorObsidian instanceLegs = new ItemArmorObsidian(ArmorType.LEGS);
+    public static ItemArmorObsidian instanceBoots = new ItemArmorObsidian(ArmorType.BOOTS);
+
     public ItemArmorObsidian(ArmorType type) {
         super("obsidian", UtilToolArmor.obsidianArmor, type);
     }

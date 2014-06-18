@@ -11,6 +11,8 @@ import java.util.List;
 
 public class ItemAdamantiumHoe extends HoeGeneric {
 
+    public static ItemAdamantiumHoe instance = new ItemAdamantiumHoe();
+
     public ItemAdamantiumHoe() {
         super(UtilToolArmor.adamantium);
         this.setUnlocalizedName(Strings.ToolStrings.adamantiumHoe);

@@ -13,6 +13,11 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorLapis extends ItemArmorFT {
 
+    public static ItemArmorLapis instanceHelmet = new ItemArmorLapis(ArmorType.HELMET);
+    public static ItemArmorLapis instanceChest = new ItemArmorLapis(ArmorType.CHEST);
+    public static ItemArmorLapis instanceLegs = new ItemArmorLapis(ArmorType.LEGS);
+    public static ItemArmorLapis instanceBoots = new ItemArmorLapis(ArmorType.BOOTS);
+
     public ItemArmorLapis(ArmorType type)
     {
         super("lapis", UtilToolArmor.lapisArmor, type);

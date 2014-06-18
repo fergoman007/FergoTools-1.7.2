@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class BlockGlowstoneStorage extends BlockFT{
 
+    public static BlockGlowstoneStorage instance = new BlockGlowstoneStorage();
+
     public BlockGlowstoneStorage()
     {
         super(Material.iron);

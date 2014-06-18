@@ -11,6 +11,8 @@ import java.util.Random;
  */
 public class BlockOreBronze extends BlockFT{
 
+    public static BlockOreBronze instance = new BlockOreBronze();
+
     public BlockOreBronze()
     {
         super();

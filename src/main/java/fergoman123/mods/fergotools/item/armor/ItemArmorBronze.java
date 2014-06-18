@@ -13,6 +13,11 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorBronze extends ItemArmorFT {
 
+    public static ItemArmorBronze instanceHelmet = new ItemArmorBronze(ArmorType.HELMET);
+    public static ItemArmorBronze instanceChest = new ItemArmorBronze(ArmorType.CHEST);
+    public static ItemArmorBronze instanceLegs = new ItemArmorBronze(ArmorType.LEGS);
+    public static ItemArmorBronze instanceBoots = new ItemArmorBronze(ArmorType.BOOTS);
+
     public ItemArmorBronze(ArmorType type)
     {
         super("bronze", UtilToolArmor.bronzeArmor, type);

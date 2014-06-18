@@ -8,6 +8,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemObsidianSword extends SwordGeneric {
 
+    public static ItemObsidianSword instance = new ItemObsidianSword();
+
     public ItemObsidianSword() {
         super(UtilToolArmor.obsidian);
         this.setUnlocalizedName(Strings.ToolStrings.obsidianSword);
