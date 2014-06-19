@@ -4,6 +4,7 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.network.IGuiHandler;
 import fergoman123.mods.fergotools.gui.*;
 import fergoman123.mods.fergotools.gui.container.*;
+import fergoman123.mods.fergotools.lib.ints.GuiInts;
 import fergoman123.mods.fergotools.tileentity.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -22,17 +23,17 @@ public class ClientProxy extends CommonProxy implements IGuiHandler{
         InventoryPlayer inventory = player.inventory;
 
             switch(ID) {
-                case 0:return new ContainerQuartzFurnace(inventory, (TileEntityQuartzFurnace)entity);
-                case 1:return new ContainerObsidianFurnace(inventory, (TileEntityObsidianFurnace)entity);
-                case 2:return new ContainerEmeraldCrystalFurnace(inventory, (TileEntityEmeraldCrystalFurnace)entity);
-                case 3:return new ContainerLapisCrystalFurnace(inventory, (TileEntityLapisCrystalFurnace)entity);
-                case 4:return new ContainerBronzeFurnace(inventory, (TileEntityBronzeFurnace)entity);
-                case 5:return new ContainerCoalFurnace(inventory, (TileEntityCoalFurnace)entity);
-                case 6:return new ContainerGlowstoneFurnace(inventory, (TileEntityGlowstoneFurnace)entity);
-                case 7:return new ContainerAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace)entity);
-                case 8:return new ContainerSilkFurnace(inventory, (TileEntitySilkFurnace)entity);
-                case 9:return new ContainerRedstoneFurnace(inventory, (TileEntityRedstoneFurnace)entity);
-                case 10:return new ContainerMacerator(inventory, (TileEntityMacerator)entity);
+                case GuiInts.quartzFurnaceId:return new ContainerQuartzFurnace(inventory, (TileEntityQuartzFurnace)entity);
+                case GuiInts.obsidianFurnaceId:return new ContainerObsidianFurnace(inventory, (TileEntityObsidianFurnace)entity);
+                case GuiInts.emeraldCrystalFurnaceId:return new ContainerEmeraldCrystalFurnace(inventory, (TileEntityEmeraldCrystalFurnace)entity);
+                case GuiInts.lapisCrystalFurnaceId:return new ContainerLapisCrystalFurnace(inventory, (TileEntityLapisCrystalFurnace)entity);
+//                case GuiInts.bronzeFurnaceId:return new ContainerBronzeFurnace(inventory, (TileEntityBronzeFurnace)entity);
+//                case GuiInts.coalFurnaceId:return new ContainerCoalFurnace(inventory, (TileEntityCoalFurnace)entity);
+//                case GuiInts.glowstoneFurnaceId:return new ContainerGlowstoneFurnace(inventory, (TileEntityGlowstoneFurnace)entity);
+//                case GuiInts.adamantiumFurnaceId:return new ContainerAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace)entity);
+//                case GuiInts.silkFurnaceId:return new ContainerSilkFurnace(inventory, (TileEntitySilkFurnace)entity);
+//                case GuiInts.redstoneFurnace:return new ContainerRedstoneFurnace(inventory, (TileEntityRedstoneFurnace)entity);
+//                case GuiInts.maceratorId:return new ContainerMacerator(inventory, (TileEntityMacerator)entity);
             }
         return null;
     }
@@ -43,17 +44,17 @@ public class ClientProxy extends CommonProxy implements IGuiHandler{
         InventoryPlayer inventory = player.inventory;
         switch (ID)
         {
-            case 0: return new GuiQuartzFurnace(inventory, (TileEntityQuartzFurnace)entity);
-            case 1: return new GuiObsidianFurnace(inventory, (TileEntityObsidianFurnace)entity);
-            case 2: return new GuiEmeraldCrystalFurnace(inventory, (TileEntityEmeraldCrystalFurnace)entity);
-            case 3: return new GuiLapisCrystalFurnace(inventory, (TileEntityLapisCrystalFurnace)entity);
-            case 4: return new GuiBronzeFurnace(inventory, (TileEntityBronzeFurnace)entity);
-            case 5: return new GuiCoalFurnace(inventory, (TileEntityCoalFurnace)entity);
-            case 6: return new GuiGlowstoneFurnace(inventory, (TileEntityGlowstoneFurnace)entity);
-            case 7: return new GuiAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace)entity);
-            case 8: return new GuiSilkFurnace(inventory, (TileEntitySilkFurnace)entity);
-            case 9: return new GuiRedstoneFurnace(inventory, (TileEntityRedstoneFurnace)entity);
-            case 10: return new GuiMacerator(inventory, (TileEntityMacerator)entity);
+            case GuiInts.quartzFurnaceId: return new GuiQuartzFurnace(inventory, (TileEntityQuartzFurnace)entity);
+            case GuiInts.obsidianFurnaceId: return new GuiObsidianFurnace(inventory, (TileEntityObsidianFurnace)entity);
+            case GuiInts.emeraldCrystalFurnaceId: return new GuiEmeraldCrystalFurnace(inventory, (TileEntityEmeraldCrystalFurnace)entity);
+            case GuiInts.lapisCrystalFurnaceId: return new GuiLapisCrystalFurnace(inventory, (TileEntityLapisCrystalFurnace)entity);
+//            case GuiInts.bronzeFurnaceId: return new GuiBronzeFurnace(inventory, (TileEntityBronzeFurnace)entity);
+//            case GuiInts.coalFurnaceId: return new GuiCoalFurnace(inventory, (TileEntityCoalFurnace)entity);
+//            case GuiInts.glowstoneFurnaceId: return new GuiGlowstoneFurnace(inventory, (TileEntityGlowstoneFurnace)entity);
+//            case GuiInts.adamantiumFurnaceId: return new GuiAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace)entity);
+//            case GuiInts.silkFurnaceId: return new GuiSilkFurnace(inventory, (TileEntitySilkFurnace)entity);
+//            case GuiInts.redstoneFurnace: return new GuiRedstoneFurnace(inventory, (TileEntityRedstoneFurnace)entity);
+//            case GuiInts.maceratorId: return new GuiMacerator(inventory, (TileEntityMacerator)entity);
         }
         return null;
     }

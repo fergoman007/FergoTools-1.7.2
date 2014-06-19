@@ -24,6 +24,6 @@ public class BlockOreAdamantium extends BlockFT{
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return UtilBlockItem.itemOreAdamantium;
+        return UtilBlockItem.oreAdamantium;
     }
 }

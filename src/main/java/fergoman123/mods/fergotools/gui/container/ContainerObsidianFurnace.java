@@ -180,4 +180,3 @@ public class ContainerObsidianFurnace extends Container
         return itemstack;
     }
 }
-

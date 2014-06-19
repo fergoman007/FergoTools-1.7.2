@@ -20,9 +20,10 @@ import fergoman123.mods.fergotools.packet.PacketPipeline;
 import fergoman123.mods.fergotools.proxy.CommonProxy;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergoutil.util.FergoMod;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.version, dependencies = ModInfo.dep)
-public class FergoTools {
+public class FergoTools extends FergoMod{
 
     public static final PacketPipeline packPipe = new PacketPipeline();
 	
@@ -55,7 +56,7 @@ public class FergoTools {
     }
 	
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent evt)
+	public void modsLoaded(FMLPostInitializationEvent evt)
     {
         LogHelper.info("Mod Loaded");
         packPipe.postInitialise();

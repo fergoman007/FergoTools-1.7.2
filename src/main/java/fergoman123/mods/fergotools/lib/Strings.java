@@ -202,19 +202,19 @@ public class Strings {
     public static class GuiStrings
     {
         public static final String modPrefix = Reference.textureLoc;
-        public static final String containerPrefix = "container.";
+        public static final String containerPrefix = "container." + modPrefix;
 
-        public static final String containerQuartzFurnace = containerPrefix + modPrefix + "quartzFurnace";
-        public static final String containerObsidianFurnace = containerPrefix + modPrefix + "obsidianFurnace";
-        public static final String containerEmeraldCrystalFurnace = containerPrefix + modPrefix + "emeraldCrystalFurnace";
-        public static final String containerLapisCrystalFurnace = containerPrefix + modPrefix + "lapisCrystalFurnace";
-        public static final String containerBronzeFurnace = containerPrefix + modPrefix + "bronzeFurnace";
-        public static final String containerCoalFurnace = containerPrefix + modPrefix + "coalFurnace";
-        public static final String containerGlowstoneFurnace = containerPrefix + modPrefix + "glowstoneFurnace";
-        public static final String containerAdamantiumFurnace = containerPrefix + modPrefix + "adamantiumFurnace";
-        public static final String containerSilkFurnace = containerPrefix + modPrefix + "silkFurnace";
-        public static final String containerRedstoneFurnace = containerPrefix + modPrefix + "redstoneFurnace";
-        public static final String containerMacerator = containerPrefix + modPrefix + "macerator";
+        public static final String containerQuartzFurnace = containerPrefix + "quartzFurnace";
+        public static final String containerObsidianFurnace = containerPrefix + "obsidianFurnace";
+        public static final String containerEmeraldCrystalFurnace = containerPrefix + "emeraldCrystalFurnace";
+        public static final String containerLapisCrystalFurnace = containerPrefix + "lapisCrystalFurnace";
+        public static final String containerBronzeFurnace = containerPrefix + "bronzeFurnace";
+        public static final String containerCoalFurnace = containerPrefix + "coalFurnace";
+        public static final String containerGlowstoneFurnace = containerPrefix + "glowstoneFurnace";
+        public static final String containerAdamantiumFurnace = containerPrefix + "adamantiumFurnace";
+        public static final String containerSilkFurnace = containerPrefix + "silkFurnace";
+        public static final String containerRedstoneFurnace = containerPrefix + "redstoneFurnace";
+        public static final String containerMacerator = containerPrefix + "macerator";
 
         public static final String containerInventory = "container.inventory";
 
@@ -225,8 +225,8 @@ public class Strings {
         public static final String redstoneFurnaceGuiLoc = Reference.dirGui + redstoneFurnaceGui;
         public static final String vanillaFurnaceTexture = "textures/gui/container/furnace" + png;
 
-        public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getResourceLocation(lapisFurnaceGuiLoc);
-        public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getResourceLocation(redstoneFurnaceGuiLoc);
+        public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(lapisFurnaceGuiLoc);
+        public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(redstoneFurnaceGuiLoc);
         public static final ResourceLocation vanillaFurnace = ResourceLocationHelper.getVanillaResourceLocation(vanillaFurnaceTexture);
     }
 
@@ -242,22 +242,6 @@ public class Strings {
         public static final String expShard = "expShard";
         public static final String silkGem = "silkGem";
         public static final String redstoneCrystal = "redstoneCrystal";
-
-        public static final String[] materials =
-                {
-                        ingotObsidian,//0
-                        emeraldCrystal,//1
-                        lapisCrystal,//2
-                        ingotBronze,//3
-                        ingotCoal,//4
-                        ingotGlowstone,//5
-                        ingotAdamantium,//6
-                        expShard,//7
-                        silkGem,//8
-                        redstoneCrystal//9
-                };
-
-        public static final String ignitor = "ignitor";
     }
 
     public static class MaterialStrings
@@ -382,13 +366,5 @@ public class Strings {
         public static final String redstoneSword = "redstoneSword";
 
         public static final String[] donator = {};
-    }
-
-    public static class NBT
-    {
-        public static final String UUID_MOST_SIG = "UUIDMostSig";
-        public static final String UUID_LEAST_SIG = "UUIDLeastSig";
-
-        public static final String bagOpen = "bagOpen";
     }
 }

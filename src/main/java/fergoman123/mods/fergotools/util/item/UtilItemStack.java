@@ -112,14 +112,14 @@ public class UtilItemStack {
 
     public static final ItemStack quartzFurnace = new ItemStack(ModBlocks.quartzFurnaceIdle);
     public static final ItemStack obsidianFurnace = new ItemStack(ModBlocks.obsidianFurnaceIdle);
-    public static final ItemStack emeraldCrystalFurnace = new ItemStack(ModBlocks.emeraldCrystalFurnaceIdle);
-    public static final ItemStack lapisCrystalFurnace = new ItemStack(ModBlocks.lapisCrystalFurnaceIdle);
-    public static final ItemStack bronzeFurnace = new ItemStack(ModBlocks.bronzeFurnaceIdle);
-    public static final ItemStack coalFurnace = new ItemStack(ModBlocks.coalFurnaceIdle);
-    public static final ItemStack glowstoneFurnace = new ItemStack(ModBlocks.glowstoneFurnaceIdle);
-    public static final ItemStack adamantiumFurnace = new ItemStack(ModBlocks.adamantiumFurnaceIdle);
-    public static final ItemStack silkFurnace = new ItemStack(ModBlocks.silkFurnaceIdle);
-    public static final ItemStack redstoneFurnace = new ItemStack(ModBlocks.redstoneFurnaceIdle);
+//    public static final ItemStack emeraldCrystalFurnace = new ItemStack(ModBlocks.emeraldCrystalFurnaceIdle);
+//    public static final ItemStack lapisCrystalFurnace = new ItemStack(ModBlocks.lapisCrystalFurnaceIdle);
+//    public static final ItemStack bronzeFurnace = new ItemStack(ModBlocks.bronzeFurnaceIdle);
+//    public static final ItemStack coalFurnace = new ItemStack(ModBlocks.coalFurnaceIdle);
+//    public static final ItemStack glowstoneFurnace = new ItemStack(ModBlocks.glowstoneFurnaceIdle);
+//    public static final ItemStack adamantiumFurnace = new ItemStack(ModBlocks.adamantiumFurnaceIdle);
+//    public static final ItemStack silkFurnace = new ItemStack(ModBlocks.silkFurnaceIdle);
+//    public static final ItemStack redstoneFurnace = new ItemStack(ModBlocks.redstoneFurnaceIdle);
 
 
     public static final ItemStack quartzHelmet = new ItemStack(ModItems.quartzHelmet);

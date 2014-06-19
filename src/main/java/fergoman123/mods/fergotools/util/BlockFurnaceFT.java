@@ -8,7 +8,6 @@ import net.minecraft.block.material.Material;
 
 public abstract class BlockFurnaceFT extends BlockContainer{
 
-
     public BlockFurnaceFT(Material material) {
         super(material);
         this.setHardness(3.5f);

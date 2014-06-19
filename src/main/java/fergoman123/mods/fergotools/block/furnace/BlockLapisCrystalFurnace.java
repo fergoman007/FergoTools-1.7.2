@@ -5,11 +5,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.tabs.Tabs;
-import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
+import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
 import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import net.minecraft.block.Block;
@@ -30,7 +28,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockQuartzFurnace extends BlockFurnaceFT{
+public class BlockLapisCrystalFurnace extends BlockFurnaceFT{
 
     private final Random rand = new Random();
     private final boolean isActive;
@@ -39,9 +37,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
     @SideOnly(Side.CLIENT)
     private IIcon[] icons = new IIcon[2];
 
-    public static Block instance = new BlockGlowstoneFurnac(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(Strings.FurnaceStrings.quartzFurnaceIdle);
-
-    public BlockQuartzFurnace(boolean isActive)
+    public BlockLapisCrystalFurnace(boolean isActive)
     {
         super(Material.rock);
         this.isActive = isActive;
@@ -49,7 +45,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return UtilBlockItem.itemQuartzFurnace;
+        return UtilBlockItem.itemLapisCrystalFurnace;
     }
 
     public void onBlockAdded(World world, int x, int y, int z)
@@ -97,9 +93,9 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(Textures.FurnaceTextures.quartzFurnaceSide);
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Textures.FurnaceTextures.quartzFurnaceActive : Textures.FurnaceTextures.quartzFurnaceIdle));
-        this.icons[1] = register.registerIcon(Textures.FurnaceTextures.quartzFurnaceSide);
+        this.blockIcon = register.registerIcon(Textures.BlockTextures.blockLapisCrystal);
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Textures.FurnaceTextures.lapisCrystalFurnaceActive : Textures.FurnaceTextures.lapisCrystalFurnaceIdle));
+        this.icons[1] = register.registerIcon(Textures.BlockTextures.blockLapisCrystal);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -110,10 +106,10 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
         }
         else if (!player.isSneaking())
         {
-            TileEntityQuartzFurnace furnace = (TileEntityQuartzFurnace)world.getTileEntity(x, y, z);
+            TileEntityLapisCrystalFurnace furnace = (TileEntityLapisCrystalFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.instance, GuiInts.quartzFurnaceId, world, x, y, z);
+                player.openGui(FergoTools.instance, GuiInts.lapisCrystalFurnaceId, world, x, y, z);
             }
             return true;
         }
@@ -123,7 +119,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
         }
     }
 
-    public static void updateQuartzFurnaceBlockState(boolean active, World world, int x, int y, int z)
+    public static void updateLapisFurnaceBlockState(boolean active, World world, int x, int y, int z)
     {
         int l = world.getBlockMetadata(x, y, z);
         TileEntity tile = world.getTileEntity(x, y, z);
@@ -131,11 +127,11 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
 
         if (active)
         {
-            world.setBlock(x, y, z, ModBlocks.quartzFurnaceActive);
+            world.setBlock(x, y, z, ModBlocks.lapisCrystalFurnaceActive);
         }
         else
         {
-            world.setBlock(x, y, z, ModBlocks.quartzFurnaceIdle);
+            world.setBlock(x, y, z, ModBlocks.lapisCrystalFurnaceIdle);
         }
 
         keepInventory = false;
@@ -150,12 +146,12 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
 
     public TileEntity createNewTileEntity(World world, int var)
     {
-        return new TileEntityQuartzFurnace();
+        return new TileEntityLapisCrystalFurnace();
     }
 
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack stack)
     {
-        int l = MathHelper.floor_double((double)(elb.rotationYaw * 4.0f / 360.0) + 0.5D) & 3;
+        int l = MathHelper.floor_double((double) (elb.rotationYaw * 4.0f / 360.0) + 0.5D) & 3;
 
         if (l == 0)
         {
@@ -179,7 +175,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
 
         if (stack.hasDisplayName())
         {
-            ((TileEntityQuartzFurnace)world.getTileEntity(x, y, z)).setGuiDisplayName(stack.getDisplayName());
+            ((TileEntityLapisCrystalFurnace)world.getTileEntity(x, y, z)).setGuiDisplayName(stack.getDisplayName());
         }
     }
 
@@ -187,7 +183,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
     {
         if (!keepInventory)
         {
-            TileEntityQuartzFurnace furnace = (TileEntityQuartzFurnace)world.getTileEntity(x, y, z);
+            TileEntityLapisCrystalFurnace furnace = (TileEntityLapisCrystalFurnace)world.getTileEntity(x, y, z);
 
             if (furnace != null)
             {
@@ -272,11 +268,11 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
 
     public int getComparatorInputOverride(World world, int x, int y, int z, int par5)
     {
-        return Container.calcRedstoneFromInventory((IInventory)world.getTileEntity(x, y, z));
+        return Container.calcRedstoneFromInventory((IInventory) world.getTileEntity(x, y, z));
     }
 
     public Item getItem(World world, int x, int y, int z)
     {
-        return UtilBlockItem.itemQuartzFurnace;
+        return UtilBlockItem.itemLapisCrystalFurnace;
     }
 }

@@ -12,9 +12,6 @@ import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-/**
- * Created by Fergoman123 on 25/03/2014.
- */
 public class ContainerEmeraldCrystalFurnace extends Container
 {
     private TileEntityEmeraldCrystalFurnace furnace;

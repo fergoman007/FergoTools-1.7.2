@@ -100,15 +100,15 @@ public class RecipeHandler {
 
         RecipeHelper.addRecipe(UtilItemStack.quartzFurnace, UtilRecipeList.quartzFurnace);
         RecipeHelper.addRecipe(UtilItemStack.obsidianFurnace, UtilRecipeList.obsidianFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.emeraldCrystalFurnace, UtilRecipeList.emeraldCrystalFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.lapisCrystalFurnace, UtilRecipeList.lapisCrystalFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.bronzeFurnace, UtilRecipeList.bronzeFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.coalFurnace, UtilRecipeList.coalFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.glowstoneFurnace, UtilRecipeList.glowstoneFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.silkFurnace, UtilRecipeList.silkFurnace);
-        RecipeHelper.addRecipe(UtilItemStack.redstoneFurnace, UtilRecipeList.redstoneFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.emeraldCrystalFurnace, UtilRecipeList.emeraldCrystalFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.lapisCrystalFurnace, UtilRecipeList.lapisCrystalFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.bronzeFurnace, UtilRecipeList.bronzeFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.coalFurnace, UtilRecipeList.coalFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.glowstoneFurnace, UtilRecipeList.glowstoneFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.silkFurnace, UtilRecipeList.silkFurnace);
+//        RecipeHelper.addRecipe(UtilItemStack.redstoneFurnace, UtilRecipeList.redstoneFurnace);
 
         RecipeHelper.addBlockSmelting(ModBlocks.oreObsidian, UtilItemStack.obsidianIngot, xp);
         RecipeHelper.addBlockSmelting(ModBlocks.oreEmeraldCrystal, UtilItemStack.emeraldCrystal, xp);
