@@ -15,96 +15,47 @@ public class Strings {
 
     public static final String adamantiumToolMessage = "NOTE: Extremely Overpowered!";
 
-    public static class ArmorLocalizer
-    {
-        public static final String quartzArmor = ft + dot + "quartzArmor";
-        public static final String obsidianArmor = ft + dot + "obsidianArmor";
-        public static final String emeraldArmor = ft + dot + "emeraldArmor";
-        public static final String lapisArmor = ft + dot + "lapisArmor";
-        public static final String bronzeArmor = ft + dot + "bronzeArmor";
-        public static final String coalArmor = ft + dot + "coalArmor";
-        public static final String glowstoneArmor = ft + dot + "glowstoneArmor";
-        public static final String redstoneArmor = ft + dot + "redstoneArmor";
-
-        public static final String ftQuartzArmor = quartzArmor + dot;
-        public static final String ftObsidianArmor = obsidianArmor + dot;
-        public static final String ftEmeraldArmor = emeraldArmor + dot;
-        public static final String ftLapisArmor = lapisArmor + dot;
-        public static final String ftBronzeArmor = bronzeArmor + dot;
-        public static final String ftCoalArmor = coalArmor + dot;
-        public static final String ftGlowstoneArmor = glowstoneArmor + dot;
-        public static final String ftRedstoneArmor = redstoneArmor + dot;
-
-        public static final String helmet = "helmet";
-        public static final String chest = "chest";
-        public static final String legs = "legs";
-        public static final String boots = "boots";
-        public static final String[] armorTypes = {helmet, chest, legs, boots};
-    }
-
-
     public static class ArmorStrings
     {
-        public static ArmorLocalizer locale;
+        public static final String quartzHelmet = "quartzHelmet";
+        public static final String quartzChest = "quartzChestplate";
+        public static final String quartzLegs = "quartzLeggings";
+        public static final String quartzBoots = "quartzBoots";
 
-        public static final String quartzHelmet = locale.ftQuartzArmor + locale.helmet;
-        public static final String quartzChest = locale.ftQuartzArmor + locale.chest;
-        public static final String quartzLegs = locale.ftQuartzArmor + locale.legs;
-        public static final String quartzBoots = locale.ftQuartzArmor + locale.boots;
+        public static final String obsidianHelmet = "obsidianHelmet";
+        public static final String obsidianChest = "obsidianChestplate";
+        public static final String obsidianLegs = "obsidianLeggings";
+        public static final String obsidianBoots = "obsidianBoots";
 
-        public static final String obsidianHelmet = locale.ftObsidianArmor + locale.helmet;
-        public static final String obsidianChest = locale.ftObsidianArmor + locale.chest;
-        public static final String obsidianLegs = locale.ftObsidianArmor + locale.legs;
-        public static final String obsidianBoots = locale.ftObsidianArmor + locale.boots;
+        public static final String emeraldHelmet = "emeraldHelmet";
+        public static final String emeraldChest = "emeraldChestplate";
+        public static final String emeraldLegs = "emeraldLeggings";
+        public static final String emeraldBoots = "emeraldBoots";
 
-        public static final String emeraldHelmet = locale.ftEmeraldArmor + locale.helmet;
-        public static final String emeraldChest = locale.ftEmeraldArmor + locale.chest;
-        public static final String emeraldLegs = locale.ftEmeraldArmor + locale.legs;
-        public static final String emeraldBoots = locale.ftEmeraldArmor + locale.boots;
+        public static final String lapisHelmet = "lapisHelmet";
+        public static final String lapisChest = "lapisChestplate";
+        public static final String lapisLegs = "lapisLeggings";
+        public static final String lapisBoots = "lapisBoots";
 
-        public static final String lapisHelmet = locale.ftLapisArmor + locale.helmet;
-        public static final String lapisChest = locale.ftLapisArmor + locale.chest;
-        public static final String lapisLegs = locale.ftLapisArmor + locale.legs;
-        public static final String lapisBoots = locale.ftLapisArmor + locale.boots;
+        public static final String bronzeHelmet = "bronzeHelmet";
+        public static final String bronzeChest = "bronzeChestplate";
+        public static final String bronzeLegs = "bronzeLeggings";
+        public static final String bronzeBoots = "bronzeBoots";
 
-        public static final String bronzeHelmet = locale.ftBronzeArmor + locale.helmet;
-        public static final String bronzeChest = locale.ftBronzeArmor + locale.chest;
-        public static final String bronzeLegs = locale.ftBronzeArmor + locale.legs;
-        public static final String bronzeBoots = locale.ftBronzeArmor + locale.boots;
+        public static final String coalHelmet = "coalHelmet";
+        public static final String coalChest = "coalChestplate";
+        public static final String coalLegs = "coalLeggings";
+        public static final String coalBoots = "coalBoots";
 
-        public static final String coalHelmet = locale.ftCoalArmor + locale.helmet;
-        public static final String coalChest = locale.ftCoalArmor + locale.chest;
-        public static final String coalLegs = locale.ftCoalArmor + locale.legs;
-        public static final String coalBoots = locale.ftCoalArmor + locale.boots;
+        public static final String glowstoneHelmet = "glowstoneHelmet";
+        public static final String glowstoneChest = "glowstoneChestplate";
+        public static final String glowstoneLegs = "glowstoneLeggings";
+        public static final String glowstoneBoots = "glowstoneBoots";
 
-        public static final String glowstoneHelmet = locale.ftGlowstoneArmor + locale.helmet;
-        public static final String glowstoneChest = locale.ftGlowstoneArmor + locale.chest;
-        public static final String glowstoneLegs = locale.ftGlowstoneArmor + locale.legs;
-        public static final String glowstoneBoots = locale.ftGlowstoneArmor + locale.boots;
-
-        public static final String redstoneHelmet = locale.ftRedstoneArmor + locale.helmet;
-        public static final String redstoneChest = locale.ftRedstoneArmor + locale.chest;
-        public static final String redstoneLegs = locale.ftRedstoneArmor + locale.legs;
-        public static final String redstoneBoots = locale.ftRedstoneArmor + locale.boots;
-    }
-
-    public static class ArmorKeys
-    {
-        public static final String[] quartzArmorKey = {"quartzHelmet", "quartzChestplate", "quartzLeggings", "quartzBoots"};
-
-        public static final String[] obsidianArmorKey = {"obsidianHelmet", "obsidianChestplate", "obsidianLeggings", "obsidianBoots"};
-
-        public static final String[] emeraldArmorKey = {"emeraldHelmet", "emeraldChestplate", "emeraldLeggings", "emeraldBoots"};
-
-        public static final String[] lapisArmorKey = {"lapisHelmet", "lapisChestplate", "lapisLeggings", "lapisBoots"};
-
-        public static final String[] bronzeArmorKey = {"bronzeHelmet", "bronzeChestplate", "bronzeLeggings", "bronzeBoots"};
-
-        public static final String[] coalArmorKey = {"coalHelmet", "coalChestplate", "coalLeggings", "coalBoots"};
-
-        public static final String[] glowstoneArmorKey = {"glowstoneHelmet", "glowstoneChestplate", "glowstoneLeggings", "glowstoneBoots"};
-
-        public static final String[] redstoneArmorKey = {"redstoneHelmet", "redstoneChestplate", "redstoneLeggings", "redstoneBoots"};
+        public static final String redstoneHelmet = "redstoneHelmet";
+        public static final String redstoneChest = "redstoneChestplate";
+        public static final String redstoneLegs = "redstoneLeggings";
+        public static final String redstoneBoots = "redstoneBoots";
     }
 
 
@@ -118,8 +69,6 @@ public class Strings {
         public static final String oreAdamantium = "oreAdamantium";
         public static final String oreRedstoneCrystal = "oreRedstoneCrystal";
 
-        public static final String[] ores = {oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreRedstoneCrystal};
-
         public static final String blockExperience = "blockExperience";
         public static final String blockObsidian = "blockObsidian";
         public static final String blockEmeraldCrystal = "blockEmeraldCrystal";
@@ -130,22 +79,6 @@ public class Strings {
         public static final String blockAdamantium = "blockAdamantium";
         public static final String blockSilkGem = "blockSilkGem";
         public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
-
-        public static final String[] blocks =
-                {
-                        blockExperience,
-                        blockObsidian,
-                        blockEmeraldCrystal,
-                        blockLapisCrystal,
-                        blockBronze,
-                        blockCoal,
-                        blockGlowstone,
-                        blockAdamantium,
-                        blockSilkGem,
-                        blockRedstoneCrystal
-                };
-
-        public static final String blockPortalFT = "blockPortalFT";
     }
 
     public static class BowStrings
