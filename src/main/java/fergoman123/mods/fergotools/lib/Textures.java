@@ -40,45 +40,48 @@ public class Textures {
         public static final String redstoneArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.redstoneToolMat + renderNum[0] + Strings.png;
         public static final String redstoneArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.redstoneToolMat + renderNum[1] + Strings.png;
 
-        public static final String quartzHelmet = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[0]];
-        public static final String quartzChestplate = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[1]];
-        public static final String quartzLeggings = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[2]];
-        public static final String quartzBoots = Reference.textureLoc + ArmorKeys.quartzArmorKey[armorSlots[3]];
+        public static final String adamantiumArmorRender1 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.adamantiumToolMat + renderNum[0] + Strings.png;
+        public static final String adamantiumArmorRender2 = Reference.textureLoc + Reference.dirArmor + MaterialStrings.adamantiumToolMat + renderNum[1] + Strings.png;
 
-        public static final String obsidianHelmet = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[0]];
-        public static final String obsidianChestplate = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[1]];
-        public static final String obsidianLeggings = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[2]];
-        public static final String obsidianBoots = Reference.textureLoc + ArmorKeys.obsidianArmorKey[armorSlots[3]];
+        public static final String quartzHelmet = Reference.textureLoc + ArmorStrings.quartzHelmet;
+        public static final String quartzChestplate = Reference.textureLoc + ArmorStrings.quartzChest;
+        public static final String quartzLeggings = Reference.textureLoc + ArmorStrings.quartzLegs;
+        public static final String quartzBoots = Reference.textureLoc + ArmorStrings.quartzBoots;
 
-        public static final String emeraldHelmet = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[0]];
-        public static final String emeraldChestplate = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[1]];
-        public static final String emeraldLeggings = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[2]];
-        public static final String emeraldBoots = Reference.textureLoc + ArmorKeys.emeraldArmorKey[armorSlots[3]];
+        public static final String obsidianHelmet = Reference.textureLoc + ArmorStrings.obsidianHelmet;
+        public static final String obsidianChestplate = Reference.textureLoc + ArmorStrings.obsidianChest;
+        public static final String obsidianLeggings = Reference.textureLoc + ArmorStrings.obsidianLegs;
+        public static final String obsidianBoots = Reference.textureLoc + ArmorStrings.obsidianBoots;
 
-        public static final String lapisHelmet = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[0]];
-        public static final String lapisChestplate = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[1]];
-        public static final String lapisLeggings = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[2]];
-        public static final String lapisBoots = Reference.textureLoc + ArmorKeys.lapisArmorKey[armorSlots[3]];
+        public static final String emeraldHelmet = Reference.textureLoc + ArmorStrings.emeraldHelmet;
+        public static final String emeraldChestplate = Reference.textureLoc + ArmorStrings.emeraldChest;
+        public static final String emeraldLeggings = Reference.textureLoc + ArmorStrings.emeraldLegs;
+        public static final String emeraldBoots = Reference.textureLoc + ArmorStrings.emeraldBoots;
 
-        public static final String bronzeHelmet = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[0]];
-        public static final String bronzeChestplate = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[1]];
-        public static final String bronzeLeggings = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[2]];
-        public static final String bronzeBoots = Reference.textureLoc + ArmorKeys.bronzeArmorKey[armorSlots[3]];
+        public static final String lapisHelmet = Reference.textureLoc + ArmorStrings.lapisHelmet;
+        public static final String lapisChestplate = Reference.textureLoc + ArmorStrings.lapisChest;
+        public static final String lapisLeggings = Reference.textureLoc + ArmorStrings.lapisLegs;
+        public static final String lapisBoots = Reference.textureLoc + ArmorStrings.lapisBoots;
 
-        public static final String coalHelmet = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[0]];
-        public static final String coalChestplate = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[1]];
-        public static final String coalLeggings = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[2]];
-        public static final String coalBoots = Reference.textureLoc + ArmorKeys.coalArmorKey[armorSlots[3]];
+        public static final String bronzeHelmet = Reference.textureLoc + ArmorStrings.bronzeHelmet;
+        public static final String bronzeChestplate = Reference.textureLoc + ArmorStrings.bronzeChest;
+        public static final String bronzeLeggings = Reference.textureLoc + ArmorStrings.bronzeLegs;
+        public static final String bronzeBoots = Reference.textureLoc + ArmorStrings.bronzeBoots;
 
-        public static final String glowstoneHelmet = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[0]];
-        public static final String glowstoneChestplate = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[1]];
-        public static final String glowstoneLeggings = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[2]];
-        public static final String glowstoneBoots = Reference.textureLoc + ArmorKeys.glowstoneArmorKey[armorSlots[3]];
+        public static final String coalHelmet = Reference.textureLoc + ArmorStrings.coalHelmet;
+        public static final String coalChestplate = Reference.textureLoc + ArmorStrings.coalChest;
+        public static final String coalLeggings = Reference.textureLoc + ArmorStrings.coalLegs;
+        public static final String coalBoots = Reference.textureLoc + ArmorStrings.coalBoots;
 
-        public static final String redstoneHelmet = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[0]];
-        public static final String redstoneChestplate = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[1]];
-        public static final String redstoneLeggings = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[2]];
-        public static final String redstoneBoots = Reference.textureLoc + ArmorKeys.redstoneArmorKey[armorSlots[3]];
+        public static final String glowstoneHelmet = Reference.textureLoc + ArmorStrings.glowstoneHelmet;
+        public static final String glowstoneChestplate = Reference.textureLoc + ArmorStrings.glowstoneChest;
+        public static final String glowstoneLeggings = Reference.textureLoc + ArmorStrings.glowstoneLegs;
+        public static final String glowstoneBoots = Reference.textureLoc + ArmorStrings.glowstoneBoots;
+
+        public static final String redstoneHelmet = Reference.textureLoc + ArmorStrings.redstoneHelmet;
+        public static final String redstoneChestplate = Reference.textureLoc + ArmorStrings.redstoneChest;
+        public static final String redstoneLeggings = Reference.textureLoc + ArmorStrings.redstoneLegs;
+        public static final String redstoneBoots = Reference.textureLoc + ArmorStrings.redstoneBoots;
     }
 
     public static class BlockTextures

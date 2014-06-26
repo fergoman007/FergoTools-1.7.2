@@ -1,10 +1,7 @@
 package fergoman123.mods.fergotools.helper;
 
-import fergoman123.mods.fergotools.lib.Strings.NBT;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-
-import java.util.UUID;
 
 public class NBTHelper {
 
@@ -26,23 +23,6 @@ public class NBTHelper {
         if (stack.stackTagCompound != null)
         {
             stack.stackTagCompound.removeTag(keyName);
-        }
-    }
-
-    public static boolean hasUUID(ItemStack stack)
-    {
-        return hasTag(stack, NBT.UUID_MOST_SIG) && hasTag(stack, NBT.UUID_LEAST_SIG);
-    }
-
-    public static void setUUID(ItemStack stack)
-    {
-        initNBTTagCompound(stack);
-
-        if (!hasTag(stack, NBT.UUID_MOST_SIG) && !hasTag(stack, NBT.UUID_LEAST_SIG))
-        {
-            UUID itemUUID = UUID.randomUUID();
-            setLong(stack, NBT.UUID_MOST_SIG, itemUUID.getMostSignificantBits());
-            setLong(stack, NBT.UUID_LEAST_SIG, itemUUID.getLeastSignificantBits());
         }
     }
 

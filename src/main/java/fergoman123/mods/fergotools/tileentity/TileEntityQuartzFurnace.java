@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.tileentity;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.block.furnace.BlockGlowstoneFurnac;
+import fergoman123.mods.fergotools.block.furnace.BlockQuartzFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import net.minecraft.block.Block;
@@ -235,7 +235,7 @@ public class TileEntityQuartzFurnace extends TileEntity implements ISidedInvento
             if (flag != this.burnTime > 0)
             {
                 flag1 = true;
-                BlockGlowstoneFurnac.updateQuartzFurnaceBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                BlockQuartzFurnace.updateQuartzFurnaceBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
 
@@ -296,7 +296,7 @@ public class TileEntityQuartzFurnace extends TileEntity implements ISidedInvento
         {
             Item item = stack.getItem();
 
-            if (item instanceof ItemBlock && BlockGlowstoneFurnac.getBlockFromItem(item) != null)
+            if (item instanceof ItemBlock && Block.getBlockFromItem(item) != null)
             {
                 Block block = Block.getBlockFromItem(item);
 

@@ -4,7 +4,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 
@@ -13,12 +13,12 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorEmerald extends ItemArmorFT {
 
-    public static ItemArmorEmerald instanceHelmet = new ItemArmorEmerald(ArmorType.HELMET);
-    public static ItemArmorEmerald instanceChest = new ItemArmorEmerald(ArmorType.CHEST);
-    public static ItemArmorEmerald instanceLegs = new ItemArmorEmerald(ArmorType.LEGS);
-    public static ItemArmorEmerald instanceBoots = new ItemArmorEmerald(ArmorType.BOOTS);
+    public static ItemArmorEmerald instanceHelmet = new ItemArmorEmerald(Armor.EnumArmorType.HELMET);
+    public static ItemArmorEmerald instanceChest = new ItemArmorEmerald(Armor.EnumArmorType.CHEST);
+    public static ItemArmorEmerald instanceLegs = new ItemArmorEmerald(Armor.EnumArmorType.LEGS);
+    public static ItemArmorEmerald instanceBoots = new ItemArmorEmerald(Armor.EnumArmorType.BOOTS);
 
-    public ItemArmorEmerald(ArmorType type)
+    public ItemArmorEmerald(Armor.EnumArmorType type)
     {
         super("emerald",  UtilToolArmor.emeraldArmor, type);
     }

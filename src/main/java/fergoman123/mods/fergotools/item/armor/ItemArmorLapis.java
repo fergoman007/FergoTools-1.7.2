@@ -4,7 +4,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 
@@ -13,12 +13,12 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorLapis extends ItemArmorFT {
 
-    public static ItemArmorLapis instanceHelmet = new ItemArmorLapis(ArmorType.HELMET);
-    public static ItemArmorLapis instanceChest = new ItemArmorLapis(ArmorType.CHEST);
-    public static ItemArmorLapis instanceLegs = new ItemArmorLapis(ArmorType.LEGS);
-    public static ItemArmorLapis instanceBoots = new ItemArmorLapis(ArmorType.BOOTS);
+    public static ItemArmorLapis instanceHelmet = new ItemArmorLapis(Armor.EnumArmorType.HELMET);
+    public static ItemArmorLapis instanceChest = new ItemArmorLapis(Armor.EnumArmorType.CHEST);
+    public static ItemArmorLapis instanceLegs = new ItemArmorLapis(Armor.EnumArmorType.LEGS);
+    public static ItemArmorLapis instanceBoots = new ItemArmorLapis(Armor.EnumArmorType.BOOTS);
 
-    public ItemArmorLapis(ArmorType type)
+    public ItemArmorLapis(Armor.EnumArmorType type)
     {
         super("lapis", UtilToolArmor.lapisArmor, type);
     }

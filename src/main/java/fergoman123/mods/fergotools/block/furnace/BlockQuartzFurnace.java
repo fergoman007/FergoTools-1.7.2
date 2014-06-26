@@ -5,10 +5,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
 import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
@@ -38,8 +36,6 @@ public class BlockQuartzFurnace extends BlockFurnaceFT{
 
     @SideOnly(Side.CLIENT)
     private IIcon[] icons = new IIcon[2];
-
-    public static Block instance = new BlockGlowstoneFurnac(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(Strings.FurnaceStrings.quartzFurnaceIdle);
 
     public BlockQuartzFurnace(boolean isActive)
     {

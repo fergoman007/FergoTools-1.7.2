@@ -5,7 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergoutil.helper.NameHelper;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -15,9 +15,9 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Fergoman123 on 02/06/2014.
  */
-public abstract class ItemArmorFT extends ItemArmor{
+public abstract class ItemArmorFT extends ItemArmor implements Armor.IArmor{
 
-    public ItemArmorFT(String armorName, ArmorMaterial material, ArmorType type)
+    public ItemArmorFT(String armorName, ArmorMaterial material, Armor.EnumArmorType type)
     {
         super(material, 1, type.ordinal());
         this.setCreativeTab(Tabs.tabFergoArmor);

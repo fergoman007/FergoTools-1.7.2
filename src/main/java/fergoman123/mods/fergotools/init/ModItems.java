@@ -94,6 +94,7 @@ public class ModItems{
     public static final ItemArmorFT coalHelmet = ItemArmorCoal.instanceHelmet;
     public static final ItemArmorFT glowstoneHelmet = ItemArmorGlowstone.instanceHelmet;
     public static final ItemArmorFT redstoneHelmet = ItemArmorRedstone.instanceHelmet;
+    public static final ItemArmorFT adamantiumHelmet = ItemArmorAdamantium.instanceHelmet;
 
     public static final ItemArmorFT quartzChestplate = ItemArmorQuartz.instanceChest;
     public static final ItemArmorFT obsidianChestplate = ItemArmorObsidian.instanceChest;
@@ -103,6 +104,7 @@ public class ModItems{
     public static final ItemArmorFT coalChestplate = ItemArmorCoal.instanceChest;
     public static final ItemArmorFT glowstoneChestplate = ItemArmorGlowstone.instanceChest;
     public static final ItemArmorFT redstoneChestplate = ItemArmorRedstone.instanceChest;
+    public static final ItemArmorFT adamantiumChestplate = ItemArmorAdamantium.instanceChest;
 
     public static final ItemArmorFT quartzLeggings = ItemArmorQuartz.instanceLegs;
     public static final ItemArmorFT obsidianLeggings = ItemArmorObsidian.instanceLegs;
@@ -112,6 +114,7 @@ public class ModItems{
     public static final ItemArmorFT coalLeggings = ItemArmorCoal.instanceLegs;
     public static final ItemArmorFT glowstoneLeggings = ItemArmorGlowstone.instanceLegs;
     public static final ItemArmorFT redstoneLeggings = ItemArmorRedstone.instanceLegs;
+    public static final ItemArmorFT adamantiumLeggings = ItemArmorAdamantium.instanceLegs;
 
     public static final ItemArmorFT quartzBoots = ItemArmorQuartz.instanceBoots;
     public static final ItemArmorFT obsidianBoots = ItemArmorObsidian.instanceBoots;
@@ -121,6 +124,7 @@ public class ModItems{
     public static final ItemArmorFT coalBoots = ItemArmorCoal.instanceBoots;
     public static final ItemArmorFT glowstoneBoots = ItemArmorGlowstone.instanceBoots;
     public static final ItemArmorFT redstoneBoots = ItemArmorRedstone.instanceBoots;
+    public static final ItemArmorFT adamantiumBoots = ItemArmorAdamantium.instanceBoots;
 
     public static final ItemBowFT quartzBow = ItemQuartzBow.instance;
     public static final ItemBowFT obsidianBow = ItemObsidianBow.instance;
@@ -243,6 +247,11 @@ public class ModItems{
         RegisterHelper.registerItem(redstoneChestplate, ArmorStrings.redstoneChest);
         RegisterHelper.registerItem(redstoneLeggings, ArmorStrings.redstoneLegs);
         RegisterHelper.registerItem(redstoneBoots, ArmorStrings.redstoneBoots);
+
+        RegisterHelper.registerItem(adamantiumHelmet, ArmorStrings.adamantiumHelmet);
+        RegisterHelper.registerItem(adamantiumChestplate, ArmorStrings.adamantiumChest);
+        RegisterHelper.registerItem(adamantiumLeggings, ArmorStrings.adamantiumLegs);
+        RegisterHelper.registerItem(adamantiumBoots, ArmorStrings.adamantiumBoots);
 
         RegisterHelper.registerItem(quartzBow, BowStrings.bowQuartz);
         RegisterHelper.registerItem(obsidianBow, BowStrings.bowObsidian);

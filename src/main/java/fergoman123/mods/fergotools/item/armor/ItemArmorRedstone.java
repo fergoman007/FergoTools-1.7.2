@@ -4,21 +4,18 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class ItemArmorRedstone extends ItemArmorFT{
 
-    public static ItemArmorRedstone instanceHelmet = new ItemArmorRedstone(ArmorType.HELMET);
-    public static ItemArmorRedstone instanceChest = new ItemArmorRedstone(ArmorType.CHEST);
-    public static ItemArmorRedstone instanceLegs = new ItemArmorRedstone(ArmorType.LEGS);
-    public static ItemArmorRedstone instanceBoots = new ItemArmorRedstone(ArmorType.BOOTS);
+    public static ItemArmorRedstone instanceHelmet = new ItemArmorRedstone(Armor.EnumArmorType.HELMET);
+    public static ItemArmorRedstone instanceChest = new ItemArmorRedstone(Armor.EnumArmorType.CHEST);
+    public static ItemArmorRedstone instanceLegs = new ItemArmorRedstone(Armor.EnumArmorType.LEGS);
+    public static ItemArmorRedstone instanceBoots = new ItemArmorRedstone(Armor.EnumArmorType.BOOTS);
 
-    public ItemArmorRedstone(ArmorType type) {
+    public ItemArmorRedstone(Armor.EnumArmorType type) {
         super("redstone", UtilToolArmor.redstoneArmor, type);
     }
 

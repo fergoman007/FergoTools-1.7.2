@@ -4,18 +4,18 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 
 public class ItemArmorGlowstone extends ItemArmorFT {
 
-    public static ItemArmorGlowstone instanceHelmet = new ItemArmorGlowstone(ArmorType.HELMET);
-    public static ItemArmorGlowstone instanceChest = new ItemArmorGlowstone(ArmorType.CHEST);
-    public static ItemArmorGlowstone instanceLegs = new ItemArmorGlowstone(ArmorType.LEGS);
-    public static ItemArmorGlowstone instanceBoots = new ItemArmorGlowstone(ArmorType.BOOTS);
+    public static ItemArmorGlowstone instanceHelmet = new ItemArmorGlowstone(Armor.EnumArmorType.HELMET);
+    public static ItemArmorGlowstone instanceChest = new ItemArmorGlowstone(Armor.EnumArmorType.CHEST);
+    public static ItemArmorGlowstone instanceLegs = new ItemArmorGlowstone(Armor.EnumArmorType.LEGS);
+    public static ItemArmorGlowstone instanceBoots = new ItemArmorGlowstone(Armor.EnumArmorType.BOOTS);
 
-    public ItemArmorGlowstone(ArmorType type)
+    public ItemArmorGlowstone(Armor.EnumArmorType type)
     {
         super("glowstone", UtilToolArmor.glowstoneArmor, type);
     }

@@ -12,6 +12,7 @@ public class ArmorInts {
     public static final int[] coalReduct = new int[]{9, 12, 14, 8};
     public static final int[] glowstoneReduct = new int[]{10, 13, 15, 9};
     public static final int[] redstoneReduct = new int[]{2, 6, 5, 2};
+    public static final int[] adamantiumReduct = new int[]{20, 20, 20, 20};
 
     public static final int quartzArmorMaxDamage = 1000;
     public static final int obsidianArmorMaxDamage = 1500;
@@ -21,4 +22,5 @@ public class ArmorInts {
     public static final int coalArmorMaxDamage = 3500;
     public static final int glowstoneArmorMaxDamage = 4000;
     public static final int redstoneArmorMaxDamage = 620;
+    public static final int adamantiumArmorMaxDamage = 999999999;
 }

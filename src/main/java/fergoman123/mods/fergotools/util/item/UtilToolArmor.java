@@ -32,6 +32,7 @@ public class UtilToolArmor {
     public static ArmorMaterial coalArmor;
     public static ArmorMaterial glowstoneArmor;
     public static ArmorMaterial redstoneArmor;
+    public static ArmorMaterial adamantiumArmor;
 
     public static void init()
     {
@@ -63,6 +64,7 @@ public class UtilToolArmor {
         coalArmor = EnumHelper.addArmorMaterial(MaterialStrings.coalArmor, ArmorInts.coalArmorMaxDamage, ArmorInts.coalReduct, ArmorInts.enchantability);
         glowstoneArmor = EnumHelper.addArmorMaterial(MaterialStrings.glowstoneArmor, ArmorInts.glowstoneArmorMaxDamage, ArmorInts.glowstoneReduct, ArmorInts.enchantability);
         redstoneArmor = EnumHelper.addArmorMaterial(MaterialStrings.redstoneArmor, ArmorInts.redstoneArmorMaxDamage, ArmorInts.redstoneReduct, ArmorInts.enchantability);
+        adamantiumArmor = EnumHelper.addArmorMaterial(MaterialStrings.adamantiumArmor, ArmorInts.adamantiumArmorMaxDamage, ArmorInts.adamantiumReduct, ArmorInts.enchantability);
     }
 
     public static int getQuartzMaxUses(){return quartz.getMaxUses();}

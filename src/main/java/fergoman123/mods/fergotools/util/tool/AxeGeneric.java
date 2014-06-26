@@ -5,6 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergoutil.helper.NameHelper;
+import fergoman123.mods.fergoutil.item.ITool;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
@@ -12,7 +13,7 @@ import net.minecraft.item.ItemStack;
 /**
  * Created by Fergoman123 on 22/05/2014.
  */
-public abstract class AxeGeneric extends ItemAxe{
+public abstract class AxeGeneric extends ItemAxe implements ITool{
 
     public AxeGeneric(ToolMaterial material) {
         super(material);

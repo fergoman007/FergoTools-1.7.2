@@ -56,6 +56,11 @@ public class Strings {
         public static final String redstoneChest = "redstoneChestplate";
         public static final String redstoneLegs = "redstoneLeggings";
         public static final String redstoneBoots = "redstoneBoots";
+
+        public static final String adamantiumHelmet = "adamantiumHelmet";
+        public static final String adamantiumChest = "adamantiumChestplate";
+        public static final String adamantiumLegs = "adamantiumLeggings";
+        public static final String adamantiumBoots = "adamantiumBoots";
     }
 
 
@@ -199,6 +204,7 @@ public class Strings {
         public static final String coalArmor = "coalArmor";
         public static final String glowstoneArmor = "glowstoneArmor";
         public static final String redstoneArmor = "redstoneArmor";
+        public static final String adamantiumArmor = "adamantiumArmor";
     }
 
     public static class TabStrings

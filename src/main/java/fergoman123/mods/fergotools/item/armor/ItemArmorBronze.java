@@ -4,7 +4,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 
@@ -13,12 +13,12 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorBronze extends ItemArmorFT {
 
-    public static ItemArmorBronze instanceHelmet = new ItemArmorBronze(ArmorType.HELMET);
-    public static ItemArmorBronze instanceChest = new ItemArmorBronze(ArmorType.CHEST);
-    public static ItemArmorBronze instanceLegs = new ItemArmorBronze(ArmorType.LEGS);
-    public static ItemArmorBronze instanceBoots = new ItemArmorBronze(ArmorType.BOOTS);
+    public static ItemArmorBronze instanceHelmet = new ItemArmorBronze(Armor.EnumArmorType.HELMET);
+    public static ItemArmorBronze instanceChest = new ItemArmorBronze(Armor.EnumArmorType.CHEST);
+    public static ItemArmorBronze instanceLegs = new ItemArmorBronze(Armor.EnumArmorType.LEGS);
+    public static ItemArmorBronze instanceBoots = new ItemArmorBronze(Armor.EnumArmorType.BOOTS);
 
-    public ItemArmorBronze(ArmorType type)
+    public ItemArmorBronze(Armor.EnumArmorType type)
     {
         super("bronze", UtilToolArmor.bronzeArmor, type);
     }

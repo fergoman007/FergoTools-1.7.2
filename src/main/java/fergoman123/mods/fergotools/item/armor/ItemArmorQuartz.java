@@ -4,19 +4,19 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class ItemArmorQuartz extends ItemArmorFT{
 
-    public static ItemArmorQuartz instanceHelmet = new ItemArmorQuartz(ArmorType.HELMET);
-    public static ItemArmorQuartz instanceChest = new ItemArmorQuartz(ArmorType.CHEST);
-    public static ItemArmorQuartz instanceLegs = new ItemArmorQuartz(ArmorType.LEGS);
-    public static ItemArmorQuartz instanceBoots = new ItemArmorQuartz(ArmorType.BOOTS);
+    public static ItemArmorQuartz instanceHelmet = new ItemArmorQuartz(Armor.EnumArmorType.HELMET);
+    public static ItemArmorQuartz instanceChest = new ItemArmorQuartz(Armor.EnumArmorType.CHEST);
+    public static ItemArmorQuartz instanceLegs = new ItemArmorQuartz(Armor.EnumArmorType.LEGS);
+    public static ItemArmorQuartz instanceBoots = new ItemArmorQuartz(Armor.EnumArmorType.BOOTS);
 
-    public ItemArmorQuartz(ArmorType type)
+    public ItemArmorQuartz(Armor.EnumArmorType type)
     {
         super("quartz", UtilToolArmor.quartzArmor ,type);
     }

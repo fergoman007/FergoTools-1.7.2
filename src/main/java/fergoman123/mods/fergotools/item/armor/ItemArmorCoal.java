@@ -4,7 +4,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 
@@ -13,12 +13,12 @@ import net.minecraft.item.ItemStack;
  */
 public class ItemArmorCoal extends ItemArmorFT {
 
-    public static ItemArmorCoal instanceHelmet = new ItemArmorCoal(ArmorType.HELMET);
-    public static ItemArmorCoal instanceChest = new ItemArmorCoal(ArmorType.CHEST);
-    public static ItemArmorCoal instanceLegs = new ItemArmorCoal(ArmorType.LEGS);
-    public static ItemArmorCoal instanceBoots = new ItemArmorCoal(ArmorType.BOOTS);
+    public static ItemArmorCoal instanceHelmet = new ItemArmorCoal(Armor.EnumArmorType.HELMET);
+    public static ItemArmorCoal instanceChest = new ItemArmorCoal(Armor.EnumArmorType.CHEST);
+    public static ItemArmorCoal instanceLegs = new ItemArmorCoal(Armor.EnumArmorType.LEGS);
+    public static ItemArmorCoal instanceBoots = new ItemArmorCoal(Armor.EnumArmorType.BOOTS);
 
-    public ItemArmorCoal(ArmorType type)
+    public ItemArmorCoal(Armor.EnumArmorType type)
     {
         super("coal", UtilToolArmor.coalArmor, type);
     }
