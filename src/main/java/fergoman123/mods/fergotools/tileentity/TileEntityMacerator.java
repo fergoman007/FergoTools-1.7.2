@@ -6,19 +6,19 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockMacerator;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
+import fergoman123.mods.fergotools.util.FurnaceTileFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.oredict.OreDictionary;
 
-public class TileEntityMacerator extends TileEntity implements ISidedInventory{
+public class TileEntityMacerator extends FurnaceTileFT{
 
     private static final int[] slotsTop = new int[]{0};
     private static final int[] slotsBottom = new int[]{2, 1};
@@ -245,7 +245,29 @@ public class TileEntityMacerator extends TileEntity implements ISidedInventory{
         }
     }
 
-    private boolean canSmelt()
+    public boolean isOre(ItemStack stack)
+    {
+        String[] ores = OreDictionary.getOreNames();
+        for (int i = 0; i < ores.length; i++)
+        {
+            if (ores[i].contains("ore"))
+            {
+                if (OreDictionary.getOres(ores[i]) != null)
+                {
+                    for(int j = 0; j < OreDictionary.getOres(ores[i]).size(); j++)
+                    {
+                        if (OreDictionary.getOres(ores[i]).get(j).getItem() == stack.getItem())
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean canSmelt()
     {
         if (this.slots[0] == null)
         {
@@ -255,14 +277,15 @@ public class TileEntityMacerator extends TileEntity implements ISidedInventory{
         {
             ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
             if (stack == null)return false;
+            if (!this.isOre(this.slots[0]))return false;
             if (this.slots[2] == null)return true;
             if (!this.slots[2].isItemEqual(stack))return false;
-            int result = slots[2].stackSize + stack.stackSize;
+            int result = slots[2].stackSize + stack.stackSize*2;
             return (result <= getInventoryStackLimit() && result <= this.slots[2].getMaxStackSize());
         }
     }
 
-    private void smeltItem()
+    public void smeltItem()
     {
         if (this.canSmelt())
         {
@@ -271,10 +294,11 @@ public class TileEntityMacerator extends TileEntity implements ISidedInventory{
             if (this.slots[2] == null)
             {
                 this.slots[2] = stack.copy();
+                this.slots[2].stackSize*=2;
             }
             else if (this.slots[2].getItem() == stack.getItem())
             {
-                this.slots[2].stackSize += stack.stackSize;
+                this.slots[2].stackSize += stack.stackSize*2;
             }
 
             --this.slots[0].stackSize;

@@ -6,20 +6,19 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockRedstoneFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
+import fergoman123.mods.fergotools.util.FurnaceTileFT;
 import fergoman123.mods.fergoutil.helper.BlockHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityRedstoneFurnace extends TileEntity implements ISidedInventory{
+public class TileEntityRedstoneFurnace extends FurnaceTileFT{
 
     private static final int[] slotsTop = new int[]{0};
     private static final int[] slotsBottom = new int[]{2, 1};
@@ -246,7 +245,7 @@ public class TileEntityRedstoneFurnace extends TileEntity implements ISidedInven
         }
     }
 
-    private boolean canSmelt()
+    public boolean canSmelt()
     {
         if (this.slots[0] == null)
         {
@@ -263,7 +262,7 @@ public class TileEntityRedstoneFurnace extends TileEntity implements ISidedInven
         }
     }
 
-    private void smeltItem()
+    public void smeltItem()
     {
         if (this.canSmelt())
         {

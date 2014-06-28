@@ -17,9 +17,9 @@ import fergoman123.mods.fergotools.init.ModTiles;
 import fergoman123.mods.fergotools.lib.ModInfo;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.packet.PacketPipeline;
-import fergoman123.mods.fergotools.proxy.CommonProxy;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergoutil.proxy.IProxy;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModInfo.dep)
 public class FergoTools{
@@ -29,8 +29,8 @@ public class FergoTools{
     @Instance(ModInfo.modid)
     public static FergoTools instance;
     
-    @SidedProxy(clientSide = Reference.clientProxy, serverSide = Reference.commonProxy)
-    public static CommonProxy proxy;
+    @SidedProxy(clientSide = Reference.clientProxyClass, serverSide = Reference.serverProxyClass)
+    public static IProxy proxy;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent evt)

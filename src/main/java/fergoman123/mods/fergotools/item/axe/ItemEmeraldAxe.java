@@ -6,9 +6,6 @@ import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 13/04/2014.
- */
 public class ItemEmeraldAxe extends AxeGeneric {
 
     public static ItemEmeraldAxe instance = new ItemEmeraldAxe();

@@ -25,12 +25,6 @@ public class ItemSilkShovel extends ShovelGeneric {
         return stack2.isItemEqual(new ItemStack(ModItems.silkGem)) || super.getIsRepairable(stack1, stack2);
     }
 
-    /**
-     *
-     * @param stack the item
-     * @param world the world
-     * @param player the player
-     */
     public void onCreated(ItemStack stack, World world, EntityPlayer player)
     {
         stack.addEnchantment(Enchantment.silkTouch, 1);

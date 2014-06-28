@@ -7,6 +7,7 @@ import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
 import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
@@ -28,20 +29,18 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockBronzeFurnace extends BlockFurnaceFT{
+public class BlockBronzeFurnace extends BlockFurnaceFT
+{
 
-    private final Random rand = new Random();
-    private final boolean state;
+    public static final Block instanceIdle = new BlockBronzeFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block instanceActive = new BlockBronzeFurnace(true).setLightLevel(0.9F);
+
     private static boolean keepInventory;
 
-    @SideOnly(Side.CLIENT)
-    private IIcon[] icons = new IIcon[2];
-
-
-    public BlockBronzeFurnace(boolean state)
+    public BlockBronzeFurnace(boolean isActive)
     {
-        super(Material.iron);
-        this.state = state;
+        super(Material.iron, "bronzeFurnace");
+        this.isActive = isActive;
     }
 
     public Item getItemDropped(int par1, Random rand, int par3)
@@ -55,7 +54,7 @@ public class BlockBronzeFurnace extends BlockFurnaceFT{
         this.setDefaultDirection(world, x, y, z);
     }
 
-    private void setDefaultDirection(World world, int x, int y, int z)
+    public void setDefaultDirection(World world, int x, int y, int z)
     {
         if (!world.isRemote) {
             Block a = world.getBlock(x, y, z - 1);
@@ -95,7 +94,7 @@ public class BlockBronzeFurnace extends BlockFurnaceFT{
     public void registerBlockIcons(IIconRegister register)
     {
         this.blockIcon = register.registerIcon(Textures.BlockTextures.blockBronze);
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.state ? Textures.FurnaceTextures.bronzeFurnaceActive : Textures.FurnaceTextures.bronzeFurnaceIdle));
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Textures.FurnaceTextures.bronzeFurnaceActive : Textures.FurnaceTextures.bronzeFurnaceIdle));
         this.icons[1] = register.registerIcon(Textures.BlockTextures.blockBronze);
     }
 
@@ -233,7 +232,7 @@ public class BlockBronzeFurnace extends BlockFurnaceFT{
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random rand)
     {
-        if (this.state)
+        if (this.isActive)
         {
             int l = world.getBlockMetadata(x, y, z);
             float f = (float)x + 0.5F;

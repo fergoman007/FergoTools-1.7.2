@@ -7,6 +7,7 @@ import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
 import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
@@ -28,18 +29,16 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockLapisCrystalFurnace extends BlockFurnaceFT{
+public class BlockLapisCrystalFurnace extends BlockFurnaceFT
+{
+    public static final Block instanceIdle = new BlockLapisCrystalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block instanceActive = new BlockLapisCrystalFurnace(true).setLightLevel(0.9F);
 
-    private final Random rand = new Random();
-    private final boolean isActive;
     private static boolean keepInventory;
-
-    @SideOnly(Side.CLIENT)
-    private IIcon[] icons = new IIcon[2];
 
     public BlockLapisCrystalFurnace(boolean isActive)
     {
-        super(Material.rock);
+        super(Material.rock, "lapisCrystalFurnace");
         this.isActive = isActive;
     }
 
@@ -54,7 +53,7 @@ public class BlockLapisCrystalFurnace extends BlockFurnaceFT{
         this.setDefaultDirection(world, x, y, z);
     }
 
-    private void setDefaultDirection(World world, int x, int y, int z)
+    public void setDefaultDirection(World world, int x, int y, int z)
     {
         if (!world.isRemote) {
             Block a = world.getBlock(x, y, z - 1);

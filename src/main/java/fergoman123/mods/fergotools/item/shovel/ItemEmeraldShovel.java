@@ -6,9 +6,6 @@ import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class ItemEmeraldShovel extends ShovelGeneric {
 
     public static ItemEmeraldShovel instance = new ItemEmeraldShovel();

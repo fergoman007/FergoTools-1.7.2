@@ -7,8 +7,9 @@ import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntitySilkFurnace;
-import fergoman123.mods.fergotools.util.BlockFT;
+import fergoman123.mods.fergotools.util.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -28,18 +29,16 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockSilkFurnace extends BlockFT{
+public class BlockSilkFurnace extends BlockFurnaceFT
+{
+    public static final Block instanceIdle = new BlockSilkFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block instanceActive = new BlockSilkFurnace(true).setLightLevel(0.9F);
 
-    private final Random rand = new Random();
-    private final boolean isActive;
     private static boolean keepInventory;
-
-    @SideOnly(Side.CLIENT)
-    private IIcon[] icons = new IIcon[2];
 
     public BlockSilkFurnace(boolean isActive)
     {
-        super(Material.rock);
+        super(Material.rock, "silk");
         this.isActive = isActive;
     }
 
@@ -54,7 +53,7 @@ public class BlockSilkFurnace extends BlockFT{
         this.setDefaultDirection(world, x, y, z);
     }
 
-    private void setDefaultDirection(World world, int x, int y, int z)
+    public void setDefaultDirection(World world, int x, int y, int z)
     {
         if (!world.isRemote) {
             Block a = world.getBlock(x, y, z - 1);

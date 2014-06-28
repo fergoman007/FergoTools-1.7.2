@@ -13,9 +13,4 @@ public class GuiInts {
     public static final int silkFurnaceId = 8;
     public static final int redstoneFurnace = 9;
     public static final int maceratorId = 10;
-    //11
-    //12
-    //13
-    //14
-    //15
 }

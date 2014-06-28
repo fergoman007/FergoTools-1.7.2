@@ -6,34 +6,20 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockAdamantiumFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
+import fergoman123.mods.fergotools.util.FurnaceTileFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInventory{
+public class TileEntityAdamantiumFurnace extends FurnaceTileFT{
 
-    private static final int[] slotsTop = new int[]{0};
-    private static final int[] slotsBottom = new int[]{2, 1};
-    private static final int[] slotsSides = new int[]{1};
-
-    private ItemStack[] slots = new ItemStack[3];
-
-    public int burnTime;
-    public int currentItemBurnTime;
-    public int cookTime;
-
-    private final int inventoryStackLimit = 64;
-
-    private String localizedName;
-
+    @Override
     public int getSizeInventory(){return this.slots.length;}
 
     public ItemStack getStackInSlot(int slot){return this.slots[slot];}
@@ -94,7 +80,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerQuartzFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerAdamantiumFurnace;
     }
 
     public boolean hasCustomInventoryName()
@@ -168,7 +154,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int speed)
     {
-        return this.cookTime * speed / FurnaceInts.quartzFurnaceSpeed;
+        return this.cookTime * speed / FurnaceInts.adamantiumFurnaceSpeed;
     }
 
     @SideOnly(Side.CLIENT)
@@ -176,7 +162,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = FurnaceInts.quartzFurnaceSpeed;
+            this.currentItemBurnTime = FurnaceInts.adamantiumFurnaceSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
@@ -220,7 +206,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
             {
                     ++this.cookTime;
 
-                if (this.cookTime == FurnaceInts.quartzFurnaceSpeed)
+                if (this.cookTime == FurnaceInts.adamantiumFurnaceSpeed)
                 {
                     this.cookTime = 0;
                     this.smeltItem();
@@ -245,7 +231,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
         }
     }
 
-    private boolean canSmelt()
+    public boolean canSmelt()
     {
         if (this.slots[0] == null)
         {
@@ -262,7 +248,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
         }
     }
 
-    private void smeltItem()
+    public void smeltItem()
     {
         if (this.canSmelt())
         {
@@ -286,7 +272,7 @@ public class TileEntityAdamantiumFurnace extends TileEntity implements ISidedInv
         }
     }
 
-    private static int getItemBurnTime(ItemStack stack)
+    public static int getItemBurnTime(ItemStack stack)
     {
         if (stack == null)
         {

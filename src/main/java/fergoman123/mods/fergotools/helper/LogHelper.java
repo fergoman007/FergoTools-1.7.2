@@ -4,14 +4,11 @@ import cpw.mods.fml.common.FMLLog;
 import fergoman123.mods.fergotools.lib.ModInfo;
 import org.apache.logging.log4j.Level;
 
-/**
- * Created by Fergoman123 on 03/05/2014.
- */
 public class LogHelper {
 
     public static void log(Level level, Object object)
     {
-        FMLLog.log(ModInfo.name, level, "[FergoTools] " + String.valueOf(object));
+        FMLLog.log(ModInfo.modid, level, String.valueOf(object));
     }
 
     public static void all(Object object)

@@ -1,19 +1,16 @@
 package fergoman123.mods.fergotools.lib;
 
-/**
- * Created by Fergoman007 on 16/01/14.
- */
+import fergoman123.mods.fergoutil.helper.NameHelper;
+
 public class Reference {
 
-    public static final String textureLoc = ModInfo.modid + ":";
-    public static final String textureLocGui = ModInfo.modid.toLowerCase();
+    public static final String textureLoc = NameHelper.getAssetsLocation(ModInfo.modid);//ModInfo.modid;
+    public static final String textureLocGui = NameHelper.getAssetsLocationGui(ModInfo.modid.toLowerCase());
     public static final String dirGui = "textures/gui/";
     public static final String dirArmor = "textures/armor/";
-    
-    public static final String proxyLoc = "fergoman123.mods.fergotools.proxy.";
-    
-    public static final String clientProxy = proxyLoc + "ClientProxy";
-    public static final String commonProxy = proxyLoc + "CommonProxy";
+
+    public static final String clientProxyClass = "fergoman123.mods.fergotools.proxy.ClientProxy";
+    public static final String serverProxyClass = "fergoman123.mods.fergotools.proxy.ServerProxy";
     		
 
 }

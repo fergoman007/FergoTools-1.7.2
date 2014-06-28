@@ -8,9 +8,6 @@ import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 13/04/2014.
- */
 public class ItemArmorLapis extends ItemArmorFT {
 
     public static ItemArmorLapis instanceHelmet = new ItemArmorLapis(Armor.EnumArmorType.HELMET);

@@ -5,7 +5,6 @@ import fergoman123.mods.fergotools.block.ore.*;
 import fergoman123.mods.fergotools.block.storage.*;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Strings.FurnaceStrings;
-import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.util.BlockFT;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
@@ -31,29 +30,29 @@ public class ModBlocks{
     public static final BlockFT blockSilkGem = BlockSilkGem.instance;
     public static final BlockFT blockRedstoneCrystal = BlockRedstoneCrystal.instance;
 
-    public static final Block quartzFurnaceIdle = new BlockQuartzFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.quartzFurnaceIdle);
-    public static final Block obsidianFurnaceIdle = new BlockObsidianFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.obsidianFurnaceIdle);
-    public static final Block emeraldCrystalFurnaceIdle = new BlockEmeraldCrystalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.emeraldCrystalFurnaceIdle);
-    public static final Block lapisCrystalFurnaceIdle = new BlockLapisCrystalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.lapisCrystalFurnaceIdle);
-    public static final Block bronzeFurnaceIdle = new BlockBronzeFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.bronzeFurnaceIdle);
-    public static final Block coalFurnaceIdle = new BlockCoalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.coalFurnaceIdle);
-    public static final Block glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.glowstoneFurnaceIdle);
-    public static final Block adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.adamantiumFurnaceIdle);
-    public static final Block silkFurnaceIdle = new BlockSilkFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.silkFurnaceIdle);
-    public static final Block redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.redstoneFurnaceIdle);
-    public static final Block maceratorIdle = new BlockMacerator(false).setCreativeTab(Tabs.tabFergoFurnaces).setBlockName(FurnaceStrings.maceratorIdle);
+    public static final Block quartzFurnaceIdle = BlockQuartzFurnace.instanceIdle;
+    public static final Block obsidianFurnaceIdle = BlockObsidianFurnace.instanceIdle;
+    public static final Block emeraldCrystalFurnaceIdle = BlockEmeraldCrystalFurnace.instanceIdle;
+    public static final Block lapisCrystalFurnaceIdle = BlockLapisCrystalFurnace.instanceIdle;
+    public static final Block bronzeFurnaceIdle = BlockBronzeFurnace.instanceIdle;
+    public static final Block coalFurnaceIdle = BlockCoalFurnace.instanceIdle;
+    public static final Block glowstoneFurnaceIdle = BlockGlowstoneFurnace.instanceIdle;
+    public static final Block adamantiumFurnaceIdle = BlockAdamantiumFurnace.instanceIdle;
+    public static final Block silkFurnaceIdle = BlockSilkFurnace.instanceIdle;
+    public static final Block redstoneFurnaceIdle = BlockRedstoneFurnace.instanceIdle;
+    public static final Block maceratorIdle = BlockMacerator.instanceIdle;
 
-    public static final Block quartzFurnaceActive = new BlockQuartzFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.quartzFurnaceActive);
-    public static final Block obsidianFurnaceActive = new BlockObsidianFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.obsidianFurnaceActive);
-    public static final Block emeraldCrystalFurnaceActive = new BlockEmeraldCrystalFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.emeraldCrystalFurnaceActive);
-    public static final Block lapisCrystalFurnaceActive = new BlockLapisCrystalFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.lapisCrystalFurnaceActive);
-    public static final Block bronzeFurnaceActive = new BlockBronzeFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.bronzeFurnaceActive);
-    public static final Block coalFurnaceActive = new BlockCoalFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.coalFurnaceActive);
-    public static final Block glowstoneFurnaceActive = new BlockGlowstoneFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.glowstoneFurnaceActive);
-    public static final Block adamantiumFurnaceActive = new BlockAdamantiumFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.adamantiumFurnaceActive);
-    public static final Block silkFurnaceActive = new BlockSilkFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.silkFurnaceActive);
-    public static final Block redstoneFurnaceActive = new BlockRedstoneFurnace(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.redstoneFurnaceActive);
-    public static final Block maceratorActive = new BlockMacerator(true).setLightLevel(0.9f).setBlockName(FurnaceStrings.maceratorActive);
+    public static final Block quartzFurnaceActive = BlockQuartzFurnace.instanceActive;
+    public static final Block obsidianFurnaceActive = BlockObsidianFurnace.instanceActive;
+    public static final Block emeraldCrystalFurnaceActive = BlockEmeraldCrystalFurnace.instanceActive;
+    public static final Block lapisCrystalFurnaceActive = BlockLapisCrystalFurnace.instanceActive;
+    public static final Block bronzeFurnaceActive = BlockBronzeFurnace.instanceActive;
+    public static final Block coalFurnaceActive = BlockCoalFurnace.instanceActive;
+    public static final Block glowstoneFurnaceActive = BlockGlowstoneFurnace.instanceActive;
+    public static final Block adamantiumFurnaceActive = BlockAdamantiumFurnace.instanceActive;
+    public static final Block silkFurnaceActive = BlockSilkFurnace.instanceActive;
+    public static final Block redstoneFurnaceActive = BlockRedstoneFurnace.instanceActive;
+    public static final Block maceratorActive = BlockMacerator.instanceActive;
     
 	public static void init()
 	{
@@ -85,7 +84,7 @@ public class ModBlocks{
         RegisterHelper.registerBlock(ModBlocks.glowstoneFurnaceIdle, FurnaceStrings.glowstoneFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.adamantiumFurnaceIdle, FurnaceStrings.adamantiumFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.silkFurnaceIdle, FurnaceStrings.silkFurnaceIdle);
-//        RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceIdle, FurnaceStrings.redstoneFurnaceIdle);
+        RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceIdle, FurnaceStrings.redstoneFurnaceIdle);
         RegisterHelper.registerBlock(ModBlocks.maceratorIdle, FurnaceStrings.maceratorIdle);
 
         RegisterHelper.registerBlock(ModBlocks.quartzFurnaceActive, FurnaceStrings.quartzFurnaceActive);
@@ -97,7 +96,7 @@ public class ModBlocks{
         RegisterHelper.registerBlock(ModBlocks.glowstoneFurnaceActive, FurnaceStrings.glowstoneFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.adamantiumFurnaceActive, FurnaceStrings.adamantiumFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.silkFurnaceActive, FurnaceStrings.silkFurnaceActive);
-//        RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceActive, FurnaceStrings.redstoneFurnaceActive);
+        RegisterHelper.registerBlock(ModBlocks.redstoneFurnaceActive, FurnaceStrings.redstoneFurnaceActive);
         RegisterHelper.registerBlock(ModBlocks.maceratorActive, FurnaceStrings.maceratorActive);
 	}
 

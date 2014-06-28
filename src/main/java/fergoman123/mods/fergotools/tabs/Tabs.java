@@ -15,47 +15,59 @@ public class Tabs {
     public static CreativeTabs tabFergoBows;
 
     public static void init(){
-        tabFergoTools = new TabFergoTools(TabStrings.tabFergoTools);
-        tabFergoBlocks = new TabFergoBlocks(TabStrings.tabFergoBlocks);
-        tabFergoFurnaces = new TabFergoFurnaces(TabStrings.tabFergoFurnaces);
-        tabFergoItems = new TabFergoItems(TabStrings.tabFergoItems);
-        tabFergoArmor = new TabFergoArmor(TabStrings.tabFergoArmor);
-        tabFergoBows = new TabFergoBows(TabStrings.tabFergoBows);
+        tabFergoTools = TabFergoTools.instance;
+        tabFergoBlocks = TabFergoBlocks.instance;
+        tabFergoFurnaces = TabFergoFurnaces.instance;
+        tabFergoItems = TabFergoItems.instance;
+        tabFergoArmor = TabFergoArmor.instance;
+        tabFergoBows = TabFergoBows.instance;
     }
 
     public static class TabFergoTools extends CreativeTabs{
+        public static final TabFergoTools instance = new TabFergoTools(TabStrings.tabFergoTools);
+
         public TabFergoTools(String label){super(label); }
         public Item getTabIconItem(){return ModItems.quartzPickaxe;}
-        public String getTranslatedTabLabel(){return "Fergoman123's Tools | Tools";}
+        public String getTranslatedTabLabel(){return TabStrings.tabFergoToolsTranslated;}
     }
 
     public static class TabFergoBlocks extends CreativeTabs{
+        public static final TabFergoBlocks instance = new TabFergoBlocks(TabStrings.tabFergoBlocks);
+
         public TabFergoBlocks(String label){super(label);}
         public Item getTabIconItem(){return Item.getItemFromBlock(ModBlocks.oreExperience);}
-        public String getTranslatedTabLabel(){return "Fergoman123's Tools | Blocks";}
+        public String getTranslatedTabLabel(){return TabStrings.tabFergoBlocksTranslated;}
     }
 
     public static class TabFergoFurnaces extends CreativeTabs{
+
+        public static final TabFergoFurnaces instance = new TabFergoFurnaces(TabStrings.tabFergoFurnaces);
         public TabFergoFurnaces(String label){super(label);}
         public Item getTabIconItem(){return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);}
-        public String getTranslatedTabLabel(){return "Fergoman123's Tools | Furnaces";}
+        public String getTranslatedTabLabel(){return TabStrings.tabFergoFurnacesTranslated;}
     }
 
     public static class TabFergoItems extends CreativeTabs{
+        public static final TabFergoItems instance = new TabFergoItems(TabStrings.tabFergoItems);
+
         public TabFergoItems(String label){super(label);}
         public Item getTabIconItem(){return ModItems.expShard;}
-        public String getTranslatedTabLabel(){return "Fergoman123's Tools | Items";}
+        public String getTranslatedTabLabel(){return TabStrings.tabFergoItemsTranslated;}
     }
 
     public static class TabFergoArmor extends CreativeTabs{
+        public static final TabFergoArmor instance = new TabFergoArmor(TabStrings.tabFergoArmor);
+
         public TabFergoArmor(String label){super(label);}
         public Item getTabIconItem(){return ModItems.quartzHelmet;}
-        public String getTranslatedTabLabel(){return "Fergoman123's Tools | Armor";}
+        public String getTranslatedTabLabel(){return TabStrings.tabFergoArmorTranslated;}
     }
 
     public static class TabFergoBows extends CreativeTabs{
+        public static final TabFergoBows instance = new TabFergoBows(TabStrings.tabFergoBows);
+
         public TabFergoBows(String label){super(label);}
         public Item getTabIconItem(){return ModItems.quartzBow;}
-        public String getTranslatedTabLabel() {return "Fergoman123's Tools | Bows";}
+        public String getTranslatedTabLabel() {return TabStrings.tabFergoBowsTranslated;}
     }
 }

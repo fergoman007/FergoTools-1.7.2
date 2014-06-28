@@ -3,25 +3,23 @@ package fergoman123.mods.fergotools.gui;
 import fergoman123.mods.fergotools.gui.container.ContainerLapisCrystalFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
+import fergoman123.mods.fergotools.util.GuiFT;
 import fergoman123.mods.fergoutil.helper.GuiHelper;
-import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 
-public class GuiLapisCrystalFurnace extends GuiContainer{
-
-    private TileEntityLapisCrystalFurnace furnace;
+public class GuiLapisCrystalFurnace extends GuiFT{
 
 
     public GuiLapisCrystalFurnace(InventoryPlayer player, TileEntityLapisCrystalFurnace furnace)
     {
         super(new ContainerLapisCrystalFurnace(player, furnace));
-        this.furnace = furnace;
+        lapisCrystalFurnace = furnace;
 
     }
 
     public void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-        String s = furnace.hasCustomInventoryName() ? this.furnace.getInventoryName() : GuiHelper.format(this.furnace.getInventoryName());
+        String s = lapisCrystalFurnace.hasCustomInventoryName() ? this.lapisCrystalFurnace.getInventoryName() : GuiHelper.format(this.lapisCrystalFurnace.getInventoryName());
         fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
         fontRendererObj.drawString(GuiHelper.format(Strings.GuiStrings.containerInventory), 8, ySize - 96 + 2, 4210752);
     }
@@ -33,13 +31,13 @@ public class GuiLapisCrystalFurnace extends GuiContainer{
         drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
         int i;
 
-        if (furnace.isBurning())
+        if (lapisCrystalFurnace.isBurning())
         {
-            i = furnace.getBurnTimeRemainingScaled(12);
+            i = lapisCrystalFurnace.getBurnTimeRemainingScaled(12);
             drawTexturedModalRect(k + 56, l + 36 + 12 - i, 176, 12 - i, 14, i + 2);
         }
 
-        i = furnace.getCookProgressScaled(24);
+        i = lapisCrystalFurnace.getCookProgressScaled(24);
         drawTexturedModalRect(k + 79, l + 34, 176, 14, i + 1, 16);
     }
 

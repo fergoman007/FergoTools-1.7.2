@@ -22,9 +22,6 @@ import net.minecraft.network.NetHandlerPlayServer;
 
 import java.util.*;
 
-/**
- * Created by Fergoman123 on 28/03/2014.
- */
 @Sharable
 public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, UtilAbstractPacket>{
 

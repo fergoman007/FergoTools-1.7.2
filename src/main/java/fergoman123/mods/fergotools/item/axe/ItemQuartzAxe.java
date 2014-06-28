@@ -6,9 +6,6 @@ import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 13/04/2014.
- */
 public class ItemQuartzAxe extends AxeGeneric {
 
     public static ItemQuartzAxe instance = new ItemQuartzAxe();
