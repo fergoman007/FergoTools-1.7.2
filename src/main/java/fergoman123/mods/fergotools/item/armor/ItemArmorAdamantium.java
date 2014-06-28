@@ -2,7 +2,7 @@ package fergoman123.mods.fergotools.item.armor;
 
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures;
-import fergoman123.mods.fergotools.util.ItemArmorFT;
+import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;

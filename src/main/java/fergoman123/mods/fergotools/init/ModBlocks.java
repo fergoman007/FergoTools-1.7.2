@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.block.ore.*;
 import fergoman123.mods.fergotools.block.storage.*;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.Strings.FurnaceStrings;
-import fergoman123.mods.fergotools.util.BlockFT;
+import fergoman123.mods.fergotools.util.base.BlockFT;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
 

@@ -3,25 +3,24 @@ package fergoman123.mods.fergotools.gui.container;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.tileentity.TileEntityMacerator;
+import fergoman123.mods.fergotools.util.base.ContainerFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class ContainerMacerator extends Container
+public class ContainerMacerator extends ContainerFT
 {
-    private TileEntityMacerator furnace;
     private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
 
     public ContainerMacerator(InventoryPlayer par1InventoryPlayer, TileEntityMacerator par2TileEntityFurnaceTutorial)
     {
-        this.furnace = par2TileEntityFurnaceTutorial;
+        this.macerator = par2TileEntityFurnaceTutorial;
         this.addSlotToContainer(new Slot(par2TileEntityFurnaceTutorial, 0, 56, 17));
         this.addSlotToContainer(new Slot(par2TileEntityFurnaceTutorial, 1, 56, 53));
         this.addSlotToContainer(new SlotFurnace(par1InventoryPlayer.player, par2TileEntityFurnaceTutorial, 2, 116, 35));
@@ -44,9 +43,9 @@ public class ContainerMacerator extends Container
     public void addCraftingToCrafters(ICrafting par1ICrafting)
     {
         super.addCraftingToCrafters(par1ICrafting);
-        par1ICrafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
-        par1ICrafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
-        par1ICrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 0, this.macerator.cookTime);
+        par1ICrafting.sendProgressBarUpdate(this, 1, this.macerator.burnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 2, this.macerator.currentItemBurnTime);
     }
 
     /**
@@ -60,25 +59,25 @@ public class ContainerMacerator extends Container
         {
             ICrafting icrafting = (ICrafting)this.crafters.get(i);
 
-            if (this.lastCookTime != this.furnace.cookTime)
+            if (this.lastCookTime != this.macerator.cookTime)
             {
-                icrafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
+                icrafting.sendProgressBarUpdate(this, 0, this.macerator.cookTime);
             }
 
-            if (this.lastBurnTime != this.furnace.burnTime)
+            if (this.lastBurnTime != this.macerator.burnTime)
             {
-                icrafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
+                icrafting.sendProgressBarUpdate(this, 1, this.macerator.burnTime);
             }
 
-            if (this.lastItemBurnTime != this.furnace.currentItemBurnTime)
+            if (this.lastItemBurnTime != this.macerator.currentItemBurnTime)
             {
-                icrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+                icrafting.sendProgressBarUpdate(this, 2, this.macerator.currentItemBurnTime);
             }
         }
 
-        this.lastCookTime = this.furnace.cookTime;
-        this.lastBurnTime = this.furnace.burnTime;
-        this.lastItemBurnTime = this.furnace.currentItemBurnTime;
+        this.lastCookTime = this.macerator.cookTime;
+        this.lastBurnTime = this.macerator.burnTime;
+        this.lastItemBurnTime = this.macerator.currentItemBurnTime;
     }
 
     @SideOnly(Side.CLIENT)
@@ -86,23 +85,23 @@ public class ContainerMacerator extends Container
     {
         if (par1 == 0)
         {
-            this.furnace.cookTime = par2;
+            this.macerator.cookTime = par2;
         }
 
         if (par1 == 1)
         {
-            this.furnace.burnTime = par2;
+            this.macerator.burnTime = par2;
         }
 
         if (par1 == 2)
         {
-            this.furnace.currentItemBurnTime = par2;
+            this.macerator.currentItemBurnTime = par2;
         }
     }
 
     public boolean canInteractWith(EntityPlayer par1EntityPlayer)
     {
-        return this.furnace.isUseableByPlayer(par1EntityPlayer);
+        return this.macerator.isUseableByPlayer(par1EntityPlayer);
     }
 
     /**

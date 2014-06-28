@@ -1,4 +1,4 @@
-package fergoman123.mods.fergotools.util;
+package fergoman123.mods.fergotools.util.base;
 
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;

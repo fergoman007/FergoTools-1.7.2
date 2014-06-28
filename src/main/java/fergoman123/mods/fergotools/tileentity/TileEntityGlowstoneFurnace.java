@@ -6,7 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockGlowstoneFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
-import fergoman123.mods.fergotools.util.FurnaceTileFT;
+import fergoman123.mods.fergotools.util.base.FurnaceTileFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;

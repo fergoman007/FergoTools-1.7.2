@@ -9,7 +9,7 @@ import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntitySilkFurnace;
-import fergoman123.mods.fergotools.util.BlockFurnaceFT;
+import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

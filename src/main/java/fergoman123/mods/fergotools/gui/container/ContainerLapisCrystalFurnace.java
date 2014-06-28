@@ -1,18 +1,16 @@
 package fergoman123.mods.fergotools.gui.container;
 
 import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
+import fergoman123.mods.fergotools.util.base.ContainerFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class ContainerLapisCrystalFurnace extends Container{
-
-    private TileEntityLapisCrystalFurnace furnace;
+public class ContainerLapisCrystalFurnace extends ContainerFT {
 
     private int lastCookTime;
     private int lastBurnTime;
@@ -20,7 +18,7 @@ public class ContainerLapisCrystalFurnace extends Container{
 
     public ContainerLapisCrystalFurnace(InventoryPlayer player, TileEntityLapisCrystalFurnace furnace)
     {
-        this.furnace = furnace;
+        this.lapisCrystalFurnace = furnace;
         this.addSlotToContainer(new Slot(furnace, 0, 56, 17));
         this.addSlotToContainer(new Slot(furnace, 1, 56, 53));
         this.addSlotToContainer(new SlotFurnace(player.player, furnace, 2, 116, 35));
@@ -43,9 +41,9 @@ public class ContainerLapisCrystalFurnace extends Container{
     public void addCraftingToCrafters(ICrafting crafting)
     {
         super.addCraftingToCrafters(crafting);
-        crafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
-        crafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
-        crafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+        crafting.sendProgressBarUpdate(this, 0, this.lapisCrystalFurnace.cookTime);
+        crafting.sendProgressBarUpdate(this, 1, this.lapisCrystalFurnace.burnTime);
+        crafting.sendProgressBarUpdate(this, 2, this.lapisCrystalFurnace.currentItemBurnTime);
     }
 
     public void detectAndSendChanges()
@@ -56,48 +54,48 @@ public class ContainerLapisCrystalFurnace extends Container{
         {
             ICrafting crafting = (ICrafting)this.crafters.get(i);
 
-            if (this.lastCookTime != this.furnace.cookTime)
+            if (this.lastCookTime != this.lapisCrystalFurnace.cookTime)
             {
-                crafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
+                crafting.sendProgressBarUpdate(this, 0, this.lapisCrystalFurnace.cookTime);
             }
 
-            if (this.lastBurnTime != this.furnace.burnTime)
+            if (this.lastBurnTime != this.lapisCrystalFurnace.burnTime)
             {
-                crafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
+                crafting.sendProgressBarUpdate(this, 1, this.lapisCrystalFurnace.burnTime);
             }
 
-            if (this.lastItemBurnTime != this.furnace.currentItemBurnTime)
+            if (this.lastItemBurnTime != this.lapisCrystalFurnace.currentItemBurnTime)
             {
-                crafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+                crafting.sendProgressBarUpdate(this, 2, this.lapisCrystalFurnace.currentItemBurnTime);
             }
         }
 
-        this.lastCookTime = this.furnace.cookTime;
-        this.lastBurnTime = this.furnace.burnTime;
-        this.lastItemBurnTime = this.furnace.currentItemBurnTime;
+        this.lastCookTime = this.lapisCrystalFurnace.cookTime;
+        this.lastBurnTime = this.lapisCrystalFurnace.burnTime;
+        this.lastItemBurnTime = this.lapisCrystalFurnace.currentItemBurnTime;
     }
 
     public void updateProgressBar(int par1, int par2)
     {
         if (par1 == 0)
         {
-            this.furnace.cookTime = par2;
+            this.lapisCrystalFurnace.cookTime = par2;
         }
 
         if (par1 == 1)
         {
-            this.furnace.burnTime = par2;
+            this.lapisCrystalFurnace.burnTime = par2;
         }
 
         if (par1 == 2)
         {
-            this.furnace.currentItemBurnTime = par2;
+            this.lapisCrystalFurnace.currentItemBurnTime = par2;
         }
     }
 
     public boolean canInteractWith(EntityPlayer player)
     {
-        return this.furnace.isUseableByPlayer(player);
+        return this.lapisCrystalFurnace.isUseableByPlayer(player);
     }
 
     public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)

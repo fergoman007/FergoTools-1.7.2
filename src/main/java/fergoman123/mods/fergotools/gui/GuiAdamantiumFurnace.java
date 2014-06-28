@@ -5,7 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerAdamantiumFurnace;
 import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
 import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
-import fergoman123.mods.fergotools.util.GuiFT;
+import fergoman123.mods.fergotools.util.base.GuiFT;
 import fergoman123.mods.fergoutil.helper.GuiHelper;
 import net.minecraft.entity.player.InventoryPlayer;
 import org.lwjgl.opengl.GL11;

@@ -1,4 +1,4 @@
-package fergoman123.mods.fergotools.util;
+package fergoman123.mods.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

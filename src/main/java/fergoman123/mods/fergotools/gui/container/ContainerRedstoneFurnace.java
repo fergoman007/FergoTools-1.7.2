@@ -3,25 +3,24 @@ package fergoman123.mods.fergotools.gui.container;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.tileentity.TileEntityRedstoneFurnace;
+import fergoman123.mods.fergotools.util.base.ContainerFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class ContainerRedstoneFurnace extends Container
+public class ContainerRedstoneFurnace extends ContainerFT
 {
-    private TileEntityRedstoneFurnace furnace;
     private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
 
     public ContainerRedstoneFurnace(InventoryPlayer par1InventoryPlayer, TileEntityRedstoneFurnace par2TileEntityFurnaceTutorial)
     {
-        this.furnace = par2TileEntityFurnaceTutorial;
+        this.redstoneFurnace = par2TileEntityFurnaceTutorial;
         this.addSlotToContainer(new Slot(par2TileEntityFurnaceTutorial, 0, 56, 17));
         this.addSlotToContainer(new Slot(par2TileEntityFurnaceTutorial, 1, 56, 53));
         this.addSlotToContainer(new SlotFurnace(par1InventoryPlayer.player, par2TileEntityFurnaceTutorial, 2, 116, 35));
@@ -44,9 +43,9 @@ public class ContainerRedstoneFurnace extends Container
     public void addCraftingToCrafters(ICrafting par1ICrafting)
     {
         super.addCraftingToCrafters(par1ICrafting);
-        par1ICrafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
-        par1ICrafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
-        par1ICrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 0, this.redstoneFurnace.cookTime);
+        par1ICrafting.sendProgressBarUpdate(this, 1, this.redstoneFurnace.burnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 2, this.redstoneFurnace.currentItemBurnTime);
     }
 
     /**
@@ -60,25 +59,25 @@ public class ContainerRedstoneFurnace extends Container
         {
             ICrafting icrafting = (ICrafting)this.crafters.get(i);
 
-            if (this.lastCookTime != this.furnace.cookTime)
+            if (this.lastCookTime != this.redstoneFurnace.cookTime)
             {
-                icrafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
+                icrafting.sendProgressBarUpdate(this, 0, this.redstoneFurnace.cookTime);
             }
 
-            if (this.lastBurnTime != this.furnace.burnTime)
+            if (this.lastBurnTime != this.redstoneFurnace.burnTime)
             {
-                icrafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
+                icrafting.sendProgressBarUpdate(this, 1, this.redstoneFurnace.burnTime);
             }
 
-            if (this.lastItemBurnTime != this.furnace.currentItemBurnTime)
+            if (this.lastItemBurnTime != this.redstoneFurnace.currentItemBurnTime)
             {
-                icrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+                icrafting.sendProgressBarUpdate(this, 2, this.redstoneFurnace.currentItemBurnTime);
             }
         }
 
-        this.lastCookTime = this.furnace.cookTime;
-        this.lastBurnTime = this.furnace.burnTime;
-        this.lastItemBurnTime = this.furnace.currentItemBurnTime;
+        this.lastCookTime = this.redstoneFurnace.cookTime;
+        this.lastBurnTime = this.redstoneFurnace.burnTime;
+        this.lastItemBurnTime = this.redstoneFurnace.currentItemBurnTime;
     }
 
     @SideOnly(Side.CLIENT)
@@ -86,23 +85,23 @@ public class ContainerRedstoneFurnace extends Container
     {
         if (par1 == 0)
         {
-            this.furnace.cookTime = par2;
+            this.redstoneFurnace.cookTime = par2;
         }
 
         if (par1 == 1)
         {
-            this.furnace.burnTime = par2;
+            this.redstoneFurnace.burnTime = par2;
         }
 
         if (par1 == 2)
         {
-            this.furnace.currentItemBurnTime = par2;
+            this.redstoneFurnace.currentItemBurnTime = par2;
         }
     }
 
     public boolean canInteractWith(EntityPlayer par1EntityPlayer)
     {
-        return this.furnace.isUseableByPlayer(par1EntityPlayer);
+        return this.redstoneFurnace.isUseableByPlayer(par1EntityPlayer);
     }
 
     /**

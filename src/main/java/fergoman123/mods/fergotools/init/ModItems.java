@@ -12,9 +12,9 @@ import fergoman123.mods.fergotools.lib.Strings.ArmorStrings;
 import fergoman123.mods.fergotools.lib.Strings.BowStrings;
 import fergoman123.mods.fergotools.lib.Strings.ItemStrings;
 import fergoman123.mods.fergotools.lib.Strings.ToolStrings;
-import fergoman123.mods.fergotools.util.ItemArmorFT;
-import fergoman123.mods.fergotools.util.ItemBowFT;
-import fergoman123.mods.fergotools.util.ItemFT;
+import fergoman123.mods.fergotools.util.base.ItemArmorFT;
+import fergoman123.mods.fergotools.util.base.ItemBowFT;
+import fergoman123.mods.fergotools.util.base.ItemFT;
 import fergoman123.mods.fergotools.util.tool.*;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 

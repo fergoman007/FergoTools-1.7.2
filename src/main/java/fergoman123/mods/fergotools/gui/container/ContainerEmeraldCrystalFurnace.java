@@ -3,25 +3,24 @@ package fergoman123.mods.fergotools.gui.container;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
+import fergoman123.mods.fergotools.util.base.ContainerFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class ContainerEmeraldCrystalFurnace extends Container
+public class ContainerEmeraldCrystalFurnace extends ContainerFT
 {
-    private TileEntityEmeraldCrystalFurnace furnace;
     private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
 
     public ContainerEmeraldCrystalFurnace(InventoryPlayer par1InventoryPlayer, TileEntityEmeraldCrystalFurnace par2TileEntityFurnaceTutorial)
     {
-        this.furnace = par2TileEntityFurnaceTutorial;
+        this.emeraldCrystalFurnace = par2TileEntityFurnaceTutorial;
         this.addSlotToContainer(new Slot(par2TileEntityFurnaceTutorial, 0, 56, 17));
         this.addSlotToContainer(new Slot(par2TileEntityFurnaceTutorial, 1, 56, 53));
         this.addSlotToContainer(new SlotFurnace(par1InventoryPlayer.player, par2TileEntityFurnaceTutorial, 2, 116, 35));
@@ -44,9 +43,9 @@ public class ContainerEmeraldCrystalFurnace extends Container
     public void addCraftingToCrafters(ICrafting par1ICrafting)
     {
         super.addCraftingToCrafters(par1ICrafting);
-        par1ICrafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
-        par1ICrafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
-        par1ICrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 0, this.emeraldCrystalFurnace.cookTime);
+        par1ICrafting.sendProgressBarUpdate(this, 1, this.emeraldCrystalFurnace.burnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 2, this.emeraldCrystalFurnace.currentItemBurnTime);
     }
 
     /**
@@ -60,25 +59,25 @@ public class ContainerEmeraldCrystalFurnace extends Container
         {
             ICrafting icrafting = (ICrafting)this.crafters.get(i);
 
-            if (this.lastCookTime != this.furnace.cookTime)
+            if (this.lastCookTime != this.emeraldCrystalFurnace.cookTime)
             {
-                icrafting.sendProgressBarUpdate(this, 0, this.furnace.cookTime);
+                icrafting.sendProgressBarUpdate(this, 0, this.emeraldCrystalFurnace.cookTime);
             }
 
-            if (this.lastBurnTime != this.furnace.burnTime)
+            if (this.lastBurnTime != this.emeraldCrystalFurnace.burnTime)
             {
-                icrafting.sendProgressBarUpdate(this, 1, this.furnace.burnTime);
+                icrafting.sendProgressBarUpdate(this, 1, this.emeraldCrystalFurnace.burnTime);
             }
 
-            if (this.lastItemBurnTime != this.furnace.currentItemBurnTime)
+            if (this.lastItemBurnTime != this.emeraldCrystalFurnace.currentItemBurnTime)
             {
-                icrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+                icrafting.sendProgressBarUpdate(this, 2, this.emeraldCrystalFurnace.currentItemBurnTime);
             }
         }
 
-        this.lastCookTime = this.furnace.cookTime;
-        this.lastBurnTime = this.furnace.burnTime;
-        this.lastItemBurnTime = this.furnace.currentItemBurnTime;
+        this.lastCookTime = this.emeraldCrystalFurnace.cookTime;
+        this.lastBurnTime = this.emeraldCrystalFurnace.burnTime;
+        this.lastItemBurnTime = this.emeraldCrystalFurnace.currentItemBurnTime;
     }
 
     @SideOnly(Side.CLIENT)
@@ -86,23 +85,23 @@ public class ContainerEmeraldCrystalFurnace extends Container
     {
         if (par1 == 0)
         {
-            this.furnace.cookTime = par2;
+            this.emeraldCrystalFurnace.cookTime = par2;
         }
 
         if (par1 == 1)
         {
-            this.furnace.burnTime = par2;
+            this.emeraldCrystalFurnace.burnTime = par2;
         }
 
         if (par1 == 2)
         {
-            this.furnace.currentItemBurnTime = par2;
+            this.emeraldCrystalFurnace.currentItemBurnTime = par2;
         }
     }
 
     public boolean canInteractWith(EntityPlayer par1EntityPlayer)
     {
-        return this.furnace.isUseableByPlayer(par1EntityPlayer);
+        return this.emeraldCrystalFurnace.isUseableByPlayer(par1EntityPlayer);
     }
 
     /**

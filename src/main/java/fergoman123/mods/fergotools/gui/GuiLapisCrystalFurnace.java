@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.gui;
 import fergoman123.mods.fergotools.gui.container.ContainerLapisCrystalFurnace;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
-import fergoman123.mods.fergotools.util.GuiFT;
+import fergoman123.mods.fergotools.util.base.GuiFT;
 import fergoman123.mods.fergoutil.helper.GuiHelper;
 import net.minecraft.entity.player.InventoryPlayer;
 

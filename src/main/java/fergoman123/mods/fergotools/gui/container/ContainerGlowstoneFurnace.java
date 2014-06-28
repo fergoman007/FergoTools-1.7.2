@@ -3,16 +3,16 @@ package fergoman123.mods.fergotools.gui.container;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.tileentity.TileEntityGlowstoneFurnace;
+import fergoman123.mods.fergotools.util.base.ContainerFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class ContainerGlowstoneFurnace extends Container
+public class ContainerGlowstoneFurnace extends ContainerFT
 {
     private TileEntityGlowstoneFurnace furnace;
     private int lastCookTime;

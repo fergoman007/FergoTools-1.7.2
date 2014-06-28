@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.block.ore;
 
 import fergoman123.mods.fergotools.lib.Strings;
-import fergoman123.mods.fergotools.util.BlockFT;
+import fergoman123.mods.fergotools.util.base.BlockFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
