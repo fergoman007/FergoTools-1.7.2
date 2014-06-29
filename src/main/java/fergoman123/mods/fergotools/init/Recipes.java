@@ -1,23 +1,17 @@
-package fergoman123.mods.fergotools.handler;
+package fergoman123.mods.fergotools.init;
 
 import fergoman123.mods.fergotools.block.ore.*;
+import fergoman123.mods.fergotools.block.storage.BlockExperience;
 import fergoman123.mods.fergotools.util.item.UtilItemStack;
 import fergoman123.mods.fergotools.util.item.UtilRecipeList;
 import fergoman123.mods.fergoutil.helper.RecipeHelper;
 import net.minecraft.init.Blocks;
 
-public class RecipeHandler {
-
+public class Recipes
+{
     public static void init()
     {
-        initRecipes();
-    }
-
-    public static final float xp = 2.5f;
-	
-	public static void initRecipes()
-	{
-		RecipeHelper.addShapelessRecipe(UtilItemStack.obsidianIngot9, UtilItemStack.blockObsidian);
+        RecipeHelper.addShapelessRecipe(UtilItemStack.obsidianIngot9, UtilItemStack.blockObsidian);
         RecipeHelper.addShapelessRecipe(UtilItemStack.emeraldCrystal9, UtilItemStack.blockEmeraldCrystal);
         RecipeHelper.addShapelessRecipe(UtilItemStack.lapisCrystal9, UtilItemStack.blockLapisCrystal);
         RecipeHelper.addShapelessRecipe(UtilItemStack.bronzeIngot9, UtilItemStack.blockBronze);
@@ -26,10 +20,10 @@ public class RecipeHandler {
         RecipeHelper.addShapelessRecipe(UtilItemStack.glowstoneIngot9, UtilItemStack.blockGlowstone);
         RecipeHelper.addShapelessRecipe(UtilItemStack.expBottle9, UtilItemStack.blockExperience);
         RecipeHelper.addShapelessRecipe(UtilItemStack.silkGem9, UtilItemStack.blockSilkGem);
-       
+
         RecipeHelper.addShapelessRecipe(UtilItemStack.expShard9, UtilItemStack.expBottle);
 
-        
+
         RecipeHelper.addShapedRecipe(UtilItemStack.blockObsidian, UtilRecipeList.blockObsidian);
         RecipeHelper.addShapedRecipe(UtilItemStack.blockEmeraldCrystal, UtilRecipeList.blockEmeraldCrystal);
         RecipeHelper.addShapedRecipe(UtilItemStack.blockLapisCrystal, UtilRecipeList.blockLapisCrystal);
@@ -40,9 +34,9 @@ public class RecipeHandler {
         RecipeHelper.addShapedRecipe(UtilItemStack.blockExperience, UtilRecipeList.blockExperience);
         RecipeHelper.addShapedRecipe(UtilItemStack.blockSilkGem, UtilRecipeList.blockSilkGem);
         RecipeHelper.addShapedRecipe(UtilItemStack.blockRedstone, UtilRecipeList.blockRedstone);
-        
+
         RecipeHelper.addShapedRecipe(UtilItemStack.expBottle, UtilRecipeList.expBottle);
-       
+
         RecipeHelper.addShapedRecipe(UtilItemStack.quartzPickaxe, UtilRecipeList.quartzPickaxe);
         RecipeHelper.addShapedRecipe(UtilItemStack.quartzShovel, UtilRecipeList.quartzShovel);
         RecipeHelper.addShapedRecipe(UtilItemStack.quartzAxe, UtilRecipeList.quartzAxe);
@@ -99,75 +93,75 @@ public class RecipeHandler {
 
         RecipeHelper.addShapedRecipe(UtilItemStack.quartzFurnace, UtilRecipeList.quartzFurnace);
         RecipeHelper.addShapedRecipe(UtilItemStack.obsidianFurnace, UtilRecipeList.obsidianFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.emeraldCrystalFurnace, UtilRecipeList.emeraldCrystalFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.lapisCrystalFurnace, UtilRecipeList.lapisCrystalFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.bronzeFurnace, UtilRecipeList.bronzeFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.coalFurnace, UtilRecipeList.coalFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneFurnace, UtilRecipeList.glowstoneFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.silkFurnace, UtilRecipeList.silkFurnace);
-//        RecipeHelper.addShapedRecipe(UtilItemStack.redstoneFurnace, UtilRecipeList.redstoneFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.emeraldCrystalFurnace, UtilRecipeList.emeraldCrystalFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.lapisCrystalFurnace, UtilRecipeList.lapisCrystalFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.bronzeFurnace, UtilRecipeList.bronzeFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.coalFurnace, UtilRecipeList.coalFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneFurnace, UtilRecipeList.glowstoneFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.silkFurnace, UtilRecipeList.silkFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.redstoneFurnace, UtilRecipeList.redstoneFurnace);
 
-        RecipeHelper.addBlockSmelting(BlockOreObsidian.instance, UtilItemStack.obsidianIngot, xp);
-        RecipeHelper.addBlockSmelting(BlockOreEmeraldCrystal.instance, UtilItemStack.emeraldCrystal, xp);
-        RecipeHelper.addBlockSmelting(BlockOreLapisCrystal.instance, UtilItemStack.lapisCrystal, xp);
-        RecipeHelper.addBlockSmelting(BlockOreBronze.instance, UtilItemStack.bronzeIngot, xp);
-        RecipeHelper.addBlockSmelting(Blocks.coal_block, UtilItemStack.coalIngot, xp);
-        RecipeHelper.addBlockSmelting(Blocks.glowstone, UtilItemStack.glowstoneIngot, xp);
-        RecipeHelper.addBlockSmelting(BlockOreAdamantium.instance, UtilItemStack.adamantiumIngot, xp);
-        RecipeHelper.addBlockSmelting(BlockOreExperience.instance, UtilItemStack.expShard5, xp);
-
-
-		
-		RecipeHelper.addShapedRecipe(UtilItemStack.quartzHelmet, UtilRecipeList.quartzHelmet);
-		RecipeHelper.addShapedRecipe(UtilItemStack.quartzChestplate, UtilRecipeList.quartzChestplate);
-		RecipeHelper.addShapedRecipe(UtilItemStack.quartzLeggings, UtilRecipeList.quartzLeggings);
-		RecipeHelper.addShapedRecipe(UtilItemStack.quartzBoots, UtilRecipeList.quartzBoots);
-		
-		RecipeHelper.addShapedRecipe(UtilItemStack.obsidianHelmet, UtilRecipeList.obsidianHelmet);
-		RecipeHelper.addShapedRecipe(UtilItemStack.obsidianChestplate, UtilRecipeList.obsidianChestplate);
-		RecipeHelper.addShapedRecipe(UtilItemStack.obsidianLeggings, UtilRecipeList.obsidianLeggings);
-		RecipeHelper.addShapedRecipe(UtilItemStack.obsidianBoots, UtilRecipeList.obsidianBoots);
-		
-		RecipeHelper.addShapedRecipe(UtilItemStack.emeraldHelmet, UtilRecipeList.emeraldHelmet);
-		RecipeHelper.addShapedRecipe(UtilItemStack.emeraldChestplate, UtilRecipeList.emeraldChestplate);
-		RecipeHelper.addShapedRecipe(UtilItemStack.emeraldLeggings, UtilRecipeList.emeraldLeggings);
-		RecipeHelper.addShapedRecipe(UtilItemStack.emeraldBoots, UtilRecipeList.emeraldBoots);
-
-		RecipeHelper.addShapedRecipe(UtilItemStack.lapisHelmet, UtilRecipeList.lapisHelmet);
-		RecipeHelper.addShapedRecipe(UtilItemStack.lapisChestplate, UtilRecipeList.lapisChestplate);
-		RecipeHelper.addShapedRecipe(UtilItemStack.lapisLeggings, UtilRecipeList.lapisLeggings);
-		RecipeHelper.addShapedRecipe(UtilItemStack.lapisBoots, UtilRecipeList.lapisBoots);
+        RecipeHelper.addBlockSmelting(BlockOreObsidian.instance, UtilItemStack.obsidianIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreEmeraldCrystal.instance, UtilItemStack.emeraldCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreLapisCrystal.instance, UtilItemStack.lapisCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreBronze.instance, UtilItemStack.bronzeIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(Blocks.coal_block, UtilItemStack.coalIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(Blocks.glowstone, UtilItemStack.glowstoneIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreAdamantium.instance, UtilItemStack.adamantiumIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockExperience.instance, UtilItemStack.expShard5, 2.5f);
 
 
-		RecipeHelper.addShapedRecipe(UtilItemStack.bronzeHelmet, UtilRecipeList.bronzeHelmet);
-		RecipeHelper.addShapedRecipe(UtilItemStack.bronzeChestplate, UtilRecipeList.bronzeChestplate);
-		RecipeHelper.addShapedRecipe(UtilItemStack.bronzeLeggings, UtilRecipeList.bronzeLeggings);
-		RecipeHelper.addShapedRecipe(UtilItemStack.bronzeBoots, UtilRecipeList.bronzeBoots);
 
-		RecipeHelper.addShapedRecipe(UtilItemStack.coalHelmet, UtilRecipeList.coalHelmet);
-		RecipeHelper.addShapedRecipe(UtilItemStack.coalChestplate, UtilRecipeList.coalChestplate);
-		RecipeHelper.addShapedRecipe(UtilItemStack.coalLeggings, UtilRecipeList.coalLeggings);
-		RecipeHelper.addShapedRecipe(UtilItemStack.coalBoots, UtilRecipeList.coalBoots);
+        RecipeHelper.addShapedRecipe(UtilItemStack.quartzHelmet, UtilRecipeList.quartzHelmet);
+        RecipeHelper.addShapedRecipe(UtilItemStack.quartzChestplate, UtilRecipeList.quartzChestplate);
+        RecipeHelper.addShapedRecipe(UtilItemStack.quartzLeggings, UtilRecipeList.quartzLeggings);
+        RecipeHelper.addShapedRecipe(UtilItemStack.quartzBoots, UtilRecipeList.quartzBoots);
 
-		RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneHelmet, UtilRecipeList.glowstoneHelmet);
-		RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneChestplate, UtilRecipeList.glowstoneChestplate);
-		RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneLeggings, UtilRecipeList.glowstoneLeggings);
-		RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneBoots, UtilRecipeList.glowstoneBoots);
+        RecipeHelper.addShapedRecipe(UtilItemStack.obsidianHelmet, UtilRecipeList.obsidianHelmet);
+        RecipeHelper.addShapedRecipe(UtilItemStack.obsidianChestplate, UtilRecipeList.obsidianChestplate);
+        RecipeHelper.addShapedRecipe(UtilItemStack.obsidianLeggings, UtilRecipeList.obsidianLeggings);
+        RecipeHelper.addShapedRecipe(UtilItemStack.obsidianBoots, UtilRecipeList.obsidianBoots);
+
+        RecipeHelper.addShapedRecipe(UtilItemStack.emeraldHelmet, UtilRecipeList.emeraldHelmet);
+        RecipeHelper.addShapedRecipe(UtilItemStack.emeraldChestplate, UtilRecipeList.emeraldChestplate);
+        RecipeHelper.addShapedRecipe(UtilItemStack.emeraldLeggings, UtilRecipeList.emeraldLeggings);
+        RecipeHelper.addShapedRecipe(UtilItemStack.emeraldBoots, UtilRecipeList.emeraldBoots);
+
+        RecipeHelper.addShapedRecipe(UtilItemStack.lapisHelmet, UtilRecipeList.lapisHelmet);
+        RecipeHelper.addShapedRecipe(UtilItemStack.lapisChestplate, UtilRecipeList.lapisChestplate);
+        RecipeHelper.addShapedRecipe(UtilItemStack.lapisLeggings, UtilRecipeList.lapisLeggings);
+        RecipeHelper.addShapedRecipe(UtilItemStack.lapisBoots, UtilRecipeList.lapisBoots);
+
+
+        RecipeHelper.addShapedRecipe(UtilItemStack.bronzeHelmet, UtilRecipeList.bronzeHelmet);
+        RecipeHelper.addShapedRecipe(UtilItemStack.bronzeChestplate, UtilRecipeList.bronzeChestplate);
+        RecipeHelper.addShapedRecipe(UtilItemStack.bronzeLeggings, UtilRecipeList.bronzeLeggings);
+        RecipeHelper.addShapedRecipe(UtilItemStack.bronzeBoots, UtilRecipeList.bronzeBoots);
+
+        RecipeHelper.addShapedRecipe(UtilItemStack.coalHelmet, UtilRecipeList.coalHelmet);
+        RecipeHelper.addShapedRecipe(UtilItemStack.coalChestplate, UtilRecipeList.coalChestplate);
+        RecipeHelper.addShapedRecipe(UtilItemStack.coalLeggings, UtilRecipeList.coalLeggings);
+        RecipeHelper.addShapedRecipe(UtilItemStack.coalBoots, UtilRecipeList.coalBoots);
+
+        RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneHelmet, UtilRecipeList.glowstoneHelmet);
+        RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneChestplate, UtilRecipeList.glowstoneChestplate);
+        RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneLeggings, UtilRecipeList.glowstoneLeggings);
+        RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneBoots, UtilRecipeList.glowstoneBoots);
 
         RecipeHelper.addShapedRecipe(UtilItemStack.redstoneHelmet, UtilRecipeList.redstoneHelmet);
         RecipeHelper.addShapedRecipe(UtilItemStack.redstoneChestplate, UtilRecipeList.redstoneChestplate);
         RecipeHelper.addShapedRecipe(UtilItemStack.redstoneLeggings, UtilRecipeList.redstoneLeggings);
         RecipeHelper.addShapedRecipe(UtilItemStack.redstoneBoots, UtilRecipeList.redstoneBoots);
 
-		RecipeHelper.addShapedRecipe(UtilItemStack.quartzBow, UtilRecipeList.quartzBow);
-		RecipeHelper.addShapedRecipe(UtilItemStack.obsidianBow, UtilRecipeList.obsidianBow);
-		RecipeHelper.addShapedRecipe(UtilItemStack.emeraldBow, UtilRecipeList.emeraldBow);
-		RecipeHelper.addShapedRecipe(UtilItemStack.lapisBow, UtilRecipeList.lapisBow);
-		RecipeHelper.addShapedRecipe(UtilItemStack.bronzeBow, UtilRecipeList.bronzeBow);
-		RecipeHelper.addShapedRecipe(UtilItemStack.coalBow, UtilRecipeList.coalBow);
-		RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneBow, UtilRecipeList.glowstoneBow);
-		RecipeHelper.addShapedRecipe(UtilItemStack.adamantiumBow, UtilRecipeList.adamantiumBow);
-	}
+        RecipeHelper.addShapedRecipe(UtilItemStack.quartzBow, UtilRecipeList.quartzBow);
+        RecipeHelper.addShapedRecipe(UtilItemStack.obsidianBow, UtilRecipeList.obsidianBow);
+        RecipeHelper.addShapedRecipe(UtilItemStack.emeraldBow, UtilRecipeList.emeraldBow);
+        RecipeHelper.addShapedRecipe(UtilItemStack.lapisBow, UtilRecipeList.lapisBow);
+        RecipeHelper.addShapedRecipe(UtilItemStack.bronzeBow, UtilRecipeList.bronzeBow);
+        RecipeHelper.addShapedRecipe(UtilItemStack.coalBow, UtilRecipeList.coalBow);
+        RecipeHelper.addShapedRecipe(UtilItemStack.glowstoneBow, UtilRecipeList.glowstoneBow);
+        RecipeHelper.addShapedRecipe(UtilItemStack.adamantiumBow, UtilRecipeList.adamantiumBow);
+    }
 }
