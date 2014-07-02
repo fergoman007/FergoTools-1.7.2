@@ -45,7 +45,7 @@ minecraft {
     assetDir = "run/assets"
 
     replaceIn "lib/ModInfo.java"
-    replace "@version@", fergoman123.mods.fergoutil.config.mod_version
+    replace "@version@", config.mod_version
 }
 
 version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
