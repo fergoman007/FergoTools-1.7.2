@@ -102,8 +102,6 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, UtilAb
         this.channels = NetworkRegistry.INSTANCE.newChannel(ModInfo.modid, this);
     }
 
-    // Method to call from FMLPostInitializationEvent
-    // Ensures that packet discriminators are common between server and client by using logical sorting
     public void postInitialise() {
         if (this.isPostInitialised) {
             return;
@@ -129,67 +127,29 @@ public class PacketPipeline extends MessageToMessageCodec<FMLProxyPacket, UtilAb
         return Minecraft.getMinecraft().thePlayer;
     }
 
-    /**
-     * Send this message to everyone.
-     * <p/>
-     * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
-     *
-     * @param message The message to send
-     */
     public void sendToAll(UtilAbstractPacket message) {
         this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.ALL);
         this.channels.get(Side.SERVER).writeAndFlush(message);
     }
 
-    /**
-     * Send this message to the specified player.
-     * <p/>
-     * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
-     *
-     * @param message The message to send
-     * @param player  The player to send it to
-     */
     public void sendTo(UtilAbstractPacket message, EntityPlayerMP player) {
         this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.PLAYER);
         this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGETARGS).set(player);
         this.channels.get(Side.SERVER).writeAndFlush(message);
     }
 
-    /**
-     * Send this message to everyone within a certain range of a point.
-     * <p/>
-     * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
-     *
-     * @param message The message to send
-     * @param point   The {@link cpw.mods.fml.common.network.NetworkRegistry.TargetPoint} around which to send
-     */
     public void sendToAllAround(UtilAbstractPacket message, NetworkRegistry.TargetPoint point) {
         this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.ALLAROUNDPOINT);
         this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGETARGS).set(point);
         this.channels.get(Side.SERVER).writeAndFlush(message);
     }
 
-    /**
-     * Send this message to everyone within the supplied dimension.
-     * <p/>
-     * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
-     *
-     * @param message     The message to send
-     * @param dimensionId The dimension id to target
-     */
     public void sendToDimension(UtilAbstractPacket message, int dimensionId) {
         this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.DIMENSION);
         this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGETARGS).set(dimensionId);
         this.channels.get(Side.SERVER).writeAndFlush(message);
     }
 
-    /**
-     * Send this message to the server.
-     * <p/>
-     * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
-     *
-     * @param message The message to send
-     */
     public void sendToServer(UtilAbstractPacket message) {
         this.channels.get(Side.CLIENT).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.TOSERVER);
         this.channels.get(Side.CLIENT).writeAndFlush(message);

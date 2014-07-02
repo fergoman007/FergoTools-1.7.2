@@ -102,6 +102,7 @@ public class Recipes
         RecipeHelper.addShapedRecipe(UtilItemStack.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
         RecipeHelper.addShapedRecipe(UtilItemStack.silkFurnace, UtilRecipeList.silkFurnace);
         RecipeHelper.addShapedRecipe(UtilItemStack.redstoneFurnace, UtilRecipeList.redstoneFurnace);
+        RecipeHelper.addShapedRecipe(UtilItemStack.macerator, UtilRecipeList.macerator);
 
         RecipeHelper.addBlockSmelting(BlockOreObsidian.instance, UtilItemStack.obsidianIngot, 2.5f);
         RecipeHelper.addBlockSmelting(BlockOreEmeraldCrystal.instance, UtilItemStack.emeraldCrystal, 2.5f);

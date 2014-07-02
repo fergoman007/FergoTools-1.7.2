@@ -1,6 +1,5 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
@@ -21,12 +20,12 @@ public class ItemArmorRedstone extends ItemArmorFT{
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        if (stack.getItem() == ModItems.redstoneHelmet || stack.getItem() == ModItems.redstoneChestplate || stack.getItem() == ModItems.redstoneBoots)
+        if (stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {
             return Textures.ArmorTextures.redstoneArmorRender1;
         }
 
-        if (stack.getItem() == ModItems.redstoneLeggings)
+        if (stack.getItem() == instanceLegs)
         {
             return Textures.ArmorTextures.redstoneArmorRender2;
         }

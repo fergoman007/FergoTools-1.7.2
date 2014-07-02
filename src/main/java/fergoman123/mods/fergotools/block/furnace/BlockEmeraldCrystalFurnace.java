@@ -126,11 +126,11 @@ public class BlockEmeraldCrystalFurnace extends BlockFurnaceFT
 
         if (active)
         {
-            world.setBlock(x, y, z, ModBlocks.emeraldCrystalFurnaceActive);
+            world.setBlock(x, y, z, instanceActive);
         }
         else
         {
-            world.setBlock(x, y, z, ModBlocks.emeraldCrystalFurnaceIdle);
+            world.setBlock(x, y, z, instanceIdle);
         }
 
         keepInventory = false;

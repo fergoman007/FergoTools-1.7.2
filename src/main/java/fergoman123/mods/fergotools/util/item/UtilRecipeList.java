@@ -1,6 +1,8 @@
 package fergoman123.mods.fergotools.util.item;
 
 import fergoman123.mods.fergotools.util.item.UtilRecipe.RecipeArray;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 
 /**
  * Created by Fergoman123 on 06/05/2014.
@@ -33,7 +35,7 @@ public class UtilRecipeList {
     public static final Object[] adamantiumFurnace = new Object[]{RecipeArray.getFurnaceRecipe(), charX, UtilItemStack.blockAdamantium};
     public static final Object[] silkFurnace = new Object[]{RecipeArray.getFurnaceRecipe(), charX, UtilItemStack.blockSilkGem};
     public static final Object[] redstoneFurnace = new Object[]{RecipeArray.getFurnaceRecipe(), charX, UtilItemStack.blockRedstone};
-
+    public static final Object[] macerator = new Object[]{"xxx", "xyx", "xxx", charX, UtilItemStack.blockAdamantium, charY, new ItemStack(Blocks.iron_block)};
     // Tools
     public static final Object[] quartzPickaxe = new Object[]{RecipeArray.getPickaxeRecipe(), charX, UtilItemStack.quartzStack, charY, UtilItemStack.stickStack};
     public static final Object[] quartzShovel = new Object[]{RecipeArray.getShovelRecipe(), charX, UtilItemStack.quartzStack, charY, UtilItemStack.stickStack};

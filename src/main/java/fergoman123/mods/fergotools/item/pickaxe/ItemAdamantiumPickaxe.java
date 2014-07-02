@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
-import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.item.materials.ItemAdamantiumIngot;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
@@ -21,7 +21,7 @@ public class ItemAdamantiumPickaxe extends PickaxeGeneric {
 
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
     {
-        return par2ItemStack.isItemEqual(new ItemStack(ModItems.adamantiumIngot)) || super.getIsRepairable(par1ItemStack, par2ItemStack);
+        return par2ItemStack.isItemEqual(new ItemStack(ItemAdamantiumIngot.instance)) || super.getIsRepairable(par1ItemStack, par2ItemStack);
     }
 
     @SuppressWarnings({"unchecked"})

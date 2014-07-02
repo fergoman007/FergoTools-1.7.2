@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.handler;
 
 import cpw.mods.fml.common.IFuelHandler;
-import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -16,7 +16,7 @@ public class FuelHandler implements IFuelHandler {
     private static final int coalIngotBurnTime = 9 * TileEntityFurnace.getItemBurnTime(coal);
 
     public int getBurnTime(ItemStack fuel) {
-        if (fuel.getItem() == ModItems.coalIngot)
+        if (fuel.getItem() == ItemCoalIngot.instance)
         {
             return 9 * TileEntityFurnace.getItemBurnTime(coal);
         }

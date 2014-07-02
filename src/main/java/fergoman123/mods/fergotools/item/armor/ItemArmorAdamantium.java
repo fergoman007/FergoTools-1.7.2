@@ -26,12 +26,12 @@ public class ItemArmorAdamantium extends ItemArmorFT{
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        if (stack.getItem() == ModItems.adamantiumHelmet || stack.getItem() == ModItems.adamantiumChestplate || stack.getItem() == ModItems.adamantiumBoots)
+        if (stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {
             return Textures.ArmorTextures.adamantiumArmorRender1;
         }
 
-        if (stack.getItem() == ModItems.adamantiumLeggings)
+        if (stack.getItem() == instanceLegs)
         {
             return Textures.ArmorTextures.redstoneArmorRender2;
         }

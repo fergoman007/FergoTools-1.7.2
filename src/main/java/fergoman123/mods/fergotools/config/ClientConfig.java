@@ -1,30 +1,31 @@
-package fergoman123.mods.fergotools.handler;
+package fergoman123.mods.fergotools.config;
 
 import fergoman123.mods.fergotools.helper.LogHelper;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
 
-public class ConfigHandler {
+public class ClientConfig {
 
-    private static final String CATEGORY_FT = "FergoTools";
     private static Configuration config;
 
     public static void init(File configFile)
     {
         config = new Configuration(configFile);
 
-        try {
+        try
+        {
             config.load();
 
-            config.addCustomCategoryComment(CATEGORY_FT, "Fergoman123's Settings");
+            config.addCustomCategoryComment(Settings.CATEGORY_FT, Settings.categoryComment);
 
         }
         catch (Exception e)
         {
-            LogHelper.error("FergoTools has had a problem loading its general configuration");
+            LogHelper.error("Loading of config file failed because " + e.getCause());
         }
-        finally {
+        finally
+        {
             config.save();
         }
     }

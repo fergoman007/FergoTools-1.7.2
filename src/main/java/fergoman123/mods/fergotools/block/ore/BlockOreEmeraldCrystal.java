@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.block.ore;
 
-import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.item.materials.ItemEmeraldCrystal;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
@@ -8,9 +8,6 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class BlockOreEmeraldCrystal extends BlockFT{
 
     public static BlockOreEmeraldCrystal instance = new BlockOreEmeraldCrystal();
@@ -25,7 +22,7 @@ public class BlockOreEmeraldCrystal extends BlockFT{
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return ModItems.emeraldCrystal;
+        return ItemEmeraldCrystal.instance;
     }
 
     public int quantityDropped(Random random) {

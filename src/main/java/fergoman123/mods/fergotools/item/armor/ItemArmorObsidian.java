@@ -1,6 +1,5 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
@@ -21,10 +20,10 @@ public class ItemArmorObsidian extends ItemArmorFT {
 
     public String getArmorTexture(ItemStack is, Entity entity, int slot, String type)
     {
-        if(is.getItem() == ModItems.obsidianHelmet || is.getItem() == ModItems.obsidianChestplate || is.getItem() == ModItems.obsidianBoots)
+        if(is.getItem() == instanceHelmet || is.getItem() == instanceChest || is.getItem() == instanceBoots)
         {return ArmorTextures.obsidianArmorRender1;}
 
-        if(is.getItem() == ModItems.obsidianLeggings)
+        if(is.getItem() == instanceLegs)
         {return ArmorTextures.obsidianArmorRender2;}
         else{return null;}
     }

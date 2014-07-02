@@ -111,7 +111,7 @@ public class ModItems{
 
         RegisterHelper.registerItem(ItemArmorBronze.instanceHelmet, ArmorStrings.bronzeHelmet);
         RegisterHelper.registerItem(ItemArmorBronze.instanceChest, ArmorStrings.bronzeChest);
-        RegisterHelper.registerItem(ItemArmorBronze.instanceHelmet, ArmorStrings.bronzeLegs);
+        RegisterHelper.registerItem(ItemArmorBronze.instanceLegs, ArmorStrings.bronzeLegs);
         RegisterHelper.registerItem(ItemArmorBronze.instanceBoots, ArmorStrings.bronzeBoots);
 
         RegisterHelper.registerItem(ItemArmorCoal.instanceHelmet, ArmorStrings.coalHelmet);

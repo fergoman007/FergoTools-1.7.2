@@ -1,6 +1,7 @@
 package fergoman123.mods.fergotools.proxy;
 
 import cpw.mods.fml.common.network.IGuiHandler;
+import fergoman123.mods.fergotools.config.ClientConfig;
 import fergoman123.mods.fergotools.gui.*;
 import fergoman123.mods.fergotools.gui.container.*;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
@@ -9,6 +10,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+
+import java.io.File;
 
 public class ClientProxy extends CommonProxy implements IGuiHandler {
 
@@ -74,5 +77,10 @@ public class ClientProxy extends CommonProxy implements IGuiHandler {
                 return new GuiMacerator(inventory, (TileEntityMacerator) entity);
         }
         return null;
+    }
+
+    @Override
+    public void addClientConfig(File configFile) {
+        ClientConfig.init(configFile);
     }
 }

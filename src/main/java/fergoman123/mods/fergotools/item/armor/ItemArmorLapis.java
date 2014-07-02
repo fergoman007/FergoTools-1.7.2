@@ -1,6 +1,5 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
@@ -22,12 +21,12 @@ public class ItemArmorLapis extends ItemArmorFT {
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        if(stack.getItem() == ModItems.lapisHelmet || stack.getItem() == ModItems.lapisChestplate || stack.getItem() == ModItems.lapisBoots)
+        if(stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {
             return Textures.ArmorTextures.lapisArmorRender1;
         }
 
-        if(stack.getItem() == ModItems.lapisLeggings)
+        if(stack.getItem() == instanceLegs)
         {
             return Textures.ArmorTextures.lapisArmorRender2;
         }

@@ -128,8 +128,7 @@ public class UtilItemStack {
     public static final ItemStack adamantiumFurnace = new ItemStack(BlockAdamantiumFurnace.instanceIdle);
     public static final ItemStack silkFurnace = new ItemStack(BlockSilkFurnace.instanceIdle);
     public static final ItemStack redstoneFurnace = new ItemStack(BlockRedstoneFurnace.instanceIdle);
-    public static final ItemStack macerator = new ItemStack(BlockMacerator.instanceActive);
-
+    public static final ItemStack macerator = new ItemStack(BlockMacerator.instanceIdle);
 
     public static final ItemStack quartzHelmet = new ItemStack(ItemArmorQuartz.instanceHelmet);
     public static final ItemStack quartzChestplate = new ItemStack(ItemArmorQuartz.instanceChest);

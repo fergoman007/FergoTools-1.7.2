@@ -1,9 +1,9 @@
 package fergoman123.mods.fergotools.item.axe;
 
-import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.item.materials.ItemEmeraldCrystal;
 import fergoman123.mods.fergotools.lib.Strings;
-import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.item.ItemStack;
 
 public class ItemEmeraldAxe extends AxeGeneric {
@@ -18,7 +18,7 @@ public class ItemEmeraldAxe extends AxeGeneric {
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack2.isItemEqual(new ItemStack(ModItems.emeraldCrystal)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack2.isItemEqual(new ItemStack(ItemEmeraldCrystal.instance)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 
 }

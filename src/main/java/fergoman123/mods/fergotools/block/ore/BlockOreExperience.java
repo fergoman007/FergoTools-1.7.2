@@ -1,9 +1,9 @@
 package fergoman123.mods.fergotools.block.ore;
 
+import fergoman123.mods.fergotools.item.materials.ItemExpShard;
+import fergoman123.mods.fergotools.lib.Strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.item.Item;
-import fergoman123.mods.fergotools.lib.Strings.BlockStrings;
-import fergoman123.mods.fergotools.init.ModItems;
 
 import java.util.Random;
 
@@ -22,7 +22,7 @@ public class BlockOreExperience extends BlockFT{
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return ModItems.expShard;
+        return ItemExpShard.instance;
     }
 
     public int quantityDropped(Random rand)

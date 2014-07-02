@@ -9,21 +9,22 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-/**
- * Created by Fergoman123 on 23/05/2014.
- */
 public abstract class BlockFT extends Block{
 
     public BlockFT()
     {
         super(Material.rock);
         this.setCreativeTab(Tabs.tabFergoBlocks);
+        this.setHardness(2.5f);
+        this.setResistance(50f);
     }
 
     public BlockFT(Material material)
     {
         super(material);
         this.setCreativeTab(Tabs.tabFergoBlocks);
+        this.setHardness(2.5f);
+        this.setResistance(50f);
     }
 
     @Override

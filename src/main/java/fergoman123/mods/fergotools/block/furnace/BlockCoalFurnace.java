@@ -126,11 +126,11 @@ public class BlockCoalFurnace extends BlockFurnaceFT
 
         if (active)
         {
-            world.setBlock(x, y, z, ModBlocks.coalFurnaceActive);
+            world.setBlock(x, y, z, instanceActive);
         }
         else
         {
-            world.setBlock(x, y, z, ModBlocks.coalFurnaceIdle);
+            world.setBlock(x, y, z, instanceIdle);
         }
 
         keepInventory = false;

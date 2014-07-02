@@ -10,10 +10,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 22/05/2014.
- */
-public abstract class AxeGeneric extends ItemAxe implements ITool{
+public abstract class AxeGeneric extends ItemAxe implements ITool {
 
     public AxeGeneric(ToolMaterial material) {
         super(material);

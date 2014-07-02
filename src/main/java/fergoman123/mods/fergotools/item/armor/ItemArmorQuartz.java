@@ -1,6 +1,5 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
@@ -28,10 +27,10 @@ public class ItemArmorQuartz extends ItemArmorFT{
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        if (stack.getItem() == ModItems.quartzHelmet || stack.getItem() == ModItems.quartzChestplate || stack.getItem() == ModItems.quartzBoots)
+        if (stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {return ArmorTextures.quartzArmorRender1;}
 
-        if (stack.getItem() == ModItems.quartzLeggings)
+        if (stack.getItem() == instanceLegs)
         {return ArmorTextures.quartzArmorRender2;}
         else{return null;}
     }

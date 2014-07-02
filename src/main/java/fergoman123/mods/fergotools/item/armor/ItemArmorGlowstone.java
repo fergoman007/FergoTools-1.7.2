@@ -22,12 +22,12 @@ public class ItemArmorGlowstone extends ItemArmorFT {
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        if(stack.getItem() == ModItems.glowstoneHelmet || stack.getItem() == ModItems.glowstoneChestplate || stack.getItem() == ModItems.glowstoneBoots)
+        if(stack.getItem() == ItemArmorGlowstone.instanceHelmet || stack.getItem() == ItemArmorGlowstone.instanceChest || stack.getItem() == ItemArmorGlowstone.instanceBoots)
         {
             return Textures.ArmorTextures.glowstoneArmorRender1;
         }
 
-        if(stack.getItem() == ModItems.glowstoneLeggings)
+        if(stack.getItem() == ItemArmorGlowstone.instanceLegs)
         {
             return Textures.ArmorTextures.glowstoneArmorRender2;
         }

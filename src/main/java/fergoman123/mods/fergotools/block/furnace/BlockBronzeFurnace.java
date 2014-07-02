@@ -127,11 +127,11 @@ public class BlockBronzeFurnace extends BlockFurnaceFT
 
         if (active)
         {
-            world.setBlock(x, y, z, ModBlocks.bronzeFurnaceActive);
+            world.setBlock(x, y, z, instanceActive);
         }
         else
         {
-            world.setBlock(x, y, z, ModBlocks.bronzeFurnaceIdle);
+            world.setBlock(x, y, z, instanceIdle);
         }
 
         keepInventory = false;

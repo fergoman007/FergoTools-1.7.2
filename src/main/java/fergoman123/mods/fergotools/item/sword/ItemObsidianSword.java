@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.sword;
 
-import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.item.materials.ItemObsidianIngot;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
@@ -18,7 +18,7 @@ public class ItemObsidianSword extends SwordGeneric {
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack2.isItemEqual(new ItemStack(ModItems.obsidianIngot)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack2.isItemEqual(new ItemStack(ItemObsidianIngot.instance)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 
 }

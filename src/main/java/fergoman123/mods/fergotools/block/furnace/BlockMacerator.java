@@ -3,7 +3,6 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
@@ -44,7 +43,7 @@ public class BlockMacerator extends BlockFurnaceFT
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return BlockHelper.getItemFromBlock(ModBlocks.maceratorIdle);
+        return BlockHelper.getItemFromBlock(instanceIdle);
     }
 
     public void onBlockAdded(World world, int x, int y, int z)
@@ -126,11 +125,11 @@ public class BlockMacerator extends BlockFurnaceFT
 
         if (active)
         {
-            world.setBlock(x, y, z, ModBlocks.maceratorActive);
+            world.setBlock(x, y, z, instanceActive);
         }
         else
         {
-            world.setBlock(x, y, z, ModBlocks.maceratorIdle);
+            world.setBlock(x, y, z, instanceIdle);
         }
 
         keepInventory = false;
@@ -272,6 +271,6 @@ public class BlockMacerator extends BlockFurnaceFT
 
     public Item getItem(World world, int x, int y, int z)
     {
-        return BlockHelper.getItemFromBlock(ModBlocks.maceratorIdle);
+        return BlockHelper.getItemFromBlock(instanceIdle);
     }
 }

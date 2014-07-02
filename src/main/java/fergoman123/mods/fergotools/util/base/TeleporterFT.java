@@ -8,7 +8,7 @@ import net.minecraft.world.WorldServer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
+@SuppressWarnings("unchecked")
 public abstract class TeleporterFT extends Teleporter
 {
     public final WorldServer worldServer;

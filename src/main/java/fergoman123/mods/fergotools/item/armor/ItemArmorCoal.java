@@ -1,6 +1,5 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
@@ -22,12 +21,12 @@ public class ItemArmorCoal extends ItemArmorFT {
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        if(stack.getItem() == ModItems.coalHelmet || stack.getItem() == ModItems.coalChestplate || stack.getItem() == ModItems.coalBoots)
+        if(stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {
             return ArmorTextures.coalArmorRender1;
         }
 
-        if(stack.getItem() == ModItems.coalLeggings)
+        if(stack.getItem() == instanceLegs)
         {
             return ArmorTextures.coalArmorRender2;
         }

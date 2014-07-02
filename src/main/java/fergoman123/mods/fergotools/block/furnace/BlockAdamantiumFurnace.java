@@ -3,14 +3,13 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
 import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
-import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
+import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -126,11 +125,11 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT
 
         if (active)
         {
-            world.setBlock(x, y, z, ModBlocks.adamantiumFurnaceActive);
+            world.setBlock(x, y, z, instanceActive);
         }
         else
         {
-            world.setBlock(x, y, z, ModBlocks.adamantiumFurnaceIdle);
+            world.setBlock(x, y, z, instanceIdle);
         }
 
         keepInventory = false;

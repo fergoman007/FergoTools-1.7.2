@@ -1,7 +1,11 @@
 package fergoman123.mods.fergotools.tabs;
 
-import fergoman123.mods.fergotools.init.ModBlocks;
-import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.block.furnace.BlockQuartzFurnace;
+import fergoman123.mods.fergotools.block.ore.BlockOreExperience;
+import fergoman123.mods.fergotools.item.armor.ItemArmorQuartz;
+import fergoman123.mods.fergotools.item.bow.ItemQuartzBow;
+import fergoman123.mods.fergotools.item.materials.ItemExpShard;
+import fergoman123.mods.fergotools.item.pickaxe.ItemQuartzPickaxe;
 import fergoman123.mods.fergotools.lib.Strings.TabStrings;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -27,7 +31,7 @@ public class Tabs {
         public static final TabFergoTools instance = new TabFergoTools(TabStrings.tabFergoTools);
 
         public TabFergoTools(String label){super(label); }
-        public Item getTabIconItem(){return ModItems.quartzPickaxe;}
+        public Item getTabIconItem(){return ItemQuartzPickaxe.instance;}
         public String getTranslatedTabLabel(){return TabStrings.tabFergoToolsTranslated;}
     }
 
@@ -35,7 +39,7 @@ public class Tabs {
         public static final TabFergoBlocks instance = new TabFergoBlocks(TabStrings.tabFergoBlocks);
 
         public TabFergoBlocks(String label){super(label);}
-        public Item getTabIconItem(){return Item.getItemFromBlock(ModBlocks.oreExperience);}
+        public Item getTabIconItem(){return Item.getItemFromBlock(BlockOreExperience.instance);}
         public String getTranslatedTabLabel(){return TabStrings.tabFergoBlocksTranslated;}
     }
 
@@ -43,7 +47,7 @@ public class Tabs {
 
         public static final TabFergoFurnaces instance = new TabFergoFurnaces(TabStrings.tabFergoFurnaces);
         public TabFergoFurnaces(String label){super(label);}
-        public Item getTabIconItem(){return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);}
+        public Item getTabIconItem(){return Item.getItemFromBlock(BlockQuartzFurnace.instanceActive);}
         public String getTranslatedTabLabel(){return TabStrings.tabFergoFurnacesTranslated;}
     }
 
@@ -51,7 +55,7 @@ public class Tabs {
         public static final TabFergoItems instance = new TabFergoItems(TabStrings.tabFergoItems);
 
         public TabFergoItems(String label){super(label);}
-        public Item getTabIconItem(){return ModItems.expShard;}
+        public Item getTabIconItem(){return ItemExpShard.instance;}
         public String getTranslatedTabLabel(){return TabStrings.tabFergoItemsTranslated;}
     }
 
@@ -59,7 +63,7 @@ public class Tabs {
         public static final TabFergoArmor instance = new TabFergoArmor(TabStrings.tabFergoArmor);
 
         public TabFergoArmor(String label){super(label);}
-        public Item getTabIconItem(){return ModItems.quartzHelmet;}
+        public Item getTabIconItem(){return ItemArmorQuartz.instanceHelmet;}
         public String getTranslatedTabLabel(){return TabStrings.tabFergoArmorTranslated;}
     }
 
@@ -67,7 +71,7 @@ public class Tabs {
         public static final TabFergoBows instance = new TabFergoBows(TabStrings.tabFergoBows);
 
         public TabFergoBows(String label){super(label);}
-        public Item getTabIconItem(){return ModItems.quartzBow;}
+        public Item getTabIconItem(){return ItemQuartzBow.instance;}
         public String getTranslatedTabLabel() {return TabStrings.tabFergoBowsTranslated;}
     }
 }

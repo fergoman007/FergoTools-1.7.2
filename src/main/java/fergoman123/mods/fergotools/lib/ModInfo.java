@@ -7,7 +7,7 @@ public class ModInfo {
 	
 	public static final String modid = "FergoTools";
     public static final String name = "Fergoman123's Tools";
-    public static final String versionMain = "1.7.2-2.0";
+    public static final String versionMain = "1.7.10-2.0";
     public static final String version = "@version@";
     public static final String author = "Fergoman123";
     public static final String dep = "required-after:FergoUtil";
