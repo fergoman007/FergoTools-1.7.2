@@ -18,10 +18,10 @@ buildscript {
 task("incrementBuildNumber")
         {
             doFirst{
-                fergoman123.mods.fergoutil.config.build_number = (fergoman123.mods.fergoutil.config.build_number.toString().toInteger()) + 1
+                config.build_number = (config.build_number.toString().toInteger()) + 1
 
                 configFile.withWriter{
-                    fergoman123.mods.fergoutil.config.toProperties().store(it, "")
+                    config.toProperties().store(it, "")
                 }
             }
         }
@@ -36,25 +36,25 @@ configFile.withReader {
     project.ext.config = new ConfigSlurper().parse prop
 }
 
-version = fergoman123.mods.fergoutil.config.mod_version
+version = config.mod_version
 group= "fergoman123.mods.fergotools" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "FergoTools"
 
 minecraft {
-    version = fergoman123.mods.fergoutil.config.minecraft_version + "-" + fergoman123.mods.fergoutil.config.forge_version
+    version = config.minecraft_version + "-" + config.forge_version
     assetDir = "run/assets"
 
     replaceIn "lib/ModInfo.java"
     replace "@version@", fergoman123.mods.fergoutil.config.mod_version
 }
 
-version = "${fergoman123.mods.fergoutil.config.minecraft_version}-${fergoman123.mods.fergoutil.config.mod_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
+version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
 
 dependencies {
     compile files('${config.dep}')
 }
 
-version = "${fergoman123.mods.fergoutil.config.minecraft_version}-${fergoman123.mods.fergoutil.config.mod_version}.${fergoman123.mods.fergoutil.config.build_number}"
+version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
 
 processResources
 {
