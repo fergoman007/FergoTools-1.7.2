@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.tileentity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockSilkFurnace;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.Locale;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import fergoman123.mods.fergotools.util.base.FurnaceTileFT;
 import fergoman123.mods.fergoutil.helper.BlockHelper;
@@ -94,7 +94,7 @@ public class TileEntitySilkFurnace extends FurnaceTileFT{
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerSilkFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerSilkFurnace;
     }
 
     public boolean hasCustomInventoryName()

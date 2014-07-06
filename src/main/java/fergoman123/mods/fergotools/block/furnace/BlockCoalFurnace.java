@@ -3,14 +3,14 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.lib.textures.BlockTextures;
+import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityCoalFurnace;
-import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
+import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -92,9 +92,9 @@ public class BlockCoalFurnace extends BlockFurnaceFT
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(Textures.BlockTextures.blockCoal);
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Textures.FurnaceTextures.coalFurnaceActive : Textures.FurnaceTextures.coalFurnaceIdle));
-        this.icons[1] = register.registerIcon(Textures.BlockTextures.blockCoal);
+        this.blockIcon = register.registerIcon(BlockTextures.blockCoal);
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.coalFurnaceActive : FurnaceTextures.coalFurnaceIdle));
+        this.icons[1] = register.registerIcon(BlockTextures.blockCoal);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)

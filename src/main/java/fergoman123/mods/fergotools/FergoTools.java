@@ -22,9 +22,7 @@ import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.proxy.IProxy;
 
-import java.io.File;
-
-@Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModInfo.dep)
+@Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModInfo.dep, guiFactory = Reference.guiFactoryClass)
 public class FergoTools{
 
     public static final PacketPipeline packPipe = new PacketPipeline();
@@ -40,7 +38,7 @@ public class FergoTools{
     {
         LogHelper.info("Pre Initialising Mod");
         MetadataFT.writeMetadata(evt.getModMetadata());
-        ConfigHandler.init(evt.getModConfigurationDirectory().getAbsolutePath() + File.separator + ModInfo.modid + File.separator);
+        ConfigHandler.init(evt.getSuggestedConfigurationFile());
         Tabs.init();
         UtilToolArmor.init();
         ModItems.init();

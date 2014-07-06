@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.item.materials.ItemLapisCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,7 @@ public class ItemLapisPickaxe extends PickaxeGeneric
     public ItemLapisPickaxe()
     {
         super(UtilToolArmor.lapis);
-        this.setUnlocalizedName(Strings.ToolStrings.lapisPickaxe);
+        this.setUnlocalizedName(ToolStrings.lapisPickaxe);
         this.setMaxDamage(UtilToolArmor.getLapisMaxUses());
     }
 

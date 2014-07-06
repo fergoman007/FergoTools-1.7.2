@@ -1,8 +1,7 @@
 package fergoman123.mods.fergotools.item.shovel;
 
-import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemRedstoneCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.item.ItemStack;
@@ -14,7 +13,7 @@ public class ItemRedstoneShovel extends ShovelGeneric {
     public ItemRedstoneShovel()
     {
         super(UtilToolArmor.redstone);
-        this.setUnlocalizedName(Strings.ToolStrings.redstoneShovel);
+        this.setUnlocalizedName(ToolStrings.redstoneShovel);
         this.setMaxDamage(UtilToolArmor.getRedstoneMaxUses());
     }
 

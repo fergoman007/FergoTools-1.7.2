@@ -13,6 +13,8 @@ import net.minecraft.world.World;
 
 public abstract class ItemBowFT extends ItemBow{
 
+    public IIcon[] textures;
+
     public ItemBowFT()
     {
         this.maxStackSize = 1;

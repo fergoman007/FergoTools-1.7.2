@@ -2,7 +2,7 @@ package fergoman123.mods.fergotools.handler;
 
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ore.*;
-import fergoman123.mods.fergotools.lib.Strings.BlockStrings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.proxy.ClientProxy;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 

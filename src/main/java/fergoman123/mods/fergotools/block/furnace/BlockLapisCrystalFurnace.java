@@ -4,8 +4,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Textures;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.lib.textures.BlockTextures;
+import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityLapisCrystalFurnace;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
@@ -91,9 +92,9 @@ public class BlockLapisCrystalFurnace extends BlockFurnaceFT
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(Textures.BlockTextures.blockLapisCrystal);
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Textures.FurnaceTextures.lapisCrystalFurnaceActive : Textures.FurnaceTextures.lapisCrystalFurnaceIdle));
-        this.icons[1] = register.registerIcon(Textures.BlockTextures.blockLapisCrystal);
+        this.blockIcon = register.registerIcon(BlockTextures.blockLapisCrystal);
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.lapisCrystalFurnaceActive : FurnaceTextures.lapisCrystalFurnaceIdle));
+        this.icons[1] = register.registerIcon(BlockTextures.blockLapisCrystal);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)

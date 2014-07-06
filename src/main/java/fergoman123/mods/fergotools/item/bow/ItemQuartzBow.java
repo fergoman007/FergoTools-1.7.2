@@ -1,9 +1,9 @@
 package fergoman123.mods.fergotools.item.bow;
 
-import cpw.mods.fml.relauncher.SideOnly;
+
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Strings.BowStrings;
-import fergoman123.mods.fergotools.lib.Textures.BowTextures;
+import fergoman123.mods.fergotools.lib.strings.BowStrings;
+import fergoman123.mods.fergotools.lib.textures.BowTextures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
@@ -19,16 +19,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
-import static cpw.mods.fml.relauncher.Side.CLIENT;
-
 public class ItemQuartzBow extends ItemBowFT {
 
     public static ItemQuartzBow instance = new ItemQuartzBow();
 
     public static final String[] pullArray = new String[]{"_1", "_2", "_3"};
-
-    @SideOnly(CLIENT)
-    private IIcon[] texture;
     public ItemQuartzBow()
     {
         super();
@@ -153,11 +148,11 @@ public class ItemQuartzBow extends ItemBowFT {
     public void registerIcons(IIconRegister register)
     {
         this.itemIcon = register.registerIcon(BowTextures.quartzBowStandy);
-        this.texture = new IIcon[pullArray.length];
+        this.textures = new IIcon[pullArray.length];
 
         for (int i = 0; i < pullArray.length; i++)
         {
-            this.texture[i] = register.registerIcon(Reference.textureLoc + BowStrings.bowQuartz + pullArray[i]);
+            this.textures[i] = register.registerIcon(Reference.textureLoc + BowStrings.bowQuartz + pullArray[i]);
         }
     }
 
@@ -167,15 +162,15 @@ public class ItemQuartzBow extends ItemBowFT {
         int pulling = stack.getMaxItemUseDuration() - useRemaining;
         if(pulling >= 18)
         {
-            return texture[2];
+            return textures[2];
         }
         else if(pulling > 13)
         {
-            return texture[1];
+            return textures[1];
         }
         else if(pulling > 0)
         {
-            return texture[0];
+            return textures[0];
         }
         return this.itemIcon;
     }

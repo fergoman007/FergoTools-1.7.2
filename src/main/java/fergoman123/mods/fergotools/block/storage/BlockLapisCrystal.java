@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.block.storage;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -17,7 +17,7 @@ public class BlockLapisCrystal extends BlockFT{
     public BlockLapisCrystal()
     {
         super(Material.iron);
-        this.setBlockName(Strings.BlockStrings.blockLapisCrystal);
+        this.setBlockName(BlockStrings.blockLapisCrystal);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.block.ore;
 
 import fergoman123.mods.fergotools.item.materials.ItemExpShard;
-import fergoman123.mods.fergotools.lib.Strings.BlockStrings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.item.Item;
 

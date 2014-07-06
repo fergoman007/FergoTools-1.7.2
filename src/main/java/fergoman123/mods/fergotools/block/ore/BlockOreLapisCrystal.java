@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.block.ore;
 
 import fergoman123.mods.fergotools.item.materials.ItemLapisCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.item.Item;
 
@@ -17,7 +17,7 @@ public class BlockOreLapisCrystal extends BlockFT{
     public BlockOreLapisCrystal()
     {
         super();
-        this.setBlockName(Strings.BlockStrings.oreLapisCrystal);
+        this.setBlockName(BlockStrings.oreLapisCrystal);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

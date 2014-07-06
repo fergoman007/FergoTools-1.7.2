@@ -1,23 +1,25 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.lib.Textures;
+import fergoman123.mods.fergotools.lib.textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergoutil.helper.PotionHelper;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class ItemArmorAdamantium extends ItemArmorFT{
 
-    public static ItemArmorAdamantium instanceHelmet = new ItemArmorAdamantium(Armor.EnumArmorType.HELMET);
-    public static ItemArmorAdamantium instanceChest = new ItemArmorAdamantium(Armor.EnumArmorType.CHEST);
-    public static ItemArmorAdamantium instanceLegs = new ItemArmorAdamantium(Armor.EnumArmorType.LEGS);
-    public static ItemArmorAdamantium instanceBoots = new ItemArmorAdamantium(Armor.EnumArmorType.BOOTS);
+    public static Item instanceHelmet = new ItemArmorAdamantium(Armor.EnumArmorType.HELMET);
+    public static Item instanceChest = new ItemArmorAdamantium(Armor.EnumArmorType.CHEST);
+    public static Item instanceLegs = new ItemArmorAdamantium(Armor.EnumArmorType.LEGS);
+    public static Item instanceBoots = new ItemArmorAdamantium(Armor.EnumArmorType.BOOTS);
 
     public ItemArmorAdamantium(Armor.EnumArmorType type)
     {
@@ -28,12 +30,12 @@ public class ItemArmorAdamantium extends ItemArmorFT{
     {
         if (stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {
-            return Textures.ArmorTextures.adamantiumArmorRender1;
+            return ArmorTextures.adamantiumArmorRender1;
         }
 
         if (stack.getItem() == instanceLegs)
         {
-            return Textures.ArmorTextures.redstoneArmorRender2;
+            return ArmorTextures.redstoneArmorRender2;
         }
         else
         {
@@ -42,22 +44,34 @@ public class ItemArmorAdamantium extends ItemArmorFT{
     }
 
     @Override
-    public void onArmorTick(World world, EntityPlayer player, ItemStack armor) {
-        if (this.armorType == Armor.getBoots())
+    public void onArmorTick(World world, EntityPlayer player, ItemStack armor)
+    {
+        if ((player.getCurrentArmor(3) != null) && (player.getCurrentArmor(2) != null) && (player.getCurrentArmor(1) != null) && (player.getCurrentArmor(0) != null))
         {
-            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 20, 4));
+            ItemStack helmet = player.getCurrentArmor(3);
+            ItemStack chestplate = player.getCurrentArmor(2);
+            ItemStack leggings = player.getCurrentArmor(1);
+            ItemStack boots = player.getCurrentArmor(0);
+
+            if (((boots.getItem() == instanceBoots ? 1 : 0) | (leggings.getItem() == instanceLegs ? 1 : 0) | (chestplate.getItem() == instanceChest ? 1 : 0) | (helmet.getItem() == instanceHelmet ? 1 : 0)) != 0)
+            {
+                player.capabilities.allowFlying = true;
+                player.fallDistance = 0.0F;
+                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76444_x.id, 20, 4));
+                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.waterBreathing.id, 20, 4));
+                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.resistance.id, 20, 4));
+                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.moveSpeed.id, 20, 4));
+                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76443_y.id, 20, 4));
+            }
         }
-        else if(this.armorType == Armor.getChestplate())
+        else if (!player.capabilities.isCreativeMode)
         {
-            player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 20, 4));
+            player.capabilities.allowFlying = false;
         }
-        else if (this.armorType == Armor.getLeggings())
-        {
-            player.addPotionEffect(new PotionEffect(Potion.resistance.id, 20, 4));
-        }
-        else if (this.armorType == Armor.getHelmet())
-        {
-            player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 20, 4));
-        }
+    }
+
+    @Override
+    public void addInformation(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List p_77624_3_, boolean p_77624_4_) {
+
     }
 }

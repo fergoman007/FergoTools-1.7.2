@@ -1,5 +1,6 @@
 package fergoman123.mods.fergotools.init;
 
+import fergoman123.mods.fergotools.item.ItemExpCollector;
 import fergoman123.mods.fergotools.item.armor.*;
 import fergoman123.mods.fergotools.item.axe.*;
 import fergoman123.mods.fergotools.item.bow.*;
@@ -8,10 +9,10 @@ import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
-import fergoman123.mods.fergotools.lib.Strings.ArmorStrings;
-import fergoman123.mods.fergotools.lib.Strings.BowStrings;
-import fergoman123.mods.fergotools.lib.Strings.ItemStrings;
-import fergoman123.mods.fergotools.lib.Strings.ToolStrings;
+import fergoman123.mods.fergotools.lib.strings.ArmorStrings;
+import fergoman123.mods.fergotools.lib.strings.BowStrings;
+import fergoman123.mods.fergotools.lib.strings.ItemStrings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 
 public class ModItems{
@@ -142,5 +143,7 @@ public class ModItems{
         RegisterHelper.registerItem(ItemCoalBow.instance, BowStrings.bowCoal);
         RegisterHelper.registerItem(ItemGlowstoneBow.instance, BowStrings.bowGlowstone);
         RegisterHelper.registerItem(ItemAdamantiumBow.instance, BowStrings.bowAdamantium);
+
+        RegisterHelper.registerItem(ItemExpCollector.instance, ItemStrings.expCollector);
 	}
 }

@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerEmeraldCrystalFurnace;
-import fergoman123.mods.fergotools.lib.Strings.GuiStrings;
+import fergoman123.mods.fergotools.lib.strings.GuiStrings;
 import fergoman123.mods.fergotools.tileentity.TileEntityEmeraldCrystalFurnace;
 import fergoman123.mods.fergotools.util.base.GuiFT;
 import fergoman123.mods.fergoutil.helper.GuiHelper;

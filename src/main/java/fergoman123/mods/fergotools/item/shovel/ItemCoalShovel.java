@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemCoalShovel extends ShovelGeneric {
 
     public ItemCoalShovel() {
         super(UtilToolArmor.coal);
-        this.setUnlocalizedName(Strings.ToolStrings.coalShovel);
+        this.setUnlocalizedName(ToolStrings.coalShovel);
         this.setMaxDamage(UtilToolArmor.getCoalMaxUses());
     }
 

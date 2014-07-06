@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.item.materials.ItemEmeraldCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.HoeGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemEmeraldHoe extends HoeGeneric {
 
     public ItemEmeraldHoe() {
         super(UtilToolArmor.emerald);
-        this.setUnlocalizedName(Strings.ToolStrings.emeraldHoe);
+        this.setUnlocalizedName(ToolStrings.emeraldHoe);
         this.setMaxDamage(UtilToolArmor.emerald.getMaxUses());
     }
 

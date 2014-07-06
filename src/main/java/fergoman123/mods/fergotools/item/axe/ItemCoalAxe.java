@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemCoalAxe extends AxeGeneric {
 
     public ItemCoalAxe() {
         super(UtilToolArmor.coal);
-        this.setUnlocalizedName(Strings.ToolStrings.coalAxe);
+        this.setUnlocalizedName(ToolStrings.coalAxe);
         this.setMaxDamage(UtilToolArmor.coal.getMaxUses());
     }
 

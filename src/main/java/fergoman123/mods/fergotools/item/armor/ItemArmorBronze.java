@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.lib.Textures.ArmorTextures;
+import fergoman123.mods.fergotools.lib.textures.ArmorTextures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.item.Armor;

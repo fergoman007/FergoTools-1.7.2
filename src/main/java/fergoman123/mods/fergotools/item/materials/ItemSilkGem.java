@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.materials;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ItemStrings;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemSilkGem extends ItemFT{
@@ -10,6 +10,6 @@ public class ItemSilkGem extends ItemFT{
     public ItemSilkGem()
     {
         super();
-        this.setUnlocalizedName(Strings.ItemStrings.silkGem);
+        this.setUnlocalizedName(ItemStrings.silkGem);
     }
 }

@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.block.ore;
 
 import fergoman123.mods.fergotools.item.materials.ItemRedstoneCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.item.Item;
 
@@ -15,7 +15,7 @@ public class BlockOreRedstoneCrystal extends BlockFT{
     public BlockOreRedstoneCrystal()
     {
         super();
-        this.setBlockName(Strings.BlockStrings.oreRedstoneCrystal);
+        this.setBlockName(BlockStrings.oreRedstoneCrystal);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

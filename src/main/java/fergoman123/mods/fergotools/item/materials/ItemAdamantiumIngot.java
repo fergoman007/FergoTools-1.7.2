@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.materials;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ItemStrings;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemAdamantiumIngot extends ItemFT{
@@ -10,6 +10,7 @@ public class ItemAdamantiumIngot extends ItemFT{
     public ItemAdamantiumIngot()
     {
         super();
-        this.setUnlocalizedName(Strings.ItemStrings.ingotAdamantium);
+        this.setMaxStackSize(64);
+        this.setUnlocalizedName(ItemStrings.ingotAdamantium);
     }
 }

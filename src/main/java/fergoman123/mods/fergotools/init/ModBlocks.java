@@ -4,32 +4,32 @@ import fergoman123.mods.fergotools.block.BlockFergoGlass;
 import fergoman123.mods.fergotools.block.furnace.*;
 import fergoman123.mods.fergotools.block.ore.*;
 import fergoman123.mods.fergotools.block.storage.*;
-import fergoman123.mods.fergotools.lib.Strings;
-import fergoman123.mods.fergotools.lib.Strings.FurnaceStrings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
+import fergoman123.mods.fergotools.lib.strings.FurnaceStrings;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 
 public class ModBlocks{
     
 	public static void init()
 	{
-        RegisterHelper.registerBlock(BlockOreExperience.instance, Strings.BlockStrings.oreExperience);
-        RegisterHelper.registerBlock(BlockOreObsidian.instance, Strings.BlockStrings.oreObsidian);
-        RegisterHelper.registerBlock(BlockOreEmeraldCrystal.instance, Strings.BlockStrings.oreEmeraldCrystal);
-        RegisterHelper.registerBlock(BlockOreLapisCrystal.instance, Strings.BlockStrings.oreLapisCrystal);
-        RegisterHelper.registerBlock(BlockOreBronze.instance, Strings.BlockStrings.oreBronze);
-        RegisterHelper.registerBlock(BlockOreAdamantium.instance, Strings.BlockStrings.oreAdamantium);
-        RegisterHelper.registerBlock(BlockOreRedstoneCrystal.instance, Strings.BlockStrings.oreRedstoneCrystal);
+        RegisterHelper.registerBlock(BlockOreExperience.instance, BlockStrings.oreExperience);
+        RegisterHelper.registerBlock(BlockOreObsidian.instance, BlockStrings.oreObsidian);
+        RegisterHelper.registerBlock(BlockOreEmeraldCrystal.instance, BlockStrings.oreEmeraldCrystal);
+        RegisterHelper.registerBlock(BlockOreLapisCrystal.instance, BlockStrings.oreLapisCrystal);
+        RegisterHelper.registerBlock(BlockOreBronze.instance, BlockStrings.oreBronze);
+        RegisterHelper.registerBlock(BlockOreAdamantium.instance, BlockStrings.oreAdamantium);
+        RegisterHelper.registerBlock(BlockOreRedstoneCrystal.instance, BlockStrings.oreRedstoneCrystal);
 
-        RegisterHelper.registerBlock(BlockExperience.instance, Strings.BlockStrings.blockExperience);
-        RegisterHelper.registerBlock(BlockObsidianStorage.instance, Strings.BlockStrings.blockObsidian);
-        RegisterHelper.registerBlock(BlockEmeraldCrystal.instance, Strings.BlockStrings.blockEmeraldCrystal);
-        RegisterHelper.registerBlock(BlockLapisCrystal.instance, Strings.BlockStrings.blockLapisCrystal);
-        RegisterHelper.registerBlock(BlockBronze.instance, Strings.BlockStrings.blockBronze);
-        RegisterHelper.registerBlock(BlockCoalStorage.instance, Strings.BlockStrings.blockCoal);
-        RegisterHelper.registerBlock(BlockGlowstoneStorage.instance, Strings.BlockStrings.blockGlowstone);
-        RegisterHelper.registerBlock(BlockAdamantium.instance, Strings.BlockStrings.blockAdamantium);
-        RegisterHelper.registerBlock(BlockSilkGem.instance, Strings.BlockStrings.blockSilkGem);
-        RegisterHelper.registerBlock(BlockRedstoneCrystal.instance, Strings.BlockStrings.blockRedstoneCrystal);
+        RegisterHelper.registerBlock(BlockExperience.instance, BlockStrings.blockExperience);
+        RegisterHelper.registerBlock(BlockObsidianStorage.instance, BlockStrings.blockObsidian);
+        RegisterHelper.registerBlock(BlockEmeraldCrystal.instance, BlockStrings.blockEmeraldCrystal);
+        RegisterHelper.registerBlock(BlockLapisCrystal.instance, BlockStrings.blockLapisCrystal);
+        RegisterHelper.registerBlock(BlockBronze.instance, BlockStrings.blockBronze);
+        RegisterHelper.registerBlock(BlockCoalStorage.instance, BlockStrings.blockCoal);
+        RegisterHelper.registerBlock(BlockGlowstoneStorage.instance, BlockStrings.blockGlowstone);
+        RegisterHelper.registerBlock(BlockAdamantium.instance, BlockStrings.blockAdamantium);
+        RegisterHelper.registerBlock(BlockSilkGem.instance, BlockStrings.blockSilkGem);
+        RegisterHelper.registerBlock(BlockRedstoneCrystal.instance, BlockStrings.blockRedstoneCrystal);
 
         RegisterHelper.registerBlock(BlockFergoGlass.instance, "blockFergoGlass");
 

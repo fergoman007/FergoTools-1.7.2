@@ -1,8 +1,8 @@
 package fergoman123.mods.fergotools.item.materials;
 
-import fergoman123.mods.fergotools.lib.Strings.ItemStrings;
+import fergoman123.mods.fergotools.item.ItemExpCollector;
+import fergoman123.mods.fergotools.lib.strings.ItemStrings;
 import fergoman123.mods.fergotools.util.base.ItemFT;
-import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -17,15 +17,15 @@ public class ItemExpShard extends ItemFT {
 
     public ItemExpShard() {
         super();
+        this.setMaxStackSize(64);
         this.setUnlocalizedName(ItemStrings.expShard);
     }
 
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
     {
-        EntityXPOrb orb = new EntityXPOrb(world, player.posX, player.posY, player.posZ, 1);
-
+        player.inventory.addItemStackToInventory(new ItemStack(ItemExpCollector.instance, 1));
         --stack.stackSize;
-        player.addExperience(3 + rand.nextInt(20));
+        player.addExperienceLevel(1);
         return stack;
     }
 

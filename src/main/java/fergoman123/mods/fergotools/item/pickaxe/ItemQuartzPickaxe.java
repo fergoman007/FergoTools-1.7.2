@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.init.Items;
@@ -14,7 +14,7 @@ public class ItemQuartzPickaxe extends PickaxeGeneric
     public ItemQuartzPickaxe()
     {
         super(UtilToolArmor.quartz);
-        this.setUnlocalizedName(Strings.ToolStrings.quartzPickaxe);
+        this.setUnlocalizedName(ToolStrings.quartzPickaxe);
         this.setMaxDamage(UtilToolArmor.getQuartzMaxUses());
     }
 

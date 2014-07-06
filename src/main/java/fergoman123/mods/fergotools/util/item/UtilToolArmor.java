@@ -1,8 +1,9 @@
 package fergoman123.mods.fergotools.util.item;
 
+import fergoman123.mods.fergotools.config.ConfigHandler;
 import fergoman123.mods.fergotools.lib.ints.ArmorInts;
 import fergoman123.mods.fergotools.lib.ints.ToolInts;
-import fergoman123.mods.fergotools.lib.Strings.MaterialStrings;
+import fergoman123.mods.fergotools.lib.strings.MaterialStrings;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -42,17 +43,17 @@ public class UtilToolArmor {
 
     public static void addToolMaterials()
     {
-        quartz = EnumHelper.addToolMaterial(MaterialStrings.quartzToolMat, ToolInts.harvestLvl, ToolInts.quartzMaxDamage, ToolInts.quartzEff, ToolInts.quartzDamage, ToolInts.enchantability);
-        obsidian = EnumHelper.addToolMaterial(MaterialStrings.obsidianToolMat, ToolInts.harvestLvl, ToolInts.obsidianMaxDamage, ToolInts.obsidianEff, ToolInts.obsidianDamage, ToolInts.enchantability);
-        emerald = EnumHelper.addToolMaterial(MaterialStrings.emeraldToolMat, ToolInts.harvestLvl, ToolInts.emeraldMaxDamage, ToolInts.emeraldEff, ToolInts.emeraldDamage, ToolInts.enchantability);
-        lapis = EnumHelper.addToolMaterial(MaterialStrings.lapisToolMat, ToolInts.harvestLvl, ToolInts.lapisMaxDamage, ToolInts.lapisEff, ToolInts.lapisDamage, ToolInts.enchantability);
-        bronze = EnumHelper.addToolMaterial(MaterialStrings.bronzeToolMat, ToolInts.harvestLvl, ToolInts.bronzeMaxDamage, ToolInts.bronzeEff, ToolInts.bronzeDamage, ToolInts.enchantability);
-        coal = EnumHelper.addToolMaterial(MaterialStrings.coalToolMat, ToolInts.harvestLvl, ToolInts.coalMaxDamage, ToolInts.coalEff, ToolInts.coalDamage, ToolInts.enchantability);
-        glowstone = EnumHelper.addToolMaterial(MaterialStrings.glowstoneToolMat, ToolInts.harvestLvl, ToolInts.glowstoneMaxDamage, ToolInts.glowstoneEff, ToolInts.glowstoneDamage, ToolInts.enchantability);
-        adamantium = EnumHelper.addToolMaterial(MaterialStrings.adamantiumToolMat, ToolInts.harvestLvl, ToolInts.adamantiumMaxDamage, ToolInts.adamantiumEff, ToolInts.adamantiumDamage, ToolInts.enchantability);
-        donator = EnumHelper.addToolMaterial(MaterialStrings.donatorToolMat, ToolInts.harvestLvl, ToolInts.donatorMaxDamage, ToolInts.donatorEff, ToolInts.donatorDamage, ToolInts.enchantability);
-        silk = EnumHelper.addToolMaterial(MaterialStrings.silkToolMat, ToolInts.harvestLvl, ToolInts.silkMaxDamage, ToolInts.silkEff, ToolInts.silkDamage, ToolInts.enchantability);
-        redstone = EnumHelper.addToolMaterial(MaterialStrings.redstoneToolMat, ToolInts.harvestLvl, ToolInts.redstoneMaxDamage, ToolInts.redstoneEff, ToolInts.redstoneDamage, ToolInts.enchantability);
+        quartz = EnumHelper.addToolMaterial(MaterialStrings.quartzToolMat, ToolInts.harvestLvl, ToolInts.quartzMaxDamage, ToolInts.quartzEff, ToolInts.quartzDamage, ConfigHandler.enchantability);
+        obsidian = EnumHelper.addToolMaterial(MaterialStrings.obsidianToolMat, ToolInts.harvestLvl, ToolInts.obsidianMaxDamage, ToolInts.obsidianEff, ToolInts.obsidianDamage, ConfigHandler.enchantability);
+        emerald = EnumHelper.addToolMaterial(MaterialStrings.emeraldToolMat, ToolInts.harvestLvl, ToolInts.emeraldMaxDamage, ToolInts.emeraldEff, ToolInts.emeraldDamage, ConfigHandler.enchantability);
+        lapis = EnumHelper.addToolMaterial(MaterialStrings.lapisToolMat, ToolInts.harvestLvl, ToolInts.lapisMaxDamage, ToolInts.lapisEff, ToolInts.lapisDamage, ConfigHandler.enchantability);
+        bronze = EnumHelper.addToolMaterial(MaterialStrings.bronzeToolMat, ToolInts.harvestLvl, ToolInts.bronzeMaxDamage, ToolInts.bronzeEff, ToolInts.bronzeDamage, ConfigHandler.enchantability);
+        coal = EnumHelper.addToolMaterial(MaterialStrings.coalToolMat, ToolInts.harvestLvl, ToolInts.coalMaxDamage, ToolInts.coalEff, ToolInts.coalDamage, ConfigHandler.enchantability);
+        glowstone = EnumHelper.addToolMaterial(MaterialStrings.glowstoneToolMat, ToolInts.harvestLvl, ToolInts.glowstoneMaxDamage, ToolInts.glowstoneEff, ToolInts.glowstoneDamage, ConfigHandler.enchantability);
+        adamantium = EnumHelper.addToolMaterial(MaterialStrings.adamantiumToolMat, ToolInts.harvestLvl, ConfigHandler.adamantiumMaxDamage, ToolInts.adamantiumEff, ToolInts.adamantiumDamage, ConfigHandler.enchantability);
+        donator = EnumHelper.addToolMaterial(MaterialStrings.donatorToolMat, ToolInts.harvestLvl, ToolInts.donatorMaxDamage, ToolInts.donatorEff, ToolInts.donatorDamage, ConfigHandler.enchantability);
+        silk = EnumHelper.addToolMaterial(MaterialStrings.silkToolMat, ToolInts.harvestLvl, ToolInts.silkMaxDamage, ToolInts.silkEff, ToolInts.silkDamage, ConfigHandler.enchantability);
+        redstone = EnumHelper.addToolMaterial(MaterialStrings.redstoneToolMat, ToolInts.harvestLvl, ToolInts.redstoneMaxDamage, ToolInts.redstoneEff, ToolInts.redstoneDamage, ConfigHandler.enchantability);
     }
 
     public static void addArmorMaterials() {

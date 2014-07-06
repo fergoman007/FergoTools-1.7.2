@@ -1,7 +1,6 @@
 package fergoman123.mods.fergotools.proxy;
 
 import cpw.mods.fml.common.network.IGuiHandler;
-import fergoman123.mods.fergotools.config.ClientConfig;
 import fergoman123.mods.fergotools.gui.*;
 import fergoman123.mods.fergotools.gui.container.*;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
@@ -80,7 +79,5 @@ public class ClientProxy extends CommonProxy implements IGuiHandler {
     }
 
     @Override
-    public void addClientConfig(File configFile) {
-        ClientConfig.init(configFile);
-    }
+    public void addClientConfig(File configFile) {}
 }

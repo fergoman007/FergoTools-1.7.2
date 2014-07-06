@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.item.materials.ItemRedstoneCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.HoeGeneric;
 import net.minecraft.item.ItemStack;
@@ -13,7 +13,7 @@ public class ItemRedstoneHoe extends HoeGeneric{
     public ItemRedstoneHoe()
     {
         super(UtilToolArmor.redstone);
-        this.setUnlocalizedName(Strings.ToolStrings.redstoneHoe);
+        this.setUnlocalizedName(ToolStrings.redstoneHoe);
         this.setMaxDamage(UtilToolArmor.redstone.getMaxUses());
     }
 

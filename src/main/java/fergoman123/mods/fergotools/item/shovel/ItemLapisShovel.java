@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.item.materials.ItemLapisCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemLapisShovel extends ShovelGeneric {
 
     public ItemLapisShovel() {
         super(UtilToolArmor.lapis);
-        this.setUnlocalizedName(Strings.ToolStrings.lapisShovel);
+        this.setUnlocalizedName(ToolStrings.lapisShovel);
         this.setMaxDamage(UtilToolArmor.lapis.getMaxUses());
     }
 

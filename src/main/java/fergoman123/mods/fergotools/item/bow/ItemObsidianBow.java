@@ -2,8 +2,8 @@ package fergoman123.mods.fergotools.item.bow;
 
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Strings.BowStrings;
-import fergoman123.mods.fergotools.lib.Textures.BowTextures;
+import fergoman123.mods.fergotools.lib.strings.BowStrings;
+import fergoman123.mods.fergotools.lib.textures.BowTextures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.client.renderer.texture.IIconRegister;

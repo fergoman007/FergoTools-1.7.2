@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.item.materials.ItemObsidianIngot;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemObsidianSword extends SwordGeneric {
 
     public ItemObsidianSword() {
         super(UtilToolArmor.obsidian);
-        this.setUnlocalizedName(Strings.ToolStrings.obsidianSword);
+        this.setUnlocalizedName(ToolStrings.obsidianSword);
         this.setMaxDamage(UtilToolArmor.getObsidianMaxUses());
     }
 

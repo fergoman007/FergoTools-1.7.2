@@ -1,15 +1,12 @@
 package fergoman123.mods.fergotools.block.storage;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class BlockExperience extends BlockFT{
 
     public static BlockExperience instance = new BlockExperience();
@@ -17,7 +14,7 @@ public class BlockExperience extends BlockFT{
     public BlockExperience()
     {
         super(Material.iron);
-        this.setBlockName(Strings.BlockStrings.blockExperience);
+        this.setBlockName(BlockStrings.blockExperience);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

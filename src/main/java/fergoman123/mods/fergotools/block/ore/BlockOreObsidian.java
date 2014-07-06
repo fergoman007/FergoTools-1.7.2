@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.block.ore;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.item.Item;
 
@@ -16,7 +16,7 @@ public class BlockOreObsidian extends BlockFT {
     public BlockOreObsidian()
     {
         super();
-        this.setBlockName(Strings.BlockStrings.oreObsidian);
+        this.setBlockName(BlockStrings.oreObsidian);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

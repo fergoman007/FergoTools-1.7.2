@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.block.storage;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -17,7 +17,7 @@ public class BlockBronze extends BlockFT{
     public BlockBronze()
     {
         super(Material.iron);
-        this.setBlockName(Strings.BlockStrings.blockBronze);
+        this.setBlockName(BlockStrings.blockBronze);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

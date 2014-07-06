@@ -4,7 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockAdamantiumFurnace;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.Locale;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import fergoman123.mods.fergotools.util.base.FurnaceTileFT;
 import net.minecraft.block.Block;
@@ -80,7 +80,7 @@ public class TileEntityAdamantiumFurnace extends FurnaceTileFT{
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerAdamantiumFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerAdamantiumFurnace;
     }
 
     public boolean hasCustomInventoryName()

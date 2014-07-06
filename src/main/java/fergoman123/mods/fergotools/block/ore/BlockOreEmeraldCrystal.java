@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.block.ore;
 
 import fergoman123.mods.fergotools.item.materials.ItemEmeraldCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -15,7 +15,7 @@ public class BlockOreEmeraldCrystal extends BlockFT{
     public BlockOreEmeraldCrystal()
     {
         super(Material.rock);
-        this.setBlockName(Strings.BlockStrings.oreEmeraldCrystal);
+        this.setBlockName(BlockStrings.oreEmeraldCrystal);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

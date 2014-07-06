@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.materials;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ItemStrings;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemObsidianIngot extends ItemFT{
@@ -10,6 +10,7 @@ public class ItemObsidianIngot extends ItemFT{
     public ItemObsidianIngot()
     {
         super();
-        this.setUnlocalizedName(Strings.ItemStrings.ingotObsidian);
+        this.setMaxStackSize(64);
+        this.setUnlocalizedName(ItemStrings.ingotObsidian);
     }
 }

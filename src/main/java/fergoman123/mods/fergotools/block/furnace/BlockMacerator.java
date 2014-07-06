@@ -4,8 +4,8 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.Strings;
 import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.lib.strings.FurnaceStrings;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityMacerator;
 import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
@@ -92,7 +92,7 @@ public class BlockMacerator extends BlockFurnaceFT
     public void registerBlockIcons(IIconRegister register)
     {
         this.blockIcon = register.registerIcon("iron_block");
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Strings.FurnaceStrings.maceratorActive : Strings.FurnaceStrings.maceratorIdle));
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceStrings.maceratorActive : FurnaceStrings.maceratorIdle));
         this.icons[1] = register.registerIcon("iron_block");
     }
 

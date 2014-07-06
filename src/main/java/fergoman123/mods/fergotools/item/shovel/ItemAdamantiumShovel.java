@@ -1,7 +1,8 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.item.materials.ItemAdamantiumIngot;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.lib.strings.ToolTipStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,7 +16,7 @@ public class ItemAdamantiumShovel extends ShovelGeneric {
 
     public ItemAdamantiumShovel() {
         super(UtilToolArmor.adamantium);
-        this.setUnlocalizedName(Strings.ToolStrings.adamantiumShovel);
+        this.setUnlocalizedName(ToolStrings.adamantiumShovel);
         this.setMaxDamage(UtilToolArmor.getAdamantiumMaxUses());
     }
 
@@ -27,7 +28,7 @@ public class ItemAdamantiumShovel extends ShovelGeneric {
     @SuppressWarnings({"unchecked"})
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean useExtraInfo)
     {
-        list.add(Strings.adamantiumToolMessage);
+        list.add(ToolTipStrings.adamantiumToolMessage);
     }
 
 }

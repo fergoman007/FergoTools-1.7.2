@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.init;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.TileStrings;
 import fergoman123.mods.fergotools.tileentity.*;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import net.minecraft.tileentity.TileEntity;
@@ -21,16 +21,16 @@ public class ModTiles {
 
     public static void init()
     {
-        RegisterHelper.registerTileEntity(quartzFurnaceClass, Strings.TileStrings.quartzFurnaceTile);
-        RegisterHelper.registerTileEntity(obsidianFurnaceClass, Strings.TileStrings.obsidianFurnaceTile);
-        RegisterHelper.registerTileEntity(emeraldCrystalFurnaceClass, Strings.TileStrings.emeraldCrystalFurnaceTile);
-        RegisterHelper.registerTileEntity(lapisCrystalClass, Strings.TileStrings.lapisCrystalFurnaceTile);
-        RegisterHelper.registerTileEntity(bronzeFurnaceClass, Strings.TileStrings.bronzeFurnaceTile);
-        RegisterHelper.registerTileEntity(coalFurnaceClass, Strings.TileStrings.coalFurnaceTile);
-        RegisterHelper.registerTileEntity(glowstoneFurnaceClass, Strings.TileStrings.glowstoneFurnaceTile);
-        RegisterHelper.registerTileEntity(adamantiumFurnaceClass, Strings.TileStrings.adamantiumFurnaceTile);
-        RegisterHelper.registerTileEntity(silkFurnaceClass, Strings.TileStrings.silkFurnaceTile);
-        RegisterHelper.registerTileEntity(redstoneFurnaceClass, Strings.TileStrings.redstoneFurnaceTile);
-        RegisterHelper.registerTileEntity(maceratorClass, Strings.TileStrings.maceratorTile);
+        RegisterHelper.registerTileEntity(quartzFurnaceClass, TileStrings.quartzFurnaceTile);
+        RegisterHelper.registerTileEntity(obsidianFurnaceClass, TileStrings.obsidianFurnaceTile);
+        RegisterHelper.registerTileEntity(emeraldCrystalFurnaceClass, TileStrings.emeraldCrystalFurnaceTile);
+        RegisterHelper.registerTileEntity(lapisCrystalClass, TileStrings.lapisCrystalFurnaceTile);
+        RegisterHelper.registerTileEntity(bronzeFurnaceClass, TileStrings.bronzeFurnaceTile);
+        RegisterHelper.registerTileEntity(coalFurnaceClass, TileStrings.coalFurnaceTile);
+        RegisterHelper.registerTileEntity(glowstoneFurnaceClass, TileStrings.glowstoneFurnaceTile);
+        RegisterHelper.registerTileEntity(adamantiumFurnaceClass, TileStrings.adamantiumFurnaceTile);
+        RegisterHelper.registerTileEntity(silkFurnaceClass, TileStrings.silkFurnaceTile);
+        RegisterHelper.registerTileEntity(redstoneFurnaceClass, TileStrings.redstoneFurnaceTile);
+        RegisterHelper.registerTileEntity(maceratorClass, TileStrings.maceratorTile);
     }
 }

@@ -1,8 +1,8 @@
 package fergoman123.mods.fergotools.item.axe;
 
-import fergoman123.mods.fergotools.lib.Strings;
-import fergoman123.mods.fergotools.util.tool.AxeGeneric;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
@@ -12,7 +12,7 @@ public class ItemQuartzAxe extends AxeGeneric {
 
     public ItemQuartzAxe() {
         super(UtilToolArmor.quartz);
-        this.setUnlocalizedName(Strings.ToolStrings.quartzAxe);
+        this.setUnlocalizedName(ToolStrings.quartzAxe);
         this.setMaxDamage(UtilToolArmor.quartz.getMaxUses());
     }
 

@@ -4,8 +4,6 @@ package fergoman123.mods.fergotools.lib.ints;
  * Created by Fergoman123 on 16/03/14.
  */
 public class ToolInts {
-
-    public static final int adamantiumMaxDamage = 999999999;
     public static final int quartzMaxDamage = 1000000;
     public static final int obsidianMaxDamage = 100000;
     public static final int emeraldMaxDamage = 10000;
@@ -47,6 +45,4 @@ public class ToolInts {
 
     // Harvest And Enchantability
     public static final int harvestLvl = 3;
-
-    public static final int enchantability = 30;
 }

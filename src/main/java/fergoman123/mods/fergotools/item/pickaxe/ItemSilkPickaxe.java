@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.item.materials.ItemSilkGem;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.enchantment.Enchantment;
@@ -16,7 +16,7 @@ public class ItemSilkPickaxe extends PickaxeGeneric {
     public ItemSilkPickaxe()
     {
         super(UtilToolArmor.silk);
-        this.setUnlocalizedName(Strings.ToolStrings.silkPickaxe);
+        this.setUnlocalizedName(ToolStrings.silkPickaxe);
         this.setMaxDamage(UtilToolArmor.getSilkMaxUses());
     }
 

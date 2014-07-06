@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.block.storage;
 
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.BlockStrings;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -17,7 +17,7 @@ public class BlockGlowstoneStorage extends BlockFT{
     public BlockGlowstoneStorage()
     {
         super(Material.iron);
-        this.setBlockName(Strings.BlockStrings.blockGlowstone);
+        this.setBlockName(BlockStrings.blockGlowstone);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

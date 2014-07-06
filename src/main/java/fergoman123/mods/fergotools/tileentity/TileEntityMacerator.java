@@ -4,7 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockMacerator;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.Locale;
 import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
 import fergoman123.mods.fergotools.util.base.FurnaceTileFT;
 import net.minecraft.block.Block;
@@ -94,7 +94,7 @@ public class TileEntityMacerator extends FurnaceTileFT{
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Strings.GuiStrings.containerMacerator;
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerMacerator;
     }
 
     public boolean hasCustomInventoryName()

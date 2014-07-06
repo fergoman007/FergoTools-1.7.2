@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.item.materials.ItemRedstoneCrystal;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.item.ItemStack;
@@ -13,7 +13,7 @@ public class ItemRedstoneSword extends SwordGeneric {
     public ItemRedstoneSword()
     {
         super(UtilToolArmor.redstone);
-        this.setUnlocalizedName(Strings.ToolStrings.redstoneSword);
+        this.setUnlocalizedName(ToolStrings.redstoneSword);
         this.setMaxDamage(UtilToolArmor.getRedstoneMaxUses());
     }
 

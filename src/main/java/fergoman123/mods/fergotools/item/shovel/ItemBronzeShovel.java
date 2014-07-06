@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.item.materials.ItemBronzeIngot;
-import fergoman123.mods.fergotools.lib.Strings;
+import fergoman123.mods.fergotools.lib.strings.ToolStrings;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.item.ItemStack;
@@ -15,7 +15,7 @@ public class ItemBronzeShovel extends ShovelGeneric{
 
     public ItemBronzeShovel() {
         super(UtilToolArmor.bronze);
-        this.setUnlocalizedName(Strings.ToolStrings.bronzeShovel);
+        this.setUnlocalizedName(ToolStrings.bronzeShovel);
         this.setMaxDamage(UtilToolArmor.getBronzeMaxUses());
     }
 

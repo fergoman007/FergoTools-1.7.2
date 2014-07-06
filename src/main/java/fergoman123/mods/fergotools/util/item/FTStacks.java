@@ -14,7 +14,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-public class UtilItemStack {
+public class FTStacks {
 
     public static final ItemStack stickStack = new ItemStack(Items.stick);
     public static final ItemStack quartzStack = new ItemStack(Items.quartz);
@@ -28,7 +28,6 @@ public class UtilItemStack {
     public static final ItemStack adamantiumIngot9 = new ItemStack(ItemAdamantiumIngot.instance, 9);
     public static final ItemStack coalIngot9 = new ItemStack(ItemCoalIngot.instance, 9);
     public static final ItemStack glowstoneIngot9 = new ItemStack(ItemGlowstoneIngot.instance, 9);
-    public static final ItemStack expBottle9 = new ItemStack(Items.experience_bottle, 9);
     public static final ItemStack silkGem9 = new ItemStack(ItemSilkGem.instance, 9);
     public static final ItemStack expShard9 = new ItemStack(ItemExpShard.instance, 9);
 
