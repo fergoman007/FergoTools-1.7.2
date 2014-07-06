@@ -10,8 +10,6 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import java.io.File;
-
 public class ClientProxy extends CommonProxy implements IGuiHandler {
 
     @Override
@@ -77,7 +75,4 @@ public class ClientProxy extends CommonProxy implements IGuiHandler {
         }
         return null;
     }
-
-    @Override
-    public void addClientConfig(File configFile) {}
 }
