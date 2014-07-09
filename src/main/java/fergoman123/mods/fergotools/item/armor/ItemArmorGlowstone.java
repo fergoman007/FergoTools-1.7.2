@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.lib.textures.ArmorTextures;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.item.Armor;
@@ -23,12 +23,12 @@ public class ItemArmorGlowstone extends ItemArmorFT {
     {
         if(stack.getItem() == ItemArmorGlowstone.instanceHelmet || stack.getItem() == ItemArmorGlowstone.instanceChest || stack.getItem() == ItemArmorGlowstone.instanceBoots)
         {
-            return ArmorTextures.glowstoneArmorRender1;
+            return Textures.glowstoneArmorLayer1;
         }
 
         if(stack.getItem() == ItemArmorGlowstone.instanceLegs)
         {
-            return ArmorTextures.glowstoneArmorRender2;
+            return Textures.glowstoneArmorLayer2;
         }
         else
         {

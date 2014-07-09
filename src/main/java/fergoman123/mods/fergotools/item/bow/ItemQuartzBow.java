@@ -1,9 +1,9 @@
 package fergoman123.mods.fergotools.item.bow;
 
 
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.BowStrings;
-import fergoman123.mods.fergotools.lib.textures.BowTextures;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
@@ -27,7 +27,7 @@ public class ItemQuartzBow extends ItemBowFT {
     public ItemQuartzBow()
     {
         super();
-        this.setUnlocalizedName(BowStrings.bowQuartz);
+        this.setUnlocalizedName(Names.Items.bowQuartz);
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
@@ -147,12 +147,12 @@ public class ItemQuartzBow extends ItemBowFT {
 
     public void registerIcons(IIconRegister register)
     {
-        this.itemIcon = register.registerIcon(BowTextures.quartzBowStandy);
+        this.itemIcon = register.registerIcon(Textures.quartzBowStandy);
         this.textures = new IIcon[pullArray.length];
 
         for (int i = 0; i < pullArray.length; i++)
         {
-            this.textures[i] = register.registerIcon(Reference.textureLoc + BowStrings.bowQuartz + pullArray[i]);
+            this.textures[i] = register.registerIcon(Reference.textureLoc + Names.Items.bowQuartz + pullArray[i]);
         }
     }
 

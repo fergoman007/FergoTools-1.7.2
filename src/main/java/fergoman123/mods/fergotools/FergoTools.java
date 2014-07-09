@@ -14,19 +14,16 @@ import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.init.ModTiles;
 import fergoman123.mods.fergotools.init.Recipes;
-import fergoman123.mods.fergotools.lib.MetadataFT;
-import fergoman123.mods.fergotools.lib.ModInfo;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.packet.PacketPipeline;
+import fergoman123.mods.fergotools.reference.MetadataFT;
+import fergoman123.mods.fergotools.reference.ModInfo;
+import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.proxy.IProxy;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModInfo.dep, guiFactory = Reference.guiFactoryClass)
-public class FergoTools{
-
-    public static final PacketPipeline packPipe = new PacketPipeline();
-	
+public class FergoTools
+{
     @Instance(ModInfo.modid)
     public static FergoTools instance;
     
@@ -52,13 +49,11 @@ public class FergoTools{
         ModTiles.init();
         RegHandler.init();
         Recipes.init();
-        packPipe.initialise();
     }
 	
 	@EventHandler
 	public void modsLoaded(FMLPostInitializationEvent evt)
     {
         LogHelper.info("Mod Loaded");
-        packPipe.postInitialise();
     }
 }

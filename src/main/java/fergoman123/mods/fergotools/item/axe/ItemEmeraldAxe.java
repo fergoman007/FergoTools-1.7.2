@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.item.materials.ItemEmeraldCrystal;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemEmeraldAxe extends AxeGeneric {
 
     public ItemEmeraldAxe() {
         super(UtilToolArmor.emerald);
-        this.setUnlocalizedName(ToolStrings.emeraldAxe);
+        this.setUnlocalizedName(Names.Items.emeraldAxe);
         this.setMaxDamage(UtilToolArmor.emerald.getMaxUses());
     }
 

@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.materials;
 
-import fergoman123.mods.fergotools.lib.strings.ItemStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemEmeraldCrystal extends ItemFT{
@@ -10,6 +10,6 @@ public class ItemEmeraldCrystal extends ItemFT{
     {
         super();
         this.setMaxStackSize(64);
-        this.setUnlocalizedName(ItemStrings.emeraldCrystal);
+        this.setUnlocalizedName(Names.Items.emeraldCrystal);
     }
 }

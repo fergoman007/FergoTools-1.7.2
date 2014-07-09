@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.item.materials.ItemObsidianIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,7 @@ public class ItemObsidianPickaxe extends PickaxeGeneric
     public ItemObsidianPickaxe()
     {
         super(UtilToolArmor.obsidian);
-        this.setUnlocalizedName(ToolStrings.obsidianPickaxe);
+        this.setUnlocalizedName(Names.Items.obsidianPickaxe);
         this.setMaxDamage(UtilToolArmor.getObsidianMaxUses());
     }
 

@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.shovel;
 
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.init.Items;
@@ -12,7 +12,7 @@ public class ItemQuartzShovel extends ShovelGeneric {
 
     public ItemQuartzShovel() {
         super(UtilToolArmor.quartz);
-        this.setUnlocalizedName(ToolStrings.quartzShovel);
+        this.setUnlocalizedName(Names.Items.quartzShovel);
         this.setMaxDamage(UtilToolArmor.quartz.getMaxUses());
     }
 

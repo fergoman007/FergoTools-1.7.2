@@ -1,4 +1,4 @@
-package fergoman123.mods.fergotools.lib;
+package fergoman123.mods.fergotools.reference;
 
 import java.util.Arrays;
 import java.util.List;

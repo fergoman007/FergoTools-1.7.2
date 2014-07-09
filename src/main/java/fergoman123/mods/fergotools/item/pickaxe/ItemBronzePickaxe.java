@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.item.materials.ItemBronzeIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.item.ItemStack;
@@ -13,7 +13,7 @@ public class ItemBronzePickaxe extends PickaxeGeneric
     public ItemBronzePickaxe()
     {
         super(UtilToolArmor.bronze);
-        this.setUnlocalizedName(ToolStrings.bronzePickaxe);
+        this.setUnlocalizedName(Names.Items.bronzePickaxe);
         this.setMaxDamage(UtilToolArmor.getBronzeMaxUses());
     }
 

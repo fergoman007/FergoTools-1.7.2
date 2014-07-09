@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.lib.textures.ArmorTextures;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.helper.PotionHelper;
@@ -30,12 +30,12 @@ public class ItemArmorAdamantium extends ItemArmorFT{
     {
         if (stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {
-            return ArmorTextures.adamantiumArmorRender1;
+            return Textures.adamantiumArmorLayer1;
         }
 
         if (stack.getItem() == instanceLegs)
         {
-            return ArmorTextures.redstoneArmorRender2;
+            return Textures.adamantiumArmorLayer2;
         }
         else
         {

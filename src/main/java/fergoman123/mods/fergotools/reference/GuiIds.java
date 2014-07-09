@@ -1,6 +1,6 @@
-package fergoman123.mods.fergotools.lib.ints;
+package fergoman123.mods.fergotools.reference;
 
-public class GuiInts {
+public class GuiIds {
 
     public static final int quartzFurnaceId = 0;
     public static final int obsidianFurnaceId = 1;
@@ -13,4 +13,5 @@ public class GuiInts {
     public static final int silkFurnaceId = 8;
     public static final int redstoneFurnace = 9;
     public static final int maceratorId = 10;
+    public static final int netherrackFurnaceId = 11;
 }

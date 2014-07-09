@@ -2,7 +2,7 @@ package fergoman123.mods.fergotools.client;
 
 import cpw.mods.fml.client.config.GuiConfig;
 import fergoman123.mods.fergotools.config.ConfigHandler;
-import fergoman123.mods.fergotools.lib.ModInfo;
+import fergoman123.mods.fergotools.reference.ModInfo;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;

@@ -3,10 +3,10 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.lib.textures.BlockTextures;
-import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
+import fergoman123.mods.fergotools.reference.GuiIds;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityBronzeFurnace;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
@@ -93,9 +93,9 @@ public class BlockBronzeFurnace extends BlockFurnaceFT
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(BlockTextures.blockBronze);
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.bronzeFurnaceActive : FurnaceTextures.bronzeFurnaceIdle));
-        this.icons[1] = register.registerIcon(BlockTextures.blockBronze);
+        this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockBronze);
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.bronzeFurnaceActive : Names.Blocks.bronzeFurnaceIdle));
+        this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockBronze);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -109,7 +109,7 @@ public class BlockBronzeFurnace extends BlockFurnaceFT
             TileEntityBronzeFurnace furnace = (TileEntityBronzeFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.instance, GuiInts.bronzeFurnaceId, world, x, y, z);
+                player.openGui(FergoTools.instance, GuiIds.bronzeFurnaceId, world, x, y, z);
             }
             return true;
         }
@@ -274,5 +274,10 @@ public class BlockBronzeFurnace extends BlockFurnaceFT
     public Item getItem(World world, int x, int y, int z)
     {
         return UtilBlockItem.itemBronzeFurnace;
+    }
+
+    @Override
+    public int getGuiID() {
+        return GuiIds.bronzeFurnaceId;
     }
 }

@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.item.materials.ItemObsidianIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemObsidianShovel extends ShovelGeneric {
 
     public ItemObsidianShovel() {
         super(UtilToolArmor.obsidian);
-        this.setUnlocalizedName(ToolStrings.obsidianShovel);
+        this.setUnlocalizedName(Names.Items.obsidianShovel);
         this.setMaxDamage(UtilToolArmor.getObsidianMaxUses());
     }
 

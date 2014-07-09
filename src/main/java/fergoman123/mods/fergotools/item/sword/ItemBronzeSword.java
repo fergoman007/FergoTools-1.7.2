@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.item.materials.ItemBronzeIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemBronzeSword extends SwordGeneric {
 
     public ItemBronzeSword() {
         super(UtilToolArmor.bronze);
-        this.setUnlocalizedName(ToolStrings.bronzeSword);
+        this.setUnlocalizedName(Names.Items.bronzeSword);
         this.setMaxDamage(UtilToolArmor.getBronzeMaxUses());
     }
 

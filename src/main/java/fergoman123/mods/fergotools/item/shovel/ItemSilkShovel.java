@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.item.materials.ItemSilkGem;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.enchantment.Enchantment;
@@ -16,7 +16,7 @@ public class ItemSilkShovel extends ShovelGeneric {
     public ItemSilkShovel()
     {
         super(UtilToolArmor.silk);
-        this.setUnlocalizedName(ToolStrings.silkShovel);
+        this.setUnlocalizedName(Names.Items.silkShovel);
         this.setMaxDamage(UtilToolArmor.getSilkMaxUses());
     }
 

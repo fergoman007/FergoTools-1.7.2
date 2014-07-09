@@ -6,7 +6,7 @@ import fergoman123.mods.fergotools.item.armor.ItemArmorQuartz;
 import fergoman123.mods.fergotools.item.bow.ItemQuartzBow;
 import fergoman123.mods.fergotools.item.materials.ItemExpShard;
 import fergoman123.mods.fergotools.item.pickaxe.ItemQuartzPickaxe;
-import fergoman123.mods.fergotools.lib.strings.TabStrings;
+import fergoman123.mods.fergotools.reference.strings.TabStrings;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

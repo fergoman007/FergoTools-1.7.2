@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.item.materials.ItemSilkGem;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.HoeGeneric;
 import net.minecraft.enchantment.Enchantment;
@@ -16,7 +16,7 @@ public class ItemSilkHoe extends HoeGeneric {
     public ItemSilkHoe()
     {
         super(UtilToolArmor.silk);
-        this.setUnlocalizedName(ToolStrings.silkHoe);
+        this.setUnlocalizedName(Names.Items.silkHoe);
         this.setMaxDamage(UtilToolArmor.silk.getMaxUses());
     }
 

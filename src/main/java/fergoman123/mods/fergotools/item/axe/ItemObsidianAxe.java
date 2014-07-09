@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.item.materials.ItemObsidianIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemObsidianAxe extends AxeGeneric {
 
     public ItemObsidianAxe() {
         super(UtilToolArmor.obsidian);
-        this.setUnlocalizedName(ToolStrings.obsidianAxe);
+        this.setUnlocalizedName(Names.Items.obsidianAxe);
         this.setMaxDamage(UtilToolArmor.obsidian.getMaxUses());
     }
 

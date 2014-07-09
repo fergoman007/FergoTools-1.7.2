@@ -2,7 +2,8 @@ package fergoman123.mods.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergoutil.block.IBlockFurnace;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
@@ -59,4 +60,8 @@ public abstract class BlockFurnaceFT extends BlockContainer implements IBlockFur
     public abstract int getComparatorInputOverride(World world, int x, int y, int z, int par5);
 
     public abstract Item getItem(World world, int x, int y, int z);
+
+    public Object getInstance(){return FergoTools.instance;}
+
+    public abstract int getGuiID();
 }

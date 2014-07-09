@@ -1,8 +1,7 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.item.materials.ItemAdamantiumIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
-import fergoman123.mods.fergotools.lib.strings.ToolTipStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,7 +15,7 @@ public class ItemAdamantiumPickaxe extends PickaxeGeneric {
 
     public ItemAdamantiumPickaxe() {
         super(UtilToolArmor.adamantium);
-        this.setUnlocalizedName(ToolStrings.adamantiumPickaxe);
+        this.setUnlocalizedName(Names.Items.adamantiumPickaxe);
         this.setMaxDamage(UtilToolArmor.getAdamantiumMaxUses());
     }
 
@@ -25,10 +24,9 @@ public class ItemAdamantiumPickaxe extends PickaxeGeneric {
         return par2ItemStack.isItemEqual(new ItemStack(ItemAdamantiumIngot.instance)) || super.getIsRepairable(par1ItemStack, par2ItemStack);
     }
 
-    @SuppressWarnings({"unchecked"})
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean useExtraInfo)
     {
-        list.add(ToolTipStrings.adamantiumToolMessage);
+        list.add(Names.Locale.adamantiumToolTip);
     }
 
 }

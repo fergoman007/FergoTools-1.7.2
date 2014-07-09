@@ -3,7 +3,8 @@ package fergoman123.mods.fergotools.gui;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.gui.container.ContainerQuartzFurnace;
-import fergoman123.mods.fergotools.lib.strings.GuiStrings;
+import fergoman123.mods.fergotools.reference.Locale;
+import fergoman123.mods.fergotools.reference.strings.GuiStrings;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
 import fergoman123.mods.fergotools.util.base.GuiFT;
 import fergoman123.mods.fergoutil.helper.GuiHelper;
@@ -24,13 +25,13 @@ public class GuiQuartzFurnace extends GuiFT
     {
         String s = quartzFurnace.hasCustomInventoryName() ? quartzFurnace.getInventoryName() : GuiHelper.format(quartzFurnace.getInventoryName());
         fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-        fontRendererObj.drawString(GuiHelper.format(GuiStrings.containerInventory), 8, ySize - 96 + 2, 4210752);
+        fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
     }
 
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        GuiHelper.bindTexture(GuiStrings.vanillaFurnace);
+        GuiHelper.bindTexture(GuiStrings.quartzFurnaceGuiTexture);
         int k = (width - xSize) / 2;
         int l = (height - ySize) / 2;
         drawTexturedModalRect(k, l, 0, 0, xSize, ySize);

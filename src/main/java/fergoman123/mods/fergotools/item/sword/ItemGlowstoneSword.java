@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.item.materials.ItemGlowstoneIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemGlowstoneSword extends SwordGeneric {
 
     public ItemGlowstoneSword() {
         super(UtilToolArmor.glowstone);
-        this.setUnlocalizedName(ToolStrings.glowstoneSword);
+        this.setUnlocalizedName(Names.Items.glowstoneSword);
         this.setMaxDamage(UtilToolArmor.getGlowstoneMaxUses());
     }
 

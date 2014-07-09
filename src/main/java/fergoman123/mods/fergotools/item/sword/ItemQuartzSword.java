@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.sword;
 
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.init.Items;
@@ -12,7 +12,7 @@ public class ItemQuartzSword extends SwordGeneric {
 
     public ItemQuartzSword() {
         super(UtilToolArmor.quartz);
-        this.setUnlocalizedName(ToolStrings.quartzSword);
+        this.setUnlocalizedName(Names.Items.quartzSword);
         this.setMaxDamage(UtilToolArmor.quartz.getMaxUses());
     }
 

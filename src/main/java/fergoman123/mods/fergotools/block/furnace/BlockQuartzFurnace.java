@@ -3,9 +3,10 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
+import fergoman123.mods.fergotools.reference.GuiIds;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
@@ -90,9 +91,9 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(FurnaceTextures.quartzFurnaceSide);
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.quartzFurnaceActive : FurnaceTextures.quartzFurnaceIdle));
-        this.icons[1] = register.registerIcon(FurnaceTextures.quartzFurnaceSide);
+        this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.quartzFurnaceSide);
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.quartzFurnaceActive : Names.Blocks.quartzFurnaceIdle));
+        this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.quartzFurnaceSide);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -106,7 +107,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
             TileEntityQuartzFurnace furnace = (TileEntityQuartzFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.instance, GuiInts.quartzFurnaceId, world, x, y, z);
+                player.openGui(FergoTools.instance, GuiIds.quartzFurnaceId, world, x, y, z);
             }
             return true;
         }
@@ -271,5 +272,10 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
     public Item getItem(World world, int x, int y, int z)
     {
         return UtilBlockItem.itemQuartzFurnace;
+    }
+
+    @Override
+    public int getGuiID() {
+        return GuiIds.quartzFurnaceId;
     }
 }

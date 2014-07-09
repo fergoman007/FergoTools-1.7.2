@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.proxy;
 import cpw.mods.fml.common.network.IGuiHandler;
 import fergoman123.mods.fergotools.gui.*;
 import fergoman123.mods.fergotools.gui.container.*;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
+import fergoman123.mods.fergotools.reference.ints.GuiIds;
 import fergoman123.mods.fergotools.tileentity.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -18,27 +18,27 @@ public class ClientProxy extends CommonProxy implements IGuiHandler {
         InventoryPlayer inventory = player.inventory;
 
         switch (ID) {
-            case GuiInts.quartzFurnaceId:
+            case GuiIds.quartzFurnaceId:
                 return new ContainerQuartzFurnace(inventory, (TileEntityQuartzFurnace) entity);
-            case GuiInts.obsidianFurnaceId:
+            case GuiIds.obsidianFurnaceId:
                 return new ContainerObsidianFurnace(inventory, (TileEntityObsidianFurnace) entity);
-            case GuiInts.emeraldCrystalFurnaceId:
+            case GuiIds.emeraldCrystalFurnaceId:
                 return new ContainerEmeraldCrystalFurnace(inventory, (TileEntityEmeraldCrystalFurnace) entity);
-            case GuiInts.lapisCrystalFurnaceId:
+            case GuiIds.lapisCrystalFurnaceId:
                 return new ContainerLapisCrystalFurnace(inventory, (TileEntityLapisCrystalFurnace) entity);
-            case GuiInts.bronzeFurnaceId:
+            case GuiIds.bronzeFurnaceId:
                 return new ContainerBronzeFurnace(inventory, (TileEntityBronzeFurnace) entity);
-            case GuiInts.coalFurnaceId:
+            case GuiIds.coalFurnaceId:
                 return new ContainerCoalFurnace(inventory, (TileEntityCoalFurnace) entity);
-            case GuiInts.glowstoneFurnaceId:
+            case GuiIds.glowstoneFurnaceId:
                 return new ContainerGlowstoneFurnace(inventory, (TileEntityGlowstoneFurnace) entity);
-            case GuiInts.adamantiumFurnaceId:
+            case GuiIds.adamantiumFurnaceId:
                 return new ContainerAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace) entity);
-            case GuiInts.silkFurnaceId:
+            case GuiIds.silkFurnaceId:
                 return new ContainerSilkFurnace(inventory, (TileEntitySilkFurnace) entity);
-            case GuiInts.redstoneFurnace:
+            case GuiIds.redstoneFurnace:
                 return new ContainerRedstoneFurnace(inventory, (TileEntityRedstoneFurnace) entity);
-            case GuiInts.maceratorId:
+            case GuiIds.maceratorId:
                 return new ContainerMacerator(inventory, (TileEntityMacerator) entity);
         }
         return null;
@@ -50,27 +50,27 @@ public class ClientProxy extends CommonProxy implements IGuiHandler {
         InventoryPlayer inventory = player.inventory;
 
         switch (ID) {
-            case GuiInts.quartzFurnaceId:
+            case GuiIds.quartzFurnaceId:
                 return new GuiQuartzFurnace(inventory, (TileEntityQuartzFurnace) entity);
-            case GuiInts.obsidianFurnaceId:
+            case GuiIds.obsidianFurnaceId:
                 return new GuiObsidianFurnace(inventory, (TileEntityObsidianFurnace) entity);
-            case GuiInts.emeraldCrystalFurnaceId:
+            case GuiIds.emeraldCrystalFurnaceId:
                 return new GuiEmeraldCrystalFurnace(inventory, (TileEntityEmeraldCrystalFurnace) entity);
-            case GuiInts.lapisCrystalFurnaceId:
+            case GuiIds.lapisCrystalFurnaceId:
                 return new GuiLapisCrystalFurnace(inventory, (TileEntityLapisCrystalFurnace) entity);
-            case GuiInts.bronzeFurnaceId:
+            case GuiIds.bronzeFurnaceId:
                 return new GuiBronzeFurnace(inventory, (TileEntityBronzeFurnace) entity);
-            case GuiInts.coalFurnaceId:
+            case GuiIds.coalFurnaceId:
                 return new GuiCoalFurnace(inventory, (TileEntityCoalFurnace) entity);
-            case GuiInts.glowstoneFurnaceId:
+            case GuiIds.glowstoneFurnaceId:
                 return new GuiGlowstoneFurnace(inventory, (TileEntityGlowstoneFurnace) entity);
-            case GuiInts.adamantiumFurnaceId:
+            case GuiIds.adamantiumFurnaceId:
                 return new GuiAdamantiumFurnace(inventory, (TileEntityAdamantiumFurnace) entity);
-            case GuiInts.silkFurnaceId:
+            case GuiIds.silkFurnaceId:
                 return new GuiSilkFurnace(inventory, (TileEntitySilkFurnace) entity);
-            case GuiInts.redstoneFurnace:
+            case GuiIds.redstoneFurnace:
                 return new GuiRedstoneFurnace(inventory, (TileEntityRedstoneFurnace) entity);
-            case GuiInts.maceratorId:
+            case GuiIds.maceratorId:
                 return new GuiMacerator(inventory, (TileEntityMacerator) entity);
         }
         return null;

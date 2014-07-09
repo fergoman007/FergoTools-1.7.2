@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.item.materials.ItemSilkGem;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.enchantment.Enchantment;
@@ -15,7 +15,7 @@ public class ItemSilkSword extends SwordGeneric {
 
     public ItemSilkSword() {
         super(UtilToolArmor.silk);
-        this.setUnlocalizedName(ToolStrings.silkSword);
+        this.setUnlocalizedName(Names.Items.silkSword);
         this.setMaxDamage(UtilToolArmor.getSilkMaxUses());
     }
 

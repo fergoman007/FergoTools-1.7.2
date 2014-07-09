@@ -1,8 +1,7 @@
 package fergoman123.mods.fergotools.item;
 
 import fergoman123.mods.fergotools.item.materials.ItemExpShard;
-import fergoman123.mods.fergotools.lib.Locale;
-import fergoman123.mods.fergotools.lib.strings.ItemStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,7 +19,7 @@ public class ItemExpCollector extends ItemFT
     public ItemExpCollector() {
         super();
         this.setMaxStackSize(64);
-        this.setUnlocalizedName(ItemStrings.expCollector);
+        this.setUnlocalizedName(Names.Items.expCollector);
     }
 
     @Override
@@ -41,6 +40,6 @@ public class ItemExpCollector extends ItemFT
 
     public void addInformation(ItemStack stack, CreativeTabs tabs, List list)
     {
-        list.add(Locale.expCollectorToolTip);
+        list.add(Names.Locale.expCollectorToolTip);
     }
 }

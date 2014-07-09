@@ -180,3 +180,6 @@ container.FergoTools:glowstoneFurnace=Glowstone Furnace
 container.FergoTools:adamantiumFurnace=Adamantium Furnace
 container.FergoTools:silkFurnace=Silk Furnace
 container.FergoTools:redstoneFurnace=Redstone Furnace
+
+# Tool Tips
+tooltip.adamantiumTool1=NOTE: Extremely Overpowered!

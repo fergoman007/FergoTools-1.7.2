@@ -1,9 +1,9 @@
 package fergoman123.mods.fergotools.item.bow;
 
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.BowStrings;
-import fergoman123.mods.fergotools.lib.textures.BowTextures;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -33,7 +33,7 @@ public class ItemBronzeBow extends ItemBowFT {
     public ItemBronzeBow()
     {
         super();
-        this.setUnlocalizedName(BowStrings.bowBronze);
+        this.setUnlocalizedName(Names.Items.bowBronze);
         this.setMaxDamage(UtilToolArmor.getBronzeMaxUses());
     }
 
@@ -149,12 +149,12 @@ public class ItemBronzeBow extends ItemBowFT {
 
     public void registerIcons(IIconRegister register)
     {
-        this.itemIcon = register.registerIcon(BowTextures.bronzeBowStandy);
+        this.itemIcon = register.registerIcon(Textures.bronzeBowStandy);
         this.texture = new IIcon[pullArray.length];
 
         for (int i = 0; i < pullArray.length; i++)
         {
-            this.texture[i] = register.registerIcon(Reference.textureLoc + BowStrings.bowBronze + pullArray[i]);
+            this.texture[i] = register.registerIcon(Reference.textureLoc + Names.Items.bowBronze + pullArray[i]);
         }
     }
 

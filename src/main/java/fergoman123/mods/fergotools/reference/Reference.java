@@ -1,4 +1,4 @@
-package fergoman123.mods.fergotools.lib;
+package fergoman123.mods.fergotools.reference;
 
 import fergoman123.mods.fergoutil.helper.NameHelper;
 

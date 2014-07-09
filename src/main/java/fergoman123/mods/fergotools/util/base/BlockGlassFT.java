@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.util.base;
 
-import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;

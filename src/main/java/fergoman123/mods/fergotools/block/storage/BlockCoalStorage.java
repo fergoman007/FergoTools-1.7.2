@@ -1,15 +1,12 @@
 package fergoman123.mods.fergotools.block.storage;
 
-import fergoman123.mods.fergotools.lib.strings.BlockStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class BlockCoalStorage extends BlockFT{
 
     public static BlockCoalStorage instance = new BlockCoalStorage();
@@ -17,7 +14,7 @@ public class BlockCoalStorage extends BlockFT{
     public BlockCoalStorage()
     {
         super(Material.iron);
-        this.setBlockName(BlockStrings.blockCoal);
+        this.setBlockName(Names.Blocks.blockCoal);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

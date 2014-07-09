@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.block.storage;
 
-import fergoman123.mods.fergotools.lib.strings.BlockStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -14,7 +14,7 @@ public class BlockExperience extends BlockFT{
     public BlockExperience()
     {
         super(Material.iron);
-        this.setBlockName(BlockStrings.blockExperience);
+        this.setBlockName(Names.Blocks.blockExperience);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

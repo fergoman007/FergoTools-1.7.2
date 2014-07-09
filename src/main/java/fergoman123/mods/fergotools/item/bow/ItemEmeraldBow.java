@@ -1,9 +1,9 @@
 package fergoman123.mods.fergotools.item.bow;
 
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.BowStrings;
-import fergoman123.mods.fergotools.lib.textures.BowTextures;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
@@ -33,7 +33,7 @@ public  class ItemEmeraldBow extends ItemBowFT {
     public ItemEmeraldBow()
     {
         super();
-        this.setUnlocalizedName(BowStrings.bowEmerald);
+        this.setUnlocalizedName(Names.Items.bowEmerald);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)
@@ -148,12 +148,12 @@ public  class ItemEmeraldBow extends ItemBowFT {
 
     public void registerIcons(IIconRegister register)
     {
-        this.itemIcon = register.registerIcon(BowTextures.emeraldBowStandy);
+        this.itemIcon = register.registerIcon(Textures.emeraldBowStandy);
         this.texture = new IIcon[pullArray.length];
 
         for (int i = 0; i < pullArray.length; i++)
         {
-            this.texture[i] = register.registerIcon(Reference.textureLoc + BowStrings.bowEmerald + pullArray[i]);
+            this.texture[i] = register.registerIcon(Reference.textureLoc + Names.Items.bowEmerald + pullArray[i]);
         }
     }
 

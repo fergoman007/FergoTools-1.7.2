@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.item.materials.ItemBronzeIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.HoeGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemBronzeHoe extends HoeGeneric {
 
     public ItemBronzeHoe() {
         super(UtilToolArmor.bronze);
-        this.setUnlocalizedName(ToolStrings.bronzeHoe);
+        this.setUnlocalizedName(Names.Items.bronzeHoe);
         this.setMaxDamage(UtilToolArmor.bronze.getMaxUses());
     }
 

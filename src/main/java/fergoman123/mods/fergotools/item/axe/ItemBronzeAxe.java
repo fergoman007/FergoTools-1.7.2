@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.item.materials.ItemBronzeIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemBronzeAxe extends AxeGeneric {
 
     public ItemBronzeAxe() {
         super(UtilToolArmor.bronze);
-        this.setUnlocalizedName(ToolStrings.bronzeAxe);
+        this.setUnlocalizedName(Names.Items.bronzeAxe);
         this.setMaxDamage(UtilToolArmor.bronze.getMaxUses());
     }
 

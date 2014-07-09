@@ -2,11 +2,10 @@ package fergoman123.mods.fergotools.block.furnace;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.lib.textures.BlockTextures;
-import fergoman123.mods.fergotools.lib.textures.FurnaceTextures;
+import fergoman123.mods.fergotools.reference.GuiIds;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
@@ -92,9 +91,9 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(BlockTextures.blockAdamantium);
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceTextures.adamantiumFurnaceActive : FurnaceTextures.adamantiumFurnaceIdle));
-        this.icons[1] = register.registerIcon(BlockTextures.blockAdamantium);
+        this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockAdamantium);
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.adamantiumFurnaceActive : Names.Blocks.adamantiumFurnaceIdle));
+        this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockAdamantium);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -108,7 +107,7 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT
             TileEntityAdamantiumFurnace furnace = (TileEntityAdamantiumFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.instance, GuiInts.adamantiumFurnaceId, world, x, y, z);
+                player.openGui(getInstance(), getGuiID(), world, x, y, z);
             }
             return true;
         }
@@ -274,4 +273,6 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT
     {
         return UtilBlockItem.itemAdamantiumFurnace;
     }
+
+    public int getGuiID(){return GuiIds.adamantiumFurnaceId;}
 }

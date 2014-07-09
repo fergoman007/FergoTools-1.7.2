@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.helper;
 
 import cpw.mods.fml.common.FMLLog;
-import fergoman123.mods.fergotools.lib.ModInfo;
+import fergoman123.mods.fergotools.reference.ModInfo;
 import org.apache.logging.log4j.Level;
 
 public class LogHelper {

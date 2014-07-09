@@ -2,7 +2,8 @@ package fergoman123.mods.fergotools.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.util.base.BlockGlassFT;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -20,11 +21,12 @@ public class BlockFergoGlass extends BlockGlassFT
     private boolean shouldRenderSelectionBox = true;
     private int renderPass = 0;
 
-    public static Block instance = new BlockFergoGlass().setBlockName("blockFergoGlass");
+    public static Block instance = new BlockFergoGlass();
 
     public BlockFergoGlass()
     {
         super();
+        this.setBlockName(Names.Blocks.blockFergoGlass);
     }
 
     @Override
@@ -37,22 +39,22 @@ public class BlockFergoGlass extends BlockGlassFT
     @Override
     public void registerBlockIcons(IIconRegister register)
     {
-        icons[0] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass");
-        icons[1] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_1_d");
-        icons[2] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_1_u");
-        icons[3] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_1_l");
-        icons[4] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_1_r");
-        icons[5] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_2_h");
-        icons[6] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_2_v");
-        icons[7] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_2_dl");
-        icons[8] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_2_dr");
-        icons[9] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_2_ul");
-        icons[10] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_2_ur");
-        icons[11] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_3_d");
-        icons[12] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_3_u");
-        icons[13] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_3_l");
-        icons[14] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_3_r");
-        icons[15] = register.registerIcon(Reference.textureLoc + "ctm/glass/glass_4");
+        icons[0] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass");
+        icons[1] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_0");
+        icons[2] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_1");
+        icons[3] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_2");
+        icons[4] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_3");
+        icons[5] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_4");
+        icons[6] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_5");
+        icons[7] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_6");
+        icons[8] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_7");
+        icons[9] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_8");
+        icons[10] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_9");
+        icons[11] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_10");
+        icons[12] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_11");
+        icons[13] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_12");
+        icons[14] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_13");
+        icons[15] = register.registerIcon(Reference.textureLoc + "ctm/glass/blockFergoGlass_14");
     }
 
     @Override

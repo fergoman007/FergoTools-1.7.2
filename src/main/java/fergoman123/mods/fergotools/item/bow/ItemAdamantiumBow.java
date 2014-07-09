@@ -1,9 +1,9 @@
 package fergoman123.mods.fergotools.item.bow;
 
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.strings.BowStrings;
-import fergoman123.mods.fergotools.lib.textures.BowTextures;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -34,7 +34,7 @@ public class ItemAdamantiumBow extends ItemBowFT {
     {
         super();
         this.setMaxDamage(UtilToolArmor.getAdamantiumMaxUses());
-        this.setUnlocalizedName(BowStrings.bowAdamantium);
+        this.setUnlocalizedName(Names.Items.bowAdamantium);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)
@@ -149,12 +149,12 @@ public class ItemAdamantiumBow extends ItemBowFT {
 
     public void registerIcons(IIconRegister register)
     {
-        this.itemIcon = register.registerIcon(BowTextures.adamantiumBowStandy);
+        this.itemIcon = register.registerIcon(Textures.adamantiumBowStandy);
         this.texture = new IIcon[pullArray.length];
 
         for (int i = 0; i < pullArray.length; i++)
         {
-            this.texture[i] = register.registerIcon(Reference.textureLoc + BowStrings.bowAdamantium + pullArray[i]);
+            this.texture[i] = register.registerIcon(Reference.textureLoc + Names.Items.bowAdamantium + pullArray[i]);
         }
     }
 

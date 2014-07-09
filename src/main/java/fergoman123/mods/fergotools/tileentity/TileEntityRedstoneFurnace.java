@@ -4,9 +4,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockRedstoneFurnace;
-import fergoman123.mods.fergotools.lib.Locale;
-import fergoman123.mods.fergotools.lib.ints.FurnaceInts;
-import fergoman123.mods.fergotools.util.base.FurnaceTileFT;
+import fergoman123.mods.fergotools.reference.Locale;
+import fergoman123.mods.fergotools.reference.ints.FurnaceInts;
+import fergoman123.mods.fergotools.util.base.TileEntityFurnaceFT;
 import fergoman123.mods.fergoutil.helper.BlockHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,7 +18,7 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
-public class TileEntityRedstoneFurnace extends FurnaceTileFT{
+public class TileEntityRedstoneFurnace extends TileEntityFurnaceFT {
 
     private static final int[] slotsTop = new int[]{0};
     private static final int[] slotsBottom = new int[]{2, 1};

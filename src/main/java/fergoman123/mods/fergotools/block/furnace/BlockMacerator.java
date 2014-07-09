@@ -2,10 +2,9 @@ package fergoman123.mods.fergotools.block.furnace;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.FergoTools;
-import fergoman123.mods.fergotools.lib.Reference;
-import fergoman123.mods.fergotools.lib.ints.GuiInts;
-import fergoman123.mods.fergotools.lib.strings.FurnaceStrings;
+import fergoman123.mods.fergotools.reference.GuiIds;
+import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergotools.tileentity.TileEntityMacerator;
 import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
@@ -92,7 +91,7 @@ public class BlockMacerator extends BlockFurnaceFT
     public void registerBlockIcons(IIconRegister register)
     {
         this.blockIcon = register.registerIcon("iron_block");
-        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? FurnaceStrings.maceratorActive : FurnaceStrings.maceratorIdle));
+        this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.maceratorActive : Names.Blocks.maceratorIdle));
         this.icons[1] = register.registerIcon("iron_block");
     }
 
@@ -107,7 +106,7 @@ public class BlockMacerator extends BlockFurnaceFT
             TileEntityMacerator furnace = (TileEntityMacerator)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.instance, GuiInts.maceratorId, world, x, y, z);
+                player.openGui(getInstance(), getGuiID(), world, x, y, z);
             }
             return true;
         }
@@ -272,5 +271,10 @@ public class BlockMacerator extends BlockFurnaceFT
     public Item getItem(World world, int x, int y, int z)
     {
         return BlockHelper.getItemFromBlock(instanceIdle);
+    }
+
+    @Override
+    public int getGuiID() {
+        return GuiIds.maceratorId;
     }
 }

@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.SwordGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemCoalSword extends SwordGeneric {
 
     public ItemCoalSword() {
         super(UtilToolArmor.coal);
-        this.setUnlocalizedName(ToolStrings.coalSword);
+        this.setUnlocalizedName(Names.Items.coalSword);
         this.setMaxDamage(UtilToolArmor.getCoalMaxUses());
     }
 

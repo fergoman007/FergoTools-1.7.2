@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.item.materials.ItemSilkGem;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.enchantment.Enchantment;
@@ -16,7 +16,7 @@ public class ItemSilkAxe extends AxeGeneric {
     public ItemSilkAxe()
     {
         super(UtilToolArmor.silk);
-        this.setUnlocalizedName(ToolStrings.silkAxe);
+        this.setUnlocalizedName(Names.Items.silkAxe);
         this.setMaxDamage(UtilToolArmor.silk.getMaxUses());
     }
 

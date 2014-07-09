@@ -3,11 +3,8 @@ package fergoman123.mods.fergotools.util.base;
 import fergoman123.mods.fergotools.tileentity.*;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
-import net.minecraft.util.ResourceLocation;
 
 public abstract class GuiFT extends GuiContainer{
-
-    public ResourceLocation texture;
 
     public TileEntityQuartzFurnace quartzFurnace;
     public TileEntityObsidianFurnace obsidianFurnace;

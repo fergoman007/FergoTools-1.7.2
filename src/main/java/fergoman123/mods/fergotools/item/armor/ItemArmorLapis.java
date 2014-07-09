@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.item.armor;
 
-import fergoman123.mods.fergotools.lib.textures.ArmorTextures;
+import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergoutil.item.Armor;
@@ -23,12 +23,12 @@ public class ItemArmorLapis extends ItemArmorFT {
     {
         if(stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
         {
-            return ArmorTextures.lapisArmorRender1;
+            return Textures.lapisArmorLayer1;
         }
 
         if(stack.getItem() == instanceLegs)
         {
-            return ArmorTextures.lapisArmorRender2;
+            return Textures.lapisArmorLayer2;
         }
         else
         {

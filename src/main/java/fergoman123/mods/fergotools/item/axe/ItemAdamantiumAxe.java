@@ -1,8 +1,7 @@
 package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.item.materials.ItemAdamantiumIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
-import fergoman123.mods.fergotools.lib.strings.ToolTipStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.AxeGeneric;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,7 +16,7 @@ public class ItemAdamantiumAxe extends AxeGeneric {
     public ItemAdamantiumAxe()
     {
         super(UtilToolArmor.adamantium);
-        this.setUnlocalizedName(ToolStrings.adamantiumAxe);
+        this.setUnlocalizedName(Names.Items.adamantiumAxe);
         this.setMaxDamage(UtilToolArmor.adamantium.getMaxUses());
     }
 
@@ -29,7 +28,7 @@ public class ItemAdamantiumAxe extends AxeGeneric {
     @SuppressWarnings({"unchecked"})
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean useExtraInfo)
     {
-        list.add(ToolTipStrings.adamantiumToolMessage);
+        list.add(Names.Locale.adamantiumToolTip);
     }
 
 }

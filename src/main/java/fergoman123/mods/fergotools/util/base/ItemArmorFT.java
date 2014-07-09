@@ -2,7 +2,7 @@ package fergoman123.mods.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.lib.Reference;
+import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.tabs.Tabs;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.Armor;
@@ -12,9 +12,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 02/06/2014.
- */
 public abstract class ItemArmorFT extends ItemArmor implements Armor.IArmor{
 
     public ItemArmorFT(String armorName, ArmorMaterial material, Armor.EnumArmorType type)

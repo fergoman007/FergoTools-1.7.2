@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.item.materials.ItemGlowstoneIngot;
-import fergoman123.mods.fergotools.lib.strings.ToolStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.item.UtilToolArmor;
 import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ public class ItemGlowstoneShovel extends ShovelGeneric {
 
     public ItemGlowstoneShovel() {
         super(UtilToolArmor.glowstone);
-        this.setUnlocalizedName(ToolStrings.glowstoneShovel);
+        this.setUnlocalizedName(Names.Items.glowstoneShovel);
         this.setMaxDamage(UtilToolArmor.getGlowstoneMaxUses());
     }
 

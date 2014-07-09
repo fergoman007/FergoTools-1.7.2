@@ -8,7 +8,7 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-public abstract class FurnaceTileFT extends TileEntity implements ISidedInventory, ITileFurnace
+public abstract class TileEntityFurnaceFT extends TileEntity implements ISidedInventory, ITileFurnace
 {
     public int[] slotsTop = new int[]{0};
     public int[] slotsBottom = new int[]{2, 1};

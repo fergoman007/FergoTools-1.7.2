@@ -1,15 +1,12 @@
 package fergoman123.mods.fergotools.block.storage;
 
-import fergoman123.mods.fergotools.lib.strings.BlockStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class BlockRedstoneCrystal extends BlockFT{
 
     public static BlockRedstoneCrystal instance = new BlockRedstoneCrystal();
@@ -17,7 +14,7 @@ public class BlockRedstoneCrystal extends BlockFT{
     public BlockRedstoneCrystal()
     {
         super(Material.iron);
-        this.setBlockName(BlockStrings.blockRedstoneCrystal);
+        this.setBlockName(Names.Blocks.blockRedstoneCrystal);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }
