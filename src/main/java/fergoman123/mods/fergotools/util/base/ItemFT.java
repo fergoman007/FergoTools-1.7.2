@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.util.base;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
@@ -15,7 +15,7 @@ public class ItemFT extends Item{
     {
         super();
         this.maxStackSize = 1;
-        this.setCreativeTab(Tabs.tabFergoItems);
+        this.setCreativeTab(CreativeTabsFergoTools.tabFergoItems);
         this.setNoRepair();
     }
 

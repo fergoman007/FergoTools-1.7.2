@@ -3,21 +3,18 @@ package fergoman123.mods.fergotools.util.tool;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
-/**
- * Created by Fergoman123 on 22/05/2014.
- */
-public abstract class ShovelGeneric extends ItemSpade{
+public class ShovelGeneric extends ItemSpade{
 
     public ShovelGeneric(ToolMaterial material) {
         super(material);
         this.setMaxStackSize(1);
-        this.setCreativeTab(Tabs.tabFergoTools);
+        this.setCreativeTab(CreativeTabsFergoTools.tabFergoTools);
         this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 

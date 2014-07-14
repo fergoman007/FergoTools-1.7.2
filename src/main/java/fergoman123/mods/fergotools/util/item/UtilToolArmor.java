@@ -1,16 +1,12 @@
 package fergoman123.mods.fergotools.util.item;
 
 import fergoman123.mods.fergotools.config.ConfigHandler;
-import fergoman123.mods.fergotools.reference.ints.ArmorInts;
-import fergoman123.mods.fergotools.reference.ints.ToolInts;
-import fergoman123.mods.fergotools.reference.strings.MaterialStrings;
+import fergoman123.mods.fergotools.reference.Ints;
+import fergoman123.mods.fergotools.reference.Strings;
 import fergoman123.mods.fergoutil.helper.ToolHelper;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 
-/**
- * Created by Fergoman123 on 05/04/2014.
- */
 public class UtilToolArmor {
 
     public static ToolMaterial quartz;
@@ -43,29 +39,29 @@ public class UtilToolArmor {
 
     public static void addToolMaterials()
     {
-        quartz = ToolHelper.addToolMaterial(MaterialStrings.quartzToolMat, ToolInts.harvestLvl, ToolInts.quartzMaxDamage, ToolInts.quartzEff, ToolInts.quartzDamage, ConfigHandler.enchantability);
-        obsidian = ToolHelper.addToolMaterial(MaterialStrings.obsidianToolMat, ToolInts.harvestLvl, ToolInts.obsidianMaxDamage, ToolInts.obsidianEff, ToolInts.obsidianDamage, ConfigHandler.enchantability);
-        emerald = ToolHelper.addToolMaterial(MaterialStrings.emeraldToolMat, ToolInts.harvestLvl, ToolInts.emeraldMaxDamage, ToolInts.emeraldEff, ToolInts.emeraldDamage, ConfigHandler.enchantability);
-        lapis = ToolHelper.addToolMaterial(MaterialStrings.lapisToolMat, ToolInts.harvestLvl, ToolInts.lapisMaxDamage, ToolInts.lapisEff, ToolInts.lapisDamage, ConfigHandler.enchantability);
-        bronze = ToolHelper.addToolMaterial(MaterialStrings.bronzeToolMat, ToolInts.harvestLvl, ToolInts.bronzeMaxDamage, ToolInts.bronzeEff, ToolInts.bronzeDamage, ConfigHandler.enchantability);
-        coal = ToolHelper.addToolMaterial(MaterialStrings.coalToolMat, ToolInts.harvestLvl, ToolInts.coalMaxDamage, ToolInts.coalEff, ToolInts.coalDamage, ConfigHandler.enchantability);
-        glowstone = ToolHelper.addToolMaterial(MaterialStrings.glowstoneToolMat, ToolInts.harvestLvl, ToolInts.glowstoneMaxDamage, ToolInts.glowstoneEff, ToolInts.glowstoneDamage, ConfigHandler.enchantability);
-        adamantium = ToolHelper.addToolMaterial(MaterialStrings.adamantiumToolMat, ToolInts.harvestLvl, ConfigHandler.adamantiumMaxDamage, ToolInts.adamantiumEff, ToolInts.adamantiumDamage, ConfigHandler.enchantability);
-        donator = ToolHelper.addToolMaterial(MaterialStrings.donatorToolMat, ToolInts.harvestLvl, ToolInts.donatorMaxDamage, ToolInts.donatorEff, ToolInts.donatorDamage, ConfigHandler.enchantability);
-        silk = ToolHelper.addToolMaterial(MaterialStrings.silkToolMat, ToolInts.harvestLvl, ToolInts.silkMaxDamage, ToolInts.silkEff, ToolInts.silkDamage, ConfigHandler.enchantability);
-        redstone = ToolHelper.addToolMaterial(MaterialStrings.redstoneToolMat, ToolInts.harvestLvl, ToolInts.redstoneMaxDamage, ToolInts.redstoneEff, ToolInts.redstoneDamage, ConfigHandler.enchantability);
+        quartz = ToolHelper.addToolMaterial(Strings.Material.quartzToolMat, Ints.Tools.harvestLvl, Ints.Tools.quartzMaxDamage, Ints.Tools.quartzEff, Ints.Tools.quartzDamage, ConfigHandler.enchantability);
+        obsidian = ToolHelper.addToolMaterial(Strings.Material.obsidianToolMat, Ints.Tools.harvestLvl, Ints.Tools.obsidianMaxDamage, Ints.Tools.obsidianEff, Ints.Tools.obsidianDamage, ConfigHandler.enchantability);
+        emerald = ToolHelper.addToolMaterial(Strings.Material.emeraldToolMat, Ints.Tools.harvestLvl, Ints.Tools.emeraldMaxDamage, Ints.Tools.emeraldEff, Ints.Tools.emeraldDamage, ConfigHandler.enchantability);
+        lapis = ToolHelper.addToolMaterial(Strings.Material.lapisToolMat, Ints.Tools.harvestLvl, Ints.Tools.lapisMaxDamage, Ints.Tools.lapisEff, Ints.Tools.lapisDamage, ConfigHandler.enchantability);
+        bronze = ToolHelper.addToolMaterial(Strings.Material.bronzeToolMat, Ints.Tools.harvestLvl, Ints.Tools.bronzeMaxDamage, Ints.Tools.bronzeEff, Ints.Tools.bronzeDamage, ConfigHandler.enchantability);
+        coal = ToolHelper.addToolMaterial(Strings.Material.coalToolMat, Ints.Tools.harvestLvl, Ints.Tools.coalMaxDamage, Ints.Tools.coalEff, Ints.Tools.coalDamage, ConfigHandler.enchantability);
+        glowstone = ToolHelper.addToolMaterial(Strings.Material.glowstoneToolMat, Ints.Tools.harvestLvl, Ints.Tools.glowstoneMaxDamage, Ints.Tools.glowstoneEff, Ints.Tools.glowstoneDamage, ConfigHandler.enchantability);
+        adamantium = ToolHelper.addToolMaterial(Strings.Material.adamantiumToolMat, Ints.Tools.harvestLvl, ConfigHandler.adamantiumMaxDamage, Ints.Tools.adamantiumEff, Ints.Tools.adamantiumDamage, ConfigHandler.enchantability);
+        donator = ToolHelper.addToolMaterial(Strings.Material.donatorToolMat, Ints.Tools.harvestLvl, Ints.Tools.donatorMaxDamage, Ints.Tools.donatorEff, Ints.Tools.donatorDamage, ConfigHandler.enchantability);
+        silk = ToolHelper.addToolMaterial(Strings.Material.silkToolMat, Ints.Tools.harvestLvl, Ints.Tools.silkMaxDamage, Ints.Tools.silkEff, Ints.Tools.silkDamage, ConfigHandler.enchantability);
+        redstone = ToolHelper.addToolMaterial(Strings.Material.redstoneToolMat, Ints.Tools.harvestLvl, Ints.Tools.redstoneMaxDamage, Ints.Tools.redstoneEff, Ints.Tools.redstoneDamage, ConfigHandler.enchantability);
     }
 
     public static void addArmorMaterials() {
-        quartzArmor = ToolHelper.addArmorMaterial(MaterialStrings.quartzArmor, ArmorInts.quartzArmorMaxDamage, ArmorInts.quartzReduct, ArmorInts.enchantability);
-        obsidianArmor = ToolHelper.addArmorMaterial(MaterialStrings.obsidianArmor, ArmorInts.obsidianArmorMaxDamage, ArmorInts.obsidianReduct, ArmorInts.enchantability);
-        emeraldArmor = ToolHelper.addArmorMaterial(MaterialStrings.emeraldArmor, ArmorInts.obsidianArmorMaxDamage, ArmorInts.emeraldReduct, ArmorInts.enchantability);
-        lapisArmor = ToolHelper.addArmorMaterial(MaterialStrings.lapisArmor, ArmorInts.lapisArmorMaxDamage, ArmorInts.lapisReduct, ArmorInts.enchantability);
-        bronzeArmor = ToolHelper.addArmorMaterial(MaterialStrings.bronzeArmor, ArmorInts.bronzeArmorMaxDamage, ArmorInts.bronzeReduct, ArmorInts.enchantability);
-        coalArmor = ToolHelper.addArmorMaterial(MaterialStrings.coalArmor, ArmorInts.coalArmorMaxDamage, ArmorInts.coalReduct, ArmorInts.enchantability);
-        glowstoneArmor = ToolHelper.addArmorMaterial(MaterialStrings.glowstoneArmor, ArmorInts.glowstoneArmorMaxDamage, ArmorInts.glowstoneReduct, ArmorInts.enchantability);
-        redstoneArmor = ToolHelper.addArmorMaterial(MaterialStrings.redstoneArmor, ArmorInts.redstoneArmorMaxDamage, ArmorInts.redstoneReduct, ArmorInts.enchantability);
-        adamantiumArmor = ToolHelper.addArmorMaterial(MaterialStrings.adamantiumArmor, ArmorInts.adamantiumArmorMaxDamage, ArmorInts.adamantiumReduct, ArmorInts.enchantability);
+        quartzArmor = ToolHelper.addArmorMaterial(Strings.Material.quartzArmor, Ints.Armor.quartzArmorMaxDamage, Ints.Armor.quartzReduct, ConfigHandler.enchantability);
+        obsidianArmor = ToolHelper.addArmorMaterial(Strings.Material.obsidianArmor, Ints.Armor.obsidianArmorMaxDamage, Ints.Armor.obsidianReduct, ConfigHandler.enchantability);
+        emeraldArmor = ToolHelper.addArmorMaterial(Strings.Material.emeraldArmor, Ints.Armor.obsidianArmorMaxDamage, Ints.Armor.emeraldReduct, ConfigHandler.enchantability);
+        lapisArmor = ToolHelper.addArmorMaterial(Strings.Material.lapisArmor, Ints.Armor.lapisArmorMaxDamage, Ints.Armor.lapisReduct, ConfigHandler.enchantability);
+        bronzeArmor = ToolHelper.addArmorMaterial(Strings.Material.bronzeArmor, Ints.Armor.bronzeArmorMaxDamage, Ints.Armor.bronzeReduct, ConfigHandler.enchantability);
+        coalArmor = ToolHelper.addArmorMaterial(Strings.Material.coalArmor, Ints.Armor.coalArmorMaxDamage, Ints.Armor.coalReduct, ConfigHandler.enchantability);
+        glowstoneArmor = ToolHelper.addArmorMaterial(Strings.Material.glowstoneArmor, Ints.Armor.glowstoneArmorMaxDamage, Ints.Armor.glowstoneReduct, ConfigHandler.enchantability);
+        redstoneArmor = ToolHelper.addArmorMaterial(Strings.Material.redstoneArmor, Ints.Armor.redstoneArmorMaxDamage, Ints.Armor.redstoneReduct, ConfigHandler.enchantability);
+        adamantiumArmor = ToolHelper.addArmorMaterial(Strings.Material.adamantiumArmor, Ints.Armor.adamantiumArmorMaxDamage, Ints.Armor.adamantiumReduct, ConfigHandler.enchantability);
     }
 
     public static int getQuartzMaxUses(){return quartz.getMaxUses();}

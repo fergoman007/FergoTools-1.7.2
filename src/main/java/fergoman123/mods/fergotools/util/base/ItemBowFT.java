@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.util.base;
 
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,7 +18,7 @@ public abstract class ItemBowFT extends ItemBow{
     public ItemBowFT()
     {
         this.maxStackSize = 1;
-        this.setCreativeTab(Tabs.tabFergoBows);
+        this.setCreativeTab(CreativeTabsFergoTools.tabFergoBows);
     }
 
     @Override

@@ -1,14 +1,17 @@
 package fergoman123.mods.fergotools.helper;
 
-import cpw.mods.fml.common.FMLLog;
 import fergoman123.mods.fergotools.reference.ModInfo;
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class LogHelper {
+public class LogHelper
+{
+    public static Logger logger = LogManager.getLogger(ModInfo.modid);
 
     public static void log(Level level, Object object)
     {
-        FMLLog.log(ModInfo.modid, level, String.valueOf(object));
+        logger.log(level, "[" + ModInfo.modid + "]" + String.valueOf(object));
     }
 
     public static void all(Object object)

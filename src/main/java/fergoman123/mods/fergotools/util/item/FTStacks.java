@@ -1,7 +1,9 @@
 package fergoman123.mods.fergotools.util.item;
 
 import fergoman123.mods.fergotools.block.furnace.*;
+import fergoman123.mods.fergotools.block.ore.*;
 import fergoman123.mods.fergotools.block.storage.*;
+import fergoman123.mods.fergotools.item.ItemExpCollector;
 import fergoman123.mods.fergotools.item.armor.*;
 import fergoman123.mods.fergotools.item.axe.*;
 import fergoman123.mods.fergotools.item.bow.*;
@@ -29,7 +31,8 @@ public class FTStacks {
     public static final ItemStack coalIngot9 = new ItemStack(ItemCoalIngot.instance, 9);
     public static final ItemStack glowstoneIngot9 = new ItemStack(ItemGlowstoneIngot.instance, 9);
     public static final ItemStack silkGem9 = new ItemStack(ItemSilkGem.instance, 9);
-    public static final ItemStack expShard9 = new ItemStack(ItemExpShard.instance, 9);
+    public static final ItemStack expShard9 = new ItemStack(ItemExpCollector.instance);
+    public static final ItemStack redstoneCrystal9 = new ItemStack(ItemRedstoneCrystal.instance, 9);
 
     public static final ItemStack expShard5 = new ItemStack(ItemExpShard.instance, 5);
 
@@ -43,6 +46,7 @@ public class FTStacks {
     public static final ItemStack expShard = new ItemStack(ItemExpShard.instance);
     public static final ItemStack silkGem = new ItemStack(ItemSilkGem.instance);
     public static final ItemStack redstoneCrystal = new ItemStack(ItemRedstoneCrystal.instance);
+    public static final ItemStack expCollector = new ItemStack(ItemExpCollector.instance);
 
     public static final ItemStack blockObsidian = new ItemStack(BlockObsidianStorage.instance);
     public static final ItemStack blockEmeraldCrystal = new ItemStack(BlockEmeraldCrystal.instance);
@@ -55,7 +59,13 @@ public class FTStacks {
     public static final ItemStack blockAdamantium = new ItemStack(BlockAdamantium.instance);
     public static final ItemStack blockRedstone = new ItemStack(BlockRedstoneCrystal.instance);
 
-    public static final ItemStack expBottle = new ItemStack(Items.experience_bottle);
+    public static final ItemStack oreObsidian = new ItemStack(BlockOreObsidian.instance);
+    public static final ItemStack oreEmeraldCrystal = new ItemStack(BlockOreEmeraldCrystal.instance);
+    public static final ItemStack oreLapisCrystal = new ItemStack(BlockOreLapisCrystal.instance);
+    public static final ItemStack oreBronze = new ItemStack(BlockOreBronze.instance);
+    public static final ItemStack oreExperience = new ItemStack(BlockOreExperience.instance);
+    public static final ItemStack oreAdamantium = new ItemStack(BlockOreAdamantium.instance);
+    public static final ItemStack oreRedstoneCrystal = new ItemStack(BlockOreRedstoneCrystal.instance);
 
     public static final ItemStack quartzPickaxe = new ItemStack(ItemQuartzPickaxe.instance);
     public static final ItemStack quartzShovel = new ItemStack(ItemQuartzShovel.instance);
@@ -117,17 +127,29 @@ public class FTStacks {
     public static final ItemStack redstoneHoe = new ItemStack(ItemRedstoneHoe.instance);
     public static final ItemStack redstoneSword = new ItemStack(ItemRedstoneSword.instance);
 
-    public static final ItemStack quartzFurnace = new ItemStack(BlockQuartzFurnace.instanceIdle);
-    public static final ItemStack obsidianFurnace = new ItemStack(BlockObsidianFurnace.instanceIdle);
-    public static final ItemStack emeraldCrystalFurnace = new ItemStack(BlockEmeraldCrystalFurnace.instanceIdle);
-    public static final ItemStack lapisCrystalFurnace = new ItemStack(BlockLapisCrystalFurnace.instanceIdle);
-    public static final ItemStack bronzeFurnace = new ItemStack(BlockBronzeFurnace.instanceIdle);
-    public static final ItemStack coalFurnace = new ItemStack(BlockCoalFurnace.instanceIdle);
-    public static final ItemStack glowstoneFurnace = new ItemStack(BlockGlowstoneFurnace.instanceIdle);
-    public static final ItemStack adamantiumFurnace = new ItemStack(BlockAdamantiumFurnace.instanceIdle);
-    public static final ItemStack silkFurnace = new ItemStack(BlockSilkFurnace.instanceIdle);
-    public static final ItemStack redstoneFurnace = new ItemStack(BlockRedstoneFurnace.instanceIdle);
-    public static final ItemStack macerator = new ItemStack(BlockMacerator.instanceIdle);
+    public static final ItemStack quartzFurnaceIdle = new ItemStack(BlockQuartzFurnace.instanceIdle);
+    public static final ItemStack obsidianFurnaceIdle = new ItemStack(BlockObsidianFurnace.instanceIdle);
+    public static final ItemStack emeraldCrystalFurnaceIdle = new ItemStack(BlockEmeraldCrystalFurnace.instanceIdle);
+    public static final ItemStack lapisCrystalFurnaceIdle = new ItemStack(BlockLapisCrystalFurnace.instanceIdle);
+    public static final ItemStack bronzeFurnaceIdle = new ItemStack(BlockBronzeFurnace.instanceIdle);
+    public static final ItemStack coalFurnaceIdle = new ItemStack(BlockCoalFurnace.instanceIdle);
+    public static final ItemStack glowstoneFurnaceIdle = new ItemStack(BlockGlowstoneFurnace.instanceIdle);
+    public static final ItemStack adamantiumFurnaceIdle = new ItemStack(BlockAdamantiumFurnace.instanceIdle);
+    public static final ItemStack silkFurnaceIdle = new ItemStack(BlockSilkFurnace.instanceIdle);
+    public static final ItemStack redstoneFurnaceIdle = new ItemStack(BlockRedstoneFurnace.instanceIdle);
+    public static final ItemStack maceratorIdle = new ItemStack(BlockMacerator.instanceIdle);
+
+    public static final ItemStack quartzFurnaceActive = new ItemStack(BlockQuartzFurnace.instanceActive);
+    public static final ItemStack obsidianFurnaceActive = new ItemStack(BlockObsidianFurnace.instanceActive);
+    public static final ItemStack emeraldCrystalFurnaceActive = new ItemStack(BlockEmeraldCrystalFurnace.instanceActive);
+    public static final ItemStack lapisCrystalFurnaceActive = new ItemStack(BlockLapisCrystalFurnace.instanceActive);
+    public static final ItemStack bronzeFurnaceActive = new ItemStack(BlockBronzeFurnace.instanceActive);
+    public static final ItemStack coalFurnaceActive = new ItemStack(BlockCoalFurnace.instanceActive);
+    public static final ItemStack glowstoneFurnaceActive = new ItemStack(BlockGlowstoneFurnace.instanceActive);
+    public static final ItemStack adamantiumFurnaceActive = new ItemStack(BlockAdamantiumFurnace.instanceActive);
+    public static final ItemStack silkFurnaceActive = new ItemStack(BlockSilkFurnace.instanceActive);
+    public static final ItemStack redstoneFurnaceActive = new ItemStack(BlockRedstoneFurnace.instanceActive);
+    public static final ItemStack maceratorActive = new ItemStack(BlockMacerator.instanceActive);
 
     public static final ItemStack quartzHelmet = new ItemStack(ItemArmorQuartz.instanceHelmet);
     public static final ItemStack quartzChestplate = new ItemStack(ItemArmorQuartz.instanceChest);

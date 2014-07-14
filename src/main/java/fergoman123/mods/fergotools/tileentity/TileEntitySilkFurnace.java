@@ -3,8 +3,8 @@ package fergoman123.mods.fergotools.tileentity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockSilkFurnace;
-import fergoman123.mods.fergotools.reference.Locale;
-import fergoman123.mods.fergotools.reference.ints.FurnaceInts;
+import fergoman123.mods.fergotools.reference.Ints;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.TileEntityFurnaceFT;
 import fergoman123.mods.fergoutil.helper.BlockHelper;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
@@ -94,7 +94,7 @@ public class TileEntitySilkFurnace extends TileEntityFurnaceFT {
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerSilkFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerSilkFurnace;
     }
 
     public boolean hasCustomInventoryName()
@@ -168,7 +168,7 @@ public class TileEntitySilkFurnace extends TileEntityFurnaceFT {
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int speed)
     {
-        return this.cookTime * speed / FurnaceInts.silkFurnaceSpeed;
+        return this.cookTime * speed / Ints.Furnace.silkFurnaceSpeed;
     }
 
     @SideOnly(Side.CLIENT)
@@ -176,7 +176,7 @@ public class TileEntitySilkFurnace extends TileEntityFurnaceFT {
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = FurnaceInts.silkFurnaceSpeed;
+            this.currentItemBurnTime = Ints.Furnace.silkFurnaceSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
@@ -220,7 +220,7 @@ public class TileEntitySilkFurnace extends TileEntityFurnaceFT {
             {
                     ++this.cookTime;
 
-                if (this.cookTime == FurnaceInts.silkFurnaceSpeed)
+                if (this.cookTime == Ints.Furnace.silkFurnaceSpeed)
                 {
                     this.cookTime = 0;
                     this.smeltItem();

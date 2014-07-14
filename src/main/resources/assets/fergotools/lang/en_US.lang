@@ -1,3 +1,11 @@
+# Creative Tabs
+itemGroup.tabFergoTools=Fergoman123's Tools (Tools)
+itemGroup.tabFergoBlocks=Fergoman123's Tools (Blocks)
+itemGroup.tabFergoFurnaces=Fergoman123's Tools (Furnaces)
+itemGroup.tabFergoItems=Fergoman123's Tools (Items)
+itemGroup.tabFergoArmor=Fergoman123's Tools (Armor)
+itemGroup.tabFergoBows=Fergoman123's Tools (Bows)
+
 # Tools
 item.FergoTools:quartzPickaxe.name=Quartz Pickaxe
 item.FergoTools:quartzShovel.name=Quartz Shovel
@@ -123,6 +131,8 @@ tile.FergoTools:blockAdamantium.name=Adamantium Block
 tile.FergoTools:blockSilkGem.name=Silk Gem Block
 tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
 
+tile.FergoTools:blockFergoGlass.name=Fergoman123's Glass
+
 # Crafting Materials
 item.FergoTools:expShard.name=Experience Shard
 item.FergoTools:ingotObsidian.name=Obsidian Ingot
@@ -180,6 +190,7 @@ container.FergoTools:glowstoneFurnace=Glowstone Furnace
 container.FergoTools:adamantiumFurnace=Adamantium Furnace
 container.FergoTools:silkFurnace=Silk Furnace
 container.FergoTools:redstoneFurnace=Redstone Furnace
+container.FergoTools:macerator=Macerator
 
 # Tool Tips
-tooltip.adamantiumTool1=NOTE: Extremely Overpowered!
+tooltip.adamantiumTool=NOTE: Extremely Overpowered!

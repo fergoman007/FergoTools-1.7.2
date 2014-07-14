@@ -3,19 +3,19 @@ package fergoman123.mods.fergotools.util.tool;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.ITool;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 
-public abstract class AxeGeneric extends ItemAxe implements ITool {
+public class AxeGeneric extends ItemAxe implements ITool {
 
     public AxeGeneric(ToolMaterial material) {
         super(material);
         this.setMaxStackSize(1);
-        this.setCreativeTab(Tabs.tabFergoTools);
+        this.setCreativeTab(CreativeTabsFergoTools.tabFergoTools);
         this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 

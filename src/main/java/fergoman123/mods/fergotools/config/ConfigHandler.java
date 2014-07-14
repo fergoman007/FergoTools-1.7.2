@@ -1,6 +1,7 @@
 package fergoman123.mods.fergotools.config;
 
 import fergoman123.mods.fergotools.helper.LogHelper;
+import fergoman123.mods.fergoutil.helper.ConfigHelper;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
@@ -16,6 +17,8 @@ public class ConfigHandler
 
     public static int enchantability;
 
+    public static int dimId;
+
     public static void init(File configFile)
     {
             config = new Configuration(configFile);
@@ -23,12 +26,14 @@ public class ConfigHandler
         try
         {
             config.load();
-            adamantiumMaxDamage = config.getInt("adamantiumToolMaxDamage", Configuration.CATEGORY_GENERAL, Defaults.adamantiumArmorMaxDamageDefault, 950, Defaults.adamantiumToolMax, "Adamantium Tool Max Damage (Min = 950, Max = 999999999, Default = 1000)");
-            adamantiumDamage = config.getInt("adamantiumDamage", Configuration.CATEGORY_GENERAL, Defaults.adamantiumDamageDefault, 15, 25, "Adamantium Sword damage (Min = 15, Max = 25, Default = 20)");
+            adamantiumMaxDamage = ConfigHelper.getInt("adamantiumToolMaxDamage", ConfigHelper.getCategoryGeneral(), Defaults.adamantiumArmorMaxDamageDefault, 950, Defaults.adamantiumToolMax, "Adamantium Tool Max Damage (Min = 950, Max = 999999999, Default = 1000)");
+            adamantiumDamage = ConfigHelper.getInt("adamantiumDamage", ConfigHelper.getCategoryGeneral(), Defaults.adamantiumDamageDefault, 15, 25, "Adamantium Sword damage (Min = 15, Max = 25, Default = 20)");
 
-            adamantiumArmorMaxDamage = config.getInt("adamantiumArmorDamage", Configuration.CATEGORY_GENERAL, Defaults.adamantiumArmorMaxDamageDefault, 950, 20000, "The max damage of adamantium armor (Min = 950, Max = 20000, Default 1000)");
+            adamantiumArmorMaxDamage = ConfigHelper.getInt("adamantiumArmorDamage", ConfigHelper.getCategoryGeneral(), Defaults.adamantiumArmorMaxDamageDefault, 950, 20000, "The max damage of adamantium armor (Min = 950, Max = 20000, Default 1000)");
 
-            enchantability = config.getInt("enchantability", Configuration.CATEGORY_GENERAL, Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
+            enchantability = ConfigHelper.getInt("enchantability", ConfigHelper.getCategoryGeneral(), Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
+
+            dimId = ConfigHelper.getInt("dimId", ConfigHelper.getCategoryGeneral(), Defaults.dimIdDefault, 5, 20, "Dimension ID (Min = 5, Max = 20, Default 8)");
         }
         catch (Exception e)
         {
@@ -39,4 +44,8 @@ public class ConfigHandler
             config.save();
         }
     }
+
+
+
+
 }

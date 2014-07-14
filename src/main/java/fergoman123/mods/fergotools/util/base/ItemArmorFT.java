@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.util.base;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -17,7 +17,7 @@ public abstract class ItemArmorFT extends ItemArmor implements Armor.IArmor{
     public ItemArmorFT(String armorName, ArmorMaterial material, Armor.EnumArmorType type)
     {
         super(material, 1, type.ordinal());
-        this.setCreativeTab(Tabs.tabFergoArmor);
+        this.setCreativeTab(CreativeTabsFergoTools.tabFergoArmor);
         this.setUnlocalizedName(armorName);
         this.setTextureName(String.format("%s%s%s", Reference.textureLoc, armorName, getArmorTypeName(this.armorType)));
     }

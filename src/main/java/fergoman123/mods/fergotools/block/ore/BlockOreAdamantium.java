@@ -1,6 +1,6 @@
 package fergoman123.mods.fergotools.block.ore;
 
-import fergoman123.mods.fergotools.reference.strings.BlockStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
@@ -8,16 +8,13 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class BlockOreAdamantium extends BlockFT{
 
     public static BlockOreAdamantium instance = new BlockOreAdamantium();
 
     public BlockOreAdamantium() {
         super(Material.rock);
-        this.setBlockName(BlockStrings.oreAdamantium);
+        this.setBlockName(Names.Blocks.oreAdamantium);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

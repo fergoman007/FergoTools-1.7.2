@@ -2,13 +2,13 @@ package fergoman123.mods.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergoutil.tileentity.ITileFurnace;
+import fergoman123.mods.fergoutil.util.INBTTaggable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-public abstract class TileEntityFurnaceFT extends TileEntity implements ISidedInventory, ITileFurnace
+public abstract class TileEntityFurnaceFT extends TileEntity implements ISidedInventory, INBTTaggable
 {
     public int[] slotsTop = new int[]{0};
     public int[] slotsBottom = new int[]{2, 1};

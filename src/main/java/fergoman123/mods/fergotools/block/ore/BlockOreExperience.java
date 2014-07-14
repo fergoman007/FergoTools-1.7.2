@@ -1,12 +1,11 @@
 package fergoman123.mods.fergotools.block.ore;
 
 import fergoman123.mods.fergotools.item.materials.ItemExpShard;
-import fergoman123.mods.fergotools.reference.strings.BlockStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.item.Item;
 
 import java.util.Random;
-
 
 public class BlockOreExperience extends BlockFT{
 
@@ -15,7 +14,7 @@ public class BlockOreExperience extends BlockFT{
     public BlockOreExperience()
     {
         super();
-        this.setBlockName(BlockStrings.oreExperience);
+        this.setBlockName(Names.Blocks.oreExperience);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

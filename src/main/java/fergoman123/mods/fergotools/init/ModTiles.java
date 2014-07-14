@@ -18,7 +18,6 @@ public class ModTiles {
     public static Class<? extends TileEntity> silkFurnaceClass = TileEntitySilkFurnace.class;
     public static Class<? extends TileEntity> redstoneFurnaceClass = TileEntityRedstoneFurnace.class;
     public static Class<? extends TileEntity> maceratorClass = TileEntityMacerator.class;
-    public static Class<? extends TileEntity> netherrackFurnaceClass = TileEntityNetherrackFurnace.class;
 
     public static void init()
     {
@@ -33,6 +32,5 @@ public class ModTiles {
         RegisterHelper.registerTileEntity(silkFurnaceClass, Strings.Tile.silkFurnaceTile);
         RegisterHelper.registerTileEntity(redstoneFurnaceClass, Strings.Tile.redstoneFurnaceTile);
         RegisterHelper.registerTileEntity(maceratorClass, Strings.Tile.maceratorTile);
-        RegisterHelper.registerTileEntity(netherrackFurnaceClass, Strings.Tile.netherrackFurnaceTile);
     }
 }

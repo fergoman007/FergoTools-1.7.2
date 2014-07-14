@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.util.base;
 
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
@@ -14,7 +14,7 @@ public abstract class BlockGlassFT extends BlockBreakable
     public BlockGlassFT()
     {
         super("glass", Material.glass, false);
-        setCreativeTab(Tabs.tabFergoBlocks);
+        setCreativeTab(CreativeTabsFergoTools.tabFergoBlocks);
         setHardness(0.3f);
         setResistance(50f);
         setStepSound(Block.soundTypeGlass);

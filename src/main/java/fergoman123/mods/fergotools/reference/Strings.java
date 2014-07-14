@@ -36,12 +36,12 @@ public class Strings
         public static final String tabFergoArmor = "tabFergoArmor";
         public static final String tabFergoBows = "tabFergoBows";
 
-        public static final String tabFergoToolsTranslated = "Fergoman123's Tools | Tools";
-        public static final String tabFergoBlocksTranslated = "Fergoman123's Tools | Blocks";
-        public static final String tabFergoFurnacesTranslated = "Fergoman123's Tools | Furnaces";
-        public static final String tabFergoItemsTranslated = "Fergoman123's Tools | Items";
-        public static final String tabFergoArmorTranslated = "Fergoman123's Tools | Armor";
-        public static final String tabFergoBowsTranslated = "Fergoman123's Tools | Bows";
+        public static final String itemGroupFergoTools = "itemGroup." + Reference.textureLoc + tabFergoTools;
+        public static final String itemGroupFergoBlocks = "itemGroup." + Reference.textureLoc + tabFergoBlocks;
+        public static final String itemGroupFergoFurnaces = "itemGroup." + Reference.textureLoc + tabFergoFurnaces;
+        public static final String itemGroupFergoItems = "itemGroup." + Reference.textureLoc + tabFergoItems;
+        public static final String itemGroupFergoArmor = "itemGroup." + Reference.textureLoc + tabFergoArmor;
+        public static final String itemGroupFergoBows = "itemGroup." + Reference.textureLoc + tabFergoBows;
     }
 
     public static final class Tile
@@ -67,5 +67,20 @@ public class Strings
         public static final String redstoneFurnaceTile = tilePrefix + "RedstoneFurnace";
         public static final String maceratorTile = tilePrefix + "Macerator";
         public static final String netherrackFurnaceTile = tilePrefix + "Netherrack";
+    }
+
+    public static final class FurnaceType
+    {
+        public static final String quartzFurnace = "quartzFurnaceIdle";
+        public static final String obsidianFurnace = "obsidianFurnaceIdle";
+        public static final String emeraldCrystalFurnace = "emeraldCrystalFurnaceIdle";
+        public static final String lapisCrystalFurnace = "lapisCrystalFurnaceIdle";
+        public static final String bronzeFurnace = "bronzeFurnaceIdle";
+        public static final String coalFurnace = "coalFurnaceIdle";
+        public static final String glowstoneFurnace = "glowstoneFurnaceIdle";
+        public static final String adamantiumFurnace = "adamantiumFurnaceIdle";
+        public static final String silkFurnace = "silkFurnaceIdle";
+        public static final String redstoneFurnace = "redstoneFurnaceIdle";
+        public static final String macerator = "maceratorIdle";
     }
 }

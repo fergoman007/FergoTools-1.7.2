@@ -2,11 +2,8 @@ package fergoman123.mods.fergotools.block.furnace;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergotools.reference.GuiIds;
-import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.reference.Textures;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.reference.*;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergotools.tileentity.TileEntityGlowstoneFurnace;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
@@ -30,14 +27,14 @@ import java.util.Random;
 
 public class BlockGlowstoneFurnace extends BlockFurnaceFT
 {
-    public static final Block instanceIdle = new BlockGlowstoneFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block instanceIdle = new BlockGlowstoneFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block instanceActive = new BlockGlowstoneFurnace(true).setLightLevel(0.9F);
 
     private static boolean keepInventory;
 
     public BlockGlowstoneFurnace(boolean isActive)
     {
-        super(Material.rock, "glowstoneFurnace");
+        super(Material.rock, Strings.FurnaceType.glowstoneFurnace);
         this.isActive = isActive;
     }
 

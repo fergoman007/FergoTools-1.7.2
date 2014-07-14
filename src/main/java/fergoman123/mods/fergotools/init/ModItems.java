@@ -12,63 +12,68 @@ import fergoman123.mods.fergotools.item.sword.*;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 
-public class ModItems{
-
+public class ModItems
+{
     public static void init()
 	{
         RegisterHelper.registerItem(ItemQuartzPickaxe.instance, Names.Items.quartzPickaxe);
-        RegisterHelper.registerItem(ItemObsidianPickaxe.instance, Names.Items.obsidianPickaxe);
-        RegisterHelper.registerItem(ItemEmeraldPickaxe.instance, Names.Items.emeraldPickaxe);
-        RegisterHelper.registerItem(ItemLapisPickaxe.instance, Names.Items.lapisPickaxe);
-        RegisterHelper.registerItem(ItemBronzePickaxe.instance, Names.Items.bronzePickaxe);
-        RegisterHelper.registerItem(ItemCoalPickaxe.instance, Names.Items.coalPickaxe);
-        RegisterHelper.registerItem(ItemGlowstonePickaxe.instance, Names.Items.glowstonePickaxe);
-        RegisterHelper.registerItem(ItemAdamantiumPickaxe.instance, Names.Items.adamantiumPickaxe);
-        RegisterHelper.registerItem(ItemSilkPickaxe.instance, Names.Items.silkPickaxe);
-        RegisterHelper.registerItem(ItemRedstonePickaxe.instance, Names.Items.redstonePickaxe);
-
         RegisterHelper.registerItem(ItemQuartzShovel.instance, Names.Items.quartzShovel);
-        RegisterHelper.registerItem(ItemObsidianShovel.instance, Names.Items.obsidianShovel);
-        RegisterHelper.registerItem(ItemEmeraldShovel.instance, Names.Items.emeraldShovel);
-        RegisterHelper.registerItem(ItemLapisShovel.instance, Names.Items.lapisShovel);
-        RegisterHelper.registerItem(ItemBronzeShovel.instance, Names.Items.bronzeShovel);
-        RegisterHelper.registerItem(ItemCoalShovel.instance, Names.Items.coalShovel);
-        RegisterHelper.registerItem(ItemGlowstoneShovel.instance, Names.Items.glowstoneShovel);
-        RegisterHelper.registerItem(ItemAdamantiumShovel.instance, Names.Items.adamantiumShovel);
-        RegisterHelper.registerItem(ItemSilkShovel.instance, Names.Items.silkShovel);
-        RegisterHelper.registerItem(ItemRedstoneShovel.instance, Names.Items.redstoneShovel);
-
         RegisterHelper.registerItem(ItemQuartzAxe.instance, Names.Items.quartzAxe);
-        RegisterHelper.registerItem(ItemObsidianAxe.instance, Names.Items.obsidianAxe);
-        RegisterHelper.registerItem(ItemEmeraldAxe.instance, Names.Items.emeraldAxe);
-        RegisterHelper.registerItem(ItemLapisAxe.instance, Names.Items.lapisAxe);
-        RegisterHelper.registerItem(ItemBronzeAxe.instance, Names.Items.bronzeAxe);
-        RegisterHelper.registerItem(ItemCoalAxe.instance, Names.Items.coalAxe);
-        RegisterHelper.registerItem(ItemGlowstoneAxe.instance, Names.Items.glowstoneAxe);
-        RegisterHelper.registerItem(ItemAdamantiumAxe.instance, Names.Items.adamantiumAxe);
-        RegisterHelper.registerItem(ItemSilkAxe.instance, Names.Items.silkAxe);
-        RegisterHelper.registerItem(ItemRedstoneAxe.instance, Names.Items.redstoneAxe);
-
         RegisterHelper.registerItem(ItemQuartzHoe.instance, Names.Items.quartzHoe);
-        RegisterHelper.registerItem(ItemObsidianHoe.instance, Names.Items.obsidianHoe);
-        RegisterHelper.registerItem(ItemEmeraldHoe.instance, Names.Items.emeraldHoe);
-        RegisterHelper.registerItem(ItemLapisHoe.instance, Names.Items.lapisHoe);
-        RegisterHelper.registerItem(ItemBronzeHoe.instance, Names.Items.bronzeHoe);
-        RegisterHelper.registerItem(ItemCoalHoe.instance, Names.Items.coalHoe);
-        RegisterHelper.registerItem(ItemGlowstoneHoe.instance, Names.Items.glowstoneHoe);
-        RegisterHelper.registerItem(ItemAdamantiumHoe.instance, Names.Items.adamantiumHoe);
-        RegisterHelper.registerItem(ItemSilkHoe.instance, Names.Items.silkHoe);
-        RegisterHelper.registerItem(ItemRedstoneHoe.instance, Names.Items.redstoneHoe);
-
         RegisterHelper.registerItem(ItemQuartzSword.instance, Names.Items.quartzSword);
+
+        RegisterHelper.registerItem(ItemObsidianPickaxe.instance, Names.Items.obsidianPickaxe);
+        RegisterHelper.registerItem(ItemObsidianShovel.instance, Names.Items.obsidianShovel);
+        RegisterHelper.registerItem(ItemObsidianAxe.instance, Names.Items.obsidianAxe);
+        RegisterHelper.registerItem(ItemObsidianHoe.instance, Names.Items.obsidianHoe);
         RegisterHelper.registerItem(ItemObsidianSword.instance, Names.Items.obsidianSword);
+
+        RegisterHelper.registerItem(ItemEmeraldPickaxe.instance, Names.Items.emeraldPickaxe);
+        RegisterHelper.registerItem(ItemEmeraldShovel.instance, Names.Items.emeraldShovel);
+        RegisterHelper.registerItem(ItemEmeraldAxe.instance, Names.Items.emeraldAxe);
+        RegisterHelper.registerItem(ItemEmeraldHoe.instance, Names.Items.emeraldHoe);
         RegisterHelper.registerItem(ItemEmeraldSword.instance, Names.Items.emeraldSword);
+
+        RegisterHelper.registerItem(ItemLapisPickaxe.instance, Names.Items.lapisPickaxe);
+        RegisterHelper.registerItem(ItemLapisShovel.instance, Names.Items.lapisShovel);
+        RegisterHelper.registerItem(ItemLapisAxe.instance, Names.Items.lapisAxe);
+        RegisterHelper.registerItem(ItemLapisHoe.instance, Names.Items.lapisHoe);
         RegisterHelper.registerItem(ItemLapisSword.instance, Names.Items.lapisSword);
+
+        RegisterHelper.registerItem(ItemBronzePickaxe.instance, Names.Items.bronzePickaxe);
+        RegisterHelper.registerItem(ItemBronzeShovel.instance, Names.Items.bronzeShovel);
+        RegisterHelper.registerItem(ItemBronzeAxe.instance, Names.Items.bronzeAxe);
+        RegisterHelper.registerItem(ItemBronzeHoe.instance, Names.Items.bronzeHoe);
         RegisterHelper.registerItem(ItemBronzeSword.instance, Names.Items.bronzeSword);
+
+        RegisterHelper.registerItem(ItemCoalPickaxe.instance, Names.Items.coalPickaxe);
+        RegisterHelper.registerItem(ItemCoalShovel.instance, Names.Items.coalShovel);
+        RegisterHelper.registerItem(ItemCoalAxe.instance, Names.Items.coalAxe);
+        RegisterHelper.registerItem(ItemCoalHoe.instance, Names.Items.coalHoe);
         RegisterHelper.registerItem(ItemCoalSword.instance, Names.Items.coalSword);
+
+        RegisterHelper.registerItem(ItemGlowstonePickaxe.instance, Names.Items.glowstonePickaxe);
+        RegisterHelper.registerItem(ItemGlowstoneShovel.instance, Names.Items.glowstoneShovel);
+        RegisterHelper.registerItem(ItemGlowstoneAxe.instance, Names.Items.glowstoneAxe);
+        RegisterHelper.registerItem(ItemGlowstoneHoe.instance, Names.Items.glowstoneHoe);
         RegisterHelper.registerItem(ItemGlowstoneSword.instance, Names.Items.glowstoneSword);
+
+        RegisterHelper.registerItem(ItemAdamantiumPickaxe.instance, Names.Items.adamantiumPickaxe);
+        RegisterHelper.registerItem(ItemAdamantiumShovel.instance, Names.Items.adamantiumShovel);
+        RegisterHelper.registerItem(ItemAdamantiumAxe.instance, Names.Items.adamantiumAxe);
+        RegisterHelper.registerItem(ItemAdamantiumHoe.instance, Names.Items.adamantiumHoe);
         RegisterHelper.registerItem(ItemAdamantiumSword.instance, Names.Items.adamantiumSword);
+
+        RegisterHelper.registerItem(ItemSilkPickaxe.instance, Names.Items.silkPickaxe);
+        RegisterHelper.registerItem(ItemSilkShovel.instance, Names.Items.silkShovel);
+        RegisterHelper.registerItem(ItemSilkAxe.instance, Names.Items.silkAxe);
+        RegisterHelper.registerItem(ItemSilkHoe.instance, Names.Items.silkHoe);
         RegisterHelper.registerItem(ItemSilkSword.instance, Names.Items.silkSword);
+
+        RegisterHelper.registerItem(ItemRedstonePickaxe.instance, Names.Items.redstonePickaxe);
+        RegisterHelper.registerItem(ItemRedstoneShovel.instance, Names.Items.redstoneShovel);
+        RegisterHelper.registerItem(ItemRedstoneAxe.instance, Names.Items.redstoneAxe);
+        RegisterHelper.registerItem(ItemRedstoneHoe.instance, Names.Items.redstoneHoe);
         RegisterHelper.registerItem(ItemRedstoneSword.instance, Names.Items.redstoneSword);
 
         RegisterHelper.registerItem(ItemObsidianIngot.instance, Names.Items.ingotObsidian);
@@ -81,6 +86,7 @@ public class ModItems{
         RegisterHelper.registerItem(ItemSilkGem.instance, Names.Items.silkGem);
         RegisterHelper.registerItem(ItemRedstoneCrystal.instance, Names.Items.redstoneCrystal);
         RegisterHelper.registerItem(ItemExpShard.instance, Names.Items.expShard);
+        RegisterHelper.registerItem(ItemExpCollector.instance, Names.Items.expCollector);
 
         RegisterHelper.registerItem(ItemArmorQuartz.instanceHelmet, Names.Items.quartzHelmet);
         RegisterHelper.registerItem(ItemArmorQuartz.instanceChest, Names.Items.quartzChest);
@@ -135,7 +141,5 @@ public class ModItems{
         RegisterHelper.registerItem(ItemCoalBow.instance, Names.Items.bowCoal);
         RegisterHelper.registerItem(ItemGlowstoneBow.instance, Names.Items.bowGlowstone);
         RegisterHelper.registerItem(ItemAdamantiumBow.instance, Names.Items.bowAdamantium);
-
-        RegisterHelper.registerItem(ItemExpCollector.instance, Names.Items.expCollector);
 	}
 }

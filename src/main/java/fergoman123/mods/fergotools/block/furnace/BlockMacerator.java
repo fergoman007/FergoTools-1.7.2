@@ -5,7 +5,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.reference.GuiIds;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
+import fergoman123.mods.fergotools.reference.Strings;
 import fergoman123.mods.fergotools.tileentity.TileEntityMacerator;
 import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
 import fergoman123.mods.fergoutil.helper.BlockHelper;
@@ -29,14 +30,14 @@ import java.util.Random;
 
 public class BlockMacerator extends BlockFurnaceFT
 {
-    public static final Block instanceIdle = new BlockMacerator(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block instanceIdle = new BlockMacerator(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block instanceActive = new BlockMacerator(true).setLightLevel(0.9F);
 
     private static boolean keepInventory;
 
     public BlockMacerator(boolean isActive)
     {
-        super(Material.rock, "macerator");
+        super(Material.rock, Strings.FurnaceType.macerator);
         this.isActive = isActive;
     }
 

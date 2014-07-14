@@ -43,7 +43,6 @@ public class ModBlocks{
         RegisterHelper.registerBlock(BlockSilkFurnace.instanceIdle, Names.Blocks.silkFurnaceIdle);
         RegisterHelper.registerBlock(BlockRedstoneFurnace.instanceIdle, Names.Blocks.redstoneFurnaceIdle);
         RegisterHelper.registerBlock(BlockMacerator.instanceIdle, Names.Blocks.maceratorIdle);
-        RegisterHelper.registerBlock(BlockNetherrackFurnace.instanceIdle, Names.Blocks.netherrackFurnaceIdle);
 
         RegisterHelper.registerBlock(BlockQuartzFurnace.instanceActive, Names.Blocks.quartzFurnaceActive);
         RegisterHelper.registerBlock(BlockObsidianFurnace.instanceActive, Names.Blocks.obsidianFurnaceActive);
@@ -56,7 +55,6 @@ public class ModBlocks{
         RegisterHelper.registerBlock(BlockSilkFurnace.instanceActive, Names.Blocks.silkFurnaceActive);
         RegisterHelper.registerBlock(BlockRedstoneFurnace.instanceActive, Names.Blocks.redstoneFurnaceActive);
         RegisterHelper.registerBlock(BlockMacerator.instanceActive, Names.Blocks.maceratorActive);
-        RegisterHelper.registerBlock(BlockNetherrackFurnace.instanceActive, Names.Blocks.netherrackFurnaceActive);
 	}
 
 

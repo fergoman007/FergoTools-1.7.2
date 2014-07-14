@@ -1,13 +1,12 @@
 package fergoman123.mods.fergotools.util.item;
 
+import fergoman123.mods.fergotools.item.materials.ItemExpShard;
 import fergoman123.mods.fergotools.util.item.UtilRecipe.RecipeArray;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-/**
- * Created by Fergoman123 on 06/05/2014.
- */
 public class UtilRecipeList {
 
     public static final char charX = 'x';
@@ -22,7 +21,7 @@ public class UtilRecipeList {
     public static final Object[] blockCoal = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.coalIngot};
     public static final Object[] blockGlowstone = new Object[]{RecipeArray.getBlockRecipe(), charX,  FTStacks.glowstoneIngot};
     public static final Object[] blockAdamantium = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.adamantiumIngot};
-    public static final Object[] blockExperience = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.expBottle};
+    public static final Object[] blockExperience = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.expShard};
     public static final Object[] blockSilkGem = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.silkGem};
     public static final Object[] blockRedstone = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.redstoneCrystal};
 
@@ -140,7 +139,8 @@ public class UtilRecipeList {
     public static final Object[] redstoneLeggings = new Object[]{RecipeArray.getLeggingsRecipe(), charX, FTStacks.redstoneCrystal};
     public static final Object[] redstoneBoots = new Object[]{RecipeArray.getBootsRecipe(), charX, FTStacks.redstoneCrystal};
 
-    public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Blocks.diamond_block, charY, new ItemStack(Blocks.wool, 1, wildcard)};
+    public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Items.diamond, charY, new ItemStack(Blocks.wool, 1, wildcard)};
+    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', ItemExpShard.instance, 'y', Items.diamond};
 
     // Bows
     public static final Object[] quartzBow = new Object[]{RecipeArray.getBowRecipe(), charY, FTStacks.quartzStack, charX, FTStacks.stringStack};

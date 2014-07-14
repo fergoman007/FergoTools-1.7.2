@@ -1,14 +1,11 @@
 package fergoman123.mods.fergotools.block.ore;
 
-import fergoman123.mods.fergotools.reference.strings.BlockStrings;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import net.minecraft.item.Item;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class BlockOreObsidian extends BlockFT {
 
     public static BlockOreObsidian instance = new BlockOreObsidian();
@@ -16,7 +13,7 @@ public class BlockOreObsidian extends BlockFT {
     public BlockOreObsidian()
     {
         super();
-        this.setBlockName(BlockStrings.oreObsidian);
+        this.setBlockName(Names.Blocks.oreObsidian);
         this.setHardness(2.5f);
         this.setResistance(50f);
     }

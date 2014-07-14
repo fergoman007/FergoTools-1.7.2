@@ -4,8 +4,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockMacerator;
-import fergoman123.mods.fergotools.reference.Locale;
-import fergoman123.mods.fergotools.reference.ints.FurnaceInts;
+import fergoman123.mods.fergotools.reference.Ints;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.TileEntityFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -94,7 +94,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT {
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerMacerator;
+        return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerMacerator;
     }
 
     public boolean hasCustomInventoryName()
@@ -168,7 +168,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT {
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int speed)
     {
-        return this.cookTime * speed / FurnaceInts.maceratorSpeed;
+        return this.cookTime * speed / Ints.Furnace.maceratorSpeed;
     }
 
     @SideOnly(Side.CLIENT)
@@ -176,7 +176,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT {
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = FurnaceInts.maceratorSpeed;
+            this.currentItemBurnTime = Ints.Furnace.maceratorSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
@@ -220,7 +220,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT {
             {
                     ++this.cookTime;
 
-                if (this.cookTime == FurnaceInts.maceratorSpeed)
+                if (this.cookTime == Ints.Furnace.maceratorSpeed)
                 {
                     this.cookTime = 0;
                     this.smeltItem();

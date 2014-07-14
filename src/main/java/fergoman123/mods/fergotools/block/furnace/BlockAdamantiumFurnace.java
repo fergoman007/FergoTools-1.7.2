@@ -6,7 +6,7 @@ import fergoman123.mods.fergotools.reference.GuiIds;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
-import fergoman123.mods.fergotools.tabs.Tabs;
+import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergotools.tileentity.TileEntityAdamantiumFurnace;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
@@ -30,14 +30,14 @@ import java.util.Random;
 
 public class BlockAdamantiumFurnace extends BlockFurnaceFT
 {
-    public static final Block instanceIdle = new BlockAdamantiumFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block instanceIdle = new BlockAdamantiumFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block instanceActive = new BlockAdamantiumFurnace(true).setLightLevel(0.9F);
 
     private static boolean keepInventory;
 
     public BlockAdamantiumFurnace(boolean isActive)
     {
-        super(Material.rock, "adamantiumFurnace");
+        super(Material.rock, "adamantiumFurnaceIdle");
         this.isActive = isActive;
     }
 

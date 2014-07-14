@@ -89,18 +89,18 @@ public class Recipes
         RecipeHelper.addShapedRecipe(FTStacks.silkHoe, UtilRecipeList.silkHoe);
         RecipeHelper.addShapedRecipe(FTStacks.silkSword, UtilRecipeList.silkSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.quartzFurnace, UtilRecipeList.quartzFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianFurnace, UtilRecipeList.obsidianFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldCrystalFurnace, UtilRecipeList.emeraldCrystalFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisCrystalFurnace, UtilRecipeList.lapisCrystalFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeFurnace, UtilRecipeList.bronzeFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.coalFurnace, UtilRecipeList.coalFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneFurnace, UtilRecipeList.glowstoneFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumFurnace, UtilRecipeList.adamantiumFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.silkFurnace, UtilRecipeList.silkFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.redstoneFurnace, UtilRecipeList.redstoneFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.macerator, UtilRecipeList.macerator);
+        RecipeHelper.addShapedRecipe(FTStacks.quartzFurnaceIdle, UtilRecipeList.quartzFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.obsidianFurnaceIdle, UtilRecipeList.obsidianFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.emeraldCrystalFurnaceIdle, UtilRecipeList.emeraldCrystalFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.lapisCrystalFurnaceIdle, UtilRecipeList.lapisCrystalFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.bronzeFurnaceIdle, UtilRecipeList.bronzeFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.adamantiumFurnaceIdle, UtilRecipeList.adamantiumFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.coalFurnaceIdle, UtilRecipeList.coalFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.glowstoneFurnaceIdle, UtilRecipeList.glowstoneFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.adamantiumFurnaceIdle, UtilRecipeList.adamantiumFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.silkFurnaceIdle, UtilRecipeList.silkFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.redstoneFurnaceIdle, UtilRecipeList.redstoneFurnace);
+        RecipeHelper.addShapedRecipe(FTStacks.maceratorIdle, UtilRecipeList.macerator);
 
         RecipeHelper.addBlockSmelting(BlockOreObsidian.instance, FTStacks.obsidianIngot, 2.5f);
         RecipeHelper.addBlockSmelting(BlockOreEmeraldCrystal.instance, FTStacks.emeraldCrystal, 2.5f);

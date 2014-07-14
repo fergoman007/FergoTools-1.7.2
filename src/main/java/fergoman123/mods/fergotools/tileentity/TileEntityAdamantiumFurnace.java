@@ -4,8 +4,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockAdamantiumFurnace;
-import fergoman123.mods.fergotools.reference.Locale;
-import fergoman123.mods.fergotools.reference.ints.FurnaceInts;
+import fergoman123.mods.fergotools.reference.Ints;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.TileEntityFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -80,7 +80,7 @@ public class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerAdamantiumFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerAdamantiumFurnace;
     }
 
     public boolean hasCustomInventoryName()
@@ -154,7 +154,7 @@ public class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int speed)
     {
-        return this.cookTime * speed / FurnaceInts.adamantiumFurnaceSpeed;
+        return this.cookTime * speed / Ints.Furnace.adamantiumFurnaceSpeed;
     }
 
     @SideOnly(Side.CLIENT)
@@ -162,7 +162,7 @@ public class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = FurnaceInts.adamantiumFurnaceSpeed;
+            this.currentItemBurnTime = Ints.Furnace.adamantiumFurnaceSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
@@ -206,7 +206,7 @@ public class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
             {
                     ++this.cookTime;
 
-                if (this.cookTime == FurnaceInts.adamantiumFurnaceSpeed)
+                if (this.cookTime == Ints.Furnace.adamantiumFurnaceSpeed)
                 {
                     this.cookTime = 0;
                     this.smeltItem();
