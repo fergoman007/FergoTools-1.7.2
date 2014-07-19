@@ -71,16 +71,16 @@ public class Strings
 
     public static final class FurnaceType
     {
-        public static final String quartzFurnace = "quartzFurnaceIdle";
-        public static final String obsidianFurnace = "obsidianFurnaceIdle";
-        public static final String emeraldCrystalFurnace = "emeraldCrystalFurnaceIdle";
-        public static final String lapisCrystalFurnace = "lapisCrystalFurnaceIdle";
-        public static final String bronzeFurnace = "bronzeFurnaceIdle";
-        public static final String coalFurnace = "coalFurnaceIdle";
-        public static final String glowstoneFurnace = "glowstoneFurnaceIdle";
-        public static final String adamantiumFurnace = "adamantiumFurnaceIdle";
-        public static final String silkFurnace = "silkFurnaceIdle";
-        public static final String redstoneFurnace = "redstoneFurnaceIdle";
-        public static final String macerator = "maceratorIdle";
+        public static final String quartzFurnace = "quartzFurnace";
+        public static final String obsidianFurnace = "obsidianFurnace";
+        public static final String emeraldCrystalFurnace = "emeraldCrystalFurnace";
+        public static final String lapisCrystalFurnace = "lapisCrystalFurnace";
+        public static final String bronzeFurnace = "bronzeFurnace";
+        public static final String coalFurnace = "coalFurnace";
+        public static final String glowstoneFurnace = "glowstoneFurnace";
+        public static final String adamantiumFurnace = "adamantiumFurnace";
+        public static final String silkFurnace = "silkFurnace";
+        public static final String redstoneFurnace = "redstoneFurnace";
+        public static final String macerator = "macerator";
     }
 }

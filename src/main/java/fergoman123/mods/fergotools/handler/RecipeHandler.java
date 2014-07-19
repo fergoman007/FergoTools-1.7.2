@@ -41,6 +41,8 @@ public class RecipeHandler {
         RecipeHelper.addShapedRecipe(FTStacks.blockRedstone, UtilRecipeList.blockRedstone);
         
         RecipeHelper.addShapedRecipe(FTStacks.blockExperience, UtilRecipeList.blockExperience);
+
+        RecipeHelper.addShapedRecipe(FTStacks.expCollectorHalfStack, UtilRecipeList.expCollector);
        
         RecipeHelper.addShapedRecipe(FTStacks.quartzPickaxe, UtilRecipeList.quartzPickaxe);
         RecipeHelper.addShapedRecipe(FTStacks.quartzShovel, UtilRecipeList.quartzShovel);

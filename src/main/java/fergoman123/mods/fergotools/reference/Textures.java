@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.reference;
 import fergoman123.mods.fergotools.helper.ResourceLocationHelper;
 import net.minecraft.util.ResourceLocation;
 
-public final class Textures
+public class Textures
 {
     public static final String resourcePrefix = ModInfo.modid.toLowerCase() + ":";
 
@@ -14,17 +14,17 @@ public final class Textures
 
     public static final String png = ".png";
 
-    public static final ResourceLocation quartzFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "quartzFurnaceIdle" + png);
-    public static final ResourceLocation obsidianFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "obsidianFurnaceIdle" + png);
+    public static final ResourceLocation quartzFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "quartzFurnace" + png);
+    public static final ResourceLocation obsidianFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "obsidianFurnace" + png);
     public static final ResourceLocation emeraldFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "emeraldFurnace" + png);
     public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "lapisFurnace" + png);
-    public static final ResourceLocation bronzeFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "bronzeFurnaceIdle" + png);
-    public static final ResourceLocation coalFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "coalFurnaceIdle" + png);
-    public static final ResourceLocation glowstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "glowstoneFurnaceIdle" + png);
-    public static final ResourceLocation adamantiumFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "adamantiumFurnaceIdle" + png);
-    public static final ResourceLocation silkFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "silkFurnaceIdle" + png);
-    public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "redstoneFurnaceIdle" + png);
-    public static final ResourceLocation maceratorGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "maceratorIdle" + png);
+    public static final ResourceLocation bronzeFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "bronzeFurnace" + png);
+    public static final ResourceLocation coalFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "coalFurnace" + png);
+    public static final ResourceLocation glowstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "glowstoneFurnace" + png);
+    public static final ResourceLocation adamantiumFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "adamantiumFurnace" + png);
+    public static final ResourceLocation silkFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "silkFurnace" + png);
+    public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "redstoneFurnace" + png);
+    public static final ResourceLocation maceratorGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "macerator" + png);
 
     public static final ResourceLocation vanillaFurnacGui = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "furnaceGui.png");
 

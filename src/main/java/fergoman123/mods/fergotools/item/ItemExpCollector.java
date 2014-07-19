@@ -40,6 +40,8 @@ public class ItemExpCollector extends ItemFT
 
     public void addInformation(ItemStack stack, CreativeTabs tabs, List list)
     {
-        list.add(Names.Locale.expCollectorToolTip);
+        if (stack.getItemDamage() == 10) {
+            list.add(Names.Locale.expCollectorToolTip);
+        }
     }
 }

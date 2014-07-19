@@ -23,6 +23,34 @@ public class Names
         public static final String blockSilkGem = "blockSilkGem";
         public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
 
+        public static final String fergoStorage = "fergoStorage";
+        public static final String fergoOre = "fergoOre";
+
+        public static final String[] blockFergoOre =
+                {
+                        "oreObsidian",
+                        "oreEmeraldCrystal",
+                        "oreLapisCrystal",
+                        "oreBronze",
+                        "oreAdamantium",
+                        "oreRedstoneCrystal",
+                        "oreExperience"
+                };
+
+        public static final String[] blockFergoStorage =
+                {
+                        "blockExperience",
+                        "blockObsidian",
+                        "blockEmeraldCrystal",
+                        "blockLapisCrystal",
+                        "blockBronze",
+                        "blockCoal",
+                        "blockGlowstone",
+                        "blockAdamantium",
+                        "blockSilkGem",
+                        "blockRedstoneCrystal"
+                };
+
         public static final String blockFergoGlass = "blockFergoGlass";
 
         public static final String quartzFurnaceIdle = "quartzFurnaceIdle";
@@ -133,6 +161,8 @@ public class Names
         public static final String redstoneCrystal = "redstoneCrystal";
         public static final String expCollector = "expCollector";
 
+        public static final String fergoMaterials = "fergoMaterials";
+
         public static final String[] itemFergoMaterials =
         {
                 "ingotObsidian",
@@ -142,9 +172,9 @@ public class Names
                 "ingotCoal",
                 "ingotGlowstone",
                 "ingotAdamantium",
-                "expShard",
                 "silkGem",
                 "redstoneCrystal",
+                "expShard",
                 "expCollector"
         };
 
@@ -220,18 +250,17 @@ public class Names
         public static final String expCollectorToolTip = toolTipPrefix + "expCollector";
         public static final String adamantiumToolTip =  toolTipPrefix + "adamantiumTool";
 
-        public static final String containerQuartzFurnace = containerPrefix + "quartzFurnaceIdle";
-        public static final String containerObsidianFurnace = containerPrefix + "obsidianFurnaceIdle";
-        public static final String containerEmeraldCrystalFurnace = containerPrefix + "emeraldCrystalFurnaceIdle";
-        public static final String containerLapisCrystalFurnace = containerPrefix + "lapisCrystalFurnaceIdle";
-        public static final String containerBronzeFurnace = containerPrefix + "bronzeFurnaceIdle";
-        public static final String containerCoalFurnace = containerPrefix + "coalFurnaceIdle";
-        public static final String containerGlowstoneFurnace = containerPrefix + "glowstoneFurnaceIdle";
-        public static final String containerAdamantiumFurnace = containerPrefix + "adamantiumFurnaceIdle";
-        public static final String containerSilkFurnace = containerPrefix + "silkFurnaceIdle";
-        public static final String containerRedstoneFurnace = containerPrefix + "redstoneFurnaceIdle";
-        public static final String containerMacerator = containerPrefix + "maceratorIdle";
-        public static final String containerNetherrackFurnace = containerPrefix + "netherrackFurnace";
+        public static final String containerQuartzFurnace = containerPrefix + "quartzFurnace";
+        public static final String containerObsidianFurnace = containerPrefix + "obsidianFurnace";
+        public static final String containerEmeraldCrystalFurnace = containerPrefix + "emeraldCrystalFurnace";
+        public static final String containerLapisCrystalFurnace = containerPrefix + "lapisCrystalFurnace";
+        public static final String containerBronzeFurnace = containerPrefix + "bronzeFurnace";
+        public static final String containerCoalFurnace = containerPrefix + "coalFurnace";
+        public static final String containerGlowstoneFurnace = containerPrefix + "glowstoneFurnace";
+        public static final String containerAdamantiumFurnace = containerPrefix + "adamantiumFurnace";
+        public static final String containerSilkFurnace = containerPrefix + "silkFurnace";
+        public static final String containerRedstoneFurnace = containerPrefix + "redstoneFurnace";
+        public static final String containerMacerator = containerPrefix + "macerator";
 
         public static final String containerInventory = "container.inventory";
     }

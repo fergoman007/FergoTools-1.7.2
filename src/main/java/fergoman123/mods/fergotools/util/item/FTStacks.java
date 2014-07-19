@@ -12,6 +12,7 @@ import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
+import fergoman123.mods.fergoutil.helper.ItemStackHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -33,6 +34,8 @@ public class FTStacks {
     public static final ItemStack silkGem9 = new ItemStack(ItemSilkGem.instance, 9);
     public static final ItemStack expShard9 = new ItemStack(ItemExpCollector.instance);
     public static final ItemStack redstoneCrystal9 = new ItemStack(ItemRedstoneCrystal.instance, 9);
+
+    public static final ItemStack expCollectorHalfStack = ItemStackHelper.getItemStackForItem(ItemExpCollector.instance, 32);
 
     public static final ItemStack expShard5 = new ItemStack(ItemExpShard.instance, 5);
 
