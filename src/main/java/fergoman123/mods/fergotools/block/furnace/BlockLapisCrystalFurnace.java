@@ -273,6 +273,6 @@ public class BlockLapisCrystalFurnace extends BlockFurnaceFT
 
     @Override
     public int getGuiID() {
-        return GuiIds.lapisCrystalFurnaceId;
+        return GuiIds.lapisCrystalFurnace.ordinal();
     }
 }

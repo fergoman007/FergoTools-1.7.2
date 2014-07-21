@@ -37,7 +37,7 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT
 
     public BlockAdamantiumFurnace(boolean isActive)
     {
-        super(Material.rock, "adamantiumFurnaceIdle");
+        super(Material.rock, "adamantiumFurnace");
         this.isActive = isActive;
     }
 
@@ -274,5 +274,5 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT
         return UtilBlockItem.itemAdamantiumFurnace;
     }
 
-    public int getGuiID(){return GuiIds.adamantiumFurnaceId;}
+    public int getGuiID(){return GuiIds.adamantiumFurnace.ordinal();}
 }

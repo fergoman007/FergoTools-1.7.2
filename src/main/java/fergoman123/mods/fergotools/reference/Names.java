@@ -23,33 +23,15 @@ public class Names
         public static final String blockSilkGem = "blockSilkGem";
         public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
 
-        public static final String fergoStorage = "fergoStorage";
-        public static final String fergoOre = "fergoOre";
-
-        public static final String[] blockFergoOre =
-                {
-                        "oreObsidian",
-                        "oreEmeraldCrystal",
-                        "oreLapisCrystal",
-                        "oreBronze",
-                        "oreAdamantium",
-                        "oreRedstoneCrystal",
-                        "oreExperience"
-                };
-
-        public static final String[] blockFergoStorage =
-                {
-                        "blockExperience",
-                        "blockObsidian",
-                        "blockEmeraldCrystal",
-                        "blockLapisCrystal",
-                        "blockBronze",
-                        "blockCoal",
-                        "blockGlowstone",
-                        "blockAdamantium",
-                        "blockSilkGem",
-                        "blockRedstoneCrystal"
-                };
+        public static final String blockObsidianStairs = "blockObsidianStairs";
+        public static final String blockEmeraldStairs = "blockEmeraldStairs";
+        public static final String blockLapisStairs = "blockLapisStairs";
+        public static final String blockBronzeStairs = "blockBronzeStairs";
+        public static final String blockCoalStairs = "blockCoalStairs";
+        public static final String blockGlowstoneStairs = "blockGlowstoneStairs";
+        public static final String blockAdamantiumStairs = "blockAdamantiumStairs";
+        public static final String blockSilkStairs = "blockSilkStairs";
+        public static final String blockRedstoneStairs = "blockRedstoneStairs";
 
         public static final String blockFergoGlass = "blockFergoGlass";
 
@@ -86,9 +68,6 @@ public class Names
 
         public static final String maceratorIdle = "maceratorIdle";
         public static final String maceratorActive = "maceratorActive";
-
-        public static final String netherrackFurnaceIdle = "netherrackFurnaceIdle";
-        public static final String netherrackFurnaceActive = "netherrackFurnaceActive";
     }
 
     public static final class Items

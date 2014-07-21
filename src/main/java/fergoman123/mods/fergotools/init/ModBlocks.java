@@ -3,6 +3,7 @@ package fergoman123.mods.fergotools.init;
 import fergoman123.mods.fergotools.block.BlockFergoGlass;
 import fergoman123.mods.fergotools.block.furnace.*;
 import fergoman123.mods.fergotools.block.ore.*;
+import fergoman123.mods.fergotools.block.stairs.BlockObsidianStairs;
 import fergoman123.mods.fergotools.block.storage.*;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
@@ -29,6 +30,8 @@ public class ModBlocks{
         RegisterHelper.registerBlock(BlockAdamantium.instance, Names.Blocks.blockAdamantium);
         RegisterHelper.registerBlock(BlockSilkGem.instance, Names.Blocks.blockSilkGem);
         RegisterHelper.registerBlock(BlockRedstoneCrystal.instance, Names.Blocks.blockRedstoneCrystal);
+
+        RegisterHelper.registerBlock(BlockObsidianStairs.instance, "blockObsidianStairs");
 
         RegisterHelper.registerBlock(BlockFergoGlass.instance, Names.Blocks.blockFergoGlass);
 

@@ -106,7 +106,7 @@ public class BlockBronzeFurnace extends BlockFurnaceFT
             TileEntityBronzeFurnace furnace = (TileEntityBronzeFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.instance, GuiIds.bronzeFurnaceId, world, x, y, z);
+                player.openGui(FergoTools.instance, GuiIds.bronzeFurnace.ordinal(), world, x, y, z);
             }
             return true;
         }
@@ -275,6 +275,6 @@ public class BlockBronzeFurnace extends BlockFurnaceFT
 
     @Override
     public int getGuiID() {
-        return GuiIds.bronzeFurnaceId;
+        return GuiIds.bronzeFurnace.ordinal();
     }
 }

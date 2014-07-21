@@ -273,6 +273,6 @@ public class BlockObsidianFurnace extends BlockFurnaceFT
 
     @Override
     public int getGuiID() {
-        return GuiIds.obsidianFurnaceId;
+        return GuiIds.obsidianFurnace.ordinal();
     }
 }

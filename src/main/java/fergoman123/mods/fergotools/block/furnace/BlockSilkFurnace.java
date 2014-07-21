@@ -273,6 +273,6 @@ public class BlockSilkFurnace extends BlockFurnaceFT
 
     @Override
     public int getGuiID() {
-        return GuiIds.silkFurnaceId;
+        return GuiIds.silkFurnace.ordinal();
     }
 }

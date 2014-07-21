@@ -276,6 +276,6 @@ public class BlockMacerator extends BlockFurnaceFT
 
     @Override
     public int getGuiID() {
-        return GuiIds.maceratorId;
+        return GuiIds.macerator.ordinal();
     }
 }

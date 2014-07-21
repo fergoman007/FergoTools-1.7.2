@@ -119,7 +119,7 @@ public class RecipeHandler {
         RecipeHelper.addBlockSmelting(BlockOreAdamantium.instance, FTStacks.adamantiumIngot, xp);
         RecipeHelper.addBlockSmelting(BlockOreExperience.instance, FTStacks.expShard5, xp);
 
-
+        RecipeHelper.addBlockSmelting(BlockOreRedstoneCrystal.instance, FTStacks.redstoneCrystal, xp);
 		
 		RecipeHelper.addShapedRecipe(FTStacks.quartzHelmet, UtilRecipeList.quartzHelmet);
 		RecipeHelper.addShapedRecipe(FTStacks.quartzChestplate, UtilRecipeList.quartzChestplate);
