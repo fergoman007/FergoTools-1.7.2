@@ -1,24 +1,22 @@
 package fergoman123.mods.fergotools.item.hoe;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemBronzeIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.HoeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemHoeFT;
 import net.minecraft.item.ItemStack;
 
-public class ItemBronzeHoe extends HoeGeneric {
-
-    public static ItemBronzeHoe instance = new ItemBronzeHoe();
+public class ItemBronzeHoe extends ItemHoeFT {
 
     public ItemBronzeHoe() {
-        super(UtilToolArmor.bronze);
+        super(ToolArmorMaterials.bronze, ToolArmorMaterials.bronze.getMaxUses());
         this.setUnlocalizedName(Names.Items.bronzeHoe);
-        this.setMaxDamage(UtilToolArmor.bronze.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack2.isItemEqual(new ItemStack(ItemBronzeIngot.instance)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack2.isItemEqual(new ItemStack(ModItems.ingotBronze)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 
 }

@@ -3,6 +3,7 @@ package fergoman123.mods.fergotools.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.reference.*;
 import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergotools.tileentity.TileEntityQuartzFurnace;
@@ -28,8 +29,6 @@ import java.util.Random;
 
 public class BlockQuartzFurnace extends BlockFurnaceFT
 {
-    public static final Block instanceIdle = new BlockQuartzFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block instanceActive = new BlockQuartzFurnace(true).setLightLevel(0.9F);
     private static boolean keepInventory;
 
     public BlockQuartzFurnace(boolean isActive)
@@ -122,11 +121,11 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
         if (active)
         {
-            world.setBlock(x, y, z, instanceActive);
+            world.setBlock(x, y, z, ModBlocks.quartzFurnaceActive);
         }
         else
         {
-            world.setBlock(x, y, z, instanceIdle);
+            world.setBlock(x, y, z, ModBlocks.quartzFurnaceIdle);
         }
 
         keepInventory = false;
@@ -146,7 +145,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase elb, ItemStack stack)
     {
-        int l = MathHelper.floor_double((double)(elb.rotationYaw * 4.0f / 360.0) + 0.5D) & 3;
+        int l = MathHelper.floor_double((double)elb.rotationYaw * 4.0f / 360.0 + 0.5D) & 3;
 
         if (l == 0)
         {

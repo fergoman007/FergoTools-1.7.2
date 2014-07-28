@@ -1,27 +1,25 @@
 package fergoman123.mods.fergotools.item.hoe;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemAdamantiumIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.HoeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemHoeFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-public class ItemAdamantiumHoe extends HoeGeneric {
-
-    public static ItemAdamantiumHoe instance = new ItemAdamantiumHoe();
+public class ItemAdamantiumHoe extends ItemHoeFT {
 
     public ItemAdamantiumHoe() {
-        super(UtilToolArmor.adamantium);
+        super(ToolArmorMaterials.adamantium, ToolArmorMaterials.adamantium.getMaxUses());
         this.setUnlocalizedName(Names.Items.adamantiumHoe);
-        this.setMaxDamage(UtilToolArmor.adamantium.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
     {
-        return par2ItemStack.isItemEqual(new ItemStack(ItemAdamantiumIngot.instance)) || super.getIsRepairable(par1ItemStack, par2ItemStack);
+        return par2ItemStack.isItemEqual(new ItemStack(ModItems.ingotAdamantium)) || super.getIsRepairable(par1ItemStack, par2ItemStack);
     }
 
     @SuppressWarnings({"unchecked"})

@@ -9,7 +9,6 @@ import java.util.Random;
 
 public class BlockLapisCrystal extends BlockFT{
 
-    public static BlockLapisCrystal instance = new BlockLapisCrystal();
 
     public BlockLapisCrystal()
     {

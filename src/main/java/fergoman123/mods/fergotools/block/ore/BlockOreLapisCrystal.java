@@ -1,5 +1,6 @@
 package fergoman123.mods.fergotools.block.ore;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemLapisCrystal;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.BlockFT;
@@ -9,7 +10,6 @@ import java.util.Random;
 
 public class BlockOreLapisCrystal extends BlockFT{
 
-    public static BlockOreLapisCrystal instance = new BlockOreLapisCrystal();
 
     public BlockOreLapisCrystal()
     {
@@ -21,7 +21,7 @@ public class BlockOreLapisCrystal extends BlockFT{
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return ItemLapisCrystal.instance;
+        return ModItems.lapisCrystal;
     }
 
     public int damageDropped(int par1)

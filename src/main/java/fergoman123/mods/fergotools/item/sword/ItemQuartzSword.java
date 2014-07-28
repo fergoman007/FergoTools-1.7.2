@@ -1,19 +1,16 @@
 package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.SwordGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemSwordFT;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-public class ItemQuartzSword extends SwordGeneric {
-
-    public static ItemQuartzSword instance = new ItemQuartzSword();
+public class ItemQuartzSword extends ItemSwordFT {
 
     public ItemQuartzSword() {
-        super(UtilToolArmor.quartz);
+        super(ToolArmorMaterials.quartz, ToolArmorMaterials.quartz.getMaxUses());
         this.setUnlocalizedName(Names.Items.quartzSword);
-        this.setMaxDamage(UtilToolArmor.quartz.getMaxUses());
     }
 
 

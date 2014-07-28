@@ -102,14 +102,14 @@ public class Recipes
         RecipeHelper.addShapedRecipe(FTStacks.redstoneFurnaceIdle, UtilRecipeList.redstoneFurnace);
         RecipeHelper.addShapedRecipe(FTStacks.maceratorIdle, UtilRecipeList.macerator);
 
-        RecipeHelper.addBlockSmelting(BlockOreObsidian.instance, FTStacks.obsidianIngot, 2.5f);
-        RecipeHelper.addBlockSmelting(BlockOreEmeraldCrystal.instance, FTStacks.emeraldCrystal, 2.5f);
-        RecipeHelper.addBlockSmelting(BlockOreLapisCrystal.instance, FTStacks.lapisCrystal, 2.5f);
-        RecipeHelper.addBlockSmelting(BlockOreBronze.instance, FTStacks.bronzeIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreObsidian, FTStacks.obsidianIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreEmeraldCrystal, FTStacks.emeraldCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreLapisCrystal, FTStacks.lapisCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreBronze, FTStacks.bronzeIngot, 2.5f);
         RecipeHelper.addBlockSmelting(Blocks.coal_block, FTStacks.coalIngot, 2.5f);
         RecipeHelper.addBlockSmelting(Blocks.glowstone, FTStacks.glowstoneIngot, 2.5f);
-        RecipeHelper.addBlockSmelting(BlockOreAdamantium.instance, FTStacks.adamantiumIngot, 2.5f);
-        RecipeHelper.addBlockSmelting(BlockExperience.instance, FTStacks.expShard5, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreAdamantium, FTStacks.adamantiumIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreExperience, FTStacks.expShard5, 2.5f);
 
 
 

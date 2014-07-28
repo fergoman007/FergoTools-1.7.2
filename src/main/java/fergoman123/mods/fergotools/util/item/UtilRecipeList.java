@@ -1,5 +1,6 @@
 package fergoman123.mods.fergotools.util.item;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemExpShard;
 import fergoman123.mods.fergotools.util.item.UtilRecipe.RecipeArray;
 import net.minecraft.init.Blocks;
@@ -140,7 +141,7 @@ public class UtilRecipeList {
     public static final Object[] redstoneBoots = new Object[]{RecipeArray.getBootsRecipe(), charX, FTStacks.redstoneCrystal};
 
     public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Items.diamond, charY, new ItemStack(Blocks.wool, 1, wildcard)};
-    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', ItemExpShard.instance, 'y', Items.diamond};
+    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', ModItems.expShard, 'y', Items.diamond};
 
     // Bows
     public static final Object[] quartzBow = new Object[]{RecipeArray.getBowRecipe(), charY, FTStacks.quartzStack, charX, FTStacks.stringStack};

@@ -1,5 +1,6 @@
 package fergoman123.mods.fergotools.item;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemExpShard;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.ItemFT;
@@ -13,8 +14,6 @@ import java.util.List;
 
 public class ItemExpCollector extends ItemFT
 {
-    public static ItemExpCollector instance = new ItemExpCollector();
-    public Item expShardInstance = ItemExpShard.instance;
 
     public ItemExpCollector() {
         super();
@@ -26,7 +25,7 @@ public class ItemExpCollector extends ItemFT
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
         if (player.experienceLevel > 0)
         {
-            player.inventory.addItemStackToInventory(new ItemStack(expShardInstance, 1));
+            player.inventory.addItemStackToInventory(new ItemStack(ModItems.expShard, 1));
             player.addExperienceLevel(-1);
             --stack.stackSize;
         }

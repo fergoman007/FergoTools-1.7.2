@@ -5,8 +5,6 @@ import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemGlowstoneIngot extends ItemFT{
 
-    public static ItemGlowstoneIngot instance = new ItemGlowstoneIngot();
-
     public ItemGlowstoneIngot()
     {
         super();

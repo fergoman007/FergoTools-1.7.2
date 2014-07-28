@@ -2,6 +2,7 @@ package fergoman123.mods.fergotools.block.furnace;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.reference.*;
 import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergotools.tileentity.TileEntitySilkFurnace;
@@ -27,8 +28,6 @@ import java.util.Random;
 
 public class BlockSilkFurnace extends BlockFurnaceFT
 {
-    public static final Block instanceIdle = new BlockSilkFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block instanceActive = new BlockSilkFurnace(true).setLightLevel(0.9F);
 
     private static boolean keepInventory;
 
@@ -122,11 +121,11 @@ public class BlockSilkFurnace extends BlockFurnaceFT
 
         if (active)
         {
-            world.setBlock(x, y, z, instanceActive);
+            world.setBlock(x, y, z, ModBlocks.silkFurnaceActive);
         }
         else
         {
-            world.setBlock(x, y, z, instanceIdle);
+            world.setBlock(x, y, z, ModBlocks.silkFurnaceIdle);
         }
 
         keepInventory = false;

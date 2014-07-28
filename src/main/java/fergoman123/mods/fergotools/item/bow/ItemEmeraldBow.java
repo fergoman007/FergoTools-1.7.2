@@ -5,6 +5,7 @@ import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -23,8 +24,6 @@ import static cpw.mods.fml.relauncher.Side.CLIENT;
 
 public  class ItemEmeraldBow extends ItemBowFT {
 
-    public static ItemEmeraldBow instance = new ItemEmeraldBow();
-
     public static final String[] pullArray = new String[] {"_1", "_2", "_3"};
 
     @SideOnly(CLIENT)
@@ -32,7 +31,7 @@ public  class ItemEmeraldBow extends ItemBowFT {
 
     public ItemEmeraldBow()
     {
-        super();
+        super(ToolArmorMaterials.emerald.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowEmerald);
     }
 

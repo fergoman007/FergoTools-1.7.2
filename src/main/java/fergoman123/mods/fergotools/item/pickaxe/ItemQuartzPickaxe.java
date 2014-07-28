@@ -1,21 +1,18 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemPickaxeFT;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-public class ItemQuartzPickaxe extends PickaxeGeneric
+public class ItemQuartzPickaxe extends ItemPickaxeFT
 {
-
-    public static ItemQuartzPickaxe instance = new ItemQuartzPickaxe();
 
     public ItemQuartzPickaxe()
     {
-        super(UtilToolArmor.quartz);
+        super(ToolArmorMaterials.quartz, ToolArmorMaterials.quartz.getMaxUses());
         this.setUnlocalizedName(Names.Items.quartzPickaxe);
-        this.setMaxDamage(UtilToolArmor.getQuartzMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)

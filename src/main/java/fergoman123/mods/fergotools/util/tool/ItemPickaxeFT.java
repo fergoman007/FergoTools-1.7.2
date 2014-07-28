@@ -7,14 +7,16 @@ import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.ITool;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-public class AxeGeneric extends ItemAxe implements ITool {
+public class ItemPickaxeFT extends ItemPickaxe implements ITool
+{
 
-    public AxeGeneric(ToolMaterial material) {
+    public ItemPickaxeFT(ToolMaterial material, int maxUses) {
         super(material);
         this.setMaxStackSize(1);
+        this.setMaxDamage(maxUses);
         this.setCreativeTab(CreativeTabsFergoTools.tabFergoTools);
         this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }

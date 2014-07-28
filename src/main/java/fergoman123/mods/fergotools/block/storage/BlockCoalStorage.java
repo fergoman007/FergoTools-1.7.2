@@ -9,7 +9,6 @@ import java.util.Random;
 
 public class BlockCoalStorage extends BlockFT{
 
-    public static BlockCoalStorage instance = new BlockCoalStorage();
 
     public BlockCoalStorage()
     {

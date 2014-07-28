@@ -15,9 +15,10 @@ public abstract class ItemBowFT extends ItemBow{
 
     public IIcon[] textures;
 
-    public ItemBowFT()
+    public ItemBowFT(int maxUses)
     {
         this.maxStackSize = 1;
+        this.setMaxDamage(maxUses);
         this.setCreativeTab(CreativeTabsFergoTools.tabFergoBows);
     }
 

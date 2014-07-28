@@ -5,8 +5,6 @@ import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemLapisCrystal extends ItemFT{
 
-    public static ItemLapisCrystal instance = new ItemLapisCrystal();
-
     public ItemLapisCrystal()
     {
         super();

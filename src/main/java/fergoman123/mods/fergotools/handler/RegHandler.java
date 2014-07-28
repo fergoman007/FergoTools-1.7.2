@@ -2,6 +2,7 @@ package fergoman123.mods.fergotools.handler;
 
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.block.ore.*;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.proxy.ClientProxy;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
@@ -17,13 +18,13 @@ public class RegHandler {
         RegisterHelper.registerWorldGen(event, 0);
         RegisterHelper.registerFuelHandler(fuel);
 
-        RegisterHelper.registerOre(Names.Blocks.oreObsidian, BlockOreObsidian.instance);
-        RegisterHelper.registerOre(Names.Blocks.oreEmeraldCrystal, BlockOreEmeraldCrystal.instance);
-        RegisterHelper.registerOre(Names.Blocks.oreLapisCrystal, BlockOreLapisCrystal.instance);
-        RegisterHelper.registerOre(Names.Blocks.oreBronze, BlockOreBronze.instance);
-        RegisterHelper.registerOre(Names.Blocks.oreExperience, BlockOreExperience.instance);
-        RegisterHelper.registerOre(Names.Blocks.oreAdamantium, BlockOreAdamantium.instance);
-        RegisterHelper.registerOre(Names.Blocks.oreRedstoneCrystal, BlockOreRedstoneCrystal.instance);
+        RegisterHelper.registerOre(Names.Blocks.oreObsidian, ModBlocks.oreObsidian);
+        RegisterHelper.registerOre(Names.Blocks.oreEmeraldCrystal, ModBlocks.oreEmeraldCrystal);
+        RegisterHelper.registerOre(Names.Blocks.oreLapisCrystal, ModBlocks.oreLapisCrystal);
+        RegisterHelper.registerOre(Names.Blocks.oreBronze, ModBlocks.oreBronze);
+        RegisterHelper.registerOre(Names.Blocks.oreExperience, ModBlocks.oreExperience);
+        RegisterHelper.registerOre(Names.Blocks.oreAdamantium, ModBlocks.oreAdamantium);
+        RegisterHelper.registerOre(Names.Blocks.oreRedstoneCrystal, ModBlocks.oreRedstoneCrystal);
     }
 }
 

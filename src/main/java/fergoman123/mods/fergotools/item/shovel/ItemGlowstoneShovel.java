@@ -1,24 +1,22 @@
 package fergoman123.mods.fergotools.item.shovel;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemGlowstoneIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemShovelFT;
 import net.minecraft.item.ItemStack;
 
-public class ItemGlowstoneShovel extends ShovelGeneric {
-
-    public static ItemGlowstoneShovel instance = new ItemGlowstoneShovel();
+public class ItemGlowstoneShovel extends ItemShovelFT {
 
     public ItemGlowstoneShovel() {
-        super(UtilToolArmor.glowstone);
+        super(ToolArmorMaterials.glowstone, ToolArmorMaterials.glowstone.getMaxUses());
         this.setUnlocalizedName(Names.Items.glowstoneShovel);
-        this.setMaxDamage(UtilToolArmor.getGlowstoneMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack2.isItemEqual(new ItemStack(ItemGlowstoneIngot.instance)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack2.isItemEqual(new ItemStack(ModItems.ingotGlowstone)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 
 }

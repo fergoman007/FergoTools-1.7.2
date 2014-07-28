@@ -7,12 +7,8 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-/**
- * Created by Fergoman123 on 14/04/2014.
- */
 public class BlockEmeraldCrystal extends BlockFT{
 
-    public static BlockEmeraldCrystal instance = new BlockEmeraldCrystal();
 
     public BlockEmeraldCrystal()
     {

@@ -5,8 +5,6 @@ import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemBronzeIngot extends ItemFT {
 
-    public static ItemBronzeIngot instance = new ItemBronzeIngot();
-
     public ItemBronzeIngot()
     {
         super();

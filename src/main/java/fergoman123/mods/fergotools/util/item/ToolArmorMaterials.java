@@ -7,7 +7,7 @@ import fergoman123.mods.fergoutil.helper.ToolHelper;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 
-public class UtilToolArmor {
+public class ToolArmorMaterials {
 
     public static ToolMaterial quartz;
     public static ToolMaterial obsidian;

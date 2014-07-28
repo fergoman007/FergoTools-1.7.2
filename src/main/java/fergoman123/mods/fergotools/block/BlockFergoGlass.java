@@ -18,7 +18,6 @@ import net.minecraft.world.World;
  * @author Fergoman123
  */
 public class BlockFergoGlass extends BlockGlassFT {
-    public static Block instance = new BlockFergoGlass();
     protected IIcon[] icons = new IIcon[16];
     private boolean shouldRenderSelectionBox = true;
     private int renderPass = 0;

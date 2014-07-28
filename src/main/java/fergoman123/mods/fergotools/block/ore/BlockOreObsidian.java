@@ -8,7 +8,6 @@ import java.util.Random;
 
 public class BlockOreObsidian extends BlockFT {
 
-    public static BlockOreObsidian instance = new BlockOreObsidian();
 
     public BlockOreObsidian()
     {

@@ -5,8 +5,6 @@ import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemObsidianIngot extends ItemFT{
 
-    public static ItemObsidianIngot instance = new ItemObsidianIngot();
-
     public ItemObsidianIngot()
     {
         super();

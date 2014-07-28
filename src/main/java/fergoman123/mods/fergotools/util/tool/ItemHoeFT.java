@@ -9,11 +9,12 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 
-public class HoeGeneric extends ItemHoe{
+public class ItemHoeFT extends ItemHoe{
 
-    public HoeGeneric(ToolMaterial material) {
+    public ItemHoeFT(ToolMaterial material, int maxUses) {
         super(material);
         this.setMaxStackSize(1);
+        this.setMaxDamage(maxUses);
         this.setCreativeTab(CreativeTabsFergoTools.tabFergoTools);
         this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }

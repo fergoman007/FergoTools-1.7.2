@@ -1,19 +1,17 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.ShovelGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemShovelFT;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-public class ItemQuartzShovel extends ShovelGeneric {
+public class ItemQuartzShovel extends ItemShovelFT {
 
-    public static ItemQuartzShovel instance = new ItemQuartzShovel();
 
     public ItemQuartzShovel() {
-        super(UtilToolArmor.quartz);
+        super(ToolArmorMaterials.quartz, ToolArmorMaterials.quartz.getMaxUses());
         this.setUnlocalizedName(Names.Items.quartzShovel);
-        this.setMaxDamage(UtilToolArmor.quartz.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)

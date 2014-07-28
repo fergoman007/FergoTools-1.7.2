@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -24,16 +24,13 @@ import static cpw.mods.fml.relauncher.Side.CLIENT;
 
 public class ItemAdamantiumBow extends ItemBowFT {
 
-    public static ItemAdamantiumBow instance = new ItemAdamantiumBow();
-
     public static final String[] pullArray = new String[]{"_1", "_2", "_3"};
 
     @SideOnly(CLIENT)
     private IIcon[] texture;
     public ItemAdamantiumBow()
     {
-        super();
-        this.setMaxDamage(UtilToolArmor.getAdamantiumMaxUses());
+        super(ToolArmorMaterials.adamantium.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowAdamantium);
     }
 

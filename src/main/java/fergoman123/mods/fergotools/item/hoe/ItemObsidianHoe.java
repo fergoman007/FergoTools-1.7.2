@@ -1,24 +1,22 @@
 package fergoman123.mods.fergotools.item.hoe;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemObsidianIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.HoeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemHoeFT;
 import net.minecraft.item.ItemStack;
 
-public class ItemObsidianHoe extends HoeGeneric {
-
-    public static ItemObsidianHoe instance = new ItemObsidianHoe();
+public class ItemObsidianHoe extends ItemHoeFT {
 
     public ItemObsidianHoe() {
-        super(UtilToolArmor.obsidian);
+        super(ToolArmorMaterials.obsidian, ToolArmorMaterials.obsidian.getMaxUses());
         this.setUnlocalizedName(Names.Items.obsidianHoe);
-        this.setMaxDamage(UtilToolArmor.obsidian.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack2.isItemEqual(new ItemStack(ItemObsidianIngot.instance)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack2.isItemEqual(new ItemStack(ModItems.ingotObsidian)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 
 }

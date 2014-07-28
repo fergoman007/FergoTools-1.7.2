@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -24,8 +24,6 @@ import static cpw.mods.fml.relauncher.Side.CLIENT;
 
 public class ItemObsidianBow extends ItemBowFT {
 
-    public static ItemObsidianBow instance = new ItemObsidianBow();
-
     public static final String[] pullArray = new String [] {"_1", "_2", "_3"};
 
     @SideOnly(CLIENT)
@@ -34,9 +32,9 @@ public class ItemObsidianBow extends ItemBowFT {
 
     public ItemObsidianBow()
     {
-        super();
+        super(ToolArmorMaterials.obsidian.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowObsidian);
-        this.setMaxDamage(UtilToolArmor.getObsidianMaxUses());
+        this.setMaxDamage(ToolArmorMaterials.getObsidianMaxUses());
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

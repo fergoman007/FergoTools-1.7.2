@@ -5,8 +5,6 @@ import fergoman123.mods.fergotools.util.base.ItemFT;
 
 public class ItemRedstoneCrystal extends ItemFT{
 
-    public static ItemRedstoneCrystal instance = new ItemRedstoneCrystal();
-
     public ItemRedstoneCrystal()
     {
         super();

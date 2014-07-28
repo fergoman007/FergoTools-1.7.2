@@ -1,24 +1,23 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemGlowstoneIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemPickaxeFT;
 import net.minecraft.item.ItemStack;
 
-public class ItemGlowstonePickaxe extends PickaxeGeneric
+public class ItemGlowstonePickaxe extends ItemPickaxeFT
 {
-    public static ItemGlowstonePickaxe instance = new ItemGlowstonePickaxe();
 
     public ItemGlowstonePickaxe()
     {
-        super(UtilToolArmor.glowstone);
+        super(ToolArmorMaterials.glowstone, ToolArmorMaterials.glowstone.getMaxUses());
         this.setUnlocalizedName(Names.Items.glowstonePickaxe);
-        this.setMaxDamage(UtilToolArmor.getGlowstoneMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
     {
-        return stack2.isItemEqual(new ItemStack(ItemGlowstoneIngot.instance)) || super.getIsRepairable(stack1, stack2);
+        return stack2.isItemEqual(new ItemStack(ModItems.ingotGlowstone)) || super.getIsRepairable(stack1, stack2);
     }
 }

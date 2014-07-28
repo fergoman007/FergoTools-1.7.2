@@ -1,19 +1,16 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.HoeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemHoeFT;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-public class ItemQuartzHoe extends HoeGeneric {
-
-    public static ItemQuartzHoe instance = new ItemQuartzHoe();
+public class ItemQuartzHoe extends ItemHoeFT {
 
     public ItemQuartzHoe() {
-        super(UtilToolArmor.quartz);
+        super(ToolArmorMaterials.quartz, ToolArmorMaterials.quartz.getMaxUses());
         this.setUnlocalizedName(Names.Items.quartzHoe);
-        this.setMaxDamage(UtilToolArmor.quartz.getMaxUses());
     }
 
 

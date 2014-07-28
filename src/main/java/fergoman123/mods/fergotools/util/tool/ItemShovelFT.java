@@ -6,14 +6,15 @@ import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 
-public class SwordGeneric extends ItemSword{
+public class ItemShovelFT extends ItemSpade{
 
-    public SwordGeneric(ToolMaterial material) {
+    public ItemShovelFT(ToolMaterial material, int maxUses) {
         super(material);
         this.setMaxStackSize(1);
+        this.setMaxDamage(maxUses);
         this.setCreativeTab(CreativeTabsFergoTools.tabFergoTools);
         this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }

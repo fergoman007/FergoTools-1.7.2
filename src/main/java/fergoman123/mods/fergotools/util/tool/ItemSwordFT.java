@@ -5,17 +5,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
-import fergoman123.mods.fergoutil.item.ITool;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 
-public class PickaxeGeneric extends ItemPickaxe implements ITool
-{
+public class ItemSwordFT extends ItemSword{
 
-    public PickaxeGeneric(ToolMaterial material) {
+    public ItemSwordFT(ToolMaterial material, int maxUses) {
         super(material);
         this.setMaxStackSize(1);
+        this.setMaxDamage(maxUses);
         this.setCreativeTab(CreativeTabsFergoTools.tabFergoTools);
         this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
@@ -35,4 +34,5 @@ public class PickaxeGeneric extends ItemPickaxe implements ITool
     {
         itemIcon = register.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
+
 }

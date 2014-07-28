@@ -18,7 +18,7 @@ import fergoman123.mods.fergotools.reference.MetadataFT;
 import fergoman123.mods.fergotools.reference.ModInfo;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
 import fergoman123.mods.fergoutil.proxy.IProxy;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModInfo.dep, guiFactory = Reference.guiFactoryClass)
@@ -37,7 +37,7 @@ public class FergoTools
         MetadataFT.writeMetadata(evt.getModMetadata());
         ConfigHandler.init(evt.getSuggestedConfigurationFile());
         CreativeTabsFergoTools.init();
-        UtilToolArmor.init();
+        ToolArmorMaterials.init();
         ModItems.init();
         ModBlocks.init();
     }

@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.creativetab;
 
-import fergoman123.mods.fergotools.block.BlockFergoGlass;
-import fergoman123.mods.fergotools.block.furnace.BlockQuartzFurnace;
+import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.ItemExpCollector;
 import fergoman123.mods.fergotools.item.armor.ItemArmorQuartz;
 import fergoman123.mods.fergotools.item.bow.ItemQuartzBow;
@@ -24,7 +24,7 @@ public class CreativeTabsFergoTools {
         {
             public Item getTabIconItem()
             {
-                return ItemQuartzPickaxe.instance;
+                return ModItems.quartzPickaxe;
             }
 
             @Override
@@ -38,7 +38,7 @@ public class CreativeTabsFergoTools {
         {
             public Item getTabIconItem()
             {
-                return Item.getItemFromBlock(BlockFergoGlass.instance);
+                return Item.getItemFromBlock(ModBlocks.blockFergoGlass);
             }
 
             @Override
@@ -52,7 +52,7 @@ public class CreativeTabsFergoTools {
         {
             public Item getTabIconItem()
             {
-                return Item.getItemFromBlock(BlockQuartzFurnace.instanceActive);
+                return Item.getItemFromBlock(ModBlocks.quartzFurnaceActive);
             }
 
             @Override
@@ -66,7 +66,7 @@ public class CreativeTabsFergoTools {
         {
             public Item getTabIconItem()
             {
-                return ItemExpCollector.instance;
+                return ModItems.expCollector;
             }
 
             @Override
@@ -94,7 +94,7 @@ public class CreativeTabsFergoTools {
         {
             public Item getTabIconItem()
             {
-                return ItemQuartzBow.instance;
+                return ModItems.bowQuartz;
             }
 
             @Override

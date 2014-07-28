@@ -1,23 +1,21 @@
 package fergoman123.mods.fergotools.item.axe;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.AxeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemAxeFT;
 import net.minecraft.item.ItemStack;
 
-public class ItemCoalAxe extends AxeGeneric {
-
-    public static ItemCoalAxe instance = new ItemCoalAxe();
+public class ItemCoalAxe extends ItemAxeFT {
 
     public ItemCoalAxe() {
-        super(UtilToolArmor.coal);
+        super(ToolArmorMaterials.coal, ToolArmorMaterials.coal.getMaxUses());
         this.setUnlocalizedName(Names.Items.coalAxe);
-        this.setMaxDamage(UtilToolArmor.coal.getMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)
     {
-        return itemstack1.isItemEqual(new ItemStack(ItemCoalIngot.instance)) || super.getIsRepairable(itemstack1, itemstack2);
+        return itemstack1.isItemEqual(new ItemStack(ModItems.ingotCoal)) || super.getIsRepairable(itemstack1, itemstack2);
     }
 }

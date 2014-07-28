@@ -1,6 +1,7 @@
 package fergoman123.mods.fergotools.handler;
 
 import fergoman123.mods.fergotools.block.ore.*;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.util.item.FTStacks;
 import fergoman123.mods.fergotools.util.item.UtilRecipeList;
 import fergoman123.mods.fergoutil.helper.RecipeHelper;
@@ -110,16 +111,16 @@ public class RecipeHandler {
         RecipeHelper.addShapedRecipe(FTStacks.silkFurnaceIdle, UtilRecipeList.silkFurnace);
         RecipeHelper.addShapedRecipe(FTStacks.redstoneFurnaceIdle, UtilRecipeList.redstoneFurnace);
 
-        RecipeHelper.addBlockSmelting(BlockOreObsidian.instance, FTStacks.obsidianIngot, xp);
-        RecipeHelper.addBlockSmelting(BlockOreEmeraldCrystal.instance, FTStacks.emeraldCrystal, xp);
-        RecipeHelper.addBlockSmelting(BlockOreLapisCrystal.instance, FTStacks.lapisCrystal, xp);
-        RecipeHelper.addBlockSmelting(BlockOreBronze.instance, FTStacks.bronzeIngot, xp);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreObsidian, FTStacks.obsidianIngot, xp);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreEmeraldCrystal, FTStacks.emeraldCrystal, xp);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreLapisCrystal, FTStacks.lapisCrystal, xp);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreBronze, FTStacks.bronzeIngot, xp);
         RecipeHelper.addBlockSmelting(Blocks.coal_block, FTStacks.coalIngot, xp);
         RecipeHelper.addBlockSmelting(Blocks.glowstone, FTStacks.glowstoneIngot, xp);
-        RecipeHelper.addBlockSmelting(BlockOreAdamantium.instance, FTStacks.adamantiumIngot, xp);
-        RecipeHelper.addBlockSmelting(BlockOreExperience.instance, FTStacks.expShard5, xp);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreAdamantium, FTStacks.adamantiumIngot, xp);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreExperience, FTStacks.expShard5, xp);
 
-        RecipeHelper.addBlockSmelting(BlockOreRedstoneCrystal.instance, FTStacks.redstoneCrystal, xp);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreRedstoneCrystal, FTStacks.redstoneCrystal, xp);
 		
 		RecipeHelper.addShapedRecipe(FTStacks.quartzHelmet, UtilRecipeList.quartzHelmet);
 		RecipeHelper.addShapedRecipe(FTStacks.quartzChestplate, UtilRecipeList.quartzChestplate);

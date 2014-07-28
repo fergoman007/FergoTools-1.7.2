@@ -1,8 +1,9 @@
 package fergoman123.mods.fergotools.item.armor;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
 import fergoman123.mods.fergoutil.helper.PotionHelper;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
@@ -16,24 +17,19 @@ import java.util.List;
 
 public class ItemArmorAdamantium extends ItemArmorFT{
 
-    public static Item instanceHelmet = new ItemArmorAdamantium(Armor.EnumArmorType.HELMET);
-    public static Item instanceChest = new ItemArmorAdamantium(Armor.EnumArmorType.CHEST);
-    public static Item instanceLegs = new ItemArmorAdamantium(Armor.EnumArmorType.LEGS);
-    public static Item instanceBoots = new ItemArmorAdamantium(Armor.EnumArmorType.BOOTS);
-
     public ItemArmorAdamantium(Armor.EnumArmorType type)
     {
-        super("adamantium", UtilToolArmor.adamantiumArmor, type);
+        super("adamantium", ToolArmorMaterials.adamantiumArmor, type);
     }
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
     {
-        if (stack.getItem() == instanceHelmet || stack.getItem() == instanceChest || stack.getItem() == instanceBoots)
+        if (stack.getItem() == ModItems.adamantiumHelmet || stack.getItem() == ModItems.adamantiumChestplate || stack.getItem() == ModItems.adamantiumBoots)
         {
             return Textures.adamantiumArmorLayer1;
         }
 
-        if (stack.getItem() == instanceLegs)
+        if (stack.getItem() == ModItems.adamantiumLeggings)
         {
             return Textures.adamantiumArmorLayer2;
         }
@@ -53,7 +49,7 @@ public class ItemArmorAdamantium extends ItemArmorFT{
             ItemStack leggings = player.getCurrentArmor(1);
             ItemStack boots = player.getCurrentArmor(0);
 
-            if (((boots.getItem() == instanceBoots ? 1 : 0) | (leggings.getItem() == instanceLegs ? 1 : 0) | (chestplate.getItem() == instanceChest ? 1 : 0) | (helmet.getItem() == instanceHelmet ? 1 : 0)) != 0)
+            if (((boots.getItem() == ModItems.adamantiumBoots ? 1 : 0) | (leggings.getItem() == ModItems.adamantiumLeggings ? 1 : 0) | (chestplate.getItem() == ModItems.adamantiumChestplate ? 1 : 0) | (helmet.getItem() == ModItems.adamantiumHelmet ? 1 : 0)) != 0)
             {
                 player.capabilities.allowFlying = true;
                 player.fallDistance = 0.0F;

@@ -9,7 +9,6 @@ import java.util.Random;
 
 public class BlockSilkGem extends BlockFT{
 
-    public static BlockSilkGem instance = new BlockSilkGem();
 
     public BlockSilkGem()
     {

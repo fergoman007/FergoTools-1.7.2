@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -24,17 +24,14 @@ import static cpw.mods.fml.relauncher.Side.CLIENT;
 
 public class ItemGlowstoneBow extends ItemBowFT {
 
-    public static ItemGlowstoneBow instance = new ItemGlowstoneBow();
-
     public static final String[] pullArray = new String[]{"_1", "_2", "_3"};
 
     @SideOnly(CLIENT)
     private IIcon[] texture;
     public ItemGlowstoneBow()
     {
-        super();
+        super(ToolArmorMaterials.glowstone.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowGlowstone);
-        this.setMaxDamage(UtilToolArmor.getGlowstoneMaxUses());
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

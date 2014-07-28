@@ -1,25 +1,23 @@
 package fergoman123.mods.fergotools.item.pickaxe;
 
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.UtilToolArmor;
-import fergoman123.mods.fergotools.util.tool.PickaxeGeneric;
+import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.tool.ItemPickaxeFT;
 import net.minecraft.item.ItemStack;
 
-public class ItemCoalPickaxe extends PickaxeGeneric
+public class ItemCoalPickaxe extends ItemPickaxeFT
 {
-
-    public static ItemCoalPickaxe instance = new ItemCoalPickaxe();
 
     public ItemCoalPickaxe()
     {
-        super(UtilToolArmor.coal);
+        super(ToolArmorMaterials.coal, ToolArmorMaterials.coal.getMaxUses());
         this.setUnlocalizedName(Names.Items.coalPickaxe);
-        this.setMaxDamage(UtilToolArmor.getCoalMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
     {
-        return stack2.isItemEqual(new ItemStack(ItemCoalIngot.instance)) || super.getIsRepairable(stack1, stack2);
+        return stack2.isItemEqual(new ItemStack(ModItems.ingotCoal)) || super.getIsRepairable(stack1, stack2);
     }
 }

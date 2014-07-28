@@ -3,6 +3,7 @@ package fergoman123.mods.fergotools.block.ore;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.UtilBlockItem;
 import fergoman123.mods.fergotools.util.base.BlockFT;
+import fergoman123.mods.fergoutil.helper.BlockHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
@@ -10,7 +11,6 @@ import java.util.Random;
 
 public class BlockOreAdamantium extends BlockFT{
 
-    public static BlockOreAdamantium instance = new BlockOreAdamantium();
 
     public BlockOreAdamantium() {
         super(Material.rock);
@@ -21,6 +21,6 @@ public class BlockOreAdamantium extends BlockFT{
 
     public Item getItemDropped(int par1, Random rand, int par3)
     {
-        return UtilBlockItem.oreAdamantium;
+        return BlockHelper.getItemFromBlock(this);
     }
 }

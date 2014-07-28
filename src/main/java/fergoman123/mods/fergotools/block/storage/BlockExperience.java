@@ -9,8 +9,6 @@ import java.util.Random;
 
 public class BlockExperience extends BlockFT{
 
-    public static BlockExperience instance = new BlockExperience();
-
     public BlockExperience()
     {
         super(Material.iron);
