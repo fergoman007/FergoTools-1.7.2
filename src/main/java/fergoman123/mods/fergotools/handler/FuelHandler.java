@@ -13,20 +13,15 @@ import net.minecraft.tileentity.TileEntityFurnace;
 
 public class FuelHandler implements IFuelHandler {
 
-    private static final ItemStack coal = new ItemStack(Items.coal);
-    private static final ItemStack blockCoal = new ItemStack(Blocks.coal_block);
-
-    private static final int coalIngotBurnTime = 9 * TileEntityFurnace.getItemBurnTime(coal);
-
     public int getBurnTime(ItemStack fuel) {
         if (fuel.getItem() == ModItems.ingotCoal)
         {
-            return 9 * TileEntityFurnace.getItemBurnTime(coal);
+            return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Items.coal));
         }
 
         if (fuel.getItem() == BlockHelper.getItemFromBlock(ModBlocks.blockCoal))
         {
-            return 9 * TileEntityFurnace.getItemBurnTime(blockCoal);
+            return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Blocks.coal_block));
         }
 
         return 0;

@@ -5,12 +5,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
 import fergoman123.mods.fergoutil.helper.NameHelper;
-import fergoman123.mods.fergoutil.item.ITool;
+import fergoman123.mods.fergoutil.item.ITooltipItem;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-public class ItemPickaxeFT extends ItemPickaxe implements ITool
+public class ItemPickaxeFT extends ItemPickaxe implements ITooltipItem
 {
 
     public ItemPickaxeFT(ToolMaterial material, int maxUses) {

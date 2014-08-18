@@ -6,6 +6,7 @@ import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -19,6 +20,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
+import org.lwjgl.input.Keyboard;
+
+import java.util.List;
 
 import static cpw.mods.fml.relauncher.Side.CLIENT;
 
@@ -172,6 +176,20 @@ public class ItemAdamantiumBow extends ItemBowFT {
             return texture[0];
         }
         return this.itemIcon;
+    }
+
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean useExtraInfo)
+    {
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
+        {
+            list.add(NameHelper.translateToLocal(Names.Locale.adamantiumToolTip));
+            list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + " Infinity");
+        }
+        else
+        {
+            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
+        }
     }
 
 }

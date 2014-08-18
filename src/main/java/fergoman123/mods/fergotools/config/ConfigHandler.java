@@ -12,12 +12,8 @@ public class ConfigHandler
 
     public static int adamantiumMaxDamage;
     public static int adamantiumDamage;
-
     public static int adamantiumArmorMaxDamage;
-
     public static int enchantability;
-
-    public static int dimId;
 
     public static void init(File configFile)
     {
@@ -32,8 +28,6 @@ public class ConfigHandler
             adamantiumArmorMaxDamage = ConfigHelper.getInt("adamantiumArmorDamage", ConfigHelper.getCategoryGeneral(), Defaults.adamantiumArmorMaxDamageDefault, 950, 20000, "The max damage of adamantium armor (Min = 950, Max = 20000, Default 1000)");
 
             enchantability = ConfigHelper.getInt("enchantability", ConfigHelper.getCategoryGeneral(), Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
-
-            dimId = ConfigHelper.getInt("dimId", ConfigHelper.getCategoryGeneral(), Defaults.dimIdDefault, 5, 20, "Dimension ID (Min = 5, Max = 20, Default 8)");
         }
         catch (Exception e)
         {

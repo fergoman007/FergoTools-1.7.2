@@ -2,11 +2,8 @@ package fergoman123.mods.fergotools.creativetab;
 
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.ItemExpCollector;
-import fergoman123.mods.fergotools.item.armor.ItemArmorQuartz;
-import fergoman123.mods.fergotools.item.bow.ItemQuartzBow;
-import fergoman123.mods.fergotools.item.pickaxe.ItemQuartzPickaxe;
 import fergoman123.mods.fergotools.reference.Strings;
+import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.StatCollector;
@@ -18,6 +15,7 @@ public class CreativeTabsFergoTools {
     public static CreativeTabs tabFergoItems;
     public static CreativeTabs tabFergoArmor;
     public static CreativeTabs tabFergoBows;
+    public static CreativeTabs tabFergoShears;
 
     public static void init(){
         tabFergoTools = new CreativeTabs(Strings.Tab.tabFergoTools)
@@ -30,7 +28,7 @@ public class CreativeTabsFergoTools {
             @Override
             public String getTranslatedTabLabel()
             {
-                return StatCollector.translateToLocal(Strings.Tab.itemGroupFergoTools);
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoTools);
             }
         };
 
@@ -44,7 +42,7 @@ public class CreativeTabsFergoTools {
             @Override
             public String getTranslatedTabLabel()
             {
-                return StatCollector.translateToLocal(Strings.Tab.itemGroupFergoBlocks);
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoBlocks);
             }
         };
 
@@ -58,7 +56,7 @@ public class CreativeTabsFergoTools {
             @Override
             public String getTranslatedTabLabel()
             {
-                return StatCollector.translateToLocal(Strings.Tab.itemGroupFergoFurnaces);
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoFurnaces);
             }
         };
 
@@ -72,7 +70,7 @@ public class CreativeTabsFergoTools {
             @Override
             public String getTranslatedTabLabel()
             {
-                return StatCollector.translateToLocal(Strings.Tab.itemGroupFergoItems);
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoItems);
             }
         };
 
@@ -80,13 +78,13 @@ public class CreativeTabsFergoTools {
         {
             public Item getTabIconItem()
             {
-                return ItemArmorQuartz.instanceChest;
+                return ModItems.quartzChestplate;
             }
 
             @Override
             public String getTranslatedTabLabel()
             {
-                return StatCollector.translateToLocal(Strings.Tab.itemGroupFergoArmor);
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoArmor);
             }
         };
 
@@ -100,8 +98,22 @@ public class CreativeTabsFergoTools {
             @Override
             public String getTranslatedTabLabel()
             {
-                return StatCollector.translateToLocal(Strings.Tab.itemGroupFergoBows);
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoBows);
             }
+        };
+
+        tabFergoShears = new CreativeTabs(Strings.Tab.tabFergoShears) {
+            @Override
+            public Item getTabIconItem() {
+                return ModItems.quartzShears;
+            }
+
+            @Override
+            public String getTranslatedTabLabel()
+            {
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoShears);
+            }
+
         };
     }
 }

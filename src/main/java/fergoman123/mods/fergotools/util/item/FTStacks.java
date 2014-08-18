@@ -1,17 +1,7 @@
 package fergoman123.mods.fergotools.util.item;
 
-import fergoman123.mods.fergotools.block.storage.*;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.ItemExpCollector;
-import fergoman123.mods.fergotools.item.armor.*;
-import fergoman123.mods.fergotools.item.axe.*;
-import fergoman123.mods.fergotools.item.bow.*;
-import fergoman123.mods.fergotools.item.hoe.*;
-import fergoman123.mods.fergotools.item.materials.*;
-import fergoman123.mods.fergotools.item.pickaxe.*;
-import fergoman123.mods.fergotools.item.shovel.*;
-import fergoman123.mods.fergotools.item.sword.*;
 import fergoman123.mods.fergoutil.helper.ItemStackHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -32,7 +22,7 @@ public class FTStacks {
     public static final ItemStack coalIngot9 = new ItemStack(ModItems.ingotCoal, 9);
     public static final ItemStack glowstoneIngot9 = new ItemStack(ModItems.ingotGlowstone, 9);
     public static final ItemStack silkGem9 = new ItemStack(ModItems.silkGem, 9);
-    public static final ItemStack expShard9 = new ItemStack(ModItems.expShard);
+    public static final ItemStack expShard9 = new ItemStack(ModItems.expShard, 9);
     public static final ItemStack redstoneCrystal9 = new ItemStack(ModItems.redstoneCrystal, 9);
 
     public static final ItemStack expCollectorHalfStack = ItemStackHelper.getItemStackForItem(ModItems.expCollector, 32);
@@ -68,7 +58,7 @@ public class FTStacks {
     public static final ItemStack oreBronze = new ItemStack(ModBlocks.oreBronze);
     public static final ItemStack oreExperience = new ItemStack(ModBlocks.oreExperience);
     public static final ItemStack oreAdamantium = new ItemStack(ModBlocks.oreAdamantium);
-    public static final ItemStack oreRedstoneCrystal = new ItemStack(ModBlocks.oreRedstoneCrystal);
+    public static final ItemStack oreRedstoneCrystal = new ItemStack(ModBlocks.oreRedCrystal);
 
     public static final ItemStack quartzPickaxe = new ItemStack(ModItems.quartzPickaxe);
     public static final ItemStack quartzShovel = new ItemStack(ModItems.quartzShovel);

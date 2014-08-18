@@ -1,5 +1,7 @@
 package fergoman123.mods.fergotools.reference;
 
+import fergoman123.mods.fergoutil.helper.NameHelper;
+
 public class Names
 {
     public static final class Blocks
@@ -10,7 +12,7 @@ public class Names
         public static final String oreLapisCrystal = "oreLapisCrystal";
         public static final String oreBronze = "oreBronze";
         public static final String oreAdamantium = "oreAdamantium";
-        public static final String oreRedstoneCrystal = "oreRedstoneCrystal";
+        public static final String oreRedCrystal = "oreRedCrystal";
 
         public static final String blockExperience = "blockExperience";
         public static final String blockObsidian = "blockObsidian";
@@ -217,14 +219,27 @@ public class Names
         public static final String redstoneHoe = "redstoneHoe";
         public static final String redstoneSword = "redstoneSword";
 
+        public static final String quartzShears = "quartzShears";
+        public static final String obsidianShears = "obsidianShears";
+        public static final String emeraldShears = "emeraldShears";
+        public static final String lapisShears = "lapisShears";
+        public static final String bronzeShears = "bronzeShears";
+        public static final String coalShears = "coalShears";
+        public static final String glowstoneShears = "glowstoneShears";
+        public static final String adamantiumShears = "adamantiumShears";
+        public static final String silkShears = "silkShears";
+        public static final String redstoneShears = "redstoneShears";
+
         public static final String[] donator = {};
     }
 
     public static final class Locale
     {
         public static final String modPrefix = Reference.textureLoc;
-        public static final String containerPrefix = "container." + modPrefix;
-        public static final String toolTipPrefix = "tooltip." + modPrefix;
+        public static final String containerPrefix = NameHelper.getContainer() + modPrefix;
+        public static final String toolTipPrefix = NameHelper.getTooltip() + modPrefix;
+
+        public static final String durabilityToolTip = toolTipPrefix + "durability";
 
         public static final String expCollectorToolTip = toolTipPrefix + "expCollector";
         public static final String adamantiumToolTip =  toolTipPrefix + "adamantiumTool";
@@ -241,6 +256,25 @@ public class Names
         public static final String containerRedstoneFurnace = containerPrefix + "redstoneFurnace";
         public static final String containerMacerator = containerPrefix + "macerator";
 
-        public static final String containerInventory = "container.inventory";
+
+        public static final String holdShiftMessage = toolTipPrefix + "holdShift";
+
+        public static final String containerInventory = NameHelper.getContainer() + NameHelper.getInventory();
+    }
+
+    public static final class ArmorTooltipLocale
+    {
+        public static final String reductAmount = "tooltip.FergoTools:reduct";
+
+        public static final String[] quartzArmor = {"tooltip.FergoTools:quartz.helmet", "tooltip.FergoTools:quartz.chestplate", "tooltip.FergoTools:quartz.leggings", "tooltip.FergoTools:quartz.boots"};
+        public static final String[] obsidianArmor = {"tooltip.FergoTools:quartz.helmet", "tooltip.FergoTools:obsidian.chestplate", "tooltip.FergoTools:obsidian.leggings", "tooltip.FergoTools:obsidian.boots"};
+        public static final String[] emeraldArmor = {"tooltip.FergoTools:emerald.helmet", "tooltip.FergoTools:emerald.chestplate", "tooltip.FergoTools:emerald.leggings", "tooltip.FergoTools:emerald.boots"};
+        public static final String[] lapisArmor = {"tooltip.FergoTools:lapis.helmet", "tooltip.FergoTools:lapis.chestplate", "tooltip.FergoTools:lapis.leggings", "tooltip.FergoTools:lapis.boots"};
+        public static final String[] bronzeArmor = {"tooltip.FergoTools:bronze.helmet", "tooltip.FergoTools:bronze.chestplate", "tooltip.FergoTools:bronze.leggings", "tooltip.FergoTools:bronze.boots"};
+        public static final String[] coalArmor = {"tooltip.FergoTools:coal.helmet", "tooltip.FergoTools:coal.chestplate", "tooltip.FergoTools:coal.leggings", "tooltip.FergoTools:coal.boots"};
+        public static final String[] glowstoneArmor = {"tooltip.FergoTools:glowstone.helmet", "tooltip.FergoTools:glowstone.chestplate", "tooltip.FergoTools:glowstone.leggings", "tooltip.FergoTools:glowstone.boots"};
+        public static final String[] redstoneArmor = {"tooltip.FergoTools:redstone.helmet", "tooltip.FergoTools:redstone.chestplate", "tooltip.FergoTools:redstone.leggings", "tooltip.FergoTools:redstone.boots"};
+        public static final String[] adamantiumArmor = {"tooltip.FergoTools:adamantium.helmet", "tooltip.FergoTools:adamantium.chestplate", "tooltip.FergoTools:adamantium.leggings", "tooltip.FergoTools:adamantium.boots"};
+
     }
 }

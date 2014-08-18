@@ -1,14 +1,13 @@
 package fergoman123.mods.fergotools.item;
 
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.materials.ItemExpShard;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.ItemFT;
-import net.minecraft.creativetab.CreativeTabs;
+import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
@@ -36,11 +35,16 @@ public class ItemExpCollector extends ItemFT
     @Override
     public boolean hasEffect(ItemStack par1ItemStack, int pass) {return true;}
 
-
-    public void addInformation(ItemStack stack, CreativeTabs tabs, List list)
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean useExtraInfo)
     {
-        if (stack.getItemDamage() == 10) {
-            list.add(Names.Locale.expCollectorToolTip);
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
+        {
+            list.add(NameHelper.translateToLocal(Names.Locale.expCollectorToolTip));
+        }
+        else
+        {
+            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
         }
     }
 }

@@ -7,6 +7,7 @@ import fergoman123.mods.fergotools.item.bow.*;
 import fergoman123.mods.fergotools.item.hoe.*;
 import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
+import fergoman123.mods.fergotools.item.shears.ItemQuartzShears;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
 import fergoman123.mods.fergotools.reference.Names;
@@ -16,6 +17,7 @@ import fergoman123.mods.fergotools.util.base.ItemFT;
 import fergoman123.mods.fergotools.util.tool.*;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import fergoman123.mods.fergoutil.item.Armor;
+import net.minecraft.item.Item;
 
 public class ModItems
 {
@@ -79,6 +81,20 @@ public class ModItems
     public static final ItemHoeFT redstoneHoe = new ItemRedstoneHoe();
     public static final ItemSwordFT redstoneSword = new ItemRedstoneSword();
 
+    public static final ItemShearsFT quartzShears = new ItemQuartzShears();
+//    public static final ItemShearsFT obsidianShears = new ItemObsidianShears();
+
+    public static final Item[] quartzToolList = new Item[]{quartzPickaxe, quartzShovel, quartzAxe, quartzHoe, quartzSword};
+    public static final Item[] obsidianToolList = new Item[]{obsidianPickaxe, obsidianShovel, obsidianAxe, obsidianHoe, obsidianSword};
+    public static final Item[] emeraldToolList = new Item[]{emeraldPickaxe, emeraldShovel, emeraldAxe, emeraldHoe, emeraldSword};
+    public static final Item[] lapisToolList = new Item[]{lapisPickaxe, lapisShovel, lapisAxe, lapisHoe, lapisSword};
+    public static final Item[] bronzeToolList = new Item[]{bronzePickaxe, bronzeShovel, bronzeAxe, bronzeHoe, bronzeSword};
+    public static final Item[] coalToolList = new Item[]{coalPickaxe, coalShovel, coalAxe, coalHoe, coalSword};
+    public static final Item[] glowstoneToolList = new Item[]{glowstonePickaxe, glowstoneShovel, glowstoneAxe, glowstoneHoe, glowstoneSword};
+    public static final Item[] adamantiumToolList = new Item[]{adamantiumPickaxe, adamantiumShovel, adamantiumAxe, adamantiumHoe, adamantiumSword};
+    public static final Item[] silkToolList = new Item[]{silkPickaxe, silkShovel, silkAxe, silkHoe, silkSword};
+    public static final Item[] redstoneToolList = new Item[]{redstonePickaxe, redstoneShovel, redstoneAxe, redstoneHoe, redstoneSword};
+
     public static final ItemBowFT bowQuartz = new ItemQuartzBow();
     public static final ItemBowFT bowObsidian = new ItemObsidianBow();
     public static final ItemBowFT bowEmerald = new ItemEmeraldBow();
@@ -87,6 +103,8 @@ public class ModItems
     public static final ItemBowFT bowCoal = new ItemCoalBow();
     public static final ItemBowFT bowGlowstone = new ItemGlowstoneBow();
     public static final ItemBowFT bowAdamantium = new ItemAdamantiumBow();
+
+    public static final Item[] bowList = new Item[]{bowQuartz, bowObsidian, bowEmerald, bowLapis, bowBronze, bowCoal, bowGlowstone, bowAdamantium};
 
     public static final ItemFT ingotObsidian = new ItemObsidianIngot();
     public static final ItemFT emeraldCrystal = new ItemEmeraldCrystal();
@@ -99,6 +117,8 @@ public class ModItems
     public static final ItemFT silkGem = new ItemSilkGem();
     public static final ItemFT expShard = new ItemExpShard();
     public static final ItemFT expCollector = new ItemExpCollector();
+
+    public static final Item[] itemsList = new Item[]{ingotObsidian, emeraldCrystal, lapisCrystal, ingotBronze, ingotCoal, ingotGlowstone, ingotAdamantium, redstoneCrystal, silkGem, expShard, expCollector};
 
     public static final ItemArmorFT quartzHelmet = new ItemArmorQuartz(Armor.EnumArmorType.HELMET);
     public static final ItemArmorFT quartzChestplate = new ItemArmorQuartz(Armor.EnumArmorType.CHEST);
@@ -144,6 +164,16 @@ public class ModItems
     public static final ItemArmorFT adamantiumChestplate = new ItemArmorAdamantium(Armor.EnumArmorType.CHEST);
     public static final ItemArmorFT adamantiumLeggings = new ItemArmorAdamantium(Armor.EnumArmorType.LEGS);
     public static final ItemArmorFT adamantiumBoots = new ItemArmorAdamantium(Armor.EnumArmorType.BOOTS);
+
+    public static final Item[] quartzArmorList = new Item[]{quartzHelmet, quartzChestplate, quartzLeggings, quartzBoots};
+    public static final Item[] obsidianArmorList = new Item[]{obsidianHelmet, obsidianChestplate, obsidianLeggings, obsidianBoots};
+    public static final Item[] emeraldArmorList = new Item[]{emeraldHelmet, emeraldChestplate, emeraldLeggings, emeraldBoots};
+    public static final Item[] lapisArmorList = new Item[]{lapisHelmet, lapisChestplate, lapisLeggings, lapisBoots};
+    public static final Item[] bronzeArmorList = new Item[]{bronzeHelmet, bronzeChestplate, bronzeLeggings, bronzeBoots};
+    public static final Item[] coalArmorList = new Item[]{coalHelmet, coalChestplate, coalLeggings, coalBoots};
+    public static final Item[] glowstoneArmorList = new Item[]{glowstoneHelmet, glowstoneChestplate, glowstoneLeggings, glowstoneBoots};
+    public static final Item[] redstoneArmorList = new Item[]{redstoneHelmet, redstoneChestplate, redstoneLeggings, redstoneBoots};
+    public static final Item[] adamantiumArmorList = new Item[]{adamantiumHelmet, adamantiumChestplate, adamantiumLeggings, adamantiumBoots};
 
     public static void init()
 	{
@@ -272,5 +302,7 @@ public class ModItems
         RegisterHelper.registerItem(bowCoal, Names.Items.bowCoal);
         RegisterHelper.registerItem(bowGlowstone, Names.Items.bowGlowstone);
         RegisterHelper.registerItem(bowAdamantium, Names.Items.bowAdamantium);
-	}
+
+        RegisterHelper.registerItem(quartzShears, Names.Items.quartzShears);
+    }
 }

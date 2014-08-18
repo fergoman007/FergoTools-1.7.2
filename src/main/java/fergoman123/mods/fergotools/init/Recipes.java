@@ -1,8 +1,7 @@
 package fergoman123.mods.fergotools.init;
 
-import fergoman123.mods.fergotools.block.ore.*;
-import fergoman123.mods.fergotools.block.storage.BlockExperience;
 import fergoman123.mods.fergotools.util.item.FTStacks;
+import fergoman123.mods.fergotools.util.item.UtilRecipe;
 import fergoman123.mods.fergotools.util.item.UtilRecipeList;
 import fergoman123.mods.fergoutil.helper.RecipeHelper;
 import net.minecraft.init.Blocks;
@@ -23,6 +22,7 @@ public class Recipes
 
 
         RecipeHelper.addShapedRecipe(FTStacks.silkGem, UtilRecipeList.silkGem);
+        RecipeHelper.addShapedRecipe(FTStacks.expCollectorHalfStack, UtilRecipeList.expCollector);
 
         RecipeHelper.addShapedRecipe(FTStacks.blockObsidian, UtilRecipeList.blockObsidian);
         RecipeHelper.addShapedRecipe(FTStacks.blockEmeraldCrystal, UtilRecipeList.blockEmeraldCrystal);

@@ -9,6 +9,4 @@ public class Defaults
     public static final int adamantiumArmorMaxDamageDefault = 1000;
 
     public static final int enchantabilityDefault = 30;
-
-    public static final int dimIdDefault = 8;
 }

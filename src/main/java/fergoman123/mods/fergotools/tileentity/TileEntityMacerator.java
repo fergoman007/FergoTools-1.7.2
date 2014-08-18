@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.block.furnace.BlockMacerator;
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.reference.Ints;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.TileEntityFurnaceFT;
@@ -277,6 +278,7 @@ public class TileEntityMacerator extends TileEntityFurnaceFT {
         {
             ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
             if (stack == null)return false;
+            if (this.slots[0].isItemEqual(new ItemStack(ModBlocks.oreRedCrystal))) return true;
             if (!this.isOre(this.slots[0]))return false;
             if (this.slots[2] == null)return true;
             if (!this.slots[2].isItemEqual(stack))return false;

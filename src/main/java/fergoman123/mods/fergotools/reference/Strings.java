@@ -29,19 +29,13 @@ public class Strings
 
     public static final class Tab
     {
-        public static final String tabFergoTools = "tabFergoTools";
-        public static final String tabFergoBlocks = "tabFergoBlocks";
-        public static final String tabFergoFurnaces = "tabFergoFurnaces";
-        public static final String tabFergoItems = "tabFergoItems";
-        public static final String tabFergoArmor = "tabFergoArmor";
-        public static final String tabFergoBows = "tabFergoBows";
-
-        public static final String itemGroupFergoTools = "itemGroup." + Reference.textureLoc + tabFergoTools;
-        public static final String itemGroupFergoBlocks = "itemGroup." + Reference.textureLoc + tabFergoBlocks;
-        public static final String itemGroupFergoFurnaces = "itemGroup." + Reference.textureLoc + tabFergoFurnaces;
-        public static final String itemGroupFergoItems = "itemGroup." + Reference.textureLoc + tabFergoItems;
-        public static final String itemGroupFergoArmor = "itemGroup." + Reference.textureLoc + tabFergoArmor;
-        public static final String itemGroupFergoBows = "itemGroup." + Reference.textureLoc + tabFergoBows;
+        public static final String tabFergoTools = "FergoTools:tabFergoTools";
+        public static final String tabFergoBlocks = "FergoTools:tabFergoBlocks";
+        public static final String tabFergoFurnaces = "FergoTools:tabFergoFurnaces";
+        public static final String tabFergoItems = "FergoTools:tabFergoItems";
+        public static final String tabFergoArmor = "FergoTools:tabFergoArmor";
+        public static final String tabFergoBows = "FergoTools:tabFergoBows";
+        public static final String tabFergoShears = "FergoTools:tabFergoShears";
     }
 
     public static final class Tile
@@ -82,5 +76,20 @@ public class Strings
         public static final String silkFurnace = "silkFurnace";
         public static final String redstoneFurnace = "redstoneFurnace";
         public static final String macerator = "macerator";
+    }
+
+    public static final class Messages
+    {
+        public static final String preInitMessage = "Pre Initialising Mod";
+        public static final String initMessage = "Initialising Registration and Packet Handler";
+        public static final String postInitMessage = "Mod Loaded";
+        public static final String serverStartedMessage = "Server Started";
+    }
+
+    public static final class OtherStrings
+    {
+        public static final String itemForLocalization = "item.%s%s";
+        public static final String itemMetadataLocalization = "item.%s%s.%s";
+        public static final String blockForLocalization = "tile.%s%s";
     }
 }

@@ -9,7 +9,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import java.util.Random;
 
-public class EventHandler implements IWorldGenerator{
+public class WorldGenerationHandler implements IWorldGenerator{
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 

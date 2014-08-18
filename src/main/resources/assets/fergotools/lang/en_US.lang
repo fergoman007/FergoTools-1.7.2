@@ -118,6 +118,7 @@ tile.FergoTools:oreExperience.name=Experience Ore
 tile.FergoTools:oreObsidian.name=Obsidian Ore
 tile.FergoTools:oreEmeraldCrystal.name=Emerald Crystal Ore
 tile.FergoTools:oreLapisCrystal.name=Lapis Crystal Ore
+tile.FergoTools:oreBronze.name=Bronze Ore
 tile.FergoTools:oreRedstoneCrystal.name=Redstone Crystal Ore
 tile.FergoTools:oreAdamantium.name=Adamantium Ore
 
@@ -130,6 +131,7 @@ tile.FergoTools:blockGlowstone.name=Glowstone Block
 tile.FergoTools:blockAdamantium.name=Adamantium Block
 tile.FergoTools:blockSilkGem.name=Silk Gem Block
 tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
+tile.FergoTools:blockExperience.name=Experience Block
 
 tile.FergoTools:blockFergoGlass.name=Fergoman123's Glass
 
@@ -193,4 +195,55 @@ container.FergoTools:redstoneFurnace=Redstone Furnace
 container.FergoTools:macerator=Macerator
 
 # Tool Tips
-tooltip.adamantiumTool=NOTE: Extremely Overpowered!
+tooltip.FergoTools:holdShift=<Hold Shift for Info>
+tooltip.FergoTools:adamantiumTool=NOTE: Extremely Overpowered!
+tooltip.FergoTools:adamantiumInfi=Durability: Infinity
+tooltip.FergoTools:expCollector=Right Click to store experience.
+tooltip.FergoTools:durability=Durability:
+
+tooltip.FergoTools:reduct=Reduction Amounts:
+
+tooltip.FergoTools:quartz.helmet=Helmet: 4
+tooltip.FergoTools:quartz.chestplate=Chestplate: 9
+tooltip.FergoTools:quartz.leggings=Leggings: 7
+tooltip.FergoTools:quartz.boots=Boots: 3
+
+tooltip.FergoTools:obsidian.helmet=Helmet: 5
+tooltip.FergoTools:obsidian.chestplate=Chestplate: 10
+tooltip.FergoTools:obsidian.leggings=Leggings: 8
+tooltip.FergoTools:obsidian.boots=Boots: 4
+
+tooltip.FergoTools:emerald.helmet=Helmet: 6
+tooltip.FergoTools:emerald.chestplate=Chestplate: 11
+tooltip.FergoTools:emerald.leggings=Leggings: 9
+tooltip.FergoTools:emerald.boots=Boots: 5
+
+tooltip.FergoTools:lapis.helmet=Helmet: 7
+tooltip.FergoTools:lapis.chestplate=Chestplate: 10
+tooltip.FergoTools:lapis.leggings=Leggings: 12
+tooltip.FergoTools:lapis.boots=Boots: 6
+
+tooltip.FergoTools:bronze.helmet=Helmet: 8
+tooltip.FergoTools:bronze.chestplate=Chestplate: 11
+tooltip.FergoTools:bronze.leggings=Leggings: 13
+tooltip.FergoTools:bronze.boots=Boots: 7
+
+tooltip.FergoTools:coal.helmet=Helmet: 9
+tooltip.FergoTools:coal.chestplate=Chestplate: 12
+tooltip.FergoTools:coal.leggings=Leggings: 14
+tooltip.FergoTools:coal.boots=Boots: 8
+
+tooltip.FergoTools:glowstone.helmet=Helmet: 10
+tooltip.FergoTools.glowstone.chestplate=Chestplate: 13
+tooltip.FergoTools.glowstone.leggings=Leggings: 15
+tooltip.FergoTools:glowstone.boots=Boots: 9
+
+tooltip.FergoTools:redstone.helmet=Helmet: 2
+tooltip.FergoTools:redstone.chestplate=Chestplate: 6
+tooltip.FergoTools:redstone.leggings=Leggings: 5
+tooltip.FergoTools:redstone.boots=Boots: 2
+
+tooltip.FergoTools:adamantium.helmet=Helmet: 20
+tooltip.FergoTools:adamantium.chestplate=Chestplate: 20
+tooltip.FergoTools:adamantium.leggings=Leggings: 20
+tooltip.FergoTools:adamantium.boots=Boots: 20

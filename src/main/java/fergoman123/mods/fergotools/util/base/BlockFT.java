@@ -8,8 +8,11 @@ import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import org.lwjgl.input.Keyboard;
 
-public class BlockFT extends Block{
+public class BlockFT extends Block
+{
+    public Keyboard kb;
 
     public BlockFT()
     {

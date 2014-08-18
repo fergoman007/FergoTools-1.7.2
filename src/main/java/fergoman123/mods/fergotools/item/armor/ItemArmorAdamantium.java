@@ -1,17 +1,19 @@
 package fergoman123.mods.fergotools.item.armor;
 
 import fergoman123.mods.fergotools.init.ModItems;
+import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.helper.PotionHelper;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.world.World;
+import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class ItemArmorAdamantium extends ItemArmorFT{
 
     public ItemArmorAdamantium(Armor.EnumArmorType type)
     {
-        super("adamantium", ToolArmorMaterials.adamantiumArmor, type);
+        super(ArmorNames.adamantium, ToolArmorMaterials.adamantiumArmor, type);
     }
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
@@ -66,8 +68,21 @@ public class ItemArmorAdamantium extends ItemArmorFT{
         }
     }
 
-    @Override
-    public void addInformation(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List p_77624_3_, boolean p_77624_4_) {
-
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean useExtraInfo)
+    {
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
+        {
+            list.add(NameHelper.translateToLocal(Names.Locale.adamantiumToolTip));
+            list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.reductAmount));
+            for (int i = 0; i < Names.ArmorTooltipLocale.adamantiumArmor.length; i++)
+            {
+                list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.adamantiumArmor[i]));
+            }
+        }
+        else
+        {
+            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
+        }
     }
 }

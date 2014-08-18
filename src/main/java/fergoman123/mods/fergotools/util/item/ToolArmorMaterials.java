@@ -46,7 +46,7 @@ public class ToolArmorMaterials {
         bronze = ToolHelper.addToolMaterial(Strings.Material.bronzeToolMat, Ints.Tools.harvestLvl, Ints.Tools.bronzeMaxDamage, Ints.Tools.bronzeEff, Ints.Tools.bronzeDamage, ConfigHandler.enchantability);
         coal = ToolHelper.addToolMaterial(Strings.Material.coalToolMat, Ints.Tools.harvestLvl, Ints.Tools.coalMaxDamage, Ints.Tools.coalEff, Ints.Tools.coalDamage, ConfigHandler.enchantability);
         glowstone = ToolHelper.addToolMaterial(Strings.Material.glowstoneToolMat, Ints.Tools.harvestLvl, Ints.Tools.glowstoneMaxDamage, Ints.Tools.glowstoneEff, Ints.Tools.glowstoneDamage, ConfigHandler.enchantability);
-        adamantium = ToolHelper.addToolMaterial(Strings.Material.adamantiumToolMat, Ints.Tools.harvestLvl, ConfigHandler.adamantiumMaxDamage, Ints.Tools.adamantiumEff, Ints.Tools.adamantiumDamage, ConfigHandler.enchantability);
+        adamantium = ToolHelper.addToolMaterial(Strings.Material.adamantiumToolMat, Ints.Tools.harvestLvl, (int)Double.POSITIVE_INFINITY, Ints.Tools.adamantiumEff, Ints.Tools.adamantiumDamage, ConfigHandler.enchantability);
         donator = ToolHelper.addToolMaterial(Strings.Material.donatorToolMat, Ints.Tools.harvestLvl, Ints.Tools.donatorMaxDamage, Ints.Tools.donatorEff, Ints.Tools.donatorDamage, ConfigHandler.enchantability);
         silk = ToolHelper.addToolMaterial(Strings.Material.silkToolMat, Ints.Tools.harvestLvl, Ints.Tools.silkMaxDamage, Ints.Tools.silkEff, Ints.Tools.silkDamage, ConfigHandler.enchantability);
         redstone = ToolHelper.addToolMaterial(Strings.Material.redstoneToolMat, Ints.Tools.harvestLvl, Ints.Tools.redstoneMaxDamage, Ints.Tools.redstoneEff, Ints.Tools.redstoneDamage, ConfigHandler.enchantability);
