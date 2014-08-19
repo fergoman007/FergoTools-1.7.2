@@ -59,6 +59,15 @@ public class FergoTools
     @EventHandler
     public void serverStarted(FMLServerStartedEvent evt)
     {
-        FergoToolsMod.serverStarted(evt);
+        ServerCommandManager manager = (ServerCommandManager) MinecraftServer.getServer().getCommandManager();
+        if (FergoCommands.commands != null)
+        {
+            for (ICommand cmd : FergoCommands.commands)
+            {
+                manager.registerCommand(cmd);
+            }
+
+            manager.registerCommand(new CommandFergoTools());
+        }
     }
 }
