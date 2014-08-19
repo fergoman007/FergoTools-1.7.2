@@ -7,7 +7,7 @@ import fergoman123.mods.fergotools.item.bow.*;
 import fergoman123.mods.fergotools.item.hoe.*;
 import fergoman123.mods.fergotools.item.materials.*;
 import fergoman123.mods.fergotools.item.pickaxe.*;
-import fergoman123.mods.fergotools.item.shears.ItemQuartzShears;
+import fergoman123.mods.fergotools.item.shears.*;
 import fergoman123.mods.fergotools.item.shovel.*;
 import fergoman123.mods.fergotools.item.sword.*;
 import fergoman123.mods.fergotools.reference.Names;
@@ -82,7 +82,10 @@ public class ModItems
     public static final ItemSwordFT redstoneSword = new ItemRedstoneSword();
 
     public static final ItemShearsFT quartzShears = new ItemQuartzShears();
-//    public static final ItemShearsFT obsidianShears = new ItemObsidianShears();
+    public static final ItemShearsFT obsidianShears = new ItemObsidianShears();
+    public static final ItemShearsFT emeraldShears = new ItemEmeraldShears();
+    public static final ItemShearsFT lapisShears = new ItemLapisShears();
+    public static final ItemShearsFT bronzeShears = new ItemBronzeShears();
 
     public static final Item[] quartzToolList = new Item[]{quartzPickaxe, quartzShovel, quartzAxe, quartzHoe, quartzSword};
     public static final Item[] obsidianToolList = new Item[]{obsidianPickaxe, obsidianShovel, obsidianAxe, obsidianHoe, obsidianSword};
