@@ -86,6 +86,11 @@ public class ModItems
     public static final ItemShearsFT emeraldShears = new ItemEmeraldShears();
     public static final ItemShearsFT lapisShears = new ItemLapisShears();
     public static final ItemShearsFT bronzeShears = new ItemBronzeShears();
+    public static final ItemShearsFT coalShears = new ItemCoalShears();
+    public static final ItemShearsFT glowstoneShears = new ItemGlowstoneShears();
+    public static final ItemShearsFT adamantiumShears = new ItemAdamantiumShears();
+    public static final ItemShearsFT silkShears = new ItemSilkShears();
+    public static final ItemShearsFT redstoneShears = new ItemRedstoneShears();
 
     public static final Item[] quartzToolList = new Item[]{quartzPickaxe, quartzShovel, quartzAxe, quartzHoe, quartzSword};
     public static final Item[] obsidianToolList = new Item[]{obsidianPickaxe, obsidianShovel, obsidianAxe, obsidianHoe, obsidianSword};
@@ -307,5 +312,14 @@ public class ModItems
         RegisterHelper.registerItem(bowAdamantium, Names.Items.bowAdamantium);
 
         RegisterHelper.registerItem(quartzShears, Names.Items.quartzShears);
+        RegisterHelper.registerItem(obsidianShears, Names.Items.obsidianShears);
+        RegisterHelper.registerItem(emeraldShears, Names.Items.emeraldShears);
+        RegisterHelper.registerItem(lapisShears, Names.Items.lapisShears);
+        RegisterHelper.registerItem(bronzeShears, Names.Items.bronzeShears);
+        RegisterHelper.registerItem(coalShears, Names.Items.coalShears);
+        RegisterHelper.registerItem(glowstoneShears, Names.Items.glowstoneShears);
+        RegisterHelper.registerItem(adamantiumShears, Names.Items.adamantiumShears);
+        RegisterHelper.registerItem(silkShears, Names.Items.silkShears);
+        RegisterHelper.registerItem(redstoneHelmet, Names.Items.redstoneShears);
     }
 }
