@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class MaceratorRecipes
@@ -50,5 +51,8 @@ public class MaceratorRecipes
         getVanillaSmelting().func_151394_a(stack, output, xp);
     }
 
-    public
+    public ItemStack getSmeltingResult(ItemStack stack)
+    {
+        Iterator iterator = this.smeltingList.entrySet().iterator();
+    }
 }
