@@ -320,6 +320,6 @@ public class ModItems
         RegisterHelper.registerItem(glowstoneShears, Names.Items.glowstoneShears);
         RegisterHelper.registerItem(adamantiumShears, Names.Items.adamantiumShears);
         RegisterHelper.registerItem(silkShears, Names.Items.silkShears);
-        RegisterHelper.registerItem(redstoneHelmet, Names.Items.redstoneShears);
+        RegisterHelper.registerItem(redstoneShears, Names.Items.redstoneShears);
     }
 }

@@ -1,7 +1,6 @@
 package fergoman123.mods.fergotools.util.item;
 
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.materials.ItemExpShard;
 import fergoman123.mods.fergotools.util.item.UtilRecipe.RecipeArray;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -24,7 +23,7 @@ public class UtilRecipeList {
     public static final Object[] blockAdamantium = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.adamantiumIngot};
     public static final Object[] blockExperience = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.expShard};
     public static final Object[] blockSilkGem = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.silkGem};
-    public static final Object[] blockRedstone = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.redstoneCrystal};
+    public static final Object[] blockRedstone = new Object[]{RecipeArray.getBlockRecipe(), charX, FTStacks.redCrystal};
 
     // Furnaces
     public static final Object[] quartzFurnace = new Object[]{RecipeArray.getFurnaceRecipe(), charX, FTStacks.quartzBlock};
@@ -93,11 +92,11 @@ public class UtilRecipeList {
     public static final Object[] silkHoe = new Object[]{RecipeArray.getHoeRecipe(), charX, FTStacks.silkGem, charY, FTStacks.stickStack};
     public static final Object[] silkSword = new Object[]{RecipeArray.getSwordRecipe(), charX, FTStacks.silkGem, charY, FTStacks.stickStack};
 
-    public static final Object[] redstonePickaxe = new Object[]{RecipeArray.getPickaxeRecipe(), charX, FTStacks.redstoneCrystal, charY, FTStacks.stickStack};
-    public static final Object[] redstoneShovel = new Object[]{RecipeArray.getShovelRecipe(), charX, FTStacks.redstoneCrystal, charY, FTStacks.stickStack};
-    public static final Object[] redstoneAxe = new Object[]{RecipeArray.getAxeRecipe(), charX, FTStacks.redstoneCrystal, charY, FTStacks.stickStack};
-    public static final Object[] redstoneHoe = new Object[]{RecipeArray.getHoeRecipe(), charX, FTStacks.redstoneCrystal, charY, FTStacks.stickStack};
-    public static final Object[] redstoneSword = new Object[]{RecipeArray.getSwordRecipe(), charX, FTStacks.redstoneCrystal, charY, FTStacks.stickStack};
+    public static final Object[] redstonePickaxe = new Object[]{RecipeArray.getPickaxeRecipe(), charX, FTStacks.redCrystal, charY, FTStacks.stickStack};
+    public static final Object[] redstoneShovel = new Object[]{RecipeArray.getShovelRecipe(), charX, FTStacks.redCrystal, charY, FTStacks.stickStack};
+    public static final Object[] redstoneAxe = new Object[]{RecipeArray.getAxeRecipe(), charX, FTStacks.redCrystal, charY, FTStacks.stickStack};
+    public static final Object[] redstoneHoe = new Object[]{RecipeArray.getHoeRecipe(), charX, FTStacks.redCrystal, charY, FTStacks.stickStack};
+    public static final Object[] redstoneSword = new Object[]{RecipeArray.getSwordRecipe(), charX, FTStacks.redCrystal, charY, FTStacks.stickStack};
 
     // Armor
     public static final Object[] quartzHelmet = new Object[]{RecipeArray.getHelmetRecipe(), charX, FTStacks.quartzStack};
@@ -135,10 +134,10 @@ public class UtilRecipeList {
     public static final Object[] glowstoneLeggings = new Object[]{RecipeArray.getLeggingsRecipe(), charX, FTStacks.glowstoneIngot};
     public static final Object[] glowstoneBoots = new Object[]{RecipeArray.getBootsRecipe(), charX, FTStacks.glowstoneIngot};
 
-    public static final Object[] redstoneHelmet = new Object[]{RecipeArray.getHelmetRecipe(), charX, FTStacks.redstoneCrystal};
-    public static final Object[] redstoneChestplate = new Object[]{RecipeArray.getChestplateRecipe(), charX, FTStacks.redstoneCrystal};
-    public static final Object[] redstoneLeggings = new Object[]{RecipeArray.getLeggingsRecipe(), charX, FTStacks.redstoneCrystal};
-    public static final Object[] redstoneBoots = new Object[]{RecipeArray.getBootsRecipe(), charX, FTStacks.redstoneCrystal};
+    public static final Object[] redstoneHelmet = new Object[]{RecipeArray.getHelmetRecipe(), charX, FTStacks.redCrystal};
+    public static final Object[] redstoneChestplate = new Object[]{RecipeArray.getChestplateRecipe(), charX, FTStacks.redCrystal};
+    public static final Object[] redstoneLeggings = new Object[]{RecipeArray.getLeggingsRecipe(), charX, FTStacks.redCrystal};
+    public static final Object[] redstoneBoots = new Object[]{RecipeArray.getBootsRecipe(), charX, FTStacks.redCrystal};
 
     public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Items.diamond, charY, new ItemStack(Blocks.wool, 1, wildcard)};
     public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', ModItems.expShard, 'y', Items.diamond};

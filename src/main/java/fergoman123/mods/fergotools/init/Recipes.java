@@ -1,7 +1,6 @@
 package fergoman123.mods.fergotools.init;
 
 import fergoman123.mods.fergotools.util.item.FTStacks;
-import fergoman123.mods.fergotools.util.item.UtilRecipe;
 import fergoman123.mods.fergotools.util.item.UtilRecipeList;
 import fergoman123.mods.fergoutil.helper.RecipeHelper;
 import net.minecraft.init.Blocks;
@@ -110,6 +109,7 @@ public class Recipes
         RecipeHelper.addBlockSmelting(Blocks.glowstone, FTStacks.glowstoneIngot, 2.5f);
         RecipeHelper.addBlockSmelting(ModBlocks.oreAdamantium, FTStacks.adamantiumIngot, 2.5f);
         RecipeHelper.addBlockSmelting(ModBlocks.oreExperience, FTStacks.expShard5, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreRedCrystal, FTStacks.redCrystal, 2.5f);
 
 
 

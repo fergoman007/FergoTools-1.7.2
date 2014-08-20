@@ -32,14 +32,14 @@ public class CommandFergoTools extends FergoCommand
     @Override
     public void processCommand(ICommandSender sender, String[] stringArray)
     {
-        try
-        {
-            new DelayedGuiDisplay(10, new FTGuiConfig(null));
-        }
-        catch (Throwable e)
-        {
-            e.printStackTrace();
-        }
+//        try
+//        {
+//            new DelayedGuiDisplay(10, new FTGuiConfig(null));
+//        }
+//        catch (Throwable e)
+//        {
+//            e.printStackTrace();
+//        }
     }
 
     @Override

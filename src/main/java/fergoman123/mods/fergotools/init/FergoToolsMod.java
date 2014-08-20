@@ -27,7 +27,7 @@ public class FergoToolsMod
     {
         LogHelper.info(Messages.preInitMessage);
         MetadataFT.writeMetadata(evt.getModMetadata());
-        ConfigHandler.init(evt.getSuggestedConfigurationFile());
+//        ConfigHandler.init(evt.getSuggestedConfigurationFile());
         CreativeTabsFergoTools.init();
         ToolArmorMaterials.init();
         ModItems.init();

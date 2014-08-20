@@ -139,7 +139,7 @@ public class Names
         public static final String ingotAdamantium = "ingotAdamantium";
         public static final String expShard = "expShard";
         public static final String silkGem = "silkGem";
-        public static final String redstoneCrystal = "redstoneCrystal";
+        public static final String redstoneCrystal = "redCrystal";
         public static final String expCollector = "expCollector";
 
         public static final String fergoMaterials = "fergoMaterials";
@@ -154,7 +154,7 @@ public class Names
                 "ingotGlowstone",
                 "ingotAdamantium",
                 "silkGem",
-                "redstoneCrystal",
+                "redCrystal",
                 "expShard",
                 "expCollector"
         };

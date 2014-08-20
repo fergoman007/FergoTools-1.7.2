@@ -278,7 +278,6 @@ public class TileEntityMacerator extends TileEntityFurnaceFT {
         {
             ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
             if (stack == null)return false;
-            if (this.slots[0].isItemEqual(new ItemStack(ModBlocks.oreRedCrystal))) return true;
             if (!this.isOre(this.slots[0]))return false;
             if (this.slots[2] == null)return true;
             if (!this.slots[2].isItemEqual(stack))return false;

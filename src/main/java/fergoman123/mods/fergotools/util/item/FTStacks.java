@@ -38,7 +38,7 @@ public class FTStacks {
     public static final ItemStack adamantiumIngot = new ItemStack(ModItems.ingotAdamantium);
     public static final ItemStack expShard = new ItemStack(ModItems.expShard);
     public static final ItemStack silkGem = new ItemStack(ModItems.silkGem);
-    public static final ItemStack redstoneCrystal = new ItemStack(ModItems.redstoneCrystal);
+    public static final ItemStack redCrystal = new ItemStack(ModItems.redstoneCrystal);
     public static final ItemStack expCollector = new ItemStack(ModItems.expCollector);
 
     public static final ItemStack blockObsidian = new ItemStack(ModBlocks.blockObsidian);
