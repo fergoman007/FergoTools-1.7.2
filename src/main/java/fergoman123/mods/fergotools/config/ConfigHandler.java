@@ -1,6 +1,7 @@
 package fergoman123.mods.fergotools.config;
 
 import fergoman123.mods.fergotools.helper.LogHelper;
+import fergoman123.mods.fergoutil.helper.ConfigHelper;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
@@ -21,7 +22,7 @@ public class ConfigHandler
         try
         {
 
-//            enchantability = config.get("enchantability", ConfigHelper.getCategoryGeneral(), Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
+            enchantability = config.getInt("enchantability", ConfigHelper.getCategoryGeneral(), Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
         }
         catch (Exception e)
         {

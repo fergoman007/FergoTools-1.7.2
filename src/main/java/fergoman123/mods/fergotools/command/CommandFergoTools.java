@@ -5,18 +5,19 @@ import fergoman123.mods.fergoutil.command.FergoCommand;
 import fergoman123.mods.fergoutil.util.DelayedGuiDisplay;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.player.EntityPlayer;
 
 public class CommandFergoTools extends FergoCommand
 {
 
     @Override
     public String getCommandName() {
-        return "fergotools";
+        return "ftconfig";
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender) {
-        return "commands.FergoTools:fergotools.usage";
+        return "commands.FergoTools:ftconfig.usage";
     }
 
     @Override
@@ -32,14 +33,7 @@ public class CommandFergoTools extends FergoCommand
     @Override
     public void processCommand(ICommandSender sender, String[] stringArray)
     {
-//        try
-//        {
-//            new DelayedGuiDisplay(10, new FTGuiConfig(null));
-//        }
-//        catch (Throwable e)
-//        {
-//            e.printStackTrace();
-//        }
+
     }
 
     @Override

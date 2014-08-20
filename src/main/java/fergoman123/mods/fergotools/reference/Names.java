@@ -277,4 +277,10 @@ public class Names
         public static final String[] adamantiumArmor = {"tooltip.FergoTools:adamantium.helmet", "tooltip.FergoTools:adamantium.chestplate", "tooltip.FergoTools:adamantium.leggings", "tooltip.FergoTools:adamantium.boots"};
 
     }
+
+    public static final class Keys
+    {
+        public static final String category = "keys.FergoTools:category";
+        public static final String ftConfig = "keys.FergoTools:ftConfig";
+    }
 }
