@@ -1,40 +1,25 @@
+ /*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package fergoman123.mods.fergotools.event;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.InputEvent.KeyInputEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
-import fergoman123.mods.fergotools.client.settings.KeyBindings;
+import fergoman123.mods.fergotools.client.FTGuiConfig;
 import fergoman123.mods.fergotools.helper.LogHelper;
-import fergoman123.mods.fergotools.reference.Key;
-import fergoman123.mods.fergoutil.util.DelayedGuiDisplay;
 
 public class EventHandler
 {
-    public static final class OnPlayerLoggedInEvent
+    @SubscribeEvent
+    public void onPlayerLoggedIn(PlayerLoggedInEvent evt)
     {
-        @SubscribeEvent
-        public void onPlayerLoggedIn(PlayerLoggedInEvent evt)
-        {
-            LogHelper.info(evt.player.getDisplayName() + " has Logged In!!");
-            LogHelper.info("FergoTools Successfully Added Into Game");
-        }
-    }
-
-    public static final class OnKeyPressedEvent
-    {
-        private static Key getPressedKeyBinding()
-        {
-            if (KeyBindings.ftConfig.isPressed())
-            {
-                return Key.PRESSED;
-            }
-            return Key.UNKNOWN;
-        }
-
-        @SubscribeEvent
-        public void handleKeyInput(KeyInputEvent evt)
-        {
-            LogHelper.info(getPressedKeyBinding());
-        }
+        LogHelper.info(evt.player.getDisplayName() + " has Logged In!!");
+        LogHelper.info("FergoTools Successfully Added Into Game");
     }
 }

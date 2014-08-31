@@ -51,20 +51,45 @@ public class ItemArmorAdamantium extends ItemArmorFT{
             ItemStack leggings = player.getCurrentArmor(1);
             ItemStack boots = player.getCurrentArmor(0);
 
-            if (((boots.getItem() == ModItems.adamantiumBoots ? 1 : 0) | (leggings.getItem() == ModItems.adamantiumLeggings ? 1 : 0) | (chestplate.getItem() == ModItems.adamantiumChestplate ? 1 : 0) | (helmet.getItem() == ModItems.adamantiumHelmet ? 1 : 0)) != 0)
+//            if (((boots.getItem() == ModItems.adamantiumBoots ? 1 : 0) | (leggings.getItem() == ModItems.adamantiumLeggings ? 1 : 0) | (chestplate.getItem() == ModItems.adamantiumChestplate ? 1 : 0) | (helmet.getItem() == ModItems.adamantiumHelmet ? 1 : 0)) != 0)
+//            {
+//                player.capabilities.allowFlying = true;
+//                player.fallDistance = 0.0F;
+//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76444_x.id, 1, 4));
+//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.waterBreathing.id, 1, 4));
+//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.resistance.id, 1, 4));
+//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.moveSpeed.id, 1, 4));
+//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76443_y.id, 1, 4));
+//            }
+            if (player.getCurrentArmor(3).getItem() == ModItems.adamantiumHelmet)
+            {
+                PotionHelper.getPotionEffect(Potion.waterBreathing.id, 1, 4);
+                PotionHelper.getPotionEffect(Potion.field_76443_y.id, 1, 4);
+            }
+
+            if (player.getCurrentArmor(2).getItem() == ModItems.adamantiumChestplate)
+            {
+                PotionHelper.getPotionEffect(Potion.moveSpeed.id, 1, 4);
+                PotionHelper.getPotionEffect(Potion.field_76444_x.id, 1, 4);
+
+            }
+
+            if (player.getCurrentArmor(1).getItem() == ModItems.adamantiumLeggings)
+            {
+                PotionHelper.getPotionEffect(Potion.jump.id, 1, 4);
+            }
+
+            if (player.getCurrentArmor(0).getItem() == ModItems.adamantiumBoots)
             {
                 player.capabilities.allowFlying = true;
                 player.fallDistance = 0.0F;
-                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76444_x.id, 20, 4));
-                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.waterBreathing.id, 20, 4));
-                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.resistance.id, 20, 4));
-                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.moveSpeed.id, 20, 4));
-                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76443_y.id, 20, 4));
             }
         }
         else if (!player.capabilities.isCreativeMode)
         {
             player.capabilities.allowFlying = false;
+            player.capabilities.isFlying = false;
+            player.fallDistance = 0.0F;
         }
     }
 

@@ -1,10 +1,10 @@
 # Creative Tabs
-itemGroup.FergoTools:tabFergoTools=Fergoman123's Tools (Tools)
-itemGroup.FergoTools:tabFergoBlocks=Fergoman123's Tools (Blocks)
-itemGroup.FergoTools:tabFergoFurnaces=Fergoman123's Tools (Furnaces)
-itemGroup.FergoTools:tabFergoItems=Fergoman123's Tools (Items)
-itemGroup.FergoTools:tabFergoArmor=Fergoman123's Tools (Armor)
-itemGroup.FergoTools:tabFergoBows=Fergoman123's Tools (Bows)
+FergoTools:tabFergoTools=Fergoman123's Tools (Tools)
+FergoTools:tabFergoBlocks=Fergoman123's Tools (Blocks)
+FergoTools:tabFergoFurnaces=Fergoman123's Tools (Furnaces)
+FergoTools:tabFergoItems=Fergoman123's Tools (Items)
+FergoTools:tabFergoArmor=Fergoman123's Tools (Armor)
+FergoTools:tabFergoBows=Fergoman123's Tools (Bows)
 
 # Tools
 item.FergoTools:quartzPickaxe.name=Quartz Pickaxe
@@ -119,7 +119,7 @@ tile.FergoTools:oreObsidian.name=Obsidian Ore
 tile.FergoTools:oreEmeraldCrystal.name=Emerald Crystal Ore
 tile.FergoTools:oreLapisCrystal.name=Lapis Crystal Ore
 tile.FergoTools:oreBronze.name=Bronze Ore
-tile.FergoTools:oreRedstoneCrystal.name=Redstone Crystal Ore
+tile.FergoTools:oreCrystalRed.name=Redstone Crystal Ore
 tile.FergoTools:oreAdamantium.name=Adamantium Ore
 
 tile.FergoTools:blockObsidian.name=Obsidian Block
@@ -145,7 +145,7 @@ item.FergoTools:ingotCoal.name=Coal Ingot
 item.FergoTools:ingotGlowstone.name=Glowstone Ingot
 item.FergoTools:ingotAdamantium.name=Adamantium Ingot
 item.FergoTools:silkGem.name=Silk Gem
-item.FergoTools:redstoneCrystal.name=Redstone Crystal
+item.FergoTools:redCrystal.name=Red Crystal
 item.FergoTools:expCollector.name=Experience Collector
 
 # Bows
@@ -161,31 +161,33 @@ item.FergoTools:bowAdamantium.name=Adamantium Bow
 # Furnaces
 tile.FergoTools:quartzFurnaceIdle.name=Quartz Furnace
 tile.FergoTools:obsidianFurnaceIdle.name=Obsidian Furnace
-tile.FergoTools:emeraldCrystalFurnaceIdle.name=Emerald Crystal Furnace
-tile.FergoTools:lapisCrystalFurnaceIdle.name=Lapis Crystal Furnace
+tile.FergoTools:emeraldFurnaceIdle.name=Emerald Furnace
+tile.FergoTools:lapisFurnaceIdle.name=Lapis Furnace
 tile.FergoTools:bronzeFurnaceIdle.name=Bronze Furnace
 tile.FergoTools:coalFurnaceIdle.name=Coal Furnace
 tile.FergoTools:glowstoneFurnaceIdle.name=Glowstone Furnace
 tile.FergoTools:adamantiumFurnaceIdle.name=Adamantium Furnace
 tile.FergoTools:silkFurnaceIdle.name=Silk Furnace
 tile.FergoTools:redstoneFurnaceIdle.name=Redstone Furnace
+tile.FergoTools:maceratorIdle.name=Macerator
 
 tile.FergoTools:quartzFurnaceActive.name=Quartz Furnace
 tile.FergoTools:obsidianFurnaceActive.name=Obsidian Furnace
-tile.FergoTools:emeraldCrystalFurnaceActive.name=Emerald Crystal Furnace
-tile.FergoTools:lapisCrystalFurnaceActive.name=Lapis Crystal Furnace
+tile.FergoTools:emeraldFurnaceActive.name=Emerald Furnace
+tile.FergoTools:lapisFurnaceActive.name=Lapis Furnace
 tile.FergoTools:bronzeFurnaceActive.name=Bronze Furnace
 tile.FergoTools:coalFurnaceActive.name=Coal Furnace
 tile.FergoTools:glowstoneFurnaceActive.name=Glowstone Furnace
 tile.FergoTools:adamantiumFurnaceActive.name=Adamantium Furnace
 tile.FergoTools:silkFurnaceActive.name=Silk Furnace
 tile.FergoTools:redstoneFurnaceActive.name=Redstone Furnace
+tile.FergoTools:maceratorActive.name=Macerator
 
 # Gui Containers
 container.FergoTools:quartzFurnace=Quartz Furnace
 container.FergoTools:obsidianFurnace=Obsidian Furnace
-container.FergoTools:emeraldCrystalFurnace=Emerald Crystal Furnace
-container.FergoTools:lapisCrystalFurnace=Lapis Crystal Furnace
+container.FergoTools:emeraldFurnace=Emerald Furnace
+container.FergoTools:lapisFurnace=Lapis Furnace
 container.FergoTools:bronzeFurnace=Bronze Furnace
 container.FergoTools:coalFurnace=Coal Furnace
 container.FergoTools:glowstoneFurnace=Glowstone Furnace

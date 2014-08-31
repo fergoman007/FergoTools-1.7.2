@@ -1,3 +1,12 @@
+ /*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package fergoman123.mods.fergotools;
 
 import cpw.mods.fml.common.Mod;
@@ -7,29 +16,13 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartedEvent;
-import fergoman123.mods.fergotools.command.CommandFergoTools;
-import fergoman123.mods.fergotools.command.FergoCommands;
-import fergoman123.mods.fergotools.config.ConfigHandler;
-import fergoman123.mods.fergotools.handler.FTEventHandler;
-import fergoman123.mods.fergotools.handler.RegHandler;
-import fergoman123.mods.fergotools.helper.LogHelper;
-import fergoman123.mods.fergotools.init.*;
-import fergoman123.mods.fergotools.reference.MetadataFT;
+import fergoman123.mods.fergotools.init.FergoToolsMod;
 import fergoman123.mods.fergotools.reference.ModInfo;
 import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
-import fergoman123.mods.fergoutil.command.FergoCommand;
+import fergoman123.mods.fergoutil.lib.ModConstants;
 import fergoman123.mods.fergoutil.proxy.IProxy;
-import fergoman123.mods.fergotools.reference.Strings.Messages;
-import net.minecraft.command.CommandHandler;
-import net.minecraft.command.ICommand;
-import net.minecraft.command.ServerCommandManager;
-import net.minecraft.server.MinecraftServer;
-import net.minecraftforge.client.ClientCommandHandler;
 
-@Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModInfo.dep, guiFactory = Reference.guiFactoryClass)
+@Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dependency, guiFactory = Reference.guiFactoryClass)
 public class FergoTools
 {
     @Instance(ModInfo.modid)
@@ -54,20 +47,5 @@ public class FergoTools
 	public void modsLoaded(FMLPostInitializationEvent evt)
     {
         FergoToolsMod.modsLoaded(evt);
-    }
-
-    @EventHandler
-    public void serverStarted(FMLServerStartedEvent evt)
-    {
-        ServerCommandManager manager = (ServerCommandManager) MinecraftServer.getServer().getCommandManager();
-        if (FergoCommands.commands != null)
-        {
-            for (ICommand cmd : FergoCommands.commands)
-            {
-                manager.registerCommand(cmd);
-            }
-
-            manager.registerCommand(new CommandFergoTools());
-        }
     }
 }

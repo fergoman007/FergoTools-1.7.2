@@ -67,8 +67,8 @@ public class Strings
     {
         public static final String quartzFurnace = "quartzFurnace";
         public static final String obsidianFurnace = "obsidianFurnace";
-        public static final String emeraldCrystalFurnace = "emeraldCrystalFurnace";
-        public static final String lapisCrystalFurnace = "lapisCrystalFurnace";
+        public static final String emeraldFurnace = "emeraldFurnace";
+        public static final String lapisFurnace = "lapisFurnace";
         public static final String bronzeFurnace = "bronzeFurnace";
         public static final String coalFurnace = "coalFurnace";
         public static final String glowstoneFurnace = "glowstoneFurnace";
@@ -81,7 +81,7 @@ public class Strings
     public static final class Messages
     {
         public static final String preInitMessage = "Pre Initialising Mod";
-        public static final String initMessage = "Initialising Registration and Packet Handler";
+        public static final String initMessage = "Initialising Registration";
         public static final String postInitMessage = "Mod Loaded";
         public static final String serverStartedMessage = "Server Started";
     }

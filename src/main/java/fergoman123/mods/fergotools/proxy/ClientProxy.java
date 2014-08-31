@@ -1,13 +1,20 @@
 package fergoman123.mods.fergotools.proxy;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
-import fergoman123.mods.fergotools.client.settings.KeyBindings;
+import fergoman123.mods.fergotools.event.EventHandler;
+import fergoman123.mods.fergoutil.helper.RegisterHelper;
 
 public class ClientProxy extends CommonProxy
 {
 
     @Override
     public void registerKeyBindings() {
-        ClientRegistry.registerKeyBinding(KeyBindings.ftConfig);
+
+    }
+
+    @Override
+    public void registerEventHandlers()
+    {
+        RegisterHelper.registerEvent(new EventHandler());
+
     }
 }

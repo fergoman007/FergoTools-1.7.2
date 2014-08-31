@@ -1,3 +1,12 @@
+ /*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package fergoman123.mods.fergotools.util.item;
 
 import fergoman123.mods.fergotools.config.ConfigHandler;
@@ -46,7 +55,7 @@ public class ToolArmorMaterials {
         bronze = ToolHelper.addToolMaterial(Strings.Material.bronzeToolMat, Ints.Tools.harvestLvl, Ints.Tools.bronzeMaxDamage, Ints.Tools.bronzeEff, Ints.Tools.bronzeDamage, ConfigHandler.enchantability);
         coal = ToolHelper.addToolMaterial(Strings.Material.coalToolMat, Ints.Tools.harvestLvl, Ints.Tools.coalMaxDamage, Ints.Tools.coalEff, Ints.Tools.coalDamage, ConfigHandler.enchantability);
         glowstone = ToolHelper.addToolMaterial(Strings.Material.glowstoneToolMat, Ints.Tools.harvestLvl, Ints.Tools.glowstoneMaxDamage, Ints.Tools.glowstoneEff, Ints.Tools.glowstoneDamage, ConfigHandler.enchantability);
-        adamantium = ToolHelper.addToolMaterial(Strings.Material.adamantiumToolMat, Ints.Tools.harvestLvl, (int)Double.POSITIVE_INFINITY, Ints.Tools.adamantiumEff, Ints.Tools.adamantiumDamage, ConfigHandler.enchantability);
+        adamantium = ToolHelper.addToolMaterial(Strings.Material.adamantiumToolMat, Ints.Tools.harvestLvl, Ints.Tools.adamantiumMaxDamage, Ints.Tools.adamantiumEff, Ints.Tools.adamantiumDamage, ConfigHandler.enchantability);
         donator = ToolHelper.addToolMaterial(Strings.Material.donatorToolMat, Ints.Tools.harvestLvl, Ints.Tools.donatorMaxDamage, Ints.Tools.donatorEff, Ints.Tools.donatorDamage, ConfigHandler.enchantability);
         silk = ToolHelper.addToolMaterial(Strings.Material.silkToolMat, Ints.Tools.harvestLvl, Ints.Tools.silkMaxDamage, Ints.Tools.silkEff, Ints.Tools.silkDamage, ConfigHandler.enchantability);
         redstone = ToolHelper.addToolMaterial(Strings.Material.redstoneToolMat, Ints.Tools.harvestLvl, Ints.Tools.redstoneMaxDamage, Ints.Tools.redstoneEff, Ints.Tools.redstoneDamage, ConfigHandler.enchantability);

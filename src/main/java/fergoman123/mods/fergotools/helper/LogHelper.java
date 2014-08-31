@@ -1,11 +1,12 @@
 package fergoman123.mods.fergotools.helper;
 
 import fergoman123.mods.fergotools.reference.ModInfo;
+import fergoman123.mods.fergoutil.logging.ILogLevel;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class LogHelper
+public class LogHelper implements ILogLevel
 {
     public static Logger logger = LogManager.getLogger(ModInfo.modid);
 
@@ -16,41 +17,41 @@ public class LogHelper
 
     public static void all(Object object)
     {
-        log(Level.ALL, object);
+        log(all, object);
     }
 
     public static void debug(Object object)
     {
-        log(Level.DEBUG, object);
+        log(debug, object);
     }
 
     public static void error(Object object)
     {
-        log(Level.ERROR, object);
+        log(error, object);
     }
 
     public static void fatal(Object object)
     {
-        log(Level.FATAL, object);
+        log(fatal, object);
     }
 
     public static void info(Object object)
     {
-        log(Level.INFO, object);
+        log(info, object);
     }
 
     public static void off(Object object)
     {
-        log(Level.OFF, object);
+        log(off, object);
     }
 
     public static void trace(Object object)
     {
-        log(Level.TRACE, object);
+        log(trace, object);
     }
 
     public static void warn(Object object)
     {
-        log(Level.WARN, object);
+        log(warn, object);
     }
 }

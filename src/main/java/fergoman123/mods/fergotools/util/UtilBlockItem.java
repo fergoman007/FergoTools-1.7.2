@@ -1,15 +1,18 @@
+ /*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package fergoman123.mods.fergotools.util;
 
-import fergoman123.mods.fergotools.block.furnace.*;
-import fergoman123.mods.fergotools.block.ore.*;
-import fergoman123.mods.fergotools.block.storage.*;
-import fergoman123.mods.fergotools.init.ModBlocks;
-import fergoman123.mods.fergoutil.helper.BlockHelper;
-import net.minecraft.item.Item;
+ import fergoman123.mods.fergotools.init.ModBlocks;
+ import fergoman123.mods.fergoutil.helper.BlockHelper;
+ import net.minecraft.item.Item;
 
-/**
- * Created by Fergoman123 on 15/05/2014.
- */
 public class UtilBlockItem {
 
     public static Item oreObsidian = BlockHelper.getItemFromBlock(ModBlocks.oreObsidian);

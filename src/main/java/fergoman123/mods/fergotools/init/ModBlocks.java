@@ -1,10 +1,20 @@
 package fergoman123.mods.fergotools.init;
 
 import fergoman123.mods.fergotools.block.BlockFergoGlass;
-import fergoman123.mods.fergotools.block.furnace.*;
 import fergoman123.mods.fergotools.block.ore.*;
 import fergoman123.mods.fergotools.block.storage.*;
 import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
+import fergoman123.mods.fergotools.furnaces.AdamantiumFurnace.BlockAdamantiumFurnace;
+import fergoman123.mods.fergotools.furnaces.BronzeFurnace.BlockBronzeFurnace;
+import fergoman123.mods.fergotools.furnaces.CoalFurnace.BlockCoalFurnace;
+import fergoman123.mods.fergotools.furnaces.EmeraldFurnace.BlockEmeraldFurnace;
+import fergoman123.mods.fergotools.furnaces.GlowstoneFurnace.BlockGlowstoneFurnace;
+import fergoman123.mods.fergotools.furnaces.LapisFurnace.BlockLapisFurnace;
+import fergoman123.mods.fergotools.furnaces.Macerator.BlockMacerator;
+import fergoman123.mods.fergotools.furnaces.ObsidianFurnace.BlockObsidianFurnace;
+import fergoman123.mods.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
+import fergoman123.mods.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFurnace;
+import fergoman123.mods.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import fergoman123.mods.fergotools.util.base.BlockGlassFT;
@@ -19,9 +29,7 @@ public class ModBlocks{
     public static final BlockFT oreLapisCrystal = new BlockOreLapisCrystal();
     public static final BlockFT oreBronze = new BlockOreBronze();
     public static final BlockFT oreAdamantium = new BlockOreAdamantium();
-    public static final BlockFT oreRedCrystal = new BlockOreRedCrystal();
-
-    public static final Block[] oreBlockList = new Block[]{oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreRedCrystal};
+    public static final BlockFT oreCrystalRed = new BlockOreRedCrystal();
 
     public static final BlockFT blockExperience = new BlockExperience();
     public static final BlockFT blockObsidian = new BlockObsidianStorage();
@@ -34,16 +42,12 @@ public class ModBlocks{
     public static final BlockFT blockSilkGem = new BlockSilkGem();
     public static final BlockFT blockRedstoneCrystal = new BlockRedstoneCrystal();
 
-    public static final Block[] storageBlockList = new Block[]{blockExperience, blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal};
-
     public static final BlockGlassFT blockFergoGlass = new BlockFergoGlass();
-
-    public static final Block[] glassList = new Block[]{blockFergoGlass};
 
     public static final Block quartzFurnaceIdle = new BlockQuartzFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block obsidianFurnaceIdle = new BlockObsidianFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block emeraldFurnaceIdle = new BlockEmeraldCrystalFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block lapisFurnaceIdle = new BlockLapisCrystalFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
+    public static final Block emeraldFurnaceIdle = new BlockEmeraldFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
+    public static final Block lapisFurnaceIdle = new BlockLapisFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block bronzeFurnaceIdle = new BlockBronzeFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block coalFurnaceIdle = new BlockCoalFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
@@ -52,25 +56,10 @@ public class ModBlocks{
     public static final Block redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block maceratorIdle = new BlockMacerator(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
 
-    public static final Block[] furnaceIdleList = new Block[]
-            {
-                    quartzFurnaceIdle,
-                    obsidianFurnaceIdle,
-                    emeraldFurnaceIdle,
-                    lapisFurnaceIdle,
-                    bronzeFurnaceIdle,
-                    coalFurnaceIdle,
-                    glowstoneFurnaceIdle,
-                    adamantiumFurnaceIdle,
-                    silkFurnaceIdle,
-                    redstoneFurnaceIdle,
-                    maceratorIdle
-            };
-
     public static final Block quartzFurnaceActive = new BlockQuartzFurnace(true).setLightLevel(0.9f);
     public static final Block obsidianFurnaceActive = new BlockObsidianFurnace(true).setLightLevel(0.9f);
-    public static final Block emeraldFurnaceActive = new BlockEmeraldCrystalFurnace(true).setLightLevel(0.9f);
-    public static final Block lapisFurnaceActive = new BlockLapisCrystalFurnace(true).setLightLevel(0.9f);
+    public static final Block emeraldFurnaceActive = new BlockEmeraldFurnace(true).setLightLevel(0.9f);
+    public static final Block lapisFurnaceActive = new BlockLapisFurnace(true).setLightLevel(0.9f);
     public static final Block bronzeFurnaceActive = new BlockBronzeFurnace(true).setLightLevel(0.9f);
     public static final Block coalFurnaceActive = new BlockCoalFurnace(true).setLightLevel(0.9f);
     public static final Block glowstoneFurnaceActive = new BlockGlowstoneFurnace(true).setLightLevel(0.9f);
@@ -79,31 +68,16 @@ public class ModBlocks{
     public static final Block redstoneFurnaceActive = new BlockRedstoneFurnace(true).setLightLevel(0.9f);
     public static final Block maceratorActive = new BlockMacerator(true).setLightLevel(0.9f);
 
-    public static final Block[] furnaceActiveList = new Block[]{
-                    quartzFurnaceActive,
-                    obsidianFurnaceActive,
-                    emeraldFurnaceActive,
-                    lapisFurnaceActive,
-                    bronzeFurnaceActive,
-                    coalFurnaceActive,
-                    glowstoneFurnaceActive,
-                    adamantiumFurnaceActive,
-                    silkFurnaceActive,
-                    redstoneFurnaceActive,
-                    maceratorActive
-            };
-
-    private static void initOre(){
+	public static void init()
+	{
         RegisterHelper.registerBlock(oreExperience, Names.Blocks.oreExperience);
         RegisterHelper.registerBlock(oreObsidian, Names.Blocks.oreObsidian);
         RegisterHelper.registerBlock(oreEmeraldCrystal, Names.Blocks.oreEmeraldCrystal);
         RegisterHelper.registerBlock(oreLapisCrystal, Names.Blocks.oreLapisCrystal);
         RegisterHelper.registerBlock(oreBronze, Names.Blocks.oreBronze);
         RegisterHelper.registerBlock(oreAdamantium, Names.Blocks.oreAdamantium);
-        RegisterHelper.registerBlock(oreRedCrystal, Names.Blocks.oreRedCrystal);
-    }
+        RegisterHelper.registerBlock(oreCrystalRed, Names.Blocks.oreCrystalRed);
 
-    private static void initStorageBlocks(){
         RegisterHelper.registerBlock(blockExperience, Names.Blocks.blockExperience);
         RegisterHelper.registerBlock(blockObsidian, Names.Blocks.blockObsidian);
         RegisterHelper.registerBlock(blockEmeraldCrystal, Names.Blocks.blockEmeraldCrystal);
@@ -114,19 +88,13 @@ public class ModBlocks{
         RegisterHelper.registerBlock(blockAdamantium, Names.Blocks.blockAdamantium);
         RegisterHelper.registerBlock(blockSilkGem, Names.Blocks.blockSilkGem);
         RegisterHelper.registerBlock(blockRedstoneCrystal, Names.Blocks.blockRedstoneCrystal);
-    }
 
-    private static void initGlass()
-    {
         RegisterHelper.registerBlock(blockFergoGlass, Names.Blocks.blockFergoGlass);
-    }
 
-    private static void initFurnaces()
-    {
         RegisterHelper.registerBlock(quartzFurnaceIdle, Names.Blocks.quartzFurnaceIdle);
         RegisterHelper.registerBlock(obsidianFurnaceIdle, Names.Blocks.obsidianFurnaceIdle);
-        RegisterHelper.registerBlock(emeraldFurnaceIdle, Names.Blocks.emeraldCrystalFurnaceIdle);
-        RegisterHelper.registerBlock(lapisFurnaceIdle, Names.Blocks.lapisCrystalFurnaceIdle);
+        RegisterHelper.registerBlock(emeraldFurnaceIdle, Names.Blocks.emeraldFurnaceIdle);
+        RegisterHelper.registerBlock(lapisFurnaceIdle, Names.Blocks.lapisFurnaceIdle);
         RegisterHelper.registerBlock(bronzeFurnaceIdle, Names.Blocks.bronzeFurnaceIdle);
         RegisterHelper.registerBlock(coalFurnaceIdle, Names.Blocks.coalFurnaceIdle);
         RegisterHelper.registerBlock(glowstoneFurnaceIdle, Names.Blocks.glowstoneFurnaceIdle);
@@ -137,8 +105,8 @@ public class ModBlocks{
 
         RegisterHelper.registerBlock(quartzFurnaceActive, Names.Blocks.quartzFurnaceActive);
         RegisterHelper.registerBlock(obsidianFurnaceActive, Names.Blocks.obsidianFurnaceActive);
-        RegisterHelper.registerBlock(emeraldFurnaceActive, Names.Blocks.emeraldCrystalFurnaceActive);
-        RegisterHelper.registerBlock(lapisFurnaceActive, Names.Blocks.lapisCrystalFurnaceActive);
+        RegisterHelper.registerBlock(emeraldFurnaceActive, Names.Blocks.emeraldFurnaceActive);
+        RegisterHelper.registerBlock(lapisFurnaceActive, Names.Blocks.lapisFurnaceActive);
         RegisterHelper.registerBlock(bronzeFurnaceActive, Names.Blocks.bronzeFurnaceActive);
         RegisterHelper.registerBlock(coalFurnaceActive, Names.Blocks.coalFurnaceActive);
         RegisterHelper.registerBlock(glowstoneFurnaceActive, Names.Blocks.glowstoneFurnaceActive);
@@ -146,14 +114,6 @@ public class ModBlocks{
         RegisterHelper.registerBlock(silkFurnaceActive, Names.Blocks.silkFurnaceActive);
         RegisterHelper.registerBlock(redstoneFurnaceActive, Names.Blocks.redstoneFurnaceActive);
         RegisterHelper.registerBlock(maceratorActive, Names.Blocks.maceratorActive);
-    }
-
-	public static void init()
-	{
-        initOre();
-        initStorageBlocks();
-        initGlass();
-        initFurnaces();
 	}
 
 

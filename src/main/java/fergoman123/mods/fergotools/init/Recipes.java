@@ -20,86 +20,86 @@ public class Recipes
         RecipeHelper.addShapelessRecipe(FTStacks.silkGem9, FTStacks.blockSilkGem);
 
 
-        RecipeHelper.addShapedRecipe(FTStacks.silkGem, UtilRecipeList.silkGem);
-        RecipeHelper.addShapedRecipe(FTStacks.expCollectorHalfStack, UtilRecipeList.expCollector);
+        RecipeHelper.addRecipe(FTStacks.silkGem, UtilRecipeList.silkGem);
+        RecipeHelper.addRecipe(FTStacks.expCollectorHalfStack, UtilRecipeList.expCollector);
 
-        RecipeHelper.addShapedRecipe(FTStacks.blockObsidian, UtilRecipeList.blockObsidian);
-        RecipeHelper.addShapedRecipe(FTStacks.blockEmeraldCrystal, UtilRecipeList.blockEmeraldCrystal);
-        RecipeHelper.addShapedRecipe(FTStacks.blockLapisCrystal, UtilRecipeList.blockLapisCrystal);
-        RecipeHelper.addShapedRecipe(FTStacks.blockBronze, UtilRecipeList.blockBronze);
-        RecipeHelper.addShapedRecipe(FTStacks.blockCoal, UtilRecipeList.blockCoal);
-        RecipeHelper.addShapedRecipe(FTStacks.blockGlowstone, UtilRecipeList.blockGlowstone);
-        RecipeHelper.addShapedRecipe(FTStacks.blockAdamantium, UtilRecipeList.blockAdamantium);
-        RecipeHelper.addShapedRecipe(FTStacks.blockExperience, UtilRecipeList.blockExperience);
-        RecipeHelper.addShapedRecipe(FTStacks.blockSilkGem, UtilRecipeList.blockSilkGem);
-        RecipeHelper.addShapedRecipe(FTStacks.blockRedstone, UtilRecipeList.blockRedstone);
+        RecipeHelper.addRecipe(FTStacks.blockObsidian, UtilRecipeList.blockObsidian);
+        RecipeHelper.addRecipe(FTStacks.blockEmeraldCrystal, UtilRecipeList.blockEmeraldCrystal);
+        RecipeHelper.addRecipe(FTStacks.blockLapisCrystal, UtilRecipeList.blockLapisCrystal);
+        RecipeHelper.addRecipe(FTStacks.blockBronze, UtilRecipeList.blockBronze);
+        RecipeHelper.addRecipe(FTStacks.blockCoal, UtilRecipeList.blockCoal);
+        RecipeHelper.addRecipe(FTStacks.blockGlowstone, UtilRecipeList.blockGlowstone);
+        RecipeHelper.addRecipe(FTStacks.blockAdamantium, UtilRecipeList.blockAdamantium);
+        RecipeHelper.addRecipe(FTStacks.blockExperience, UtilRecipeList.blockExperience);
+        RecipeHelper.addRecipe(FTStacks.blockSilkGem, UtilRecipeList.blockSilkGem);
+        RecipeHelper.addRecipe(FTStacks.blockRedstone, UtilRecipeList.blockRedstone);
 
-        RecipeHelper.addShapedRecipe(FTStacks.quartzPickaxe, UtilRecipeList.quartzPickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.quartzShovel, UtilRecipeList.quartzShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.quartzAxe, UtilRecipeList.quartzAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.quartzHoe, UtilRecipeList.quartzHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.quartzSword, UtilRecipeList.quartzSword);
+        RecipeHelper.addRecipe(FTStacks.quartzPickaxe, UtilRecipeList.quartzPickaxe);
+        RecipeHelper.addRecipe(FTStacks.quartzShovel, UtilRecipeList.quartzShovel);
+        RecipeHelper.addRecipe(FTStacks.quartzAxe, UtilRecipeList.quartzAxe);
+        RecipeHelper.addRecipe(FTStacks.quartzHoe, UtilRecipeList.quartzHoe);
+        RecipeHelper.addRecipe(FTStacks.quartzSword, UtilRecipeList.quartzSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianPickaxe, UtilRecipeList.obsidianPickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianShovel, UtilRecipeList.obsidianShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianAxe, UtilRecipeList.obsidianAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianHoe, UtilRecipeList.obsidianHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianSword, UtilRecipeList.obsidianSword);
+        RecipeHelper.addRecipe(FTStacks.obsidianPickaxe, UtilRecipeList.obsidianPickaxe);
+        RecipeHelper.addRecipe(FTStacks.obsidianShovel, UtilRecipeList.obsidianShovel);
+        RecipeHelper.addRecipe(FTStacks.obsidianAxe, UtilRecipeList.obsidianAxe);
+        RecipeHelper.addRecipe(FTStacks.obsidianHoe, UtilRecipeList.obsidianHoe);
+        RecipeHelper.addRecipe(FTStacks.obsidianSword, UtilRecipeList.obsidianSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldPickaxe, UtilRecipeList.emeraldPickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldShovel, UtilRecipeList.emeraldShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldAxe, UtilRecipeList.emeraldAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldHoe, UtilRecipeList.emeraldHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldSword, UtilRecipeList.emeraldSword);
+        RecipeHelper.addRecipe(FTStacks.emeraldPickaxe, UtilRecipeList.emeraldPickaxe);
+        RecipeHelper.addRecipe(FTStacks.emeraldShovel, UtilRecipeList.emeraldShovel);
+        RecipeHelper.addRecipe(FTStacks.emeraldAxe, UtilRecipeList.emeraldAxe);
+        RecipeHelper.addRecipe(FTStacks.emeraldHoe, UtilRecipeList.emeraldHoe);
+        RecipeHelper.addRecipe(FTStacks.emeraldSword, UtilRecipeList.emeraldSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.lapisPickaxe, UtilRecipeList.lapisPickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisShovel, UtilRecipeList.lapisShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisAxe, UtilRecipeList.lapisAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisHoe, UtilRecipeList.lapisHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisSword, UtilRecipeList.lapisSword);
+        RecipeHelper.addRecipe(FTStacks.lapisPickaxe, UtilRecipeList.lapisPickaxe);
+        RecipeHelper.addRecipe(FTStacks.lapisShovel, UtilRecipeList.lapisShovel);
+        RecipeHelper.addRecipe(FTStacks.lapisAxe, UtilRecipeList.lapisAxe);
+        RecipeHelper.addRecipe(FTStacks.lapisHoe, UtilRecipeList.lapisHoe);
+        RecipeHelper.addRecipe(FTStacks.lapisSword, UtilRecipeList.lapisSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.bronzePickaxe, UtilRecipeList.bronzePickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeShovel, UtilRecipeList.bronzeShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeAxe, UtilRecipeList.bronzeAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeHoe, UtilRecipeList.bronzeHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeSword, UtilRecipeList.bronzeSword);
+        RecipeHelper.addRecipe(FTStacks.bronzePickaxe, UtilRecipeList.bronzePickaxe);
+        RecipeHelper.addRecipe(FTStacks.bronzeShovel, UtilRecipeList.bronzeShovel);
+        RecipeHelper.addRecipe(FTStacks.bronzeAxe, UtilRecipeList.bronzeAxe);
+        RecipeHelper.addRecipe(FTStacks.bronzeHoe, UtilRecipeList.bronzeHoe);
+        RecipeHelper.addRecipe(FTStacks.bronzeSword, UtilRecipeList.bronzeSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.coalPickaxe, UtilRecipeList.coalPickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.coalShovel, UtilRecipeList.coalShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.coalAxe, UtilRecipeList.coalAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.coalHoe, UtilRecipeList.coalHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.coalSword, UtilRecipeList.coalSword);
+        RecipeHelper.addRecipe(FTStacks.coalPickaxe, UtilRecipeList.coalPickaxe);
+        RecipeHelper.addRecipe(FTStacks.coalShovel, UtilRecipeList.coalShovel);
+        RecipeHelper.addRecipe(FTStacks.coalAxe, UtilRecipeList.coalAxe);
+        RecipeHelper.addRecipe(FTStacks.coalHoe, UtilRecipeList.coalHoe);
+        RecipeHelper.addRecipe(FTStacks.coalSword, UtilRecipeList.coalSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumPickaxe, UtilRecipeList.adamantiumPickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumShovel, UtilRecipeList.adamantiumShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumAxe, UtilRecipeList.adamantiumAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumHoe, UtilRecipeList.adamantiumHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumSword, UtilRecipeList.adamantiumSword);
+        RecipeHelper.addRecipe(FTStacks.adamantiumPickaxe, UtilRecipeList.adamantiumPickaxe);
+        RecipeHelper.addRecipe(FTStacks.adamantiumShovel, UtilRecipeList.adamantiumShovel);
+        RecipeHelper.addRecipe(FTStacks.adamantiumAxe, UtilRecipeList.adamantiumAxe);
+        RecipeHelper.addRecipe(FTStacks.adamantiumHoe, UtilRecipeList.adamantiumHoe);
+        RecipeHelper.addRecipe(FTStacks.adamantiumSword, UtilRecipeList.adamantiumSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.glowstonePickaxe, UtilRecipeList.glowstonePickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneShovel, UtilRecipeList.glowstoneShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneAxe, UtilRecipeList.glowstoneAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneHoe, UtilRecipeList.glowstoneHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneSword, UtilRecipeList.glowstoneSword);
+        RecipeHelper.addRecipe(FTStacks.glowstonePickaxe, UtilRecipeList.glowstonePickaxe);
+        RecipeHelper.addRecipe(FTStacks.glowstoneShovel, UtilRecipeList.glowstoneShovel);
+        RecipeHelper.addRecipe(FTStacks.glowstoneAxe, UtilRecipeList.glowstoneAxe);
+        RecipeHelper.addRecipe(FTStacks.glowstoneHoe, UtilRecipeList.glowstoneHoe);
+        RecipeHelper.addRecipe(FTStacks.glowstoneSword, UtilRecipeList.glowstoneSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.silkPickaxe, UtilRecipeList.silkPickaxe);
-        RecipeHelper.addShapedRecipe(FTStacks.silkShovel, UtilRecipeList.silkShovel);
-        RecipeHelper.addShapedRecipe(FTStacks.silkAxe, UtilRecipeList.silkAxe);
-        RecipeHelper.addShapedRecipe(FTStacks.silkHoe, UtilRecipeList.silkHoe);
-        RecipeHelper.addShapedRecipe(FTStacks.silkSword, UtilRecipeList.silkSword);
+        RecipeHelper.addRecipe(FTStacks.silkPickaxe, UtilRecipeList.silkPickaxe);
+        RecipeHelper.addRecipe(FTStacks.silkShovel, UtilRecipeList.silkShovel);
+        RecipeHelper.addRecipe(FTStacks.silkAxe, UtilRecipeList.silkAxe);
+        RecipeHelper.addRecipe(FTStacks.silkHoe, UtilRecipeList.silkHoe);
+        RecipeHelper.addRecipe(FTStacks.silkSword, UtilRecipeList.silkSword);
 
-        RecipeHelper.addShapedRecipe(FTStacks.quartzFurnaceIdle, UtilRecipeList.quartzFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianFurnaceIdle, UtilRecipeList.obsidianFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldCrystalFurnaceIdle, UtilRecipeList.emeraldCrystalFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisCrystalFurnaceIdle, UtilRecipeList.lapisCrystalFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeFurnaceIdle, UtilRecipeList.bronzeFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumFurnaceIdle, UtilRecipeList.adamantiumFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.coalFurnaceIdle, UtilRecipeList.coalFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneFurnaceIdle, UtilRecipeList.glowstoneFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumFurnaceIdle, UtilRecipeList.adamantiumFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.silkFurnaceIdle, UtilRecipeList.silkFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.redstoneFurnaceIdle, UtilRecipeList.redstoneFurnace);
-        RecipeHelper.addShapedRecipe(FTStacks.maceratorIdle, UtilRecipeList.macerator);
+        RecipeHelper.addRecipe(FTStacks.quartzFurnaceIdle, UtilRecipeList.quartzFurnace);
+        RecipeHelper.addRecipe(FTStacks.obsidianFurnaceIdle, UtilRecipeList.obsidianFurnace);
+        RecipeHelper.addRecipe(FTStacks.emeraldCrystalFurnaceIdle, UtilRecipeList.emeraldCrystalFurnace);
+        RecipeHelper.addRecipe(FTStacks.lapisCrystalFurnaceIdle, UtilRecipeList.lapisCrystalFurnace);
+        RecipeHelper.addRecipe(FTStacks.bronzeFurnaceIdle, UtilRecipeList.bronzeFurnace);
+        RecipeHelper.addRecipe(FTStacks.adamantiumFurnaceIdle, UtilRecipeList.adamantiumFurnace);
+        RecipeHelper.addRecipe(FTStacks.coalFurnaceIdle, UtilRecipeList.coalFurnace);
+        RecipeHelper.addRecipe(FTStacks.glowstoneFurnaceIdle, UtilRecipeList.glowstoneFurnace);
+        RecipeHelper.addRecipe(FTStacks.adamantiumFurnaceIdle, UtilRecipeList.adamantiumFurnace);
+        RecipeHelper.addRecipe(FTStacks.silkFurnaceIdle, UtilRecipeList.silkFurnace);
+        RecipeHelper.addRecipe(FTStacks.redstoneFurnaceIdle, UtilRecipeList.redstoneFurnace);
+        RecipeHelper.addRecipe(FTStacks.maceratorIdle, UtilRecipeList.macerator);
 
         RecipeHelper.addBlockSmelting(ModBlocks.oreObsidian, FTStacks.obsidianIngot, 2.5f);
         RecipeHelper.addBlockSmelting(ModBlocks.oreEmeraldCrystal, FTStacks.emeraldCrystal, 2.5f);
@@ -109,58 +109,58 @@ public class Recipes
         RecipeHelper.addBlockSmelting(Blocks.glowstone, FTStacks.glowstoneIngot, 2.5f);
         RecipeHelper.addBlockSmelting(ModBlocks.oreAdamantium, FTStacks.adamantiumIngot, 2.5f);
         RecipeHelper.addBlockSmelting(ModBlocks.oreExperience, FTStacks.expShard5, 2.5f);
-        RecipeHelper.addBlockSmelting(ModBlocks.oreRedCrystal, FTStacks.redCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(ModBlocks.oreCrystalRed, FTStacks.redCrystal, 2.5f);
 
 
 
-        RecipeHelper.addShapedRecipe(FTStacks.quartzHelmet, UtilRecipeList.quartzHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.quartzChestplate, UtilRecipeList.quartzChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.quartzLeggings, UtilRecipeList.quartzLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.quartzBoots, UtilRecipeList.quartzBoots);
+        RecipeHelper.addRecipe(FTStacks.quartzHelmet, UtilRecipeList.quartzHelmet);
+        RecipeHelper.addRecipe(FTStacks.quartzChestplate, UtilRecipeList.quartzChestplate);
+        RecipeHelper.addRecipe(FTStacks.quartzLeggings, UtilRecipeList.quartzLeggings);
+        RecipeHelper.addRecipe(FTStacks.quartzBoots, UtilRecipeList.quartzBoots);
 
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianHelmet, UtilRecipeList.obsidianHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianChestplate, UtilRecipeList.obsidianChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianLeggings, UtilRecipeList.obsidianLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianBoots, UtilRecipeList.obsidianBoots);
+        RecipeHelper.addRecipe(FTStacks.obsidianHelmet, UtilRecipeList.obsidianHelmet);
+        RecipeHelper.addRecipe(FTStacks.obsidianChestplate, UtilRecipeList.obsidianChestplate);
+        RecipeHelper.addRecipe(FTStacks.obsidianLeggings, UtilRecipeList.obsidianLeggings);
+        RecipeHelper.addRecipe(FTStacks.obsidianBoots, UtilRecipeList.obsidianBoots);
 
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldHelmet, UtilRecipeList.emeraldHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldChestplate, UtilRecipeList.emeraldChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldLeggings, UtilRecipeList.emeraldLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldBoots, UtilRecipeList.emeraldBoots);
+        RecipeHelper.addRecipe(FTStacks.emeraldHelmet, UtilRecipeList.emeraldHelmet);
+        RecipeHelper.addRecipe(FTStacks.emeraldChestplate, UtilRecipeList.emeraldChestplate);
+        RecipeHelper.addRecipe(FTStacks.emeraldLeggings, UtilRecipeList.emeraldLeggings);
+        RecipeHelper.addRecipe(FTStacks.emeraldBoots, UtilRecipeList.emeraldBoots);
 
-        RecipeHelper.addShapedRecipe(FTStacks.lapisHelmet, UtilRecipeList.lapisHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisChestplate, UtilRecipeList.lapisChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisLeggings, UtilRecipeList.lapisLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisBoots, UtilRecipeList.lapisBoots);
+        RecipeHelper.addRecipe(FTStacks.lapisHelmet, UtilRecipeList.lapisHelmet);
+        RecipeHelper.addRecipe(FTStacks.lapisChestplate, UtilRecipeList.lapisChestplate);
+        RecipeHelper.addRecipe(FTStacks.lapisLeggings, UtilRecipeList.lapisLeggings);
+        RecipeHelper.addRecipe(FTStacks.lapisBoots, UtilRecipeList.lapisBoots);
 
 
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeHelmet, UtilRecipeList.bronzeHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeChestplate, UtilRecipeList.bronzeChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeLeggings, UtilRecipeList.bronzeLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeBoots, UtilRecipeList.bronzeBoots);
+        RecipeHelper.addRecipe(FTStacks.bronzeHelmet, UtilRecipeList.bronzeHelmet);
+        RecipeHelper.addRecipe(FTStacks.bronzeChestplate, UtilRecipeList.bronzeChestplate);
+        RecipeHelper.addRecipe(FTStacks.bronzeLeggings, UtilRecipeList.bronzeLeggings);
+        RecipeHelper.addRecipe(FTStacks.bronzeBoots, UtilRecipeList.bronzeBoots);
 
-        RecipeHelper.addShapedRecipe(FTStacks.coalHelmet, UtilRecipeList.coalHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.coalChestplate, UtilRecipeList.coalChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.coalLeggings, UtilRecipeList.coalLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.coalBoots, UtilRecipeList.coalBoots);
+        RecipeHelper.addRecipe(FTStacks.coalHelmet, UtilRecipeList.coalHelmet);
+        RecipeHelper.addRecipe(FTStacks.coalChestplate, UtilRecipeList.coalChestplate);
+        RecipeHelper.addRecipe(FTStacks.coalLeggings, UtilRecipeList.coalLeggings);
+        RecipeHelper.addRecipe(FTStacks.coalBoots, UtilRecipeList.coalBoots);
 
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneHelmet, UtilRecipeList.glowstoneHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneChestplate, UtilRecipeList.glowstoneChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneLeggings, UtilRecipeList.glowstoneLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneBoots, UtilRecipeList.glowstoneBoots);
+        RecipeHelper.addRecipe(FTStacks.glowstoneHelmet, UtilRecipeList.glowstoneHelmet);
+        RecipeHelper.addRecipe(FTStacks.glowstoneChestplate, UtilRecipeList.glowstoneChestplate);
+        RecipeHelper.addRecipe(FTStacks.glowstoneLeggings, UtilRecipeList.glowstoneLeggings);
+        RecipeHelper.addRecipe(FTStacks.glowstoneBoots, UtilRecipeList.glowstoneBoots);
 
-        RecipeHelper.addShapedRecipe(FTStacks.redstoneHelmet, UtilRecipeList.redstoneHelmet);
-        RecipeHelper.addShapedRecipe(FTStacks.redstoneChestplate, UtilRecipeList.redstoneChestplate);
-        RecipeHelper.addShapedRecipe(FTStacks.redstoneLeggings, UtilRecipeList.redstoneLeggings);
-        RecipeHelper.addShapedRecipe(FTStacks.redstoneBoots, UtilRecipeList.redstoneBoots);
+        RecipeHelper.addRecipe(FTStacks.redstoneHelmet, UtilRecipeList.redstoneHelmet);
+        RecipeHelper.addRecipe(FTStacks.redstoneChestplate, UtilRecipeList.redstoneChestplate);
+        RecipeHelper.addRecipe(FTStacks.redstoneLeggings, UtilRecipeList.redstoneLeggings);
+        RecipeHelper.addRecipe(FTStacks.redstoneBoots, UtilRecipeList.redstoneBoots);
 
-        RecipeHelper.addShapedRecipe(FTStacks.quartzBow, UtilRecipeList.quartzBow);
-        RecipeHelper.addShapedRecipe(FTStacks.obsidianBow, UtilRecipeList.obsidianBow);
-        RecipeHelper.addShapedRecipe(FTStacks.emeraldBow, UtilRecipeList.emeraldBow);
-        RecipeHelper.addShapedRecipe(FTStacks.lapisBow, UtilRecipeList.lapisBow);
-        RecipeHelper.addShapedRecipe(FTStacks.bronzeBow, UtilRecipeList.bronzeBow);
-        RecipeHelper.addShapedRecipe(FTStacks.coalBow, UtilRecipeList.coalBow);
-        RecipeHelper.addShapedRecipe(FTStacks.glowstoneBow, UtilRecipeList.glowstoneBow);
-        RecipeHelper.addShapedRecipe(FTStacks.adamantiumBow, UtilRecipeList.adamantiumBow);
+        RecipeHelper.addRecipe(FTStacks.quartzBow, UtilRecipeList.quartzBow);
+        RecipeHelper.addRecipe(FTStacks.obsidianBow, UtilRecipeList.obsidianBow);
+        RecipeHelper.addRecipe(FTStacks.emeraldBow, UtilRecipeList.emeraldBow);
+        RecipeHelper.addRecipe(FTStacks.lapisBow, UtilRecipeList.lapisBow);
+        RecipeHelper.addRecipe(FTStacks.bronzeBow, UtilRecipeList.bronzeBow);
+        RecipeHelper.addRecipe(FTStacks.coalBow, UtilRecipeList.coalBow);
+        RecipeHelper.addRecipe(FTStacks.glowstoneBow, UtilRecipeList.glowstoneBow);
+        RecipeHelper.addRecipe(FTStacks.adamantiumBow, UtilRecipeList.adamantiumBow);
     }
 }

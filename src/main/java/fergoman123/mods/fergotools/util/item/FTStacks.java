@@ -1,3 +1,12 @@
+ /*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package fergoman123.mods.fergotools.util.item;
 
 import fergoman123.mods.fergotools.init.ModBlocks;
@@ -58,7 +67,7 @@ public class FTStacks {
     public static final ItemStack oreBronze = new ItemStack(ModBlocks.oreBronze);
     public static final ItemStack oreExperience = new ItemStack(ModBlocks.oreExperience);
     public static final ItemStack oreAdamantium = new ItemStack(ModBlocks.oreAdamantium);
-    public static final ItemStack oreRedstoneCrystal = new ItemStack(ModBlocks.oreRedCrystal);
+    public static final ItemStack oreRedstoneCrystal = new ItemStack(ModBlocks.oreCrystalRed);
 
     public static final ItemStack quartzPickaxe = new ItemStack(ModItems.quartzPickaxe);
     public static final ItemStack quartzShovel = new ItemStack(ModItems.quartzShovel);

@@ -1,10 +1,28 @@
+ /*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package fergoman123.mods.fergotools.util;
 
 import cpw.mods.fml.common.network.IGuiHandler;
-import fergoman123.mods.fergotools.gui.*;
-import fergoman123.mods.fergotools.gui.container.*;
+import fergoman123.mods.fergotools.furnaces.QuartzFurnace.*;
+import fergoman123.mods.fergotools.furnaces.ObsidianFurnace.*;
+import fergoman123.mods.fergotools.furnaces.EmeraldFurnace.*;
+import fergoman123.mods.fergotools.furnaces.LapisFurnace.*;
+import fergoman123.mods.fergotools.furnaces.BronzeFurnace.*;
+import fergoman123.mods.fergotools.furnaces.CoalFurnace.*;
+import fergoman123.mods.fergotools.furnaces.GlowstoneFurnace.*;
+import fergoman123.mods.fergotools.furnaces.AdamantiumFurnace.*;
+import fergoman123.mods.fergotools.furnaces.SilkFurnace.*;
+import fergoman123.mods.fergotools.furnaces.RedstoneFurnace.*;
+import fergoman123.mods.fergotools.furnaces.Macerator.*;
+
 import fergoman123.mods.fergotools.reference.GuiIds;
-import fergoman123.mods.fergotools.tileentity.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.world.World;
@@ -27,13 +45,13 @@ public class GuiHandler  implements IGuiHandler
         }
         else if (id == GuiIds.emeraldCrystalFurnace.ordinal())
         {
-            TileEntityEmeraldCrystalFurnace emeraldCrystalFurnace = (TileEntityEmeraldCrystalFurnace)world.getTileEntity(x, y, z);
-            return new ContainerEmeraldCrystalFurnace(inventory, emeraldCrystalFurnace);
+            TileEntityEmeraldFurnace emeraldCrystalFurnace = (TileEntityEmeraldFurnace)world.getTileEntity(x, y, z);
+            return new ContainerEmeraldFurnace(inventory, emeraldCrystalFurnace);
         }
         else if (id == GuiIds.lapisCrystalFurnace.ordinal())
         {
-            TileEntityLapisCrystalFurnace lapisCrystalFurnace = (TileEntityLapisCrystalFurnace)world.getTileEntity(x, y, z);
-            return new ContainerLapisCrystalFurnace(inventory, lapisCrystalFurnace);
+            TileEntityLapisFurnace lapisCrystalFurnace = (TileEntityLapisFurnace)world.getTileEntity(x, y, z);
+            return new ContainerLapisFurnace(inventory, lapisCrystalFurnace);
         }
         else if (id == GuiIds.bronzeFurnace.ordinal())
         {
@@ -89,13 +107,13 @@ public class GuiHandler  implements IGuiHandler
         }
         else if (id == GuiIds.emeraldCrystalFurnace.ordinal())
         {
-            TileEntityEmeraldCrystalFurnace emeraldCrystalFurnace = (TileEntityEmeraldCrystalFurnace)world.getTileEntity(x, y, z);
-            return new GuiEmeraldCrystalFurnace(inventory, emeraldCrystalFurnace);
+            TileEntityEmeraldFurnace emeraldCrystalFurnace = (TileEntityEmeraldFurnace)world.getTileEntity(x, y, z);
+            return new GuiEmeraldFurnace(inventory, emeraldCrystalFurnace);
         }
         else if (id == GuiIds.lapisCrystalFurnace.ordinal())
         {
-            TileEntityLapisCrystalFurnace lapisCrystalFurnace = (TileEntityLapisCrystalFurnace)world.getTileEntity(x, y, z);
-            return new GuiLapisCrystalFurnace(inventory, lapisCrystalFurnace);
+            TileEntityLapisFurnace lapisCrystalFurnace = (TileEntityLapisFurnace)world.getTileEntity(x, y, z);
+            return new GuiLapisFurnace(inventory, lapisCrystalFurnace);
         }
         else if (id == GuiIds.bronzeFurnace.ordinal())
         {

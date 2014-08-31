@@ -22,7 +22,7 @@ public class ItemQuartzShears extends ItemShearsFT implements ITooltipItem{
     {
         if (kb.isKeyDown(kb.KEY_LSHIFT) || kb.isKeyDown(kb.KEY_RSHIFT))
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + " " + stack.getItemDamageForDisplay());
+            list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + " " + stack.getItemDamageForDisplay() + "/" + ToolArmorMaterials.quartz.getMaxUses());
         }
         else
         {

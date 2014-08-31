@@ -10,7 +10,6 @@ public class ModInfo {
     public static final String versionMain = "1.7.10-2.0";
     public static final String version = "@version@";
     public static final String author = "Fergoman123";
-    public static final String dep = "required-after:FergoUtil";
     public static final List<String> authorList = Arrays.asList(author);
     public static final String url = "fergoman123.github.io";
     public static final String updateUrl = "fergoman123.github.io/fergotools.html";

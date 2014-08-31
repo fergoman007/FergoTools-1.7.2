@@ -1,3 +1,12 @@
+ /*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package fergoman123.mods.fergotools.handler;
 
 import fergoman123.mods.fergotools.FergoTools;
@@ -27,7 +36,7 @@ public class RegHandler {
         RegisterHelper.registerOre(Names.Blocks.oreBronze, ModBlocks.oreBronze);
         RegisterHelper.registerOre(Names.Blocks.oreExperience, ModBlocks.oreExperience);
         RegisterHelper.registerOre(Names.Blocks.oreAdamantium, ModBlocks.oreAdamantium);
-        RegisterHelper.registerOre(Names.Blocks.oreRedCrystal, ModBlocks.oreRedCrystal);
+        RegisterHelper.registerOre(Names.Blocks.oreCrystalRed, ModBlocks.oreCrystalRed);
     }
 }
 

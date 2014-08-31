@@ -23,7 +23,7 @@ public class Ints
         public static final int coalArmorMaxDamage = 3500;
         public static final int glowstoneArmorMaxDamage = 4000;
         public static final int redstoneArmorMaxDamage = 620;
-        public static final int adamantiumArmorMaxDamage = 999999999;
+        public static final int adamantiumArmorMaxDamage = (int)Double.POSITIVE_INFINITY;
     }
 
     public static final class Tools
@@ -37,6 +37,7 @@ public class Ints
         public static final int coalMaxDamage = 1900;
         public static final int silkMaxDamage = 2500;
         public static final int redstoneMaxDamage = 750;
+        public static final int adamantiumMaxDamage = (int)Double.POSITIVE_INFINITY;
 
         public static final int donatorMaxDamage = 20000;
         public static final int donatorDamage = 10;

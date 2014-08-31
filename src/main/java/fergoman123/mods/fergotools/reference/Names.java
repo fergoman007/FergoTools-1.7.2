@@ -12,7 +12,9 @@ public class Names
         public static final String oreLapisCrystal = "oreLapisCrystal";
         public static final String oreBronze = "oreBronze";
         public static final String oreAdamantium = "oreAdamantium";
-        public static final String oreRedCrystal = "oreRedCrystal";
+        public static final String oreCrystalRed = "oreCrystalRed";
+
+        public static final String[] oreList = {oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreCrystalRed};
 
         public static final String blockExperience = "blockExperience";
         public static final String blockObsidian = "blockObsidian";
@@ -44,11 +46,11 @@ public class Names
         public static final String obsidianFurnaceIdle = "obsidianFurnaceIdle";
         public static final String obsidianFurnaceActive = "obsidianFurnaceActive";
 
-        public static final String emeraldCrystalFurnaceIdle = "emeraldCrystalFurnaceIdle";
-        public static final String emeraldCrystalFurnaceActive = "emeraldCrystalFurnaceActive";
+        public static final String emeraldFurnaceIdle = "emeraldFurnaceIdle";
+        public static final String emeraldFurnaceActive = "EmeraldFurnaceActive";
 
-        public static final String lapisCrystalFurnaceIdle = "lapisCrystalFurnaceIdle";
-        public static final String lapisCrystalFurnaceActive = "lapisCrystalFurnaceActive";
+        public static final String lapisFurnaceIdle = "lapisFurnaceIdle";
+        public static final String lapisFurnaceActive = "lapisFurnaceActive";
 
         public static final String bronzeFurnaceIdle = "bronzeFurnaceIdle";
         public static final String bronzeFurnaceActive = "bronzeFurnaceActive";
@@ -230,6 +232,8 @@ public class Names
         public static final String silkShears = "silkShears";
         public static final String redstoneShears = "redstoneShears";
 
+        public static final String ftDebug = "ftDebug";
+
         public static final String[] donator = {};
     }
 
@@ -246,8 +250,8 @@ public class Names
 
         public static final String containerQuartzFurnace = containerPrefix + "quartzFurnace";
         public static final String containerObsidianFurnace = containerPrefix + "obsidianFurnace";
-        public static final String containerEmeraldCrystalFurnace = containerPrefix + "emeraldCrystalFurnace";
-        public static final String containerLapisCrystalFurnace = containerPrefix + "lapisCrystalFurnace";
+        public static final String containerEmeraldFurnace = containerPrefix + "emeraldFurnace";
+        public static final String containerLapisFurnace = containerPrefix + "lapisFurnace";
         public static final String containerBronzeFurnace = containerPrefix + "bronzeFurnace";
         public static final String containerCoalFurnace = containerPrefix + "coalFurnace";
         public static final String containerGlowstoneFurnace = containerPrefix + "glowstoneFurnace";

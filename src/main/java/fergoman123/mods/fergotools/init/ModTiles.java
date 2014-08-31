@@ -1,7 +1,18 @@
 package fergoman123.mods.fergotools.init;
 
+import fergoman123.mods.fergotools.furnaces.QuartzFurnace.*;
+import fergoman123.mods.fergotools.furnaces.ObsidianFurnace.*;
+import fergoman123.mods.fergotools.furnaces.EmeraldFurnace.*;
+import fergoman123.mods.fergotools.furnaces.LapisFurnace.*;
+import fergoman123.mods.fergotools.furnaces.BronzeFurnace.*;
+import fergoman123.mods.fergotools.furnaces.CoalFurnace.*;
+import fergoman123.mods.fergotools.furnaces.GlowstoneFurnace.*;
+import fergoman123.mods.fergotools.furnaces.AdamantiumFurnace.*;
+import fergoman123.mods.fergotools.furnaces.SilkFurnace.*;
+import fergoman123.mods.fergotools.furnaces.RedstoneFurnace.*;
+import fergoman123.mods.fergotools.furnaces.Macerator.*;
+
 import fergoman123.mods.fergotools.reference.Strings;
-import fergoman123.mods.fergotools.tileentity.*;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import net.minecraft.tileentity.TileEntity;
 
@@ -9,8 +20,8 @@ public class ModTiles {
 
     public static Class<? extends TileEntity> quartzFurnaceClass = TileEntityQuartzFurnace.class;
     public static Class<? extends TileEntity> obsidianFurnaceClass = TileEntityObsidianFurnace.class;
-    public static Class<? extends TileEntity> emeraldCrystalFurnaceClass = TileEntityEmeraldCrystalFurnace.class;
-    public static Class<? extends TileEntity> lapisCrystalClass = TileEntityLapisCrystalFurnace.class;
+    public static Class<? extends TileEntity> emeraldCrystalFurnaceClass = TileEntityEmeraldFurnace.class;
+    public static Class<? extends TileEntity> lapisCrystalClass = TileEntityLapisFurnace.class;
     public static Class<? extends TileEntity> bronzeFurnaceClass = TileEntityBronzeFurnace.class;
     public static Class<? extends TileEntity> coalFurnaceClass = TileEntityCoalFurnace.class;
     public static Class<? extends TileEntity> glowstoneFurnaceClass = TileEntityGlowstoneFurnace.class;
