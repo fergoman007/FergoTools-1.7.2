@@ -144,23 +144,6 @@ public class Names
         public static final String redstoneCrystal = "redCrystal";
         public static final String expCollector = "expCollector";
 
-        public static final String fergoMaterials = "fergoMaterials";
-
-        public static final String[] itemFergoMaterials =
-        {
-                "ingotObsidian",
-                "emeraldCrystal",
-                "lapisCrystal",
-                "ingotBronze",
-                "ingotCoal",
-                "ingotGlowstone",
-                "ingotAdamantium",
-                "silkGem",
-                "redCrystal",
-                "expShard",
-                "expCollector"
-        };
-
         public static final String quartzPickaxe = "quartzPickaxe";
         public static final String quartzShovel = "quartzShovel";
         public static final String quartzAxe = "quartzAxe";
