@@ -33,7 +33,7 @@ ext.configFile = file "build.properties"
 configFile.withReader {
     def prop = new Properties()
     prop.load(it)
-    project.ext.config = new ConfigSlurper().parse prop
+    project.ext.cconfig = new ConfigSlurper().parse prop
 }
 
 version = config.mod_version
@@ -42,10 +42,7 @@ archivesBaseName = "FergoTools"
 
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
-    assetDir = "run/assets"
-
-    replaceIn "lib/ModInfo.java"
-    replace "@version@", config.mod_version
+    runDir = "run/assets"
 }
 
 version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
