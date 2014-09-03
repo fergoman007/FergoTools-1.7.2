@@ -9,14 +9,13 @@
 
 package fergoman123.mods.fergotools.handler;
 
-import cpw.mods.fml.common.IWorldGenerator;
-import fergoman123.mods.fergotools.block.ore.*;
-import fergoman123.mods.fergotools.init.ModBlocks;
-import fergoman123.mods.fergoutil.helper.GenerationHelper;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkProvider;
+ import cpw.mods.fml.common.IWorldGenerator;
+ import fergoman123.mods.fergotools.init.ModBlocks;
+ import fergoman123.mods.fergoutil.helper.GenerationHelper;
+ import net.minecraft.world.World;
+ import net.minecraft.world.chunk.IChunkProvider;
 
-import java.util.Random;
+ import java.util.Random;
 
 public class WorldGenerationHandler implements IWorldGenerator
 {
