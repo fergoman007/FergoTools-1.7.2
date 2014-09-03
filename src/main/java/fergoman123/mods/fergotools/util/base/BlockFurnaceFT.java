@@ -24,6 +24,15 @@ public abstract class BlockFurnaceFT extends BlockContainer
         this.setHardness(2.5f);
         this.setResistance(2000f);
         this.setStepSound(Block.soundTypeMetal);
+
+        if (!this.isActive)
+        {
+            this.setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
+        }
+        else
+        {
+            this.setLightLevel(0.9f);
+        }
     }
 
     public String getUnlocalizedName()

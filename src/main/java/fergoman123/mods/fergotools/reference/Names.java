@@ -27,16 +27,6 @@ public class Names
         public static final String blockSilkGem = "blockSilkGem";
         public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
 
-        public static final String blockObsidianStairs = "blockObsidianStairs";
-        public static final String blockEmeraldStairs = "blockEmeraldStairs";
-        public static final String blockLapisStairs = "blockLapisStairs";
-        public static final String blockBronzeStairs = "blockBronzeStairs";
-        public static final String blockCoalStairs = "blockCoalStairs";
-        public static final String blockGlowstoneStairs = "blockGlowstoneStairs";
-        public static final String blockAdamantiumStairs = "blockAdamantiumStairs";
-        public static final String blockSilkStairs = "blockSilkStairs";
-        public static final String blockRedstoneStairs = "blockRedstoneStairs";
-
         public static final String blockFergoGlass = "blockFergoGlass";
 
         public static final String quartzFurnaceIdle = "quartzFurnaceIdle";

@@ -17,11 +17,13 @@ import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
 import org.lwjgl.input.Keyboard;
 
-public class BlockFT extends Block
+import java.util.Random;
+
+ public abstract class BlockFT extends Block
 {
-    public Keyboard kb;
 
     public BlockFT()
     {
@@ -51,4 +53,13 @@ public class BlockFT extends Block
     {
         blockIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
+
+    /**
+     *
+     * @param metadata the metadata of the block
+     * @param random the random
+     * @param fortune the fortune
+     * @return the block dropped
+     */
+    public abstract Item getItemDropped(int metadata, Random random, int fortune);
 }
