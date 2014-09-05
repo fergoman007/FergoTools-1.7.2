@@ -32,7 +32,6 @@ public class ItemLapisBow extends ItemBowFT {
     {
         super(ToolArmorMaterials.lapis.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowLapis);
-        this.setMaxDamage(ToolArmorMaterials.getLapisMaxUses());
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

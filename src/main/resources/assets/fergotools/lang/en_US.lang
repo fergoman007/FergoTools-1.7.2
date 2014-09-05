@@ -148,6 +148,17 @@ item.FergoTools:silkGem.name=Silk Gem
 item.FergoTools:redCrystal.name=Red Crystal
 item.FergoTools:expCollector.name=Experience Collector
 
+item.FergoTools:quartzShears.name=Quartz Shears
+item.FergoTools:obsidianShears.name=Obsidian Shears
+item.FergoTools:emeraldShears.name=Emerald Shears
+item.FergoTools:lapisShears.name=Lapis Shears
+item.FergoTools:bronzeShears.name=Bronze Shears
+item.FergoTools:coalShears.name=Coal Shears
+item.FergoTools:glowstoneShears.name=Glowstone Shears
+item.FergoTools:adamantiumShears.name=Adamantium Shears
+item.FergoTools:silkShears.name=Silk Shears
+item.FergoTools:redstoneShears.name=Redstone Shears
+
 # Bows
 item.FergoTools:bowQuartz.name=Quartz Bow
 item.FergoTools:bowObsidian.name=Obsidian Bow
@@ -236,8 +247,8 @@ tooltip.FergoTools:coal.leggings=Leggings: 14
 tooltip.FergoTools:coal.boots=Boots: 8
 
 tooltip.FergoTools:glowstone.helmet=Helmet: 10
-tooltip.FergoTools.glowstone.chestplate=Chestplate: 13
-tooltip.FergoTools.glowstone.leggings=Leggings: 15
+tooltip.FergoTools:glowstone.chestplate=Chestplate: 13
+tooltip.FergoTools:glowstone.leggings=Leggings: 15
 tooltip.FergoTools:glowstone.boots=Boots: 9
 
 tooltip.FergoTools:redstone.helmet=Helmet: 2

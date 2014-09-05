@@ -44,6 +44,7 @@ public class WorldGenerationHandler implements IWorldGenerator
             GenerationHelper.addEndOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
             GenerationHelper.addEndOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
             GenerationHelper.addEndOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreCrystalRed, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -61,6 +62,7 @@ public class WorldGenerationHandler implements IWorldGenerator
             GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 10, 64);
             GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 10, 64);
             GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 10, 64);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreCrystalRed, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -78,6 +80,7 @@ public class WorldGenerationHandler implements IWorldGenerator
             GenerationHelper.addNetherOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 10, 64);
             GenerationHelper.addNetherOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 10, 64);
             GenerationHelper.addNetherOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 10, 64);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreCrystalRed, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 

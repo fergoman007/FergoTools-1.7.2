@@ -44,7 +44,7 @@ public class ItemArmorBronze extends ItemArmorFT {
             list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.reductAmount));
             for (int i = 0; i < Names.ArmorTooltipLocale.bronzeArmor.length; i++)
             {
-                list.add(Names.ArmorTooltipLocale.bronzeArmor[i]);
+                list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.bronzeArmor[i]));
             }
         }
         else

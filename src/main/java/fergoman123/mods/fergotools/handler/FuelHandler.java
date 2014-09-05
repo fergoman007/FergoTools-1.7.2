@@ -9,16 +9,14 @@
 
 package fergoman123.mods.fergotools.handler;
 
-import cpw.mods.fml.common.IFuelHandler;
-import fergoman123.mods.fergotools.init.ModBlocks;
-import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
-import fergoman123.mods.fergotools.util.UtilBlockItem;
-import fergoman123.mods.fergoutil.helper.BlockHelper;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntityFurnace;
+ import cpw.mods.fml.common.IFuelHandler;
+ import fergoman123.mods.fergotools.init.ModBlocks;
+ import fergoman123.mods.fergotools.init.ModItems;
+ import net.minecraft.init.Blocks;
+ import net.minecraft.init.Items;
+ import net.minecraft.item.Item;
+ import net.minecraft.item.ItemStack;
+ import net.minecraft.tileentity.TileEntityFurnace;
 
 public class FuelHandler implements IFuelHandler {
 
@@ -28,7 +26,7 @@ public class FuelHandler implements IFuelHandler {
             return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Items.coal));
         }
 
-        if (fuel.getItem() == BlockHelper.getItemFromBlock(ModBlocks.blockCoal))
+        if (fuel.getItem() == Item.getItemFromBlock(ModBlocks.blockCoal))
         {
             return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Blocks.coal_block));
         }

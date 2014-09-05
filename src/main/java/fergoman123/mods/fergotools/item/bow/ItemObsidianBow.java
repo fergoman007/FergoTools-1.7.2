@@ -34,7 +34,6 @@ public class ItemObsidianBow extends ItemBowFT {
     {
         super(ToolArmorMaterials.obsidian.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowObsidian);
-        this.setMaxDamage(ToolArmorMaterials.getObsidianMaxUses());
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

@@ -16,6 +16,7 @@ import fergoman123.mods.fergoutil.util.INBTTaggable;
 import fergoman123.mods.fergoutil.util.NBTTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -39,6 +40,13 @@ public class EmeraldFurnace
      public static final class BlockEmeraldFurnace extends BlockFurnaceFT
      {
          private static boolean keepInventory;
+
+         public void registerBlockIcons(IIconRegister register)
+         {
+             this.blockIcon = register.registerIcon(Reference.textureLoc + Names.Blocks.blockEmeraldCrystal);
+             this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.emeraldFurnaceActive : Names.Blocks.emeraldFurnaceIdle));
+             this.icons[1] = register.registerIcon(Reference.textureLoc + Names.Blocks.blockEmeraldCrystal);
+         }
 
          public BlockEmeraldFurnace(boolean isActive)
          {

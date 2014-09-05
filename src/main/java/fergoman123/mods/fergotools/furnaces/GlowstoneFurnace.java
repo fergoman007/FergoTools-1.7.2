@@ -6,7 +6,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.reference.*;
-import fergoman123.mods.fergotools.util.UtilBlockItem;
 import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
 import fergoman123.mods.fergotools.util.base.ContainerFT;
 import fergoman123.mods.fergotools.util.base.GuiFT;
@@ -49,7 +48,7 @@ public class GlowstoneFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return UtilBlockItem.itemGlowstoneFurnace;
+            return Item.getItemFromBlock(ModBlocks.glowstoneFurnaceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -277,7 +276,7 @@ public class GlowstoneFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return UtilBlockItem.itemGlowstoneFurnace;
+            return Item.getItemFromBlock(ModBlocks.glowstoneFurnaceIdle);
         }
     }
 

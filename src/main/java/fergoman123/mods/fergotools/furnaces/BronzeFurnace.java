@@ -15,7 +15,6 @@ package fergoman123.mods.fergotools.furnaces;
  import fergoman123.mods.fergotools.FergoTools;
  import fergoman123.mods.fergotools.init.ModBlocks;
  import fergoman123.mods.fergotools.reference.*;
- import fergoman123.mods.fergotools.util.UtilBlockItem;
  import fergoman123.mods.fergotools.util.base.BlockFurnaceFT;
  import fergoman123.mods.fergotools.util.base.ContainerFT;
  import fergoman123.mods.fergotools.util.base.GuiFT;
@@ -286,7 +285,7 @@ public class BronzeFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return UtilBlockItem.itemBronzeFurnace;
+            return Item.getItemFromBlock(ModBlocks.bronzeFurnaceIdle);
         }
     }
 

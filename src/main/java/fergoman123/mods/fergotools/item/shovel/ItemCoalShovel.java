@@ -12,7 +12,6 @@ public class ItemCoalShovel extends ItemShovelFT {
     public ItemCoalShovel() {
         super(ToolArmorMaterials.coal, ToolArmorMaterials.coal.getMaxUses());
         this.setUnlocalizedName(Names.Items.coalShovel);
-        this.setMaxDamage(ToolArmorMaterials.getCoalMaxUses());
     }
 
     public boolean getIsRepairable(ItemStack itemstack1, ItemStack itemstack2)

@@ -40,14 +40,12 @@ public class ToolArmorMaterials {
     public static ArmorMaterial redstoneArmor;
     public static ArmorMaterial adamantiumArmor;
 
-    public static void init()
-    {
+    public static void init() {
         addToolMaterials();
         addArmorMaterials();
     }
 
-    public static void addToolMaterials()
-    {
+    public static void addToolMaterials() {
         quartz = ToolHelper.addToolMaterial(Strings.Material.quartzToolMat, Ints.Tools.harvestLvl, Ints.Tools.quartzMaxDamage, Ints.Tools.quartzEff, Ints.Tools.quartzDamage, ConfigHandler.enchantability);
         obsidian = ToolHelper.addToolMaterial(Strings.Material.obsidianToolMat, Ints.Tools.harvestLvl, Ints.Tools.obsidianMaxDamage, Ints.Tools.obsidianEff, Ints.Tools.obsidianDamage, ConfigHandler.enchantability);
         emerald = ToolHelper.addToolMaterial(Strings.Material.emeraldToolMat, Ints.Tools.harvestLvl, Ints.Tools.emeraldMaxDamage, Ints.Tools.emeraldEff, Ints.Tools.emeraldDamage, ConfigHandler.enchantability);
@@ -72,16 +70,4 @@ public class ToolArmorMaterials {
         redstoneArmor = ToolHelper.addArmorMaterial(Strings.Material.redstoneArmor, Ints.Armor.redstoneArmorMaxDamage, Ints.Armor.redstoneReduct, ConfigHandler.enchantability);
         adamantiumArmor = ToolHelper.addArmorMaterial(Strings.Material.adamantiumArmor, Ints.Armor.adamantiumArmorMaxDamage, Ints.Armor.adamantiumReduct, ConfigHandler.enchantability);
     }
-
-    public static int getQuartzMaxUses(){return quartz.getMaxUses();}
-    public static int getObsidianMaxUses(){return obsidian.getMaxUses();}
-    public static int getEmeraldMaxUses(){return emerald.getMaxUses();}
-    public static int getLapisMaxUses(){return lapis.getMaxUses();}
-    public static int getBronzeMaxUses(){return bronze.getMaxUses();}
-    public static int getCoalMaxUses(){return coal.getMaxUses();}
-    public static int getGlowstoneMaxUses(){return glowstone.getMaxUses();}
-    public static int getAdamantiumMaxUses(){return adamantium.getMaxUses();}
-    public static int getDonatorMaxUses(){return donator.getMaxUses();}
-    public static int getSilkMaxUses(){return silk.getMaxUses();}
-    public static int getRedstoneMaxUses(){return redstone.getMaxUses();}
 }
