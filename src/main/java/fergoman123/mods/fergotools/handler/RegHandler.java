@@ -24,7 +24,7 @@ public class RegHandler {
 
     public static void init() {
         RegisterHelper.registerGuiHandler(FergoTools.instance, guiHandler);
-        RegisterHelper.registerWorldGen(worldGenHandler, 0);
+        RegisterHelper.registerWorldGenerator(worldGenHandler, 0);
         RegisterHelper.registerFuelHandler(fuel);
     }
 
