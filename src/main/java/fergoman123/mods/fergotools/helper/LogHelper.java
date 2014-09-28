@@ -12,7 +12,7 @@ public class LogHelper implements ILogLevel
 
     public static void log(Level level, Object object)
     {
-        logger.log(level, "[" + ModInfo.modid + "]" + String.valueOf(object));
+        logger.log(level, String.valueOf(object));
     }
 
     public static void all(Object object)

@@ -219,6 +219,7 @@ public class Names
         public static final String durabilityToolTip = toolTipPrefix + "durability";
 
         public static final String expCollectorToolTip = toolTipPrefix + "expCollector";
+        public static final String expShardToolTip = toolTipPrefix + "expShard";
         public static final String adamantiumToolTip =  toolTipPrefix + "adamantiumTool";
 
         public static final String containerQuartzFurnace = containerPrefix + "quartzFurnace";
@@ -237,6 +238,18 @@ public class Names
         public static final String holdShiftMessage = toolTipPrefix + "holdShift";
 
         public static final String containerInventory = NameHelper.getContainer() + NameHelper.getInventory();
+
+        public static final String quartzFurnaceSpeed = "furnace.speed.quartz";
+        public static final String obsidianFurnaceSpeed = "furnace.speed.obsidian";
+        public static final String emeraldFurnaceSpeed = "furnace.speed.emerald";
+        public static final String lapisFurnaceSpeed = "furnace.speed.lapis";
+        public static final String bronzeFurnaceSpeed = "furnace.speed.bronze";
+        public static final String coalFurnaceSpeed = "furnace.speed.coal";
+        public static final String glowstoneFurnaceSpeed = "furnace.speed.glowstone";
+        public static final String adamantiumFurnaceSpeed = "furnace.speed.adamantium";
+        public static final String silkFurnaceSpeed = "furnace.speed.silk";
+        public static final String redstoneFurnaceSpeed = "furnace.speed.redstone";
+        public static final String maceratorSpeed = "furnace.speed.macerator";
     }
 
     public static final class ArmorTooltipLocale
@@ -259,5 +272,37 @@ public class Names
     {
         public static final String category = "keys.FergoTools:category";
         public static final String ftConfig = "keys.FergoTools:ftConfig";
+    }
+
+    public static final class OreDict
+    {
+        public static final String oreDict = "oreDict.";
+
+        public static final String oreDictName = oreDict + "name";
+
+        public static final String oreExperience = oreDict + Blocks.oreExperience;
+        public static final String oreObsidian = oreDict + Blocks.oreObsidian;
+        public static final String oreEmeraldCrystal = oreDict + Blocks.oreEmeraldCrystal;
+        public static final String oreLapisCrystal = oreDict + Blocks.oreLapisCrystal;
+        public static final String oreBronze = oreDict + Blocks.oreBronze;
+        public static final String oreAdamantium = oreDict + Blocks.oreAdamantium;
+        public static final String oreCrystalRed = oreDict + Blocks.oreCrystalRed;
+
+        public static final String blockExperience = oreDict + Blocks.blockExperience;
+        public static final String blockObsidian = oreDict + Blocks.blockObsidian;
+        public static final String blockEmeraldCrystal = oreDict + Blocks.blockEmeraldCrystal;
+        public static final String blockLapisCrystal = oreDict + Blocks.blockLapisCrystal;
+        public static final String blockBronze = oreDict + Blocks.blockBronze;
+        public static final String blockCoal = oreDict + Blocks.blockCoal;
+        public static final String blockGlowstone = oreDict + Blocks.blockGlowstone;
+        public static final String blockAdamantium = oreDict + Blocks.blockAdamantium;
+        public static final String blockSilkGem = oreDict + Blocks.blockSilkGem;
+        public static final String blockRedstoneCrystal = oreDict + Blocks.blockRedstoneCrystal;
+
+        public static final String ingotObsidian = oreDict + Items.ingotObsidian;
+        public static final String ingotBronze = oreDict + Items.ingotBronze;
+        public static final String ingotCoal = oreDict + Items.ingotCoal;
+        public static final String ingotGlowstone = oreDict + Items.ingotGlowstone;
+        public static final String ingotAdamantium = oreDict + Items.ingotAdamantium;
     }
 }

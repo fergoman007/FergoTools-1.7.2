@@ -84,8 +84,6 @@ public class Ints
         public static final int redstoneFurnaceSpeed = 25;
         public static final int silkFurnaceSpeed = 10;
         public static final int adamantiumFurnaceSpeed = 5;
-        public static final int maceratorSpeed = 5;
-
-        public static final int netherrackFurnaceSpeed = 250;
+        public static final int maceratorSpeed = 4;
     }
 }

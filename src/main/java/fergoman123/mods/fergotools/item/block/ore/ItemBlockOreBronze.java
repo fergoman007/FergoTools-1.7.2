@@ -1,29 +1,29 @@
-package fergoman123.mods.fergotools.item.materials;
+package fergoman123.mods.fergotools.item.block.ore;
 
+import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.base.ItemFT;
+import fergoman123.mods.fergotools.util.base.ItemBlockFT;
 import fergoman123.mods.fergoutil.helper.NameHelper;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
-public class ItemAdamantiumIngot extends ItemFT{
-
-    public ItemAdamantiumIngot()
+public class ItemBlockOreBronze extends ItemBlockFT
+{
+    public ItemBlockOreBronze(Block block)
     {
-        super();
-        this.setMaxStackSize(64);
-        this.setUnlocalizedName(Names.Items.ingotAdamantium);
+        super(ModBlocks.oreBronze);
     }
 
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean extraInfo)
-    {
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean extraInfo) {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
             list.add(NameHelper.translateToLocal(Names.OreDict.oreDictName));
-            list.add(NameHelper.translateToLocal(Names.OreDict.ingotAdamantium));
+            list.add(NameHelper.translateToLocal(Names.OreDict.oreBronze));
         }
         else
         {

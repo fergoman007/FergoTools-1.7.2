@@ -11,6 +11,7 @@ package fergoman123.mods.fergotools.handler;
 
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.init.ModBlocks;
+import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.proxy.ClientProxy;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.GuiHandler;
@@ -37,6 +38,23 @@ public class RegHandler {
         RegisterHelper.registerOre(Names.Blocks.oreExperience, ModBlocks.oreExperience);
         RegisterHelper.registerOre(Names.Blocks.oreAdamantium, ModBlocks.oreAdamantium);
         RegisterHelper.registerOre(Names.Blocks.oreCrystalRed, ModBlocks.oreCrystalRed);
+
+        RegisterHelper.registerOre(Names.Blocks.blockExperience, ModBlocks.blockExperience);
+        RegisterHelper.registerOre(Names.Blocks.blockObsidian, ModBlocks.blockObsidian);
+        RegisterHelper.registerOre(Names.Blocks.blockEmeraldCrystal, ModBlocks.blockEmeraldCrystal);
+        RegisterHelper.registerOre(Names.Blocks.blockLapisCrystal, ModBlocks.blockLapisCrystal);
+        RegisterHelper.registerOre(Names.Blocks.blockBronze, ModBlocks.blockBronze);
+        RegisterHelper.registerOre(Names.Blocks.blockCoal, ModBlocks.blockCoal);
+        RegisterHelper.registerOre(Names.Blocks.blockGlowstone, ModBlocks.blockGlowstone);
+        RegisterHelper.registerOre(Names.Blocks.blockAdamantium, ModBlocks.blockAdamantium);
+        RegisterHelper.registerOre(Names.Blocks.blockSilkGem, ModBlocks.blockSilkGem);
+        RegisterHelper.registerOre(Names.Blocks.blockRedstoneCrystal, ModBlocks.blockRedstoneCrystal);
+
+        RegisterHelper.registerOre(Names.Items.ingotAdamantium, ModItems.ingotAdamantium);
+        RegisterHelper.registerOre(Names.Items.ingotBronze, ModItems.ingotBronze);
+        RegisterHelper.registerOre(Names.Items.ingotCoal, ModItems.ingotCoal);
+        RegisterHelper.registerOre(Names.Items.ingotGlowstone, ModItems.ingotGlowstone);
+        RegisterHelper.registerOre(Names.Items.ingotObsidian, ModItems.ingotObsidian);
     }
 }
 
