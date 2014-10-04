@@ -1,7 +1,7 @@
 package fergoman123.mods.fergotools.item.shears;
 
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergotools.util.tool.ItemShearsFT;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.ITooltipItem;
@@ -13,7 +13,7 @@ public class ItemQuartzShears extends ItemShearsFT implements ITooltipItem{
 
 
     public ItemQuartzShears() {
-        super(ToolArmorMaterials.quartz.getMaxUses());
+        super(Materials.Tools.quartz.getMaxUses());
         this.setUnlocalizedName(Names.Items.quartzShears);
     }
 

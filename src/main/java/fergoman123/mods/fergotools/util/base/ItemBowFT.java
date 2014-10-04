@@ -44,7 +44,7 @@ public abstract class ItemBowFT extends ItemBow{
 
     public abstract ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player);
 
-    public abstract int getEnchantability();
+    public abstract int getItemEnchantability();
 
     public abstract void registerIcons(IIconRegister register);
 

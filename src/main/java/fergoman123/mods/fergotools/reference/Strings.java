@@ -60,7 +60,21 @@ public class Strings
         public static final String silkFurnaceTile = tilePrefix + "SilkFurnace";
         public static final String redstoneFurnaceTile = tilePrefix + "RedstoneFurnace";
         public static final String maceratorTile = tilePrefix + "Macerator";
-        public static final String netherrackFurnaceTile = tilePrefix + "Netherrack";
+
+        public static final String[] tileList =
+                {
+                        quartzFurnaceTile,
+                        obsidianFurnaceTile,
+                        emeraldCrystalFurnaceTile,
+                        lapisCrystalFurnaceTile,
+                        bronzeFurnaceTile,
+                        coalFurnaceTile,
+                        glowstoneFurnaceTile,
+                        adamantiumFurnaceTile,
+                        silkFurnaceTile,
+                        redstoneFurnaceTile,
+                        maceratorTile
+                };
     }
 
     public static final class FurnaceType

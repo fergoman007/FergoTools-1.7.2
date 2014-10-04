@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -32,7 +32,7 @@ public class ItemObsidianBow extends ItemBowFT {
 
     public ItemObsidianBow()
     {
-        super(ToolArmorMaterials.obsidian.getMaxUses());
+        super(Materials.Tools.obsidian.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowObsidian);
     }
 
@@ -139,6 +139,11 @@ public class ItemObsidianBow extends ItemBowFT {
             player.setItemInUse(stack, this.getMaxItemUseDuration(stack));
         }
         return stack;
+    }
+
+    @Override
+    public int getItemEnchantability() {
+        return Materials.Tools.obsidian.getEnchantability();
     }
 
     public int getEnchantability()

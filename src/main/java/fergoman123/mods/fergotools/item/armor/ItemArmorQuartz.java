@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
@@ -20,7 +20,7 @@ public class ItemArmorQuartz extends ItemArmorFT{
 
     public ItemArmorQuartz(Armor.EnumArmorType type)
     {
-        super(ArmorNames.quartz, ToolArmorMaterials.quartzArmor ,type);
+        super(ArmorNames.quartz, Materials.Armor.quartzArmor ,type);
     }
 
     @Override

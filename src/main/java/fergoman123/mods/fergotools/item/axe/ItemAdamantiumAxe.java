@@ -2,7 +2,7 @@ package fergoman123.mods.fergotools.item.axe;
 
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergotools.util.tool.ItemAxeFT;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,7 +15,7 @@ public class ItemAdamantiumAxe extends ItemAxeFT {
 
     public ItemAdamantiumAxe()
     {
-        super(ToolArmorMaterials.adamantium, ToolArmorMaterials.adamantium.getMaxUses());
+        super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
         this.setUnlocalizedName(Names.Items.adamantiumAxe);
     }
 

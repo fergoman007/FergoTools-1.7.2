@@ -149,7 +149,7 @@ public class UtilRecipeList {
     public static final Object[] redstoneBoots = new Object[]{RecipeHelper.getBootsRecipe(), charX, FTStacks.redCrystal};
 
     public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Items.diamond, charY, new ItemStack(Blocks.wool, 1, wildcard)};
-    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', ModItems.expShard, 'y', Items.diamond};
+    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', ModItems.shardExp, 'y', Items.diamond};
 
     // Bows
     public static final Object[] quartzBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.quartzStack, charX, FTStacks.stringStack};

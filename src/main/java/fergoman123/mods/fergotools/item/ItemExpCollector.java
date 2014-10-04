@@ -24,7 +24,7 @@ public class ItemExpCollector extends ItemFT
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
         if (player.experienceLevel > 0)
         {
-            player.inventory.addItemStackToInventory(new ItemStack(ModItems.expShard, 1));
+            player.inventory.addItemStackToInventory(new ItemStack(ModItems.shardExp, 1));
             player.addExperienceLevel(-1);
             --stack.stackSize;
         }

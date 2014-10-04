@@ -12,7 +12,6 @@ package fergoman123.mods.fergotools.handler;
 import fergoman123.mods.fergotools.FergoTools;
 import fergoman123.mods.fergotools.init.ModBlocks;
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.proxy.ClientProxy;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.GuiHandler;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
@@ -50,11 +49,16 @@ public class RegHandler {
         RegisterHelper.registerOre(Names.Blocks.blockSilkGem, ModBlocks.blockSilkGem);
         RegisterHelper.registerOre(Names.Blocks.blockRedstoneCrystal, ModBlocks.blockRedstoneCrystal);
 
-        RegisterHelper.registerOre(Names.Items.ingotAdamantium, ModItems.ingotAdamantium);
+        RegisterHelper.registerOre(Names.Items.ingotObsidian, ModItems.ingotObsidian);
+        RegisterHelper.registerOre(Names.Items.gemEmerald, ModItems.gemEmerald);
+        RegisterHelper.registerOre(Names.Items.gemLapis, ModItems.gemLapis);
         RegisterHelper.registerOre(Names.Items.ingotBronze, ModItems.ingotBronze);
         RegisterHelper.registerOre(Names.Items.ingotCoal, ModItems.ingotCoal);
         RegisterHelper.registerOre(Names.Items.ingotGlowstone, ModItems.ingotGlowstone);
-        RegisterHelper.registerOre(Names.Items.ingotObsidian, ModItems.ingotObsidian);
+        RegisterHelper.registerOre(Names.Items.ingotAdamantium, ModItems.ingotAdamantium);
+        RegisterHelper.registerOre(Names.Items.gemRedstone, ModItems.gemRedstone);
+        RegisterHelper.registerOre(Names.Items.gemSilk, ModItems.gemSilk);
+        RegisterHelper.registerOre(Names.Items.shardExp, ModItems.shardExp);
     }
 }
 

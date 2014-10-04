@@ -4,7 +4,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
@@ -17,7 +17,7 @@ public class ItemArmorGlowstone extends ItemArmorFT {
 
     public ItemArmorGlowstone(Armor.EnumArmorType type)
     {
-        super(ArmorNames.glowstone, ToolArmorMaterials.glowstoneArmor, type);
+        super(ArmorNames.glowstone, Materials.Armor.glowstoneArmor, type);
     }
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)

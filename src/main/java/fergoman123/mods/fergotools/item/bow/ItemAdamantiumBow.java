@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
@@ -34,7 +34,7 @@ public class ItemAdamantiumBow extends ItemBowFT {
     private IIcon[] texture;
     public ItemAdamantiumBow()
     {
-        super(ToolArmorMaterials.adamantium.getMaxUses());
+        super(Materials.Tools.adamantium.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowAdamantium);
     }
 
@@ -192,4 +192,8 @@ public class ItemAdamantiumBow extends ItemBowFT {
         }
     }
 
+    @Override
+    public int getItemEnchantability() {
+        return Materials.Tools.adamantium.getEnchantability();
+    }
 }

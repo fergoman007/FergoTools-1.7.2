@@ -1,16 +1,15 @@
 package fergoman123.mods.fergotools.item.hoe;
 
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.materials.ItemObsidianIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergotools.util.tool.ItemHoeFT;
 import net.minecraft.item.ItemStack;
 
 public class ItemObsidianHoe extends ItemHoeFT {
 
     public ItemObsidianHoe() {
-        super(ToolArmorMaterials.obsidian, ToolArmorMaterials.obsidian.getMaxUses());
+        super(Materials.Tools.obsidian, Materials.Tools.obsidian.getMaxUses());
         this.setUnlocalizedName(Names.Items.obsidianHoe);
     }
 

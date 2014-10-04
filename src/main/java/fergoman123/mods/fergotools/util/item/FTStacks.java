@@ -24,30 +24,30 @@ public class FTStacks {
     public static final ItemStack quartzBlock = new ItemStack(Blocks.quartz_block);
 
     public static final ItemStack obsidianIngot9 = new ItemStack(ModItems.ingotObsidian, 9);
-    public static final ItemStack emeraldCrystal9 = new ItemStack(ModItems.emeraldCrystal, 9);
-    public static final ItemStack lapisCrystal9 = new ItemStack(ModItems.lapisCrystal, 9);
+    public static final ItemStack emeraldCrystal9 = new ItemStack(ModItems.gemEmerald, 9);
+    public static final ItemStack lapisCrystal9 = new ItemStack(ModItems.gemLapis, 9);
     public static final ItemStack bronzeIngot9 = new ItemStack(ModItems.ingotBronze, 9);
     public static final ItemStack adamantiumIngot9 = new ItemStack(ModItems.ingotAdamantium, 9);
     public static final ItemStack coalIngot9 = new ItemStack(ModItems.ingotCoal, 9);
     public static final ItemStack glowstoneIngot9 = new ItemStack(ModItems.ingotGlowstone, 9);
-    public static final ItemStack silkGem9 = new ItemStack(ModItems.silkGem, 9);
-    public static final ItemStack expShard9 = new ItemStack(ModItems.expShard, 9);
-    public static final ItemStack redstoneCrystal9 = new ItemStack(ModItems.redstoneCrystal, 9);
+    public static final ItemStack silkGem9 = new ItemStack(ModItems.gemSilk, 9);
+    public static final ItemStack expShard9 = new ItemStack(ModItems.shardExp, 9);
+    public static final ItemStack redstoneCrystal9 = new ItemStack(ModItems.gemRedstone, 9);
 
     public static final ItemStack expCollectorHalfStack = ItemStackHelper.getItemStackForItem(ModItems.expCollector, 32);
 
-    public static final ItemStack expShard5 = new ItemStack(ModItems.expShard, 5);
+    public static final ItemStack expShard5 = new ItemStack(ModItems.shardExp, 5);
 
     public static final ItemStack obsidianIngot = new ItemStack(ModItems.ingotObsidian);
-    public static final ItemStack emeraldCrystal = new ItemStack(ModItems.emeraldCrystal);
-    public static final ItemStack lapisCrystal = new ItemStack(ModItems.lapisCrystal);
+    public static final ItemStack emeraldCrystal = new ItemStack(ModItems.gemEmerald);
+    public static final ItemStack lapisCrystal = new ItemStack(ModItems.gemLapis);
     public static final ItemStack bronzeIngot = new ItemStack(ModItems.ingotBronze);
     public static final ItemStack coalIngot = new ItemStack(ModItems.ingotCoal);
     public static final ItemStack glowstoneIngot = new ItemStack(ModItems.ingotGlowstone);
     public static final ItemStack adamantiumIngot = new ItemStack(ModItems.ingotAdamantium);
-    public static final ItemStack expShard = new ItemStack(ModItems.expShard);
-    public static final ItemStack silkGem = new ItemStack(ModItems.silkGem);
-    public static final ItemStack redCrystal = new ItemStack(ModItems.redstoneCrystal);
+    public static final ItemStack expShard = new ItemStack(ModItems.shardExp);
+    public static final ItemStack silkGem = new ItemStack(ModItems.gemSilk);
+    public static final ItemStack redCrystal = new ItemStack(ModItems.gemRedstone);
     public static final ItemStack expCollector = new ItemStack(ModItems.expCollector);
 
     public static final ItemStack blockObsidian = new ItemStack(ModBlocks.blockObsidian);

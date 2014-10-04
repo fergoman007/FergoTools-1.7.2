@@ -3,12 +3,12 @@ package fergoman123.mods.fergotools.item.materials;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 
-public class ItemLapisCrystal extends ItemFT{
+public class ItemRedstoneGem extends ItemFT{
 
-    public ItemLapisCrystal()
+    public ItemRedstoneGem()
     {
         super();
         this.setMaxStackSize(64);
-        this.setUnlocalizedName(Names.Items.lapisCrystal);
+        this.setUnlocalizedName(Names.Items.gemRedstone);
     }
 }

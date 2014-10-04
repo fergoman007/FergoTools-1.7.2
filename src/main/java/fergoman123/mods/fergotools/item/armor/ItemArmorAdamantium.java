@@ -4,7 +4,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.helper.PotionHelper;
 import fergoman123.mods.fergoutil.item.Armor;
@@ -21,7 +21,7 @@ public class ItemArmorAdamantium extends ItemArmorFT{
 
     public ItemArmorAdamantium(Armor.EnumArmorType type)
     {
-        super(ArmorNames.adamantium, ToolArmorMaterials.adamantiumArmor, type);
+        super(ArmorNames.adamantium, Materials.Armor.adamantiumArmor, type);
     }
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)

@@ -2,7 +2,7 @@ package fergoman123.mods.fergotools.item.sword;
 
 import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergotools.util.tool.ItemSwordFT;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +14,7 @@ import java.util.List;
 public class ItemAdamantiumSword extends ItemSwordFT {
 
     public ItemAdamantiumSword() {
-        super(ToolArmorMaterials.adamantium, ToolArmorMaterials.adamantium.getMaxUses());
+        super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
         this.setUnlocalizedName(Names.Items.adamantiumSword);
     }
 

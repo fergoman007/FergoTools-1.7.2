@@ -43,7 +43,7 @@ public class FergoOres
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
-            return ModItems.emeraldCrystal;
+            return ModItems.gemEmerald;
         }
     }
 
@@ -57,7 +57,7 @@ public class FergoOres
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
-            return ModItems.lapisCrystal;
+            return ModItems.gemLapis;
         }
     }
 
@@ -99,7 +99,7 @@ public class FergoOres
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
-            return ModItems.expShard;
+            return ModItems.shardExp;
         }
 
         public int quantityDropped(Random rand)

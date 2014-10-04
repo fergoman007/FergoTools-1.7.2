@@ -27,6 +27,8 @@ public class Names
         public static final String blockSilkGem = "blockSilkGem";
         public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
 
+        public static final String[] blockList = {blockExperience, blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal};
+
         public static final String blockFergoGlass = "blockFergoGlass";
 
         public static final String quartzFurnaceIdle = "quartzFurnaceIdle";
@@ -62,6 +64,9 @@ public class Names
 
         public static final String maceratorIdle = "maceratorIdle";
         public static final String maceratorActive = "maceratorActive";
+
+        public static final String[] furnaceIdle = {quartzFurnaceIdle, obsidianFurnaceIdle, emeraldFurnaceIdle, lapisFurnaceIdle, bronzeFurnaceIdle, coalFurnaceIdle, glowstoneFurnaceIdle, adamantiumFurnaceIdle, silkFurnaceIdle, redstoneFurnaceIdle, maceratorIdle};
+        public static final String[] furnaceActive = {quartzFurnaceActive, obsidianFurnaceActive, emeraldFurnaceActive, lapisFurnaceActive, bronzeFurnaceActive, coalFurnaceActive, glowstoneFurnaceActive, adamantiumFurnaceActive, silkFurnaceActive, redstoneFurnaceActive, maceratorActive};
     }
 
     public static final class Items
@@ -123,15 +128,15 @@ public class Names
         public static final String bowRedstone = "bowRedstone";
 
         public static final String ingotObsidian = "ingotObsidian";
-        public static final String emeraldCrystal = "emeraldCrystal";
-        public static final String lapisCrystal = "lapisCrystal";
+        public static final String gemEmerald = "gemEmerald";
+        public static final String gemLapis = "gemLapis";
         public static final String ingotBronze = "ingotBronze";
         public static final String ingotCoal ="ingotCoal";
         public static final String ingotGlowstone = "ingotGlowstone";
         public static final String ingotAdamantium = "ingotAdamantium";
-        public static final String expShard = "expShard";
-        public static final String silkGem = "silkGem";
-        public static final String redstoneCrystal = "redCrystal";
+        public static final String shardExp = "shardExp";
+        public static final String gemSilk = "gemSilk";
+        public static final String gemRedstone = "gemRedstone";
         public static final String expCollector = "expCollector";
 
         public static final String quartzPickaxe = "quartzPickaxe";
@@ -219,7 +224,7 @@ public class Names
         public static final String durabilityToolTip = toolTipPrefix + "durability";
 
         public static final String expCollectorToolTip = toolTipPrefix + "expCollector";
-        public static final String expShardToolTip = toolTipPrefix + "expShard";
+        public static final String expShardToolTip = toolTipPrefix + "shardExp";
         public static final String adamantiumToolTip =  toolTipPrefix + "adamantiumTool";
 
         public static final String containerQuartzFurnace = containerPrefix + "quartzFurnace";

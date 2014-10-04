@@ -17,7 +17,6 @@ import fergoman123.mods.fergotools.util.base.ItemFT;
 import fergoman123.mods.fergotools.util.tool.*;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import fergoman123.mods.fergoutil.item.Armor;
-import net.minecraft.item.Item;
 
 public class ModItems
 {
@@ -102,15 +101,15 @@ public class ModItems
     public static final ItemBowFT bowAdamantium = new ItemAdamantiumBow();
 
     public static final ItemFT ingotObsidian = new ItemObsidianIngot();
-    public static final ItemFT emeraldCrystal = new ItemEmeraldCrystal();
-    public static final ItemFT lapisCrystal = new ItemLapisCrystal();
+    public static final ItemFT gemEmerald = new ItemEmeraldGem();
+    public static final ItemFT gemLapis = new ItemLapisGem();
     public static final ItemFT ingotBronze = new ItemBronzeIngot();
     public static final ItemFT ingotCoal = new ItemCoalIngot();
     public static final ItemFT ingotGlowstone = new ItemGlowstoneIngot();
     public static final ItemFT ingotAdamantium = new ItemAdamantiumIngot();
-    public static final ItemFT redstoneCrystal = new ItemRedstoneCrystal();
-    public static final ItemFT silkGem = new ItemSilkGem();
-    public static final ItemFT expShard = new ItemExpShard();
+    public static final ItemFT gemRedstone = new ItemRedstoneGem();
+    public static final ItemFT gemSilk = new ItemSilkGem();
+    public static final ItemFT shardExp = new ItemExpShard();
     public static final ItemFT expCollector = new ItemExpCollector();
 
     public static final ItemArmorFT quartzHelmet = new ItemArmorQuartz(Armor.EnumArmorType.HELMET);
@@ -221,15 +220,15 @@ public class ModItems
         RegisterHelper.registerItem(redstoneSword, Names.Items.redstoneSword);
 
         RegisterHelper.registerItem(ingotObsidian, Names.Items.ingotObsidian);
-        RegisterHelper.registerItem(emeraldCrystal, Names.Items.emeraldCrystal);
-        RegisterHelper.registerItem(lapisCrystal, Names.Items.lapisCrystal);
+        RegisterHelper.registerItem(gemEmerald, Names.Items.gemEmerald);
+        RegisterHelper.registerItem(gemLapis, Names.Items.gemLapis);
         RegisterHelper.registerItem(ingotBronze, Names.Items.ingotBronze);
         RegisterHelper.registerItem(ingotCoal, Names.Items.ingotCoal);
         RegisterHelper.registerItem(ingotGlowstone, Names.Items.ingotGlowstone);
         RegisterHelper.registerItem(ingotAdamantium, Names.Items.ingotAdamantium);
-        RegisterHelper.registerItem(silkGem, Names.Items.silkGem);
-        RegisterHelper.registerItem(redstoneCrystal, Names.Items.redstoneCrystal);
-        RegisterHelper.registerItem(expShard, Names.Items.expShard);
+        RegisterHelper.registerItem(gemSilk, Names.Items.gemSilk);
+        RegisterHelper.registerItem(gemRedstone, Names.Items.gemRedstone);
+        RegisterHelper.registerItem(shardExp, Names.Items.shardExp);
         RegisterHelper.registerItem(expCollector, Names.Items.expCollector);
 
         RegisterHelper.registerItem(quartzHelmet, Names.Items.quartzHelmet);

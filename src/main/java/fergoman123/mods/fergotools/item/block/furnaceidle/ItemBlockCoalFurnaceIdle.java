@@ -20,6 +20,7 @@ public class ItemBlockCoalFurnaceIdle extends ItemBlockFT
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean extraInfo) {
         if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {

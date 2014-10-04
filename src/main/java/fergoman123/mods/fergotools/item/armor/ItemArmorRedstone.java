@@ -4,7 +4,7 @@ import fergoman123.mods.fergotools.init.ModItems;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.Armor;
 import net.minecraft.entity.Entity;
@@ -16,7 +16,7 @@ import java.util.List;
 public class ItemArmorRedstone extends ItemArmorFT{
 
     public ItemArmorRedstone(Armor.EnumArmorType type) {
-        super(ArmorNames.redstone, ToolArmorMaterials.redstoneArmor, type);
+        super(ArmorNames.redstone, Materials.Armor.redstoneArmor, type);
     }
 
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)

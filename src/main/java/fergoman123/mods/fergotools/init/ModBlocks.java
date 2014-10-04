@@ -15,12 +15,8 @@ import fergoman123.mods.fergotools.furnaces.ObsidianFurnace.BlockObsidianFurnace
 import fergoman123.mods.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
 import fergoman123.mods.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFurnace;
 import fergoman123.mods.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
-import fergoman123.mods.fergotools.item.block.furnaceactive.*;
-import fergoman123.mods.fergotools.item.block.furnaceidle.*;
-import fergoman123.mods.fergotools.item.block.furnaceidle.ItemBlockLapisFurnaceIdle;
-import fergoman123.mods.fergotools.item.block.ore.*;
-import fergoman123.mods.fergotools.item.block.storage.*;
 import fergoman123.mods.fergotools.reference.Names;
+import fergoman123.mods.fergotools.util.Utils;
 import fergoman123.mods.fergotools.util.base.BlockFT;
 import fergoman123.mods.fergotools.util.base.BlockGlassFT;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
@@ -36,6 +32,8 @@ public class ModBlocks{
     public static final BlockFT oreAdamantium = new BlockOreAdamantium();
     public static final BlockFT oreCrystalRed = new BlockOreRedCrystal();
 
+    public static final Block[] ores = new Block[]{oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreCrystalRed};
+
     public static final BlockFT blockExperience = new BlockExperience();
     public static final BlockFT blockObsidian = new BlockObsidianStorage();
     public static final BlockFT blockEmeraldCrystal = new BlockEmeraldCrystal();
@@ -46,6 +44,8 @@ public class ModBlocks{
     public static final BlockFT blockAdamantium = new BlockAdamantium();
     public static final BlockFT blockSilkGem = new BlockSilkGem();
     public static final BlockFT blockRedstoneCrystal = new BlockRedstoneCrystal();
+
+    public static final Block[] blocks = new Block[]{blockExperience, blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal};
 
     public static final BlockGlassFT blockFergoGlass = new BlockFergoGlass();
 
@@ -61,6 +61,8 @@ public class ModBlocks{
     public static final Block redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
     public static final Block maceratorIdle = new BlockMacerator(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
 
+    public static final Block[] furnaceIdle = new Block[]{quartzFurnaceIdle, obsidianFurnaceIdle, emeraldFurnaceIdle, lapisFurnaceIdle, bronzeFurnaceIdle, coalFurnaceIdle, glowstoneFurnaceIdle, adamantiumFurnaceIdle, silkFurnaceIdle, redstoneFurnaceIdle, maceratorIdle};
+
     public static final Block quartzFurnaceActive = new BlockQuartzFurnace(true).setLightLevel(0.9f);
     public static final Block obsidianFurnaceActive = new BlockObsidianFurnace(true).setLightLevel(0.9f);
     public static final Block emeraldFurnaceActive = new BlockEmeraldFurnace(true).setLightLevel(0.9f);
@@ -73,53 +75,30 @@ public class ModBlocks{
     public static final Block redstoneFurnaceActive = new BlockRedstoneFurnace(true).setLightLevel(0.9f);
     public static final Block maceratorActive = new BlockMacerator(true).setLightLevel(0.9f);
 
+    public static final Block[] furnaceActive = new Block[]{quartzFurnaceActive, obsidianFurnaceActive, emeraldFurnaceActive, lapisFurnaceActive, bronzeFurnaceActive, coalFurnaceActive, glowstoneFurnaceActive, adamantiumFurnaceActive, silkFurnaceActive, redstoneFurnaceActive, maceratorActive};
+
 	public static void init()
 	{
-        RegisterHelper.registerBlock(oreExperience, ItemBlockOreExperience.class, Names.Blocks.oreExperience);
-        RegisterHelper.registerBlock(oreObsidian, ItemBlockOreObsidian.class, Names.Blocks.oreObsidian);
-        RegisterHelper.registerBlock(oreEmeraldCrystal, ItemBlockOreEmeraldCrystal.class, Names.Blocks.oreEmeraldCrystal);
-        RegisterHelper.registerBlock(oreLapisCrystal, ItemBlockOreLapisCrystal.class, Names.Blocks.oreLapisCrystal);
-        RegisterHelper.registerBlock(oreBronze, ItemBlockOreBronze.class, Names.Blocks.oreBronze);
-        RegisterHelper.registerBlock(oreAdamantium, ItemBlockOreAdamantium.class, Names.Blocks.oreAdamantium);
-        RegisterHelper.registerBlock(oreCrystalRed, ItemBlockOreCrystalRed.class, Names.Blocks.oreCrystalRed);
 
-        RegisterHelper.registerBlock(blockExperience, ItemBlockExperience.class, Names.Blocks.blockExperience);
-        RegisterHelper.registerBlock(blockObsidian, ItemBlockObsidian.class, Names.Blocks.blockObsidian);
-        RegisterHelper.registerBlock(blockEmeraldCrystal, ItemBlockEmeraldCrystal.class, Names.Blocks.blockEmeraldCrystal);
-        RegisterHelper.registerBlock(blockLapisCrystal, ItemBlockLapisCrystal.class, Names.Blocks.blockLapisCrystal);
-        RegisterHelper.registerBlock(blockBronze, ItemBlockBronze.class, Names.Blocks.blockBronze);
-        RegisterHelper.registerBlock(blockCoal, ItemBlockCoal.class, Names.Blocks.blockCoal);
-        RegisterHelper.registerBlock(blockGlowstone, ItemBlockGlowstone.class, Names.Blocks.blockGlowstone);
-        RegisterHelper.registerBlock(blockAdamantium, ItemBlockAdamantium.class, Names.Blocks.blockAdamantium);
-        RegisterHelper.registerBlock(blockSilkGem, ItemBlockSilkGem.class, Names.Blocks.blockSilkGem);
-        RegisterHelper.registerBlock(blockRedstoneCrystal, ItemBlockRedstoneCrystal.class, Names.Blocks.blockRedstoneCrystal);
+        for (int i = 0; i < ores.length; i++)
+        {
+            RegisterHelper.registerBlock(ores[i], Utils.ores[i], Names.Blocks.oreList[i]);
+        }
+
+        for (int i = 0; i < blocks.length; i++) {
+            RegisterHelper.registerBlock(blocks[i], Utils.blocks[i], Names.Blocks.blockList[i]);
+        }
 
         RegisterHelper.registerBlock(blockFergoGlass, Names.Blocks.blockFergoGlass);
 
-        RegisterHelper.registerBlock(quartzFurnaceIdle, ItemBlockQuartzFurnaceIdle.class, Names.Blocks.quartzFurnaceIdle);
-        RegisterHelper.registerBlock(obsidianFurnaceIdle, ItemBlockObsidianFurnaceIdle.class, Names.Blocks.obsidianFurnaceIdle);
-        RegisterHelper.registerBlock(emeraldFurnaceIdle, ItemBlockEmeraldFurnaceIdle.class, Names.Blocks.emeraldFurnaceIdle);
-        RegisterHelper.registerBlock(lapisFurnaceIdle, ItemBlockLapisFurnaceIdle.class, Names.Blocks.lapisFurnaceIdle);
-        RegisterHelper.registerBlock(bronzeFurnaceIdle, ItemBlockBronzeFurnaceIdle.class, Names.Blocks.bronzeFurnaceIdle);
-        RegisterHelper.registerBlock(coalFurnaceIdle, ItemBlockCoalFurnaceIdle.class, Names.Blocks.coalFurnaceIdle);
-        RegisterHelper.registerBlock(glowstoneFurnaceIdle, ItemBlockGlowstoneFurnaceIdle.class, Names.Blocks.glowstoneFurnaceIdle);
-        RegisterHelper.registerBlock(adamantiumFurnaceIdle, ItemBlockAdamantiumFurnaceIdle.class, Names.Blocks.adamantiumFurnaceIdle);
-        RegisterHelper.registerBlock(silkFurnaceIdle, ItemBlockSilkFurnaceIdle.class, Names.Blocks.silkFurnaceIdle);
-        RegisterHelper.registerBlock(redstoneFurnaceIdle, ItemBlockRedstoneFurnaceIdle.class, Names.Blocks.redstoneFurnaceIdle);
-        RegisterHelper.registerBlock(maceratorIdle, ItemBlockMaceratorIdle.class, Names.Blocks.maceratorIdle);
+        for (int i = 0; i < furnaceIdle.length; i++) {
+            RegisterHelper.registerBlock(furnaceIdle[i], Utils.furnaceIdle[i], Names.Blocks.furnaceIdle[i]);
+        }
 
-        RegisterHelper.registerBlock(quartzFurnaceActive, ItemBlockQuartzFurnaceActive.class, Names.Blocks.quartzFurnaceActive);
-        RegisterHelper.registerBlock(obsidianFurnaceActive, ItemBlockObsidianFurnaceActive.class, Names.Blocks.obsidianFurnaceActive);
-        RegisterHelper.registerBlock(emeraldFurnaceActive, ItemBlockEmeraldFurnaceActive.class, Names.Blocks.emeraldFurnaceActive);
-        RegisterHelper.registerBlock(lapisFurnaceActive, ItemBlockLapisFurnaceActive.class, Names.Blocks.lapisFurnaceActive);
-        RegisterHelper.registerBlock(bronzeFurnaceActive, ItemBlockBronzeFurnaceActive.class, Names.Blocks.bronzeFurnaceActive);
-        RegisterHelper.registerBlock(coalFurnaceActive, ItemBlockCoalFurnaceActive.class, Names.Blocks.coalFurnaceActive);
-        RegisterHelper.registerBlock(glowstoneFurnaceActive, ItemBlockGlowstoneFurnaceActive.class, Names.Blocks.glowstoneFurnaceActive);
-        RegisterHelper.registerBlock(adamantiumFurnaceActive, ItemBlockAdamantiumFurnaceActive.class, Names.Blocks.adamantiumFurnaceActive);
-        RegisterHelper.registerBlock(silkFurnaceActive, ItemBlockSilkFurnaceActive.class, Names.Blocks.silkFurnaceActive);
-        RegisterHelper.registerBlock(redstoneFurnaceActive, ItemBlockRedstoneFurnaceActive.class, Names.Blocks.redstoneFurnaceActive);
-        RegisterHelper.registerBlock(maceratorActive, ItemBlockMaceratorActive.class, Names.Blocks.maceratorActive);
-	}
+        for (int i = 0; i < furnaceActive.length; i++) {
+            RegisterHelper.registerBlock(furnaceActive[i], Utils.furnaceActive[i], Names.Blocks.furnaceActive[i]);
+        }
+    }
 
 
 }

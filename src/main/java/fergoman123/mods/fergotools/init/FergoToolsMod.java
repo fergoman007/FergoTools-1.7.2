@@ -10,7 +10,7 @@ import fergoman123.mods.fergotools.handler.RegHandler;
 import fergoman123.mods.fergotools.helper.LogHelper;
 import fergoman123.mods.fergotools.reference.MetadataFT;
 import fergoman123.mods.fergotools.reference.Strings.Messages;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 
 public class FergoToolsMod
 {
@@ -22,7 +22,7 @@ public class FergoToolsMod
         FergoTools.proxy.registerKeyBindings();
         FergoTools.proxy.registerEventHandlers();
         CreativeTabsFergoTools.init();
-        ToolArmorMaterials.init();
+        Materials.init();
         ModItems.init();
         ModBlocks.init();
 

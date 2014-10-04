@@ -5,7 +5,7 @@ import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.reference.Reference;
 import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemBowFT;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -30,7 +30,7 @@ public class ItemLapisBow extends ItemBowFT {
     private IIcon[] texture;
     public ItemLapisBow()
     {
-        super(ToolArmorMaterials.lapis.getMaxUses());
+        super(Materials.Tools.lapis.getMaxUses());
         this.setUnlocalizedName(Names.Items.bowLapis);
     }
 
@@ -137,6 +137,11 @@ public class ItemLapisBow extends ItemBowFT {
             player.setItemInUse(stack, this.getMaxItemUseDuration(stack));
         }
         return stack;
+    }
+
+    @Override
+    public int getItemEnchantability() {
+        return Materials.Tools.lapis.getEnchantability();
     }
 
     public int getEnchantability()

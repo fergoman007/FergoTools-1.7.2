@@ -1,7 +1,6 @@
 package fergoman123.mods.fergotools.item.materials;
 
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.ItemExpCollector;
 import fergoman123.mods.fergotools.reference.Names;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 import fergoman123.mods.fergoutil.helper.NameHelper;
@@ -21,7 +20,7 @@ public class ItemExpShard extends ItemFT
     public ItemExpShard() {
         super();
         this.setMaxStackSize(64);
-        this.setUnlocalizedName(Names.Items.expShard);
+        this.setUnlocalizedName(Names.Items.shardExp);
     }
 
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)

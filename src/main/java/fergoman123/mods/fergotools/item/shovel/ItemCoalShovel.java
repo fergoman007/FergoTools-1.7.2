@@ -1,16 +1,15 @@
 package fergoman123.mods.fergotools.item.shovel;
 
 import fergoman123.mods.fergotools.init.ModItems;
-import fergoman123.mods.fergotools.item.materials.ItemCoalIngot;
 import fergoman123.mods.fergotools.reference.Names;
-import fergoman123.mods.fergotools.util.item.ToolArmorMaterials;
+import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergotools.util.tool.ItemShovelFT;
 import net.minecraft.item.ItemStack;
 
 public class ItemCoalShovel extends ItemShovelFT {
 
     public ItemCoalShovel() {
-        super(ToolArmorMaterials.coal, ToolArmorMaterials.coal.getMaxUses());
+        super(Materials.Tools.coal, Materials.Tools.coal.getMaxUses());
         this.setUnlocalizedName(Names.Items.coalShovel);
     }
 

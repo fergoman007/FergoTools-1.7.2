@@ -8,6 +8,6 @@ public class ItemSilkGem extends ItemFT{
     public ItemSilkGem()
     {
         super();
-        this.setUnlocalizedName(Names.Items.silkGem);
+        this.setUnlocalizedName(Names.Items.gemSilk);
     }
 }
