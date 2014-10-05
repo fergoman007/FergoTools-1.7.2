@@ -41,6 +41,9 @@ public class ItemExpShard extends ItemFT
         if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
             list.add(NameHelper.translateToLocal(Names.Locale.expShardToolTip));
+            list.add("");
+            list.add(NameHelper.translateToLocal(Names.OreDict.oreDictName));
+            list.add(NameHelper.translateToLocal(Names.OreDict.shardExp));
         }
         else
         {

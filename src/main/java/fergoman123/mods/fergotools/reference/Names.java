@@ -309,5 +309,12 @@ public class Names
         public static final String ingotCoal = oreDict + Items.ingotCoal;
         public static final String ingotGlowstone = oreDict + Items.ingotGlowstone;
         public static final String ingotAdamantium = oreDict + Items.ingotAdamantium;
+
+        public static final String gemEmerald = oreDict + Items.gemEmerald;
+        public static final String gemLapis = oreDict + Items.gemLapis;
+        public static final String gemRedstone = oreDict + Items.gemRedstone;
+        public static final String gemSilk = oreDict + Items.gemSilk;
+
+        public static final String shardExp = oreDict + Items.shardExp;
     }
 }

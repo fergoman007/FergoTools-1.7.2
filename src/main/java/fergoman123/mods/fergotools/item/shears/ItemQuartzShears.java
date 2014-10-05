@@ -7,6 +7,8 @@ import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.ITooltipItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import org.lwjgl.input.Keyboard;
+
 import java.util.List;
 
 public class ItemQuartzShears extends ItemShearsFT implements ITooltipItem{
@@ -20,7 +22,7 @@ public class ItemQuartzShears extends ItemShearsFT implements ITooltipItem{
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean extraInfo)
     {
-        if (kb.isKeyDown(kb.KEY_LSHIFT) || kb.isKeyDown(kb.KEY_RSHIFT))
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
             list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + " " + stack.getItemDamageForDisplay() + "/ 1,000,000");
         }

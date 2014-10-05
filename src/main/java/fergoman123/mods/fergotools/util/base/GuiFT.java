@@ -1,15 +1,11 @@
 package fergoman123.mods.fergotools.util.base;
 
-import net.minecraft.client.gui.inventory.GuiContainer;
+import fergoman123.mods.fergoutil.client.gui.FergoGuiContainer;
 import net.minecraft.inventory.Container;
 
-public abstract class GuiFT extends GuiContainer{
+public abstract class GuiFT extends FergoGuiContainer{
 
     public GuiFT(Container container) {
         super(container);
     }
-
-    public abstract void drawGuiContainerForegroundLayer(int par1, int par2);
-
-    public abstract void drawGuiContainerBackgroundLayer(float par1, int par2, int par3);
 }

@@ -17,7 +17,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.StatCollector;
 
-public class CreativeTabsFergoTools {
+public class Tabs {
     public static CreativeTabs tabFergoTools;
     public static CreativeTabs tabFergoBlocks;
     public static CreativeTabs tabFergoFurnaces;

@@ -7,7 +7,7 @@ import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.helper.PotionHelper;
-import fergoman123.mods.fergoutil.item.Armor;
+import fergoman123.mods.fergoutil.item.ArmorType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -19,7 +19,7 @@ import java.util.List;
 
 public class ItemArmorAdamantium extends ItemArmorFT{
 
-    public ItemArmorAdamantium(Armor.EnumArmorType type)
+    public ItemArmorAdamantium(ArmorType type)
     {
         super(ArmorNames.adamantium, Materials.Armor.adamantiumArmor, type);
     }

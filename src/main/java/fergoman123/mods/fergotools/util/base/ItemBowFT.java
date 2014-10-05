@@ -1,54 +1,12 @@
 package fergoman123.mods.fergotools.util.base;
 
-import fergoman123.mods.fergotools.reference.Reference;
-import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
-import fergoman123.mods.fergoutil.helper.NameHelper;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemBow;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+import fergoman123.mods.fergotools.creativetab.Tabs;
 
-public abstract class ItemBowFT extends ItemBow{
-
-    public IIcon[] textures;
+public abstract class ItemBowFT extends FergoBow{
 
     public ItemBowFT(int maxUses)
     {
-        this.maxStackSize = 1;
-        this.setMaxDamage(maxUses);
-        this.setCreativeTab(CreativeTabsFergoTools.tabFergoBows);
+        super(maxUses, Tabs.tabFergoBows, 1);
     }
-
-    @Override
-    public String getUnlocalizedName()
-    {
-        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-    }
-
-    @Override
-    public String getUnlocalizedName(ItemStack stack)
-    {
-        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
-    }
-
-    public abstract void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4);
-
-    public abstract ItemStack onEaten(ItemStack stack, World world, EntityPlayer player);
-
-    public abstract int getMaxItemUseDuration(ItemStack stack);
-
-    public abstract EnumAction getItemUseAction(ItemStack stack);
-
-    public abstract ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player);
-
-    public abstract int getItemEnchantability();
-
-    public abstract void registerIcons(IIconRegister register);
-
-    public abstract IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining);
-
 
 }

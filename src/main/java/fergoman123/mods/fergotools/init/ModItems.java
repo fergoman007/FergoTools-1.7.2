@@ -16,7 +16,7 @@ import fergoman123.mods.fergotools.util.base.ItemBowFT;
 import fergoman123.mods.fergotools.util.base.ItemFT;
 import fergoman123.mods.fergotools.util.tool.*;
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
-import fergoman123.mods.fergoutil.item.Armor;
+import fergoman123.mods.fergoutil.item.ArmorType;
 
 public class ModItems
 {
@@ -112,50 +112,50 @@ public class ModItems
     public static final ItemFT shardExp = new ItemExpShard();
     public static final ItemFT expCollector = new ItemExpCollector();
 
-    public static final ItemArmorFT quartzHelmet = new ItemArmorQuartz(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT quartzChestplate = new ItemArmorQuartz(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT quartzLeggings = new ItemArmorQuartz(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT quartzBoots = new ItemArmorQuartz(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT quartzHelmet = new ItemArmorQuartz(ArmorType.HELMET);
+    public static final ItemArmorFT quartzChestplate = new ItemArmorQuartz(ArmorType.CHEST);
+    public static final ItemArmorFT quartzLeggings = new ItemArmorQuartz(ArmorType.LEGS);
+    public static final ItemArmorFT quartzBoots = new ItemArmorQuartz(ArmorType.BOOTS);
 
-    public static final ItemArmorFT obsidianHelmet = new ItemArmorObsidian(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT obsidianChestplate = new ItemArmorObsidian(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT obsidianLeggings = new ItemArmorObsidian(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT obsidianBoots = new ItemArmorObsidian(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT obsidianHelmet = new ItemArmorObsidian(ArmorType.HELMET);
+    public static final ItemArmorFT obsidianChestplate = new ItemArmorObsidian(ArmorType.CHEST);
+    public static final ItemArmorFT obsidianLeggings = new ItemArmorObsidian(ArmorType.LEGS);
+    public static final ItemArmorFT obsidianBoots = new ItemArmorObsidian(ArmorType.BOOTS);
 
-    public static final ItemArmorFT emeraldHelmet = new ItemArmorEmerald(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT emeraldChestplate = new ItemArmorEmerald(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT emeraldLeggings = new ItemArmorEmerald(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT emeraldBoots = new ItemArmorEmerald(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT emeraldHelmet = new ItemArmorEmerald(ArmorType.HELMET);
+    public static final ItemArmorFT emeraldChestplate = new ItemArmorEmerald(ArmorType.CHEST);
+    public static final ItemArmorFT emeraldLeggings = new ItemArmorEmerald(ArmorType.LEGS);
+    public static final ItemArmorFT emeraldBoots = new ItemArmorEmerald(ArmorType.BOOTS);
 
-    public static final ItemArmorFT lapisHelmet = new ItemArmorLapis(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT lapisChestplate = new ItemArmorLapis(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT lapisLeggings = new ItemArmorLapis(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT lapisBoots = new ItemArmorLapis(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT lapisHelmet = new ItemArmorLapis(ArmorType.HELMET);
+    public static final ItemArmorFT lapisChestplate = new ItemArmorLapis(ArmorType.CHEST);
+    public static final ItemArmorFT lapisLeggings = new ItemArmorLapis(ArmorType.LEGS);
+    public static final ItemArmorFT lapisBoots = new ItemArmorLapis(ArmorType.BOOTS);
 
-    public static final ItemArmorFT bronzeHelmet = new ItemArmorBronze(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT bronzeChestplate = new ItemArmorBronze(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT bronzeLeggings = new ItemArmorBronze(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT bronzeBoots = new ItemArmorBronze(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT bronzeHelmet = new ItemArmorBronze(ArmorType.HELMET);
+    public static final ItemArmorFT bronzeChestplate = new ItemArmorBronze(ArmorType.CHEST);
+    public static final ItemArmorFT bronzeLeggings = new ItemArmorBronze(ArmorType.LEGS);
+    public static final ItemArmorFT bronzeBoots = new ItemArmorBronze(ArmorType.BOOTS);
 
-    public static final ItemArmorFT coalHelmet = new ItemArmorCoal(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT coalChestplate = new ItemArmorCoal(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT coalLeggings = new ItemArmorCoal(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT coalBoots = new ItemArmorCoal(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT coalHelmet = new ItemArmorCoal(ArmorType.HELMET);
+    public static final ItemArmorFT coalChestplate = new ItemArmorCoal(ArmorType.CHEST);
+    public static final ItemArmorFT coalLeggings = new ItemArmorCoal(ArmorType.LEGS);
+    public static final ItemArmorFT coalBoots = new ItemArmorCoal(ArmorType.BOOTS);
 
-    public static final ItemArmorFT glowstoneHelmet = new ItemArmorGlowstone(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT glowstoneChestplate = new ItemArmorGlowstone(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT glowstoneLeggings = new ItemArmorGlowstone(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT glowstoneBoots = new ItemArmorGlowstone(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT glowstoneHelmet = new ItemArmorGlowstone(ArmorType.HELMET);
+    public static final ItemArmorFT glowstoneChestplate = new ItemArmorGlowstone(ArmorType.CHEST);
+    public static final ItemArmorFT glowstoneLeggings = new ItemArmorGlowstone(ArmorType.LEGS);
+    public static final ItemArmorFT glowstoneBoots = new ItemArmorGlowstone(ArmorType.BOOTS);
 
-    public static final ItemArmorFT redstoneHelmet = new ItemArmorRedstone(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT redstoneChestplate = new ItemArmorRedstone(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT redstoneLeggings = new ItemArmorRedstone(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT redstoneBoots = new ItemArmorRedstone(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT redstoneHelmet = new ItemArmorRedstone(ArmorType.HELMET);
+    public static final ItemArmorFT redstoneChestplate = new ItemArmorRedstone(ArmorType.CHEST);
+    public static final ItemArmorFT redstoneLeggings = new ItemArmorRedstone(ArmorType.LEGS);
+    public static final ItemArmorFT redstoneBoots = new ItemArmorRedstone(ArmorType.BOOTS);
 
-    public static final ItemArmorFT adamantiumHelmet = new ItemArmorAdamantium(Armor.EnumArmorType.HELMET);
-    public static final ItemArmorFT adamantiumChestplate = new ItemArmorAdamantium(Armor.EnumArmorType.CHEST);
-    public static final ItemArmorFT adamantiumLeggings = new ItemArmorAdamantium(Armor.EnumArmorType.LEGS);
-    public static final ItemArmorFT adamantiumBoots = new ItemArmorAdamantium(Armor.EnumArmorType.BOOTS);
+    public static final ItemArmorFT adamantiumHelmet = new ItemArmorAdamantium(ArmorType.HELMET);
+    public static final ItemArmorFT adamantiumChestplate = new ItemArmorAdamantium(ArmorType.CHEST);
+    public static final ItemArmorFT adamantiumLeggings = new ItemArmorAdamantium(ArmorType.LEGS);
+    public static final ItemArmorFT adamantiumBoots = new ItemArmorAdamantium(ArmorType.BOOTS);
 
     public static void init()
 	{

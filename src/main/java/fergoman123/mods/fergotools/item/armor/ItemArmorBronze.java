@@ -6,16 +6,17 @@ import fergoman123.mods.fergotools.reference.Textures;
 import fergoman123.mods.fergotools.util.base.ItemArmorFT;
 import fergoman123.mods.fergotools.util.item.Materials;
 import fergoman123.mods.fergoutil.helper.NameHelper;
-import fergoman123.mods.fergoutil.item.Armor;
+import fergoman123.mods.fergoutil.item.ArmorType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
 public class ItemArmorBronze extends ItemArmorFT {
 
-    public ItemArmorBronze(Armor.EnumArmorType type)
+    public ItemArmorBronze(ArmorType type)
     {
         super(ArmorNames.bronze, Materials.Armor.bronzeArmor, type);
     }
@@ -39,7 +40,7 @@ public class ItemArmorBronze extends ItemArmorFT {
 
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean extraInfo)
     {
-        if (kb.isKeyDown(kb.KEY_LSHIFT) || kb.isKeyDown(kb.KEY_RSHIFT))
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
             list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.reductAmount));
             for (int i = 0; i < Names.ArmorTooltipLocale.bronzeArmor.length; i++)

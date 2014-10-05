@@ -3,7 +3,7 @@ package fergoman123.mods.fergotools.init;
 import fergoman123.mods.fergotools.block.BlockFergoGlass;
 import fergoman123.mods.fergotools.block.FergoOres.*;
 import fergoman123.mods.fergotools.block.FergoStorageBlocks.*;
-import fergoman123.mods.fergotools.creativetab.CreativeTabsFergoTools;
+import fergoman123.mods.fergotools.creativetab.Tabs;
 import fergoman123.mods.fergotools.furnaces.AdamantiumFurnace.BlockAdamantiumFurnace;
 import fergoman123.mods.fergotools.furnaces.BronzeFurnace.BlockBronzeFurnace;
 import fergoman123.mods.fergotools.furnaces.CoalFurnace.BlockCoalFurnace;
@@ -49,17 +49,17 @@ public class ModBlocks{
 
     public static final BlockGlassFT blockFergoGlass = new BlockFergoGlass();
 
-    public static final Block quartzFurnaceIdle = new BlockQuartzFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block obsidianFurnaceIdle = new BlockObsidianFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block emeraldFurnaceIdle = new BlockEmeraldFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block lapisFurnaceIdle = new BlockLapisFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block bronzeFurnaceIdle = new BlockBronzeFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block coalFurnaceIdle = new BlockCoalFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block silkFurnaceIdle = new BlockSilkFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
-    public static final Block maceratorIdle = new BlockMacerator(false).setCreativeTab(CreativeTabsFergoTools.tabFergoFurnaces);
+    public static final Block quartzFurnaceIdle = new BlockQuartzFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block obsidianFurnaceIdle = new BlockObsidianFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block emeraldFurnaceIdle = new BlockEmeraldFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block lapisFurnaceIdle = new BlockLapisFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block bronzeFurnaceIdle = new BlockBronzeFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block coalFurnaceIdle = new BlockCoalFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block silkFurnaceIdle = new BlockSilkFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block redstoneFurnaceIdle = new BlockRedstoneFurnace(false).setCreativeTab(Tabs.tabFergoFurnaces);
+    public static final Block maceratorIdle = new BlockMacerator(false).setCreativeTab(Tabs.tabFergoFurnaces);
 
     public static final Block[] furnaceIdle = new Block[]{quartzFurnaceIdle, obsidianFurnaceIdle, emeraldFurnaceIdle, lapisFurnaceIdle, bronzeFurnaceIdle, coalFurnaceIdle, glowstoneFurnaceIdle, adamantiumFurnaceIdle, silkFurnaceIdle, redstoneFurnaceIdle, maceratorIdle};
 

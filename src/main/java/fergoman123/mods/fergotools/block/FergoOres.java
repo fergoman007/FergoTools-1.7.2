@@ -79,7 +79,7 @@ public class FergoOres
     {
         public BlockOreAdamantium()
         {
-            super();
+            super(Material.rock);
             this.setBlockName(Names.Blocks.oreAdamantium);
         }
 

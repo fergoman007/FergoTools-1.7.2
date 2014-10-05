@@ -42,8 +42,9 @@ public class AdamantiumFurnace
 
         public BlockAdamantiumFurnace(boolean isActive)
         {
-            super(Material.rock, "adamantiumFurnace");
+            super(Material.iron, "adamantiumFurnace");
             this.isActive = isActive;
+            this.setStepSound(soundTypePiston);
         }
 
         public Item getItemDropped(int par1, Random rand, int par3)
