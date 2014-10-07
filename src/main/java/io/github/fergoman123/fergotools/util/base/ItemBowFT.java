@@ -2,6 +2,7 @@ package io.github.fergoman123.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.creativetab.Tabs;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
@@ -21,6 +22,7 @@ public abstract class ItemBowFT extends ItemBow
         super();
         this.setMaxDamage(maxUses);
         this.setMaxStackSize(1);
+        this.setCreativeTab(Tabs.tabFergoBows);
     }
 
     public abstract void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4);

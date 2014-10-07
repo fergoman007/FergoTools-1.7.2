@@ -1,7 +1,13 @@
 package io.github.fergoman123.fergotools.util.base;
 
+import fergoman123.mods.fergoutil.helper.NameHelper;
 import fergoman123.mods.fergoutil.item.ArmorType;
+import io.github.fergoman123.fergotools.creativetab.Tabs;
+import io.github.fergoman123.fergotools.reference.Reference;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
 
 public abstract class ItemArmorFT extends ItemArmor
 {
@@ -23,8 +29,53 @@ public abstract class ItemArmorFT extends ItemArmor
     {
         super(material, 1, type.ordinal());
         this.setUnlocalizedName(armorName);
-//        this.set
+        this.setCreativeTab(Tabs.tabFergoArmor);
+        this.setMaxStackSize(1);
+        this.setTextureName(String.format("%s%s%s", Reference.textureLoc, armorName, getArmorTypeName(this.armorType)));
     }
 
+    public String getUnlocalizedName()
+    {
+        return String.format(NameHelper.getLocaleType(3), Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()), getArmorTypeName(this.armorType));
+    }
 
+    public String getUnlocalizedName(ItemStack stack)
+    {
+        return String.format(NameHelper.getLocaleType(3), Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)), getArmorTypeName(stack.getItem()));
+    }
+
+    public void registerIcons(IIconRegister register)
+    {
+        itemIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
+    }
+
+    protected String getArmorTypeName(int slot)
+    {
+        if (slot == 0)
+        {
+            return "Helmet";
+        }
+        else if (slot == 1)
+        {
+            return "Chestplate";
+        }
+        else if (slot == 2)
+        {
+            return "Leggings";
+        }
+        else
+        {
+            return "Boots";
+        }
+    }
+
+    protected String getArmorTypeName(Item item)
+    {
+        if (item instanceof ItemArmor)
+        {
+            ItemArmor itemArmor = (ItemArmor) item;
+            return getArmorTypeName(itemArmor.armorType);
+        }
+        return "";
+    }
 }

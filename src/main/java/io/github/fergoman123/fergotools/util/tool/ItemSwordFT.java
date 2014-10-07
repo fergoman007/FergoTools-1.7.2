@@ -37,7 +37,7 @@ package io.github.fergoman123.fergotools.util.tool;
 
     public void registerIcons(IIconRegister register)
     {
-        itemIcon = register.registerIcon(String.format(NameHelper.getLocaleType(NameHelper.localeItem), NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
+        itemIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
 }
