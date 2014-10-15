@@ -4,7 +4,7 @@ import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergotools.util.tool.ItemAxeFT;
-import fergoman123.mods.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import org.lwjgl.input.Keyboard;

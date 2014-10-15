@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.init;
 
-import fergoman123.mods.fergoutil.helper.RegisterHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergotools.reference.Strings;
 import io.github.fergoman123.fergotools.util.Utils;
 

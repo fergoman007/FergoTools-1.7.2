@@ -3,9 +3,9 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import fergoman123.mods.fergoutil.helper.BlockHelper;
-import fergoman123.mods.fergoutil.helper.GLHelper;
-import fergoman123.mods.fergoutil.helper.GuiHelper;
+import io.github.fergoman123.fergoutil.helper.BlockHelper;
+import io.github.fergoman123.fergoutil.helper.GLHelper;
+import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.*;
@@ -471,7 +471,7 @@ public class Macerator
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
         {
-            GLHelper.getGlColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+            GLHelper.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
             GuiHelper.bindTexture(Textures.maceratorGuiTexture);
             int k = (width - xSize) / 2;
             int l = (height - ySize) / 2;

@@ -1,19 +1,16 @@
 package io.github.fergoman123.fergotools.item.armor;
 
-import io.github.fergoman123.fergotools.util.base.ItemArmorFT;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.Names;
-import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergotools.reference.Textures;
-import fergoman123.mods.fergoutil.helper.NameHelper;
-import fergoman123.mods.fergoutil.helper.PotionHelper;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import io.github.fergoman123.fergotools.util.PotionList;
+import io.github.fergoman123.fergotools.util.base.ItemArmorFT;
+import io.github.fergoman123.fergotools.util.item.Materials;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
@@ -44,50 +41,39 @@ public class ItemArmorAdamantium extends ItemArmorFT{
     }
 
     @Override
-    public void onArmorTick(World world, EntityPlayer player, ItemStack armor)
-    {
+    public void onArmorTick(World world, EntityPlayer player, ItemStack armor) {
+        if ((player.getCurrentArmor(3) != null) && (player.getCurrentArmor(2) != null) && (player.getCurrentArmor(1) != null) && (player.getCurrentArmor(0) != null)) {
 
-        if (player.getCurrentArmor(3) != null)
-        {
-            if(player.getCurrentArmor(3).getItem() == ModItems.adamantiumHelmet)
-            {
-                player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 1, 4));
-                player.addPotionEffect(new PotionEffect(Potion.field_76443_y.id, 1, 4));
+            ItemStack helmet = player.getCurrentArmor(3);
+            ItemStack chestplate = player.getCurrentArmor(2);
+            ItemStack leggings = player.getCurrentArmor(1);
+            ItemStack boots = player.getCurrentArmor(0);
+
+            if (player.getCurrentArmor(3).getItem() == ModItems.adamantiumHelmet) {
+                player.addPotionEffect(PotionList.waterBreathing);
+                player.addPotionEffect(PotionList.saturation);
             }
-        }
 
-        if (player.getCurrentArmor(2) != null)
-        {
-            if (player.getCurrentArmor(2).getItem() == ModItems.adamantiumChestplate)
-            {
-                player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 1, 4));
+            if (player.getCurrentArmor(2).getItem() == ModItems.adamantiumChestplate) {
                 player.capabilities.allowFlying = true;
-                player.fallDistance = 0.0F;
-            }
-            else if (!player.capabilities.isCreativeMode)
-            {
-                player.capabilities.allowFlying = false;
-                player.capabilities.isFlying = false;
                 player.fallDistance = 0.0f;
+                player.addPotionEffect(PotionList.absorption);
             }
-        }
 
-        if (player.getCurrentArmor(1) != null)
-        {
-            if (player.getCurrentArmor(1).getItem() == ModItems.adamantiumLeggings)
-            {
-                player.addPotionEffect(new PotionEffect(Potion.jump.id, 1, 4));
+            if (player.getCurrentArmor(1).getItem() == ModItems.adamantiumLeggings) {
+                player.addPotionEffect(PotionList.jump);
             }
-        }
 
-        if (player.getCurrentArmor(0) != null)
-        {
-            if (player.getCurrentArmor(0).getItem() == ModItems.adamantiumBoots)
-            {
-                player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1, 4));
+            if (player.getCurrentArmor(0).getItem() == ModItems.adamantiumBoots) {
+                player.addPotionEffect(PotionList.moveSpeed);
             }
+        } else if (!player.capabilities.isCreativeMode) {
+            player.capabilities.allowFlying = false;
+            player.capabilities.isFlying = false;
+            player.fallDistance = 0.0F;
         }
     }
+
 
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean useExtraInfo)
@@ -99,6 +85,11 @@ public class ItemArmorAdamantium extends ItemArmorFT{
             for (int i = 0; i < Names.ArmorTooltipLocale.adamantiumArmor.length; i++)
             {
                 list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.adamantiumArmor[i]));
+            }
+
+            list.add("");
+            for (int i = 0; i < Names.ArmorTooltipLocale.adamantiumAbilities.length; i++) {
+                list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.adamantiumAbilities[i]));
             }
         }
         else

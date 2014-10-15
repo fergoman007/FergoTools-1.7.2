@@ -10,14 +10,13 @@
 package io.github.fergoman123.fergotools.creativetab;
 
 
- import fergoman123.mods.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.init.ModBlocks;
  import io.github.fergoman123.fergotools.init.ModItems;
  import io.github.fergoman123.fergotools.reference.Strings;
+ import io.github.fergoman123.fergoutil.helper.NameHelper;
  import net.minecraft.creativetab.CreativeTabs;
  import net.minecraft.init.Blocks;
  import net.minecraft.item.Item;
- import net.minecraft.item.ItemStack;
 
  public class Tabs {
     public static CreativeTabs tabFergoTools;

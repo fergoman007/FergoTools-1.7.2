@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.util.base;
 
-import fergoman123.mods.fergoutil.helper.NameHelper;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.item.ArmorType;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;

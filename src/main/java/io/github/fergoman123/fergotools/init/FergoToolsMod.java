@@ -12,6 +12,7 @@ import io.github.fergoman123.fergotools.helper.LogHelper;
 import io.github.fergoman123.fergotools.reference.MetadataFT;
 import io.github.fergoman123.fergotools.reference.Strings;
 import io.github.fergoman123.fergotools.util.item.Materials;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class FergoToolsMod
 {
@@ -20,7 +21,6 @@ public class FergoToolsMod
         LogHelper.info(Strings.Messages.preInitMessage);
         MetadataFT.writeMetadata(evt.getModMetadata());
         ConfigHandler.init(evt.getSuggestedConfigurationFile());
-        FergoTools.proxy.registerKeyBindings();
         FergoTools.proxy.registerEventHandlers();
         Tabs.init();
         Materials.init();

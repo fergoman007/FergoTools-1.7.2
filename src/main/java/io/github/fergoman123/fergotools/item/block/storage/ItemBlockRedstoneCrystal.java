@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.item.block.storage;
 
-import fergoman123.mods.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.base.ItemBlockFT;

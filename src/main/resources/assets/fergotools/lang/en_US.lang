@@ -7,6 +7,7 @@ FergoTools:tabFergoArmor=Fergoman123's Tools (Armor)
 FergoTools:tabFergoBows=Fergoman123's Tools (Bows)
 FergoTools:tabFergoShears=Fergoman123's Tools (Shears)
 FergoTools:tabFergoWood=Fergoman123's Tools (Wood)
+FergoTools:tabFergoCT=Fergoman123's Tools (Crafting Tables)
 
 # Tools
 item.FergoTools:quartzPickaxe.name=Quartz Pickaxe
@@ -158,6 +159,7 @@ tile.FergoTools:plankGlowstone.name=Glowstone Wood Planks
 tile.FergoTools:plankRedstone.name=Redstone Wood Planks
 
 tile.FergoTools:obsidianWorkbench.name=Obsidian Crafting Table
+tile.FergoTools:emeraldWorkbench.name=Emerald Crafting Table
 
 item.FergoTools:stickObsidian.name=Obsidian Stick
 item.FergoTools:stickEmerald.name=Emerald Stick
@@ -295,6 +297,11 @@ tooltip.FergoTools:adamantium.helmet=Helmet: 20
 tooltip.FergoTools:adamantium.chestplate=Chestplate: 20
 tooltip.FergoTools:adamantium.leggings=Leggings: 20
 tooltip.FergoTools:adamantium.boots=Boots: 20
+
+tooltip.FergoTools:adamantium.abilities.helmet=Helmet: Allows you to breathe underwater and keeps you Hunger full.
+tooltip.FergoTools:adamantium.abilities.chest=Chestplate: Allows you to fly and to absorb more damage.
+tooltip.FergoTools:adamantium.abilities.legs=Leggings: Allows you to jump higher.
+tooltip.FergoTools:adamantium.abilities.boots=Boots: Allows you to run faster.
 
 # Ore Dictionary
 oreDict.name=Ore Dictionary Name:

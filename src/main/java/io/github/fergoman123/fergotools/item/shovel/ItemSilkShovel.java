@@ -1,6 +1,7 @@
 package io.github.fergoman123.fergotools.item.shovel;
 
 
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.item.Materials;
@@ -9,6 +10,8 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class ItemSilkShovel extends ItemShovelFT {
 
@@ -28,4 +31,8 @@ public class ItemSilkShovel extends ItemShovelFT {
         stack.addEnchantment(Enchantment.silkTouch, 1);
     }
 
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
+        list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
+    }
 }

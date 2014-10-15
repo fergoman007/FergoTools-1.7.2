@@ -10,7 +10,7 @@
 package io.github.fergoman123.fergotools.util.base;
 
 
- import fergoman123.mods.fergoutil.helper.NameHelper;
+ import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import net.minecraft.block.Block;
  import net.minecraft.block.material.Material;
@@ -21,9 +21,15 @@ package io.github.fergoman123.fergotools.util.base;
 
  public abstract class BlockFT extends Block
 {
+
     public BlockFT(Material material) {
         super(material);
         this.setCreativeTab(Tabs.tabFergoBlocks);
+    }
+
+    public BlockFT()
+    {
+        super(Material.iron);
     }
 
     public String getUnlocalizedName()

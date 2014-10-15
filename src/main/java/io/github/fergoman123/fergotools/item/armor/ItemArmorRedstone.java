@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.item.armor;
 
-import fergoman123.mods.fergoutil.helper.NameHelper;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.item.ArmorType;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Textures;

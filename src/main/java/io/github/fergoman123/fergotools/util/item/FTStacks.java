@@ -10,7 +10,7 @@
 package io.github.fergoman123.fergotools.util.item;
 
 
-import fergoman123.mods.fergoutil.helper.ItemStackHelper;
+import io.github.fergoman123.fergoutil.helper.ItemStackHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
 import net.minecraft.init.Blocks;
@@ -36,7 +36,7 @@ public class FTStacks {
     public static final ItemStack expShard9 = new ItemStack(ModItems.shardExp, 9);
     public static final ItemStack redstoneCrystal9 = new ItemStack(ModItems.gemRedstone, 9);
 
-    public static final ItemStack expCollectorHalfStack = ItemStackHelper.getItemStackForItem(ModItems.expCollector, 32);
+    public static final ItemStack expCollectorHalfStack = ItemStackHelper.getItemStack(ModItems.expCollector, 32);
 
     public static final ItemStack expShard5 = new ItemStack(ModItems.shardExp, 5);
 
@@ -194,6 +194,11 @@ public class FTStacks {
     public static final ItemStack redstoneChestplate = new ItemStack(ModItems.redstoneChestplate);
     public static final ItemStack redstoneLeggings = new ItemStack(ModItems.redstoneLeggings);
     public static final ItemStack redstoneBoots = new ItemStack(ModItems.redstoneBoots);
+
+    public static final ItemStack adamantiumHelmet = new ItemStack(ModItems.adamantiumHelmet);
+    public static final ItemStack adamantiumChestplate = new ItemStack(ModItems.adamantiumChestplate);
+    public static final ItemStack adamantiumLeggings = new ItemStack(ModItems.adamantiumLeggings);
+    public static final ItemStack adamantiumBoots = new ItemStack(ModItems.adamantiumBoots);
 
     public static final ItemStack quartzBow = new ItemStack(ModItems.bowQuartz);
     public static final ItemStack obsidianBow = new ItemStack(ModItems.bowObsidian);

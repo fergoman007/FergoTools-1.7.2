@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.item.shovel;
 
-import fergoman123.mods.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.item.Materials;

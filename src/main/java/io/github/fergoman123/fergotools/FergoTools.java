@@ -19,8 +19,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import io.github.fergoman123.fergotools.init.FergoToolsMod;
 import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergotools.reference.Reference;
-import fergoman123.mods.fergoutil.lib.ModConstants;
-import fergoman123.mods.fergoutil.proxy.IProxy;
+import io.github.fergoman123.fergoutil.lib.ModConstants;
+import io.github.fergoman123.fergoutil.proxy.IProxy;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dependency, guiFactory = Reference.guiFactoryClass)
 public class FergoTools

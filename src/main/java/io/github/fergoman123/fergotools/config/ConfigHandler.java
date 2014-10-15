@@ -10,7 +10,7 @@
 package io.github.fergoman123.fergotools.config;
 
 
-import fergoman123.mods.fergoutil.helper.ConfigHelper;
+import io.github.fergoman123.fergoutil.helper.ConfigHelper;
 import io.github.fergoman123.fergotools.helper.LogHelper;
 import net.minecraftforge.common.config.Configuration;
 

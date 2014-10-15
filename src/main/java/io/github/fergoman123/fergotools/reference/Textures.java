@@ -13,6 +13,10 @@ public class Textures
     public static final String guiWorkbench = "workbench/";
     public static final String guiFurnace = "furnace/";
 
+    public static final String ctSide = "Side";
+    public static final String ctTop = "Top";
+    public static final String ctFront = "Front";
+
     public static final String ctmLoc = "ctm/glass/";
     public static final String ctLocSide = "ct/side/";
     public static final String ctLocTop = "ct/top/";
@@ -141,22 +145,69 @@ public class Textures
 
     public static final String[] obsidianWorkbenchTextures =
             {
-                    "FergoTools:ct/side/obsidianWorkbenchSide",
-                    "FergoTools:ct/top/obsidianWorkbenchTop",
-                    "FergoTools:ct/front/obsidianWorkbenchFront"
+                    Reference.textureLoc + ctLocSide + Names.Blocks.obsidianWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.obsidianWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.obsidianWorkbench + ctFront
             };
 
     public static final String[] emeraldWorkbenchTextures =
             {
-                    "FergoTools:ct/side/emeraldWorkbenchSide",
-                    "FergoTools:ct/top/emeraldWorkbenchTop",
-                    "FergoTools:ct/front/emeraldWorkbenchFront"
+                    Reference.textureLoc + ctLocSide + Names.Blocks.emeraldWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.emeraldWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.emeraldWorkbench + ctFront
             };
 
     public static final String[] lapisWorkbenchTextures =
             {
-                    "FergoTools:ct/side/lapisWorkbenchSide",
-                    "FergoTools:ct/top/lapisWorkbenchTop",
-                    "FergoTools:ct/top/lapisWorkbenchFront"
+                    Reference.textureLoc + ctLocSide + Names.Blocks.lapisWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.lapisWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.lapisWorkbench + ctFront
             };
+
+    public static final String[] bronzeWorkbenchTextures =
+            {
+                    Reference.textureLoc + ctLocSide + Names.Blocks.bronzeWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.bronzeWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.bronzeWorkbench + ctFront
+            };
+
+    public static final String[] coalWorkbenchTextures =
+            {
+                    Reference.textureLoc + ctLocSide + Names.Blocks.coalWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.coalWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.coalWorkbench + ctFront
+            };
+
+    public static final String[] glowstoneWorkbenchTextures =
+            {
+                    Reference.textureLoc + ctLocSide + Names.Blocks.glowstoneWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.glowstoneWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.glowstoneWorkbench + ctFront
+            };
+
+    public static final String[] adamantiumWorkbenchTextures =
+            {
+                    Reference.textureLoc + ctLocSide + Names.Blocks.adamantiumWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.adamantiumWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.adamantiumWorkbench + ctFront
+            };
+
+    public static final String[] silkWorkbenchTextures =
+            {
+                    Reference.textureLoc + ctLocSide + Names.Blocks.silkWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.silkWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.silkWorkbench + ctFront
+            };
+
+    public static final String[] redstoneWorkbenchTextures =
+            {
+                    Reference.textureLoc + ctLocSide + Names.Blocks.redstoneWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + Names.Blocks.redstoneWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + Names.Blocks.redstoneWorkbench + ctFront
+            };
+
+
+
+
+
 }

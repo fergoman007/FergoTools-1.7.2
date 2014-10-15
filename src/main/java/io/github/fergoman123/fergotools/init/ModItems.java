@@ -1,8 +1,8 @@
 package io.github.fergoman123.fergotools.init;
 
 
-import fergoman123.mods.fergoutil.helper.RegisterHelper;
-import fergoman123.mods.fergoutil.item.ArmorType;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
+import io.github.fergoman123.fergoutil.item.ArmorType;
 import io.github.fergoman123.fergotools.item.FTSticks.*;
 import io.github.fergoman123.fergotools.item.ItemExpCollector;
 import io.github.fergoman123.fergotools.item.axe.*;
@@ -20,6 +20,7 @@ import io.github.fergoman123.fergotools.util.base.ItemStickFT;
 import io.github.fergoman123.fergotools.util.tool.*;
 import io.github.fergoman123.fergotools.item.shovel.*;
 import io.github.fergoman123.fergotools.item.armor.*;
+import net.minecraft.item.Item;
 
 public class ModItems
 {
@@ -110,10 +111,13 @@ public class ModItems
     public static final ItemFT ingotCoal = new ItemCoalIngot();
     public static final ItemFT ingotGlowstone = new ItemGlowstoneIngot();
     public static final ItemFT ingotAdamantium = new ItemAdamantiumIngot();
-    public static final ItemFT gemRedstone = new ItemRedstoneGem();
     public static final ItemFT gemSilk = new ItemSilkGem();
+    public static final ItemFT gemRedstone = new ItemRedstoneGem();
     public static final ItemFT shardExp = new ItemExpShard();
+
     public static final ItemFT expCollector = new ItemExpCollector();
+
+    public static final Item[] materials = new Item[]{ingotObsidian, gemEmerald, gemLapis, ingotBronze, ingotCoal,ingotGlowstone, ingotAdamantium,gemSilk, gemRedstone, shardExp};
 
     public static final ItemArmorFT quartzHelmet = new ItemArmorQuartz(ArmorType.HELMET);
     public static final ItemArmorFT quartzChestplate = new ItemArmorQuartz(ArmorType.CHEST);
@@ -169,6 +173,8 @@ public class ModItems
     public static final ItemStickFT stickAdamantium = new ItemStickAdamantium();
     public static final ItemStickFT stickSilk = new ItemStickSilk();
     public static final ItemStickFT stickRedstone = new ItemStickRedstone();
+
+    public static final Item[] sticks = new Item[]{stickObsidian, stickEmerald, stickLapis, stickBronze, stickCoal, stickGlowstone, stickAdamantium, stickSilk, stickRedstone};
 
     public static void init()
 	{

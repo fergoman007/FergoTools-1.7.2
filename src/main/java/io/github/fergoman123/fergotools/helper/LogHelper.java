@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.helper;
 
 import cpw.mods.fml.common.FMLLog;
-import fergoman123.mods.fergoutil.logging.ILogLevel;
+import io.github.fergoman123.fergoutil.logging.ILogLevel;
 import io.github.fergoman123.fergotools.reference.ModInfo;
 import org.apache.logging.log4j.Level;
 

@@ -1,5 +1,6 @@
 package io.github.fergoman123.fergotools.item.bow;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
@@ -18,6 +19,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
+
+import java.util.List;
 
 import static cpw.mods.fml.relauncher.Side.CLIENT;
 
@@ -145,11 +148,6 @@ public class ItemLapisBow extends ItemBowFT {
         return Materials.Tools.lapis.getEnchantability();
     }
 
-    public int getEnchantability()
-    {
-        return 1;
-    }
-
     public void registerIcons(IIconRegister register)
     {
         this.itemIcon = register.registerIcon(Textures.lapisBowStandy);
@@ -178,6 +176,11 @@ public class ItemLapisBow extends ItemBowFT {
             return texture[0];
         }
         return this.itemIcon;
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
+        list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
     }
 
 }

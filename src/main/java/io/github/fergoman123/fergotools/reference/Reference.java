@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.reference;
 
-import fergoman123.mods.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 
 public class Reference {
 

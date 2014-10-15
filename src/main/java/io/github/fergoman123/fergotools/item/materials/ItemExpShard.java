@@ -3,7 +3,7 @@ package io.github.fergoman123.fergotools.item.materials;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.base.ItemFT;
-import fergoman123.mods.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;

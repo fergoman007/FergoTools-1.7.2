@@ -9,7 +9,7 @@
 
 package io.github.fergoman123.fergotools.handler;
 
-import fergoman123.mods.fergoutil.helper.RegisterHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
@@ -30,35 +30,31 @@ import io.github.fergoman123.fergotools.util.GuiHandler;
 
     public static void registerOres()
     {
-        RegisterHelper.registerOre(Names.Blocks.oreObsidian, ModBlocks.oreObsidian);
-        RegisterHelper.registerOre(Names.Blocks.oreEmeraldCrystal, ModBlocks.oreEmeraldCrystal);
-        RegisterHelper.registerOre(Names.Blocks.oreLapisCrystal, ModBlocks.oreLapisCrystal);
-        RegisterHelper.registerOre(Names.Blocks.oreBronze, ModBlocks.oreBronze);
-        RegisterHelper.registerOre(Names.Blocks.oreExperience, ModBlocks.oreExperience);
-        RegisterHelper.registerOre(Names.Blocks.oreAdamantium, ModBlocks.oreAdamantium);
-        RegisterHelper.registerOre(Names.Blocks.oreCrystalRed, ModBlocks.oreCrystalRed);
+        for (int i = 0; i < Names.Blocks.oreList.length; i++) {
+            RegisterHelper.registerOre(Names.Blocks.oreList[i], ModBlocks.ores[i]);
+        }
 
-        RegisterHelper.registerOre(Names.Blocks.blockExperience, ModBlocks.blockExperience);
-        RegisterHelper.registerOre(Names.Blocks.blockObsidian, ModBlocks.blockObsidian);
-        RegisterHelper.registerOre(Names.Blocks.blockEmeraldCrystal, ModBlocks.blockEmeraldCrystal);
-        RegisterHelper.registerOre(Names.Blocks.blockLapisCrystal, ModBlocks.blockLapisCrystal);
-        RegisterHelper.registerOre(Names.Blocks.blockBronze, ModBlocks.blockBronze);
-        RegisterHelper.registerOre(Names.Blocks.blockCoal, ModBlocks.blockCoal);
-        RegisterHelper.registerOre(Names.Blocks.blockGlowstone, ModBlocks.blockGlowstone);
-        RegisterHelper.registerOre(Names.Blocks.blockAdamantium, ModBlocks.blockAdamantium);
-        RegisterHelper.registerOre(Names.Blocks.blockSilkGem, ModBlocks.blockSilkGem);
-        RegisterHelper.registerOre(Names.Blocks.blockRedstoneCrystal, ModBlocks.blockRedstoneCrystal);
+        for (int i = 0; i < Names.Blocks.blockList.length; i++)
+        {
+            RegisterHelper.registerOre(Names.Blocks.blockList[i], ModBlocks.blocks[i]);
+        }
 
-        RegisterHelper.registerOre(Names.Items.ingotObsidian, ModItems.ingotObsidian);
-        RegisterHelper.registerOre(Names.Items.gemEmerald, ModItems.gemEmerald);
-        RegisterHelper.registerOre(Names.Items.gemLapis, ModItems.gemLapis);
-        RegisterHelper.registerOre(Names.Items.ingotBronze, ModItems.ingotBronze);
-        RegisterHelper.registerOre(Names.Items.ingotCoal, ModItems.ingotCoal);
-        RegisterHelper.registerOre(Names.Items.ingotGlowstone, ModItems.ingotGlowstone);
-        RegisterHelper.registerOre(Names.Items.ingotAdamantium, ModItems.ingotAdamantium);
-        RegisterHelper.registerOre(Names.Items.gemRedstone, ModItems.gemRedstone);
-        RegisterHelper.registerOre(Names.Items.gemSilk, ModItems.gemSilk);
-        RegisterHelper.registerOre(Names.Items.shardExp, ModItems.shardExp);
+        for (int i = 0; i < Names.Items.materials.length; i++) {
+            RegisterHelper.registerOre(Names.Items.materials[i], ModItems.materials[i]);
+        }
+
+        for (int i = 0; i < Names.Blocks.logs.length; i++) {
+            RegisterHelper.registerOre("logWood", ModBlocks.logs[i]);
+        }
+
+        for (int i = 0; i < Names.Blocks.planks.length; i++)
+        {
+            RegisterHelper.registerOre("plankWood", ModBlocks.planks[i]);
+        }
+
+        for (int i = 0; i < Names.Items.sticks.length; i++) {
+            RegisterHelper.registerOre("stickWood", ModItems.sticks[i]);
+        }
     }
 }
 

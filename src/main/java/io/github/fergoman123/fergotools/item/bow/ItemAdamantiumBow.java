@@ -1,12 +1,12 @@
 package io.github.fergoman123.fergotools.item.bow;
 
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.util.base.ItemBowFT;
 import io.github.fergoman123.fergotools.util.item.Materials;
-import fergoman123.mods.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -141,11 +141,6 @@ public class ItemAdamantiumBow extends ItemBowFT {
             player.setItemInUse(stack, this.getMaxItemUseDuration(stack));
         }
         return stack;
-    }
-
-    public int getEnchantability()
-    {
-        return 1;
     }
 
     public void registerIcons(IIconRegister register)

@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.reference;
 
-import fergoman123.mods.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 
 public class Names
 {
@@ -26,6 +26,7 @@ public class Names
         public static final String blockAdamantium = "blockAdamantium";
         public static final String blockSilkGem = "blockSilkGem";
         public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
+        public static final String blockExpCollector = "blockExpCollector";
 
         public static final String[] blockList = {blockExperience, blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal};
 
@@ -170,10 +171,12 @@ public class Names
         public static final String ingotCoal ="ingotCoal";
         public static final String ingotGlowstone = "ingotGlowstone";
         public static final String ingotAdamantium = "ingotAdamantium";
-        public static final String shardExp = "shardExp";
         public static final String gemSilk = "gemSilk";
         public static final String gemRedstone = "gemRedstone";
+        public static final String shardExp = "shardExp";
         public static final String expCollector = "expCollector";
+
+        public static final String[] materials = {ingotObsidian, gemEmerald, gemLapis, ingotBronze, ingotCoal,ingotGlowstone, ingotAdamantium,gemSilk, gemRedstone, shardExp};
 
         public static final String quartzPickaxe = "quartzPickaxe";
         public static final String quartzShovel = "quartzShovel";
@@ -256,6 +259,8 @@ public class Names
         public static final String stickSilk = "stickSilk";
         public static final String stickRedstone = "stickRedstone";
 
+        public static final String[] sticks = {stickObsidian, stickEmerald, stickLapis, stickBronze, stickCoal, stickGlowstone, stickAdamantium, stickSilk, stickRedstone};
+
         public static final String ftDebug = "ftDebug";
 
         public static final String[] donator = {};
@@ -316,6 +321,14 @@ public class Names
         public static final String[] glowstoneArmor = {"tooltip.FergoTools:glowstone.helmet", "tooltip.FergoTools:glowstone.chestplate", "tooltip.FergoTools:glowstone.leggings", "tooltip.FergoTools:glowstone.boots"};
         public static final String[] redstoneArmor = {"tooltip.FergoTools:redstone.helmet", "tooltip.FergoTools:redstone.chestplate", "tooltip.FergoTools:redstone.leggings", "tooltip.FergoTools:redstone.boots"};
         public static final String[] adamantiumArmor = {"tooltip.FergoTools:adamantium.helmet", "tooltip.FergoTools:adamantium.chestplate", "tooltip.FergoTools:adamantium.leggings", "tooltip.FergoTools:adamantium.boots"};
+
+        public static final String[] adamantiumAbilities =
+                {
+                        "tooltip.FergoTools:adamantium.abilities.helmet",
+                        "tooltip.FergoTools:adamantium.abilities.chest",
+                        "tooltip.FergoTools:adamantium.abilities.legs",
+                        "tooltip.FergoTools:adamantium.abilities.boots"
+                };
 
     }
 

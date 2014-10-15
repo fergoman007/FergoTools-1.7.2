@@ -10,12 +10,15 @@
 package io.github.fergoman123.fergotools.util.tool;
 
 
- import fergoman123.mods.fergoutil.helper.NameHelper;
+ import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import io.github.fergoman123.fergotools.reference.Reference;
  import net.minecraft.client.renderer.texture.IIconRegister;
+ import net.minecraft.entity.player.EntityPlayer;
  import net.minecraft.item.ItemAxe;
  import net.minecraft.item.ItemStack;
+
+ import java.util.List;
 
  public abstract class ItemAxeFT extends ItemAxe
 {
@@ -41,4 +44,6 @@ package io.github.fergoman123.fergotools.util.tool;
     public void registerIcons(IIconRegister r) {
         itemIcon = r.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
+
+    public abstract void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b);
 }

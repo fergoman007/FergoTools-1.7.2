@@ -9,12 +9,15 @@
 
 package io.github.fergoman123.fergotools.util.tool;
 
- import fergoman123.mods.fergoutil.helper.NameHelper;
+ import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import net.minecraft.client.renderer.texture.IIconRegister;
+ import net.minecraft.entity.player.EntityPlayer;
  import net.minecraft.item.Item;
  import net.minecraft.item.ItemSpade;
  import net.minecraft.item.ItemStack;
+
+ import java.util.List;
 
  public abstract class ItemShovelFT extends ItemSpade{
 
@@ -40,4 +43,6 @@ package io.github.fergoman123.fergotools.util.tool;
      {
          itemIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
      }
-}
+
+     public abstract void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b);
+ }

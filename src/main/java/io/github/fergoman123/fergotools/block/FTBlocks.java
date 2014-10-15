@@ -152,4 +152,17 @@ public class FTBlocks
             return Item.getItemFromBlock(this);
         }
     }
+
+    public static final class BlockExpCollector extends BlockFT {
+
+        public BlockExpCollector() {
+            super();
+            this.setBlockName(Names.Blocks.blockExpCollector);
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
 }

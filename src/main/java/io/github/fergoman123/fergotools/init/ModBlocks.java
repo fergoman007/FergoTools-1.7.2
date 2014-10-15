@@ -1,13 +1,11 @@
 package io.github.fergoman123.fergotools.init;
 
-import fergoman123.mods.fergoutil.helper.RegisterHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergotools.block.BlockFergoGlass;
+import io.github.fergoman123.fergotools.block.FTBlocks.*;
 import io.github.fergoman123.fergotools.block.FTLogs.*;
 import io.github.fergoman123.fergotools.block.FTOres.*;
-import io.github.fergoman123.fergotools.block.FTBlocks.*;
 import io.github.fergoman123.fergotools.block.FTPlanks.*;
-import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.*;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.furnaces.AdamantiumFurnace.BlockAdamantiumFurnace;
 import io.github.fergoman123.fergotools.furnaces.BronzeFurnace.BlockBronzeFurnace;
@@ -22,8 +20,13 @@ import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFu
 import io.github.fergoman123.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.Utils;
-import io.github.fergoman123.fergotools.util.base.*;
-
+import io.github.fergoman123.fergotools.util.base.BlockFT;
+import io.github.fergoman123.fergotools.util.base.BlockGlassFT;
+import io.github.fergoman123.fergotools.util.base.BlockLogFT;
+import io.github.fergoman123.fergotools.util.base.BlockWoodFT;
+import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
+import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.BlockEmeraldWorkbench;
+import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.BlockObsidianWorkbench;
 import net.minecraft.block.Block;
 
 public class ModBlocks{
@@ -48,7 +51,7 @@ public class ModBlocks{
     public static final BlockFT blockAdamantium = new BlockAdamantium();
     public static final BlockFT blockSilkGem = new BlockSilkGem();
     public static final BlockFT blockRedstoneCrystal = new BlockRedstoneCrystal();
-
+    public static final BlockFT blockExpCollector = new BlockExpCollector();
     public static final Block[] blocks = new Block[]{blockExperience, blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal};
 
     public static final BlockGlassFT blockFergoGlass = new BlockFergoGlass();
