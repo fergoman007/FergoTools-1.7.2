@@ -10,23 +10,37 @@ public class Textures
     public static final String armorSheetLocation = "textures/armor/";
     public static final String guiSheetLocation = "textures/gui/";
 
-    public static final String ctmLocation = "ctm/glass/";
+    public static final String guiWorkbench = "workbench/";
+    public static final String guiFurnace = "furnace/";
+
+    public static final String ctmLoc = "ctm/glass/";
+    public static final String ctLocSide = "ct/side/";
+    public static final String ctLocTop = "ct/top/";
+    public static final String ctLocFront =  "ct/front/";
 
     public static final String png = ".png";
 
-    public static final ResourceLocation quartzFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "quartzFurnace" + png);
-    public static final ResourceLocation obsidianFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "obsidianFurnace" + png);
-    public static final ResourceLocation emeraldFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "emeraldFurnace" + png);
-    public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "lapisFurnace" + png);
-    public static final ResourceLocation bronzeFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "bronzeFurnace" + png);
-    public static final ResourceLocation coalFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "coalFurnace" + png);
-    public static final ResourceLocation glowstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "glowstoneFurnace" + png);
-    public static final ResourceLocation adamantiumFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "adamantiumFurnace" + png);
-    public static final ResourceLocation silkFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "silkFurnace" + png);
-    public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "redstoneFurnace" + png);
-    public static final ResourceLocation maceratorGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "macerator" + png);
+    public static final ResourceLocation quartzFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "quartzFurnace" + png);
+    public static final ResourceLocation obsidianFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "obsidianFurnace" + png);
+    public static final ResourceLocation emeraldFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "emeraldFurnace" + png);
+    public static final ResourceLocation lapisFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "lapisFurnace" + png);
+    public static final ResourceLocation bronzeFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "bronzeFurnace" + png);
+    public static final ResourceLocation coalFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "coalFurnace" + png);
+    public static final ResourceLocation glowstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "glowstoneFurnace" + png);
+    public static final ResourceLocation adamantiumFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "adamantiumFurnace" + png);
+    public static final ResourceLocation silkFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "silkFurnace" + png);
+    public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "redstoneFurnace" + png);
+    public static final ResourceLocation maceratorGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "macerator" + png);
 
-    public static final ResourceLocation vanillaFurnacGui = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + "furnaceGui.png");
+    public static final ResourceLocation obsidianWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "obsidianWorkbench" + png);
+    public static final ResourceLocation emeraldWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "emeraldWorkbench" + png);
+    public static final ResourceLocation lapisWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "lapisWorkbench" + png);
+    public static final ResourceLocation bronzeWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "BronzeWorkbench" + png);
+    public static final ResourceLocation coalWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "coalWorkbench" + png);
+    public static final ResourceLocation glowstoneWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "glowstoneWorkbench" + png);
+    public static final ResourceLocation adamantiumWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "adamantiumWorkbench" + png);
+    public static final ResourceLocation silkWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "silkWorkbench" + png);
+    public static final ResourceLocation redstoneWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "redstoneWorkbench" + png);
 
     public static final String quartzArmorLayer1 = resourcePrefix + armorSheetLocation + "quartz_1" + png;
     public static final String obsidianArmorLayer1 = resourcePrefix + armorSheetLocation + "obsidian_1" + png;
@@ -123,5 +137,26 @@ public class Textures
                     blockFergoGlass12,
                     blockFergoGlass13,
                     blockFergoGlass14
+            };
+
+    public static final String[] obsidianWorkbenchTextures =
+            {
+                    "FergoTools:ct/side/obsidianWorkbenchSide",
+                    "FergoTools:ct/top/obsidianWorkbenchTop",
+                    "FergoTools:ct/front/obsidianWorkbenchFront"
+            };
+
+    public static final String[] emeraldWorkbenchTextures =
+            {
+                    "FergoTools:ct/side/emeraldWorkbenchSide",
+                    "FergoTools:ct/top/emeraldWorkbenchTop",
+                    "FergoTools:ct/front/emeraldWorkbenchFront"
+            };
+
+    public static final String[] lapisWorkbenchTextures =
+            {
+                    "FergoTools:ct/side/lapisWorkbenchSide",
+                    "FergoTools:ct/top/lapisWorkbenchTop",
+                    "FergoTools:ct/top/lapisWorkbenchFront"
             };
 }

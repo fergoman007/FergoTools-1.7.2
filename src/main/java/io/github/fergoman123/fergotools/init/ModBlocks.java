@@ -2,8 +2,12 @@ package io.github.fergoman123.fergotools.init;
 
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergotools.block.BlockFergoGlass;
-import io.github.fergoman123.fergotools.block.FergoOres.*;
-import io.github.fergoman123.fergotools.block.FergoStorageBlocks.*;
+import io.github.fergoman123.fergotools.block.FTLogs.*;
+import io.github.fergoman123.fergotools.block.FTOres.*;
+import io.github.fergoman123.fergotools.block.FTBlocks.*;
+import io.github.fergoman123.fergotools.block.FTPlanks.*;
+import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.*;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.furnaces.AdamantiumFurnace.BlockAdamantiumFurnace;
 import io.github.fergoman123.fergotools.furnaces.BronzeFurnace.BlockBronzeFurnace;
@@ -18,8 +22,7 @@ import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFu
 import io.github.fergoman123.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
 import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.Utils;
-import io.github.fergoman123.fergotools.util.base.BlockFT;
-import io.github.fergoman123.fergotools.util.base.BlockGlassFT;
+import io.github.fergoman123.fergotools.util.base.*;
 
 import net.minecraft.block.Block;
 
@@ -78,6 +81,42 @@ public class ModBlocks{
 
     public static final Block[] furnaceActive = new Block[]{quartzFurnaceActive, obsidianFurnaceActive, emeraldFurnaceActive, lapisFurnaceActive, bronzeFurnaceActive, coalFurnaceActive, glowstoneFurnaceActive, adamantiumFurnaceActive, silkFurnaceActive, redstoneFurnaceActive, maceratorActive};
 
+    public static final BlockLogFT logObsidian = new BlockLogObsidian();
+    public static final BlockLogFT logEmerald = new BlockLogEmerald();
+    public static final BlockLogFT logLapis = new BlockLogLapis();
+    public static final BlockLogFT logBronze = new BlockLogBronze();
+    public static final BlockLogFT logCoal = new BlockLogCoal();
+    public static final BlockLogFT logGlowstone = new BlockLogGlowstone();
+    public static final BlockLogFT logAdamantium = new BlockLogAdamantium();
+    public static final BlockLogFT logSilk = new BlockLogSilk();
+    public static final BlockLogFT logRedstone = new BlockLogRedstone();
+
+    public static final Block[] logs = new Block[]{logObsidian, logEmerald, logLapis, logBronze, logCoal, logGlowstone, logAdamantium, logSilk, logRedstone};
+
+    public static final BlockWoodFT plankObsidian = new BlockPlankObsidian();
+    public static final BlockWoodFT plankEmerald = new BlockPlankEmerald();
+    public static final BlockWoodFT plankLapis = new BlockPlankLapis();
+    public static final BlockWoodFT plankBronze = new BlockPlankBronze();
+    public static final BlockWoodFT plankCoal = new BlockPlankCoal();
+    public static final BlockWoodFT plankGlowstone = new BlockPlankGlowstone();
+    public static final BlockWoodFT plankAdamantium = new BlockPlankAdamantium();
+    public static final BlockWoodFT plankSilk = new BlockPlankSilk();
+    public static final BlockWoodFT plankRedstone = new BlockPlankRedstone();
+
+    public static final Block[] planks = new Block[]{plankObsidian, plankEmerald, plankLapis, plankBronze, plankCoal, plankGlowstone, plankAdamantium, plankSilk, plankRedstone};
+
+    public static final BlockWorkbenchFT obsidianWorkbench = new BlockObsidianWorkbench();
+    public static final BlockWorkbenchFT emeraldWorkbench = new BlockEmeraldWorkbench();
+//    public static final BlockWorkbenchFT lapisWorkbench = new BlockLapisWorkbench();
+//    public static final BlockWorkbenchFT bronzeWorkbench = new BlockBronzeWorkbench();
+//    public static final BlockWorkbenchFT coalWorkbench = new BlockCoalWorkbench();
+//    public static final BlockWorkbenchFT glowstoneWorkbench = new BlockGlowstoneWorkbench();
+//    public static final BlockWorkbenchFT adamantiumWorkbench = new BlockAdamantiumWorkbench();
+//    public static final BlockWorkbenchFT silkWorkbench = new BlockSilkWorkbench();
+//    public static final BlockWorkbenchFT redstoneWorkbench = new BlockRedstoneWorkbench();
+
+//    public static final Block[] workbenches = new Block[]{obsidianWorkbench, emeraldWorkbench, lapisWorkbench, bronzeWorkbench, coalWorkbench, glowstoneWorkbench, adamantiumWorkbench, silkWorkbench, redstoneWorkbench};
+
 	public static void init()
 	{
 
@@ -99,6 +138,19 @@ public class ModBlocks{
         for (int i = 0; i < furnaceActive.length; i++) {
             RegisterHelper.registerBlock(furnaceActive[i], Utils.furnaceActive[i], Names.Blocks.furnaceActive[i]);
         }
+
+        for (int i = 0; i < logs.length; i++)
+        {
+            RegisterHelper.registerBlock(logs[i], Names.Blocks.logs[i]);
+        }
+
+        for (int i = 0; i < planks.length; i++)
+        {
+            RegisterHelper.registerBlock(planks[i], Names.Blocks.planks[i]);
+        }
+
+        RegisterHelper.registerBlock(obsidianWorkbench, Names.Blocks.obsidianWorkbench);
+        RegisterHelper.registerBlock(emeraldWorkbench, Names.Blocks.emeraldWorkbench);
     }
 
 

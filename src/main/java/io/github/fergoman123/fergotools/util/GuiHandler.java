@@ -23,6 +23,8 @@ import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.*;
 import io.github.fergoman123.fergotools.furnaces.Macerator.*;
 
 import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.world.World;
@@ -88,6 +90,15 @@ public class GuiHandler  implements IGuiHandler
             TileEntityMacerator macerator = (TileEntityMacerator)world.getTileEntity(x, y, z);
             return new ContainerMacerator(inventory, macerator);
         }
+        else if (id == GuiIds.obsidianWorkbench.ordinal())
+        {
+            return new ContainerObsidianWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.emeraldWorkbench.ordinal())
+        {
+            ContainerEmeraldWorkbench workbench = new ContainerEmeraldWorkbench(inventory, world, x, y, z);
+            return workbench;
+        }
         return null;
     }
 
@@ -149,6 +160,10 @@ public class GuiHandler  implements IGuiHandler
         {
             TileEntityMacerator macerator = (TileEntityMacerator)world.getTileEntity(x, y, z);
             return new GuiMacerator(inventory, macerator);
+        }
+        else if (id == GuiIds.obsidianWorkbench.ordinal())
+        {
+            return new GuiObsidianWorkbench(inventory, world, x, y, z);
         }
         return null;
     }

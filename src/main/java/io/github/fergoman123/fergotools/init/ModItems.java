@@ -3,6 +3,7 @@ package io.github.fergoman123.fergotools.init;
 
 import fergoman123.mods.fergoutil.helper.RegisterHelper;
 import fergoman123.mods.fergoutil.item.ArmorType;
+import io.github.fergoman123.fergotools.item.FTSticks.*;
 import io.github.fergoman123.fergotools.item.ItemExpCollector;
 import io.github.fergoman123.fergotools.item.axe.*;
 import io.github.fergoman123.fergotools.item.bow.*;
@@ -15,6 +16,7 @@ import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.util.base.ItemArmorFT;
 import io.github.fergoman123.fergotools.util.base.ItemBowFT;
 import io.github.fergoman123.fergotools.util.base.ItemFT;
+import io.github.fergoman123.fergotools.util.base.ItemStickFT;
 import io.github.fergoman123.fergotools.util.tool.*;
 import io.github.fergoman123.fergotools.item.shovel.*;
 import io.github.fergoman123.fergotools.item.armor.*;
@@ -158,6 +160,16 @@ public class ModItems
     public static final ItemArmorFT adamantiumLeggings = new ItemArmorAdamantium(ArmorType.LEGS);
     public static final ItemArmorFT adamantiumBoots = new ItemArmorAdamantium(ArmorType.BOOTS);
 
+    public static final ItemStickFT stickObsidian = new ItemStickObsidian();
+    public static final ItemStickFT stickEmerald = new ItemStickEmerald();
+    public static final ItemStickFT stickLapis = new ItemStickLapis();
+    public static final ItemStickFT stickBronze = new ItemStickBronze();
+    public static final ItemStickFT stickCoal = new ItemStickCoal();
+    public static final ItemStickFT stickGlowstone = new ItemStickGlowstone();
+    public static final ItemStickFT stickAdamantium = new ItemStickAdamantium();
+    public static final ItemStickFT stickSilk = new ItemStickSilk();
+    public static final ItemStickFT stickRedstone = new ItemStickRedstone();
+
     public static void init()
 	{
         RegisterHelper.registerItem(quartzPickaxe, Names.Items.quartzPickaxe);
@@ -296,5 +308,15 @@ public class ModItems
         RegisterHelper.registerItem(adamantiumShears, Names.Items.adamantiumShears);
         RegisterHelper.registerItem(silkShears, Names.Items.silkShears);
         RegisterHelper.registerItem(redstoneShears, Names.Items.redstoneShears);
+
+        RegisterHelper.registerItem(stickObsidian, Names.Items.stickObsidian);
+        RegisterHelper.registerItem(stickEmerald, Names.Items.stickEmerald);
+        RegisterHelper.registerItem(stickLapis, Names.Items.stickLapis);
+        RegisterHelper.registerItem(stickBronze, Names.Items.stickBronze);
+        RegisterHelper.registerItem(stickCoal, Names.Items.stickCoal);
+        RegisterHelper.registerItem(stickGlowstone, Names.Items.stickGlowstone);
+        RegisterHelper.registerItem(stickAdamantium, Names.Items.stickAdamantium);
+        RegisterHelper.registerItem(stickSilk, Names.Items.stickSilk);
+        RegisterHelper.registerItem(stickRedstone, Names.Items.stickRedstone);
     }
 }

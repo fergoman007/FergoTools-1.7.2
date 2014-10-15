@@ -12,5 +12,14 @@ public enum GuiIds
     adamantiumFurnace,
     silkFurnace,
     redstoneFurnace,
-    macerator;
+    macerator,
+    obsidianWorkbench,
+    emeraldWorkbench,
+    lapisWorkbench,
+    bronzeWorkbench,
+    coalWorkbench,
+    glowstoneWorkBench,
+    adamantiumWorkbench,
+    silkWorkbench,
+    redstoneWorkbench
 }

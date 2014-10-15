@@ -5,6 +5,8 @@ FergoTools:tabFergoFurnaces=Fergoman123's Tools (Furnaces)
 FergoTools:tabFergoItems=Fergoman123's Tools (Items)
 FergoTools:tabFergoArmor=Fergoman123's Tools (Armor)
 FergoTools:tabFergoBows=Fergoman123's Tools (Bows)
+FergoTools:tabFergoShears=Fergoman123's Tools (Shears)
+FergoTools:tabFergoWood=Fergoman123's Tools (Wood)
 
 # Tools
 item.FergoTools:quartzPickaxe.name=Quartz Pickaxe
@@ -135,17 +137,49 @@ tile.FergoTools:blockExperience.name=Experience Block
 
 tile.FergoTools:blockFergoGlass.name=Fergoman123's Glass
 
+tile.FergoTools:logObsidian.name=Obsidian Wood
+tile.FergoTools:logEmerald.name=Emerald Wood
+tile.Fergotools:logLapis.name=Lapis Wood
+tile.FergoTools:logBronze.name=Bronze Wood
+tile.FergoTools:logCoal.name=Coal Wood
+tile.FergoTools:logGlowstone.name=Glowstone Wood
+tile.FergoTools:logAdamantium.name=Adamantium Wood
+tile.FergoTools:logSilk.name=Silk Wood
+tile.FergoTools:logRedstone.name=Redstone Wood
+
+tile.FergoTools:plankSilk.name=Silk Wood Planks
+tile.FergoTools:plankCoal.name=Coal Wood Planks
+tile.FergoTools:plankBronze.name=Bronze Wood Planks
+tile.FergoTools:plankLapis.name=Lapis Wood Planks
+tile.FergoTools:plankAdamantium.name=Adamantium Wood Planks
+tile.FergoTools:plankObsidian.name=Obsidian Wood Planks
+tile.FergoTools:plankEmerald.name=Emerald Wood Planks
+tile.FergoTools:plankGlowstone.name=Glowstone Wood Planks
+tile.FergoTools:plankRedstone.name=Redstone Wood Planks
+
+tile.FergoTools:obsidianWorkbench.name=Obsidian Crafting Table
+
+item.FergoTools:stickObsidian.name=Obsidian Stick
+item.FergoTools:stickEmerald.name=Emerald Stick
+item.FergoTools:stickLapis.name=Lapis Stick
+item.FergoTools:stickBronze.name=Bronze Stick
+item.FergoTools:stickCoal.name=Coal Stick
+item.FergoTools:stickGlowstone.name=Glowstone Stick
+item.FergoTools:stickAdamantium.name=Adamantium Stick
+item.FergoTools:stickSilk.name=Silk Stick
+item.FergoTools:stickRedstone.name=Redstone Stick
+
 # Crafting Materials
-item.FergoTools:expShard.name=Experience Shard
+item.FergoTools:shardExp.name=Experience Shard
 item.FergoTools:ingotObsidian.name=Obsidian Ingot
-item.FergoTools:emeraldCrystal.name=Emerald Crystal
-item.FergoTools:lapisCrystal.name=Lapis Crystal
+item.FergoTools:gemEmerald.name=Emerald Crystal
+item.FergoTools:gemLapis.name=Lapis Crystal
 item.FergoTools:ingotBronze.name=Bronze Ingot
 item.FergoTools:ingotCoal.name=Coal Ingot
 item.FergoTools:ingotGlowstone.name=Glowstone Ingot
 item.FergoTools:ingotAdamantium.name=Adamantium Ingot
-item.FergoTools:silkGem.name=Silk Gem
-item.FergoTools:redCrystal.name=Red Crystal
+item.FergoTools:gemSilk.name=Silk Gem
+item.FergoTools:gemRedstone.name=Red Crystal
 item.FergoTools:expCollector.name=Experience Collector
 
 item.FergoTools:quartzShears.name=Quartz Shears

@@ -17,7 +17,7 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-public class FergoOres
+public class FTOres
 {
     public static final class BlockOreObsidian extends BlockFT
     {

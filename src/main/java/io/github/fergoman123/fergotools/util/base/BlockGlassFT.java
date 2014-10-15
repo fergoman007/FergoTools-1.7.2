@@ -41,6 +41,6 @@ public abstract class BlockGlassFT extends BlockBreakable
 
     public String getUnlocalizedName()
     {
-        return NameHelper.format(NameHelper.getLocaleType(NameHelper.localeTile), Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return NameHelper.format("tile.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 }

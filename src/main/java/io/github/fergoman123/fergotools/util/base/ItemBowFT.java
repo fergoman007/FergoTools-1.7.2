@@ -2,7 +2,9 @@ package io.github.fergoman123.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fergoman123.mods.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
+import io.github.fergoman123.fergotools.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
@@ -23,6 +25,16 @@ public abstract class ItemBowFT extends ItemBow
         this.setMaxDamage(maxUses);
         this.setMaxStackSize(1);
         this.setCreativeTab(Tabs.tabFergoBows);
+    }
+
+    public String getUnlocalizedName()
+    {
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+    }
+
+    public String getUnlocalizedName(ItemStack stack)
+    {
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
     public abstract void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4);

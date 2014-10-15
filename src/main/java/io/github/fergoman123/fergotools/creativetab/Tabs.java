@@ -15,9 +15,11 @@ package io.github.fergoman123.fergotools.creativetab;
  import io.github.fergoman123.fergotools.init.ModItems;
  import io.github.fergoman123.fergotools.reference.Strings;
  import net.minecraft.creativetab.CreativeTabs;
+ import net.minecraft.init.Blocks;
  import net.minecraft.item.Item;
+ import net.minecraft.item.ItemStack;
 
-public class Tabs {
+ public class Tabs {
     public static CreativeTabs tabFergoTools;
     public static CreativeTabs tabFergoBlocks;
     public static CreativeTabs tabFergoFurnaces;
@@ -25,6 +27,8 @@ public class Tabs {
     public static CreativeTabs tabFergoArmor;
     public static CreativeTabs tabFergoBows;
     public static CreativeTabs tabFergoShears;
+    public static CreativeTabs tabFergoWood;
+    public static CreativeTabs tabFergoCT;
 
     public static void init(){
         tabFergoTools = new CreativeTabs(Strings.Tab.tabFergoTools)
@@ -123,6 +127,33 @@ public class Tabs {
                 return NameHelper.translateToLocal(Strings.Tab.tabFergoShears);
             }
 
+        };
+
+        tabFergoWood = new CreativeTabs(Strings.Tab.tabFergoWood)
+        {
+
+            @Override
+            public Item getTabIconItem() {
+                return Item.getItemFromBlock(ModBlocks.logObsidian);
+            }
+
+            @Override
+            public String getTranslatedTabLabel() {
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoWood);
+            }
+        };
+
+        tabFergoCT = new CreativeTabs(Strings.Tab.tabFergoCT)
+        {
+            @Override
+            public Item getTabIconItem() {
+                return Item.getItemFromBlock(Blocks.crafting_table);
+            }
+
+            @Override
+            public String getTranslatedTabLabel() {
+                return NameHelper.translateToLocal(Strings.Tab.tabFergoCT);
+            }
         };
     }
 }

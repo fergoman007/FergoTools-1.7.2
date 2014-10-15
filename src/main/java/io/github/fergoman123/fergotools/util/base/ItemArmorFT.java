@@ -36,12 +36,12 @@ public abstract class ItemArmorFT extends ItemArmor
 
     public String getUnlocalizedName()
     {
-        return String.format(NameHelper.getLocaleType(3), Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()), getArmorTypeName(this.armorType));
+        return String.format("item.%s%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()), getArmorTypeName(this.armorType));
     }
 
     public String getUnlocalizedName(ItemStack stack)
     {
-        return String.format(NameHelper.getLocaleType(3), Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)), getArmorTypeName(stack.getItem()));
+        return String.format("item.%s%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)), getArmorTypeName(stack.getItem()));
     }
 
     public void registerIcons(IIconRegister register)

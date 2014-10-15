@@ -15,6 +15,7 @@ import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class FTStacks {
@@ -202,4 +203,17 @@ public class FTStacks {
     public static final ItemStack coalBow = new ItemStack(ModItems.bowCoal);
     public static final ItemStack glowstoneBow = new ItemStack(ModItems.bowGlowstone);
     public static final ItemStack adamantiumBow = new ItemStack(ModItems.bowAdamantium);
+
+    public static final ItemStack[] planks = new ItemStack[]
+            {
+                    new ItemStack(ModBlocks.plankObsidian, 4),
+                    new ItemStack(ModBlocks.plankEmerald, 4),
+                    new ItemStack(ModBlocks.plankLapis, 4),
+                    new ItemStack(ModBlocks.plankBronze, 4),
+                    new ItemStack(ModBlocks.plankCoal, 4),
+                    new ItemStack(ModBlocks.plankGlowstone, 4),
+                    new ItemStack(ModBlocks.plankAdamantium, 4),
+                    new ItemStack(ModBlocks.plankSilk, 4),
+                    new ItemStack(ModBlocks.plankRedstone, 4)
+            };
 }

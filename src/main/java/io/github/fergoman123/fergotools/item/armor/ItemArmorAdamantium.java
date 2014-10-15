@@ -10,8 +10,10 @@ import fergoman123.mods.fergoutil.helper.PotionHelper;
 import fergoman123.mods.fergoutil.item.ArmorType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
@@ -44,52 +46,46 @@ public class ItemArmorAdamantium extends ItemArmorFT{
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack armor)
     {
-        if ((player.getCurrentArmor(3) != null) && (player.getCurrentArmor(2) != null) && (player.getCurrentArmor(1) != null) && (player.getCurrentArmor(0) != null))
+
+        if (player.getCurrentArmor(3) != null)
         {
-            ItemStack helmet = player.getCurrentArmor(3);
-            ItemStack chestplate = player.getCurrentArmor(2);
-            ItemStack leggings = player.getCurrentArmor(1);
-            ItemStack boots = player.getCurrentArmor(0);
-
-//            if (((boots.getItem() == ModItems.adamantiumBoots ? 1 : 0) | (leggings.getItem() == ModItems.adamantiumLeggings ? 1 : 0) | (chestplate.getItem() == ModItems.adamantiumChestplate ? 1 : 0) | (helmet.getItem() == ModItems.adamantiumHelmet ? 1 : 0)) != 0)
-//            {
-//                player.capabilities.allowFlying = true;
-//                player.fallDistance = 0.0F;
-//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76444_x.id, 1, 4));
-//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.waterBreathing.id, 1, 4));
-//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.resistance.id, 1, 4));
-//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.moveSpeed.id, 1, 4));
-//                player.addPotionEffect(PotionHelper.getPotionEffect(Potion.field_76443_y.id, 1, 4));
-//            }
-            if (player.getCurrentArmor(3).getItem() == ModItems.adamantiumHelmet)
+            if(player.getCurrentArmor(3).getItem() == ModItems.adamantiumHelmet)
             {
-                PotionHelper.getPotionEffect(Potion.waterBreathing.id, 1, 4);
-                PotionHelper.getPotionEffect(Potion.field_76443_y.id, 1, 4);
+                player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 1, 4));
+                player.addPotionEffect(new PotionEffect(Potion.field_76443_y.id, 1, 4));
             }
+        }
 
+        if (player.getCurrentArmor(2) != null)
+        {
             if (player.getCurrentArmor(2).getItem() == ModItems.adamantiumChestplate)
             {
-                PotionHelper.getPotionEffect(Potion.moveSpeed.id, 1, 4);
-                PotionHelper.getPotionEffect(Potion.field_76444_x.id, 1, 4);
-
-            }
-
-            if (player.getCurrentArmor(1).getItem() == ModItems.adamantiumLeggings)
-            {
-                PotionHelper.getPotionEffect(Potion.jump.id, 1, 4);
-            }
-
-            if (player.getCurrentArmor(0).getItem() == ModItems.adamantiumBoots)
-            {
+                player.addPotionEffect(new PotionEffect(Potion.field_76444_x.id, 1, 4));
                 player.capabilities.allowFlying = true;
                 player.fallDistance = 0.0F;
             }
+            else if (!player.capabilities.isCreativeMode)
+            {
+                player.capabilities.allowFlying = false;
+                player.capabilities.isFlying = false;
+                player.fallDistance = 0.0f;
+            }
         }
-        else if (!player.capabilities.isCreativeMode)
+
+        if (player.getCurrentArmor(1) != null)
         {
-            player.capabilities.allowFlying = false;
-            player.capabilities.isFlying = false;
-            player.fallDistance = 0.0F;
+            if (player.getCurrentArmor(1).getItem() == ModItems.adamantiumLeggings)
+            {
+                player.addPotionEffect(new PotionEffect(Potion.jump.id, 1, 4));
+            }
+        }
+
+        if (player.getCurrentArmor(0) != null)
+        {
+            if (player.getCurrentArmor(0).getItem() == ModItems.adamantiumBoots)
+            {
+                player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1, 4));
+            }
         }
     }
 

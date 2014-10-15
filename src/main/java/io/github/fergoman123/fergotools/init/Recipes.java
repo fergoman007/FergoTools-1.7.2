@@ -5,6 +5,7 @@ import fergoman123.mods.fergoutil.helper.RecipeHelper;
 import io.github.fergoman123.fergotools.util.item.FTStacks;
 import io.github.fergoman123.fergotools.util.item.UtilRecipeList;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 
 public class Recipes
 {
@@ -163,5 +164,25 @@ public class Recipes
         RecipeHelper.addRecipe(FTStacks.coalBow, UtilRecipeList.coalBow);
         RecipeHelper.addRecipe(FTStacks.glowstoneBow, UtilRecipeList.glowstoneBow);
         RecipeHelper.addRecipe(FTStacks.adamantiumBow, UtilRecipeList.adamantiumBow);
+
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankObsidian, 4), new ItemStack(ModBlocks.logObsidian));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankEmerald, 4), new ItemStack(ModBlocks.logEmerald));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankLapis, 4), new ItemStack(ModBlocks.logLapis));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankBronze, 4), new ItemStack(ModBlocks.logBronze));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankCoal, 4), new ItemStack(ModBlocks.logCoal));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankGlowstone, 4), new ItemStack(ModBlocks.logGlowstone));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankAdamantium, 4), new ItemStack(ModBlocks.logAdamantium));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankSilk, 4), new ItemStack(ModBlocks.logSilk));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankRedstone, 4), new ItemStack(ModBlocks.logRedstone));
+
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickObsidian, 4), new Object[]{"x", "x", 'x', ModBlocks.plankObsidian});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickEmerald, 4), new Object[]{"x", "x", 'x', ModBlocks.plankEmerald});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickLapis, 4), new Object[]{"x", "x", 'x', ModBlocks.plankLapis});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickBronze, 4), new Object[]{"x", "x", 'x', ModBlocks.plankBronze});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickCoal, 4), new Object[]{"x", "x", 'x', ModBlocks.plankCoal});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickGlowstone, 4), new Object[]{"x", "x", 'x', ModBlocks.plankGlowstone});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickAdamantium, 4), new Object[]{"x", "x", 'x', ModBlocks.plankAdamantium});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickSilk, 4), new Object[]{"x", "x", 'x', ModBlocks.plankSilk});
+        RecipeHelper.addRecipe(new ItemStack(ModItems.stickRedstone, 4), new Object[]{"x", "x", 'x', ModBlocks.plankRedstone});
     }
 }

@@ -11,6 +11,7 @@ import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class ItemQuartzShears extends ItemShearsFT implements ITooltipItem{
 
 

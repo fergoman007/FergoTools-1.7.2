@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-public class FergoStorageBlocks
+public class FTBlocks
 {
 
 

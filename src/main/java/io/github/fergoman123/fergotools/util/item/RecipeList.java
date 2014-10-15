@@ -10,14 +10,14 @@
 package io.github.fergoman123.fergotools.util.item;
 
 
- import fergoman123.mods.fergoutil.helper.RecipeHelper;
+ import io.github.fergoman123.fergoutil.helper.RecipeHelper;
  import io.github.fergoman123.fergotools.init.ModItems;
  import net.minecraft.init.Blocks;
  import net.minecraft.init.Items;
  import net.minecraft.item.ItemStack;
  import net.minecraftforge.oredict.OreDictionary;
 
-public class UtilRecipeList {
+public class RecipeList {
 
     public static final char charX = 'x';
     public static final char charY = 'y';
@@ -148,6 +148,11 @@ public class UtilRecipeList {
     public static final Object[] redstoneChestplate = new Object[]{RecipeHelper.getChestplateRecipe(), charX, FTStacks.redCrystal};
     public static final Object[] redstoneLeggings = new Object[]{RecipeHelper.getLeggingsRecipe(), charX, FTStacks.redCrystal};
     public static final Object[] redstoneBoots = new Object[]{RecipeHelper.getBootsRecipe(), charX, FTStacks.redCrystal};
+
+    public static final Object[] adamantiumHelmet = new Object[]{RecipeHelper.getHelmetRecipe(), 'x', FTStacks.adamantiumIngot};
+    public static final Object[] adamantiumChestplate = new Object[]{RecipeHelper.getChestplateRecipe(), charX, FTStacks.adamantiumIngot};
+    public static final Object[] adamantiumLeggings = new Object[]{RecipeHelper.getLeggingsRecipe(), charX, FTStacks.adamantiumIngot};
+    public static final Object[] adamantiumBoots = new Object[]{RecipeHelper.getBootsRecipe(), charX, FTStacks.adamantiumIngot};
 
     public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Items.diamond, charY, new ItemStack(Blocks.wool, 1, wildcard)};
     public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', ModItems.shardExp, 'y', Items.diamond};

@@ -42,7 +42,7 @@ public class BlockFergoGlass extends BlockGlassFT {
     @Override
     public void registerBlockIcons(IIconRegister register) {
         for (int i = 0; i < Textures.blockFergoGlassTex.length; i++) {
-            icons[i] = register.registerIcon(Reference.textureLoc + Textures.ctmLocation + Textures.blockFergoGlassTex[i]);
+            icons[i] = register.registerIcon(Reference.textureLoc + Textures.ctmLoc + Textures.blockFergoGlassTex[i]);
         }
     }
 

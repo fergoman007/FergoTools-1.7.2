@@ -36,6 +36,8 @@ public class Strings
         public static final String tabFergoArmor = "FergoTools:tabFergoArmor";
         public static final String tabFergoBows = "FergoTools:tabFergoBows";
         public static final String tabFergoShears = "FergoTools:tabFergoShears";
+        public static final String tabFergoWood = "FergoTools:tabFergoWood";
+        public static final String tabFergoCT = "FergoTools:tabFergoCT";
     }
 
     public static final class Tile

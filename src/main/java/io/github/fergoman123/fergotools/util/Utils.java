@@ -18,6 +18,7 @@ import io.github.fergoman123.fergotools.item.block.storage.*;
 import io.github.fergoman123.fergotools.item.block.furnaceidle.*;
 import io.github.fergoman123.fergotools.item.block.furnaceactive.*;
 
+@SuppressWarnings("unchecked")
 public class Utils
 {
     public static final Class<? extends ItemBlock>[] ores = new Class[]

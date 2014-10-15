@@ -12,6 +12,7 @@ package io.github.fergoman123.fergotools.util.tool;
 
  import fergoman123.mods.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
+ import io.github.fergoman123.fergotools.reference.Reference;
  import net.minecraft.client.renderer.texture.IIconRegister;
  import net.minecraft.item.ItemAxe;
  import net.minecraft.item.ItemStack;
@@ -23,17 +24,17 @@ package io.github.fergoman123.fergotools.util.tool;
         this.setMaxStackSize(1);
         this.setMaxDamage(maxUses);
         this.setCreativeTab(Tabs.tabFergoTools);
-        this.setTextureName(String.format("%s%s", NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
+        this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
     @Override
     public String getUnlocalizedName() {
-        return String.format(NameHelper.getLocaleType(1), NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     public String getUnlocalizedName(ItemStack stack)
     {
-        return String.format(NameHelper.getLocaleType(1), NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
     @Override
