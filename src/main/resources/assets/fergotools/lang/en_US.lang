@@ -7,7 +7,7 @@ FergoTools:tabFergoArmor=Fergoman123's Tools (Armor)
 FergoTools:tabFergoBows=Fergoman123's Tools (Bows)
 FergoTools:tabFergoShears=Fergoman123's Tools (Shears)
 FergoTools:tabFergoWood=Fergoman123's Tools (Wood)
-FergoTools:tabFergoCT=Fergoman123's Tools (Crafting Tables)
+FergoTools:tabFergoCT=Fergoman123's Tools (Workbenches)
 
 # Tools
 item.FergoTools:quartzPickaxe.name=Quartz Pickaxe
@@ -158,8 +158,15 @@ tile.FergoTools:plankEmerald.name=Emerald Wood Planks
 tile.FergoTools:plankGlowstone.name=Glowstone Wood Planks
 tile.FergoTools:plankRedstone.name=Redstone Wood Planks
 
-tile.FergoTools:obsidianWorkbench.name=Obsidian Crafting Table
-tile.FergoTools:emeraldWorkbench.name=Emerald Crafting Table
+tile.FergoTools:obsidianWorkbench.name=Obsidian Workbench
+tile.FergoTools:emeraldWorkbench.name=Emerald Workbench
+tile.FergoTools:lapisWorkbench.name=Lapis Workbench
+tile.FergoTools:bronzeWorkbench.name=Bronze Workbench
+tile.FergoTools:coalWorkbench.name=Coal Workbench
+tile.FergoTools:glowstoneWorkbench.name=Glowstone Workbench
+tile.FergoTools:adamantiumWorkbench.name=Adamantium Workbench
+tile.FergoTools:silkWorkbench.name=Silk Workbench
+tile.FergoTools:redstoneWorkbench.name=Redstone Workbench
 
 item.FergoTools:stickObsidian.name=Obsidian Stick
 item.FergoTools:stickEmerald.name=Emerald Stick
@@ -242,6 +249,16 @@ container.FergoTools:adamantiumFurnace=Adamantium Furnace
 container.FergoTools:silkFurnace=Silk Furnace
 container.FergoTools:redstoneFurnace=Redstone Furnace
 container.FergoTools:macerator=Macerator
+
+container.FergoTools:obsidianWorkbench=Obsidian Workbench
+container.FergoTools:emeraldWorkbench=Emerald Workbench
+container.FergoTools:lapisWorkbench=Lapis Workbench
+container.FergoTools:bronzeWorkbench=Bronze Workbench
+container.FergoTools:coalWorkbench=Coal Workbench
+container.FergoTools:glowstoneWorkbench=Glowstone Workbench
+container.FergoTools:adamantiumWorkbench=Adamantium Workbench
+container.FergoTools:silkWorkbench=Silk Workbench
+container.FergoTools:redstoneWorkbench=Redstone Workbench
 
 # Tool Tips
 tooltip.FergoTools:holdShift=<Hold Shift for Info>

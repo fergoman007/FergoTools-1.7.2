@@ -1,10 +1,11 @@
 package io.github.fergoman123.fergotools.item.sword;
 
-import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergotools.util.tool.ItemSwordFT;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -16,7 +17,7 @@ public class ItemSilkSword extends ItemSwordFT {
 
     public ItemSilkSword() {
         super(Materials.Tools.silk, Materials.Tools.silk.getMaxUses());
-        this.setUnlocalizedName(Names.Items.silkSword);
+        this.setUnlocalizedName(ItemNames.silkSword);
     }
 
     public boolean getIsRepairable(ItemStack stack1, ItemStack stack2)
@@ -31,6 +32,6 @@ public class ItemSilkSword extends ItemSwordFT {
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
-        list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
+        list.add(NameHelper.translateToLocal(Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
     }
 }

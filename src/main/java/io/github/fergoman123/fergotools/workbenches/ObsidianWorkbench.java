@@ -3,10 +3,11 @@ package io.github.fergoman123.fergotools.workbenches;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Textures;
-
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
+import io.github.fergoman123.fergotools.util.base.workbench.ContainerWorkbenchFT;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.resources.I18n;
@@ -24,7 +25,7 @@ public class ObsidianWorkbench {
         public BlockObsidianWorkbench()
         {
             super();
-            this.setBlockName(Names.Blocks.obsidianWorkbench);
+            this.setBlockName(BlockNames.obsidianWorkbench);
         }
 
         @Override
@@ -47,7 +48,7 @@ public class ObsidianWorkbench {
             }
             else if (!player.isSneaking())
             {
-                player.openGui(FergoTools.instance, GuiIds.obsidianWorkbench.ordinal(), world, x, y, z);
+                player.openGui(FergoTools.getInstance(), GuiIds.obsidianWorkbench.ordinal(), world, x, y, z);
                 return true;
             }
             else
@@ -57,19 +58,14 @@ public class ObsidianWorkbench {
         }
     }
 
-    public static final class ContainerObsidianWorkbench extends Container {
-        public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 3);
-        public IInventory craftResult = new InventoryCraftResult();
-        private World worldObj;
-        private int posX;
-        private int posY;
-        private int posZ;
+    public static final class ContainerObsidianWorkbench extends ContainerWorkbenchFT implements ContainerWorkbenchFT.IContainerWorkbenchFT{
 
         public ContainerObsidianWorkbench(InventoryPlayer inventory, World world, int x, int y, int z) {
-            this.worldObj = world;
-            this.posX = x;
-            this.posY = y;
-            this.posZ = z;
+            super(inventory, world, x, y, z);
+            this.world = world;
+            this.x = x;
+            this.y = y;
+            this.z = z;
             this.addSlotToContainer(new SlotCrafting(inventory.player, this.craftMatrix, this.craftResult, 0, 124, 35));
             int l;
             int i1;
@@ -94,14 +90,14 @@ public class ObsidianWorkbench {
         }
 
         public void onCraftMatrixChanged(IInventory inventory) {
-            this.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
+            this.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.world));
         }
 
         @Override
         public void onContainerClosed(EntityPlayer player) {
             super.onContainerClosed(player);
 
-            if (!this.worldObj.isRemote) {
+            if (!this.world.isRemote) {
                 for (int i = 0; i < 9; ++i) {
                     ItemStack stack = this.craftMatrix.getStackInSlotOnClosing(i);
 
@@ -166,8 +162,8 @@ public class ObsidianWorkbench {
 
         @Override
         protected void drawGuiContainerForegroundLayer(int p_146979_1_, int p_146979_2_) {
-            this.fontRendererObj.drawString(I18n.format("container.crafting", new Object[0]), 28, 6, 4210752);
-            this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 8, this.ySize - 96 + 2, 4210752);
+            this.fontRendererObj.drawString(I18n.format(Locale.containerObsidianWorkbench, new Object[0]), 28, 6, 4210752);
+            this.fontRendererObj.drawString(I18n.format(Locale.containerInventory, new Object[0]), 8, this.ySize - 96 + 2, 4210752);
         }
 
         @Override

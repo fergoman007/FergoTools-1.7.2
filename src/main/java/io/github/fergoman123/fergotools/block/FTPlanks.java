@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.block;
 
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.base.BlockWoodFT;
 
 public class FTPlanks
@@ -10,7 +10,7 @@ public class FTPlanks
         public BlockPlankObsidian()
         {
             super();
-            this.setBlockName(Names.Blocks.plankObsidian);
+            this.setBlockName(BlockNames.plankObsidian);
         }
     }
 
@@ -19,7 +19,7 @@ public class FTPlanks
         public BlockPlankEmerald()
         {
             super();
-            this.setBlockName(Names.Blocks.plankEmerald);
+            this.setBlockName(BlockNames.plankEmerald);
         }
     }
 
@@ -28,7 +28,7 @@ public class FTPlanks
         public BlockPlankLapis()
         {
             super();
-            this.setBlockName(Names.Blocks.plankLapis);
+            this.setBlockName(BlockNames.plankLapis);
         }
     }
 
@@ -37,7 +37,7 @@ public class FTPlanks
         public BlockPlankBronze()
         {
             super();
-            this.setBlockName(Names.Blocks.plankBronze);
+            this.setBlockName(BlockNames.plankBronze);
         }
     }
 
@@ -46,7 +46,7 @@ public class FTPlanks
         public BlockPlankCoal()
         {
             super();
-            this.setBlockName(Names.Blocks.plankCoal);
+            this.setBlockName(BlockNames.plankCoal);
         }
     }
 
@@ -55,7 +55,7 @@ public class FTPlanks
         public BlockPlankGlowstone()
         {
             super();
-            this.setBlockName(Names.Blocks.plankGlowstone);
+            this.setBlockName(BlockNames.plankGlowstone);
         }
     }
 
@@ -64,7 +64,7 @@ public class FTPlanks
         public BlockPlankAdamantium()
         {
             super();
-            this.setBlockName(Names.Blocks.plankAdamantium);
+            this.setBlockName(BlockNames.plankAdamantium);
         }
     }
 
@@ -73,7 +73,7 @@ public class FTPlanks
         public BlockPlankSilk()
         {
             super();
-            this.setBlockName(Names.Blocks.plankSilk);
+            this.setBlockName(BlockNames.plankSilk);
         }
     }
 
@@ -82,7 +82,7 @@ public class FTPlanks
         public BlockPlankRedstone()
         {
             super();
-            this.setBlockName(Names.Blocks.plankRedstone);
+            this.setBlockName(BlockNames.plankRedstone);
         }
     }
 }

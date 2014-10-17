@@ -1,5 +1,6 @@
 package io.github.fergoman123.fergotools.util.base;
 
+import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
@@ -29,6 +30,6 @@ public class ItemStickFT extends Item
 
     public void registerIcons(IIconRegister register)
     {
-        itemIcon = register.registerIcon(String.format("%s%s%s", Reference.textureLoc, "stick/", NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
+        itemIcon = register.registerIcon(String.format("%s%s%s", Reference.textureLoc, Textures.stickLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
     }
 }

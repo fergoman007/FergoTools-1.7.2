@@ -1,12 +1,13 @@
 package io.github.fergoman123.fergotools.item.bow;
 
 import cpw.mods.fml.relauncher.SideOnly;
-import io.github.fergoman123.fergoutil.helper.NameHelper;
-import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.ItemBowFT;
 import io.github.fergoman123.fergotools.util.item.Materials;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -35,7 +36,7 @@ public class ItemAdamantiumBow extends ItemBowFT {
     public ItemAdamantiumBow()
     {
         super(Materials.Tools.adamantium.getMaxUses());
-        this.setUnlocalizedName(Names.Items.bowAdamantium);
+        this.setUnlocalizedName(ItemNames.bowAdamantium);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)
@@ -150,7 +151,7 @@ public class ItemAdamantiumBow extends ItemBowFT {
 
         for (int i = 0; i < pullArray.length; i++)
         {
-            this.texture[i] = register.registerIcon(Reference.textureLoc + Names.Items.bowAdamantium + pullArray[i]);
+            this.texture[i] = register.registerIcon(Reference.textureLoc + ItemNames.bowAdamantium + pullArray[i]);
         }
     }
 
@@ -178,12 +179,12 @@ public class ItemAdamantiumBow extends ItemBowFT {
     {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.adamantiumToolTip));
-            list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + " Infinity");
+            list.add(NameHelper.translateToLocal(Locale.adamantiumToolTip));
+            list.add(NameHelper.translateToLocal(Locale.durabilityToolTip) + " Infinity");
         }
         else
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
+            list.add(NameHelper.translateToLocal(Locale.holdShiftMessage));
         }
     }
 

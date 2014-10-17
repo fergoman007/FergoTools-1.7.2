@@ -12,7 +12,7 @@ package io.github.fergoman123.fergotools.creativetab;
 
  import io.github.fergoman123.fergotools.init.ModBlocks;
  import io.github.fergoman123.fergotools.init.ModItems;
- import io.github.fergoman123.fergotools.reference.Strings;
+ import io.github.fergoman123.fergotools.reference.strings.Tab;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import net.minecraft.creativetab.CreativeTabs;
  import net.minecraft.init.Blocks;
@@ -30,7 +30,7 @@ package io.github.fergoman123.fergotools.creativetab;
     public static CreativeTabs tabFergoCT;
 
     public static void init(){
-        tabFergoTools = new CreativeTabs(Strings.Tab.tabFergoTools)
+        tabFergoTools = new CreativeTabs(Tab.tabFergoTools)
         {
             public Item getTabIconItem()
             {
@@ -40,11 +40,11 @@ package io.github.fergoman123.fergotools.creativetab;
             @Override
             public String getTranslatedTabLabel()
             {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoTools);
+                return NameHelper.translateToLocal(Tab.tabFergoTools);
             }
         };
 
-        tabFergoBlocks = new CreativeTabs(Strings.Tab.tabFergoBlocks)
+        tabFergoBlocks = new CreativeTabs(Tab.tabFergoBlocks)
         {
             public Item getTabIconItem()
             {
@@ -54,11 +54,11 @@ package io.github.fergoman123.fergotools.creativetab;
             @Override
             public String getTranslatedTabLabel()
             {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoBlocks);
+                return NameHelper.translateToLocal(Tab.tabFergoBlocks);
             }
         };
 
-        tabFergoFurnaces = new CreativeTabs(Strings.Tab.tabFergoFurnaces)
+        tabFergoFurnaces = new CreativeTabs(Tab.tabFergoFurnaces)
         {
             public Item getTabIconItem()
             {
@@ -68,11 +68,11 @@ package io.github.fergoman123.fergotools.creativetab;
             @Override
             public String getTranslatedTabLabel()
             {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoFurnaces);
+                return NameHelper.translateToLocal(Tab.tabFergoFurnaces);
             }
         };
 
-        tabFergoItems = new CreativeTabs(Strings.Tab.tabFergoItems)
+        tabFergoItems = new CreativeTabs(Tab.tabFergoItems)
         {
             public Item getTabIconItem()
             {
@@ -82,11 +82,11 @@ package io.github.fergoman123.fergotools.creativetab;
             @Override
             public String getTranslatedTabLabel()
             {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoItems);
+                return NameHelper.translateToLocal(Tab.tabFergoItems);
             }
         };
 
-        tabFergoArmor = new CreativeTabs(Strings.Tab.tabFergoArmor)
+        tabFergoArmor = new CreativeTabs(Tab.tabFergoArmor)
         {
             public Item getTabIconItem()
             {
@@ -96,11 +96,11 @@ package io.github.fergoman123.fergotools.creativetab;
             @Override
             public String getTranslatedTabLabel()
             {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoArmor);
+                return NameHelper.translateToLocal(Tab.tabFergoArmor);
             }
         };
 
-        tabFergoBows = new CreativeTabs(Strings.Tab.tabFergoBows)
+        tabFergoBows = new CreativeTabs(Tab.tabFergoBows)
         {
             public Item getTabIconItem()
             {
@@ -110,11 +110,11 @@ package io.github.fergoman123.fergotools.creativetab;
             @Override
             public String getTranslatedTabLabel()
             {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoBows);
+                return NameHelper.translateToLocal(Tab.tabFergoBows);
             }
         };
 
-        tabFergoShears = new CreativeTabs(Strings.Tab.tabFergoShears) {
+        tabFergoShears = new CreativeTabs(Tab.tabFergoShears) {
             @Override
             public Item getTabIconItem() {
                 return ModItems.quartzShears;
@@ -123,12 +123,12 @@ package io.github.fergoman123.fergotools.creativetab;
             @Override
             public String getTranslatedTabLabel()
             {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoShears);
+                return NameHelper.translateToLocal(Tab.tabFergoShears);
             }
 
         };
 
-        tabFergoWood = new CreativeTabs(Strings.Tab.tabFergoWood)
+        tabFergoWood = new CreativeTabs(Tab.tabFergoWood)
         {
 
             @Override
@@ -138,11 +138,11 @@ package io.github.fergoman123.fergotools.creativetab;
 
             @Override
             public String getTranslatedTabLabel() {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoWood);
+                return NameHelper.translateToLocal(Tab.tabFergoWood);
             }
         };
 
-        tabFergoCT = new CreativeTabs(Strings.Tab.tabFergoCT)
+        tabFergoCT = new CreativeTabs(Tab.tabFergoCT)
         {
             @Override
             public Item getTabIconItem() {
@@ -151,7 +151,7 @@ package io.github.fergoman123.fergotools.creativetab;
 
             @Override
             public String getTranslatedTabLabel() {
-                return NameHelper.translateToLocal(Strings.Tab.tabFergoCT);
+                return NameHelper.translateToLocal(Tab.tabFergoCT);
             }
         };
     }

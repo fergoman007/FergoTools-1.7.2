@@ -2,12 +2,13 @@ package io.github.fergoman123.fergotools.item.bow;
 
 
 import cpw.mods.fml.relauncher.SideOnly;
-import io.github.fergoman123.fergoutil.helper.NameHelper;
-import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.ItemBowFT;
 import io.github.fergoman123.fergotools.util.item.Materials;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -37,7 +38,7 @@ public class ItemObsidianBow extends ItemBowFT {
     public ItemObsidianBow()
     {
         super(Materials.Tools.obsidian.getMaxUses());
-        this.setUnlocalizedName(Names.Items.bowObsidian);
+        this.setUnlocalizedName(ItemNames.bowObsidian);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)
@@ -157,7 +158,7 @@ public class ItemObsidianBow extends ItemBowFT {
 
         for (int i = 0; i < pullArray.length; i++)
         {
-            this.texture[i] = register.registerIcon(Reference.textureLoc + Names.Items.bowObsidian + pullArray[i]);
+            this.texture[i] = register.registerIcon(Reference.textureLoc + ItemNames.bowObsidian + pullArray[i]);
         }
     }
 
@@ -182,6 +183,6 @@ public class ItemObsidianBow extends ItemBowFT {
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
-        list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
+        list.add(NameHelper.translateToLocal(Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
     }
 }

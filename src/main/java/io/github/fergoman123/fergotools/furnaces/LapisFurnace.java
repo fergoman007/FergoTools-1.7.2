@@ -3,15 +3,20 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import io.github.fergoman123.fergoutil.helper.GuiHelper;
-import io.github.fergoman123.fergoutil.util.NBTTags;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.*;
+import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.util.base.ContainerFT;
 import io.github.fergoman123.fergotools.util.base.GuiFT;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
+import io.github.fergoman123.fergoutil.helper.GuiHelper;
+import io.github.fergoman123.fergoutil.util.NBTTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -41,7 +46,7 @@ public class LapisFurnace
 
         public BlockLapisFurnace(boolean isActive)
         {
-            super(Material.rock, Strings.FurnaceType.lapisFurnace);
+            super(Material.rock, FurnaceType.lapisFurnace);
             this.isActive = isActive;
         }
 
@@ -96,9 +101,9 @@ public class LapisFurnace
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockLapisCrystal);
-            this.icons[0] = register.registerIcon(Textures.resourcePrefix + (this.isActive ? Names.Blocks.lapisFurnaceActive : Names.Blocks.lapisFurnaceIdle));
-            this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockLapisCrystal);
+            this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockLapisCrystal);
+            this.icons[0] = register.registerIcon(Textures.resourcePrefix + (this.isActive ? BlockNames.lapisFurnaceActive : BlockNames.lapisFurnaceIdle));
+            this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockLapisCrystal);
         }
 
         public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -112,7 +117,7 @@ public class LapisFurnace
                 TileEntityLapisFurnace furnace = (TileEntityLapisFurnace)world.getTileEntity(x, y, z);
                 if (furnace != null)
                 {
-                    player.openGui(FergoTools.instance, GuiIds.lapisCrystalFurnace.ordinal(), world, x, y, z);
+                    player.openGui(FergoTools.getInstance(), GuiIds.lapisCrystalFurnace.ordinal(), world, x, y, z);
                 }
                 return true;
             }
@@ -364,7 +369,7 @@ public class LapisFurnace
 
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerLapisFurnace;
+            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerLapisFurnace;
         }
 
         public boolean hasCustomInventoryName()
@@ -645,7 +650,7 @@ public class LapisFurnace
         public void drawGuiContainerForegroundLayer(int par1, int par2) {
             String s = furnace.hasCustomInventoryName() ? this.furnace.getInventoryName() : GuiHelper.format(this.furnace.getInventoryName());
             this.fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            this.fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            this.fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
         }
 
         @Override

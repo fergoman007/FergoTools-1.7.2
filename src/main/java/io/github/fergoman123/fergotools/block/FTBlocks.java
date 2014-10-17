@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.block;
 
 
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.base.BlockFT;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -18,7 +18,7 @@ public class FTBlocks
         public BlockObsidianStorage()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockObsidian);
+            this.setBlockName(BlockNames.blockObsidian);
         }
 
         @Override
@@ -32,7 +32,7 @@ public class FTBlocks
         public BlockEmeraldCrystal()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockEmeraldCrystal);
+            this.setBlockName(BlockNames.blockEmeraldCrystal);
         }
 
         @Override
@@ -46,7 +46,7 @@ public class FTBlocks
         public BlockLapisCrystal()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockLapisCrystal);
+            this.setBlockName(BlockNames.blockLapisCrystal);
         }
 
         @Override
@@ -60,7 +60,7 @@ public class FTBlocks
         public BlockBronze()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockBronze);
+            this.setBlockName(BlockNames.blockBronze);
         }
 
         @Override
@@ -74,7 +74,7 @@ public class FTBlocks
         public BlockCoalStorage()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockCoal);
+            this.setBlockName(BlockNames.blockCoal);
         }
 
         public Item getItemDropped(int metadata, Random random, int fortune)
@@ -88,7 +88,7 @@ public class FTBlocks
         public BlockGlowstoneStorage()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockGlowstone);
+            this.setBlockName(BlockNames.blockGlowstone);
         }
 
         @Override
@@ -102,7 +102,7 @@ public class FTBlocks
         public BlockAdamantium()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockAdamantium);
+            this.setBlockName(BlockNames.blockAdamantium);
         }
 
         public Item getItemDropped(int metadata, Random random, int fortune)
@@ -116,7 +116,7 @@ public class FTBlocks
         public BlockSilkGem()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockSilkGem);
+            this.setBlockName(BlockNames.blockSilkGem);
         }
 
         @Override
@@ -130,7 +130,7 @@ public class FTBlocks
         public BlockRedstoneCrystal()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockRedstoneCrystal);
+            this.setBlockName(BlockNames.blockRedstoneCrystal);
         }
 
         @Override
@@ -144,7 +144,7 @@ public class FTBlocks
         public BlockExperience()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.blockExperience);
+            this.setBlockName(BlockNames.blockExperience);
         }
 
         @Override
@@ -157,7 +157,7 @@ public class FTBlocks
 
         public BlockExpCollector() {
             super();
-            this.setBlockName(Names.Blocks.blockExpCollector);
+            this.setBlockName(BlockNames.blockExpCollector);
         }
 
         @Override

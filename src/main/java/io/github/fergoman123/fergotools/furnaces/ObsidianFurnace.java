@@ -3,6 +3,9 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
@@ -42,7 +45,7 @@ public class ObsidianFurnace
 
         public BlockObsidianFurnace(boolean isActive)
         {
-            super(Material.rock, Strings.FurnaceType.obsidianFurnace);
+            super(Material.rock, FurnaceType.obsidianFurnace);
             this.isActive = isActive;
         }
 
@@ -96,9 +99,9 @@ public class ObsidianFurnace
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockObsidian);
-            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.obsidianFurnaceActive : Names.Blocks.obsidianFurnaceIdle));
-            this.icons[1] = register.registerIcon(Textures.resourcePrefix +Names.Blocks.blockObsidian);
+            this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockObsidian);
+            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? BlockNames.obsidianFurnaceActive : BlockNames.obsidianFurnaceIdle));
+            this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockObsidian);
         }
 
         public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -112,7 +115,7 @@ public class ObsidianFurnace
                 TileEntityObsidianFurnace furnace = (TileEntityObsidianFurnace)world.getTileEntity(x, y, z);
                 if (furnace != null)
                 {
-                    player.openGui(FergoTools.instance, GuiIds.obsidianFurnace.ordinal(), world, x, y, z);
+                    player.openGui(FergoTools.getInstance(), GuiIds.obsidianFurnace.ordinal(), world, x, y, z);
                 }
                 return true;
             }
@@ -356,7 +359,7 @@ public class ObsidianFurnace
 
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerObsidianFurnace;
+            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerObsidianFurnace;
         }
 
         public boolean hasCustomInventoryName()
@@ -807,7 +810,7 @@ public class ObsidianFurnace
         {
             String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
         }
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)

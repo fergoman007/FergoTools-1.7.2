@@ -1,8 +1,9 @@
 package io.github.fergoman123.fergotools.item.armor;
 
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.ArmorTooltipLocale;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.PotionList;
 import io.github.fergoman123.fergotools.util.base.ItemArmorFT;
 import io.github.fergoman123.fergotools.util.item.Materials;
@@ -80,21 +81,21 @@ public class ItemArmorAdamantium extends ItemArmorFT{
     {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.adamantiumToolTip));
-            list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.reductAmount));
-            for (int i = 0; i < Names.ArmorTooltipLocale.adamantiumArmor.length; i++)
+            list.add(NameHelper.translateToLocal(Locale.adamantiumToolTip));
+            list.add(NameHelper.translateToLocal(ArmorTooltipLocale.reductAmount));
+            for (int i = 0; i < ArmorTooltipLocale.adamantiumArmor.length; i++)
             {
-                list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.adamantiumArmor[i]));
+                list.add(NameHelper.translateToLocal(ArmorTooltipLocale.adamantiumArmor[i]));
             }
 
             list.add("");
-            for (int i = 0; i < Names.ArmorTooltipLocale.adamantiumAbilities.length; i++) {
-                list.add(NameHelper.translateToLocal(Names.ArmorTooltipLocale.adamantiumAbilities[i]));
+            for (int i = 0; i < ArmorTooltipLocale.adamantiumAbilities.length; i++) {
+                list.add(NameHelper.translateToLocal(ArmorTooltipLocale.adamantiumAbilities[i]));
             }
         }
         else
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
+            list.add(NameHelper.translateToLocal(Locale.holdShiftMessage));
         }
     }
 }

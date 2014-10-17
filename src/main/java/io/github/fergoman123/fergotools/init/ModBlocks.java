@@ -1,6 +1,5 @@
 package io.github.fergoman123.fergotools.init;
 
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergotools.block.BlockFergoGlass;
 import io.github.fergoman123.fergotools.block.FTBlocks.*;
 import io.github.fergoman123.fergotools.block.FTLogs.*;
@@ -18,15 +17,23 @@ import io.github.fergoman123.fergotools.furnaces.ObsidianFurnace.BlockObsidianFu
 import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFurnace;
 import io.github.fergoman123.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.Utils;
 import io.github.fergoman123.fergotools.util.base.BlockFT;
 import io.github.fergoman123.fergotools.util.base.BlockGlassFT;
 import io.github.fergoman123.fergotools.util.base.BlockLogFT;
 import io.github.fergoman123.fergotools.util.base.BlockWoodFT;
 import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
+import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.BlockBronzeWorkbench;
+import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.BlockCoalWorkbench;
 import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.BlockEmeraldWorkbench;
+import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.BlockLapisWorkbench;
 import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.BlockObsidianWorkbench;
+import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.BlockGlowstoneWorkbench;
+import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.BlockAdamantiumWorkbench;
+import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.BlockSilkWorkbench;
+import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.BlockRedstoneWorkbench;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
 
 public class ModBlocks{
@@ -110,50 +117,51 @@ public class ModBlocks{
 
     public static final BlockWorkbenchFT obsidianWorkbench = new BlockObsidianWorkbench();
     public static final BlockWorkbenchFT emeraldWorkbench = new BlockEmeraldWorkbench();
-//    public static final BlockWorkbenchFT lapisWorkbench = new BlockLapisWorkbench();
-//    public static final BlockWorkbenchFT bronzeWorkbench = new BlockBronzeWorkbench();
-//    public static final BlockWorkbenchFT coalWorkbench = new BlockCoalWorkbench();
-//    public static final BlockWorkbenchFT glowstoneWorkbench = new BlockGlowstoneWorkbench();
-//    public static final BlockWorkbenchFT adamantiumWorkbench = new BlockAdamantiumWorkbench();
-//    public static final BlockWorkbenchFT silkWorkbench = new BlockSilkWorkbench();
-//    public static final BlockWorkbenchFT redstoneWorkbench = new BlockRedstoneWorkbench();
+    public static final BlockWorkbenchFT lapisWorkbench = new BlockLapisWorkbench();
+    public static final BlockWorkbenchFT bronzeWorkbench = new BlockBronzeWorkbench();
+    public static final BlockWorkbenchFT coalWorkbench = new BlockCoalWorkbench();
+    public static final BlockWorkbenchFT glowstoneWorkbench = new BlockGlowstoneWorkbench();
+    public static final BlockWorkbenchFT adamantiumWorkbench = new BlockAdamantiumWorkbench();
+    public static final BlockWorkbenchFT silkWorkbench = new BlockSilkWorkbench();
+    public static final BlockWorkbenchFT redstoneWorkbench = new BlockRedstoneWorkbench();
 
-//    public static final Block[] workbenches = new Block[]{obsidianWorkbench, emeraldWorkbench, lapisWorkbench, bronzeWorkbench, coalWorkbench, glowstoneWorkbench, adamantiumWorkbench, silkWorkbench, redstoneWorkbench};
+    public static final Block[] workbenches = new Block[]{obsidianWorkbench, emeraldWorkbench, lapisWorkbench, bronzeWorkbench, coalWorkbench, glowstoneWorkbench, adamantiumWorkbench, silkWorkbench, redstoneWorkbench};
 
 	public static void init()
 	{
 
         for (int i = 0; i < ores.length; i++)
         {
-            RegisterHelper.registerBlock(ores[i], Utils.ores[i], Names.Blocks.oreList[i]);
+            RegisterHelper.registerBlock(ores[i], Utils.ores[i], BlockNames.oreList[i]);
         }
 
         for (int i = 0; i < blocks.length; i++) {
-            RegisterHelper.registerBlock(blocks[i], Utils.blocks[i], Names.Blocks.blockList[i]);
+            RegisterHelper.registerBlock(blocks[i], Utils.blocks[i], BlockNames.blockList[i]);
         }
 
-        RegisterHelper.registerBlock(blockFergoGlass, Names.Blocks.blockFergoGlass);
+        RegisterHelper.registerBlock(blockFergoGlass, BlockNames.blockFergoGlass);
 
         for (int i = 0; i < furnaceIdle.length; i++) {
-            RegisterHelper.registerBlock(furnaceIdle[i], Utils.furnaceIdle[i], Names.Blocks.furnaceIdle[i]);
+            RegisterHelper.registerBlock(furnaceIdle[i], Utils.furnaceIdle[i], BlockNames.furnaceIdle[i]);
         }
 
         for (int i = 0; i < furnaceActive.length; i++) {
-            RegisterHelper.registerBlock(furnaceActive[i], Utils.furnaceActive[i], Names.Blocks.furnaceActive[i]);
+            RegisterHelper.registerBlock(furnaceActive[i], Utils.furnaceActive[i], BlockNames.furnaceActive[i]);
         }
 
         for (int i = 0; i < logs.length; i++)
         {
-            RegisterHelper.registerBlock(logs[i], Names.Blocks.logs[i]);
+            RegisterHelper.registerBlock(logs[i], BlockNames.logs[i]);
         }
 
         for (int i = 0; i < planks.length; i++)
         {
-            RegisterHelper.registerBlock(planks[i], Names.Blocks.planks[i]);
+            RegisterHelper.registerBlock(planks[i], BlockNames.planks[i]);
         }
 
-        RegisterHelper.registerBlock(obsidianWorkbench, Names.Blocks.obsidianWorkbench);
-        RegisterHelper.registerBlock(emeraldWorkbench, Names.Blocks.emeraldWorkbench);
+        for (int i = 0; i < workbenches.length; i++) {
+            RegisterHelper.registerBlock(workbenches[i], BlockNames.workbenches[i]);
+        }
     }
 
 

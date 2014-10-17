@@ -9,12 +9,13 @@
 
 package io.github.fergoman123.fergotools.handler;
 
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
-import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.Names;
-import io.github.fergoman123.fergotools.util.GuiHandler;
+ import io.github.fergoman123.fergotools.FergoTools;
+ import io.github.fergoman123.fergotools.init.ModBlocks;
+ import io.github.fergoman123.fergotools.init.ModItems;
+ import io.github.fergoman123.fergotools.reference.names.BlockNames;
+ import io.github.fergoman123.fergotools.reference.names.ItemNames;
+ import io.github.fergoman123.fergotools.util.GuiHandler;
+ import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 
  public class RegHandler {
 
@@ -23,36 +24,36 @@ import io.github.fergoman123.fergotools.util.GuiHandler;
     public static FuelHandler fuel = new FuelHandler();
 
     public static void init() {
-        RegisterHelper.registerGuiHandler(FergoTools.instance, guiHandler);
+        RegisterHelper.registerGuiHandler(FergoTools.getInstance(), guiHandler);
         RegisterHelper.registerWorldGenerator(worldGenHandler, 0);
         RegisterHelper.registerFuelHandler(fuel);
     }
 
     public static void registerOres()
     {
-        for (int i = 0; i < Names.Blocks.oreList.length; i++) {
-            RegisterHelper.registerOre(Names.Blocks.oreList[i], ModBlocks.ores[i]);
+        for (int i = 0; i < BlockNames.oreList.length; i++) {
+            RegisterHelper.registerOre(BlockNames.oreList[i], ModBlocks.ores[i]);
         }
 
-        for (int i = 0; i < Names.Blocks.blockList.length; i++)
+        for (int i = 0; i < BlockNames.blockList.length; i++)
         {
-            RegisterHelper.registerOre(Names.Blocks.blockList[i], ModBlocks.blocks[i]);
+            RegisterHelper.registerOre(BlockNames.blockList[i], ModBlocks.blocks[i]);
         }
 
-        for (int i = 0; i < Names.Items.materials.length; i++) {
-            RegisterHelper.registerOre(Names.Items.materials[i], ModItems.materials[i]);
+        for (int i = 0; i < ItemNames.materials.length; i++) {
+            RegisterHelper.registerOre(ItemNames.materials[i], ModItems.materials[i]);
         }
 
-        for (int i = 0; i < Names.Blocks.logs.length; i++) {
+        for (int i = 0; i < BlockNames.logs.length; i++) {
             RegisterHelper.registerOre("logWood", ModBlocks.logs[i]);
         }
 
-        for (int i = 0; i < Names.Blocks.planks.length; i++)
+        for (int i = 0; i < BlockNames.planks.length; i++)
         {
             RegisterHelper.registerOre("plankWood", ModBlocks.planks[i]);
         }
 
-        for (int i = 0; i < Names.Items.sticks.length; i++) {
+        for (int i = 0; i < ItemNames.sticks.length; i++) {
             RegisterHelper.registerOre("stickWood", ModItems.sticks[i]);
         }
     }

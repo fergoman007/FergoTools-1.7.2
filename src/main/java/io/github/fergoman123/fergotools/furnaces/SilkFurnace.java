@@ -2,16 +2,22 @@ package io.github.fergoman123.fergotools.furnaces;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import io.github.fergoman123.fergoutil.helper.BlockHelper;
-import io.github.fergoman123.fergoutil.helper.GuiHelper;
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.*;
+import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.Reference;
+import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.util.base.ContainerFT;
 import io.github.fergoman123.fergotools.util.base.GuiFT;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
+import io.github.fergoman123.fergoutil.helper.BlockHelper;
+import io.github.fergoman123.fergoutil.helper.GuiHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -43,7 +49,7 @@ public class SilkFurnace
 
         public BlockSilkFurnace(boolean isActive)
         {
-            super(Material.rock, Strings.FurnaceType.silkFurnace);
+            super(Material.rock, FurnaceType.silkFurnace);
             this.isActive = isActive;
         }
 
@@ -97,9 +103,9 @@ public class SilkFurnace
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockSilkGem);
-            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.silkFurnaceActive : Names.Blocks.silkFurnaceIdle));
-            this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockSilkGem);
+            this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockSilkGem);
+            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? BlockNames.silkFurnaceActive : BlockNames.silkFurnaceIdle));
+            this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockSilkGem);
         }
 
         public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -113,7 +119,7 @@ public class SilkFurnace
                 TileEntitySilkFurnace furnace = (TileEntitySilkFurnace)world.getTileEntity(x, y, z);
                 if (furnace != null)
                 {
-                    player.openGui(FergoTools.instance, GuiIds.silkFurnace.ordinal(), world, x, y, z);
+                    player.openGui(FergoTools.getInstance(), GuiIds.silkFurnace.ordinal(), world, x, y, z);
                 }
                 return true;
             }
@@ -460,7 +466,7 @@ public class SilkFurnace
         {
             String s = silkFurnace.hasCustomInventoryName() ? silkFurnace.getInventoryName() : GuiHelper.format(silkFurnace.getInventoryName());
             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
         }
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
@@ -559,7 +565,7 @@ public class SilkFurnace
 
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerSilkFurnace;
+            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerSilkFurnace;
         }
 
         public boolean hasCustomInventoryName()

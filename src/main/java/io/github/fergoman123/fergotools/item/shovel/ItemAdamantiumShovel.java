@@ -1,10 +1,11 @@
 package io.github.fergoman123.fergotools.item.shovel;
 
-import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergotools.util.tool.ItemShovelFT;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import org.lwjgl.input.Keyboard;
@@ -15,7 +16,7 @@ public class ItemAdamantiumShovel extends ItemShovelFT {
 
     public ItemAdamantiumShovel() {
         super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
-        this.setUnlocalizedName(Names.Items.adamantiumShovel);
+        this.setUnlocalizedName(ItemNames.adamantiumShovel);
     }
 
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
@@ -28,12 +29,12 @@ public class ItemAdamantiumShovel extends ItemShovelFT {
     {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.adamantiumToolTip));
-            list.add(NameHelper.translateToLocal(Names.Locale.durabilityToolTip) + " Infinity");
+            list.add(NameHelper.translateToLocal(Locale.adamantiumToolTip));
+            list.add(NameHelper.translateToLocal(Locale.durabilityToolTip) + " Infinity");
         }
         else
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
+            list.add(NameHelper.translateToLocal(Locale.holdShiftMessage));
         }
     }
 

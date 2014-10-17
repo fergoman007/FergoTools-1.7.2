@@ -3,15 +3,21 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import io.github.fergoman123.fergoutil.helper.BlockHelper;
-import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.*;
+import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.Reference;
+import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.util.base.ContainerFT;
 import io.github.fergoman123.fergotools.util.base.GuiFT;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
+import io.github.fergoman123.fergoutil.helper.BlockHelper;
+import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -43,7 +49,7 @@ public class RedstoneFurnace
 
         public BlockRedstoneFurnace(boolean isActive)
         {
-            super(Material.rock, Strings.FurnaceType.redstoneFurnace);
+            super(Material.rock, FurnaceType.redstoneFurnace);
             this.isActive = isActive;
         }
 
@@ -97,9 +103,9 @@ public class RedstoneFurnace
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockRedstoneCrystal);
-            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.redstoneFurnaceActive : Names.Blocks.redstoneFurnaceIdle));
-            this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockRedstoneCrystal);
+            this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockRedstoneCrystal);
+            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? BlockNames.redstoneFurnaceActive : BlockNames.redstoneFurnaceIdle));
+            this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockRedstoneCrystal);
         }
 
         public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -113,7 +119,7 @@ public class RedstoneFurnace
                 TileEntityRedstoneFurnace furnace = (TileEntityRedstoneFurnace)world.getTileEntity(x, y, z);
                 if (furnace != null)
                 {
-                    player.openGui(FergoTools.instance, GuiIds.redstoneFurnace.ordinal(), world, x, y, z);
+                    player.openGui(FergoTools.getInstance(), GuiIds.redstoneFurnace.ordinal(), world, x, y, z);
                 }
                 return true;
             }
@@ -357,7 +363,7 @@ public class RedstoneFurnace
 
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerRedstoneFurnace;
+            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerRedstoneFurnace;
         }
 
         public boolean hasCustomInventoryName()
@@ -642,7 +648,7 @@ public class RedstoneFurnace
         {
             String s = redstoneFurnace.hasCustomInventoryName() ? redstoneFurnace.getInventoryName() : GuiHelper.format(redstoneFurnace.getInventoryName());
             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
         }
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)

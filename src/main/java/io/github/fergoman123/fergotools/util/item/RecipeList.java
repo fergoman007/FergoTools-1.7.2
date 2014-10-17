@@ -10,6 +10,7 @@
 package io.github.fergoman123.fergotools.util.item;
 
 
+ import io.github.fergoman123.fergotools.init.ModBlocks;
  import io.github.fergoman123.fergoutil.helper.RecipeHelper;
  import io.github.fergoman123.fergotools.init.ModItems;
  import net.minecraft.init.Blocks;
@@ -17,7 +18,9 @@ package io.github.fergoman123.fergotools.util.item;
  import net.minecraft.item.ItemStack;
  import net.minecraftforge.oredict.OreDictionary;
 
-public class RecipeList {
+ import java.util.Objects;
+
+ public class RecipeList {
 
     public static final char charX = 'x';
     public static final char charY = 'y';
@@ -166,4 +169,14 @@ public class RecipeList {
     public static final Object[] coalBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.coalIngot, charX, FTStacks.stringStack};
     public static final Object[] glowstoneBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.glowstoneIngot, charX, FTStacks.stringStack};
     public static final Object[] adamantiumBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.adamantiumIngot, charX, FTStacks.stringStack};
+
+    public static final Object[] obsidianWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankObsidian};
+    public static final Object[] emeraldWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankEmerald};
+    public static final Object[] lapisWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankLapis};
+    public static final Object[] bronzeWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankBronze};
+    public static final Object[] coalWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankCoal};
+    public static final Object[] glowstoneWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankGlowstone};
+    public static final Object[] adamantiumWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankAdamantium};
+    public static final Object[] silkWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankSilk};
+    public static final Object[] redstoneWorkbench = new Object[]{"xx", "xx", 'x', ModBlocks.plankRedstone};
 }

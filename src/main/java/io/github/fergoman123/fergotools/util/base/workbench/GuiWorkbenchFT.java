@@ -5,8 +5,6 @@ import net.minecraft.inventory.Container;
 
 public abstract class GuiWorkbenchFT extends GuiContainer
 {
-    public String containerCrafting = "container.crafting";
-    public String containerInventory = "container.inventory";
 
     public GuiWorkbenchFT(Container p_i1072_1_) {
         super(p_i1072_1_);

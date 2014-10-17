@@ -3,6 +3,9 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergoutil.helper.BlockHelper;
 import io.github.fergoman123.fergoutil.helper.GLHelper;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
@@ -44,7 +47,7 @@ public class Macerator
 
         public BlockMacerator(boolean isActive)
         {
-            super(Material.rock, Strings.FurnaceType.macerator);
+            super(Material.rock, FurnaceType.macerator);
             this.isActive = isActive;
         }
 
@@ -99,7 +102,7 @@ public class Macerator
         public void registerBlockIcons(IIconRegister register)
         {
             this.blockIcon = register.registerIcon("iron_block");
-            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.maceratorActive : Names.Blocks.maceratorIdle));
+            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? BlockNames.maceratorActive : BlockNames.maceratorIdle));
             this.icons[1] = register.registerIcon("iron_block");
         }
 
@@ -114,7 +117,7 @@ public class Macerator
                 TileEntityMacerator furnace = (TileEntityMacerator)world.getTileEntity(x, y, z);
                 if (furnace != null)
                 {
-                    player.openGui(FergoTools.instance, GuiIds.macerator.ordinal(), world, x, y, z);
+                    player.openGui(FergoTools.getInstance(), GuiIds.macerator.ordinal(), world, x, y, z);
                 }
                 return true;
             }
@@ -466,7 +469,7 @@ public class Macerator
         {
             String s = this.macerator.hasCustomInventoryName() ? macerator.getInventoryName() : GuiHelper.format(this.macerator.getInventoryName());
             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
         }
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
@@ -565,7 +568,7 @@ public class Macerator
 
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerMacerator;
+            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerMacerator;
         }
 
         public boolean hasCustomInventoryName()

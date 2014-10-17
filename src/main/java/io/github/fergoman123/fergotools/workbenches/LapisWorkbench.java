@@ -3,18 +3,19 @@ package io.github.fergoman123.fergotools.workbenches;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Textures;
-
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.GuiWorkbenchFT;
-import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.*;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
@@ -28,12 +29,12 @@ public class LapisWorkbench
         public BlockLapisWorkbench()
         {
             super();
-            this.setBlockName(Names.Blocks.lapisWorkbench);
+            this.setBlockName(BlockNames.lapisWorkbench);
         }
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankEmerald.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankLapis.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         public void registerBlockIcons(IIconRegister register)
@@ -51,7 +52,7 @@ public class LapisWorkbench
             }
             else if (!player.isSneaking())
             {
-                player.openGui(FergoTools.instance, GuiIds.lapisWorkbench.ordinal(), world, x, y, z);
+                player.openGui(FergoTools.getInstance(), GuiIds.lapisWorkbench.ordinal(), world, x, y, z);
                 return true;
             }
             else
@@ -61,12 +62,8 @@ public class LapisWorkbench
         }
     }
 
-    public static final class ContainerLapisWorkbench extends ContainerWorkbenchFT
+    public static final class ContainerLapisWorkbench extends ContainerWorkbenchFT implements ContainerWorkbenchFT.IContainerWorkbenchFT
     {
-        public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 3);
-        public IInventory craftResult = new InventoryCraftResult();
-        private World world;
-        private int x, y, z;
 
         public ContainerLapisWorkbench(InventoryPlayer inventory, World world, int x, int y, int z)
         {
@@ -102,7 +99,7 @@ public class LapisWorkbench
 
         @Override
         public void onCraftMatrixChanged(IInventory inventory) {
-            this.craftMatrix.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.world));
+            this.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.world));
         }
 
         public void onContainerClosed(EntityPlayer player)
@@ -178,8 +175,8 @@ public class LapisWorkbench
 
         public void drawGuiContainerForegroundLayer(int par1, int par2)
         {
-            this.fontRendererObj.drawString(I18n.format("container.crafting", new Object[0]), 28, 6, 4210752);
-            this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 8, this.ySize - 96 + 2, 4210752);
+            this.fontRendererObj.drawString(I18n.format(Locale.containerLapisWorkbench, new Object[0]), 28, 6, 4210752);
+            this.fontRendererObj.drawString(I18n.format(Locale.containerInventory, new Object[0]), 8, this.ySize - 96 + 2, 4210752);
         }
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)

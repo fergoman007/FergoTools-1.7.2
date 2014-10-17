@@ -3,12 +3,12 @@ package io.github.fergoman123.fergotools.workbenches;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergotools.reference.Names;
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.GuiWorkbenchFT;
-import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
@@ -29,7 +29,7 @@ public class EmeraldWorkbench
         public BlockEmeraldWorkbench()
         {
             super();
-            this.setBlockName(Names.Blocks.emeraldWorkbench);
+            this.setBlockName(BlockNames.emeraldWorkbench);
         }
 
         public IIcon getIcon(int side, int meta)
@@ -52,7 +52,7 @@ public class EmeraldWorkbench
             }
             else if (!player.isSneaking())
             {
-                player.openGui(FergoTools.instance, GuiIds.emeraldWorkbench.ordinal(), world, x, y, z);
+                player.openGui(FergoTools.getInstance(), GuiIds.emeraldWorkbench.ordinal(), world, x, y, z);
                 return true;
             }
             else
@@ -176,8 +176,8 @@ public class EmeraldWorkbench
 
         @Override
         public void drawGuiContainerForegroundLayer(int p_146979_1_, int p_146979_2_) {
-            this.fontRendererObj.drawString(I18n.format(containerCrafting, new Object[0]), 28, 6, 4210752);
-            this.fontRendererObj.drawString(I18n.format(containerInventory, new Object[0]), 8, this.ySize - 96 + 2, 4210752);
+            this.fontRendererObj.drawString(I18n.format(Locale.containerEmeraldWorkbench, new Object[0]), 28, 6, 4210752);
+            this.fontRendererObj.drawString(I18n.format(Locale.containerInventory, new Object[0]), 8, this.ySize - 96 + 2, 4210752);
         }
 
         @Override

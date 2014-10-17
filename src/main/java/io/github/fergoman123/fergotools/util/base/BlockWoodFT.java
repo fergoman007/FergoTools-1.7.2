@@ -1,5 +1,6 @@
 package io.github.fergoman123.fergotools.util.base;
 
+import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
@@ -14,6 +15,7 @@ public abstract class BlockWoodFT extends Block
     public BlockWoodFT()
     {
         super(Material.wood);
+        this.setHardness(2.5f);
         this.setCreativeTab(Tabs.tabFergoWood);
     }
 
@@ -24,7 +26,7 @@ public abstract class BlockWoodFT extends Block
 
     public void registerBlockIcons(IIconRegister register)
     {
-        blockIcon = register.registerIcon(String.format("%s%s%s", Reference.textureLoc,  "wood/", NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
+        blockIcon = register.registerIcon(String.format("%s%s%s", Reference.textureLoc, Textures.woodLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
     }
 
     public IIcon getIcon(int side, int meta)

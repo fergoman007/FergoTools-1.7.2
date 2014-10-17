@@ -9,13 +9,13 @@
 
 package io.github.fergoman123.fergotools.block;
 
-import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.Names;
-import io.github.fergoman123.fergotools.util.base.BlockFT;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
+ import io.github.fergoman123.fergotools.init.ModItems;
+ import io.github.fergoman123.fergotools.reference.names.BlockNames;
+ import io.github.fergoman123.fergotools.util.base.BlockFT;
+ import net.minecraft.block.material.Material;
+ import net.minecraft.item.Item;
 
-import java.util.Random;
+ import java.util.Random;
 
 public class FTOres
 {
@@ -24,7 +24,7 @@ public class FTOres
         public BlockOreObsidian()
         {
             super(Material.rock);
-            this.setBlockName(Names.Blocks.oreObsidian);
+            this.setBlockName(BlockNames.oreObsidian);
         }
 
         public Item getItemDropped(int metadata, Random random, int fortune)
@@ -38,7 +38,7 @@ public class FTOres
         public BlockOreEmeraldCrystal()
         {
             super(Material.rock);
-            this.setBlockName(Names.Blocks.oreEmeraldCrystal);
+            this.setBlockName(BlockNames.oreEmeraldCrystal);
         }
 
         @Override
@@ -52,7 +52,7 @@ public class FTOres
         public BlockOreLapisCrystal()
         {
             super(Material.rock);
-            this.setBlockName(Names.Blocks.oreLapisCrystal);
+            this.setBlockName(BlockNames.oreLapisCrystal);
         }
 
         @Override
@@ -66,7 +66,7 @@ public class FTOres
         public BlockOreBronze()
         {
             super(Material.rock);
-            this.setBlockName(Names.Blocks.oreBronze);
+            this.setBlockName(BlockNames.oreBronze);
         }
 
         @Override
@@ -80,7 +80,7 @@ public class FTOres
         public BlockOreAdamantium()
         {
             super(Material.rock);
-            this.setBlockName(Names.Blocks.oreAdamantium);
+            this.setBlockName(BlockNames.oreAdamantium);
         }
 
         @Override
@@ -94,7 +94,7 @@ public class FTOres
         public BlockOreExperience()
         {
             super(Material.rock);
-            this.setBlockName(Names.Blocks.oreExperience);
+            this.setBlockName(BlockNames.oreExperience);
         }
 
         @Override
@@ -113,7 +113,7 @@ public class FTOres
         public BlockOreRedCrystal()
         {
             super(Material.iron);
-            this.setBlockName(Names.Blocks.oreCrystalRed);
+            this.setBlockName(BlockNames.oreCrystalRed);
         }
 
         @Override

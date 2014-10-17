@@ -9,18 +9,18 @@
 
 package io.github.fergoman123.fergotools.block;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import io.github.fergoman123.fergotools.reference.Names;
-import io.github.fergoman123.fergotools.reference.Reference;
-import io.github.fergoman123.fergotools.reference.Textures;
-import io.github.fergoman123.fergotools.util.base.BlockGlassFT;
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
+ import cpw.mods.fml.relauncher.Side;
+ import cpw.mods.fml.relauncher.SideOnly;
+ import io.github.fergoman123.fergotools.reference.Reference;
+ import io.github.fergoman123.fergotools.reference.Textures;
+ import io.github.fergoman123.fergotools.reference.names.BlockNames;
+ import io.github.fergoman123.fergotools.util.base.BlockGlassFT;
+ import net.minecraft.block.Block;
+ import net.minecraft.client.renderer.texture.IIconRegister;
+ import net.minecraft.util.AxisAlignedBB;
+ import net.minecraft.util.IIcon;
+ import net.minecraft.world.IBlockAccess;
+ import net.minecraft.world.World;
 
 public class BlockFergoGlass extends BlockGlassFT {
     protected IIcon[] icons = new IIcon[16];
@@ -29,7 +29,7 @@ public class BlockFergoGlass extends BlockGlassFT {
 
     public BlockFergoGlass() {
         super();
-        this.setBlockName(Names.Blocks.blockFergoGlass);
+        this.setBlockName(BlockNames.blockFergoGlass);
     }
 
     @Override

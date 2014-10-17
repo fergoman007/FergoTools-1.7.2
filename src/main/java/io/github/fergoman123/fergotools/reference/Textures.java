@@ -1,6 +1,8 @@
 package io.github.fergoman123.fergotools.reference;
 
 import io.github.fergoman123.fergotools.helper.ResourceLocationHelper;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import net.minecraft.util.ResourceLocation;
 
 public class Textures
@@ -21,6 +23,8 @@ public class Textures
     public static final String ctLocSide = "ct/side/";
     public static final String ctLocTop = "ct/top/";
     public static final String ctLocFront =  "ct/front/";
+    public static final String woodLoc = "wood/";
+    public static final String stickLoc = "stick/";
 
     public static final String png = ".png";
 
@@ -66,47 +70,47 @@ public class Textures
     public static final String adamantiumArmorLayer2 = resourcePrefix + armorSheetLocation + "adamantium_2" + png;
     public static final String redstoneArmorLayer2 = resourcePrefix + armorSheetLocation + "redstone_2" + png;
 
-    public static final String quartzBowStandy = resourcePrefix + Names.Items.bowQuartz + "_0";
-    public static final String quartzBowPull1 = resourcePrefix + Names.Items.bowQuartz + "_1";
-    public static final String quartzBowPull2 = resourcePrefix + Names.Items.bowQuartz + "_2";
-    public static final String quartzBowPull3 = resourcePrefix + Names.Items.bowQuartz + "_3";
+    public static final String quartzBowStandy = resourcePrefix + ItemNames.bowQuartz + "_0";
+    public static final String quartzBowPull1 = resourcePrefix + ItemNames.bowQuartz + "_1";
+    public static final String quartzBowPull2 = resourcePrefix + ItemNames.bowQuartz + "_2";
+    public static final String quartzBowPull3 = resourcePrefix + ItemNames.bowQuartz + "_3";
 
-    public static final String obsidianBowStandy = resourcePrefix + Names.Items.bowObsidian + "_0";
-    public static final String obsidianBowPull1 = resourcePrefix + Names.Items.bowObsidian + "_1";
-    public static final String obsidianBowPull2 = resourcePrefix + Names.Items.bowObsidian + "_2";
-    public static final String obsidianBowPull3 = resourcePrefix + Names.Items.bowObsidian + "_3";
+    public static final String obsidianBowStandy = resourcePrefix + ItemNames.bowObsidian + "_0";
+    public static final String obsidianBowPull1 = resourcePrefix + ItemNames.bowObsidian + "_1";
+    public static final String obsidianBowPull2 = resourcePrefix + ItemNames.bowObsidian + "_2";
+    public static final String obsidianBowPull3 = resourcePrefix + ItemNames.bowObsidian + "_3";
 
-    public static final String emeraldBowStandy = resourcePrefix + Names.Items.bowEmerald + "_0";
-    public static final String emeraldBowPull1 = resourcePrefix + Names.Items.bowEmerald + "_1";
-    public static final String emeraldBowPull2 = resourcePrefix + Names.Items.bowEmerald + "_2";
-    public static final String emeraldBowPull3 = resourcePrefix + Names.Items.bowEmerald + "_3";
+    public static final String emeraldBowStandy = resourcePrefix + ItemNames.bowEmerald + "_0";
+    public static final String emeraldBowPull1 = resourcePrefix + ItemNames.bowEmerald + "_1";
+    public static final String emeraldBowPull2 = resourcePrefix + ItemNames.bowEmerald + "_2";
+    public static final String emeraldBowPull3 = resourcePrefix + ItemNames.bowEmerald + "_3";
 
-    public static final String lapisBowStandy = resourcePrefix + Names.Items.bowLapis + "_0";
-    public static final String lapisBowPull1 = resourcePrefix + Names.Items.bowLapis + "_1";
-    public static final String lapisBowPull2 = resourcePrefix + Names.Items.bowLapis + "_2";
-    public static final String lapisBowPull3 = resourcePrefix + Names.Items.bowLapis + "_3";
+    public static final String lapisBowStandy = resourcePrefix + ItemNames.bowLapis + "_0";
+    public static final String lapisBowPull1 = resourcePrefix + ItemNames.bowLapis + "_1";
+    public static final String lapisBowPull2 = resourcePrefix + ItemNames.bowLapis + "_2";
+    public static final String lapisBowPull3 = resourcePrefix + ItemNames.bowLapis + "_3";
 
-    public static final String bronzeBowStandy = resourcePrefix + Names.Items.bowBronze + "_0";
-    public static final String bronzeBowPull1 = resourcePrefix + Names.Items.bowBronze + "_1";
-    public static final String bronzeBowPull2 = resourcePrefix + Names.Items.bowBronze + "_2";
-    public static final String bronzeBowPull3 = resourcePrefix + Names.Items.bowBronze + "_3";
+    public static final String bronzeBowStandy = resourcePrefix + ItemNames.bowBronze + "_0";
+    public static final String bronzeBowPull1 = resourcePrefix + ItemNames.bowBronze + "_1";
+    public static final String bronzeBowPull2 = resourcePrefix + ItemNames.bowBronze + "_2";
+    public static final String bronzeBowPull3 = resourcePrefix + ItemNames.bowBronze + "_3";
 
-    public static final String coalBowStandy = resourcePrefix + Names.Items.bowCoal + "_0";
-    public static final String coalBowPull1 = resourcePrefix + Names.Items.bowCoal + "_1";
-    public static final String coalBowPull2 = resourcePrefix + Names.Items.bowCoal + "_2";
-    public static final String coalBowPull3 = resourcePrefix + Names.Items.bowCoal + "_3";
+    public static final String coalBowStandy = resourcePrefix + ItemNames.bowCoal + "_0";
+    public static final String coalBowPull1 = resourcePrefix + ItemNames.bowCoal + "_1";
+    public static final String coalBowPull2 = resourcePrefix + ItemNames.bowCoal + "_2";
+    public static final String coalBowPull3 = resourcePrefix + ItemNames.bowCoal + "_3";
 
-    public static final String glowstoneBowStandy = resourcePrefix + Names.Items.bowGlowstone + "_0";
-    public static final String glowstoneBowPull1 = resourcePrefix + Names.Items.bowGlowstone + "_1";
-    public static final String glowstoneBowPull2 = resourcePrefix + Names.Items.bowGlowstone + "_2";
-    public static final String glowstoneBowPull3 = resourcePrefix + Names.Items.bowGlowstone + "_3";
+    public static final String glowstoneBowStandy = resourcePrefix + ItemNames.bowGlowstone + "_0";
+    public static final String glowstoneBowPull1 = resourcePrefix + ItemNames.bowGlowstone + "_1";
+    public static final String glowstoneBowPull2 = resourcePrefix + ItemNames.bowGlowstone + "_2";
+    public static final String glowstoneBowPull3 = resourcePrefix + ItemNames.bowGlowstone + "_3";
 
-    public static final String adamantiumBowStandy = resourcePrefix + Names.Items.bowAdamantium + "_0";
-    public static final String adamantiumBowPull1 = resourcePrefix + Names.Items.bowAdamantium + "_1";
-    public static final String adamantiumBowPull2 = resourcePrefix + Names.Items.bowAdamantium + "_2";
-    public static final String adamantiumBowPull3 = resourcePrefix + Names.Items.bowAdamantium + "_3";
+    public static final String adamantiumBowStandy = resourcePrefix + ItemNames.bowAdamantium + "_0";
+    public static final String adamantiumBowPull1 = resourcePrefix + ItemNames.bowAdamantium + "_1";
+    public static final String adamantiumBowPull2 = resourcePrefix + ItemNames.bowAdamantium + "_2";
+    public static final String adamantiumBowPull3 = resourcePrefix + ItemNames.bowAdamantium + "_3";
 
-    public static final String blockFergoGlass = "blockFergoGlass";
+    public static final String blockFergoGlass = BlockNames.blockFergoGlass;
     public static final String blockFergoGlass0 = blockFergoGlass + "_0";
     public static final String blockFergoGlass1 = blockFergoGlass + "_1";
     public static final String blockFergoGlass2 = blockFergoGlass + "_2";
@@ -145,66 +149,96 @@ public class Textures
 
     public static final String[] obsidianWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.obsidianWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.obsidianWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.obsidianWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.obsidianWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.obsidianWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.obsidianWorkbench + ctFront
             };
 
     public static final String[] emeraldWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.emeraldWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.emeraldWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.emeraldWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.emeraldWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.emeraldWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.emeraldWorkbench + ctFront
             };
 
     public static final String[] lapisWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.lapisWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.lapisWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.lapisWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.lapisWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.lapisWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.lapisWorkbench + ctFront
             };
 
     public static final String[] bronzeWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.bronzeWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.bronzeWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.bronzeWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.bronzeWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.bronzeWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.bronzeWorkbench + ctFront
             };
 
     public static final String[] coalWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.coalWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.coalWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.coalWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.coalWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.coalWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.coalWorkbench + ctFront
             };
 
     public static final String[] glowstoneWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.glowstoneWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.glowstoneWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.glowstoneWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.glowstoneWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.glowstoneWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.glowstoneWorkbench + ctFront
             };
 
     public static final String[] adamantiumWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.adamantiumWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.adamantiumWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.adamantiumWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.adamantiumWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.adamantiumWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.adamantiumWorkbench + ctFront
             };
 
     public static final String[] silkWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.silkWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.silkWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.silkWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.silkWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.silkWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.silkWorkbench + ctFront
             };
 
     public static final String[] redstoneWorkbenchTextures =
             {
-                    Reference.textureLoc + ctLocSide + Names.Blocks.redstoneWorkbench + ctSide,
-                    Reference.textureLoc + ctLocTop + Names.Blocks.redstoneWorkbench + ctTop,
-                    Reference.textureLoc + ctLocFront + Names.Blocks.redstoneWorkbench + ctFront
+                    Reference.textureLoc + ctLocSide + BlockNames.redstoneWorkbench + ctSide,
+                    Reference.textureLoc + ctLocTop + BlockNames.redstoneWorkbench + ctTop,
+                    Reference.textureLoc + ctLocFront + BlockNames.redstoneWorkbench + ctFront
             };
+
+    public static final String logObsidian = Reference.textureLoc + woodLoc + BlockNames.logObsidian;
+    public static final String logEmerald = Reference.textureLoc + woodLoc + BlockNames.logEmerald;
+    public static final String logLapis = Reference.textureLoc + woodLoc + BlockNames.logLapis;
+    public static final String logBronze = Reference.textureLoc + woodLoc + BlockNames.logBronze;
+    public static final String logCoal = Reference.textureLoc + woodLoc + BlockNames.logCoal;
+    public static final String logGlowstone = Reference.textureLoc + woodLoc + BlockNames.logGlowstone;
+    public static final String logAdamantium = Reference.textureLoc + woodLoc + BlockNames.logAdamantium;
+    public static final String logSilk = Reference.textureLoc + woodLoc + BlockNames.logSilk;
+    public static final String logRedstone = Reference.textureLoc + woodLoc + BlockNames.logRedstone;
+
+    public static final String logObsidianTop = Reference.textureLoc + woodLoc + BlockNames.logObsidian + ctTop;
+    public static final String logEmeraldTop = Reference.textureLoc + woodLoc + BlockNames.logEmerald + ctTop;
+    public static final String logLapisTop = Reference.textureLoc + woodLoc + BlockNames.logLapis + ctTop;
+    public static final String logBronzeTop = Reference.textureLoc + woodLoc + BlockNames.logBronze + ctTop;
+    public static final String logCoalTop = Reference.textureLoc + woodLoc + BlockNames.logCoal + ctTop;
+    public static final String logGlowstoneTop = Reference.textureLoc + woodLoc + BlockNames.logGlowstone + ctTop;
+    public static final String logAdamantiumTop = Reference.textureLoc + woodLoc + BlockNames.logAdamantium + ctTop;
+    public static final String logSilkTop = Reference.textureLoc + woodLoc + BlockNames.logSilk + ctTop;
+    public static final String logRedstoneTop = Reference.textureLoc + woodLoc + BlockNames.logRedstone + ctTop;
+
+    public static final String plankObsidian = Reference.textureLoc + woodLoc + BlockNames.plankObsidian;
+    public static final String plankEmerald = Reference.textureLoc + woodLoc + BlockNames.plankEmerald;
+    public static final String plankLapis = Reference.textureLoc + woodLoc + BlockNames.plankLapis;
+    public static final String plankBronze = Reference.textureLoc + woodLoc + BlockNames.plankBronze;
+    public static final String plankCoal = Reference.textureLoc + woodLoc + BlockNames.plankCoal;
+    public static final String plankGlowstone = Reference.textureLoc + woodLoc + BlockNames.plankGlowstone;
+    public static final String plankAdamantium = Reference.textureLoc + woodLoc + BlockNames.plankAdamantium;
+    public static final String plankSilk = Reference.textureLoc + woodLoc + BlockNames.plankSilk;
+    public static final String plankRedstone = Reference.textureLoc + woodLoc + BlockNames.plankRedstone;
 
 
 

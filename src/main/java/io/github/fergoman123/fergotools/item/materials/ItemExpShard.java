@@ -1,7 +1,9 @@
 package io.github.fergoman123.fergotools.item.materials;
 
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.names.OreDict;
 import io.github.fergoman123.fergotools.util.base.ItemFT;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,7 +22,7 @@ public class ItemExpShard extends ItemFT
     public ItemExpShard() {
         super();
         this.setMaxStackSize(64);
-        this.setUnlocalizedName(Names.Items.shardExp);
+        this.setUnlocalizedName(ItemNames.shardExp);
     }
 
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
@@ -40,14 +42,14 @@ public class ItemExpShard extends ItemFT
     {
         if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.expShardToolTip));
+            list.add(NameHelper.translateToLocal(Locale.expShardToolTip));
             list.add("");
-            list.add(NameHelper.translateToLocal(Names.OreDict.oreDictName));
-            list.add(NameHelper.translateToLocal(Names.OreDict.shardExp));
+            list.add(NameHelper.translateToLocal(OreDict.oreDictName));
+            list.add(NameHelper.translateToLocal(OreDict.shardExp));
         }
         else
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
+            list.add(NameHelper.translateToLocal(Locale.holdShiftMessage));
         }
     }
 }

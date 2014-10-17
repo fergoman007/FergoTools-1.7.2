@@ -6,6 +6,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.*;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.util.base.ContainerFT;
 import io.github.fergoman123.fergotools.util.base.GuiFT;
@@ -43,14 +46,14 @@ public class EmeraldFurnace
 
          public void registerBlockIcons(IIconRegister register)
          {
-             this.blockIcon = register.registerIcon(Reference.textureLoc + Names.Blocks.blockEmeraldCrystal);
-             this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.emeraldFurnaceActive : Names.Blocks.emeraldFurnaceIdle));
-             this.icons[1] = register.registerIcon(Reference.textureLoc + Names.Blocks.blockEmeraldCrystal);
+             this.blockIcon = register.registerIcon(Reference.textureLoc + BlockNames.blockEmeraldCrystal);
+             this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? BlockNames.emeraldFurnaceActive : BlockNames.emeraldFurnaceIdle));
+             this.icons[1] = register.registerIcon(Reference.textureLoc + BlockNames.blockEmeraldCrystal);
          }
 
          public BlockEmeraldFurnace(boolean isActive)
          {
-             super(Material.rock, Strings.FurnaceType.emeraldFurnace);
+             super(Material.rock, FurnaceType.emeraldFurnace);
              this.isActive = isActive;
          }
 
@@ -115,7 +118,7 @@ public class EmeraldFurnace
                  TileEntityEmeraldFurnace furnace = (TileEntityEmeraldFurnace)world.getTileEntity(x, y, z);
                  if (furnace != null)
                  {
-                     player.openGui(FergoTools.instance, GuiIds.emeraldCrystalFurnace.ordinal(), world, x, y, z);
+                     player.openGui(FergoTools.getInstance(), GuiIds.emeraldCrystalFurnace.ordinal(), world, x, y, z);
                  }
                  return true;
              }
@@ -351,7 +354,7 @@ public class EmeraldFurnace
 
          public String getInventoryName()
          {
-             return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerEmeraldFurnace;
+             return this.hasCustomInventoryName() ? this.localizedName : Locale.containerEmeraldFurnace;
          }
 
          @Override
@@ -642,7 +645,7 @@ public class EmeraldFurnace
          public void drawGuiContainerForegroundLayer(int par1, int par2) {
              String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
              fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-             fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+             fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
          }
 
          @Override

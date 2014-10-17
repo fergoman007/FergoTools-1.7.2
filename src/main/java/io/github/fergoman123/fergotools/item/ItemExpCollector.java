@@ -1,9 +1,10 @@
 package io.github.fergoman123.fergotools.item;
 
-import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.ItemFT;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -17,7 +18,7 @@ public class ItemExpCollector extends ItemFT
     public ItemExpCollector() {
         super();
         this.setMaxStackSize(64);
-        this.setUnlocalizedName(Names.Items.expCollector);
+        this.setUnlocalizedName(ItemNames.expCollector);
     }
 
     @Override
@@ -40,11 +41,11 @@ public class ItemExpCollector extends ItemFT
     {
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.expCollectorToolTip));
+            list.add(NameHelper.translateToLocal(Locale.expCollectorToolTip));
         }
         else
         {
-            list.add(NameHelper.translateToLocal(Names.Locale.holdShiftMessage));
+            list.add(NameHelper.translateToLocal(Locale.holdShiftMessage));
         }
     }
 }

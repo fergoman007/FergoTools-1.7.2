@@ -1,7 +1,9 @@
 package io.github.fergoman123.fergotools.block;
 
-import io.github.fergoman123.fergotools.reference.Names;
+import com.sun.prism.Texture;
 import io.github.fergoman123.fergotools.reference.Reference;
+import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.base.BlockLogFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
@@ -15,13 +17,13 @@ public class FTLogs
         public BlockLogObsidian()
         {
             super();
-            this.setBlockName(Names.Blocks.logObsidian);
+            this.setBlockName(BlockNames.logObsidian);
         }
 
         @Override
         public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logObsidian);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logObsidian + "Top");
+            this.sideIcon = register.registerIcon(Textures.logObsidian);
+            this.topIcon = register.registerIcon(Textures.logObsidianTop);
         }
 
         @Override
@@ -35,13 +37,13 @@ public class FTLogs
         public BlockLogEmerald()
         {
             super();
-            this.setBlockName(Names.Blocks.logEmerald);
+            this.setBlockName(BlockNames.logEmerald);
         }
 
         @Override
         public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logEmerald);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logEmerald + "Top");
+            this.sideIcon = register.registerIcon(Textures.logEmerald);
+            this.topIcon = register.registerIcon(Textures.logEmeraldTop);
         }
 
         @Override
@@ -55,13 +57,13 @@ public class FTLogs
         public BlockLogLapis()
         {
             super();
-            this.setBlockName(Names.Blocks.logLapis);
+            this.setBlockName(BlockNames.logLapis);
         }
 
         @Override
         public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logLapis);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logLapis + "Top");
+            this.sideIcon = register.registerIcon(Textures.logLapis);
+            this.topIcon = register.registerIcon(Textures.logLapisTop);
         }
 
         @Override
@@ -75,13 +77,13 @@ public class FTLogs
         public BlockLogBronze()
         {
             super();
-            this.setBlockName(Names.Blocks.logBronze);
+            this.setBlockName(BlockNames.logBronze);
         }
 
         @Override
         public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logBronze);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logBronze + "Top");
+            this.sideIcon = register.registerIcon(Textures.logBronze);
+            this.topIcon = register.registerIcon(Textures.logBronzeTop);
         }
 
         @Override
@@ -95,13 +97,13 @@ public class FTLogs
         public BlockLogCoal()
         {
             super();
-            this.setBlockName(Names.Blocks.logCoal);
+            this.setBlockName(BlockNames.logCoal);
         }
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logCoal);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logCoal + "Top");
+            this.sideIcon = register.registerIcon(Textures.logCoal);
+            this.topIcon = register.registerIcon(Textures.logCoalTop);
         }
 
         @Override
@@ -115,13 +117,13 @@ public class FTLogs
         public BlockLogGlowstone()
         {
             super();
-            this.setBlockName(Names.Blocks.logGlowstone);
+            this.setBlockName(BlockNames.logGlowstone);
         }
 
         @Override
         public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logGlowstone);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logGlowstone + "Top");
+            this.sideIcon = register.registerIcon(Textures.logGlowstone);
+            this.topIcon = register.registerIcon(Textures.logGlowstoneTop);
         }
 
         @Override
@@ -135,13 +137,13 @@ public class FTLogs
         public BlockLogAdamantium()
         {
             super();
-            this.setBlockName(Names.Blocks.logAdamantium);
+            this.setBlockName(BlockNames.logAdamantium);
         }
 
         @Override
         public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logAdamantium);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logAdamantium + "Top");
+            this.sideIcon = register.registerIcon(Textures.logAdamantium);
+            this.topIcon = register.registerIcon(Textures.logAdamantiumTop);
         }
 
         @Override
@@ -155,13 +157,13 @@ public class FTLogs
         public BlockLogSilk()
         {
             super();
-            this.setBlockName(Names.Blocks.logSilk);
+            this.setBlockName(BlockNames.logSilk);
         }
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logSilk);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logSilk + "Top");
+            this.sideIcon = register.registerIcon(Textures.logSilk);
+            this.topIcon = register.registerIcon(Textures.logSilkTop);
         }
 
         @Override
@@ -175,13 +177,13 @@ public class FTLogs
         public BlockLogRedstone()
         {
             super();
-            this.setBlockName(Names.Blocks.logRedstone);
+            this.setBlockName(BlockNames.logRedstone);
         }
 
         @Override
         public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logRedstone);
-            this.topIcon = register.registerIcon(Reference.textureLoc + "wood/" + Names.Blocks.logRedstone + "Top");
+            this.sideIcon = register.registerIcon(Textures.logRedstone);
+            this.topIcon = register.registerIcon(Textures.logRedstoneTop);
         }
 
         @Override

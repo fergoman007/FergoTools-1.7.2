@@ -26,7 +26,11 @@ import io.github.fergoman123.fergoutil.proxy.IProxy;
 public class FergoTools
 {
     @Instance(ModInfo.modid)
-    public static FergoTools instance;
+    private static FergoTools instance;
+
+    public static FergoTools getInstance() {
+        return instance;
+    }
     
     @SidedProxy(clientSide = Reference.clientProxyClass, serverSide = Reference.serverProxyClass)
     public static IProxy proxy;

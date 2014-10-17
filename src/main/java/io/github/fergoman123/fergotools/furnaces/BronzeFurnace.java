@@ -15,6 +15,9 @@ package io.github.fergoman123.fergotools.furnaces;
  import io.github.fergoman123.fergotools.FergoTools;
  import io.github.fergoman123.fergotools.init.ModBlocks;
  import io.github.fergoman123.fergotools.reference.*;
+ import io.github.fergoman123.fergotools.reference.names.BlockNames;
+ import io.github.fergoman123.fergotools.reference.names.Locale;
+ import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
  import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
  import io.github.fergoman123.fergotools.util.base.ContainerFT;
  import io.github.fergoman123.fergotools.util.base.GuiFT;
@@ -51,7 +54,7 @@ public class BronzeFurnace
 
         public BlockBronzeFurnace(boolean isActive)
         {
-            super(Material.iron, Strings.FurnaceType.bronzeFurnace);
+            super(Material.iron, FurnaceType.bronzeFurnace);
             this.isActive = isActive;
         }
 
@@ -105,9 +108,9 @@ public class BronzeFurnace
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockBronze);
-            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? Names.Blocks.bronzeFurnaceActive : Names.Blocks.bronzeFurnaceIdle));
-            this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.blockBronze);
+            this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockBronze);
+            this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? BlockNames.bronzeFurnaceActive : BlockNames.bronzeFurnaceIdle));
+            this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockBronze);
         }
 
         public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -121,7 +124,7 @@ public class BronzeFurnace
                 TileEntityBronzeFurnace furnace = (TileEntityBronzeFurnace)world.getTileEntity(x, y, z);
                 if (furnace != null)
                 {
-                    player.openGui(FergoTools.instance, GuiIds.bronzeFurnace.ordinal(), world, x, y, z);
+                    player.openGui(FergoTools.getInstance(), GuiIds.bronzeFurnace.ordinal(), world, x, y, z);
                 }
                 return true;
             }
@@ -365,7 +368,7 @@ public class BronzeFurnace
 
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerBronzeFurnace;
+            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerBronzeFurnace;
         }
 
         public boolean hasCustomInventoryName()
@@ -820,7 +823,7 @@ public class BronzeFurnace
         {
             String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
         }
 
         /**

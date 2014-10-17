@@ -3,6 +3,9 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
@@ -41,7 +44,7 @@ public class QuartzFurnace
 
         public BlockQuartzFurnace(boolean isActive)
         {
-            super(Material.rock, Strings.FurnaceType.quartzFurnace);
+            super(Material.rock, FurnaceType.quartzFurnace);
             this.isActive = isActive;
         }
 
@@ -96,9 +99,9 @@ public class QuartzFurnace
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.blockIcon = register.registerIcon(Textures.resourcePrefix + Names.Blocks.quartzFurnaceSide);
-            this.icons[0] = register.registerIcon(Textures.resourcePrefix + (this.isActive ? Names.Blocks.quartzFurnaceActive : Names.Blocks.quartzFurnaceIdle));
-            this.icons[1] = register.registerIcon(Textures.resourcePrefix + Names.Blocks.quartzFurnaceSide);
+            this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.quartzFurnaceSide);
+            this.icons[0] = register.registerIcon(Textures.resourcePrefix + (this.isActive ? BlockNames.quartzFurnaceActive : BlockNames.quartzFurnaceIdle));
+            this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.quartzFurnaceSide);
         }
 
         public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -112,7 +115,7 @@ public class QuartzFurnace
                 TileEntityQuartzFurnace furnace = (TileEntityQuartzFurnace)world.getTileEntity(x, y, z);
                 if (furnace != null)
                 {
-                    player.openGui(FergoTools.instance, GuiIds.quartzFurnace.ordinal(), world, x, y, z);
+                    player.openGui(FergoTools.getInstance(), GuiIds.quartzFurnace.ordinal(), world, x, y, z);
                 }
                 return true;
             }
@@ -356,7 +359,7 @@ public class QuartzFurnace
 
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Names.Locale.containerQuartzFurnace;
+            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerQuartzFurnace;
         }
 
         public boolean hasCustomInventoryName()
@@ -804,7 +807,7 @@ public class QuartzFurnace
         {
             String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Names.Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
         }
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)

@@ -24,8 +24,15 @@ import io.github.fergoman123.fergotools.furnaces.Macerator.*;
 
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench;
+import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.*;
 import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.*;
-import net.minecraft.client.gui.inventory.GuiContainer;
+import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.*;
+import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.world.World;
@@ -99,6 +106,34 @@ public class GuiHandler  implements IGuiHandler
         {
             return new ContainerEmeraldWorkbench(inventory, world, x, y, z);
         }
+        else if (id == GuiIds.lapisWorkbench.ordinal())
+        {
+            return new ContainerLapisWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.bronzeWorkbench.ordinal())
+        {
+            return new ContainerBronzeWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.coalWorkbench.ordinal())
+        {
+            return new ContainerCoalWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.glowstoneWorkBench.ordinal())
+        {
+            return new ContainerGlowstoneWorkbench(inventory, world,x, y, z);
+        }
+        else if (id == GuiIds.adamantiumWorkbench.ordinal())
+        {
+            return new ContainerAdamantiumWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.silkWorkbench.ordinal())
+        {
+            return new ContainerSilkWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.redstoneWorkbench.ordinal())
+        {
+            return new ContainerRedstoneWorkbench(inventory, world, x, y, z);
+        }
         return null;
     }
 
@@ -167,8 +202,35 @@ public class GuiHandler  implements IGuiHandler
         }
         else if (id == GuiIds.emeraldWorkbench.ordinal())
         {
-
             return new GuiEmeraldWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.lapisWorkbench.ordinal())
+        {
+            return new GuiLapisWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.bronzeWorkbench.ordinal())
+        {
+            return new GuiBronzeWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.coalWorkbench.ordinal())
+        {
+            return new GuiCoalWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.glowstoneWorkBench.ordinal())
+        {
+            return new GuiGlowstoneWorkbench(inventory, world,x, y, z);
+        }
+        else if (id == GuiIds.adamantiumWorkbench.ordinal())
+        {
+            return new GuiAdamantiumWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.silkWorkbench.ordinal())
+        {
+            return new GuiSilkWorkbench(inventory, world, x, y, z);
+        }
+        else if (id == GuiIds.redstoneWorkbench.ordinal())
+        {
+            return new GuiRedstoneWorkbench(inventory, world, x, y, z);
         }
         return null;
     }

@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.item;
 
-import io.github.fergoman123.fergotools.reference.Names;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import io.github.fergoman123.fergotools.util.base.ItemStickFT;
 
 public class FTSticks
@@ -9,7 +9,7 @@ public class FTSticks
         public ItemStickObsidian()
         {
             super();
-            setUnlocalizedName(Names.Items.stickObsidian);
+            setUnlocalizedName(ItemNames.stickObsidian);
         }
     }
 
@@ -17,7 +17,7 @@ public class FTSticks
         public ItemStickEmerald()
         {
             super();
-            setUnlocalizedName(Names.Items.stickEmerald);
+            setUnlocalizedName(ItemNames.stickEmerald);
         }
     }
 
@@ -25,7 +25,7 @@ public class FTSticks
         public ItemStickLapis()
         {
             super();
-            setUnlocalizedName(Names.Items.stickLapis);
+            setUnlocalizedName(ItemNames.stickLapis);
         }
     }
 
@@ -33,7 +33,7 @@ public class FTSticks
         public ItemStickBronze()
         {
             super();
-            setUnlocalizedName(Names.Items.stickBronze);
+            setUnlocalizedName(ItemNames.stickBronze);
         }
     }
 
@@ -41,7 +41,7 @@ public class FTSticks
         public ItemStickCoal()
         {
             super();
-            setUnlocalizedName(Names.Items.stickCoal);
+            setUnlocalizedName(ItemNames.stickCoal);
         }
     }
 
@@ -49,7 +49,7 @@ public class FTSticks
         public ItemStickGlowstone()
         {
             super();
-            setUnlocalizedName(Names.Items.stickGlowstone);
+            setUnlocalizedName(ItemNames.stickGlowstone);
         }
     }
 
@@ -57,7 +57,7 @@ public class FTSticks
         public ItemStickAdamantium()
         {
             super();
-            setUnlocalizedName(Names.Items.stickAdamantium);
+            setUnlocalizedName(ItemNames.stickAdamantium);
         }
     }
 
@@ -65,7 +65,7 @@ public class FTSticks
         public ItemStickSilk()
         {
             super();
-            setUnlocalizedName(Names.Items.stickSilk);
+            setUnlocalizedName(ItemNames.stickSilk);
         }
     }
 
@@ -73,7 +73,7 @@ public class FTSticks
         public ItemStickRedstone()
         {
             super();
-            setUnlocalizedName(Names.Items.stickRedstone);
+            setUnlocalizedName(ItemNames.stickRedstone);
         }
     }
 }

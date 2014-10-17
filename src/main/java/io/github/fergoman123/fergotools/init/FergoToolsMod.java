@@ -10,15 +10,14 @@ import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.handler.RegHandler;
 import io.github.fergoman123.fergotools.helper.LogHelper;
 import io.github.fergoman123.fergotools.reference.MetadataFT;
-import io.github.fergoman123.fergotools.reference.Strings;
+import io.github.fergoman123.fergotools.reference.strings.Messages;
 import io.github.fergoman123.fergotools.util.item.Materials;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class FergoToolsMod
 {
     public static void preInit(FMLPreInitializationEvent evt)
     {
-        LogHelper.info(Strings.Messages.preInitMessage);
+        LogHelper.info(Messages.preInitMessage);
         MetadataFT.writeMetadata(evt.getModMetadata());
         ConfigHandler.init(evt.getSuggestedConfigurationFile());
         FergoTools.proxy.registerEventHandlers();
@@ -31,7 +30,7 @@ public class FergoToolsMod
 
     public static void load(FMLInitializationEvent evt)
     {
-        LogHelper.info(Strings.Messages.initMessage);
+        LogHelper.info(Messages.initMessage);
         ModTiles.init();
         RegHandler.init();
         RegHandler.registerOres();
@@ -40,6 +39,6 @@ public class FergoToolsMod
 
     public static void modsLoaded(FMLPostInitializationEvent evt)
     {
-        LogHelper.info(Strings.Messages.postInitMessage);
+        LogHelper.info(Messages.postInitMessage);
     }
 }

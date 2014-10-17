@@ -20,6 +20,7 @@ public abstract class BlockWorkbenchFT extends Block
     public BlockWorkbenchFT()
     {
         super(Material.wood);
+        this.setHardness(2.5f);
         this.setCreativeTab(Tabs.tabFergoCT);
     }
 
