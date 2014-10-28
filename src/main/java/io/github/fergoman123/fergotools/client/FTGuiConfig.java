@@ -22,14 +22,6 @@ public class FTGuiConfig extends GuiConfig
 {
     public FTGuiConfig(GuiScreen screen)
     {
-        super
-                (
-                screen,
-                new ConfigElement(ConfigHandler.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
-                ModInfo.modid,
-                false,
-                false,
-                GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString())
-                );
+        super(screen, new ConfigElement(ConfigHandler.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), ModInfo.modid, false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString()));
     }
 }

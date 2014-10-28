@@ -9,8 +9,9 @@ import java.util.List;
 
 public abstract class ItemBlockFT extends ItemBlock
 {
-
     public ItemBlockFT(Block block) {
         super(block);
     }
+
+    public abstract void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b);
 }

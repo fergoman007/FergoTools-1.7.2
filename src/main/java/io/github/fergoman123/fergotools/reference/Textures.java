@@ -220,6 +220,8 @@ public class Textures
     public static final String logSilk = Reference.textureLoc + woodLoc + BlockNames.logSilk;
     public static final String logRedstone = Reference.textureLoc + woodLoc + BlockNames.logRedstone;
 
+    public static final String[] logSides = {logObsidian, logEmerald, logLapis, logBronze, logCoal, logGlowstone, logAdamantium, logSilk, logRedstone};
+
     public static final String logObsidianTop = Reference.textureLoc + woodLoc + BlockNames.logObsidian + ctTop;
     public static final String logEmeraldTop = Reference.textureLoc + woodLoc + BlockNames.logEmerald + ctTop;
     public static final String logLapisTop = Reference.textureLoc + woodLoc + BlockNames.logLapis + ctTop;
@@ -229,6 +231,7 @@ public class Textures
     public static final String logAdamantiumTop = Reference.textureLoc + woodLoc + BlockNames.logAdamantium + ctTop;
     public static final String logSilkTop = Reference.textureLoc + woodLoc + BlockNames.logSilk + ctTop;
     public static final String logRedstoneTop = Reference.textureLoc + woodLoc + BlockNames.logRedstone + ctTop;
+    public static final String[] logTops = {logObsidianTop, logEmeraldTop, logLapisTop, logBronzeTop, logCoalTop, logGlowstoneTop, logAdamantiumTop, logSilkTop, logRedstoneTop};
 
     public static final String plankObsidian = Reference.textureLoc + woodLoc + BlockNames.plankObsidian;
     public static final String plankEmerald = Reference.textureLoc + woodLoc + BlockNames.plankEmerald;
@@ -239,6 +242,32 @@ public class Textures
     public static final String plankAdamantium = Reference.textureLoc + woodLoc + BlockNames.plankAdamantium;
     public static final String plankSilk = Reference.textureLoc + woodLoc + BlockNames.plankSilk;
     public static final String plankRedstone = Reference.textureLoc + woodLoc + BlockNames.plankRedstone;
+
+    public static final String[] planks = {plankObsidian, plankEmerald, plankLapis, plankBronze, plankCoal, plankGlowstone, plankAdamantium, plankSilk, plankRedstone};
+
+    public static final String leavesObsidianNormal = "FergoTools:leaves/normal/leavesObsidian";
+    public static final String leavesEmeraldNormal = "FergoTools:leaves/normal/leavesEmerald";
+    public static final String leavesLapisNormal = "FergoTools:leaves/normal/leavesLapis";
+    public static final String leavesBronzeNormal = "FergoTools:leaves/normal/leavesBronze";
+    public static final String leavesCoalNormal = "FergoTools:leaves/normal/leavesCoal";
+    public static final String leavesGlowstoneNormal = "FergoTools:leaves/normal/leavesGlowstone";
+    public static final String leavesAdamantiumNormal = "FergoTools:leaves/normal/leavesAdamantium";
+    public static final String leavesSilkNormal = "FergoTools:leaves/normal/leavesSilk";
+    public static final String leavesRedstoneNormal = "FergoTools:leaves/normal/leavesRedstone";
+
+    public static final String[] leavesNormal = {leavesObsidianNormal, leavesEmeraldNormal, leavesLapisNormal, leavesBronzeNormal, leavesCoalNormal, leavesGlowstoneNormal, leavesAdamantiumNormal, leavesSilkNormal, leavesRedstoneNormal};
+
+    public static final String leavesObsidianOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesEmeraldOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesLapisOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesBronzeOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesCoalOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesGlowstoneOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesAdamantiumOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesSilkOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+    public static final String leavesRedstoneOpaque = "FergoTools:leaves/opaque/leavesObsidianOpaque";
+
+    public static final String[] leavesOpaque = {leavesObsidianOpaque, leavesEmeraldOpaque, leavesLapisOpaque, leavesBronzeOpaque, leavesCoalOpaque, leavesGlowstoneOpaque, leavesAdamantiumOpaque, leavesSilkOpaque, leavesRedstoneOpaque};
 
 
 

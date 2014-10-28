@@ -37,9 +37,6 @@ public class Locale
     public static final String containerSilkWorkbench = containerPrefix + "silkWorkbench";
     public static final String containerRedstoneWorkbench = containerPrefix + "redstoneWorkbench";
 
-
-    public static final String holdShiftMessage = toolTipPrefix + "holdShift";
-
     public static final String containerInventory = NameHelper.getContainer() + NameHelper.getInventory();
 
     public static final String quartzFurnaceSpeed = "furnace.speed.quartz";

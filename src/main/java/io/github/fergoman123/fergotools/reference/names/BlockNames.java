@@ -65,6 +65,7 @@ public class BlockNames
     public static final String[] furnaceIdle = {quartzFurnaceIdle, obsidianFurnaceIdle, emeraldFurnaceIdle, lapisFurnaceIdle, bronzeFurnaceIdle, coalFurnaceIdle, glowstoneFurnaceIdle, adamantiumFurnaceIdle, silkFurnaceIdle, redstoneFurnaceIdle, maceratorIdle};
     public static final String[] furnaceActive = {quartzFurnaceActive, obsidianFurnaceActive, emeraldFurnaceActive, lapisFurnaceActive, bronzeFurnaceActive, coalFurnaceActive, glowstoneFurnaceActive, adamantiumFurnaceActive, silkFurnaceActive, redstoneFurnaceActive, maceratorActive};
 
+    public static final String logFergo = "logFergo";
     public static final String logObsidian = "logObsidian";
     public static final String logEmerald = "logEmerald";
     public static final String logLapis = "logLapis";
@@ -77,6 +78,7 @@ public class BlockNames
 
     public static final String[] logs = {logObsidian, logEmerald, logLapis, logBronze, logCoal, logGlowstone, logAdamantium, logSilk, logRedstone};
 
+    public static final String plankFergo = "plankFergo";
     public static final String plankObsidian = "plankObsidian";
     public static final String plankEmerald = "plankEmerald";
     public static final String plankLapis = "plankLapis";
@@ -100,4 +102,30 @@ public class BlockNames
     public static final String redstoneWorkbench = "redstoneWorkbench";
 
     public static final String[] workbenches = {obsidianWorkbench, emeraldWorkbench, lapisWorkbench, bronzeWorkbench, coalWorkbench, glowstoneWorkbench, adamantiumWorkbench, silkWorkbench, redstoneWorkbench};
+
+    public static final String leavesFergo = "leavesFergo";
+    public static final String obsidianLeaves = "obsidianLeaves";
+    public static final String emeraldLeaves = "emeraldLeaves";
+    public static final String lapisLeaves = "lapisLeaves";
+    public static final String bronzeLeaves = "bronzeLeaves";
+    public static final String coalLeaves = "coalLeaves";
+    public static final String glowstoneLeaves = "glowstoneLeaves";
+    public static final String adamantiumLeaves = "adamantiumLeaves";
+    public static final String silkLeaves = "silkLeaves";
+    public static final String redstoneLeaves = "redstoneLeaves";
+
+    public static final String[] leaves = {obsidianLeaves, emeraldLeaves, lapisLeaves, bronzeLeaves, coalLeaves, glowstoneLeaves, adamantiumLeaves, silkLeaves, redstoneLeaves};
+
+    public static final String saplingFergo = "saplingFergo";
+    public static final String saplingObsidian = "saplingObsidian";
+    public static final String saplingEmerald = "saplingEmerald";
+    public static final String saplingLapis = "saplingLapis";
+    public static final String saplingBronze = "saplingBronze";
+    public static final String saplingCoal = "saplingCoal";
+    public static final String saplingGlowstone = "saplingGlowstone";
+    public static final String saplingAdamantium = "saplingAdamantium";
+    public static final String saplingSilk = "saplingSilk";
+    public static final String saplingRedstone = "saplingRedstone";
+
+    public static final String[] saplings = {saplingObsidian, saplingEmerald, saplingLapis, saplingBronze, saplingCoal, saplingGlowstone, saplingAdamantium, saplingSilk, saplingRedstone};
 }

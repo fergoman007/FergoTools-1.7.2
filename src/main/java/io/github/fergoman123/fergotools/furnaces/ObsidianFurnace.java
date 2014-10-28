@@ -3,17 +3,19 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.Reference;
+import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
-import io.github.fergoman123.fergoutil.helper.GuiHelper;
-import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.*;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.util.base.ContainerFT;
 import io.github.fergoman123.fergotools.util.base.GuiFT;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
+import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -40,6 +42,8 @@ public class ObsidianFurnace
 {
     public static final class BlockObsidianFurnace extends BlockFurnaceFT
     {
+        public static final BlockObsidianFurnace instanceIdle = new BlockObsidianFurnace(false);
+        public static final BlockObsidianFurnace instanceActive = new BlockObsidianFurnace(true);
 
         private static boolean keepInventory;
 
@@ -51,7 +55,7 @@ public class ObsidianFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.obsidianFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -133,11 +137,11 @@ public class ObsidianFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.obsidianFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.obsidianFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -279,7 +283,7 @@ public class ObsidianFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.obsidianFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 

@@ -1,194 +1,58 @@
 package io.github.fergoman123.fergotools.block;
 
-import com.sun.prism.Texture;
+import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.base.BlockLogFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
+import java.util.List;
 import java.util.Random;
 
-public class FTLogs
+public final class FTLogs extends BlockLogFT
 {
-    public static final class BlockLogObsidian extends BlockLogFT
-    {
-        public BlockLogObsidian()
+    public static final FTLogs instance = new FTLogs();
+
+        public static final String[] subTypes = new String[]{"Obsidian", "Emerald", "Lapis", "Bronze", "Coal", "Glowstone", "Adamantium", "Silk", "Redstone"};
+
+        public FTLogs()
         {
             super();
-            this.setBlockName(BlockNames.logObsidian);
+            this.setBlockName(BlockNames.logFergo);
+            this.setCreativeTab(Tabs.tabFergoWood);
         }
 
-        @Override
-        public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Textures.logObsidian);
-            this.topIcon = register.registerIcon(Textures.logObsidianTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
-        }
-    }
-
-    public static final class BlockLogEmerald extends BlockLogFT
-    {
-        public BlockLogEmerald()
+        public void getSubBlocks(Item item, CreativeTabs tab, List list)
         {
-            super();
-            this.setBlockName(BlockNames.logEmerald);
-        }
-
-        @Override
-        public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Textures.logEmerald);
-            this.topIcon = register.registerIcon(Textures.logEmeraldTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
-        }
-    }
-
-    public static final class BlockLogLapis extends BlockLogFT
-    {
-        public BlockLogLapis()
-        {
-            super();
-            this.setBlockName(BlockNames.logLapis);
-        }
-
-        @Override
-        public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Textures.logLapis);
-            this.topIcon = register.registerIcon(Textures.logLapisTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
-        }
-    }
-
-    public static final class BlockLogBronze extends BlockLogFT
-    {
-        public BlockLogBronze()
-        {
-            super();
-            this.setBlockName(BlockNames.logBronze);
-        }
-
-        @Override
-        public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Textures.logBronze);
-            this.topIcon = register.registerIcon(Textures.logBronzeTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
-        }
-    }
-
-    public static final class BlockLogCoal extends BlockLogFT
-    {
-        public BlockLogCoal()
-        {
-            super();
-            this.setBlockName(BlockNames.logCoal);
+            for (int i = 0; i < BlockNames.logs.length; i++) {
+                list.add(new ItemStack(item, 1, i));
+            }
         }
 
         public void registerBlockIcons(IIconRegister register)
         {
-            this.sideIcon = register.registerIcon(Textures.logCoal);
-            this.topIcon = register.registerIcon(Textures.logCoalTop);
+            this.topIcon = new IIcon[subTypes.length];
+            this.sideIcon = new IIcon[subTypes.length];
+
+            for (int i = 0; i < sideIcon.length; ++i)
+            {
+                this.sideIcon[i] = register.registerIcon(Reference.textureLoc + Textures.woodLoc + "log" + subTypes[i]);
+                this.topIcon[i] = register.registerIcon(Reference.textureLoc + Textures.woodLoc + "log" + subTypes[i] + "Top");
+            }
         }
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
             return Item.getItemFromBlock(this);
         }
-    }
 
-    public static final class BlockLogGlowstone extends BlockLogFT
-    {
-        public BlockLogGlowstone()
+        public int damageDropped(int damage)
         {
-            super();
-            this.setBlockName(BlockNames.logGlowstone);
-        }
-
-        @Override
-        public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Textures.logGlowstone);
-            this.topIcon = register.registerIcon(Textures.logGlowstoneTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
+            return damage;
         }
     }
-
-    public static final class BlockLogAdamantium extends BlockLogFT
-    {
-        public BlockLogAdamantium()
-        {
-            super();
-            this.setBlockName(BlockNames.logAdamantium);
-        }
-
-        @Override
-        public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Textures.logAdamantium);
-            this.topIcon = register.registerIcon(Textures.logAdamantiumTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
-        }
-    }
-
-    public static final class BlockLogSilk extends BlockLogFT
-    {
-        public BlockLogSilk()
-        {
-            super();
-            this.setBlockName(BlockNames.logSilk);
-        }
-
-        public void registerBlockIcons(IIconRegister register)
-        {
-            this.sideIcon = register.registerIcon(Textures.logSilk);
-            this.topIcon = register.registerIcon(Textures.logSilkTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
-        }
-    }
-
-    public static final class BlockLogRedstone extends BlockLogFT
-    {
-        public BlockLogRedstone()
-        {
-            super();
-            this.setBlockName(BlockNames.logRedstone);
-        }
-
-        @Override
-        public void registerBlockIcons(IIconRegister register) {
-            this.sideIcon = register.registerIcon(Textures.logRedstone);
-            this.topIcon = register.registerIcon(Textures.logRedstoneTop);
-        }
-
-        @Override
-        public Item getItemDropped(int metadata, Random random, int fortune) {
-            return Item.getItemFromBlock(this);
-        }
-    }
-}

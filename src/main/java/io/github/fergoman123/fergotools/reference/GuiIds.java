@@ -21,5 +21,6 @@ public enum GuiIds
     glowstoneWorkBench,
     adamantiumWorkbench,
     silkWorkbench,
-    redstoneWorkbench
+    redstoneWorkbench,
+    bag
 }

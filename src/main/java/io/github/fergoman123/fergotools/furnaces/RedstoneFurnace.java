@@ -42,8 +42,11 @@ import java.util.Random;
 
 public class RedstoneFurnace
 {
+
     public static class BlockRedstoneFurnace extends BlockFurnaceFT
     {
+        public static final BlockRedstoneFurnace instanceIdle = new BlockRedstoneFurnace(false);
+        public static final BlockRedstoneFurnace instanceActive = new BlockRedstoneFurnace(true);
 
         private static boolean keepInventory;
 
@@ -55,7 +58,7 @@ public class RedstoneFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return BlockHelper.getItemFromBlock(ModBlocks.redstoneFurnaceIdle);
+            return BlockHelper.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -137,11 +140,11 @@ public class RedstoneFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.redstoneFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.redstoneFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -283,7 +286,7 @@ public class RedstoneFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return BlockHelper.getItemFromBlock(ModBlocks.redstoneFurnaceIdle);
+            return BlockHelper.getItemFromBlock(instanceIdle);
         }
     }
 

@@ -9,13 +9,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public abstract class BlockWorkbenchFT extends Block
 {
     @SideOnly(Side.CLIENT)
-    public IIcon topIcon, frontIcon;
+    public IIcon topIcon, frontIcon, bottomIcon;
 
     public BlockWorkbenchFT()
     {
@@ -34,4 +37,6 @@ public abstract class BlockWorkbenchFT extends Block
     public abstract void registerBlockIcons(IIconRegister register);
 
     public abstract boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ);
+
+    public abstract Item getItemDropped(int metadata, Random rand, int fortune);
 }

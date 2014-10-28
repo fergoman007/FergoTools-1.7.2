@@ -43,6 +43,8 @@ public class GlowstoneFurnace
 {
     public static class BlockGlowstoneFurnace extends BlockFurnaceFT
     {
+        public static final BlockGlowstoneFurnace instanceIdle = new BlockGlowstoneFurnace(false);
+        public static final BlockGlowstoneFurnace instanceActive = new BlockGlowstoneFurnace(true);
 
         private static boolean keepInventory;
 
@@ -54,7 +56,7 @@ public class GlowstoneFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.glowstoneFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -136,11 +138,11 @@ public class GlowstoneFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.glowstoneFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.glowstoneFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -282,7 +284,7 @@ public class GlowstoneFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.glowstoneFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 

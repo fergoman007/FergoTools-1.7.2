@@ -9,6 +9,7 @@
 
 package io.github.fergoman123.fergotools.util.tool;
 
+ import io.github.fergoman123.fergotools.util.item.Materials;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import net.minecraft.client.renderer.texture.IIconRegister;
@@ -20,6 +21,8 @@ package io.github.fergoman123.fergotools.util.tool;
  import java.util.List;
 
  public abstract class ItemShovelFT extends ItemSpade{
+
+     public Materials.Tools materials = new Materials.Tools();
 
     public ItemShovelFT(Item.ToolMaterial material, int maxUses) {
         super(material);

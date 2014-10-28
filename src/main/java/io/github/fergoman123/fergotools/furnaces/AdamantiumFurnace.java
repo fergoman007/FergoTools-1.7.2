@@ -42,6 +42,8 @@ public class AdamantiumFurnace
 {
     public static final class BlockAdamantiumFurnace extends BlockFurnaceFT
     {
+        public static final BlockAdamantiumFurnace instanceIdle = new BlockAdamantiumFurnace(false);
+        public static final BlockAdamantiumFurnace instanceActive = new BlockAdamantiumFurnace(true);
 
         private static boolean keepInventory;
 
@@ -54,7 +56,7 @@ public class AdamantiumFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.adamantiumFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -136,11 +138,11 @@ public class AdamantiumFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.adamantiumFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.adamantiumFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -282,7 +284,7 @@ public class AdamantiumFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.adamantiumFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 

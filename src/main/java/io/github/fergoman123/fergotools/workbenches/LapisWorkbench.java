@@ -16,16 +16,20 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
+import java.util.Random;
+
 public class LapisWorkbench
 {
     public static final class BlockLapisWorkbench extends BlockWorkbenchFT
     {
+        public static final BlockLapisWorkbench instance = new BlockLapisWorkbench();
         public BlockLapisWorkbench()
         {
             super();
@@ -34,7 +38,7 @@ public class LapisWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankLapis.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         public void registerBlockIcons(IIconRegister register)
@@ -42,6 +46,7 @@ public class LapisWorkbench
             this.blockIcon = register.registerIcon(Textures.lapisWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.lapisWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.lapisWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankLapis);
         }
 
         @Override
@@ -59,6 +64,11 @@ public class LapisWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

@@ -14,6 +14,7 @@ package io.github.fergoman123.fergotools.handler;
  import io.github.fergoman123.fergotools.init.ModBlocks;
  import net.minecraft.world.World;
  import net.minecraft.world.chunk.IChunkProvider;
+ import io.github.fergoman123.fergotools.init.FergoBlocks.*;
 
  import java.util.Random;
 
@@ -38,13 +39,13 @@ public class WorldGenerationHandler implements IWorldGenerator
 		    int yCoord = random.nextInt(256);
 		    int zCoord = z + random.nextInt(16);
 
-            GenerationHelper.addEndOreSpawn(ModBlocks.oreObsidian, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(ModBlocks.oreEmeraldCrystal, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(ModBlocks.oreLapisCrystal, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
-            GenerationHelper.addEndOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(ModBlocks.oreCrystalRed, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(BlockOreObsidian.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(BlockOreEmeraldCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(BlockOreLapisCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(BlockOreBronze.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(BlockOreAdamantium.instance, world, random, x, z, 16, 16, 1, 1, 11, 62);
+            GenerationHelper.addEndOreSpawn(BlockOreExperience.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(BlockOreRedCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -56,13 +57,13 @@ public class WorldGenerationHandler implements IWorldGenerator
 		    int yCoord = random.nextInt(256);
 		    int zCoord = z + random.nextInt(16);
 
-            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreObsidian, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreEmeraldCrystal, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreLapisCrystal, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 10, 64);
-            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreCrystalRed, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(BlockOreObsidian.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(BlockOreEmeraldCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(BlockOreLapisCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(BlockOreBronze.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(BlockOreAdamantium.instance, world, random, x, z, 16, 16, 1, 1, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(BlockOreExperience.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(BlockOreRedCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -74,13 +75,13 @@ public class WorldGenerationHandler implements IWorldGenerator
 		    int yCoord = random.nextInt(256);
 		    int zCoord = z + random.nextInt(16);
 
-            GenerationHelper.addNetherOreSpawn(ModBlocks.oreObsidian, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addNetherOreSpawn(ModBlocks.oreEmeraldCrystal, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addNetherOreSpawn(ModBlocks.oreLapisCrystal, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addNetherOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addNetherOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 10, 64);
-            GenerationHelper.addNetherOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 10, 64);
-            GenerationHelper.addNetherOreSpawn(ModBlocks.oreCrystalRed, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(BlockOreObsidian.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(BlockOreEmeraldCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(BlockOreLapisCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(BlockOreBronze.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(BlockOreAdamantium.instance, world, random, x, z, 16, 16, 1, 1, 11, 62);
+            GenerationHelper.addNetherOreSpawn(BlockOreExperience.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(BlockOreRedCrystal.instance, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 

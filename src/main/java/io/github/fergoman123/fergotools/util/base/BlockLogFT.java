@@ -12,8 +12,8 @@ import java.util.Random;
 
 public abstract class BlockLogFT extends BlockLog
 {
-    public IIcon topIcon;
-    public IIcon sideIcon;
+    public IIcon[] topIcon;
+    public IIcon[] sideIcon;
 
     public BlockLogFT()
     {
@@ -21,13 +21,12 @@ public abstract class BlockLogFT extends BlockLog
         this.setCreativeTab(Tabs.tabFergoWood);
     }
 
-    public IIcon getSideIcon(int par1) {
-        return this.sideIcon;
+    public IIcon getSideIcon(int meta) {
+        return this.sideIcon[meta];
     }
 
-    @Override
-    protected IIcon getTopIcon(int p_150161_1_) {
-        return this.topIcon;
+    public IIcon getTopIcon(int meta) {
+        return this.topIcon[meta];
     }
 
     public String getUnlocalizedName()

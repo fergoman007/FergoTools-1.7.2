@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
+import io.github.fergoman123.fergotools.reference.strings.Tile;
 import io.github.fergoman123.fergoutil.helper.BlockHelper;
 import io.github.fergoman123.fergoutil.helper.GLHelper;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
@@ -42,6 +43,8 @@ public class Macerator
 {
     public static final class BlockMacerator extends BlockFurnaceFT
     {
+        public static final BlockMacerator instanceIdle = new BlockMacerator(false);
+        public static final BlockMacerator instanceActive = new BlockMacerator(true);
 
         private static boolean keepInventory;
 
@@ -53,7 +56,7 @@ public class Macerator
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return BlockHelper.getItemFromBlock(ModBlocks.maceratorIdle);
+            return BlockHelper.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -135,11 +138,11 @@ public class Macerator
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.maceratorActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.maceratorIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -281,7 +284,7 @@ public class Macerator
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return BlockHelper.getItemFromBlock(ModBlocks.maceratorIdle);
+            return BlockHelper.getItemFromBlock(instanceIdle);
         }
     }
 
@@ -584,13 +587,13 @@ public class Macerator
         @Override
         public void readFromNBT(NBTTagCompound compound) {
             super.readFromNBT(compound);
-            NBTTagList list = compound.getTagList("Items", 10);
+            NBTTagList list = compound.getTagList(Tile.items, 10);
             this.slots = new ItemStack[this.getSizeInventory()];
 
             for (int i = 0; i < list.tagCount(); ++i)
             {
                 NBTTagCompound compound1 = list.getCompoundTagAt(i);
-                byte b0 = compound1.getByte("Slot");
+                byte b0 = compound1.getByte(Tile.slot);
 
                 if (b0 >= 0 && b0 < this.slots.length)
                 {
@@ -598,21 +601,21 @@ public class Macerator
                 }
             }
 
-            this.burnTime = compound.getShort("BurnTime");
-            this.cookTime = compound.getShort("CookTime");
+            this.burnTime = compound.getShort(Tile.burnTime);
+            this.cookTime = compound.getShort(Tile.cookTime);
             this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 
-            if (compound.hasKey("CustomName", 8))
+            if (compound.hasKey(Tile.customName, 8))
             {
-                this.localizedName = compound.getString("CustomName");
+                this.localizedName = compound.getString(Tile.customName);
             }
         }
 
         @Override
         public void writeToNBT(NBTTagCompound compound) {
             super.writeToNBT(compound);
-            compound.setShort("BurnTime", (short)this.burnTime);
-            compound.setShort("CookTime", (short)this.cookTime);
+            compound.setShort(Tile.burnTime, (short)this.burnTime);
+            compound.setShort(Tile.cookTime, (short)this.cookTime);
             NBTTagList list = new NBTTagList();
 
             for (int i = 0; i < this.slots.length; ++i)
@@ -620,17 +623,17 @@ public class Macerator
                 if (this.slots[i] != null)
                 {
                     NBTTagCompound compound1 = new NBTTagCompound();
-                    compound1.setByte("Slot", (byte)i);
+                    compound1.setByte(Tile.slot, (byte)i);
                     this.slots[i].writeToNBT(compound1);
                     list.appendTag(compound1);
                 }
             }
 
-            compound.setTag("Items", list);
+            compound.setTag(Tile.items, list);
 
             if (this.hasCustomInventoryName())
             {
-                compound.setString("CustomName", this.localizedName);
+                compound.setString(Tile.customName, this.localizedName);
             }
         }
 
@@ -794,34 +797,8 @@ public class Macerator
             {
                 Item item = stack.getItem();
 
-                if (item instanceof ItemBlock && Block.getBlockFromItem(item) != null)
-                {
-                    Block block = Block.getBlockFromItem(item);
-
-                    if (block == Blocks.wooden_slab)
-                    {
-                        return 150;
-                    }
-
-                    if (block.getMaterial() == Material.wood)
-                    {
-                        return 300;
-                    }
-
-                    if (block == Blocks.coal_block)
-                    {
-                        return 16000;
-                    }
-                }
-
-                if (item instanceof ItemTool && ((ItemTool)item).getToolMaterialName().equals("WOOD"))return 200;
-                if (item instanceof ItemSword && ((ItemSword)item).getToolMaterialName().equals("WOOD"))return 200;
-                if (item instanceof ItemHoe && ((ItemHoe)item).getToolMaterialName().equals("WOOD"))return 200;
-                if (item == Items.stick)return 100;
-                if (item == Items.coal)return 1600;
-                if (item == Items.lava_bucket)return 20000;
-                if (item == Item.getItemFromBlock(Blocks.sapling))return 100;
-                if (item == Items.blaze_rod)return 2400;
+                if (item == Items.redstone)return 150;
+                if (item == Item.getItemFromBlock(Blocks.redstone_block))return 1350;
                 return GameRegistry.getFuelValue(stack);
             }
         }

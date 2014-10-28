@@ -6,11 +6,13 @@ import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.util.base.ItemBlockFT;
 import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.GuiWorkbenchFT;
 import io.github.fergoman123.fergoutil.helper.GLHelper;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,15 +20,21 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 public class SilkWorkbench
 {
     public static final class BlockSilkWorkbench extends BlockWorkbenchFT
     {
+        public static final BlockSilkWorkbench instance = new BlockSilkWorkbench();
+
         public BlockSilkWorkbench()
         {
             super();
@@ -35,7 +43,7 @@ public class SilkWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankGlowstone.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         @Override
@@ -43,6 +51,7 @@ public class SilkWorkbench
             this.blockIcon = register.registerIcon(Textures.silkWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.silkWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.silkWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankSilk);
         }
 
         @Override
@@ -60,6 +69,11 @@ public class SilkWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

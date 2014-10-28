@@ -10,31 +10,38 @@
 package io.github.fergoman123.fergotools.creativetab;
 
 
- import io.github.fergoman123.fergotools.init.ModBlocks;
- import io.github.fergoman123.fergotools.init.ModItems;
+ import io.github.fergoman123.fergotools.block.FTLogs;
+ import io.github.fergoman123.fergotools.init.FergoBlocks.BlockFergoGlass;
+ import io.github.fergoman123.fergotools.init.FergoItems.ItemQuartzPickaxe;
+ import io.github.fergoman123.fergotools.init.FergoItems.ItemExpCollector;
+ import io.github.fergoman123.fergotools.init.FergoItems.ItemArmorQuartz;
+ import io.github.fergoman123.fergotools.init.FergoItems.ItemQuartzBow;
+ import io.github.fergoman123.fergotools.init.FergoItems.ItemQuartzShears;
+ import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
  import io.github.fergoman123.fergotools.reference.strings.Tab;
+ import io.github.fergoman123.fergoutil.creativetab.FergoCreativeTab;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
- import net.minecraft.creativetab.CreativeTabs;
  import net.minecraft.init.Blocks;
  import net.minecraft.item.Item;
+ import net.minecraft.item.ItemStack;
 
  public class Tabs {
-    public static CreativeTabs tabFergoTools;
-    public static CreativeTabs tabFergoBlocks;
-    public static CreativeTabs tabFergoFurnaces;
-    public static CreativeTabs tabFergoItems;
-    public static CreativeTabs tabFergoArmor;
-    public static CreativeTabs tabFergoBows;
-    public static CreativeTabs tabFergoShears;
-    public static CreativeTabs tabFergoWood;
-    public static CreativeTabs tabFergoCT;
+    public static FergoCreativeTab tabFergoTools;
+    public static FergoCreativeTab tabFergoBlocks;
+    public static FergoCreativeTab tabFergoFurnaces;
+    public static FergoCreativeTab tabFergoItems;
+    public static FergoCreativeTab tabFergoArmor;
+    public static FergoCreativeTab tabFergoBows;
+    public static FergoCreativeTab tabFergoShears;
+    public static FergoCreativeTab tabFergoWood;
+    public static FergoCreativeTab tabFergoCT;
 
     public static void init(){
-        tabFergoTools = new CreativeTabs(Tab.tabFergoTools)
+        tabFergoTools = new FergoCreativeTab(Tab.tabFergoTools)
         {
             public Item getTabIconItem()
             {
-                return ModItems.quartzPickaxe;
+                return ItemQuartzPickaxe.instance;
             }
 
             @Override
@@ -44,11 +51,11 @@ package io.github.fergoman123.fergotools.creativetab;
             }
         };
 
-        tabFergoBlocks = new CreativeTabs(Tab.tabFergoBlocks)
+        tabFergoBlocks = new FergoCreativeTab(Tab.tabFergoBlocks)
         {
             public Item getTabIconItem()
             {
-                return Item.getItemFromBlock(ModBlocks.blockFergoGlass);
+                return Item.getItemFromBlock(BlockFergoGlass.instance);
             }
 
             @Override
@@ -58,11 +65,11 @@ package io.github.fergoman123.fergotools.creativetab;
             }
         };
 
-        tabFergoFurnaces = new CreativeTabs(Tab.tabFergoFurnaces)
+        tabFergoFurnaces = new FergoCreativeTab(Tab.tabFergoFurnaces)
         {
             public Item getTabIconItem()
             {
-                return Item.getItemFromBlock(ModBlocks.quartzFurnaceActive);
+                return Item.getItemFromBlock(BlockQuartzFurnace.instanceActive);
             }
 
             @Override
@@ -72,11 +79,11 @@ package io.github.fergoman123.fergotools.creativetab;
             }
         };
 
-        tabFergoItems = new CreativeTabs(Tab.tabFergoItems)
+        tabFergoItems = new FergoCreativeTab(Tab.tabFergoItems)
         {
             public Item getTabIconItem()
             {
-                return ModItems.expCollector;
+                return ItemExpCollector.instance;
             }
 
             @Override
@@ -86,11 +93,11 @@ package io.github.fergoman123.fergotools.creativetab;
             }
         };
 
-        tabFergoArmor = new CreativeTabs(Tab.tabFergoArmor)
+        tabFergoArmor = new FergoCreativeTab(Tab.tabFergoArmor)
         {
             public Item getTabIconItem()
             {
-                return ModItems.quartzChestplate;
+                return ItemArmorQuartz.instanceChest;
             }
 
             @Override
@@ -100,11 +107,11 @@ package io.github.fergoman123.fergotools.creativetab;
             }
         };
 
-        tabFergoBows = new CreativeTabs(Tab.tabFergoBows)
+        tabFergoBows = new FergoCreativeTab(Tab.tabFergoBows)
         {
             public Item getTabIconItem()
             {
-                return ModItems.bowQuartz;
+                return ItemQuartzBow.instance;
             }
 
             @Override
@@ -114,10 +121,10 @@ package io.github.fergoman123.fergotools.creativetab;
             }
         };
 
-        tabFergoShears = new CreativeTabs(Tab.tabFergoShears) {
+        tabFergoShears = new FergoCreativeTab(Tab.tabFergoShears) {
             @Override
             public Item getTabIconItem() {
-                return ModItems.quartzShears;
+                return ItemQuartzShears.instance;
             }
 
             @Override
@@ -128,12 +135,17 @@ package io.github.fergoman123.fergotools.creativetab;
 
         };
 
-        tabFergoWood = new CreativeTabs(Tab.tabFergoWood)
+        tabFergoWood = new FergoCreativeTab(Tab.tabFergoWood)
         {
 
             @Override
             public Item getTabIconItem() {
-                return Item.getItemFromBlock(ModBlocks.logObsidian);
+                return Item.getItemFromBlock(FTLogs.instance);
+            }
+
+            @Override
+            public ItemStack getIconItemStack() {
+                return new ItemStack(FTLogs.instance, 1, 0);
             }
 
             @Override
@@ -142,7 +154,7 @@ package io.github.fergoman123.fergotools.creativetab;
             }
         };
 
-        tabFergoCT = new CreativeTabs(Tab.tabFergoCT)
+        tabFergoCT = new FergoCreativeTab(Tab.tabFergoCT)
         {
             @Override
             public Item getTabIconItem() {

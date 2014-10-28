@@ -138,25 +138,45 @@ tile.FergoTools:blockExperience.name=Experience Block
 
 tile.FergoTools:blockFergoGlass.name=Fergoman123's Glass
 
-tile.FergoTools:logObsidian.name=Obsidian Wood
-tile.FergoTools:logEmerald.name=Emerald Wood
-tile.Fergotools:logLapis.name=Lapis Wood
-tile.FergoTools:logBronze.name=Bronze Wood
-tile.FergoTools:logCoal.name=Coal Wood
-tile.FergoTools:logGlowstone.name=Glowstone Wood
-tile.FergoTools:logAdamantium.name=Adamantium Wood
-tile.FergoTools:logSilk.name=Silk Wood
-tile.FergoTools:logRedstone.name=Redstone Wood
+tile.FergoTools:logFergo.logObsidian.name=Obsidian Wood
+tile.FergoTools:logFergo.logEmerald.name=Emerald Wood
+tile.Fergotools:logFergo.logLapis.name=Lapis Wood
+tile.FergoTools:logFergo.logBronze.name=Bronze Wood
+tile.FergoTools:logFergo.logCoal.name=Coal Wood
+tile.FergoTools:logFergo.logGlowstone.name=Glowstone Wood
+tile.FergoTools:logFergo.logAdamantium.name=Adamantium Wood
+tile.FergoTools:logFergo.logSilk.name=Silk Wood
+tile.FergoTools:logFergo.logRedstone.name=Redstone Wood
 
-tile.FergoTools:plankSilk.name=Silk Wood Planks
-tile.FergoTools:plankCoal.name=Coal Wood Planks
-tile.FergoTools:plankBronze.name=Bronze Wood Planks
-tile.FergoTools:plankLapis.name=Lapis Wood Planks
-tile.FergoTools:plankAdamantium.name=Adamantium Wood Planks
-tile.FergoTools:plankObsidian.name=Obsidian Wood Planks
-tile.FergoTools:plankEmerald.name=Emerald Wood Planks
-tile.FergoTools:plankGlowstone.name=Glowstone Wood Planks
-tile.FergoTools:plankRedstone.name=Redstone Wood Planks
+tile.FergoTools:plankFergo.plankSilk.name=Silk Wood Planks
+tile.FergoTools:plankFergo.plankCoal.name=Coal Wood Planks
+tile.FergoTools:plankFergo.plankBronze.name=Bronze Wood Planks
+tile.FergoTools:plankFergo.plankLapis.name=Lapis Wood Planks
+tile.FergoTools:plankFergo.plankAdamantium.name=Adamantium Wood Planks
+tile.FergoTools:plankFergo.plankObsidian.name=Obsidian Wood Planks
+tile.FergoTools:plankFergo.plankEmerald.name=Emerald Wood Planks
+tile.FergoTools:plankFergo.plankGlowstone.name=Glowstone Wood Planks
+tile.FergoTools:plankFergo.plankRedstone.name=Redstone Wood Planks
+
+tile.FergoTools:leavesFergo.obsidianLeaves.name=Obsidian Leaves
+tile.FergoTools:leavesFergo.emeraldLeaves.name=Emerald Leaves
+tile.FergoTools:leavesFergo.lapisLeaves.name=Lapis Leaves
+tile.FergoTools:leavesFergo.bronzeLeaves.name=Bronze Leaves
+tile.FergoTools:leavesFergo.coalLeaves.name=Coal Leaves
+tile.FergoTools:leavesFergo.glowstoneLeaves.name=Glowstone Leaves
+tile.FergoTools:leavesFergo.adamantiumLeaves.name=Adamantium Leaves
+tile.FergoTools:leavesFergo.silkLeaves.name=Silk Leaves
+tile.FergoTools:leavesFergo.redstoneLeaves.name=Redstone Leaves
+
+tile.FergoTools:saplingFergo.saplingObsidian.name=Obsidian Sapling
+tile.FergoTools:saplingFergo.saplingEmerald.name=Emerald Sapling
+tile.FergoTools:saplingFergo.saplingLapis.name=Lapis Sapling
+tile.FergoTools:saplingFergo.saplingBronze.name=Bronze Sapling
+tile.FergoTools:saplingFergo.saplingCoal.name=Coal Sapling
+tile.FergoTools:saplingFergo.saplingGlowstone.name=Glowstone Sapling
+tile.FergoTools:saplingFergo.saplingAdamantium.name=Adamantium Sapling
+tile.FergoTools:saplingFergo.saplingSilk.name=Silk Sapling
+tile.FergoTools:saplingFergo.saplingRedstone.name=Redstone Sapling
 
 tile.FergoTools:obsidianWorkbench.name=Obsidian Workbench
 tile.FergoTools:emeraldWorkbench.name=Emerald Workbench

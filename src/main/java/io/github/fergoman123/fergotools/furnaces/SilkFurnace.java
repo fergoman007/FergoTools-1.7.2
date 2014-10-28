@@ -44,6 +44,8 @@ public class SilkFurnace
 {
     public static final class BlockSilkFurnace extends BlockFurnaceFT
     {
+        public static final BlockSilkFurnace instanceIdle = new BlockSilkFurnace(false);
+        public static final BlockSilkFurnace instanceActive = new BlockSilkFurnace(true);
 
         private static boolean keepInventory;
 
@@ -55,7 +57,7 @@ public class SilkFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.silkFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -137,11 +139,11 @@ public class SilkFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.silkFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.silkFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -283,7 +285,7 @@ public class SilkFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.silkFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 

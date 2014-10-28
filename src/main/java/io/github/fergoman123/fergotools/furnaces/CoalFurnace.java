@@ -43,6 +43,8 @@ public class CoalFurnace
 {
     public static final class BlockCoalFurnace extends BlockFurnaceFT
     {
+        public static final BlockCoalFurnace instanceIdle = new BlockCoalFurnace(false);
+        public static final BlockCoalFurnace instanceActive = new BlockCoalFurnace(true);
 
         private static boolean keepInventory;
 
@@ -54,7 +56,7 @@ public class CoalFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.coalFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -136,11 +138,11 @@ public class CoalFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.coalFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.coalFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -282,7 +284,7 @@ public class CoalFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.coalFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 

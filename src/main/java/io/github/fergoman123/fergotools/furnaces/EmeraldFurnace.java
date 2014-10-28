@@ -42,6 +42,9 @@ public class EmeraldFurnace
  {
      public static final class BlockEmeraldFurnace extends BlockFurnaceFT
      {
+         public static final BlockEmeraldFurnace instanceIdle = new BlockEmeraldFurnace(false);
+         public static final BlockEmeraldFurnace instanceActive = new BlockEmeraldFurnace(true);
+
          private static boolean keepInventory;
 
          public void registerBlockIcons(IIconRegister register)
@@ -59,7 +62,7 @@ public class EmeraldFurnace
 
          public Item getItemDropped(int par1, Random rand, int par3)
          {
-             return Item.getItemFromBlock(ModBlocks.emeraldFurnaceIdle);
+             return Item.getItemFromBlock(instanceIdle);
          }
 
          public void onBlockAdded(World world, int x, int y, int z)
@@ -136,11 +139,11 @@ public class EmeraldFurnace
 
              if (active)
              {
-                 world.setBlock(x, y, z, ModBlocks.emeraldFurnaceActive);
+                 world.setBlock(x, y, z, instanceActive);
              }
              else
              {
-                 world.setBlock(x, y, z, ModBlocks.emeraldFurnaceIdle);
+                 world.setBlock(x, y, z, instanceIdle);
              }
 
              keepInventory = false;
@@ -268,7 +271,7 @@ public class EmeraldFurnace
 
          public Item getItem(World world, int x, int y, int z)
          {
-             return Item.getItemFromBlock(ModBlocks.emeraldFurnaceIdle);
+             return Item.getItemFromBlock(instanceIdle);
          }
      }
 
@@ -644,8 +647,8 @@ public class EmeraldFurnace
          @Override
          public void drawGuiContainerForegroundLayer(int par1, int par2) {
              String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
-             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-             fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+             fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, Ints.Colors.renderColorEmerald);
+             fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, Ints.Colors.renderColorEmerald);
          }
 
          @Override

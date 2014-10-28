@@ -18,16 +18,21 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
+import java.util.Random;
+
 public class GlowstoneWorkbench
 {
     public static final class BlockGlowstoneWorkbench extends BlockWorkbenchFT
     {
+        public static final BlockGlowstoneWorkbench instance = new BlockGlowstoneWorkbench();
+
         public BlockGlowstoneWorkbench()
         {
             super();
@@ -36,7 +41,7 @@ public class GlowstoneWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankGlowstone.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         @Override
@@ -44,6 +49,7 @@ public class GlowstoneWorkbench
             this.blockIcon = register.registerIcon(Textures.glowstoneWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.glowstoneWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.glowstoneWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankGlowstone);
         }
 
         @Override
@@ -61,6 +67,11 @@ public class GlowstoneWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

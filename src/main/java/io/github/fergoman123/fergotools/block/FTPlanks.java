@@ -1,88 +1,41 @@
 package io.github.fergoman123.fergotools.block;
 
+import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.base.BlockWoodFT;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
-public class FTPlanks
+import java.util.List;
+
+public final class FTPlanks extends BlockWoodFT
 {
-    public static final class BlockPlankObsidian extends BlockWoodFT
+    public static final FTPlanks instance = new FTPlanks();
+
+    public FTPlanks()
     {
-        public BlockPlankObsidian()
+        super();
+        this.setBlockName(BlockNames.plankFergo);
+    }
+
+
+    @Override
+    public void registerBlockIcons(IIconRegister register) {
+        this.icons = new IIcon[BlockNames.planks.length];
+
+        for (int i = 0; i < BlockNames.planks.length; i++)
         {
-            super();
-            this.setBlockName(BlockNames.plankObsidian);
+            this.icons[i] = register.registerIcon(Textures.planks[i]);
         }
     }
 
-    public static final class BlockPlankEmerald extends BlockWoodFT
+    public void getSubBlocks(Item item, CreativeTabs tab, List list)
     {
-        public BlockPlankEmerald()
-        {
-            super();
-            this.setBlockName(BlockNames.plankEmerald);
-        }
-    }
-
-    public static final class BlockPlankLapis extends BlockWoodFT
-    {
-        public BlockPlankLapis()
-        {
-            super();
-            this.setBlockName(BlockNames.plankLapis);
-        }
-    }
-
-    public static final class BlockPlankBronze extends BlockWoodFT
-    {
-        public BlockPlankBronze()
-        {
-            super();
-            this.setBlockName(BlockNames.plankBronze);
-        }
-    }
-
-    public static final class BlockPlankCoal extends BlockWoodFT
-    {
-        public BlockPlankCoal()
-        {
-            super();
-            this.setBlockName(BlockNames.plankCoal);
-        }
-    }
-
-    public static final class BlockPlankGlowstone extends BlockWoodFT
-    {
-        public BlockPlankGlowstone()
-        {
-            super();
-            this.setBlockName(BlockNames.plankGlowstone);
-        }
-    }
-
-    public static final class BlockPlankAdamantium extends BlockWoodFT
-    {
-        public BlockPlankAdamantium()
-        {
-            super();
-            this.setBlockName(BlockNames.plankAdamantium);
-        }
-    }
-
-    public static final class BlockPlankSilk extends BlockWoodFT
-    {
-        public BlockPlankSilk()
-        {
-            super();
-            this.setBlockName(BlockNames.plankSilk);
-        }
-    }
-
-    public static final class BlockPlankRedstone extends BlockWoodFT
-    {
-        public BlockPlankRedstone()
-        {
-            super();
-            this.setBlockName(BlockNames.plankRedstone);
+        for (int i = 0; i < BlockNames.planks.length; i++) {
+            list.add(new ItemStack(item, 1, i));
         }
     }
 }

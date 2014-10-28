@@ -40,6 +40,9 @@ public class QuartzFurnace
 {
     public static final class BlockQuartzFurnace extends BlockFurnaceFT
     {
+        public static final BlockQuartzFurnace instanceIdle = new BlockQuartzFurnace(false);
+        public static final BlockQuartzFurnace instanceActive = new BlockQuartzFurnace(true);
+
         private static boolean keepInventory;
 
         public BlockQuartzFurnace(boolean isActive)
@@ -50,7 +53,7 @@ public class QuartzFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -133,11 +136,11 @@ public class QuartzFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.quartzFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.quartzFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -279,7 +282,7 @@ public class QuartzFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 
@@ -806,8 +809,8 @@ public class QuartzFurnace
         public void drawGuiContainerForegroundLayer(int par1, int par2)
         {
             String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
-            fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, Ints.Colors.renderColorQuartz);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, Ints.Colors.renderColorInventory);
         }
 
         public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)

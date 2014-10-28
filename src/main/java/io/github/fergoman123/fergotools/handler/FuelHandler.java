@@ -10,8 +10,8 @@
 package io.github.fergoman123.fergotools.handler;
 
  import cpw.mods.fml.common.IFuelHandler;
- import io.github.fergoman123.fergotools.init.ModBlocks;
- import io.github.fergoman123.fergotools.init.ModItems;
+ import io.github.fergoman123.fergotools.init.FergoBlocks.BlockCoalStorage;
+ import io.github.fergoman123.fergotools.init.FergoItems.ItemCoalIngot;
  import net.minecraft.init.Blocks;
  import net.minecraft.init.Items;
  import net.minecraft.item.Item;
@@ -21,12 +21,12 @@ package io.github.fergoman123.fergotools.handler;
 public class FuelHandler implements IFuelHandler {
 
     public int getBurnTime(ItemStack fuel) {
-        if (fuel.getItem() == ModItems.ingotCoal)
+        if (fuel.getItem() == ItemCoalIngot.instance)
         {
             return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Items.coal));
         }
 
-        if (fuel.getItem() == Item.getItemFromBlock(ModBlocks.blockCoal))
+        if (fuel.getItem() == Item.getItemFromBlock(BlockCoalStorage.instance))
         {
             return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Blocks.coal_block));
         }

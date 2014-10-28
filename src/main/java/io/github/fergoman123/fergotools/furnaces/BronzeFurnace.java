@@ -50,6 +50,9 @@ public class BronzeFurnace
 
     public static final class BlockBronzeFurnace extends BlockFurnaceFT
     {
+        public static final BlockBronzeFurnace instanceIdle = new BlockBronzeFurnace(false);
+        public static final BlockBronzeFurnace instanceActive = new BlockBronzeFurnace(true);
+
         private static boolean keepInventory;
 
         public BlockBronzeFurnace(boolean isActive)
@@ -60,7 +63,7 @@ public class BronzeFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.bronzeFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -142,11 +145,11 @@ public class BronzeFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.bronzeFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.bronzeFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -288,7 +291,7 @@ public class BronzeFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.bronzeFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 
@@ -822,8 +825,8 @@ public class BronzeFurnace
         public void drawGuiContainerForegroundLayer(int par1, int par2)
         {
             String s = furnace.hasCustomInventoryName() ? furnace.getInventoryName() : GuiHelper.format(furnace.getInventoryName());
-            fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, Ints.Colors.renderColorBronze);
+            fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, Ints.Colors.renderColorBronze);
         }
 
         /**

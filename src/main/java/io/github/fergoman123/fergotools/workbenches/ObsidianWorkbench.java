@@ -1,7 +1,6 @@
 package io.github.fergoman123.fergotools.workbenches;
 
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
@@ -13,15 +12,21 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.*;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
+import java.util.Random;
+
 public class ObsidianWorkbench {
     public static final class BlockObsidianWorkbench extends BlockWorkbenchFT {
+        public static final BlockObsidianWorkbench instance = new BlockObsidianWorkbench();
         public BlockObsidianWorkbench()
         {
             super();
@@ -30,7 +35,7 @@ public class ObsidianWorkbench {
 
         @Override
         public IIcon getIcon(int side, int meta) {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankObsidian.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         @Override
@@ -38,6 +43,7 @@ public class ObsidianWorkbench {
             this.blockIcon = register.registerIcon(Textures.obsidianWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.obsidianWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.obsidianWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankObsidian);
         }
 
         public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -55,6 +61,11 @@ public class ObsidianWorkbench {
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

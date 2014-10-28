@@ -16,16 +16,21 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
+import java.util.Random;
+
 public class BronzeWorkbench
 {
     public static final class BlockBronzeWorkbench extends BlockWorkbenchFT
     {
+        public static final BlockBronzeWorkbench instance = new BlockBronzeWorkbench();
+
         public BlockBronzeWorkbench()
         {
             super();
@@ -34,7 +39,7 @@ public class BronzeWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankBronze.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         public void registerBlockIcons(IIconRegister register)
@@ -42,6 +47,7 @@ public class BronzeWorkbench
             this.blockIcon = register.registerIcon(Textures.bronzeWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.bronzeWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.bronzeWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankBronze);
         }
 
         @Override
@@ -59,6 +65,11 @@ public class BronzeWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

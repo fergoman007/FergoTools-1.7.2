@@ -10,6 +10,7 @@
 package io.github.fergoman123.fergotools.util.tool;
 
 
+ import io.github.fergoman123.fergotools.util.item.Materials;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import io.github.fergoman123.fergotools.reference.Reference;
@@ -22,6 +23,8 @@ package io.github.fergoman123.fergotools.util.tool;
 
  public abstract class ItemShearsFT extends ItemShears
 {
+    public Materials.Tools materials = new Materials.Tools();
+
     public ItemShearsFT(int maxUses)
     {
         super();

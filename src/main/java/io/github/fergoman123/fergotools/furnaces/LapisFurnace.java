@@ -42,6 +42,9 @@ public class LapisFurnace
 {
     public static final class BlockLapisFurnace extends BlockFurnaceFT
     {
+        public static final BlockLapisFurnace instanceIdle = new BlockLapisFurnace(false);
+        public static final BlockLapisFurnace instanceActive = new BlockLapisFurnace(true);
+
         private static boolean keepInventory;
 
         public BlockLapisFurnace(boolean isActive)
@@ -52,7 +55,7 @@ public class LapisFurnace
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(ModBlocks.lapisFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -135,11 +138,11 @@ public class LapisFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, ModBlocks.lapisFurnaceActive);
+                world.setBlock(x, y, z, instanceActive);
             }
             else
             {
-                world.setBlock(x, y, z, ModBlocks.lapisFurnaceIdle);
+                world.setBlock(x, y, z, instanceIdle);
             }
 
             keepInventory = false;
@@ -284,7 +287,7 @@ public class LapisFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(ModBlocks.lapisFurnaceIdle);
+            return Item.getItemFromBlock(instanceIdle);
         }
     }
 
@@ -649,8 +652,8 @@ public class LapisFurnace
         @Override
         public void drawGuiContainerForegroundLayer(int par1, int par2) {
             String s = furnace.hasCustomInventoryName() ? this.furnace.getInventoryName() : GuiHelper.format(this.furnace.getInventoryName());
-            this.fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-            this.fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, 4210752);
+            this.fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, Ints.Colors.renderColorLapis);
+            this.fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 96 + 2, Ints.Colors.renderColorLapis);
         }
 
         @Override

@@ -3,6 +3,7 @@ package io.github.fergoman123.fergotools.workbenches;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.reference.Ints;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
@@ -18,15 +19,20 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 public class AdamantiumWorkbench
 {
     public static final class BlockAdamantiumWorkbench extends BlockWorkbenchFT
     {
+        public static final BlockAdamantiumWorkbench instance = new BlockAdamantiumWorkbench();
+
         public BlockAdamantiumWorkbench()
         {
             super();
@@ -35,7 +41,7 @@ public class AdamantiumWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankGlowstone.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         @Override
@@ -43,6 +49,7 @@ public class AdamantiumWorkbench
             this.blockIcon = register.registerIcon(Textures.adamantiumWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.adamantiumWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.adamantiumWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankAdamantium);
         }
 
         @Override
@@ -60,6 +67,11 @@ public class AdamantiumWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 
@@ -170,12 +182,13 @@ public class AdamantiumWorkbench
         public GuiAdamantiumWorkbench(InventoryPlayer inventory, World world, int x, int y, int z)
         {
             super(new ContainerAdamantiumWorkbench(inventory, world, x, y, z));
+            this.localeName = Locale.containerAdamantiumWorkbench;
         }
 
         @Override
         public void drawGuiContainerForegroundLayer(int par1, int par2) {
-            this.fontRendererObj.drawString(I18n.format(Locale.containerAdamantiumWorkbench, new Object[0]), 28, 6, 4210752);
-            this.fontRendererObj.drawString(I18n.format(Locale.containerInventory, new Object[0]), 8, this.ySize - 96 + 2, 4210752);
+            this.fontRendererObj.drawString(I18n.format(this.localeName, this.obj), 28, 6, Ints.Colors.renderColorInventory);
+            this.fontRendererObj.drawString(I18n.format(this.localeInventory, this.obj), 8, this.ySize - 96 + 2, Ints.Colors.renderColorInventory);
         }
 
         @Override

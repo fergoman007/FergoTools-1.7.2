@@ -14,11 +14,14 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
+
+import java.util.Random;
 
 public class EmeraldWorkbench
 {
@@ -26,6 +29,8 @@ public class EmeraldWorkbench
 
     public static final class BlockEmeraldWorkbench extends BlockWorkbenchFT
     {
+        public static final BlockEmeraldWorkbench instance = new BlockEmeraldWorkbench();
+
         public BlockEmeraldWorkbench()
         {
             super();
@@ -34,7 +39,7 @@ public class EmeraldWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankEmerald.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         public void registerBlockIcons(IIconRegister register)
@@ -42,6 +47,7 @@ public class EmeraldWorkbench
             this.blockIcon = register.registerIcon(Textures.emeraldWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.emeraldWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.emeraldWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankEmerald);
         }
 
         @Override
@@ -59,6 +65,11 @@ public class EmeraldWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

@@ -18,15 +18,20 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 public class RedstoneWorkbench
 {
     public static final class BlockRedstoneWorkbench extends BlockWorkbenchFT
     {
+        public static final BlockRedstoneWorkbench instance = new BlockRedstoneWorkbench();
+
         public BlockRedstoneWorkbench()
         {
             super();
@@ -35,7 +40,7 @@ public class RedstoneWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankGlowstone.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         @Override
@@ -43,6 +48,7 @@ public class RedstoneWorkbench
             this.blockIcon = register.registerIcon(Textures.redstoneWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.redstoneWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.redstoneWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankRedstone);
         }
 
         @Override
@@ -60,6 +66,11 @@ public class RedstoneWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

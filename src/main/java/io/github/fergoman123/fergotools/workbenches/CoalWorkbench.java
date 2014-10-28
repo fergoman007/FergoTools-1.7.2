@@ -1,5 +1,6 @@
 package io.github.fergoman123.fergotools.workbenches;
 
+import com.sun.prism.Texture;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
@@ -16,16 +17,23 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
+import javax.xml.soap.Text;
+import java.util.Random;
+
 public class CoalWorkbench
 {
     public static final class BlockCoalWorkbench extends BlockWorkbenchFT
     {
+
+        public static final BlockCoalWorkbench instance = new BlockCoalWorkbench();
+
         public BlockCoalWorkbench()
         {
             super();
@@ -34,7 +42,7 @@ public class CoalWorkbench
 
         public IIcon getIcon(int side, int meta)
         {
-            return side == 1 ? this.topIcon : (side == 0 ? ModBlocks.plankCoal.getBlockTextureFromSide(side) : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
+            return side == 1 ? this.topIcon : (side == 0 ? this.bottomIcon : (side != 2 && side != 4 ? this.blockIcon : this.frontIcon));
         }
 
         @Override
@@ -42,6 +50,7 @@ public class CoalWorkbench
             this.blockIcon = register.registerIcon(Textures.coalWorkbenchTextures[0]);
             this.topIcon = register.registerIcon(Textures.coalWorkbenchTextures[1]);
             this.frontIcon = register.registerIcon(Textures.coalWorkbenchTextures[2]);
+            this.bottomIcon = register.registerIcon(Textures.plankCoal);
         }
 
         @Override
@@ -59,6 +68,11 @@ public class CoalWorkbench
             {
                 return false;
             }
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
         }
     }
 

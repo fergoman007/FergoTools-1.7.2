@@ -1,15 +1,21 @@
 package io.github.fergoman123.fergotools.init;
 
-
-import cpw.mods.fml.common.Mod;
 import io.github.fergoman123.fergotools.util.item.FTStacks;
 import io.github.fergoman123.fergotools.util.item.RecipeList;
+import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.BlockObsidianWorkbench;
+import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.BlockEmeraldWorkbench;
+import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.BlockLapisWorkbench;
+import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.BlockBronzeWorkbench;
+import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.BlockCoalWorkbench;
+import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.BlockGlowstoneWorkbench;
+import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.BlockAdamantiumWorkbench;
+import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.BlockSilkWorkbench;
+import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.BlockRedstoneWorkbench;
 import io.github.fergoman123.fergoutil.helper.RecipeHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-
-import static io.github.fergoman123.fergotools.init.ModBlocks.*;
-import static io.github.fergoman123.fergotools.init.ModItems.*;
+import io.github.fergoman123.fergotools.init.FergoItems.*;
+import io.github.fergoman123.fergotools.init.FergoBlocks.*;
 import static net.minecraft.init.Items.*;
 import static net.minecraft.init.Blocks.*;
 import static net.minecraftforge.oredict.OreDictionary.WILDCARD_VALUE;
@@ -18,36 +24,36 @@ public class Recipes
 {
     public static void init()
     {
-        RecipeHelper.addShapelessRecipe(new ItemStack(ingotObsidian, 9), new ItemStack(blockObsidian));
-        RecipeHelper.addShapelessRecipe(new ItemStack(gemEmerald, 9), new ItemStack(blockEmeraldCrystal));
-        RecipeHelper.addShapelessRecipe(new ItemStack(gemLapis, 9), new ItemStack(blockLapisCrystal));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ingotBronze, 9), new ItemStack(blockBronze));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ingotAdamantium, 9), new ItemStack(blockAdamantium));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ingotCoal, 9), new ItemStack(blockCoal));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ingotGlowstone, 9), new ItemStack(blockGlowstone));
-        RecipeHelper.addShapelessRecipe(new ItemStack(shardExp, 9), new ItemStack(blockExperience));
-        RecipeHelper.addShapelessRecipe(new ItemStack(gemSilk, 9), new ItemStack(blockSilkGem));
-        RecipeHelper.addShapelessRecipe(new ItemStack(expCollector, 9), new ItemStack(blockExpCollector));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemObsidianIngot.instance, 9), new ItemStack(BlockObsidianStorage.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemEmeraldGem.instance, 9), new ItemStack(BlockEmeraldCrystal.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemLapisGem.instance, 9), new ItemStack(BlockLapisCrystal.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemBronzeIngot.instance, 9), new ItemStack(BlockBronze.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemAdamantiumIngot.instance, 9), new ItemStack(BlockAdamantium.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemCoalIngot.instance, 9), new ItemStack(BlockCoalStorage.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemGlowstoneIngot.instance, 9), new ItemStack(BlockGlowstoneStorage.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemExpShard.instance, 9), new ItemStack(BlockExperience.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemSilkGem.instance, 9), new ItemStack(BlockSilkGem.instance));
+        RecipeHelper.addShapelessRecipe(new ItemStack(ItemExpCollector.instance, 9), new ItemStack(BlockExpCollector.instance));
 
-        RecipeHelper.addRecipe(new ItemStack(gemSilk), new Object[]{" x ", "xyx", " x ", 'x', diamond, 'y', new ItemStack(wool, 1, WILDCARD_VALUE)});
-        RecipeHelper.addRecipe(new ItemStack(expCollector, 32), new Object[]{"xxx", "xyx", "xxx", 'x', shardExp, 'y', diamond});
+        RecipeHelper.addRecipe(new ItemStack(ItemSilkGem.instance), new Object[]{" x ", "xyx", " x ", 'x', diamond, 'y', new ItemStack(wool, 1, WILDCARD_VALUE)});
+        RecipeHelper.addRecipe(new ItemStack(ItemExpCollector.instance, 32), new Object[]{"xxx", "xyx", "xxx", 'x', ItemExpShard.instance, 'y', diamond});
 
-        RecipeHelper.addRecipe(new ItemStack(blockObsidian), RecipeList.blockObsidian);
-        RecipeHelper.addRecipe(new ItemStack(blockEmeraldCrystal),  RecipeList.blockEmeraldCrystal);
-        RecipeHelper.addRecipe(new ItemStack(blockLapisCrystal), RecipeList.blockLapisCrystal);
-        RecipeHelper.addRecipe(new ItemStack(blockBronze), RecipeList.blockBronze);
-        RecipeHelper.addRecipe(new ItemStack(blockCoal), RecipeList.blockCoal);
-        RecipeHelper.addRecipe(new ItemStack(blockGlowstone), RecipeList.blockGlowstone);
-        RecipeHelper.addRecipe(new ItemStack(blockAdamantium), RecipeList.blockAdamantium);
-        RecipeHelper.addRecipe(new ItemStack(blockExperience), RecipeList.blockExperience);
-        RecipeHelper.addRecipe(new ItemStack(blockSilkGem), RecipeList.blockSilkGem);
-        RecipeHelper.addRecipe(new ItemStack(blockRedstoneCrystal), RecipeList.blockRedstone);
+        RecipeHelper.addRecipe(new ItemStack(BlockObsidianStorage.instance), RecipeList.blockObsidian);
+        RecipeHelper.addRecipe(new ItemStack(BlockEmeraldCrystal.instance),  RecipeList.blockEmeraldCrystal);
+        RecipeHelper.addRecipe(new ItemStack(BlockLapisCrystal.instance), RecipeList.blockLapisCrystal);
+        RecipeHelper.addRecipe(new ItemStack(BlockBronze.instance), RecipeList.blockBronze);
+        RecipeHelper.addRecipe(new ItemStack(BlockCoalStorage.instance), RecipeList.blockCoal);
+        RecipeHelper.addRecipe(new ItemStack(BlockGlowstoneStorage.instance), RecipeList.blockGlowstone);
+        RecipeHelper.addRecipe(new ItemStack(BlockAdamantium.instance), RecipeList.blockAdamantium);
+        RecipeHelper.addRecipe(new ItemStack(BlockExperience.instance), RecipeList.blockExperience);
+        RecipeHelper.addRecipe(new ItemStack(BlockSilkGem.instance), RecipeList.blockSilkGem);
+        RecipeHelper.addRecipe(new ItemStack(BlockRedstoneCrystal.instance), RecipeList.blockRedstone);
 
-        RecipeHelper.addRecipe(new ItemStack(quartzPickaxe), RecipeList.quartzPickaxe);
-        RecipeHelper.addRecipe(new ItemStack(quartzShovel), RecipeList.quartzShovel);
-        RecipeHelper.addRecipe(new ItemStack(quartzAxe), RecipeList.quartzAxe);
-        RecipeHelper.addRecipe(new ItemStack(quartzHoe), RecipeList.quartzHoe);
-        RecipeHelper.addRecipe(new ItemStack(quartzSword), RecipeList.quartzSword);
+        RecipeHelper.addRecipe(FTStacks.quartzPickaxe, RecipeList.quartzPickaxe);
+        RecipeHelper.addRecipe(FTStacks.quartzShovel, RecipeList.quartzShovel);
+        RecipeHelper.addRecipe(FTStacks.quartzAxe, RecipeList.quartzAxe);
+        RecipeHelper.addRecipe(FTStacks.quartzHoe, RecipeList.quartzHoe);
+        RecipeHelper.addRecipe(FTStacks.quartzSword, RecipeList.quartzSword);
 
         RecipeHelper.addRecipe(FTStacks.quartzPickaxe, RecipeList.quartzPickaxe);
         RecipeHelper.addRecipe(FTStacks.quartzShovel, RecipeList.quartzShovel);
@@ -116,15 +122,15 @@ public class Recipes
         RecipeHelper.addRecipe(FTStacks.redstoneFurnaceIdle, RecipeList.redstoneFurnace);
         RecipeHelper.addRecipe(FTStacks.maceratorIdle, RecipeList.macerator);
 
-        RecipeHelper.addBlockSmelting(ModBlocks.oreObsidian, FTStacks.obsidianIngot, 2.5f);
-        RecipeHelper.addBlockSmelting(ModBlocks.oreEmeraldCrystal, FTStacks.emeraldCrystal, 2.5f);
-        RecipeHelper.addBlockSmelting(ModBlocks.oreLapisCrystal, FTStacks.lapisCrystal, 2.5f);
-        RecipeHelper.addBlockSmelting(ModBlocks.oreBronze, FTStacks.bronzeIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreObsidian.instance, FTStacks.obsidianIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreEmeraldCrystal.instance, FTStacks.emeraldCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreLapisCrystal.instance, FTStacks.lapisCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreBronze.instance, FTStacks.bronzeIngot, 2.5f);
         RecipeHelper.addBlockSmelting(Blocks.coal_block, FTStacks.coalIngot, 2.5f);
         RecipeHelper.addBlockSmelting(Blocks.glowstone, FTStacks.glowstoneIngot, 2.5f);
-        RecipeHelper.addBlockSmelting(ModBlocks.oreAdamantium, FTStacks.adamantiumIngot, 2.5f);
-        RecipeHelper.addBlockSmelting(ModBlocks.oreExperience, FTStacks.expShard5, 2.5f);
-        RecipeHelper.addBlockSmelting(ModBlocks.oreCrystalRed, FTStacks.redCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreAdamantium.instance, FTStacks.adamantiumIngot, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreExperience.instance, FTStacks.expShard5, 2.5f);
+        RecipeHelper.addBlockSmelting(BlockOreRedCrystal.instance, FTStacks.redCrystal, 2.5f);
 
 
 
@@ -183,24 +189,24 @@ public class Recipes
         RecipeHelper.addRecipe(FTStacks.glowstoneBow, RecipeList.glowstoneBow);
         RecipeHelper.addRecipe(FTStacks.adamantiumBow, RecipeList.adamantiumBow);
 
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankObsidian, 4), new ItemStack(ModBlocks.logObsidian));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankEmerald, 4), new ItemStack(ModBlocks.logEmerald));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankLapis, 4), new ItemStack(ModBlocks.logLapis));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankBronze, 4), new ItemStack(ModBlocks.logBronze));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankCoal, 4), new ItemStack(ModBlocks.logCoal));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankGlowstone, 4), new ItemStack(ModBlocks.logGlowstone));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankAdamantium, 4), new ItemStack(ModBlocks.logAdamantium));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankSilk, 4), new ItemStack(ModBlocks.logSilk));
-        RecipeHelper.addShapelessRecipe(new ItemStack(ModBlocks.plankRedstone, 4), new ItemStack(ModBlocks.logRedstone));
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[0]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[1]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[2]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[3]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[4]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[5]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[6]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[7]);
+        RecipeHelper.addShapelessRecipe(FTStacks.planks[0], FTStacks.logs[8]);
 
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.obsidianWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.emeraldWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.lapisWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.bronzeWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.coalWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.glowstoneWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.adamantiumWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.silkWorkbench);
-        RecipeHelper.addRecipe(new ItemStack(ModBlocks.obsidianWorkbench), RecipeList.redstoneWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockObsidianWorkbench.instance), RecipeList.obsidianWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockEmeraldWorkbench.instance), RecipeList.emeraldWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockLapisWorkbench.instance), RecipeList.lapisWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockBronzeWorkbench.instance), RecipeList.bronzeWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockCoalWorkbench.instance), RecipeList.coalWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockGlowstoneWorkbench.instance), RecipeList.glowstoneWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockAdamantiumWorkbench.instance), RecipeList.adamantiumWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockSilkWorkbench.instance), RecipeList.silkWorkbench);
+        RecipeHelper.addRecipe(new ItemStack(BlockRedstoneWorkbench.instance), RecipeList.redstoneWorkbench);
     }
 }
