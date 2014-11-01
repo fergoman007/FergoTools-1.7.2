@@ -7,7 +7,11 @@ import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.base.BlockFT;
 import io.github.fergoman123.fergotools.util.base.BlockGlassFT;
+import io.github.fergoman123.fergotools.util.base.BlockRotatedPillarFT;
+import io.github.fergoman123.fergotools.util.base.BlockStairsFT;
+import io.github.fergoman123.fergotools.util.base.leaves.BlockLeavesFT;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
@@ -18,7 +22,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class FergoBlocks
+public class FTBlocks
 {
 
     public static final class BlockFergoGlass extends BlockGlassFT {
@@ -28,7 +32,7 @@ public class FergoBlocks
         private  boolean shouldRenderSelectionBox = true;
         private int renderPass = 0;
 
-        public BlockFergoGlass(){super();this.setBlockName(BlockNames.blockFergoGlass);}
+        public BlockFergoGlass(){super();}
         public boolean shouldSideBeRendered(IBlockAccess world, int x, int y, int z, int side) {Block b = world.getBlock(x, y, z); return b == (Block) this ? false : super.shouldSideBeRendered(world, x, y, z, side);}
         public void registerBlockIcons(IIconRegister register) {for (int i = 0; i < Textures.blockFergoGlassTex.length; i++){icons[i] = register.registerIcon(Reference.textureLoc + Textures.ctmLoc + Textures.blockFergoGlassTex[i]);}}
         public int getRenderBlockPass() {return renderPass;}
@@ -170,12 +174,9 @@ public class FergoBlocks
 
     public static final class BlockObsidianStorage extends BlockFT
     {
-        public static final BlockObsidianStorage instance = new BlockObsidianStorage();
 
-        public BlockObsidianStorage()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockObsidian);
+        public BlockObsidianStorage(Material material) {
+            super(material);
         }
 
         @Override
@@ -186,12 +187,9 @@ public class FergoBlocks
 
     public static final class BlockEmeraldCrystal extends BlockFT
     {
-        public static final BlockEmeraldCrystal instance = new BlockEmeraldCrystal();
 
-        public BlockEmeraldCrystal()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockEmeraldCrystal);
+        public BlockEmeraldCrystal(Material material) {
+            super(material);
         }
 
         @Override
@@ -202,11 +200,9 @@ public class FergoBlocks
 
     public static final class BlockLapisCrystal extends BlockFT
     {
-        public static final BlockLapisCrystal instance = new BlockLapisCrystal();
-        public BlockLapisCrystal()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockLapisCrystal);
+
+        public BlockLapisCrystal(Material material) {
+            super(material);
         }
 
         @Override
@@ -217,11 +213,9 @@ public class FergoBlocks
 
     public static final class BlockBronze extends BlockFT
     {
-        public static final BlockBronze instance = new BlockBronze();
-        public BlockBronze()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockBronze);
+
+        public BlockBronze(Material material) {
+            super(material);
         }
 
         @Override
@@ -232,11 +226,9 @@ public class FergoBlocks
 
     public static final class BlockCoalStorage extends BlockFT
     {
-        public static final BlockCoalStorage instance = new BlockCoalStorage();
-        public BlockCoalStorage()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockCoal);
+
+        public BlockCoalStorage(Material material) {
+            super(material);
         }
 
         public Item getItemDropped(int metadata, Random random, int fortune)
@@ -247,11 +239,9 @@ public class FergoBlocks
 
     public static final class BlockGlowstoneStorage extends BlockFT
     {
-        public static final BlockGlowstoneStorage instance = new BlockGlowstoneStorage();
-        public BlockGlowstoneStorage()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockGlowstone);
+
+        public BlockGlowstoneStorage(Material material) {
+            super(material);
         }
 
         @Override
@@ -262,11 +252,9 @@ public class FergoBlocks
 
     public static final class BlockAdamantium extends BlockFT
     {
-        public static final BlockAdamantium instance = new BlockAdamantium();
-        public BlockAdamantium()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockAdamantium);
+
+        public BlockAdamantium(Material material) {
+            super(material);
         }
 
         public Item getItemDropped(int metadata, Random random, int fortune)
@@ -277,11 +265,9 @@ public class FergoBlocks
 
     public static final class BlockSilkGem extends BlockFT
     {
-        public static final BlockSilkGem instance = new BlockSilkGem();
-        public BlockSilkGem()
-        {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockSilkGem);
+
+        public BlockSilkGem(Material material) {
+            super(material);
         }
 
         @Override
@@ -292,11 +278,9 @@ public class FergoBlocks
 
     public static final class BlockRedstoneCrystal extends BlockFT
     {
-        public static final BlockRedstoneCrystal instance = new BlockRedstoneCrystal();
-        public BlockRedstoneCrystal()
+        public BlockRedstoneCrystal(Material material)
         {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockRedstoneCrystal);
+            super(material);
         }
 
         @Override
@@ -307,11 +291,9 @@ public class FergoBlocks
 
     public static final class BlockExperience extends BlockFT
     {
-        public static final BlockExperience instance = new BlockExperience();
-        public BlockExperience()
+        public BlockExperience(Material material)
         {
-            super(Material.iron);
-            this.setBlockName(BlockNames.blockExperience);
+            super(material);
         }
 
         @Override
@@ -321,10 +303,8 @@ public class FergoBlocks
     }
 
     public static final class BlockExpCollector extends BlockFT {
-        public static final BlockExpCollector instance = new BlockExpCollector();
-        public BlockExpCollector() {
-            super();
-            this.setBlockName(BlockNames.blockExpCollector);
+        public BlockExpCollector(Material material) {
+            super(material);
         }
 
         @Override
@@ -335,11 +315,9 @@ public class FergoBlocks
 
     public static final class BlockOreObsidian extends BlockFT
     {
-        public static final BlockOreObsidian instance = new BlockOreObsidian();
-        public BlockOreObsidian()
+        public BlockOreObsidian(Material material)
         {
-            super(Material.rock);
-            this.setBlockName(BlockNames.oreObsidian);
+            super(material);
         }
 
         public Item getItemDropped(int metadata, Random random, int fortune)
@@ -350,42 +328,35 @@ public class FergoBlocks
 
     public static final class BlockOreEmeraldCrystal extends BlockFT
     {
-
-        public static final BlockOreEmeraldCrystal instance = new BlockOreEmeraldCrystal();
-        public BlockOreEmeraldCrystal()
+        public BlockOreEmeraldCrystal(Material material)
         {
-            super(Material.rock);
-            this.setBlockName(BlockNames.oreEmeraldCrystal);
+            super(material);
         }
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
-            return FergoItems.ItemEmeraldGem.instance;
+            return null;//FTItems.ItemEmeraldGem.instance;
         }
     }
 
     public static final class BlockOreLapisCrystal extends BlockFT
     {
-        public static final BlockOreLapisCrystal instance = new BlockOreLapisCrystal();
-        public BlockOreLapisCrystal()
+        public BlockOreLapisCrystal(Material material)
         {
-            super(Material.rock);
-            this.setBlockName(BlockNames.oreLapisCrystal);
+            super(material);
         }
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
-            return FergoItems.ItemLapisGem.instance;
+            return null;//FTItems.ItemLapisGem.instance;
         }
     }
 
     public static final class BlockOreBronze extends BlockFT
     {
-        public static final BlockOreBronze instance = new BlockOreBronze();
-        public BlockOreBronze()
+        public BlockOreBronze(Material material)
         {
-            super(Material.rock);
-            this.setBlockName(BlockNames.oreBronze);
+            super(material);
         }
 
         @Override
@@ -396,11 +367,9 @@ public class FergoBlocks
 
     public static final class BlockOreAdamantium extends BlockFT
     {
-        public static final BlockOreAdamantium instance = new BlockOreAdamantium();
-        public BlockOreAdamantium()
+        public BlockOreAdamantium(Material material)
         {
-            super(Material.rock);
-            this.setBlockName(BlockNames.oreAdamantium);
+            super(material);
         }
 
         @Override
@@ -411,16 +380,14 @@ public class FergoBlocks
 
     public static final class BlockOreExperience extends BlockFT
     {
-        public static final BlockOreExperience instance = new BlockOreExperience();
-        public BlockOreExperience()
+        public BlockOreExperience(Material material)
         {
-            super(Material.rock);
-            this.setBlockName(BlockNames.oreExperience);
+            super(material);
         }
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
-            return FergoItems.ItemExpShard.instance;
+            return null;//FTItems.ItemExpShard.instance;
         }
 
         public int quantityDropped(Random rand)
@@ -431,16 +398,456 @@ public class FergoBlocks
 
     public static final class BlockOreRedCrystal extends BlockFT
     {
-        public static final BlockOreRedCrystal instance = new BlockOreRedCrystal();
-        public BlockOreRedCrystal()
+        public BlockOreRedCrystal(Material material)
         {
-            super(Material.iron);
-            this.setBlockName(BlockNames.oreCrystalRed);
+            super(material);
         }
 
         @Override
         public Item getItemDropped(int metadata, Random random, int fortune) {
-            return FergoItems.ItemRedstoneGem.instance;
+            return null;//FTItems.ItemRedstoneGem.instance;
+        }
+    }
+
+    public static final class BlockLogObsidian extends BlockRotatedPillarFT
+    {
+        public BlockLogObsidian()
+        {
+            super();
+        }
+
+        @Override
+        public IIcon getSideIcon(int meta) {
+            return this.sideIcon;
+        }
+
+        @Override
+        public IIcon getTopIcon(int meta) {
+            return this.topIcon;
+        }
+
+        @Override
+        public void registerBlockIcons(IIconRegister register) {
+            this.sideIcon = register.registerIcon(Textures.logObsidian);
+            this.topIcon = register.registerIcon(Textures.logObsidianTop);
+        }
+    }
+
+    public static final class BlockLogEmerald extends BlockRotatedPillarFT
+    {
+        public BlockLogEmerald()
+        {
+            super();
+        }
+
+        @Override
+        public void registerBlockIcons(IIconRegister register) {
+            this.sideIcon = register.registerIcon(Textures.logEmerald);
+            this.topIcon = register.registerIcon(Textures.logEmeraldTop);
+        }
+
+        @Override
+        public IIcon getSideIcon(int meta) {
+            return this.sideIcon;
+        }
+
+        @Override
+        public IIcon getTopIcon(int meta) {
+            return this.topIcon;
+        }
+    }
+
+    public static final class BlockLogLapis extends BlockRotatedPillarFT
+        {
+            public BlockLogLapis()
+            {
+                super();
+            }
+
+            @Override
+            public void registerBlockIcons(IIconRegister register) {
+                this.sideIcon = register.registerIcon(Textures.logLapis);
+                this.topIcon = register.registerIcon(Textures.logLapisTop);
+            }
+
+            @Override
+            public IIcon getSideIcon(int meta) {
+                return this.sideIcon;
+            }
+
+            @Override
+            public IIcon getTopIcon(int meta) {
+                return this.topIcon;
+            }
+        }
+
+    public static final class BlockLogBronze extends BlockRotatedPillarFT
+        {
+            public BlockLogBronze()
+            {
+                super();
+            }
+
+            @Override
+            public void registerBlockIcons(IIconRegister register) {
+                this.sideIcon = register.registerIcon(Textures.logBronze);
+                this.topIcon = register.registerIcon(Textures.logBronzeTop);
+            }
+
+            @Override
+            public IIcon getSideIcon(int meta) {
+                return this.sideIcon;
+            }
+
+            @Override
+            public IIcon getTopIcon(int meta) {
+                return this.topIcon;
+            }
+        }
+
+    public static final class BlockLogCoal extends BlockRotatedPillarFT
+        {
+            public BlockLogCoal()
+            {
+                super();
+            }
+
+            @Override
+            public void registerBlockIcons(IIconRegister register) {
+                this.sideIcon = register.registerIcon(Textures.logCoal);
+                this.topIcon = register.registerIcon(Textures.logCoalTop);
+            }
+
+            @Override
+            public IIcon getSideIcon(int meta) {
+                return this.sideIcon;
+            }
+
+            @Override
+            public IIcon getTopIcon(int meta) {
+                return this.topIcon;
+            }
+        }
+
+    public static final class BlockLogGlowstone extends BlockRotatedPillarFT
+        {
+            public BlockLogGlowstone()
+            {
+                super();
+            }
+
+            @Override
+            public void registerBlockIcons(IIconRegister register) {
+                this.sideIcon = register.registerIcon(Textures.logGlowstone);
+                this.topIcon = register.registerIcon(Textures.logGlowstoneTop);
+            }
+
+            @Override
+            public IIcon getSideIcon(int meta) {
+                return this.sideIcon;
+            }
+
+            @Override
+            public IIcon getTopIcon(int meta) {
+                return this.topIcon;
+            }
+        }
+
+    public static final class BlockLogAdamantium extends BlockRotatedPillarFT
+        {
+            public BlockLogAdamantium()
+            {
+                super();
+            }
+
+            @Override
+            public void registerBlockIcons(IIconRegister register) {
+                this.sideIcon = register.registerIcon(Textures.logAdamantium);
+                this.topIcon = register.registerIcon(Textures.logAdamantiumTop);
+            }
+
+            @Override
+            public IIcon getSideIcon(int meta) {
+                return this.sideIcon;
+            }
+
+            @Override
+            public IIcon getTopIcon(int meta) {
+                return this.topIcon;
+            }
+        }
+
+    public static final class BlockLogSilk extends BlockRotatedPillarFT
+        {
+            public BlockLogSilk()
+            {
+                super();
+            }
+
+            @Override
+            public void registerBlockIcons(IIconRegister register) {
+                this.sideIcon = register.registerIcon(Textures.logSilk);
+                this.topIcon = register.registerIcon(Textures.logSilkTop);
+            }
+
+            @Override
+            public IIcon getSideIcon(int meta) {
+                return this.sideIcon;
+            }
+
+            @Override
+            public IIcon getTopIcon(int meta) {
+                return this.topIcon;
+            }
+        }
+
+    public static final class BlockLogRedstone extends BlockRotatedPillarFT
+        {
+            public BlockLogRedstone()
+            {
+                super();
+            }
+
+            @Override
+            public void registerBlockIcons(IIconRegister register) {
+                this.sideIcon = register.registerIcon(Textures.logRedstone);
+                this.topIcon = register.registerIcon(Textures.logRedstoneTop);
+            }
+
+            @Override
+            public IIcon getSideIcon(int meta) {
+                return this.sideIcon;
+            }
+
+            @Override
+            public IIcon getTopIcon(int meta) {
+                return this.topIcon;
+            }
+        }
+
+    public static final class BlockPlankObsidian extends BlockFT
+    {
+        public BlockPlankObsidian(Material material)
+        {
+        super(material);
+        }
+
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankObsidian);
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+
+    public static final class BlockPlankEmerald extends BlockFT
+    {
+        public BlockPlankEmerald(Material material)
+        {
+        super(material);
+        }
+
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankEmerald);
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+    
+    public static final class BlockPlankLapis extends BlockFT
+    {
+        public BlockPlankLapis(Material material)
+        {
+        super(material);
+        }
+        
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankLapis);
+        }
+    
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+    
+    public static final class BlockPlankBronze extends BlockFT
+    {
+        
+        public BlockPlankBronze(Material material)
+        {
+        super(material);
+        }
+        
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankBronze);
+        }
+    
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+    
+    public static final class BlockPlankCoal extends BlockFT
+    {
+        public BlockPlankCoal(Material material)
+        {
+        super(material);
+        }
+        
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankCoal);
+        }
+    
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+    
+    public static final class BlockPlankGlowstone extends BlockFT
+    {
+        public BlockPlankGlowstone(Material material)
+        {
+        super(material);
+        }
+        
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankGlowstone);
+        }
+    
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+    
+    public static final class BlockPlankAdamantium extends BlockFT
+    {
+        
+        public BlockPlankAdamantium(Material material)
+        {
+        super(material);
+        }
+        
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankAdamantium);
+        }
+    
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+    
+    public static final class BlockPlankSilk extends BlockFT
+    {
+        
+        public BlockPlankSilk(Material material)
+        {
+        super(material);
+        }
+        
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankSilk);
+        }
+    
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+    
+    public static final class BlockPlankRedstone extends BlockFT
+    {
+        public BlockPlankRedstone(Material material)
+        {
+        super(material);
+        }
+        
+        @Override
+        public void registerBlockIcons(IIconRegister register)
+        {
+            this.blockIcon = register.registerIcon(Textures.plankRedstone);
+        }
+    
+        @Override
+        public Item getItemDropped(int metadata, Random rand, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+
+    public static final class BlockStairObsidian extends BlockStairsFT
+    {
+
+        public BlockStairObsidian(Block extender) {
+            super(extender);
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random random, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+
+    public static final class BlockStairEmerald extends BlockStairsFT
+    {
+
+        public BlockStairEmerald(Block extender) {
+            super(extender);
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random random, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+
+    public static final class BlockStairLapis extends BlockStairsFT
+    {
+
+        public BlockStairLapis(Block extender) {
+            super(extender);
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random random, int fortune) {
+            return Item.getItemFromBlock(this);
+        }
+    }
+
+    public static final class BlockStairBronze extends BlockStairsFT
+    {
+
+        public BlockStairBronze(Block extender) {
+            super(extender);
+        }
+
+        @Override
+        public Item getItemDropped(int metadata, Random random, int fortune) {
+            return null;
         }
     }
 }

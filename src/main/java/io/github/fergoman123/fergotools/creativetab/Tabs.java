@@ -11,12 +11,12 @@ package io.github.fergoman123.fergotools.creativetab;
 
 
  import io.github.fergoman123.fergotools.block.FTLogs;
- import io.github.fergoman123.fergotools.init.FergoBlocks.BlockFergoGlass;
- import io.github.fergoman123.fergotools.init.FergoItems.ItemQuartzPickaxe;
- import io.github.fergoman123.fergotools.init.FergoItems.ItemExpCollector;
- import io.github.fergoman123.fergotools.init.FergoItems.ItemArmorQuartz;
- import io.github.fergoman123.fergotools.init.FergoItems.ItemQuartzBow;
- import io.github.fergoman123.fergotools.init.FergoItems.ItemQuartzShears;
+ import io.github.fergoman123.fergotools.init.FTBlocks.BlockFergoGlass;
+ import io.github.fergoman123.fergotools.init.FTItems.ItemQuartzPickaxe;
+ import io.github.fergoman123.fergotools.init.FTItems.ItemExpCollector;
+ import io.github.fergoman123.fergotools.init.FTItems.ItemArmorQuartz;
+ import io.github.fergoman123.fergotools.init.FTItems.ItemQuartzBow;
+ import io.github.fergoman123.fergotools.init.FTItems.ItemQuartzShears;
  import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
  import io.github.fergoman123.fergotools.reference.strings.Tab;
  import io.github.fergoman123.fergoutil.creativetab.FergoCreativeTab;

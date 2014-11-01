@@ -41,6 +41,8 @@ public class OreDict {
     public static final String plankWood = oreDict + "plankWood";
     public static final String logWood = oreDict + "logWood";
     public static final String treeLeaves = oreDict + "treeLeaves";
+    public static final String stairWood = oreDict + "stairWood";
+
 
     public static final String[] oreObsidianArray = new String[]{oreDictName, oreObsidian};
     public static final String[] oreEmeraldArray = new String[]{oreDictName, oreEmeraldCrystal};
@@ -77,4 +79,5 @@ public class OreDict {
     public static final String[] plankWoodArray = new String[]{oreDictName, plankWood};
     public static final String[] logWoodArray = new String[]{oreDictName, logWood};
     public static final String[] treeLeavesArray = new String[]{oreDictName, treeLeaves};
+    public static final String[] stairWoodArray = new String[]{oreDictName, stairWood};
 }

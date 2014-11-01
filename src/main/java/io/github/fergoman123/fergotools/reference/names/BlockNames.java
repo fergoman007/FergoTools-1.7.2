@@ -104,17 +104,17 @@ public class BlockNames
     public static final String[] workbenches = {obsidianWorkbench, emeraldWorkbench, lapisWorkbench, bronzeWorkbench, coalWorkbench, glowstoneWorkbench, adamantiumWorkbench, silkWorkbench, redstoneWorkbench};
 
     public static final String leavesFergo = "leavesFergo";
-    public static final String obsidianLeaves = "obsidianLeaves";
-    public static final String emeraldLeaves = "emeraldLeaves";
-    public static final String lapisLeaves = "lapisLeaves";
-    public static final String bronzeLeaves = "bronzeLeaves";
-    public static final String coalLeaves = "coalLeaves";
-    public static final String glowstoneLeaves = "glowstoneLeaves";
-    public static final String adamantiumLeaves = "adamantiumLeaves";
-    public static final String silkLeaves = "silkLeaves";
-    public static final String redstoneLeaves = "redstoneLeaves";
+    public static final String leavesObsidian = "leavesObsidian";
+    public static final String leavesEmerald = "leavesEmerald";
+    public static final String leavesLapis = "leavesLapis";
+    public static final String leavesBronze = "leavesBronze";
+    public static final String leavesCoal = "leavesCoal";
+    public static final String leavesGlowstone = "leavesGlowstone";
+    public static final String leavesAdamantium = "leavesAdamantium";
+    public static final String leavesSilk = "leavesSilk";
+    public static final String leavesRedstone = "leavesRedstone";
 
-    public static final String[] leaves = {obsidianLeaves, emeraldLeaves, lapisLeaves, bronzeLeaves, coalLeaves, glowstoneLeaves, adamantiumLeaves, silkLeaves, redstoneLeaves};
+    public static final String[] leaves = {leavesObsidian, leavesEmerald, leavesLapis, leavesBronze, leavesCoal, leavesGlowstone, leavesAdamantium, leavesSilk, leavesRedstone};
 
     public static final String saplingFergo = "saplingFergo";
     public static final String saplingObsidian = "saplingObsidian";
@@ -128,4 +128,16 @@ public class BlockNames
     public static final String saplingRedstone = "saplingRedstone";
 
     public static final String[] saplings = {saplingObsidian, saplingEmerald, saplingLapis, saplingBronze, saplingCoal, saplingGlowstone, saplingAdamantium, saplingSilk, saplingRedstone};
+
+    public static final String stairObsidian = "stairObsidian";
+    public static final String stairEmerald = "stairEmerald";
+    public static final String stairLapis = "stairLapis";
+    public static final String stairBronze = "stairBronze";
+    public static final String stairCoal = "stairCoal";
+    public static final String stairGlowstone = "stairGlowstone";
+    public static final String stairAdamantium = "stairAdamantium";
+    public static final String stairSilk = "stairSilk";
+    public static final String stairRedstone = "stairRedstone";
+
+    public static final String[] stairs = {stairObsidian, stairEmerald, stairLapis, stairBronze, stairCoal, stairGlowstone, stairAdamantium, stairSilk, stairRedstone};
 }

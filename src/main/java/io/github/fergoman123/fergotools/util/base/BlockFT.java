@@ -27,11 +27,6 @@ package io.github.fergoman123.fergotools.util.base;
         this.setCreativeTab(Tabs.tabFergoBlocks);
     }
 
-    public BlockFT()
-    {
-        super(Material.iron);
-    }
-
     public String getUnlocalizedName()
     {
         return String.format("tile.%s%s", NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));

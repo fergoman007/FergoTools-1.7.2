@@ -10,16 +10,12 @@
 package io.github.fergoman123.fergotools.util.item;
 
 
- import io.github.fergoman123.fergotools.init.FergoItems;
- import io.github.fergoman123.fergotools.init.ModBlocks;
+ import io.github.fergoman123.fergotools.init.FTItems;
  import io.github.fergoman123.fergoutil.helper.RecipeHelper;
- import io.github.fergoman123.fergotools.init.ModItems;
  import net.minecraft.init.Blocks;
  import net.minecraft.init.Items;
  import net.minecraft.item.ItemStack;
  import net.minecraftforge.oredict.OreDictionary;
-
- import java.util.Objects;
 
  public class RecipeList {
 
@@ -159,7 +155,7 @@ package io.github.fergoman123.fergotools.util.item;
     public static final Object[] adamantiumBoots = new Object[]{RecipeHelper.getBootsRecipe(), charX, FTStacks.adamantiumIngot};
 
     public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Items.diamond, charY, new ItemStack(Blocks.wool, 1, wildcard)};
-    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', FergoItems.ItemExpShard.instance, 'y', Items.diamond};
+    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', FTItems.ItemExpShard.instance, 'y', Items.diamond};
 
     // Bows
     public static final Object[] quartzBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.quartzStack, charX, FTStacks.stringStack};

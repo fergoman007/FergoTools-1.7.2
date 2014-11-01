@@ -7,7 +7,6 @@ import io.github.fergoman123.fergotools.reference.names.ArmorTooltipLocale;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.reference.names.OreDict;
-import io.github.fergoman123.fergotools.util.PotionList;
 import io.github.fergoman123.fergotools.util.base.ItemArmorFT;
 import io.github.fergoman123.fergotools.util.base.ItemBowFT;
 import io.github.fergoman123.fergotools.util.base.ItemFT;
@@ -19,13 +18,11 @@ import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,16 +33,14 @@ import java.util.List;
 
 import static cpw.mods.fml.relauncher.Side.CLIENT;
 
-public class FergoItems
+public class FTItems
 {
     public static final class ItemQuartzPickaxe extends ItemPickaxeFT
     {
-        public static final ItemQuartzPickaxe instance = new ItemQuartzPickaxe();
 
-        public ItemQuartzPickaxe()
+        public ItemQuartzPickaxe(ToolMaterial material, int maxUses)
         {
-            super(Materials.Tools.quartz, Materials.Tools.quartz.getMaxUses());
-            this.setUnlocalizedName(ItemNames.quartzPickaxe);
+            super(material, maxUses);
         }
 
         @Override
@@ -56,12 +51,9 @@ public class FergoItems
 
     public static final class ItemQuartzShovel extends ItemShovelFT
     {
-        public static final ItemQuartzShovel instance = new ItemQuartzShovel();
 
-        public ItemQuartzShovel()
-        {
-            super(Materials.Tools.quartz, Materials.Tools.quartz.getMaxUses());
-            this.setUnlocalizedName(ItemNames.quartzShovel);
+        public ItemQuartzShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -72,12 +64,9 @@ public class FergoItems
 
     public static final class ItemQuartzAxe extends ItemAxeFT
     {
-        public static final ItemQuartzAxe instance = new ItemQuartzAxe();
 
-        public ItemQuartzAxe()
-        {
-            super(Materials.Tools.quartz, Materials.Tools.quartz.getMaxUses());
-            this.setUnlocalizedName(ItemNames.quartzAxe);
+        public ItemQuartzAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -88,12 +77,10 @@ public class FergoItems
 
     public static final class ItemQuartzHoe extends ItemHoeFT
     {
-        public static final ItemQuartzHoe instance = new ItemQuartzHoe();
 
-        public ItemQuartzHoe()
+        public ItemQuartzHoe(ToolMaterial material, int maxUses)
         {
-            super(Materials.Tools.quartz, Materials.Tools.quartz.getMaxUses());
-            this.setUnlocalizedName(ItemNames.quartzHoe);
+            super(material, maxUses);
         }
 
         @Override
@@ -104,12 +91,9 @@ public class FergoItems
 
     public static final class ItemQuartzSword extends ItemSwordFT
     {
-        public static final ItemQuartzSword instance = new ItemQuartzSword();
-
-        public ItemQuartzSword()
+        public ItemQuartzSword(ToolMaterial material, int maxUses)
         {
-            super(Materials.Tools.quartz, Materials.Tools.quartz.getMaxUses());
-            this.setUnlocalizedName(ItemNames.quartzSword);
+            super(material, maxUses);
         }
 
         @Override
@@ -120,12 +104,9 @@ public class FergoItems
 
     public static final class ItemObsidianPickaxe extends ItemPickaxeFT
     {
-        public static final ItemObsidianPickaxe instance = new ItemObsidianPickaxe();
 
-        public ItemObsidianPickaxe()
-        {
-            super(Materials.Tools.quartz, Materials.Tools.quartz.getMaxUses());
-            this.setUnlocalizedName(ItemNames.obsidianPickaxe);
+        public ItemObsidianPickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -136,12 +117,9 @@ public class FergoItems
 
     public static final class ItemObsidianShovel extends ItemShovelFT
     {
-        public static final ItemObsidianShovel instance = new ItemObsidianShovel();
 
-        public ItemObsidianShovel()
-        {
-            super(Materials.Tools.obsidian, Materials.Tools.obsidian.getMaxUses());
-            this.setUnlocalizedName(ItemNames.obsidianShovel);
+        public ItemObsidianShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -152,12 +130,9 @@ public class FergoItems
 
     public static final class ItemObsidianAxe extends ItemAxeFT
     {
-        public static final ItemObsidianAxe instance = new ItemObsidianAxe();
 
-        public ItemObsidianAxe()
-        {
-            super(Materials.Tools.obsidian, Materials.Tools.obsidian.getMaxUses());
-            this.setUnlocalizedName(ItemNames.obsidianAxe);
+        public ItemObsidianAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -168,12 +143,9 @@ public class FergoItems
 
     public static final class ItemObsidianHoe extends ItemHoeFT
     {
-        public static final ItemObsidianHoe instance = new ItemObsidianHoe();
 
-        public ItemObsidianHoe()
-        {
-            super(Materials.Tools.obsidian, Materials.Tools.obsidian.getMaxUses());
-            this.setUnlocalizedName(ItemNames.obsidianHoe);
+        public ItemObsidianHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -184,12 +156,9 @@ public class FergoItems
 
     public static final class ItemObsidianSword extends ItemSwordFT
     {
-        public static final ItemObsidianSword instance = new ItemObsidianSword();
 
-        public ItemObsidianSword()
-        {
-            super(Materials.Tools.obsidian, Materials.Tools.obsidian.getMaxUses());
-            this.setUnlocalizedName(ItemNames.obsidianSword);
+        public ItemObsidianSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -200,12 +169,8 @@ public class FergoItems
 
     public static final class ItemEmeraldPickaxe extends ItemPickaxeFT
     {
-        public static final ItemEmeraldPickaxe instance = new ItemEmeraldPickaxe();
-
-        public ItemEmeraldPickaxe()
-        {
-            super(Materials.Tools.emerald, Materials.Tools.emerald.getMaxUses());
-            this.setUnlocalizedName(ItemNames.emeraldPickaxe);
+        public ItemEmeraldPickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -216,12 +181,9 @@ public class FergoItems
 
     public static final class ItemEmeraldShovel extends ItemShovelFT
     {
-        public static final ItemEmeraldShovel instance = new ItemEmeraldShovel();
 
-        public ItemEmeraldShovel()
-        {
-            super(Materials.Tools.emerald, Materials.Tools.emerald.getMaxUses());
-            this.setUnlocalizedName(ItemNames.emeraldShovel);
+        public ItemEmeraldShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -232,12 +194,9 @@ public class FergoItems
 
     public static final class ItemEmeraldAxe extends ItemAxeFT
     {
-        public static final ItemEmeraldAxe instance = new ItemEmeraldAxe();
 
-        public ItemEmeraldAxe()
-        {
-            super(Materials.Tools.emerald, Materials.Tools.emerald.getMaxUses());
-            this.setUnlocalizedName(ItemNames.emeraldAxe);
+        public ItemEmeraldAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -248,12 +207,9 @@ public class FergoItems
 
     public static final class ItemEmeraldHoe extends ItemHoeFT
     {
-        public static final ItemEmeraldHoe instance = new ItemEmeraldHoe();
 
-        public ItemEmeraldHoe()
-        {
-            super(Materials.Tools.emerald, Materials.Tools.emerald.getMaxUses());
-            this.setUnlocalizedName(ItemNames.emeraldHoe);
+        public ItemEmeraldHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -264,12 +220,9 @@ public class FergoItems
 
     public static final class ItemEmeraldSword extends ItemSwordFT
     {
-        public static final ItemEmeraldSword instance = new ItemEmeraldSword();
 
-        public ItemEmeraldSword()
-        {
-            super(Materials.Tools.emerald, Materials.Tools.emerald.getMaxUses());
-            this.setUnlocalizedName(ItemNames.emeraldSword);
+        public ItemEmeraldSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -280,15 +233,12 @@ public class FergoItems
 
     public static final class ItemLapisPickaxe extends ItemPickaxeFT
     {
-    public static final ItemLapisPickaxe instance = new ItemLapisPickaxe();
 
-    public ItemLapisPickaxe()
-    {
-        super(Materials.Tools.lapis, Materials.Tools.lapis.getMaxUses());
-        this.setUnlocalizedName(ItemNames.lapisPickaxe);
-    }
+        public ItemLapisPickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
+        }
 
-    @Override
+        @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
         list.add(NameHelper.translateToLocal(Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
     }
@@ -296,12 +246,9 @@ public class FergoItems
 
     public static final class ItemLapisShovel extends ItemShovelFT
     {
-        public static final ItemLapisShovel instance = new ItemLapisShovel();
 
-        public ItemLapisShovel()
-        {
-            super(Materials.Tools.lapis, Materials.Tools.lapis.getMaxUses());
-            this.setUnlocalizedName(ItemNames.lapisShovel);
+        public ItemLapisShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -312,12 +259,9 @@ public class FergoItems
 
     public static final class ItemLapisAxe extends ItemAxeFT
     {
-        public static final ItemLapisAxe instance = new ItemLapisAxe();
 
-        public ItemLapisAxe()
-        {
-            super(Materials.Tools.lapis, Materials.Tools.lapis.getMaxUses());
-            this.setUnlocalizedName(ItemNames.lapisAxe);
+        public ItemLapisAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -328,12 +272,9 @@ public class FergoItems
 
     public static final class ItemLapisHoe extends ItemHoeFT
     {
-        public static final ItemLapisHoe instance = new ItemLapisHoe();
 
-        public ItemLapisHoe()
-        {
-            super(Materials.Tools.lapis, Materials.Tools.lapis.getMaxUses());
-            this.setUnlocalizedName(ItemNames.lapisHoe);
+        public ItemLapisHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -344,12 +285,9 @@ public class FergoItems
 
     public static final class ItemLapisSword extends ItemSwordFT
     {
-        public static final ItemLapisSword instance = new ItemLapisSword();
 
-        public ItemLapisSword()
-        {
-            super(Materials.Tools.lapis, Materials.Tools.lapis.getMaxUses());
-            this.setUnlocalizedName(ItemNames.lapisSword);
+        public ItemLapisSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -360,12 +298,8 @@ public class FergoItems
 
     public static final class ItemBronzePickaxe extends ItemPickaxeFT
     {
-        public static final ItemBronzePickaxe instance = new ItemBronzePickaxe();
-
-        public ItemBronzePickaxe()
-        {
-            super(Materials.Tools.bronze, Materials.Tools.bronze.getMaxUses());
-            this.setUnlocalizedName(ItemNames.bronzePickaxe);
+        public ItemBronzePickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -376,12 +310,9 @@ public class FergoItems
 
     public static final class ItemBronzeShovel extends ItemShovelFT
     {
-        public static final ItemBronzeShovel instance = new ItemBronzeShovel();
 
-        public ItemBronzeShovel()
-        {
-            super(Materials.Tools.bronze, Materials.Tools.bronze.getMaxUses());
-            this.setUnlocalizedName(ItemNames.bronzeShovel);
+        public ItemBronzeShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -392,12 +323,9 @@ public class FergoItems
 
     public static final class ItemBronzeAxe extends ItemAxeFT
     {
-        public static final ItemBronzeAxe instance = new ItemBronzeAxe();
 
-        public ItemBronzeAxe()
-        {
-            super(Materials.Tools.bronze, Materials.Tools.bronze.getMaxUses());
-            this.setUnlocalizedName(ItemNames.bronzeAxe);
+        public ItemBronzeAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -408,12 +336,9 @@ public class FergoItems
 
     public static final class ItemBronzeHoe extends ItemHoeFT
     {
-        public static final ItemBronzeHoe instance = new ItemBronzeHoe();
 
-        public ItemBronzeHoe()
-        {
-            super(Materials.Tools.bronze, Materials.Tools.bronze.getMaxUses());
-            this.setUnlocalizedName(ItemNames.bronzeHoe);
+        public ItemBronzeHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -424,12 +349,9 @@ public class FergoItems
 
     public static final class ItemBronzeSword extends ItemSwordFT
     {
-        public static final ItemBronzeSword instance = new ItemBronzeSword();
 
-        public ItemBronzeSword()
-        {
-            super(Materials.Tools.bronze, Materials.Tools.bronze.getMaxUses());
-            this.setUnlocalizedName(ItemNames.bronzeSword);
+        public ItemBronzeSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -440,12 +362,9 @@ public class FergoItems
 
     public static final class ItemCoalPickaxe extends ItemPickaxeFT
     {
-        public static final ItemCoalPickaxe instance = new ItemCoalPickaxe();
 
-        public ItemCoalPickaxe()
-        {
-            super(Materials.Tools.coal, Materials.Tools.coal.getMaxUses());
-            this.setUnlocalizedName(ItemNames.coalPickaxe);
+        public ItemCoalPickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -456,12 +375,9 @@ public class FergoItems
 
     public static final class ItemCoalShovel extends ItemShovelFT
     {
-        public static final ItemCoalShovel instance = new ItemCoalShovel();
 
-        public ItemCoalShovel()
-        {
-            super(Materials.Tools.coal, Materials.Tools.coal.getMaxUses());
-            this.setUnlocalizedName(ItemNames.coalShovel);
+        public ItemCoalShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -472,12 +388,9 @@ public class FergoItems
 
     public static final class ItemCoalAxe extends ItemAxeFT
     {
-        public static final ItemCoalAxe instance = new ItemCoalAxe();
 
-        public ItemCoalAxe()
-        {
-            super(Materials.Tools.coal, Materials.Tools.coal.getMaxUses());
-            this.setUnlocalizedName(ItemNames.coalAxe);
+        public ItemCoalAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -488,12 +401,9 @@ public class FergoItems
 
     public static final class ItemCoalHoe extends ItemHoeFT
     {
-        public static final ItemCoalHoe instance = new ItemCoalHoe();
 
-        public ItemCoalHoe()
-        {
-            super(Materials.Tools.coal, Materials.Tools.coal.getMaxUses());
-            this.setUnlocalizedName(ItemNames.coalHoe);
+        public ItemCoalHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -504,12 +414,9 @@ public class FergoItems
 
     public static final class ItemCoalSword extends ItemSwordFT
     {
-        public static final ItemCoalSword instance = new ItemCoalSword();
 
-        public ItemCoalSword()
-        {
-            super(Materials.Tools.coal, Materials.Tools.coal.getMaxUses());
-            this.setUnlocalizedName(ItemNames.coalSword);
+        public ItemCoalSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -520,12 +427,9 @@ public class FergoItems
 
     public static final class ItemGlowstonePickaxe extends ItemPickaxeFT
     {
-        public static final ItemGlowstonePickaxe instance = new ItemGlowstonePickaxe();
 
-        public ItemGlowstonePickaxe()
-        {
-            super(Materials.Tools.glowstone, Materials.Tools.glowstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.glowstonePickaxe);
+        public ItemGlowstonePickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -536,12 +440,9 @@ public class FergoItems
 
     public static final class ItemGlowstoneShovel extends ItemShovelFT
     {
-        public static final ItemGlowstoneShovel instance = new ItemGlowstoneShovel();
 
-        public ItemGlowstoneShovel()
-        {
-            super(Materials.Tools.glowstone, Materials.Tools.glowstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.glowstoneShovel);
+        public ItemGlowstoneShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -552,12 +453,9 @@ public class FergoItems
 
     public static final class ItemGlowstoneAxe extends ItemAxeFT
     {
-        public static final ItemGlowstoneAxe instance = new ItemGlowstoneAxe();
 
-        public ItemGlowstoneAxe()
-        {
-            super(Materials.Tools.glowstone, Materials.Tools.glowstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.glowstoneAxe);
+        public ItemGlowstoneAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -568,12 +466,9 @@ public class FergoItems
 
     public static final class ItemGlowstoneHoe extends ItemHoeFT
     {
-        public static final ItemGlowstoneHoe instance = new ItemGlowstoneHoe();
 
-        public ItemGlowstoneHoe()
-        {
-            super(Materials.Tools.glowstone, Materials.Tools.glowstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.glowstoneHoe);
+        public ItemGlowstoneHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -584,12 +479,8 @@ public class FergoItems
 
     public static final class ItemGlowstoneSword extends ItemSwordFT
     {
-        public static final ItemGlowstoneSword instance = new ItemGlowstoneSword();
-
-        public ItemGlowstoneSword()
-        {
-            super(Materials.Tools.glowstone, Materials.Tools.glowstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.glowstoneSword);
+        public ItemGlowstoneSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -600,12 +491,9 @@ public class FergoItems
 
     public static final class ItemAdamantiumPickaxe extends ItemPickaxeFT
     {
-        public static final ItemAdamantiumPickaxe instance = new ItemAdamantiumPickaxe();
 
-        public ItemAdamantiumPickaxe()
-        {
-            super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
-            this.setUnlocalizedName(ItemNames.adamantiumPickaxe);
+        public ItemAdamantiumPickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -616,12 +504,9 @@ public class FergoItems
 
     public static final class ItemAdamantiumShovel extends ItemShovelFT
     {
-        public static final ItemAdamantiumShovel instance = new ItemAdamantiumShovel();
 
-        public ItemAdamantiumShovel()
-        {
-            super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
-            this.setUnlocalizedName(ItemNames.adamantiumShovel);
+        public ItemAdamantiumShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -632,12 +517,9 @@ public class FergoItems
 
     public static final class ItemAdamantiumAxe extends ItemAxeFT
     {
-        public static final ItemAdamantiumAxe instance = new ItemAdamantiumAxe();
 
-        public ItemAdamantiumAxe()
-        {
-            super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
-            this.setUnlocalizedName(ItemNames.adamantiumAxe);
+        public ItemAdamantiumAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -648,12 +530,8 @@ public class FergoItems
 
     public static final class ItemAdamantiumHoe extends ItemHoeFT
     {
-        public static final ItemAdamantiumHoe instance = new ItemAdamantiumHoe();
-
-        public ItemAdamantiumHoe()
-        {
-            super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
-            this.setUnlocalizedName(ItemNames.adamantiumHoe);
+        public ItemAdamantiumHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -664,12 +542,9 @@ public class FergoItems
 
     public static final class ItemAdamantiumSword extends ItemSwordFT
     {
-        public static final ItemAdamantiumSword instance = new ItemAdamantiumSword();
 
-        public ItemAdamantiumSword()
-        {
-            super(Materials.Tools.adamantium, Materials.Tools.adamantium.getMaxUses());
-            this.setUnlocalizedName(ItemNames.adamantiumSword);
+        public ItemAdamantiumSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -680,11 +555,9 @@ public class FergoItems
 
     public static final class ItemSilkPickaxe extends ItemPickaxeFT
     {
-        public static final ItemSilkPickaxe instance = new ItemSilkPickaxe();
 
-        public ItemSilkPickaxe(){
-            super(Materials.Tools.silk, Materials.Tools.silk.getMaxUses());
-            this.setUnlocalizedName(ItemNames.silkPickaxe);
+        public ItemSilkPickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -695,11 +568,9 @@ public class FergoItems
 
     public static final class ItemSilkShovel extends ItemShovelFT
     {
-        public static final ItemSilkShovel instance = new ItemSilkShovel();
 
-        public ItemSilkShovel(){
-            super(Materials.Tools.silk, Materials.Tools.silk.getMaxUses());
-            this.setUnlocalizedName(ItemNames.silkShovel);
+        public ItemSilkShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -710,11 +581,9 @@ public class FergoItems
 
     public static final class ItemSilkAxe extends ItemAxeFT
     {
-        public static final ItemSilkAxe instance = new ItemSilkAxe();
 
-        public ItemSilkAxe(){
-            super(Materials.Tools.silk, Materials.Tools.silk.getMaxUses());
-            this.setUnlocalizedName(ItemNames.silkAxe);
+        public ItemSilkAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -725,11 +594,9 @@ public class FergoItems
 
     public static final class ItemSilkHoe extends ItemHoeFT
     {
-        public static final ItemSilkHoe instance = new ItemSilkHoe();
 
-        public ItemSilkHoe(){
-            super(Materials.Tools.silk, Materials.Tools.silk.getMaxUses());
-            this.setUnlocalizedName(ItemNames.silkHoe);
+        public ItemSilkHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -740,12 +607,9 @@ public class FergoItems
 
     public static final class ItemSilkSword extends ItemSwordFT
     {
-        public static final ItemSilkSword instance = new ItemSilkSword();
 
-        public ItemSilkSword()
-        {
-            super(Materials.Tools.silk, Materials.Tools.silk.getMaxUses());
-            this.setUnlocalizedName(ItemNames.silkSword);
+        public ItemSilkSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -756,11 +620,9 @@ public class FergoItems
 
     public static final class ItemRedstonePickaxe extends ItemPickaxeFT
     {
-        public static final ItemRedstonePickaxe instance = new ItemRedstonePickaxe();
 
-        public ItemRedstonePickaxe(){
-            super(Materials.Tools.redstone, Materials.Tools.redstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.redstonePickaxe);
+        public ItemRedstonePickaxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -771,11 +633,9 @@ public class FergoItems
 
     public static final class ItemRedstoneShovel extends ItemShovelFT
     {
-        public static final ItemRedstoneShovel instance = new ItemRedstoneShovel();
 
-        public ItemRedstoneShovel(){
-            super(Materials.Tools.redstone, Materials.Tools.redstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.redstoneShovel);
+        public ItemRedstoneShovel(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -786,11 +646,9 @@ public class FergoItems
 
     public static final class ItemRedstoneAxe extends ItemAxeFT
     {
-        public static final ItemRedstoneAxe instance = new ItemRedstoneAxe();
 
-        public ItemRedstoneAxe(){
-            super(Materials.Tools.redstone, Materials.Tools.redstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.redstoneAxe);
+        public ItemRedstoneAxe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -801,11 +659,9 @@ public class FergoItems
 
     public static final class ItemRedstoneHoe extends ItemHoeFT
     {
-        public static final ItemRedstoneHoe instance = new ItemRedstoneHoe();
 
-        public ItemRedstoneHoe(){
-            super(Materials.Tools.redstone, Materials.Tools.redstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.redstoneHoe);
+        public ItemRedstoneHoe(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -816,12 +672,9 @@ public class FergoItems
 
     public static final class ItemRedstoneSword extends ItemSwordFT
     {
-        public static final ItemRedstoneSword instance = new ItemRedstoneSword();
 
-        public ItemRedstoneSword()
-        {
-            super(Materials.Tools.redstone, Materials.Tools.redstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.redstoneSword);
+        public ItemRedstoneSword(ToolMaterial material, int maxUses) {
+            super(material, maxUses);
         }
 
         @Override
@@ -832,11 +685,9 @@ public class FergoItems
 
     public static final class ItemQuartzShears extends ItemShearsFT
     {
-        public static final ItemQuartzShears instance = new ItemQuartzShears();
-        public ItemQuartzShears()
-        {
-            super(Materials.Tools.quartz.getMaxUses());
-            this.setUnlocalizedName(ItemNames.quartzShears);
+
+        public ItemQuartzShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -847,12 +698,9 @@ public class FergoItems
 
     public static final class ItemObsidianShears extends ItemShearsFT
     {
-        public static final ItemObsidianShears instance = new ItemObsidianShears();
 
-        public ItemObsidianShears()
-        {
-            super(Materials.Tools.obsidian.getMaxUses());
-            this.setUnlocalizedName(ItemNames.obsidianShears);
+        public ItemObsidianShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -863,12 +711,9 @@ public class FergoItems
 
     public static final class ItemEmeraldShears extends ItemShearsFT
     {
-        public static final ItemEmeraldShears instance = new ItemEmeraldShears();
 
-        public ItemEmeraldShears()
-        {
-            super(Materials.Tools.emerald.getMaxUses());
-            this.setUnlocalizedName(ItemNames.emeraldShears);
+        public ItemEmeraldShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -879,12 +724,9 @@ public class FergoItems
 
     public static final class ItemLapisShears extends ItemShearsFT
     {
-        public static final ItemLapisShears instance = new ItemLapisShears();
 
-        public ItemLapisShears()
-        {
-            super(Materials.Tools.lapis.getMaxUses());
-            this.setUnlocalizedName(ItemNames.lapisShears);
+        public ItemLapisShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -895,12 +737,9 @@ public class FergoItems
 
     public static final class ItemBronzeShears extends ItemShearsFT
     {
-        public static final ItemBronzeShears instance = new ItemBronzeShears();
 
-        public ItemBronzeShears()
-        {
-            super(Materials.Tools.bronze.getMaxUses());
-            this.setUnlocalizedName(ItemNames.bronzeShears);
+        public ItemBronzeShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -911,12 +750,9 @@ public class FergoItems
 
     public static final class ItemCoalShears extends ItemShearsFT
     {
-        public static final ItemCoalShears instance = new ItemCoalShears();
 
-        public ItemCoalShears()
-        {
-            super(Materials.Tools.coal.getMaxUses());
-            this.setUnlocalizedName(ItemNames.coalShears);
+        public ItemCoalShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -927,12 +763,9 @@ public class FergoItems
 
     public static final class ItemGlowstoneShears extends ItemShearsFT
     {
-        public static final ItemGlowstoneShears instance = new ItemGlowstoneShears();
 
-        public ItemGlowstoneShears()
-        {
-            super(Materials.Tools.glowstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.glowstoneShears);
+        public ItemGlowstoneShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -943,12 +776,9 @@ public class FergoItems
 
     public static final class ItemAdamantiumShears extends ItemShearsFT
     {
-        public static final ItemAdamantiumShears instance = new ItemAdamantiumShears();
 
-        public ItemAdamantiumShears()
-        {
-            super(Materials.Tools.adamantium.getMaxUses());
-            this.setUnlocalizedName(ItemNames.adamantiumShears);
+        public ItemAdamantiumShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -959,12 +789,9 @@ public class FergoItems
 
     public static final class ItemSilkShears extends ItemShearsFT
     {
-        public static final ItemSilkShears instance = new ItemSilkShears();
 
-        public ItemSilkShears()
-        {
-            super(Materials.Tools.silk.getMaxUses());
-            this.setUnlocalizedName(ItemNames.silkShears);
+        public ItemSilkShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -975,12 +802,9 @@ public class FergoItems
 
     public static final class ItemRedstoneShears extends ItemShearsFT
     {
-        public static final ItemRedstoneShears instance = new ItemRedstoneShears();
 
-        public ItemRedstoneShears()
-        {
-            super(Materials.Tools.redstone.getMaxUses());
-            this.setUnlocalizedName(ItemNames.redstoneShears);
+        public ItemRedstoneShears(int maxUses) {
+            super(maxUses);
         }
 
         @Override
@@ -2277,11 +2101,8 @@ public class FergoItems
 
     public static final class ItemObsidianIngot extends ItemFT
     {
-        public static final ItemObsidianIngot instance = new ItemObsidianIngot();
-
         public ItemObsidianIngot(){
             super();
-            this.setUnlocalizedName(ItemNames.ingotObsidian);
         }
 
         @Override
@@ -2294,12 +2115,9 @@ public class FergoItems
 
     public static final class ItemEmeraldGem extends ItemFT
     {
-        public static final ItemEmeraldGem instance = new ItemEmeraldGem();
-
         public ItemEmeraldGem()
         {
             super();
-            this.setUnlocalizedName(ItemNames.gemEmerald);
         }
 
         @Override
@@ -2314,12 +2132,9 @@ public class FergoItems
 
     public static final class ItemLapisGem extends ItemFT
     {
-        public static final ItemLapisGem instance = new ItemLapisGem();
-
         public ItemLapisGem()
         {
             super();
-            this.setUnlocalizedName(ItemNames.gemLapis);
         }
 
         @Override
@@ -2334,12 +2149,9 @@ public class FergoItems
 
     public static final class ItemBronzeIngot extends ItemFT
     {
-        public static final ItemBronzeIngot instance = new ItemBronzeIngot();
-
         public ItemBronzeIngot()
         {
             super();
-            this.setUnlocalizedName(ItemNames.ingotBronze);
         }
 
         @Override
@@ -2353,12 +2165,9 @@ public class FergoItems
 
     public static final class ItemCoalIngot extends ItemFT
     {
-        public static final ItemCoalIngot instance = new ItemCoalIngot();
-
         public ItemCoalIngot()
         {
             super();
-            this.setUnlocalizedName(ItemNames.ingotCoal);
         }
 
         @Override
@@ -2372,12 +2181,9 @@ public class FergoItems
 
     public static final class ItemGlowstoneIngot extends ItemFT
     {
-        public static final ItemGlowstoneIngot instance = new ItemGlowstoneIngot();
-
         public ItemGlowstoneIngot()
         {
             super();
-            this.setUnlocalizedName(ItemNames.ingotGlowstone);
         }
 
         @Override
@@ -2392,12 +2198,9 @@ public class FergoItems
 
     public static final class ItemAdamantiumIngot extends ItemFT
     {
-        public static final ItemAdamantiumIngot instance = new ItemAdamantiumIngot();
-
         public ItemAdamantiumIngot()
         {
             super();
-            this.setUnlocalizedName(ItemNames.ingotAdamantium);
         }
 
         @Override
@@ -2412,12 +2215,9 @@ public class FergoItems
 
     public static final class ItemSilkGem extends ItemFT
     {
-        public static final ItemSilkGem instance = new ItemSilkGem();
-
         public ItemSilkGem()
         {
             super();
-            this.setUnlocalizedName(ItemNames.gemSilk);
         }
 
         @Override
@@ -2431,12 +2231,9 @@ public class FergoItems
 
     public static final class ItemRedstoneGem extends ItemFT
     {
-        public static final ItemRedstoneGem instance = new ItemRedstoneGem();
-
         public ItemRedstoneGem()
         {
             super();
-            this.setUnlocalizedName(ItemNames.gemRedstone);
         }
 
         @Override
@@ -2450,12 +2247,9 @@ public class FergoItems
 
     public static final class ItemExpShard extends ItemFT
     {
-        public static final ItemExpShard instance = new ItemExpShard();
-
         public ItemExpShard()
         {
             super();
-            this.setUnlocalizedName(ItemNames.shardExp);
         }
 
         @Override
@@ -2469,12 +2263,9 @@ public class FergoItems
 
     public static final class ItemExpCollector extends ItemFT
     {
-        public static final ItemExpCollector instance = new ItemExpCollector();
-
         public ItemExpCollector()
         {
             super();
-            this.setUnlocalizedName(ItemNames.expCollector);
         }
 
         @Override
@@ -2485,14 +2276,8 @@ public class FergoItems
 
     public static final class ItemArmorQuartz extends ItemArmorFT
     {
-        public static final ItemArmorQuartz instanceHelmet = new ItemArmorQuartz(ArmorType.HELMET);
-        public static final ItemArmorQuartz instanceChest = new ItemArmorQuartz(ArmorType.CHEST);
-        public static final ItemArmorQuartz instanceLegs = new ItemArmorQuartz(ArmorType.LEGS);
-        public static final ItemArmorQuartz instanceBoots = new ItemArmorQuartz(ArmorType.BOOTS);
-
-        public ItemArmorQuartz(ArmorType type)
-        {
-            super(ArmorNames.quartz, Materials.Armor.quartzArmor, type);
+        public ItemArmorQuartz(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
         public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
@@ -2500,22 +2285,22 @@ public class FergoItems
             return repairItem.isItemEqual(new ItemStack(Items.quartz)) || super.getIsRepairable(itemToRepair, repairItem);
         }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.quartzArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.quartzArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.quartzArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.quartzArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
@@ -2529,37 +2314,31 @@ public class FergoItems
 
     public static final class ItemArmorObsidian extends ItemArmorFT
     {
-        public static final ItemArmorObsidian instanceHelmet = new ItemArmorObsidian(ArmorType.HELMET);
-        public static final ItemArmorObsidian instanceChest = new ItemArmorObsidian(ArmorType.CHEST);
-        public static final ItemArmorObsidian instanceLegs = new ItemArmorObsidian(ArmorType.LEGS);
-        public static final ItemArmorObsidian instanceBoots = new ItemArmorObsidian(ArmorType.BOOTS);
-
-        public ItemArmorObsidian(ArmorType type)
-        {
-            super(ArmorNames.obsidian, Materials.Armor.obsidianArmor, type);
+        public ItemArmorObsidian(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
-        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
-        {
-            return repairItem.isItemEqual(new ItemStack(ItemObsidianIngot.instance)) || super.getIsRepairable(itemToRepair, repairItem);
-        }
+//        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
+//        {
+//            return repairItem.isItemEqual(new ItemStack(ItemObsidianIngot.instance)) || super.getIsRepairable(itemToRepair, repairItem);
+//        }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.obsidianArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.obsidianArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.obsidianArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.obsidianArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
@@ -2573,37 +2352,31 @@ public class FergoItems
 
     public static final class ItemArmorEmerald extends ItemArmorFT
     {
-        public static final ItemArmorEmerald instanceHelmet = new ItemArmorEmerald(ArmorType.HELMET);
-        public static final ItemArmorEmerald instanceChest = new ItemArmorEmerald(ArmorType.CHEST);
-        public static final ItemArmorEmerald instanceLegs = new ItemArmorEmerald(ArmorType.LEGS);
-        public static final ItemArmorEmerald instanceBoots = new ItemArmorEmerald(ArmorType.BOOTS);
-
-        public ItemArmorEmerald(ArmorType type)
-        {
-            super(ArmorNames.emerald, Materials.Armor.emeraldArmor, type);
+        public ItemArmorEmerald(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
-        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
-        {
-            return repairItem.isItemEqual(new ItemStack(ItemEmeraldGem.instance)) || super.getIsRepairable(itemToRepair, repairItem);
-        }
+//        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
+//        {
+//            return repairItem.isItemEqual(new ItemStack(ItemEmeraldGem.instance)) || super.getIsRepairable(itemToRepair, repairItem);
+//        }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.emeraldArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.emeraldArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.emeraldArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.emeraldArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
@@ -2617,37 +2390,31 @@ public class FergoItems
 
     public static final class ItemArmorLapis extends ItemArmorFT
     {
-        public static final ItemArmorLapis instanceHelmet = new ItemArmorLapis(ArmorType.HELMET);
-        public static final ItemArmorLapis instanceChest = new ItemArmorLapis(ArmorType.CHEST);
-        public static final ItemArmorLapis instanceLegs = new ItemArmorLapis(ArmorType.LEGS);
-        public static final ItemArmorLapis instanceBoots = new ItemArmorLapis(ArmorType.BOOTS);
-
-        public ItemArmorLapis(ArmorType type)
-        {
-            super(ArmorNames.lapis, Materials.Armor.lapisArmor, type);
+        public ItemArmorLapis(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
-        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
-        {
-            return repairItem.isItemEqual(new ItemStack(ItemLapisGem.instance)) || super.getIsRepairable(itemToRepair, repairItem);
-        }
+//        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
+//        {
+//            return repairItem.isItemEqual(new ItemStack(ItemLapisGem.instance)) || super.getIsRepairable(itemToRepair, repairItem);
+//        }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.lapisArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.lapisArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.lapisArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.lapisArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
@@ -2659,39 +2426,32 @@ public class FergoItems
         }
     }
 
-    public static final class ItemArmorBronze extends ItemArmorFT
-    {
-        public static final ItemArmorBronze instanceHelmet = new ItemArmorBronze(ArmorType.HELMET);
-        public static final ItemArmorBronze instanceChest = new ItemArmorBronze(ArmorType.CHEST);
-        public static final ItemArmorBronze instanceLegs = new ItemArmorBronze(ArmorType.LEGS);
-        public static final ItemArmorBronze instanceBoots = new ItemArmorBronze(ArmorType.BOOTS);
-
-        public ItemArmorBronze(ArmorType type)
-        {
-            super(ArmorNames.bronze, Materials.Armor.bronzeArmor, type);
+    public static final class ItemArmorBronze extends ItemArmorFT{
+        public ItemArmorBronze(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
-        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
-        {
-            return repairItem.isItemEqual(new ItemStack(ItemBronzeIngot.instance)) || super.getIsRepairable(itemToRepair, repairItem);
-        }
+//        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
+//        {
+//            return repairItem.isItemEqual(new ItemStack(ItemBronzeIngot.instance)) || super.getIsRepairable(itemToRepair, repairItem);
+//        }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.bronzeArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.bronzeArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.bronzeArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.bronzeArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
@@ -2705,14 +2465,8 @@ public class FergoItems
 
     public static final class ItemArmorCoal extends ItemArmorFT
     {
-        public static final ItemArmorCoal instanceHelmet = new ItemArmorCoal(ArmorType.HELMET);
-        public static final ItemArmorCoal instanceChest = new ItemArmorCoal(ArmorType.CHEST);
-        public static final ItemArmorCoal instanceLegs = new ItemArmorCoal(ArmorType.LEGS);
-        public static final ItemArmorCoal instanceBoots = new ItemArmorCoal(ArmorType.BOOTS);
-
-        public ItemArmorCoal(ArmorType type)
-        {
-            super(ArmorNames.coal, Materials.Armor.coalArmor, type);
+        public ItemArmorCoal(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
         public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
@@ -2720,22 +2474,22 @@ public class FergoItems
             return repairItem.isItemEqual(new ItemStack(Items.coal)) || super.getIsRepairable(itemToRepair, repairItem);
         }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.coalArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.coalArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.coalArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.coalArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
@@ -2749,38 +2503,32 @@ public class FergoItems
 
     public static final class ItemArmorGlowstone extends ItemArmorFT
     {
-        public static final ItemArmorGlowstone instanceHelmet = new ItemArmorGlowstone(ArmorType.HELMET);
-        public static final ItemArmorGlowstone instanceChest = new ItemArmorGlowstone(ArmorType.CHEST);
-        public static final ItemArmorGlowstone instanceLegs = new ItemArmorGlowstone(ArmorType.LEGS);
-        public static final ItemArmorGlowstone instanceBoots = new ItemArmorGlowstone(ArmorType.BOOTS);
-
-        public ItemArmorGlowstone(ArmorType type)
-        {
-            super(ArmorNames.glowstone, Materials.Armor.glowstoneArmor, type);
+        public ItemArmorGlowstone(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
-        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
-        {
-            return repairItem.isItemEqual(new ItemStack(ItemGlowstoneIngot.instance)) || super.getIsRepairable(itemToRepair, repairItem);
-        }
+//        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
+//        {
+//            return repairItem.isItemEqual(new ItemStack(ItemGlowstoneIngot.instance)) || super.getIsRepairable(itemToRepair, repairItem);
+//        }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.glowstoneArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.glowstoneArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.glowstoneArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.glowstoneArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
+//
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
             list.add(NameHelper.translateToLocal(ArmorTooltipLocale.reductAmount));
@@ -2793,37 +2541,32 @@ public class FergoItems
 
     public static final class ItemArmorAdamantium extends ItemArmorFT
     {
-        public static final ItemArmorAdamantium instanceHelmet = new ItemArmorAdamantium(ArmorType.HELMET);
-        public static final ItemArmorAdamantium instanceChest = new ItemArmorAdamantium(ArmorType.CHEST);
-        public static final ItemArmorAdamantium instanceLegs = new ItemArmorAdamantium(ArmorType.LEGS);
-        public static final ItemArmorAdamantium instanceBoots = new ItemArmorAdamantium(ArmorType.BOOTS);
 
-        public ItemArmorAdamantium(ArmorType type)
-        {
-            super(ArmorNames.adamantium, Materials.Armor.adamantiumArmor, type);
+        public ItemArmorAdamantium(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
         public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
         {
-            return repairItem.isItemEqual(new ItemStack(ItemAdamantiumIngot.instance)) || super.getIsRepairable(itemToRepair, repairItem);
+            return repairItem.isItemEqual(new ItemStack(FergoToolsItems.ingotAdamantium)) || super.getIsRepairable(itemToRepair, repairItem);
         }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.adamantiumArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.adamantiumArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.adamantiumArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.adamantiumArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         public void onArmorTick(World world, EntityPlayer player, ItemStack armor)
         {
@@ -2832,36 +2575,36 @@ public class FergoItems
             ItemStack legs = player.getCurrentArmor(1);
             ItemStack boots = player.getCurrentArmor(0);
 
-            if (helmet != null) {
-                if (helmet.getItem() == instanceHelmet) {
-                    player.addPotionEffect(PotionList.waterBreathing);
-                    player.addPotionEffect(PotionList.saturation);
-                }
-            }
+//            if (helmet != null) {
+//                if (helmet.getItem() == instanceHelmet) {
+//                    player.addPotionEffect(PotionList.waterBreathing);
+//                    player.addPotionEffect(PotionList.saturation);
+//                }
+//            }
 
-            if (chest != null)
-            {
-                if (chest.getItem() == instanceChest)
-                {
-                    player.addPotionEffect(PotionList.absorption);
-                }
-            }
+//            if (chest != null)
+//            {
+//                if (chest.getItem() == instanceChest)
+//                {
+//                    player.addPotionEffect(PotionList.absorption);
+//                }
+//            }
 
-            if (legs != null)
-            {
-                if (legs.getItem() == instanceLegs)
-                {
-                    player.addPotionEffect(PotionList.jump);
-                }
-            }
+//            if (legs != null)
+//            {
+//                if (legs.getItem() == instanceLegs)
+//                {
+//                    player.addPotionEffect(PotionList.jump);
+//                }
+//            }
 
-            if (boots != null)
-            {
-                if (boots.getItem() == instanceBoots)
-                {
-                    player.addPotionEffect(PotionList.moveSpeed);
-                }
-            }
+//            if (boots != null)
+//            {
+//                if (boots.getItem() == instanceBoots)
+//                {
+//                    player.addPotionEffect(PotionList.moveSpeed);
+//                }
+//            }
         }
 
         @Override
@@ -2876,37 +2619,31 @@ public class FergoItems
 
     public static final class ItemArmorRedstone extends ItemArmorFT
     {
-        public static final ItemArmorRedstone instanceHelmet = new ItemArmorRedstone(ArmorType.HELMET);
-        public static final ItemArmorRedstone instanceChest = new ItemArmorRedstone(ArmorType.CHEST);
-        public static final ItemArmorRedstone instanceLegs = new ItemArmorRedstone(ArmorType.LEGS);
-        public static final ItemArmorRedstone instanceBoots = new ItemArmorRedstone(ArmorType.BOOTS);
-
-        public ItemArmorRedstone(ArmorType type)
-        {
-            super(ArmorNames.redstone, Materials.Armor.redstoneArmor, type);
+        public ItemArmorRedstone(String armorName, ArmorMaterial material, ArmorType type) {
+            super(armorName, material, type);
         }
 
-        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
-        {
-            return repairItem.isItemEqual(new ItemStack(ItemRedstoneGem.instance)) || super.getIsRepairable(itemToRepair, repairItem);
-        }
+//        public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
+//        {
+//            return repairItem.isItemEqual(new ItemStack(ItemRedstoneGem.instance)) || super.getIsRepairable(itemToRepair, repairItem);
+//        }
 
-        @Override
-        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
-            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
-            {
-                return Textures.redstoneArmorLayer1;
-            }
-
-            if (armor.getItem() == instanceLegs)
-            {
-                return Textures.redstoneArmorLayer2;
-            }
-            else
-            {
-                return null;
-            }
-        }
+//        @Override
+//        public String getArmorTexture(ItemStack armor, Entity entity, int slot, String type) {
+//            if (armor.getItem() == instanceHelmet || armor.getItem() == instanceChest || armor.getItem() == instanceBoots)
+//            {
+//                return Textures.redstoneArmorLayer1;
+//            }
+//
+//            if (armor.getItem() == instanceLegs)
+//            {
+//                return Textures.redstoneArmorLayer2;
+//            }
+//            else
+//            {
+//                return null;
+//            }
+//        }
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {

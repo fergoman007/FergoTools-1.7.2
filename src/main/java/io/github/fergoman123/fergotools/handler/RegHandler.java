@@ -10,17 +10,12 @@
 package io.github.fergoman123.fergotools.handler;
 
  import io.github.fergoman123.fergotools.FergoTools;
- import io.github.fergoman123.fergotools.block.FTLogs;
- import io.github.fergoman123.fergotools.block.FTPlanks;
- import io.github.fergoman123.fergotools.init.FergoBlocks.*;
- import io.github.fergoman123.fergotools.init.ModBlocks;
- import io.github.fergoman123.fergotools.init.FergoItems.*;
+ import io.github.fergoman123.fergotools.init.FTBlocks.*;
+ import io.github.fergoman123.fergotools.init.FTItems.*;
  import io.github.fergoman123.fergotools.reference.names.BlockNames;
  import io.github.fergoman123.fergotools.reference.names.ItemNames;
  import io.github.fergoman123.fergotools.util.GuiHandler;
  import io.github.fergoman123.fergoutil.helper.RegisterHelper;
- import net.minecraft.item.ItemStack;
- import net.minecraftforge.oredict.OreDictionary;
 
  public class RegHandler {
 
@@ -65,9 +60,36 @@ package io.github.fergoman123.fergotools.handler;
 //        RegisterHelper.registerOre(ItemNames.gemRedstone, ItemObsidianIngot.instance);
 //        RegisterHelper.registerOre(ItemNames.shardExp, ItemExpShard.instance);
 //
+//        RegisterHelper.registerOre("logWood", BlockLogObsidian.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogEmerald.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogLapis.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogBronze.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogCoal.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogGlowstone.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogAdamantium.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogSilk.instance);
+//        RegisterHelper.registerOre("logWood", BlockLogRedstone.instance);
 //
-//        RegisterHelper.registerOre("logWood", new ItemStack(FTLogs.instance, 1, OreDictionary.WILDCARD_VALUE));
-//        RegisterHelper.registerOre("plankWood", new ItemStack(FTPlanks.instance, 1, OreDictionary.WILDCARD_VALUE));
+//        RegisterHelper.registerOre("plankWood", BlockPlankObsidian.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankEmerald.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankLapis.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankBronze.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankCoal.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankGlowstone.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankAdamantium.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankSilk.instance);
+//        RegisterHelper.registerOre("plankWood", BlockPlankRedstone.instance);
+//
+//        RegisterHelper.registerOre("stairWood", BlockStairObsidian.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairEmerald.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairLapis.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairBronze.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairCoal.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairGlowstone.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairAdamantium.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairSilk.instance);
+//        RegisterHelper.registerOre("stairWood", BlockStairRedstone.instance);
+//
 //        RegisterHelper.registerOre("stickWood", ItemStickObsidian.instance);
 //        RegisterHelper.registerOre("stickWood", ItemStickEmerald.instance);
 //        RegisterHelper.registerOre("stickWood", ItemStickLapis.instance);

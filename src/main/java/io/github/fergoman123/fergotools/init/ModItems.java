@@ -1,10 +1,8 @@
 package io.github.fergoman123.fergotools.init;
 
 
-import io.github.fergoman123.fergotools.init.FergoItems.*;
-import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.init.FTItems.*;
 import io.github.fergoman123.fergoutil.helper.RegisterHelper;
-import net.minecraft.item.Item;
 
 public class ModItems
 {

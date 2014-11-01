@@ -9,9 +9,8 @@
 
 package io.github.fergoman123.fergotools.util.item;
 
-import io.github.fergoman123.fergotools.init.FergoItems.*;
-import io.github.fergoman123.fergotools.init.FergoBlocks.*;
-import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergotools.init.FTItems.*;
+import io.github.fergoman123.fergotools.init.FTBlocks.*;
 import io.github.fergoman123.fergoutil.helper.ItemStackHelper;
 import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.furnaces.ObsidianFurnace.BlockObsidianFurnace;

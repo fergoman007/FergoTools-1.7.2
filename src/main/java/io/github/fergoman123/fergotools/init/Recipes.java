@@ -14,8 +14,8 @@ import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.BlockRedst
 import io.github.fergoman123.fergoutil.helper.RecipeHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import io.github.fergoman123.fergotools.init.FergoItems.*;
-import io.github.fergoman123.fergotools.init.FergoBlocks.*;
+import io.github.fergoman123.fergotools.init.FTItems.*;
+import io.github.fergoman123.fergotools.init.FTBlocks.*;
 import static net.minecraft.init.Items.*;
 import static net.minecraft.init.Blocks.*;
 import static net.minecraftforge.oredict.OreDictionary.WILDCARD_VALUE;

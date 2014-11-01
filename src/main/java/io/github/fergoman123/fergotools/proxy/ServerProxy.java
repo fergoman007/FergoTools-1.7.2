@@ -6,9 +6,4 @@ public class ServerProxy extends CommonProxy{
     public void registerEventHandlers() {
         ////NOOP
     }
-
-    @Override
-    public void registerRenderers() {
-        // NOOP
-    }
 }

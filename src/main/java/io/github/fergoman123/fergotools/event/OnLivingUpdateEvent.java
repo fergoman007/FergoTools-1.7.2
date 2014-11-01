@@ -1,8 +1,7 @@
 package io.github.fergoman123.fergotools.event;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import io.github.fergoman123.fergotools.init.FergoItems;
-import io.github.fergoman123.fergotools.util.PotionList;
+import io.github.fergoman123.fergotools.init.FTItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
@@ -20,7 +19,7 @@ public class OnLivingUpdateEvent
                 EntityPlayer player = (EntityPlayer)event.entityLiving;
                 if (player.getCurrentArmor(2) != null)
                 {
-                    if (player.getCurrentArmor(2).getItem() == FergoItems.ItemArmorAdamantium.instanceChest)
+                    if (player.getCurrentArmor(2).getItem() == FTItems.ItemArmorAdamantium.instanceChest)
                     {
                         player.capabilities.allowFlying = true;
                     }

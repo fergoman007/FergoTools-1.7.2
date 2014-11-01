@@ -11,10 +11,9 @@ package io.github.fergoman123.fergotools.handler;
 
  import cpw.mods.fml.common.IWorldGenerator;
  import io.github.fergoman123.fergoutil.helper.GenerationHelper;
- import io.github.fergoman123.fergotools.init.ModBlocks;
  import net.minecraft.world.World;
  import net.minecraft.world.chunk.IChunkProvider;
- import io.github.fergoman123.fergotools.init.FergoBlocks.*;
+ import io.github.fergoman123.fergotools.init.FTBlocks.*;
 
  import java.util.Random;
 

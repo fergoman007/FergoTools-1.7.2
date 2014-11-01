@@ -1,8 +1,6 @@
 package io.github.fergoman123.fergotools.init;
 
-import io.github.fergoman123.fergotools.block.FTLeaves;
-import io.github.fergoman123.fergotools.block.FTLogs;
-import io.github.fergoman123.fergotools.block.FTPlanks;
+import io.github.fergoman123.fergotools.block.FTStairs;
 import io.github.fergoman123.fergotools.furnaces.AdamantiumFurnace.BlockAdamantiumFurnace;
 import io.github.fergoman123.fergotools.furnaces.BronzeFurnace.BlockBronzeFurnace;
 import io.github.fergoman123.fergotools.furnaces.CoalFurnace.BlockCoalFurnace;
@@ -14,7 +12,7 @@ import io.github.fergoman123.fergotools.furnaces.ObsidianFurnace.BlockObsidianFu
 import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFurnace;
 import io.github.fergoman123.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
-import io.github.fergoman123.fergotools.init.FergoBlocks.*;
+import io.github.fergoman123.fergotools.init.FTBlocks.*;
 import io.github.fergoman123.fergotools.init.ItemBlocks.*;
 import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.BlockAdamantiumWorkbench;
 import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.BlockBronzeWorkbench;
@@ -73,9 +71,36 @@ public class ModBlocks{
         RegisterHelper.registerBlock(BlockRedstoneFurnace.instanceActive, ItemBlockRedstoneFurnaceActive.class);
         RegisterHelper.registerBlock(BlockMacerator.instanceActive, ItemBlockMaceratorActive.class);
 
-        RegisterHelper.registerBlock(FTLogs.instance, ItemBlockFTLogs.class);
-        RegisterHelper.registerBlock(FTPlanks.instance, ItemBlockFTPlanks.class);
-        RegisterHelper.registerBlock(FTLeaves.instance, ItemBlockFTLeaves.class);
+        RegisterHelper.registerBlock(BlockLogObsidian.instance, ItemBlockLogObsidian.class);
+        RegisterHelper.registerBlock(BlockLogEmerald.instance, ItemBlockLogEmerald.class);
+        RegisterHelper.registerBlock(BlockLogLapis.instance, ItemBlockLogLapis.class);
+        RegisterHelper.registerBlock(BlockLogBronze.instance, ItemBlockLogBronze.class);
+        RegisterHelper.registerBlock(BlockLogCoal.instance, ItemBlockLogCoal.class);
+        RegisterHelper.registerBlock(BlockLogGlowstone.instance, ItemBlockLogGlowstone.class);
+        RegisterHelper.registerBlock(BlockLogAdamantium.instance, ItemBlockLogAdamantium.class);
+        RegisterHelper.registerBlock(BlockLogSilk.instance, ItemBlockLogSilk.class);
+        RegisterHelper.registerBlock(BlockLogRedstone.instance, ItemBlockLogRedstone.class);
+
+        RegisterHelper.registerBlock(BlockPlankObsidian.instance, ItemBlockPlankObsidian.class);
+        RegisterHelper.registerBlock(BlockPlankEmerald.instance, ItemBlockPlankEmerald.class);
+        RegisterHelper.registerBlock(BlockPlankLapis.instance, ItemBlockPlankLapis.class);
+        RegisterHelper.registerBlock(BlockPlankBronze.instance, ItemBlockPlankBronze.class);
+        RegisterHelper.registerBlock(BlockPlankCoal.instance, ItemBlockPlankCoal.class);
+        RegisterHelper.registerBlock(BlockPlankGlowstone.instance, ItemBlockPlankGlowstone.class);
+        RegisterHelper.registerBlock(BlockPlankAdamantium.instance, ItemBlockPlankAdamantium.class);
+        RegisterHelper.registerBlock(BlockPlankSilk.instance, ItemBlockPlankSilk.class);
+        RegisterHelper.registerBlock(BlockPlankRedstone.instance, ItemBlockPlankRedstone.class);
+
+        RegisterHelper.registerBlock(FTStairs.stairObsidian, ItemBlockStairObsidian.class);
+        RegisterHelper.registerBlock(FTStairs.stairEmerald, ItemBlockStairEmerald.class);
+        RegisterHelper.registerBlock(FTStairs.stairLapis, ItemBlockStairLapis.class);
+        RegisterHelper.registerBlock(FTStairs.stairBronze, ItemBlockStairBronze.class);
+        RegisterHelper.registerBlock(FTStairs.stairCoal, ItemBlockStairCoal.class);
+        RegisterHelper.registerBlock(FTStairs.stairGlowstone, ItemBlockStairGlowstone.class);
+        RegisterHelper.registerBlock(FTStairs.stairAdamantium, ItemBlockStairAdamantium.class);
+        RegisterHelper.registerBlock(FTStairs.stairSilk, ItemBlockStairSilk.class);
+        RegisterHelper.registerBlock(FTStairs.stairRedstone, ItemBlockStairRedstone.class);
+
 
         RegisterHelper.registerBlock(BlockObsidianWorkbench.instance);
         RegisterHelper.registerBlock(BlockEmeraldWorkbench.instance);
