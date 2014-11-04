@@ -31,12 +31,9 @@ public class AdamantiumWorkbench
 {
     public static final class BlockAdamantiumWorkbench extends BlockWorkbenchFT
     {
-        public static final BlockAdamantiumWorkbench instance = new BlockAdamantiumWorkbench();
 
-        public BlockAdamantiumWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.adamantiumWorkbench);
+        public BlockAdamantiumWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)

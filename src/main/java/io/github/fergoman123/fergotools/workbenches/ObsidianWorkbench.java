@@ -26,11 +26,9 @@ import java.util.Random;
 
 public class ObsidianWorkbench {
     public static final class BlockObsidianWorkbench extends BlockWorkbenchFT {
-        public static final BlockObsidianWorkbench instance = new BlockObsidianWorkbench();
-        public BlockObsidianWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.obsidianWorkbench);
+
+        public BlockObsidianWorkbench(String blockName) {
+            super(blockName);
         }
 
         @Override

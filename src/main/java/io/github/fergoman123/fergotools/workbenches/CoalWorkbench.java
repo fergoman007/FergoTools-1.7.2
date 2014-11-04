@@ -32,12 +32,8 @@ public class CoalWorkbench
     public static final class BlockCoalWorkbench extends BlockWorkbenchFT
     {
 
-        public static final BlockCoalWorkbench instance = new BlockCoalWorkbench();
-
-        public BlockCoalWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.coalWorkbench);
+        public BlockCoalWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)

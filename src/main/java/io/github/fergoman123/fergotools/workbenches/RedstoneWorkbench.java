@@ -30,12 +30,9 @@ public class RedstoneWorkbench
 {
     public static final class BlockRedstoneWorkbench extends BlockWorkbenchFT
     {
-        public static final BlockRedstoneWorkbench instance = new BlockRedstoneWorkbench();
 
-        public BlockRedstoneWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.redstoneWorkbench);
+        public BlockRedstoneWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)

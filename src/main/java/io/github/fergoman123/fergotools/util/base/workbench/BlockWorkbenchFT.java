@@ -20,9 +20,10 @@ public abstract class BlockWorkbenchFT extends Block
     @SideOnly(Side.CLIENT)
     public IIcon topIcon, frontIcon, bottomIcon;
 
-    public BlockWorkbenchFT()
+    public BlockWorkbenchFT(String blockName)
     {
         super(Material.wood);
+        this.setBlockName(blockName);
         this.setHardness(2.5f);
         this.setCreativeTab(Tabs.tabFergoCT);
     }

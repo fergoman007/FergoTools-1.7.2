@@ -31,12 +31,9 @@ public class GlowstoneWorkbench
 {
     public static final class BlockGlowstoneWorkbench extends BlockWorkbenchFT
     {
-        public static final BlockGlowstoneWorkbench instance = new BlockGlowstoneWorkbench();
 
-        public BlockGlowstoneWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.glowstoneWorkbench);
+        public BlockGlowstoneWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)

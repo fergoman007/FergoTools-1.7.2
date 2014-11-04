@@ -33,12 +33,9 @@ public class SilkWorkbench
 {
     public static final class BlockSilkWorkbench extends BlockWorkbenchFT
     {
-        public static final BlockSilkWorkbench instance = new BlockSilkWorkbench();
 
-        public BlockSilkWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.silkWorkbench);
+        public BlockSilkWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)

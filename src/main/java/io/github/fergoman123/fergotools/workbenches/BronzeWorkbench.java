@@ -29,12 +29,9 @@ public class BronzeWorkbench
 {
     public static final class BlockBronzeWorkbench extends BlockWorkbenchFT
     {
-        public static final BlockBronzeWorkbench instance = new BlockBronzeWorkbench();
 
-        public BlockBronzeWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.bronzeWorkbench);
+        public BlockBronzeWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)

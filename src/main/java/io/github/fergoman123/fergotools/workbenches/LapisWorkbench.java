@@ -29,11 +29,9 @@ public class LapisWorkbench
 {
     public static final class BlockLapisWorkbench extends BlockWorkbenchFT
     {
-        public static final BlockLapisWorkbench instance = new BlockLapisWorkbench();
-        public BlockLapisWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.lapisWorkbench);
+
+        public BlockLapisWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)

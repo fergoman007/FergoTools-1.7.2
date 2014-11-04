@@ -29,12 +29,9 @@ public class EmeraldWorkbench
 
     public static final class BlockEmeraldWorkbench extends BlockWorkbenchFT
     {
-        public static final BlockEmeraldWorkbench instance = new BlockEmeraldWorkbench();
 
-        public BlockEmeraldWorkbench()
-        {
-            super();
-            this.setBlockName(BlockNames.emeraldWorkbench);
+        public BlockEmeraldWorkbench(String blockName) {
+            super(blockName);
         }
 
         public IIcon getIcon(int side, int meta)
