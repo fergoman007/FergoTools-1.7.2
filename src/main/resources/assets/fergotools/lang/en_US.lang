@@ -135,6 +135,7 @@ tile.FergoTools:blockAdamantium.name=Adamantium Block
 tile.FergoTools:blockSilkGem.name=Silk Gem Block
 tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
 tile.FergoTools:blockExperience.name=Experience Block
+tile.FergoTools:blockExpCollector.name=Experience Collector Block
 
 tile.FergoTools:blockFergoGlass.name=Fergoman123's Glass
 
@@ -257,6 +258,36 @@ tile.FergoTools:silkFurnaceActive.name=Silk Furnace
 tile.FergoTools:redstoneFurnaceActive.name=Redstone Furnace
 tile.FergoTools:maceratorActive.name=Macerator
 
+tile.FergoTools:logObsidian.name=Obsidian Wood
+tile.FergoTools:logEmerald.name=Emerald Wood
+tile.FergoTools:logLapis.name=Lapis Wood
+tile.FergoTools:logBronze.name=Bronze Wood
+tile.FergoTools:logCoal.name=Coal Wood
+tile.FergoTools:logGlowstone.name=Glowstone Wood
+tile.FergoTools:logAdamantium.name=Adamantium Wood
+tile.FergoTools:logSilk.name=Silk Wood
+tile.FergoTools:logRedstone.name=Redstone Wood
+
+tile.FergoTools:plankObsidian.name=Obsidian Wood Planks
+tile.FergoTools:plankEmerald.name=Emerald Wood Planks
+tile.FergoTools:plankLapis.name=Lapis Wood Planks
+tile.FergoTools:plankBronze.name=Bronze Wood Planks
+tile.FergoTools:plankCoal.name=Coal Wood Planks
+tile.FergoTools:plankGlowstone.name=Glowstone Wood Planks
+tile.FergoTools:plankAdamantium.name=Adamantium Wood Planks
+tile.FergoTools:plankSilk.name=Silk Wood Planks
+tile.FergoTools:plankRedstone.name=Redstone Wood Planks
+
+tile.FergoTools:stairObsidian.name=Obsidian Wood Stairs
+tile.FergoTools:stairEmerald.name=Emerald Wood Stairs
+tile.FergoTools:stairLapis.name=Lapis Wood Stairs
+tile.FergoTools:stairBronze.name=Bronze Wood Stairs
+tile.FergoTools:stairCoal.name=Coal Wood Stairs
+tile.FergoTools:stairGlowstone.name=Glowstone Wood Stairs
+tile.FergoTools:stairAdamantium.name=Adamantium Wood Stairs
+tile.FergoTools:stairSilk.name=Silk Wood Stairs
+tile.FergoTools:stairRedstone.name=Redstone Wood Stairs
+
 # Gui Containers
 container.FergoTools:quartzFurnace=Quartz Furnace
 container.FergoTools:obsidianFurnace=Obsidian Furnace
@@ -285,7 +316,7 @@ tooltip.FergoTools:holdShift=<Hold Shift for Info>
 tooltip.FergoTools:adamantiumTool=NOTE: Extremely Overpowered!
 tooltip.FergoTools:adamantiumInfi=Durability: Infinity
 tooltip.FergoTools:expCollector=Right Click to store experience.
-tooltip.FergoTools:expShard=Right Click to Gain 1 EXP Level
+tooltip.FergoTools:shardExp=Right Click to Gain 1 Level of Exp
 tooltip.FergoTools:durability=Durability:
 
 tooltip.FergoTools:reduct=Reduction Amounts:
@@ -335,10 +366,10 @@ tooltip.FergoTools:adamantium.chestplate=Chestplate: 20
 tooltip.FergoTools:adamantium.leggings=Leggings: 20
 tooltip.FergoTools:adamantium.boots=Boots: 20
 
-tooltip.FergoTools:adamantium.abilities.helmet=Helmet: Allows you to breathe underwater and keeps you Hunger full.
-tooltip.FergoTools:adamantium.abilities.chest=Chestplate: Allows you to fly and to absorb more damage.
-tooltip.FergoTools:adamantium.abilities.legs=Leggings: Allows you to jump higher.
-tooltip.FergoTools:adamantium.abilities.boots=Boots: Allows you to run faster.
+tooltip.FergoTools:adamantium.abilities.helmet=Helmet: Gives you Water Breathing and Saturation
+tooltip.FergoTools:adamantium.abilities.chest=Chestplate: Gives you Flight and Absorbtion
+tooltip.FergoTools:adamantium.abilities.legs=Leggings: Gives you Jump Boost
+tooltip.FergoTools:adamantium.abilities.boots=Boots: Gives you Speed
 
 # Ore Dictionary
 oreDict.name=Ore Dictionary Name:
@@ -362,11 +393,21 @@ oreDict.blockAdamantium=blockAdamantium
 oreDict.blockSilkGem=blockSilkGem
 oreDict.blockRedstoneCrystal=blockRedstoneCrystal
 
+oreDict.logWood=logWood
+oreDict.plankWood=plankWood
+oreDict.stairWood=stairWood
+oreDict.stickWood=stickWood
+
 oreDict.ingotObsidian=ingotObsidian
 oreDict.ingotBronze=ingotBronze
 oreDict.ingotCoal=ingotCoal
 oreDict.ingotGlowstone=ingotGlowstone
 oreDict.ingotAdamantium=ingotAdamantium
+oreDict.gemEmerald=gemEmerald
+oreDict.gemLapis=gemLapis
+oreDict.gemSilk=gemSilk
+oreDict.gemRedstone=gemRedstone
+oreDict.shardExp=shardExp
 
 # Furnace Speed
 furnace.speed.quartz=Furnace Speed: x1
