@@ -87,4 +87,17 @@ public class FTIBArrays
                     ItemBlockPlankSilk.class,
                     ItemBlockPlankRedstone.class,
             };
+
+    public static final Class<? extends ItemBlock>[] stairs = new Class[]
+            {
+                    ItemBlockStairObsidian.class,
+                    ItemBlockStairEmerald.class,
+                    ItemBlockStairLapis.class,
+                    ItemBlockStairBronze.class,
+                    ItemBlockStairCoal.class,
+                    ItemBlockStairGlowstone.class,
+                    ItemBlockStairAdamantium.class,
+                    ItemBlockStairSilk.class,
+                    ItemBlockStairRedstone.class,
+            };
 }

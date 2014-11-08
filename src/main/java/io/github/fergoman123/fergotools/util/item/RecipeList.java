@@ -10,6 +10,7 @@
 package io.github.fergoman123.fergotools.util.item;
 
 
+ import io.github.fergoman123.fergotools.core.FTContent;
  import io.github.fergoman123.fergotools.init.FTItems;
  import io.github.fergoman123.fergoutil.helper.RecipeHelper;
  import net.minecraft.init.Blocks;
@@ -155,7 +156,7 @@ package io.github.fergoman123.fergotools.util.item;
     public static final Object[] adamantiumBoots = new Object[]{RecipeHelper.getBootsRecipe(), charX, FTStacks.adamantiumIngot};
 
     public static final Object[] silkGem = new Object[]{" x ", "xyx", " x ", charX, Items.diamond, charY, new ItemStack(Blocks.wool, 1, wildcard)};
-    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', FTItems.ItemExpShard.instance, 'y', Items.diamond};
+    public static final Object[] expCollector = new Object[]{"xxx", "xyx", "xxx", 'x', FTContent.shardExp, 'y', Items.diamond};
 
     // Bows
     public static final Object[] quartzBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.quartzStack, charX, FTStacks.stringStack};
@@ -167,13 +168,13 @@ package io.github.fergoman123.fergotools.util.item;
     public static final Object[] glowstoneBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.glowstoneIngot, charX, FTStacks.stringStack};
     public static final Object[] adamantiumBow = new Object[]{RecipeHelper.getBowRecipe(), charY, FTStacks.adamantiumIngot, charX, FTStacks.stringStack};
 
-    public static final Object[] obsidianWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[0]};
-    public static final Object[] emeraldWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[1]};
-    public static final Object[] lapisWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[2]};
-    public static final Object[] bronzeWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[3]};
-    public static final Object[] coalWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[4]};
-    public static final Object[] glowstoneWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[5]};
-    public static final Object[] adamantiumWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[6]};
-    public static final Object[] silkWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[7]};
-    public static final Object[] redstoneWorkbench = new Object[]{"xx", "xx", 'x', FTStacks.planks[8]};
+    public static final Object[] obsidianWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankObsidian};
+    public static final Object[] emeraldWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankEmerald};
+    public static final Object[] lapisWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankLapis};
+    public static final Object[] bronzeWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankBronze};
+    public static final Object[] coalWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankCoal};
+    public static final Object[] glowstoneWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankGlowstone};
+    public static final Object[] adamantiumWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankAdamantium};
+    public static final Object[] silkWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankSilk};
+    public static final Object[] redstoneWorkbench = new Object[]{"xx", "xx", 'x', FTContent.plankRedstone};
 }

@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Ints;
@@ -42,20 +43,16 @@ public class LapisFurnace
 {
     public static final class BlockLapisFurnace extends BlockFurnaceFT
     {
-        public static final BlockLapisFurnace instanceIdle = new BlockLapisFurnace(false);
-        public static final BlockLapisFurnace instanceActive = new BlockLapisFurnace(true);
-
         private static boolean keepInventory;
 
-        public BlockLapisFurnace(boolean isActive)
-        {
-            super(Material.rock, FurnaceType.lapisFurnace);
+        public BlockLapisFurnace(boolean isActive, Material material, String furnaceType) {
+            super(isActive, material, furnaceType);
             this.isActive = isActive;
         }
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.lapisFurnaceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -138,11 +135,11 @@ public class LapisFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, instanceActive);
+                world.setBlock(x, y, z, FTContent.lapisFurnaceActive);
             }
             else
             {
-                world.setBlock(x, y, z, instanceIdle);
+                world.setBlock(x, y, z, FTContent.lapisFurnaceIdle);
             }
 
             keepInventory = false;
@@ -287,7 +284,7 @@ public class LapisFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.lapisFurnaceIdle);
         }
     }
 

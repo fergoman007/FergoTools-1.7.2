@@ -10,7 +10,7 @@ public class BlockNames
     public static final String oreAdamantium = "oreAdamantium";
     public static final String oreCrystalRed = "oreCrystalRed";
 
-    public static final String[] oreList = {oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreCrystalRed};
+    public static final String[] ores = {oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreCrystalRed};
 
     public static final String blockExperience = "blockExperience";
     public static final String blockObsidian = "blockObsidian";
@@ -24,7 +24,7 @@ public class BlockNames
     public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
     public static final String blockExpCollector = "blockExpCollector";
 
-    public static final String[] blockList = {blockExperience, blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal};
+    public static final String[] blocks = {blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal, blockExperience, blockExpCollector};
 
     public static final String blockFergoGlass = "blockFergoGlass";
 

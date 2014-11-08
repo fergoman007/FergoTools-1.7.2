@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Ints;
@@ -43,20 +44,18 @@ public class GlowstoneFurnace
 {
     public static class BlockGlowstoneFurnace extends BlockFurnaceFT
     {
-        public static final BlockGlowstoneFurnace instanceIdle = new BlockGlowstoneFurnace(false);
-        public static final BlockGlowstoneFurnace instanceActive = new BlockGlowstoneFurnace(true);
 
         private static boolean keepInventory;
 
-        public BlockGlowstoneFurnace(boolean isActive)
+        public BlockGlowstoneFurnace(boolean isActive, Material material, String furnaceType)
         {
-            super(Material.rock, FurnaceType.glowstoneFurnace);
+            super(isActive, material, furnaceType);
             this.isActive = isActive;
         }
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.glowstoneFurnaceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -138,11 +137,11 @@ public class GlowstoneFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, instanceActive);
+                world.setBlock(x, y, z, FTContent.glowstoneFurnaceActive);
             }
             else
             {
-                world.setBlock(x, y, z, instanceIdle);
+                world.setBlock(x, y, z, FTContent.glowstoneFurnaceIdle);
             }
 
             keepInventory = false;
@@ -284,7 +283,7 @@ public class GlowstoneFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.glowstoneFurnaceIdle);
         }
     }
 

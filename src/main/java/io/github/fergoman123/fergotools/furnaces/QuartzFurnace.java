@@ -3,6 +3,7 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
@@ -40,20 +41,17 @@ public class QuartzFurnace
 {
     public static final class BlockQuartzFurnace extends BlockFurnaceFT
     {
-        public static final BlockQuartzFurnace instanceIdle = new BlockQuartzFurnace(false);
-        public static final BlockQuartzFurnace instanceActive = new BlockQuartzFurnace(true);
-
         private static boolean keepInventory;
 
-        public BlockQuartzFurnace(boolean isActive)
-        {
-            super(Material.rock, FurnaceType.quartzFurnace);
+        public BlockQuartzFurnace(boolean isActive, Material material, String furnaceType) {
+            super(isActive, material, furnaceType);
             this.isActive = isActive;
         }
 
+
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.quartzFurnaceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -136,11 +134,11 @@ public class QuartzFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, instanceActive);
+                world.setBlock(x, y, z, FTContent.quartzFurnaceActive);
             }
             else
             {
-                world.setBlock(x, y, z, instanceIdle);
+                world.setBlock(x, y, z, FTContent.quartzFurnaceIdle);
             }
 
             keepInventory = false;
@@ -282,7 +280,7 @@ public class QuartzFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.quartzFurnaceIdle);
         }
     }
 

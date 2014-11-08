@@ -3,6 +3,7 @@ package io.github.fergoman123.fergotools.furnaces;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
@@ -43,20 +44,17 @@ public class Macerator
 {
     public static final class BlockMacerator extends BlockFurnaceFT
     {
-        public static final BlockMacerator instanceIdle = new BlockMacerator(false);
-        public static final BlockMacerator instanceActive = new BlockMacerator(true);
-
         private static boolean keepInventory;
 
-        public BlockMacerator(boolean isActive)
-        {
-            super(Material.rock, FurnaceType.macerator);
+        public BlockMacerator(boolean isActive, Material material, String furnaceType) {
+            super(isActive, material, furnaceType);
             this.isActive = isActive;
         }
 
+
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return BlockHelper.getItemFromBlock(instanceIdle);
+            return BlockHelper.getItemFromBlock(FTContent.maceratorIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -138,11 +136,11 @@ public class Macerator
 
             if (active)
             {
-                world.setBlock(x, y, z, instanceActive);
+                world.setBlock(x, y, z, FTContent.maceratorActive);
             }
             else
             {
-                world.setBlock(x, y, z, instanceIdle);
+                world.setBlock(x, y, z, FTContent.maceratorIdle);
             }
 
             keepInventory = false;
@@ -284,7 +282,7 @@ public class Macerator
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return BlockHelper.getItemFromBlock(instanceIdle);
+            return BlockHelper.getItemFromBlock(FTContent.maceratorIdle);
         }
     }
 

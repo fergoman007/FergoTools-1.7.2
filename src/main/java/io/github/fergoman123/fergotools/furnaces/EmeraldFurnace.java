@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.*;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
@@ -42,10 +43,13 @@ public class EmeraldFurnace
  {
      public static final class BlockEmeraldFurnace extends BlockFurnaceFT
      {
-         public static final BlockEmeraldFurnace instanceIdle = new BlockEmeraldFurnace(false);
-         public static final BlockEmeraldFurnace instanceActive = new BlockEmeraldFurnace(true);
 
          private static boolean keepInventory;
+
+         public BlockEmeraldFurnace(boolean isActive, Material material, String furnaceType) {
+             super(isActive, material, furnaceType);
+             this.isActive = isActive;
+         }
 
          public void registerBlockIcons(IIconRegister register)
          {
@@ -54,15 +58,9 @@ public class EmeraldFurnace
              this.icons[1] = register.registerIcon(Reference.textureLoc + BlockNames.blockEmeraldCrystal);
          }
 
-         public BlockEmeraldFurnace(boolean isActive)
-         {
-             super(Material.rock, FurnaceType.emeraldFurnace);
-             this.isActive = isActive;
-         }
-
          public Item getItemDropped(int par1, Random rand, int par3)
          {
-             return Item.getItemFromBlock(instanceIdle);
+             return Item.getItemFromBlock(FTContent.emeraldFurnaceIdle);
          }
 
          public void onBlockAdded(World world, int x, int y, int z)
@@ -139,11 +137,11 @@ public class EmeraldFurnace
 
              if (active)
              {
-                 world.setBlock(x, y, z, instanceActive);
+                 world.setBlock(x, y, z, FTContent.emeraldFurnaceActive);
              }
              else
              {
-                 world.setBlock(x, y, z, instanceIdle);
+                 world.setBlock(x, y, z, FTContent.emeraldFurnaceIdle);
              }
 
              keepInventory = false;
@@ -271,7 +269,7 @@ public class EmeraldFurnace
 
          public Item getItem(World world, int x, int y, int z)
          {
-             return Item.getItemFromBlock(instanceIdle);
+             return Item.getItemFromBlock(FTContent.emeraldFurnaceIdle);
          }
      }
 

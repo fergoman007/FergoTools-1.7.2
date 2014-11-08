@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Ints;
@@ -45,20 +46,16 @@ public class RedstoneFurnace
 
     public static class BlockRedstoneFurnace extends BlockFurnaceFT
     {
-        public static final BlockRedstoneFurnace instanceIdle = new BlockRedstoneFurnace(false);
-        public static final BlockRedstoneFurnace instanceActive = new BlockRedstoneFurnace(true);
-
         private static boolean keepInventory;
 
-        public BlockRedstoneFurnace(boolean isActive)
-        {
-            super(Material.rock, FurnaceType.redstoneFurnace);
-            this.isActive = isActive;
+        public BlockRedstoneFurnace(boolean isActive, Material material, String furnaceType) {
+            super(isActive, material, furnaceType);
         }
+
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return BlockHelper.getItemFromBlock(instanceIdle);
+            return BlockHelper.getItemFromBlock(FTContent.redstoneFurnaceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -140,11 +137,11 @@ public class RedstoneFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, instanceActive);
+                world.setBlock(x, y, z, FTContent.redstoneFurnaceActive);
             }
             else
             {
-                world.setBlock(x, y, z, instanceIdle);
+                world.setBlock(x, y, z, FTContent.redstoneFurnaceIdle);
             }
 
             keepInventory = false;
@@ -286,7 +283,7 @@ public class RedstoneFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return BlockHelper.getItemFromBlock(instanceIdle);
+            return BlockHelper.getItemFromBlock(FTContent.redstoneFurnaceIdle);
         }
     }
 

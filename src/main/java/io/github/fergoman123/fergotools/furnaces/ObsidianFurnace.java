@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Ints;
 import io.github.fergoman123.fergotools.reference.Reference;
@@ -42,20 +43,18 @@ public class ObsidianFurnace
 {
     public static final class BlockObsidianFurnace extends BlockFurnaceFT
     {
-        public static final BlockObsidianFurnace instanceIdle = new BlockObsidianFurnace(false);
-        public static final BlockObsidianFurnace instanceActive = new BlockObsidianFurnace(true);
 
         private static boolean keepInventory;
 
-        public BlockObsidianFurnace(boolean isActive)
+        public BlockObsidianFurnace(boolean isActive, Material material, String furnaceType)
         {
-            super(Material.rock, FurnaceType.obsidianFurnace);
+            super(isActive, material, furnaceType);
             this.isActive = isActive;
         }
 
         public Item getItemDropped(int par1, Random rand, int par3)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.obsidianFurnaceIdle);
         }
 
         public void onBlockAdded(World world, int x, int y, int z)
@@ -137,11 +136,11 @@ public class ObsidianFurnace
 
             if (active)
             {
-                world.setBlock(x, y, z, instanceActive);
+                world.setBlock(x, y, z, FTContent.obsidianFurnaceActive);
             }
             else
             {
-                world.setBlock(x, y, z, instanceIdle);
+                world.setBlock(x, y, z, FTContent.obsidianFurnaceIdle);
             }
 
             keepInventory = false;
@@ -283,7 +282,7 @@ public class ObsidianFurnace
 
         public Item getItem(World world, int x, int y, int z)
         {
-            return Item.getItemFromBlock(instanceIdle);
+            return Item.getItemFromBlock(FTContent.obsidianFurnaceIdle);
         }
     }
 
