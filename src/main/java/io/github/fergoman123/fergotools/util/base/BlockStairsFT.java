@@ -11,9 +11,10 @@ import java.util.Random;
 
 public abstract class BlockStairsFT extends BlockStairs
 {
-    public BlockStairsFT(Block extender)
+    public BlockStairsFT(Block extender, String blockName)
     {
         super(extender, 0);
+        this.setBlockName(blockName);
         this.setHardness(2.0f);
         this.setLightOpacity(0);
         this.setCreativeTab(Tabs.tabFergoWood);

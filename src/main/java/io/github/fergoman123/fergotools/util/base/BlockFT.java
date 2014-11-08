@@ -22,8 +22,10 @@ package io.github.fergoman123.fergotools.util.base;
  public abstract class BlockFT extends Block
 {
 
-    public BlockFT(Material material) {
+    public BlockFT(Material material, String blockName)
+    {
         super(material);
+        this.setBlockName(blockName);
         this.setCreativeTab(Tabs.tabFergoBlocks);
     }
 

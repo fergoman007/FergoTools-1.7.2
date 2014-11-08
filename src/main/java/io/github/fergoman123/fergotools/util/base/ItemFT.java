@@ -14,9 +14,10 @@ import java.util.List;
 
 public abstract class ItemFT extends Item{
 
-    public ItemFT()
+    public ItemFT(String itemName)
     {
         super();
+        this.setUnlocalizedName(itemName);
         this.maxStackSize = 1;
         this.setCreativeTab(Tabs.tabFergoItems);
         this.setNoRepair();
@@ -38,7 +39,7 @@ public abstract class ItemFT extends Item{
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister register)
     {
-        itemIcon = register.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+        itemIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
     public abstract void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b);

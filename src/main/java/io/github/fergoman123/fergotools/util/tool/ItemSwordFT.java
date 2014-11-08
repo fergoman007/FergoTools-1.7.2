@@ -25,8 +25,9 @@ package io.github.fergoman123.fergotools.util.tool;
 {
     public Materials.Tools materials = new Materials.Tools();
 
-    public ItemSwordFT(Item.ToolMaterial material, int maxUses) {
+    public ItemSwordFT(Item.ToolMaterial material, int maxUses, String itemName) {
         super(material);
+        this.setUnlocalizedName(itemName);
         this.setMaxDamage(maxUses);
         this.setMaxStackSize(1);
         this.setCreativeTab(Tabs.tabFergoTools);

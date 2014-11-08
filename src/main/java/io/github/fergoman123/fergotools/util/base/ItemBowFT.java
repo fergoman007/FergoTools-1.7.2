@@ -21,10 +21,11 @@ public abstract class ItemBowFT extends ItemBow
     @SideOnly(Side.CLIENT)
     public IIcon[] textures;
 
-    public ItemBowFT(int maxUses)
+    public ItemBowFT(int maxUses, String itemName)
     {
         super();
         this.setMaxDamage(maxUses);
+        this.setUnlocalizedName(itemName);
         this.setMaxStackSize(1);
         this.setCreativeTab(Tabs.tabFergoBows);
     }

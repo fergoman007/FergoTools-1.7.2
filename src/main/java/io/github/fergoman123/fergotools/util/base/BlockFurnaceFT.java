@@ -3,6 +3,7 @@ package io.github.fergoman123.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -23,7 +24,7 @@ public abstract class BlockFurnaceFT extends BlockContainer
     public IIcon[] icons = new IIcon[2];
 
     public boolean isActive;
-    public BlockFurnaceFT(Material material, String furnaceType)
+    public BlockFurnaceFT(boolean isActive, Material material, String furnaceType)
     {
         super(material);
         this.setBlockName(furnaceType);
@@ -33,7 +34,7 @@ public abstract class BlockFurnaceFT extends BlockContainer
 
     public String getUnlocalizedName()
     {
-        return String.format("tile.%s%s%s", NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()), NameHelper.getFurnaceType(this.isActive));
+        return String.format("tile.%s%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()), NameHelper.getFurnaceType(this.isActive));
     }
 
     public abstract Item getItemDropped(int metadata, Random rand, int fortune);

@@ -13,9 +13,10 @@ import java.util.List;
 
 public abstract class ItemStickFT extends Item
 {
-    public ItemStickFT()
+    public ItemStickFT(String itemName)
     {
         super();
+        this.setUnlocalizedName(itemName);
         this.setMaxStackSize(64);
         this.setNoRepair();
         this.setCreativeTab(Tabs.tabFergoWood);

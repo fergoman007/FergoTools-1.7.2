@@ -20,9 +20,10 @@ import java.util.Random;
 
 public abstract class BlockGlassFT extends BlockBreakable
 {
-    public BlockGlassFT()
+    public BlockGlassFT(String blockName)
     {
         super("glass", Material.glass, false);
+        setBlockName(blockName);
         setCreativeTab(Tabs.tabFergoBlocks);
         setHardness(0.3f);
         setResistance(50f);

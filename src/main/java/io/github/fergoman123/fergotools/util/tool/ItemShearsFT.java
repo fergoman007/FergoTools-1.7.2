@@ -25,9 +25,10 @@ package io.github.fergoman123.fergotools.util.tool;
 {
     public Materials.Tools materials = new Materials.Tools();
 
-    public ItemShearsFT(int maxUses)
+    public ItemShearsFT(int maxUses, String itemName)
     {
         super();
+        this.setUnlocalizedName(itemName);
         this.setMaxDamage(maxUses);
         this.setCreativeTab(Tabs.tabFergoShears);
         this.setMaxStackSize(1);

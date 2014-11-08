@@ -13,10 +13,11 @@ import net.minecraft.world.World;
 public abstract class BlockRotatedPillarFT extends BlockRotatedPillar
 {
     public IIcon topIcon, sideIcon;
-    protected BlockRotatedPillarFT()
+    public BlockRotatedPillarFT(String blockName)
     {
         super(Material.wood);
         this.setHardness(2.0f);
+        this.setBlockName(blockName);
         this.setStepSound(Block.soundTypeWood);
         this.setCreativeTab(Tabs.tabFergoWood);
     }
