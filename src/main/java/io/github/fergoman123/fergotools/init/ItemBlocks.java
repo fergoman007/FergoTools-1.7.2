@@ -9,18 +9,7 @@
 
 package io.github.fergoman123.fergotools.init;
 
-import io.github.fergoman123.fergotools.block.FTStairs;
-import io.github.fergoman123.fergotools.furnaces.AdamantiumFurnace.BlockAdamantiumFurnace;
-import io.github.fergoman123.fergotools.furnaces.BronzeFurnace.BlockBronzeFurnace;
-import io.github.fergoman123.fergotools.furnaces.CoalFurnace.BlockCoalFurnace;
-import io.github.fergoman123.fergotools.furnaces.EmeraldFurnace.BlockEmeraldFurnace;
-import io.github.fergoman123.fergotools.furnaces.GlowstoneFurnace.BlockGlowstoneFurnace;
-import io.github.fergoman123.fergotools.furnaces.LapisFurnace.BlockLapisFurnace;
-import io.github.fergoman123.fergotools.furnaces.Macerator.BlockMacerator;
-import io.github.fergoman123.fergotools.furnaces.ObsidianFurnace.BlockObsidianFurnace;
-import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
-import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFurnace;
-import io.github.fergoman123.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.init.FTBlocks.*;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.reference.names.OreDict;
@@ -32,11 +21,12 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class ItemBlocks {
 
     public static final class ItemBlockOreObsidian extends ItemBlockFT
     {
-        public ItemBlockOreObsidian(Block block){super(BlockOreObsidian.instance);}
+        public ItemBlockOreObsidian(Block block){super(FTContent.oreObsidian);}
 
         @Override
         public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
@@ -50,7 +40,7 @@ public class ItemBlocks {
     {
         public ItemBlockOreEmerald(Block block)
         {
-            super(BlockOreEmeraldCrystal.instance);
+            super(FTContent.oreGemEmerald);
         }
 
         @Override
@@ -66,7 +56,7 @@ public class ItemBlocks {
     {
         public ItemBlockOreLapis(Block block)
         {
-            super(BlockOreLapisCrystal.instance);
+            super(FTContent.oreGemLapis);
         }
 
         @Override
@@ -82,7 +72,7 @@ public class ItemBlocks {
     {
         public ItemBlockOreBronze(Block block)
         {
-            super(BlockOreBronze.instance);
+            super(FTContent.oreBronze);
         }
 
         @Override
@@ -98,7 +88,7 @@ public class ItemBlocks {
     {
         public ItemBlockOreAdamantium(Block block)
         {
-            super(BlockOreAdamantium.instance);
+            super(FTContent.oreAdamantium);
         }
 
         @Override
@@ -114,7 +104,7 @@ public class ItemBlocks {
     {
 
         public ItemBlockOreCrystalRed(Block block) {
-            super(BlockOreRedCrystal.instance);
+            super(FTContent.oreRedCrystal);
         }
 
         @Override
@@ -130,7 +120,7 @@ public class ItemBlocks {
     {
 
         public ItemBlockOreExperience(Block block) {
-            super(BlockOreExperience.instance);
+            super(FTContent.oreExperience);
         }
 
         @Override
@@ -146,7 +136,7 @@ public class ItemBlocks {
     {
         public ItemBlockObsidian(Block block)
         {
-            super(BlockObsidianStorage.instance);
+            super(FTContent.blockObsidian);
         }
 
         @Override
@@ -162,7 +152,7 @@ public class ItemBlocks {
     {
         public ItemBlockEmerald(Block block)
         {
-            super(BlockEmeraldCrystal.instance);
+            super(FTContent.blockEmerald);
         }
 
         @Override
@@ -178,7 +168,7 @@ public class ItemBlocks {
     {
         public ItemBlockLapis(Block block)
         {
-            super(BlockLapisCrystal.instance);
+            super(FTContent.blockLapis);
         }
 
         @Override
@@ -194,7 +184,7 @@ public class ItemBlocks {
     {
         public ItemBlockBronze(Block block)
         {
-            super(BlockBronze.instance);
+            super(FTContent.blockBronze);
         }
 
         @Override
@@ -208,7 +198,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockCoal extends ItemBlockFT {
         public ItemBlockCoal(Block block) {
-            super(BlockCoalStorage.instance);
+            super(FTContent.blockCoal);
         }
 
         @Override
@@ -221,7 +211,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockGlowstone extends ItemBlockFT {
         public ItemBlockGlowstone(Block block) {
-            super(BlockGlowstoneStorage.instance);
+            super(FTContent.blockGlowstone);
         }
 
         @Override
@@ -234,7 +224,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockAdamantium extends ItemBlockFT {
         public ItemBlockAdamantium(Block block) {
-            super(BlockAdamantium.instance);
+            super(FTContent.blockAdamantium);
         }
 
         @Override
@@ -247,7 +237,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockSilkGem extends ItemBlockFT {
         public ItemBlockSilkGem(Block block) {
-            super(BlockSilkGem.instance);
+            super(FTContent.blockSilkGem);
         }
 
         @Override
@@ -260,7 +250,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockRedstoneCrystal extends ItemBlockFT {
         public ItemBlockRedstoneCrystal(Block block) {
-            super(BlockRedstoneCrystal.instance);
+            super(FTContent.blockRedstone);
         }
 
         @Override
@@ -271,9 +261,38 @@ public class ItemBlocks {
         }
     }
 
+    public static final class ItemBlockExperience extends ItemBlockFT
+    {
+        public ItemBlockExperience(Block block)
+        {
+            super(FTContent.blockExperience);
+        }
+
+        @Override
+        public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
+            for (String i : OreDict.blockExperienceArray)
+            {
+                list.add(NameHelper.translateToLocal(i));
+            }
+        }
+    }
+
+    public static final class ItemBlockExpCollector extends ItemBlockFT
+    {
+
+        public ItemBlockExpCollector(Block block) {
+            super(FTContent.blockExpCollector);
+        }
+
+        @Override
+        public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
+            list.add("Used to Store Experience Collectors");
+        }
+    }
+
     public static final class ItemBlockQuartzFurnaceIdle extends ItemBlockFT {
         public ItemBlockQuartzFurnaceIdle(Block block) {
-            super(BlockQuartzFurnace.instanceIdle);
+            super(FTContent.quartzFurnaceIdle);
         }
 
         @Override
@@ -284,7 +303,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockQuartzFurnaceActive extends ItemBlockFT {
         public ItemBlockQuartzFurnaceActive(Block block) {
-            super(BlockQuartzFurnace.instanceActive);
+            super(FTContent.quartzFurnaceActive);
         }
 
         @Override
@@ -295,7 +314,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockObsidianFurnaceIdle extends ItemBlockFT {
         public ItemBlockObsidianFurnaceIdle(Block block) {
-            super(BlockObsidianFurnace.instanceIdle);
+            super(FTContent.obsidianFurnaceIdle);
         }
 
         @Override
@@ -306,7 +325,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockObsidianFurnaceActive extends ItemBlockFT {
         public ItemBlockObsidianFurnaceActive(Block block) {
-            super(BlockObsidianFurnace.instanceActive);
+            super(FTContent.obsidianFurnaceActive);
         }
 
         @Override
@@ -317,7 +336,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockEmeraldFurnaceIdle extends ItemBlockFT {
         public ItemBlockEmeraldFurnaceIdle(Block block) {
-            super(BlockEmeraldFurnace.instanceIdle);
+            super(FTContent.emeraldFurnaceIdle);
         }
 
         @Override
@@ -328,7 +347,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockEmeraldFurnaceActive extends ItemBlockFT {
         public ItemBlockEmeraldFurnaceActive(Block block) {
-            super(BlockEmeraldFurnace.instanceActive);
+            super(FTContent.emeraldFurnaceActive);
         }
 
         @Override
@@ -339,7 +358,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLapisFurnaceIdle extends ItemBlockFT {
         public ItemBlockLapisFurnaceIdle(Block block) {
-            super(BlockLapisFurnace.instanceIdle);
+            super(FTContent.lapisFurnaceIdle);
         }
 
         @Override
@@ -350,7 +369,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLapisFurnaceActive extends ItemBlockFT {
         public ItemBlockLapisFurnaceActive(Block block) {
-            super(BlockLapisFurnace.instanceActive);
+            super(FTContent.lapisFurnaceActive);
         }
 
         @Override
@@ -361,7 +380,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockBronzeFurnaceIdle extends ItemBlockFT {
         public ItemBlockBronzeFurnaceIdle(Block block) {
-            super(BlockBronzeFurnace.instanceIdle);
+            super(FTContent.bronzeFurnaceIdle);
         }
 
         @Override
@@ -372,7 +391,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockBronzeFurnaceActive extends ItemBlockFT {
         public ItemBlockBronzeFurnaceActive(Block block) {
-            super(BlockBronzeFurnace.instanceActive);
+            super(FTContent.bronzeFurnaceActive);
         }
 
         @Override
@@ -383,7 +402,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockCoalFurnaceIdle extends ItemBlockFT {
         public ItemBlockCoalFurnaceIdle(Block block) {
-            super(BlockCoalFurnace.instanceIdle);
+            super(FTContent.coalFurnaceIdle);
         }
 
         @Override
@@ -394,7 +413,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockCoalFurnaceActive extends ItemBlockFT {
         public ItemBlockCoalFurnaceActive(Block block) {
-            super(BlockCoalFurnace.instanceActive);
+            super(FTContent.coalFurnaceActive);
         }
 
         @Override
@@ -405,7 +424,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockGlowstoneFurnaceIdle extends ItemBlockFT {
         public ItemBlockGlowstoneFurnaceIdle(Block block) {
-            super(BlockGlowstoneFurnace.instanceIdle);
+            super(FTContent.glowstoneFurnaceIdle);
         }
 
         @Override
@@ -416,7 +435,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockGlowstoneFurnaceActive extends ItemBlockFT {
         public ItemBlockGlowstoneFurnaceActive(Block block) {
-            super(BlockGlowstoneFurnace.instanceActive);
+            super(FTContent.glowstoneFurnaceActive);
         }
 
         @Override
@@ -427,7 +446,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockAdamantiumFurnaceIdle extends ItemBlockFT {
         public ItemBlockAdamantiumFurnaceIdle(Block block) {
-            super(BlockAdamantiumFurnace.instanceIdle);
+            super(FTContent.adamantiumFurnaceIdle);
         }
 
         @Override
@@ -438,7 +457,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockAdamantiumFurnaceActive extends ItemBlockFT {
         public ItemBlockAdamantiumFurnaceActive(Block block) {
-            super(BlockAdamantiumFurnace.instanceActive);
+            super(FTContent.adamantiumFurnaceActive);
         }
 
         @Override
@@ -449,7 +468,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockSilkFurnaceIdle extends ItemBlockFT {
         public ItemBlockSilkFurnaceIdle(Block block) {
-            super(BlockSilkFurnace.instanceIdle);
+            super(FTContent.silkFurnaceIdle);
         }
 
         @Override
@@ -460,7 +479,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockSilkFurnaceActive extends ItemBlockFT {
         public ItemBlockSilkFurnaceActive(Block block) {
-            super(BlockSilkFurnace.instanceActive);
+            super(FTContent.silkFurnaceActive);
         }
 
         @Override
@@ -471,7 +490,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockRedstoneFurnaceIdle extends ItemBlockFT {
         public ItemBlockRedstoneFurnaceIdle(Block block) {
-            super(BlockRedstoneFurnace.instanceIdle);
+            super(FTContent.redstoneFurnaceIdle);
         }
 
         @Override
@@ -482,7 +501,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockRedstoneFurnaceActive extends ItemBlockFT {
         public ItemBlockRedstoneFurnaceActive(Block block) {
-            super(BlockRedstoneFurnace.instanceActive);
+            super(FTContent.redstoneFurnaceActive);
         }
 
         @Override
@@ -493,7 +512,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockMaceratorIdle extends ItemBlockFT {
         public ItemBlockMaceratorIdle(Block block) {
-            super(BlockMacerator.instanceIdle);
+            super(FTContent.maceratorIdle);
         }
 
         @Override
@@ -504,7 +523,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockMaceratorActive extends ItemBlockFT {
         public ItemBlockMaceratorActive(Block block) {
-            super(BlockMacerator.instanceActive);
+            super(FTContent.maceratorActive);
         }
 
         @Override
@@ -516,7 +535,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogObsidian extends ItemBlockFT {
         public ItemBlockLogObsidian(Block block) {
-            super(BlockLogObsidian.instance);
+            super(FTContent.logObsidian);
         }
 
         @Override
@@ -529,7 +548,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogEmerald extends ItemBlockFT {
         public ItemBlockLogEmerald(Block block) {
-            super(BlockLogEmerald.instance);
+            super(FTContent.logEmerald);
         }
 
         @Override
@@ -542,7 +561,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogLapis extends ItemBlockFT {
         public ItemBlockLogLapis(Block block) {
-            super(BlockLogLapis.instance);
+            super(FTContent.logLapis);
         }
 
         @Override
@@ -555,7 +574,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogBronze extends ItemBlockFT {
         public ItemBlockLogBronze(Block block) {
-            super(BlockLogBronze.instance);
+            super(FTContent.logBronze);
         }
 
         @Override
@@ -568,7 +587,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogCoal extends ItemBlockFT {
         public ItemBlockLogCoal(Block block) {
-            super(BlockLogCoal.instance);
+            super(FTContent.logCoal);
         }
 
         @Override
@@ -581,7 +600,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogGlowstone extends ItemBlockFT {
         public ItemBlockLogGlowstone(Block block) {
-            super(BlockLogGlowstone.instance);
+            super(FTContent.logGlowstone);
         }
 
         @Override
@@ -594,7 +613,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogAdamantium extends ItemBlockFT {
         public ItemBlockLogAdamantium(Block block) {
-            super(BlockLogAdamantium.instance);
+            super(FTContent.logAdamantium);
         }
 
         @Override
@@ -607,7 +626,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogSilk extends ItemBlockFT {
         public ItemBlockLogSilk(Block block) {
-            super(BlockLogSilk.instance);
+            super(FTContent.logSilk);
         }
 
         @Override
@@ -620,7 +639,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockLogRedstone extends ItemBlockFT {
         public ItemBlockLogRedstone(Block block) {
-            super(BlockLogRedstone.instance);
+            super(FTContent.logRedstone);
         }
 
         @Override
@@ -633,7 +652,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankObsidian extends ItemBlockFT {
         public ItemBlockPlankObsidian(Block block) {
-            super(BlockPlankObsidian.instance);
+            super(FTContent.plankObsidian);
         }
 
         @Override
@@ -646,7 +665,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankEmerald extends ItemBlockFT {
         public ItemBlockPlankEmerald(Block block) {
-            super(BlockPlankEmerald.instance);
+            super(FTContent.plankEmerald);
         }
 
         @Override
@@ -659,7 +678,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankLapis extends ItemBlockFT {
         public ItemBlockPlankLapis(Block block) {
-            super(BlockPlankLapis.instance);
+            super(FTContent.plankLapis);
         }
 
         @Override
@@ -672,7 +691,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankBronze extends ItemBlockFT {
         public ItemBlockPlankBronze(Block block) {
-            super(BlockPlankBronze.instance);
+            super(FTContent.plankBronze);
         }
 
         @Override
@@ -685,7 +704,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankCoal extends ItemBlockFT {
         public ItemBlockPlankCoal(Block block) {
-            super(BlockPlankCoal.instance);
+            super(FTContent.plankCoal);
         }
 
         @Override
@@ -698,7 +717,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankGlowstone extends ItemBlockFT {
         public ItemBlockPlankGlowstone(Block block) {
-            super(BlockPlankGlowstone.instance);
+            super(FTContent.plankGlowstone);
         }
 
         @Override
@@ -711,7 +730,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankAdamantium extends ItemBlockFT {
         public ItemBlockPlankAdamantium(Block block) {
-            super(BlockPlankAdamantium.instance);
+            super(FTContent.plankAdamantium);
         }
 
         @Override
@@ -724,7 +743,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankSilk extends ItemBlockFT {
         public ItemBlockPlankSilk(Block block) {
-            super(BlockPlankSilk.instance);
+            super(FTContent.plankSilk);
         }
 
         @Override
@@ -737,7 +756,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockPlankRedstone extends ItemBlockFT {
         public ItemBlockPlankRedstone(Block block) {
-            super(BlockPlankRedstone.instance);
+            super(FTContent.plankRedstone);
         }
 
         @Override
@@ -751,7 +770,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairObsidian extends ItemBlockFT {
         public ItemBlockStairObsidian(Block block) {
-            super(FTStairs.stairObsidian);
+            super(FTContent.stairObsidian);
         }
 
         @Override
@@ -764,7 +783,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairEmerald extends ItemBlockFT {
         public ItemBlockStairEmerald(Block block) {
-            super(FTStairs.stairEmerald);
+            super(FTContent.stairEmerald);
         }
 
         @Override
@@ -777,7 +796,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairLapis extends ItemBlockFT {
         public ItemBlockStairLapis(Block block) {
-            super(FTStairs.stairLapis);
+            super(FTContent.stairLapis);
         }
 
         @Override
@@ -790,7 +809,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairBronze extends ItemBlockFT {
         public ItemBlockStairBronze(Block block) {
-            super(FTStairs.stairBronze);
+            super(FTContent.stairBronze);
         }
 
         @Override
@@ -803,7 +822,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairCoal extends ItemBlockFT {
         public ItemBlockStairCoal(Block block) {
-            super(FTStairs.stairCoal);
+            super(FTContent.stairCoal);
         }
 
         @Override
@@ -816,7 +835,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairGlowstone extends ItemBlockFT {
         public ItemBlockStairGlowstone(Block block) {
-            super(FTStairs.stairGlowstone);
+            super(FTContent.stairGlowstone);
         }
 
         @Override
@@ -829,7 +848,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairAdamantium extends ItemBlockFT {
         public ItemBlockStairAdamantium(Block block) {
-            super(FTStairs.stairAdamantium);
+            super(FTContent.stairAdamantium);
         }
 
         @Override
@@ -842,7 +861,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairSilk extends ItemBlockFT {
         public ItemBlockStairSilk(Block block) {
-            super(FTStairs.stairSilk);
+            super(FTContent.stairSilk);
         }
 
         @Override
@@ -855,7 +874,7 @@ public class ItemBlocks {
 
     public static final class ItemBlockStairRedstone extends ItemBlockFT {
         public ItemBlockStairRedstone(Block block) {
-            super(FTStairs.stairRedstone);
+            super(FTContent.stairRedstone);
         }
 
         @Override

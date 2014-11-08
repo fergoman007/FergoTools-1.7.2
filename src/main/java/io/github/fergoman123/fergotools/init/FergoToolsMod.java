@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
+import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.handler.RegHandler;
 import io.github.fergoman123.fergotools.helper.LogHelper;
@@ -23,6 +24,7 @@ public class FergoToolsMod
         FergoTools.proxy.registerEventHandlers();
         Tabs.init();
         Materials.init();
+        FTContent.init();
         ModItems.init();
         ModBlocks.init();
 
