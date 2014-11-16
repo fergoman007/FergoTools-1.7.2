@@ -3,23 +3,10 @@ package io.github.fergoman123.fergotools.init;
 import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.util.item.FTStacks;
 import io.github.fergoman123.fergotools.util.item.RecipeList;
-import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.BlockObsidianWorkbench;
-import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.BlockEmeraldWorkbench;
-import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.BlockLapisWorkbench;
-import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.BlockBronzeWorkbench;
-import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.BlockCoalWorkbench;
-import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.BlockGlowstoneWorkbench;
-import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.BlockAdamantiumWorkbench;
-import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.BlockSilkWorkbench;
-import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.BlockRedstoneWorkbench;
 import io.github.fergoman123.fergoutil.helper.RecipeHelper;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import io.github.fergoman123.fergotools.init.FTItems.*;
-import io.github.fergoman123.fergotools.init.FTBlocks.*;
-import static net.minecraft.init.Items.*;
-import static net.minecraft.init.Blocks.*;
-import static net.minecraftforge.oredict.OreDictionary.WILDCARD_VALUE;
 
 public class Recipes
 {
@@ -34,10 +21,12 @@ public class Recipes
         RecipeHelper.addShapelessRecipe(new ItemStack(FTContent.ingotGlowstone, 9), new ItemStack(FTContent.blockGlowstone));
         RecipeHelper.addShapelessRecipe(new ItemStack(FTContent.shardExp, 9), new ItemStack(FTContent.blockExperience));
         RecipeHelper.addShapelessRecipe(new ItemStack(FTContent.gemSilk, 9), new ItemStack(FTContent.blockSilkGem));
-        RecipeHelper.addShapelessRecipe(new ItemStack(FTContent.expCollector, 9), new ItemStack(FTContent.blockExpCollector));
 
         RecipeHelper.addRecipe(new ItemStack(FTContent.gemSilk), RecipeList.silkGem);
-        RecipeHelper.addRecipe(new ItemStack(FTContent.expCollector, 1, FTContent.expCollector.getMaxDamage() - 1), RecipeList.expCollector);
+        RecipeHelper.addRecipe(new ItemStack(FTContent.expCollector), RecipeList.expCollector);
+        RecipeHelper.addRecipe(new ItemStack(FTContent.staffExp, 1, 0), new Object[]{" y", "x ", 'x', Items.stick, 'y', FTContent.expCollector});
+        RecipeHelper.addRecipe(new ItemStack(FTContent.staffExp, 1, 1), new Object[]{"xxx", "xyx", "xxx", 'x', FTContent.expCollector, 'y', new ItemStack(FTContent.staffExp, 1, 0)});
+        RecipeHelper.addRecipe(new ItemStack(FTContent.staffExp, 1, 2), new Object[]{"xxx", "xyx", "xxx", 'x', FTContent.expCollector, 'y', new ItemStack(FTContent.staffExp, 1, 1)});
 
         RecipeHelper.addRecipe(new ItemStack(FTContent.blockObsidian), RecipeList.blockObsidian);
         RecipeHelper.addRecipe(new ItemStack(FTContent.blockEmerald),  RecipeList.blockEmeraldCrystal);
@@ -131,7 +120,7 @@ public class Recipes
         RecipeHelper.addBlockSmelting(Blocks.glowstone, FTStacks.glowstoneIngot, 2.5f);
         RecipeHelper.addBlockSmelting(FTContent.oreAdamantium, FTStacks.adamantiumIngot, 2.5f);
         RecipeHelper.addBlockSmelting(FTContent.oreExperience, FTStacks.expShard5, 2.5f);
-        RecipeHelper.addBlockSmelting(FTContent.oreRedCrystal, FTStacks.redCrystal, 2.5f);
+        RecipeHelper.addBlockSmelting(FTContent.oreRedstone, FTStacks.redCrystal, 2.5f);
 
 
 

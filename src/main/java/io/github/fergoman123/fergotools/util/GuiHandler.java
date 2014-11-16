@@ -9,33 +9,32 @@
 
 package io.github.fergoman123.fergotools.util;
 
-import cpw.mods.fml.common.network.IGuiHandler;
-import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.ObsidianFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.EmeraldFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.LapisFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.BronzeFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.CoalFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.GlowstoneFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.AdamantiumFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.SilkFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.*;
-import io.github.fergoman123.fergotools.furnaces.Macerator.*;
-
-import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench;
-import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.*;
-import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.*;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.world.World;
+ import cpw.mods.fml.common.network.IGuiHandler;
+ import io.github.fergoman123.fergotools.core.gui.furnace.*;
+ import io.github.fergoman123.fergotools.core.gui.furnace.container.*;
+ import io.github.fergoman123.fergotools.core.tileentity.*;
+ import io.github.fergoman123.fergotools.reference.GuiIds;
+ import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.ContainerAdamantiumWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.GuiAdamantiumWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.ContainerBronzeWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.GuiBronzeWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.ContainerCoalWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.GuiCoalWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.ContainerEmeraldWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.GuiEmeraldWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.ContainerGlowstoneWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.GuiGlowstoneWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.ContainerLapisWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.GuiLapisWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.ContainerObsidianWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.GuiObsidianWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.ContainerRedstoneWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.GuiRedstoneWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.ContainerSilkWorkbench;
+ import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.GuiSilkWorkbench;
+ import net.minecraft.entity.player.EntityPlayer;
+ import net.minecraft.entity.player.InventoryPlayer;
+ import net.minecraft.world.World;
 
 public class GuiHandler  implements IGuiHandler
 {

@@ -10,21 +10,13 @@
 package io.github.fergoman123.fergotools.creativetab;
 
 import io.github.fergoman123.fergotools.core.FTContent;
-import io.github.fergoman123.fergotools.init.FTBlocks.BlockFergoGlass;
-import io.github.fergoman123.fergotools.init.FTItems.ItemQuartzPickaxe;
-import io.github.fergoman123.fergotools.init.FTItems.ItemExpCollector;
-import io.github.fergoman123.fergotools.init.FTItems.ItemArmorQuartz;
-import io.github.fergoman123.fergotools.init.FTItems.ItemQuartzBow;
-import io.github.fergoman123.fergotools.init.FTItems.ItemQuartzShears;
-import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.reference.strings.Tab;
 import io.github.fergoman123.fergoutil.creativetab.FergoCreativeTab;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
-public class Tabs
+ public class Tabs
 {
     public static FergoCreativeTab tabFergoTools;
     public static FergoCreativeTab tabFergoBlocks;

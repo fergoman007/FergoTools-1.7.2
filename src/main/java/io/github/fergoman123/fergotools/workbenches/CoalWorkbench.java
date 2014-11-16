@@ -1,11 +1,8 @@
 package io.github.fergoman123.fergotools.workbenches;
 
-import com.sun.prism.Texture;
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
-import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.ContainerWorkbenchFT;
@@ -24,7 +21,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
-import javax.xml.soap.Text;
 import java.util.Random;
 
 public class CoalWorkbench

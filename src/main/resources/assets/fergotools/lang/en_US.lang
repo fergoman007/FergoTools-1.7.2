@@ -212,6 +212,14 @@ item.FergoTools:gemSilk.name=Silk Gem
 item.FergoTools:gemRedstone.name=Red Crystal
 item.FergoTools:expCollector.name=Experience Collector
 
+item.FergoTools:staffExp.staffExp.name=Basic Staff of Experience
+item.FergoTools:staffExp.staffExp2.name=Greater Staff of Experience
+item.FergoTools:staffExp.staffExp3.name=Ultimate Staff of Experience
+
+item.FergoTools:gemExp.name=Experience Crystal
+item.FergoTools:gemExp2.name=Experience Crystal
+item.FergoTools:gemExp3.name=Experience Crystal
+
 item.FergoTools:quartzShears.name=Quartz Shears
 item.FergoTools:obsidianShears.name=Obsidian Shears
 item.FergoTools:emeraldShears.name=Emerald Shears
@@ -315,9 +323,14 @@ container.FergoTools:redstoneWorkbench=Redstone Workbench
 tooltip.FergoTools:holdShift=<Hold Shift for Info>
 tooltip.FergoTools:adamantiumTool=NOTE: Extremely Overpowered!
 tooltip.FergoTools:adamantiumInfi=Durability: Infinity
-tooltip.FergoTools:expCollector=Right Click to store experience.
+tooltip.FergoTools:expCollector=Used as a Crafting Item
 tooltip.FergoTools:shardExp=Right Click to Gain 1 Level of Exp
 tooltip.FergoTools:durability=Durability:
+
+tooltip.FergoTools:gemExp=Stores 5 Experience Levels
+tooltip.FergoTools:gemExp2=Stores 10 Experience Levels
+tooltip.FergoTools:gemExp3=Stores 30 Experience Levels
+tooltip.FergoTools:staffExp=Right Click to Store Experience
 
 tooltip.FergoTools:reduct=Reduction Amounts:
 

@@ -1,22 +1,10 @@
 package io.github.fergoman123.fergotools.core;
 
 import io.github.fergoman123.fergotools.creativetab.Tabs;
-import io.github.fergoman123.fergotools.furnaces.AdamantiumFurnace.BlockAdamantiumFurnace;
-import io.github.fergoman123.fergotools.furnaces.BronzeFurnace.BlockBronzeFurnace;
-import io.github.fergoman123.fergotools.furnaces.CoalFurnace.BlockCoalFurnace;
-import io.github.fergoman123.fergotools.furnaces.EmeraldFurnace.BlockEmeraldFurnace;
-import io.github.fergoman123.fergotools.furnaces.GlowstoneFurnace.BlockGlowstoneFurnace;
-import io.github.fergoman123.fergotools.furnaces.LapisFurnace.BlockLapisFurnace;
-import io.github.fergoman123.fergotools.furnaces.Macerator.BlockMacerator;
-import io.github.fergoman123.fergotools.furnaces.ObsidianFurnace.BlockObsidianFurnace;
-import io.github.fergoman123.fergotools.furnaces.QuartzFurnace.BlockQuartzFurnace;
-import io.github.fergoman123.fergotools.furnaces.RedstoneFurnace.BlockRedstoneFurnace;
-import io.github.fergoman123.fergotools.furnaces.SilkFurnace.BlockSilkFurnace;
-import io.github.fergoman123.fergotools.init.FTBlocks.*;
-import io.github.fergoman123.fergotools.init.FTItems.*;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
+import io.github.fergoman123.fergotools.reference.strings.Tile;
 import io.github.fergoman123.fergotools.util.base.ItemArmorFT.ArmorNames;
 import io.github.fergoman123.fergotools.util.item.Materials.Armor;
 import io.github.fergoman123.fergotools.util.item.Materials.Tools;
@@ -33,6 +21,38 @@ import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+
+import io.github.fergoman123.fergotools.core.block.ore.*;
+import io.github.fergoman123.fergotools.core.block.furnace.*;
+import io.github.fergoman123.fergotools.core.block.storage.*;
+import io.github.fergoman123.fergotools.core.block.log.*;
+import io.github.fergoman123.fergotools.core.block.plank.*;
+import io.github.fergoman123.fergotools.core.block.stair.*;
+import io.github.fergoman123.fergotools.core.block.*;
+import io.github.fergoman123.fergotools.core.tileentity.*;
+import io.github.fergoman123.fergotools.core.item.armor.*;
+import io.github.fergoman123.fergotools.core.item.axe.*;
+import io.github.fergoman123.fergotools.core.item.shovel.*;
+import io.github.fergoman123.fergotools.core.item.pickaxe.*;
+import io.github.fergoman123.fergotools.core.item.hoe.*;
+import io.github.fergoman123.fergotools.core.item.sword.*;
+import io.github.fergoman123.fergotools.core.item.materials.*;
+import io.github.fergoman123.fergotools.core.item.exp.*;
+import io.github.fergoman123.fergotools.core.item.bow.*;
+import io.github.fergoman123.fergotools.core.item.shears.*;
+import io.github.fergoman123.fergotools.core.item.stick.*;
+
+import io.github.fergoman123.fergotools.core.itemblock.ore.*;
+import io.github.fergoman123.fergotools.core.itemblock.block.*;
+import io.github.fergoman123.fergotools.core.itemblock.furnaceidle.*;
+import io.github.fergoman123.fergotools.core.itemblock.furnaceactive.*;
+import io.github.fergoman123.fergotools.core.itemblock.log.*;
+import io.github.fergoman123.fergotools.core.itemblock.plank.*;
+import io.github.fergoman123.fergotools.core.itemblock.stair.*;
+
+import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerBlock;
+import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerItem;
+import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerTileEntity;
 
 public class FTContent
 {
@@ -105,6 +125,11 @@ public class FTContent
     public static Item ingotAdamantium;
     public static Item gemSilk;
     public static Item gemRedstone;
+    public static Item gemExp;
+    public static Item gemExp2;
+    public static Item gemExp3;
+
+    public static Item staffExp;
 
     public static Item shardExp;
     public static Item expCollector;
@@ -190,7 +215,7 @@ public class FTContent
     public static Block oreGemLapis;
     public static Block oreBronze;
     public static Block oreAdamantium;
-    public static Block oreRedCrystal;
+    public static Block oreRedstone;
 
     public static Block blockExperience;
     public static Block blockExpCollector;
@@ -342,9 +367,15 @@ public class FTContent
         ingotAdamantium = new ItemAdamantiumIngot(ItemNames.ingotAdamantium);
         gemSilk = new ItemSilkGem(ItemNames.gemSilk);
         gemRedstone = new ItemRedstoneGem(ItemNames.gemRedstone);
+        gemExp = new ItemGemExp(ItemNames.gemExp);
+        gemExp2 = new ItemGemExp2(ItemNames.gemExp2);
+        gemExp3 = new ItemGemExp3(ItemNames.gemExp3);
+
 
         shardExp = new ItemExpShard(ItemNames.shardExp);
         expCollector = new ItemExpCollector(ItemNames.expCollector);
+
+        staffExp = new ItemStaffExp(ItemNames.staffExp);
 
         quartzHelmet = new ItemArmorQuartz(ArmorNames.quartz, Armor.quartzArmor, ArmorType.HELMET);
         quartzChestplate = new ItemArmorQuartz(ArmorNames.quartz, Armor.quartzArmor, ArmorType.CHEST);
@@ -423,11 +454,11 @@ public class FTContent
 
         oreExperience = new BlockOreExperience(Material.rock, BlockNames.oreExperience);
         oreObsidian = new BlockOreObsidian(Material.rock, BlockNames.oreObsidian);
-        oreGemEmerald = new BlockOreEmeraldCrystal(Material.rock, BlockNames.oreEmeraldCrystal);
-        oreGemLapis = new BlockOreEmeraldCrystal(Material.rock, BlockNames.oreLapisCrystal);
+        oreGemEmerald = new BlockOreEmerald(Material.rock, BlockNames.oreEmeraldCrystal);
+        oreGemLapis = new BlockOreEmerald(Material.rock, BlockNames.oreLapisCrystal);
         oreBronze = new BlockOreBronze(Material.rock, BlockNames.oreBronze);
         oreAdamantium = new BlockOreAdamantium(Material.rock, BlockNames.oreAdamantium);
-        oreRedCrystal = new BlockOreRedCrystal(Material.rock, BlockNames.oreCrystalRed);
+        oreRedstone = new BlockOreRedstone(Material.rock, BlockNames.oreCrystalRed);
 
         blockExperience = new BlockExperience(Material.iron, BlockNames.blockExperience);
         blockExpCollector = new BlockExpCollector(Material.iron, BlockNames.blockExpCollector);
@@ -439,7 +470,7 @@ public class FTContent
         blockGlowstone = new BlockGlowstoneStorage(Material.iron, BlockNames.blockGlowstone);
         blockAdamantium = new BlockAdamantium(Material.iron, BlockNames.blockAdamantium);
         blockSilkGem = new BlockSilkGem(Material.iron, BlockNames.blockSilkGem);
-        blockRedstone = new BlockRedstoneCrystal(Material.iron, BlockNames.blockRedstoneCrystal);
+        blockRedstone = new BlockRedstone(Material.iron, BlockNames.blockRedstoneCrystal);
 
         quartzFurnaceIdle = new BlockQuartzFurnace(false, Material.rock, FurnaceType.quartzFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
         obsidianFurnaceIdle = new BlockObsidianFurnace(false, Material.iron, FurnaceType.obsidianFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
@@ -506,6 +537,267 @@ public class FTContent
         redstoneWorkbench = new BlockRedstoneWorkbench(BlockNames.redstoneWorkbench);
 
         blockFergoGlass = new BlockFergoGlass(BlockNames.blockFergoGlass);
-
     }
+
+    public static void registerItems()
+    {
+        registerItem(quartzPickaxe, ItemNames.quartzPickaxe);
+        registerItem(quartzShovel, ItemNames.quartzShovel);
+        registerItem(quartzAxe, ItemNames.quartzAxe);
+        registerItem(quartzHoe, ItemNames.quartzHoe);
+        registerItem(quartzSword, ItemNames.quartzSword);
+
+        registerItem(obsidianPickaxe, ItemNames.obsidianPickaxe);
+        registerItem(obsidianShovel, ItemNames.obsidianShovel);
+        registerItem(obsidianAxe, ItemNames.obsidianAxe);
+        registerItem(obsidianHoe, ItemNames.obsidianHoe);
+        registerItem(obsidianSword, ItemNames.obsidianSword);
+
+        registerItem(emeraldPickaxe, ItemNames.emeraldPickaxe);
+        registerItem(emeraldShovel, ItemNames.emeraldShovel);
+        registerItem(emeraldAxe, ItemNames.emeraldAxe);
+        registerItem(emeraldHoe, ItemNames.emeraldHoe);
+        registerItem(emeraldSword, ItemNames.emeraldSword);
+
+        registerItem(lapisPickaxe, ItemNames.lapisPickaxe);
+        registerItem(lapisShovel, ItemNames.lapisShovel);
+        registerItem(lapisAxe, ItemNames.lapisAxe);
+        registerItem(lapisHoe, ItemNames.lapisHoe);
+        registerItem(lapisSword, ItemNames.lapisSword);
+
+        registerItem(bronzePickaxe, ItemNames.bronzePickaxe);
+        registerItem(bronzeShovel, ItemNames.bronzeShovel);
+        registerItem(bronzeAxe, ItemNames.bronzeAxe);
+        registerItem(bronzeHoe, ItemNames.bronzeHoe);
+        registerItem(bronzeSword, ItemNames.bronzeSword);
+
+        registerItem(coalPickaxe, ItemNames.coalPickaxe);
+        registerItem(coalShovel, ItemNames.coalShovel);
+        registerItem(coalAxe, ItemNames.coalAxe);
+        registerItem(coalHoe, ItemNames.coalHoe);
+        registerItem(coalSword, ItemNames.coalSword);
+
+        registerItem(glowstonePickaxe, ItemNames.glowstonePickaxe);
+        registerItem(glowstoneShovel, ItemNames.glowstoneShovel);
+        registerItem(glowstoneAxe, ItemNames.glowstoneAxe);
+        registerItem(glowstoneHoe, ItemNames.glowstoneHoe);
+        registerItem(glowstoneSword, ItemNames.glowstoneSword);
+
+        registerItem(adamantiumPickaxe, ItemNames.adamantiumPickaxe);
+        registerItem(adamantiumShovel, ItemNames.adamantiumShovel);
+        registerItem(adamantiumAxe, ItemNames.adamantiumAxe);
+        registerItem(adamantiumHoe, ItemNames.adamantiumHoe);
+        registerItem(adamantiumSword, ItemNames.adamantiumSword);
+
+        registerItem(silkPickaxe, ItemNames.silkPickaxe);
+        registerItem(silkShovel, ItemNames.silkShovel);
+        registerItem(silkAxe, ItemNames.silkAxe);
+        registerItem(silkHoe, ItemNames.silkHoe);
+        registerItem(silkSword, ItemNames.silkSword);
+
+        registerItem(redstonePickaxe, ItemNames.redstonePickaxe);
+        registerItem(redstoneShovel, ItemNames.redstoneShovel);
+        registerItem(redstoneAxe, ItemNames.redstoneAxe);
+        registerItem(redstoneHoe, ItemNames.redstoneHoe);
+        registerItem(redstoneSword, ItemNames.redstoneSword);
+
+        registerItem(ingotObsidian, ItemNames.ingotObsidian);
+        registerItem(gemEmerald, ItemNames.gemEmerald);
+        registerItem(gemLapis, ItemNames.gemLapis);
+        registerItem(ingotBronze, ItemNames.ingotBronze);
+        registerItem(ingotCoal, ItemNames.ingotCoal);
+        registerItem(ingotGlowstone, ItemNames.ingotGlowstone);
+        registerItem(ingotAdamantium, ItemNames.ingotAdamantium);
+        registerItem(gemSilk, ItemNames.gemSilk);
+        registerItem(gemRedstone, ItemNames.gemRedstone);
+        registerItem(gemExp, ItemNames.gemExp);
+        registerItem(gemExp2, ItemNames.gemExp2);
+        registerItem(gemExp3, ItemNames.gemExp3);
+
+        registerItem(shardExp, ItemNames.shardExp);
+        registerItem(expCollector, ItemNames.expCollector);
+
+        registerItem(staffExp, ItemNames.staffExp);
+
+        registerItem(quartzHelmet, ItemNames.quartzHelmet);
+        registerItem(quartzChestplate, ItemNames.quartzChestplate);
+        registerItem(quartzLeggings, ItemNames.quartzLeggings);
+        registerItem(quartzBoots, ItemNames.quartzBoots);
+
+        registerItem(obsidianHelmet, ItemNames.obsidianHelmet);
+        registerItem(obsidianChestplate, ItemNames.obsidianChestplate);
+        registerItem(obsidianLeggings, ItemNames.obsidianLeggings);
+        registerItem(obsidianBoots, ItemNames.obsidianBoots);
+
+        registerItem(emeraldHelmet, ItemNames.emeraldHelmet);
+        registerItem(emeraldChestplate, ItemNames.emeraldChestplate);
+        registerItem(emeraldLeggings, ItemNames.emeraldLeggings);
+        registerItem(emeraldBoots, ItemNames.emeraldBoots);
+
+        registerItem(lapisHelmet, ItemNames.lapisHelmet);
+        registerItem(lapisChestplate, ItemNames.lapisChestplate);
+        registerItem(lapisLeggings, ItemNames.lapisLeggings);
+        registerItem(lapisBoots, ItemNames.lapisBoots);
+
+        registerItem(bronzeHelmet, ItemNames.bronzeHelmet);
+        registerItem(bronzeChestplate, ItemNames.bronzeChestplate);
+        registerItem(bronzeLeggings, ItemNames.bronzeLeggings);
+        registerItem(bronzeBoots, ItemNames.bronzeBoots);
+
+        registerItem(coalHelmet, ItemNames.coalHelmet);
+        registerItem(coalChestplate, ItemNames.coalChestplate);
+        registerItem(coalLeggings, ItemNames.coalLeggings);
+        registerItem(coalBoots, ItemNames.coalBoots);
+
+        registerItem(glowstoneHelmet, ItemNames.glowstoneHelmet);
+        registerItem(glowstoneChestplate, ItemNames.glowstoneChestplate);
+        registerItem(glowstoneLeggings, ItemNames.glowstoneLeggings);
+        registerItem(glowstoneBoots, ItemNames.glowstoneBoots);
+
+        registerItem(adamantiumHelmet, ItemNames.adamantiumHelmet);
+        registerItem(adamantiumChestplate, ItemNames.adamantiumChestplate);
+        registerItem(adamantiumLeggings, ItemNames.adamantiumLeggings);
+        registerItem(adamantiumBoots, ItemNames.adamantiumBoots);
+
+        registerItem(redstoneHelmet, ItemNames.redstoneHelmet);
+        registerItem(redstoneChestplate, ItemNames.redstoneChestplate);
+        registerItem(redstoneLeggings, ItemNames.redstoneLeggings);
+        registerItem(redstoneBoots, ItemNames.redstoneBoots);
+
+        registerItem(bowQuartz, ItemNames.bowQuartz);
+        registerItem(bowObsidian, ItemNames.bowObsidian);
+        registerItem(bowEmerald, ItemNames.bowEmerald);
+        registerItem(bowLapis, ItemNames.bowLapis);
+        registerItem(bowBronze, ItemNames.bowBronze);
+        registerItem(bowCoal, ItemNames.bowCoal);
+        registerItem(bowGlowstone, ItemNames.bowGlowstone);
+        registerItem(bowAdamantium, ItemNames.bowAdamantium);
+
+        registerItem(quartzShears, ItemNames.quartzShears);
+        registerItem(obsidianShears, ItemNames.obsidianShears);
+        registerItem(emeraldShears, ItemNames.emeraldShears);
+        registerItem(lapisShears, ItemNames.lapisShears);
+        registerItem(bronzeShears, ItemNames.bronzeShears);
+        registerItem(coalShears, ItemNames.coalShears);
+        registerItem(glowstoneShears, ItemNames.glowstoneShears);
+        registerItem(adamantiumShears, ItemNames.adamantiumShears);
+        registerItem(silkShears, ItemNames.silkShears);
+        registerItem(redstoneShears, ItemNames.redstoneShears);
+
+        registerItem(stickObsidian, ItemNames.stickObsidian);
+        registerItem(stickEmerald,  ItemNames.stickEmerald);
+        registerItem(stickLapis, ItemNames.stickLapis);
+        registerItem(stickBronze, ItemNames.stickBronze);
+        registerItem(stickCoal, ItemNames.stickCoal);
+        registerItem(stickGlowstone, ItemNames.stickGlowstone);
+        registerItem(stickAdamantium, ItemNames.stickAdamantium);
+        registerItem(stickSilk, ItemNames.stickSilk);
+        registerItem(stickRedstone, ItemNames.stickRedstone);
+    }
+
+    public static void registerBlocks()
+    {
+        registerBlock(oreExperience, ItemBlockOreExperience.class, BlockNames.oreExperience);
+        registerBlock(oreObsidian, ItemBlockOreObsidian.class, BlockNames.oreObsidian);
+        registerBlock(oreGemEmerald, ItemBlockOreEmerald.class, BlockNames.oreEmeraldCrystal);
+        registerBlock(oreGemLapis, ItemBlockOreLapis.class, BlockNames.oreLapisCrystal);
+        registerBlock(oreBronze, ItemBlockOreBronze.class, BlockNames.oreBronze);
+        registerBlock(oreAdamantium, ItemBlockOreAdamantium.class, BlockNames.oreAdamantium);
+        registerBlock(oreRedstone, ItemBlockOreRedstone.class, BlockNames.oreCrystalRed);
+
+        registerBlock(blockExperience, ItemBlockExperience.class, BlockNames.blockExperience);
+        registerBlock(blockObsidian, ItemBlockObsidian.class, BlockNames.blockObsidian);
+        registerBlock(blockEmerald, ItemBlockEmerald.class, BlockNames.blockEmeraldCrystal);
+        registerBlock(blockLapis, ItemBlockLapis.class, BlockNames.blockLapisCrystal);
+        registerBlock(blockBronze, ItemBlockBronze.class, BlockNames.blockBronze);
+        registerBlock(blockCoal, ItemBlockCoal.class, BlockNames.blockCoal);
+        registerBlock(blockGlowstone, ItemBlockGlowstone.class, BlockNames.blockGlowstone);
+        registerBlock(blockAdamantium, ItemBlockAdamantium.class, BlockNames.blockAdamantium);
+        registerBlock(blockSilkGem, ItemBlockSilkGem.class, BlockNames.blockSilkGem);
+        registerBlock(blockRedstone, ItemBlockRedstone.class, BlockNames.blockRedstoneCrystal);
+        registerBlock(blockExpCollector, ItemBlockExpCollector.class, BlockNames.blockExpCollector);
+
+        registerBlock(quartzFurnaceIdle, ItemBlockQuartzFurnaceIdle.class, BlockNames.quartzFurnaceIdle);
+        registerBlock(obsidianFurnaceIdle, ItemBlockObsidianFurnaceIdle.class, BlockNames.obsidianFurnaceIdle);
+        registerBlock(emeraldFurnaceIdle, ItemBlockEmeraldFurnaceIdle.class, BlockNames.emeraldFurnaceIdle);
+        registerBlock(lapisFurnaceIdle, ItemBlockLapisFurnaceIdle.class, BlockNames.lapisFurnaceIdle);
+        registerBlock(bronzeFurnaceIdle, ItemBlockBronzeFurnaceIdle.class, BlockNames.bronzeFurnaceIdle);
+        registerBlock(coalFurnaceIdle, ItemBlockCoalFurnaceIdle.class, BlockNames.coalFurnaceIdle);
+        registerBlock(glowstoneFurnaceIdle, ItemBlockGlowstoneFurnaceIdle.class, BlockNames.glowstoneFurnaceIdle);
+        registerBlock(adamantiumFurnaceIdle, ItemBlockAdamantiumFurnaceIdle.class, BlockNames.adamantiumFurnaceIdle);
+        registerBlock(silkFurnaceIdle, ItemBlockSilkFurnaceIdle.class, BlockNames.silkFurnaceIdle);
+        registerBlock(redstoneFurnaceIdle, ItemBlockRedstoneFurnaceIdle.class, BlockNames.redstoneFurnaceIdle);
+        registerBlock(maceratorIdle, ItemBlockMaceratorIdle.class, BlockNames.maceratorIdle);
+
+        registerBlock(quartzFurnaceActive, ItemBlockQuartzFurnaceActive.class, BlockNames.quartzFurnaceActive);
+        registerBlock(obsidianFurnaceActive, ItemBlockObsidianFurnaceActive.class, BlockNames.obsidianFurnaceActive);
+        registerBlock(emeraldFurnaceActive, ItemBlockEmeraldFurnaceActive.class, BlockNames.emeraldFurnaceActive);
+        registerBlock(lapisFurnaceActive, ItemBlockLapisFurnaceActive.class, BlockNames.lapisFurnaceActive);
+        registerBlock(bronzeFurnaceActive, ItemBlockBronzeFurnaceActive.class, BlockNames.bronzeFurnaceActive);
+        registerBlock(coalFurnaceActive, ItemBlockCoalFurnaceActive.class, BlockNames.coalFurnaceActive);
+        registerBlock(glowstoneFurnaceActive, ItemBlockGlowstoneFurnaceActive.class, BlockNames.glowstoneFurnaceActive);
+        registerBlock(adamantiumFurnaceActive, ItemBlockAdamantiumFurnaceActive.class, BlockNames.adamantiumFurnaceActive);
+        registerBlock(silkFurnaceActive, ItemBlockSilkFurnaceActive.class, BlockNames.silkFurnaceActive);
+        registerBlock(redstoneFurnaceActive, ItemBlockRedstoneFurnaceActive.class, BlockNames.redstoneFurnaceActive);
+        registerBlock(maceratorActive, ItemBlockMaceratorActive.class, BlockNames.maceratorActive);
+
+        registerBlock(logObsidian, ItemBlockLogObsidian.class, BlockNames.logObsidian);
+        registerBlock(logEmerald, ItemBlockLogEmerald.class, BlockNames.logEmerald);
+        registerBlock(logLapis, ItemBlockLogLapis.class, BlockNames.logLapis);
+        registerBlock(logBronze, ItemBlockLogBronze.class, BlockNames.logBronze);
+        registerBlock(logCoal, ItemBlockLogCoal.class, BlockNames.logCoal);
+        registerBlock(logGlowstone, ItemBlockLogGlowstone.class, BlockNames.logGlowstone);
+        registerBlock(logAdamantium, ItemBlockLogAdamantium.class, BlockNames.logAdamantium);
+        registerBlock(logSilk, ItemBlockLogSilk.class, BlockNames.logSilk);
+        registerBlock(logRedstone, ItemBlockLogRedstone.class, BlockNames.logRedstone);
+
+        registerBlock(plankObsidian, ItemBlockPlankObsidian.class, BlockNames.plankObsidian);
+        registerBlock(plankEmerald, ItemBlockPlankEmerald.class, BlockNames.plankEmerald);
+        registerBlock(plankLapis, ItemBlockPlankLapis.class, BlockNames.plankLapis);
+        registerBlock(plankBronze, ItemBlockPlankBronze.class, BlockNames.plankBronze);
+        registerBlock(plankCoal, ItemBlockPlankCoal.class, BlockNames.plankCoal);
+        registerBlock(plankGlowstone, ItemBlockPlankGlowstone.class, BlockNames.plankGlowstone);
+        registerBlock(plankAdamantium, ItemBlockPlankAdamantium.class, BlockNames.plankAdamantium);
+        registerBlock(plankSilk, ItemBlockPlankSilk.class, BlockNames.plankSilk);
+        registerBlock(plankRedstone, ItemBlockPlankRedstone.class, BlockNames.plankRedstone);
+
+        registerBlock(stairObsidian, ItemBlockStairObsidian.class, BlockNames.stairObsidian);
+        registerBlock(stairEmerald, ItemBlockStairEmerald.class, BlockNames.stairEmerald);
+        registerBlock(stairLapis, ItemBlockStairLapis.class, BlockNames.stairLapis);
+        registerBlock(stairBronze, ItemBlockStairBronze.class, BlockNames.stairBronze);
+        registerBlock(stairCoal, ItemBlockStairCoal.class, BlockNames.stairCoal);
+        registerBlock(stairGlowstone, ItemBlockStairGlowstone.class, BlockNames.stairGlowstone);
+        registerBlock(stairAdamantium, ItemBlockStairAdamantium.class, BlockNames.stairAdamantium);
+        registerBlock(stairSilk, ItemBlockStairSilk.class, BlockNames.stairSilk);
+        registerBlock(stairRedstone, ItemBlockStairRedstone.class, BlockNames.stairRedstone);
+
+        registerBlock(obsidianWorkbench, BlockNames.obsidianWorkbench);
+        registerBlock(emeraldWorkbench, BlockNames.emeraldWorkbench);
+        registerBlock(lapisWorkbench, BlockNames.lapisWorkbench);
+        registerBlock(bronzeWorkbench, BlockNames.bronzeWorkbench);
+        registerBlock(coalWorkbench, BlockNames.coalWorkbench);
+        registerBlock(glowstoneWorkbench, BlockNames.glowstoneWorkbench);
+        registerBlock(adamantiumWorkbench, BlockNames.adamantiumWorkbench);
+        registerBlock(silkWorkbench, BlockNames.silkWorkbench);
+        registerBlock(redstoneWorkbench, BlockNames.redstoneWorkbench);
+
+        registerBlock(blockFergoGlass, BlockNames.blockFergoGlass);
+    }
+
+    public static void registerTileEntities()
+    {
+        registerTileEntity(TileEntityQuartzFurnace.class, Tile.quartzFurnaceTile);
+        registerTileEntity(TileEntityObsidianFurnace.class, Tile.obsidianFurnaceTile);
+        registerTileEntity(TileEntityEmeraldFurnace.class, Tile.emeraldFurnaceTile);
+        registerTileEntity(TileEntityLapisFurnace.class, Tile.lapisFurnaceTile);
+        registerTileEntity(TileEntityBronzeFurnace.class, Tile.bronzeFurnaceTile);
+        registerTileEntity(TileEntityCoalFurnace.class, Tile.coalFurnaceTile);
+        registerTileEntity(TileEntityGlowstoneFurnace.class, Tile.glowstoneFurnaceTile);
+        registerTileEntity(TileEntityAdamantiumFurnace.class, Tile.adamantiumFurnaceTile);
+        registerTileEntity(TileEntitySilkFurnace.class, Tile.silkFurnaceTile);
+        registerTileEntity(TileEntityRedstoneFurnace.class, Tile.redstoneFurnaceTile);
+        registerTileEntity(TileEntityMacerator.class, Tile.maceratorTile);
+    }
+
+
 }

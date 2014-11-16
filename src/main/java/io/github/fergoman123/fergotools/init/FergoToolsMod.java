@@ -25,15 +25,15 @@ public class FergoToolsMod
         Tabs.init();
         Materials.init();
         FTContent.init();
-        ModItems.init();
-        ModBlocks.init();
+        FTContent.registerItems();
+        FTContent.registerBlocks();
 
     }
 
     public static void load(FMLInitializationEvent evt)
     {
         LogHelper.info(Messages.initMessage);
-        ModTiles.init();
+        FTContent.registerTileEntities();
         RegHandler.init();
         RegHandler.registerOres();
         Recipes.init();

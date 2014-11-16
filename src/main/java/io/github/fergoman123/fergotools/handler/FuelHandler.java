@@ -11,8 +11,6 @@ package io.github.fergoman123.fergotools.handler;
 
  import cpw.mods.fml.common.IFuelHandler;
  import io.github.fergoman123.fergotools.core.FTContent;
- import io.github.fergoman123.fergotools.init.FTBlocks.BlockCoalStorage;
- import io.github.fergoman123.fergotools.init.FTItems.ItemCoalIngot;
  import net.minecraft.init.Blocks;
  import net.minecraft.init.Items;
  import net.minecraft.item.Item;

@@ -25,8 +25,8 @@ public abstract class BlockGlassFT extends BlockBreakable
         super("glass", Material.glass, false);
         setBlockName(blockName);
         setCreativeTab(Tabs.tabFergoBlocks);
-        setHardness(0.3f);
         setResistance(50f);
+        setBlockUnbreakable();
         setStepSound(Block.soundTypeGlass);
     }
 

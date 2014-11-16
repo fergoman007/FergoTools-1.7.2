@@ -1,18 +1,14 @@
 package io.github.fergoman123.fergotools.workbenches;
 
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
-import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.Locale;
-import io.github.fergoman123.fergotools.util.base.ItemBlockFT;
 import io.github.fergoman123.fergotools.util.base.workbench.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.util.base.workbench.GuiWorkbenchFT;
 import io.github.fergoman123.fergoutil.helper.GLHelper;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
-import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
@@ -21,7 +17,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.IIcon;

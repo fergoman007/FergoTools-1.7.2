@@ -66,7 +66,7 @@ public class FTStacks
     public static final ItemStack oreBronze = new ItemStack(con.oreBronze);
     public static final ItemStack oreExperience = new ItemStack(con.oreExperience);
     public static final ItemStack oreAdamantium = new ItemStack(con.oreAdamantium);
-    public static final ItemStack oreRedstoneCrystal = new ItemStack(con.oreRedCrystal);
+    public static final ItemStack oreRedstoneCrystal = new ItemStack(con.oreRedstone);
 
     public static final ItemStack quartzPickaxe = new ItemStack(con.quartzPickaxe);
     public static final ItemStack quartzShovel = new ItemStack(con.quartzShovel);

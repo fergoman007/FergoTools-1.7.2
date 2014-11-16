@@ -18,7 +18,7 @@ public abstract class ItemFT extends Item{
     {
         super();
         this.setUnlocalizedName(itemName);
-        this.maxStackSize = 1;
+        this.maxStackSize = 64;
         this.setCreativeTab(Tabs.tabFergoItems);
         this.setNoRepair();
     }

@@ -11,8 +11,6 @@ package io.github.fergoman123.fergotools.handler;
 
  import io.github.fergoman123.fergotools.FergoTools;
  import io.github.fergoman123.fergotools.core.FTContent;
- import io.github.fergoman123.fergotools.init.FTBlocks.*;
- import io.github.fergoman123.fergotools.init.FTItems.*;
  import io.github.fergoman123.fergotools.reference.names.BlockNames;
  import io.github.fergoman123.fergotools.reference.names.ItemNames;
  import io.github.fergoman123.fergotools.util.GuiHandler;
@@ -38,7 +36,7 @@ package io.github.fergoman123.fergotools.handler;
         RegisterHelper.registerOre(BlockNames.oreBronze, FTContent.oreBronze);
         RegisterHelper.registerOre(BlockNames.oreAdamantium, FTContent.oreAdamantium);
         RegisterHelper.registerOre(BlockNames.oreExperience, FTContent.oreExperience);
-        RegisterHelper.registerOre(BlockNames.oreCrystalRed, FTContent.oreRedCrystal);
+        RegisterHelper.registerOre(BlockNames.oreCrystalRed, FTContent.oreRedstone);
 
         RegisterHelper.registerOre(BlockNames.blockObsidian, FTContent.blockObsidian);
         RegisterHelper.registerOre(BlockNames.blockEmeraldCrystal, FTContent.blockEmerald);

@@ -2,8 +2,6 @@ package io.github.fergoman123.fergotools.event;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import io.github.fergoman123.fergotools.core.FTContent;
-import io.github.fergoman123.fergotools.init.FTItems;
-import io.github.fergoman123.fergotools.util.PotionList;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
