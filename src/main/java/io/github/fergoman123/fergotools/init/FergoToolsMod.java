@@ -6,7 +6,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.handler.RegHandler;
 import io.github.fergoman123.fergotools.helper.LogHelper;
@@ -24,9 +23,14 @@ public class FergoToolsMod
         FergoTools.proxy.registerEventHandlers();
         Tabs.init();
         Materials.init();
+<<<<<<< HEAD
         FTContent.init();
         FTContent.registerItems();
         FTContent.registerBlocks();
+=======
+        ModItems.init();
+        ModBlocks.init();
+>>>>>>> parent of 49125e6... init package changes
 
     }
 
