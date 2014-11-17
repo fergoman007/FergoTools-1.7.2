@@ -13,6 +13,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.oredict.OreDictionary;
@@ -22,77 +23,9 @@ import net.minecraftforge.oredict.OreDictionary;
  */
 public final class TileEntityMacerator extends TileEntityFurnaceFT {
 
-    public int getSizeInventory(){return this.slots.length;}
-
-        public ItemStack getStackInSlot(int slot){return this.slots[slot];}
-
-        public ItemStack decrStackSize(int par1, int par2)
-        {
-            if (this.slots[par1] != null)
-            {
-                ItemStack stack;
-
-                if (this.slots[par1].stackSize <= par2)
-                {
-                    stack = this.slots[par1];
-                    this.slots[par1] = null;
-                    return stack;
-                }
-                else
-                {
-                    stack = this.slots[par1].splitStack(par2);
-
-                    if (this.slots[par1].stackSize == 0)
-                    {
-                        this.slots[par1] = null;
-                    }
-
-                    return stack;
-                }
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public ItemStack getStackInSlotOnClosing(int slot)
-        {
-            if (this.slots[slot] != null)
-            {
-                ItemStack stack = this.slots[slot];
-                this.slots[slot] = null;
-                return stack;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public void setInventorySlotContents(int slot, ItemStack stack)
-        {
-            this.slots[slot] = stack;
-
-            if (stack != null && stack.stackSize > this.getInventoryStackLimit())
-            {
-                stack.stackSize = this.getInventoryStackLimit();
-            }
-        }
-
         public String getInventoryName()
         {
-            return this.hasCustomInventoryName() ? this.localizedName : Locale.containerMacerator;
-        }
-
-        public boolean hasCustomInventoryName()
-        {
-            return this.localizedName != null && this.localizedName.length() > 0;
-        }
-
-        public void setGuiDisplayName(String displayName)
-        {
-            this.localizedName = displayName;
+            return this.hasCustomInventoryName() ? this.customName : Locale.containerMacerator;
         }
 
         @Override
@@ -118,33 +51,7 @@ public final class TileEntityMacerator extends TileEntityFurnaceFT {
 
             if (compound.hasKey(Tile.customName, 8))
             {
-                this.localizedName = compound.getString(Tile.customName);
-            }
-        }
-
-        @Override
-        public void writeToNBT(NBTTagCompound compound) {
-            super.writeToNBT(compound);
-            compound.setShort(Tile.burnTime, (short)this.burnTime);
-            compound.setShort(Tile.cookTime, (short)this.cookTime);
-            NBTTagList list = new NBTTagList();
-
-            for (int i = 0; i < this.slots.length; ++i)
-            {
-                if (this.slots[i] != null)
-                {
-                    NBTTagCompound compound1 = new NBTTagCompound();
-                    compound1.setByte(Tile.slot, (byte)i);
-                    this.slots[i].writeToNBT(compound1);
-                    list.appendTag(compound1);
-                }
-            }
-
-            compound.setTag(Tile.items, list);
-
-            if (this.hasCustomInventoryName())
-            {
-                compound.setString(Tile.customName, this.localizedName);
+                this.customName = compound.getString(Tile.customName);
             }
         }
 

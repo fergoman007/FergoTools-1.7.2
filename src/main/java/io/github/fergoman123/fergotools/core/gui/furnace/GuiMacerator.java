@@ -26,7 +26,7 @@ public class GuiMacerator extends GuiFT
     {
         String s = this.macerator.hasCustomInventoryName() ? macerator.getInventoryName() : GuiHelper.format(this.macerator.getInventoryName());
         fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-        fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 100 + 2, 4210752);
+        fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 126 + 2, 4210752);
     }
 
     public void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
@@ -37,13 +37,13 @@ public class GuiMacerator extends GuiFT
         int startY = (height - ySize) / 2;
         drawTexturedModalRect(startX, startY, 0, 0, xSize, ySize);
 
-        if (this.macerator.isBurning())
+        if (macerator.isBurning())
         {
-            int cookTime = this.macerator.getPowerRemainingScaled(12);
+            int cookTime = macerator.getBurnTimeRemainingScaled(12);
             drawTexturedModalRect(startX + 25, startY + 24 + 12 - cookTime, 176, 12 - cookTime, 14, cookTime + 2);
         }
 
-        int scaleAdjustment = this.macerator.getCookProgressScaled(24);
+        int scaleAdjustment = macerator.getCookProgressScaled(24);
         drawTexturedModalRect(startX + 80, startY + 21, 176, 14, scaleAdjustment + 1, 16);
     }
 }

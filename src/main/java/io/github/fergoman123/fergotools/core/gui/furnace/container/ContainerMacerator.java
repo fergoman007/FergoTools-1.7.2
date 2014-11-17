@@ -30,7 +30,7 @@ public class ContainerMacerator extends ContainerFT
     @Override
     public void addInventorySlots() {
         this.addSlotToContainer(new Slot(this.macerator, 0, 62, 22));
-        this.addSlotToContainer(new Slot(this.macerator, 1, 152, 56));
+        this.addSlotToContainer(new Slot(this.macerator, 1, 42, 22));
         this.addSlotToContainer(new SlotFurnace(this.invPlayer.player, this.macerator, 2, 110, 22));
     }
 
@@ -39,13 +39,13 @@ public class ContainerMacerator extends ContainerFT
         for (int invRowIndex = 0; invRowIndex < playerInvRows; invRowIndex++) {
             for (int invColIndex = 0; invColIndex < playerInvCols; ++invColIndex)
             {
-                this.addSlotToContainer(new Slot(this.invPlayer, invColIndex + invRowIndex * 9 + 9, 8 + invColIndex * 18, 78 + invRowIndex * 18));
+                this.addSlotToContainer(new Slot(this.invPlayer, invColIndex + invRowIndex * 9 + 9, 8 + invColIndex * 18, 53 + invRowIndex * 18));
             }
         }
 
         for (int actionBarSlotIndex = 0; actionBarSlotIndex < playerInvCols; ++actionBarSlotIndex)
         {
-            this.addSlotToContainer(new Slot(this.invPlayer, actionBarSlotIndex, 8 + actionBarSlotIndex * 18, 136));
+            this.addSlotToContainer(new Slot(this.invPlayer, actionBarSlotIndex, 8 + actionBarSlotIndex * 18, 111));
         }
     }
 
@@ -53,7 +53,8 @@ public class ContainerMacerator extends ContainerFT
     {
         super.addCraftingToCrafters(par1ICrafting);
         par1ICrafting.sendProgressBarUpdate(this, 0, this.macerator.cookTime);
-        par1ICrafting.sendProgressBarUpdate(this, 1, this.macerator.power);
+        par1ICrafting.sendProgressBarUpdate(this, 1, this.macerator.burnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 2, this.macerator.currentItemBurnTime);
     }
 
     /**
@@ -76,6 +77,11 @@ public class ContainerMacerator extends ContainerFT
             {
                 icrafting.sendProgressBarUpdate(this, 1, this.macerator.burnTime);
             }
+
+            if (this.lastItemBurnTime != this.macerator.currentItemBurnTime)
+            {
+                icrafting.sendProgressBarUpdate(this, 2, this.macerator.currentItemBurnTime);
+            }
         }
 
         this.lastCookTime = this.macerator.cookTime;
@@ -93,6 +99,11 @@ public class ContainerMacerator extends ContainerFT
         if (par1 == 1)
         {
             this.macerator.burnTime = par2;
+        }
+
+        if (par1 == 2)
+        {
+            this.macerator.currentItemBurnTime = par2;
         }
     }
 
@@ -132,7 +143,7 @@ public class ContainerMacerator extends ContainerFT
                         return null;
                     }
                 }
-                else if (TileEntityMacerator.isItemPower(itemstack1))
+                else if (TileEntityMacerator.isItemFuel(itemstack1))
                 {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false))
                     {
