@@ -10,6 +10,9 @@
 package io.github.fergoman123.fergotools.config;
 
 
+import cpw.mods.fml.client.event.ConfigChangedEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergoutil.helper.ConfigHelper;
 import io.github.fergoman123.fergotools.helper.LogHelper;
 import net.minecraftforge.common.config.Configuration;
@@ -24,24 +27,23 @@ public class ConfigHandler
 
     public static void init(File configFile)
     {
+        if (config == null)
+        {
             config = new Configuration(configFile);
-
-        try
-        {
-
-            enchantability = config.getInt("enchantability", ConfigHelper.getCategoryGeneral(), Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
-        }
-        catch (Exception e)
-        {
-            LogHelper.error("Config Failed to load because: " + e.getCause());
-        }
-        finally
-        {
-            config.save();
+            loadConfig();
         }
     }
 
+    private static void loadConfig() {
+        enchantability = config.getInt("enchantability", ConfigHelper.getCategoryGeneral(), Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
+    }
 
-
-
+    @SubscribeEvent
+    public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent evt)
+    {
+        if (evt.modID.equalsIgnoreCase(ModInfo.modid))
+        {
+            loadConfig();
+        }
+    }
 }
