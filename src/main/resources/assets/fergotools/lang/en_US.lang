@@ -330,7 +330,9 @@ tooltip.FergoTools:durability=Durability:
 tooltip.FergoTools:gemExp=Stores 5 Experience Levels
 tooltip.FergoTools:gemExp2=Stores 10 Experience Levels
 tooltip.FergoTools:gemExp3=Stores 30 Experience Levels
-tooltip.FergoTools:staffExp=Right Click to Store Experience
+tooltip.FergoTools:staffExp=Right Click to Store 5 Experience Levels
+tooltip.FergoTools:staffExp2=Right Click to Store 10 Experience Levels
+tooltip.FergoTools:staffExp3=Right Click to Store 30 Experience Levels
 
 tooltip.FergoTools:reduct=Reduction Amounts:
 

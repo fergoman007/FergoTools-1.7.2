@@ -7,7 +7,7 @@
   * http://www.gnu.org/licenses/gpl-3.0.html
   */
 
-package io.github.fergoman123.fergotools.util;
+package io.github.fergoman123.fergotools.handler;
 
  import cpw.mods.fml.common.network.IGuiHandler;
  import io.github.fergoman123.fergotools.core.gui.furnace.*;

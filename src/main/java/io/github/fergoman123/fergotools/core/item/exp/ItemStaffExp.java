@@ -98,7 +98,20 @@ public final class ItemStaffExp extends Item
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
-        list.add(NameHelper.translateToLocal(Locale.staffExpToolTip));
+        if (stack.getItemDamage() == 0)
+        {
+            list.add(NameHelper.translateToLocal(Locale.staffExpToolTip));
+        }
+
+        if (stack.getItemDamage() == 1)
+        {
+            list.add(NameHelper.translateToLocal(Locale.staffExpToolTip2));
+        }
+
+        if (stack.getItemDamage() == 2)
+        {
+            list.add(NameHelper.translateToLocal(Locale.staffExpToolTip3));
+        }
     }
 
     @Override

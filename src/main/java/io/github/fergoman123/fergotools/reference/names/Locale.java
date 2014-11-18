@@ -16,6 +16,8 @@ public class Locale
     public static final String gemExpToolTip2 = toolTipPrefix + "gemExp2";
     public static final String gemExpToolTip3 = toolTipPrefix + "gemExp3";
     public static final String staffExpToolTip = toolTipPrefix + "staffExp";
+    public static final String staffExpToolTip2 = toolTipPrefix + "staffExp2";
+    public static final String staffExpToolTip3 = toolTipPrefix + "staffExp3";
     public static final String expShardToolTip = toolTipPrefix + "shardExp";
     public static final String adamantiumToolTip =  toolTipPrefix + "adamantiumTool";
 
