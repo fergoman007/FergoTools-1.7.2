@@ -21,6 +21,8 @@ import java.io.File;
 
 public class ConfigHandler
 {
+    public static final ConfigHandler instance = new ConfigHandler();
+
     public static Configuration config;
 
     public static int enchantability;
