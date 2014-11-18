@@ -9,6 +9,7 @@
 
 package io.github.fergoman123.fergotools.util.tool;
 
+ import io.github.fergoman123.fergotools.config.ConfigHandler;
  import io.github.fergoman123.fergotools.util.item.Materials;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
@@ -22,10 +23,11 @@ package io.github.fergoman123.fergotools.util.tool;
 
  public abstract class ItemHoeFT extends ItemHoe{
 
-     public Materials.Tools materials = new Materials.Tools();
+     public ToolMaterial material;
 
     public ItemHoeFT(ToolMaterial material, int maxUses, String itemName) {
         super(material);
+        this.material = material;
         this.setUnlocalizedName(itemName);
         this.setMaxStackSize(1);
         this.setMaxDamage(maxUses);
@@ -49,4 +51,9 @@ package io.github.fergoman123.fergotools.util.tool;
      }
 
      public abstract void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b);
+
+     @Override
+     public int getItemEnchantability() {
+         return ConfigHandler.enchantability;
+     }
  }

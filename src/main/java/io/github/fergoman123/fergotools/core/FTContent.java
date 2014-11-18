@@ -1,5 +1,32 @@
 package io.github.fergoman123.fergotools.core;
 
+import io.github.fergoman123.fergotools.core.block.BlockFergoGlass;
+import io.github.fergoman123.fergotools.core.block.furnace.*;
+import io.github.fergoman123.fergotools.core.block.log.*;
+import io.github.fergoman123.fergotools.core.block.ore.*;
+import io.github.fergoman123.fergotools.core.block.plank.*;
+import io.github.fergoman123.fergotools.core.block.stair.*;
+import io.github.fergoman123.fergotools.core.block.storage.*;
+import io.github.fergoman123.fergotools.core.block.workbench.*;
+import io.github.fergoman123.fergotools.core.item.armor.*;
+import io.github.fergoman123.fergotools.core.item.axe.*;
+import io.github.fergoman123.fergotools.core.item.bow.*;
+import io.github.fergoman123.fergotools.core.item.exp.*;
+import io.github.fergoman123.fergotools.core.item.hoe.*;
+import io.github.fergoman123.fergotools.core.item.materials.*;
+import io.github.fergoman123.fergotools.core.item.pickaxe.*;
+import io.github.fergoman123.fergotools.core.item.shears.*;
+import io.github.fergoman123.fergotools.core.item.shovel.*;
+import io.github.fergoman123.fergotools.core.item.stick.*;
+import io.github.fergoman123.fergotools.core.item.sword.*;
+import io.github.fergoman123.fergotools.core.itemblock.block.*;
+import io.github.fergoman123.fergotools.core.itemblock.furnaceactive.*;
+import io.github.fergoman123.fergotools.core.itemblock.furnaceidle.*;
+import io.github.fergoman123.fergotools.core.itemblock.log.*;
+import io.github.fergoman123.fergotools.core.itemblock.ore.*;
+import io.github.fergoman123.fergotools.core.itemblock.plank.*;
+import io.github.fergoman123.fergotools.core.itemblock.stair.*;
+import io.github.fergoman123.fergotools.core.tileentity.*;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
@@ -8,51 +35,12 @@ import io.github.fergoman123.fergotools.reference.strings.Tile;
 import io.github.fergoman123.fergotools.util.base.ItemArmorFT.ArmorNames;
 import io.github.fergoman123.fergotools.util.item.Materials.Armor;
 import io.github.fergoman123.fergotools.util.item.Materials.Tools;
-import io.github.fergoman123.fergotools.workbenches.AdamantiumWorkbench.BlockAdamantiumWorkbench;
-import io.github.fergoman123.fergotools.workbenches.BronzeWorkbench.BlockBronzeWorkbench;
-import io.github.fergoman123.fergotools.workbenches.CoalWorkbench.BlockCoalWorkbench;
-import io.github.fergoman123.fergotools.workbenches.EmeraldWorkbench.BlockEmeraldWorkbench;
-import io.github.fergoman123.fergotools.workbenches.GlowstoneWorkbench.BlockGlowstoneWorkbench;
-import io.github.fergoman123.fergotools.workbenches.LapisWorkbench.BlockLapisWorkbench;
-import io.github.fergoman123.fergotools.workbenches.ObsidianWorkbench.BlockObsidianWorkbench;
-import io.github.fergoman123.fergotools.workbenches.RedstoneWorkbench.BlockRedstoneWorkbench;
-import io.github.fergoman123.fergotools.workbenches.SilkWorkbench.BlockSilkWorkbench;
 import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
-import io.github.fergoman123.fergotools.core.block.ore.*;
-import io.github.fergoman123.fergotools.core.block.furnace.*;
-import io.github.fergoman123.fergotools.core.block.storage.*;
-import io.github.fergoman123.fergotools.core.block.log.*;
-import io.github.fergoman123.fergotools.core.block.plank.*;
-import io.github.fergoman123.fergotools.core.block.stair.*;
-import io.github.fergoman123.fergotools.core.block.*;
-import io.github.fergoman123.fergotools.core.tileentity.*;
-import io.github.fergoman123.fergotools.core.item.armor.*;
-import io.github.fergoman123.fergotools.core.item.axe.*;
-import io.github.fergoman123.fergotools.core.item.shovel.*;
-import io.github.fergoman123.fergotools.core.item.pickaxe.*;
-import io.github.fergoman123.fergotools.core.item.hoe.*;
-import io.github.fergoman123.fergotools.core.item.sword.*;
-import io.github.fergoman123.fergotools.core.item.materials.*;
-import io.github.fergoman123.fergotools.core.item.exp.*;
-import io.github.fergoman123.fergotools.core.item.bow.*;
-import io.github.fergoman123.fergotools.core.item.shears.*;
-import io.github.fergoman123.fergotools.core.item.stick.*;
-
-import io.github.fergoman123.fergotools.core.itemblock.ore.*;
-import io.github.fergoman123.fergotools.core.itemblock.block.*;
-import io.github.fergoman123.fergotools.core.itemblock.furnaceidle.*;
-import io.github.fergoman123.fergotools.core.itemblock.furnaceactive.*;
-import io.github.fergoman123.fergotools.core.itemblock.log.*;
-import io.github.fergoman123.fergotools.core.itemblock.plank.*;
-import io.github.fergoman123.fergotools.core.itemblock.stair.*;
-
-import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerBlock;
-import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerItem;
-import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerTileEntity;
+import static io.github.fergoman123.fergoutil.helper.RegisterHelper.*;
 
 public class FTContent
 {
