@@ -6,7 +6,7 @@ CHOST=`hostname`
 
 COMMITMESSAGE="Auto Commit - ${CDATE} (${CHOST})"
 
-echo "==== Starting Commit with Message: ${COMMITMESSAGE}"
+echo "==== Starting Commit with Message: ${COMMITMESSAGE} ===="
 
 git pull origin master
 
@@ -19,6 +19,6 @@ git commit -m "$COMMITMESSAGE" --allow-empty # (Allow empty will push an empty c
 # Push
 git push --set-upstream origin master
 
-echo "==== Auto Commit completed"
+echo "==== Auto Commit completed ===="
 exit 2
 done
