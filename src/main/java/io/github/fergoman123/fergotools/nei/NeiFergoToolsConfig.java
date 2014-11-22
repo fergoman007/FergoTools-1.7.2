@@ -2,7 +2,6 @@ package io.github.fergoman123.fergotools.nei;
 
 import codechicken.nei.api.API;
 import codechicken.nei.api.IConfigureNEI;
-import io.github.fergoman123.fergotools.reference.ModInfo;
 
 /**
  * Created by Fergoman123.
