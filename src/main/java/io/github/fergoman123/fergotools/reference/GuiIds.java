@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference;
 
+/**
+ * list of gui id's
+ */
 public enum GuiIds
 {
     quartzFurnace,

@@ -21,7 +21,11 @@ package io.github.fergoman123.fergotools.util.base;
 
  public abstract class BlockFT extends Block
 {
-
+    /**
+     * the base constructor for block classes
+     * @param material the block material
+     * @param blockName the block name
+     */
     public BlockFT(Material material, String blockName)
     {
         super(material);
@@ -39,5 +43,13 @@ package io.github.fergoman123.fergotools.util.base;
         blockIcon = register.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }
 
+    /**
+     *  gets the block or item dropped when block
+     *  is broken
+     * @param metadata the metadata of the item or block
+     * @param rand the random
+     * @param fortune the fortune
+     * @return block or item
+     */
     public abstract Item getItemDropped(int metadata, Random rand, int fortune);
 }

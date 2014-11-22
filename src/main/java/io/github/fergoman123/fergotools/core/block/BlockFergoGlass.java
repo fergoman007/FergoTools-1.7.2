@@ -7,6 +7,10 @@ import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.util.base.BlockGlassFT;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.boss.EntityDragon;
+import net.minecraft.entity.boss.EntityWither;
+import net.minecraft.entity.projectile.EntityWitherSkull;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
@@ -23,6 +27,7 @@ public class BlockFergoGlass extends BlockGlassFT {
 
     public BlockFergoGlass(String blockName) {
         super(blockName);
+        this.setResistance(6000000.0F);
     }
 
     public boolean shouldSideBeRendered(IBlockAccess world, int x, int y, int z, int side) {
@@ -340,5 +345,26 @@ public class BlockFergoGlass extends BlockGlassFT {
 
     public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
         return true;
+    }
+
+    @Override
+    public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity)
+    {
+        if (entity instanceof EntityWitherSkull)
+        {
+            return false;
+        }
+        else if (entity instanceof EntityWither)
+        {
+            return false;
+        }
+        else if (entity instanceof EntityDragon)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }

@@ -30,17 +30,6 @@ package io.github.fergoman123.fergotools.crafting;
         return instance;
     }
 
-    private MaceratorRecipes()
-    {
-        this.addSmeltingRecipeForBlock(Blocks.iron_ore, new ItemStack(Items.iron_ingot), 1.4F);
-        this.addSmeltingRecipeForBlock(Blocks.gold_ore, new ItemStack(Items.gold_ingot), 2.0F);
-        this.addSmeltingRecipeForBlock(Blocks.diamond_ore, new ItemStack(Items.diamond), 2.0F);
-        this.addSmeltingRecipeForBlock(Blocks.coal_ore, new ItemStack(Items.coal), 0.2F);
-        this.addSmeltingRecipeForBlock(Blocks.redstone_ore, new ItemStack(Items.redstone), 1.4F);
-        this.addSmeltingRecipeForBlock(Blocks.lapis_ore, new ItemStack(Items.dye, 2, 4), 0.4F);
-        this.addSmeltingRecipeForBlock(Blocks.quartz_ore, new ItemStack(Items.quartz), 0.4F);
-    }
-
     public void addSmeltingRecipeForBlock(Block input, ItemStack output, float experience)
     {
         this.addSmelting(Item.getItemFromBlock(input), output, experience);

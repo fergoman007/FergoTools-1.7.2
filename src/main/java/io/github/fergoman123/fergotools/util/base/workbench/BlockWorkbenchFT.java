@@ -20,6 +20,11 @@ public abstract class BlockWorkbenchFT extends Block
     @SideOnly(Side.CLIENT)
     public IIcon topIcon, frontIcon, bottomIcon;
 
+    /**
+     * this is the main constructor for workbench
+     * blocks
+     * @param blockName the name of the workbench
+     */
     public BlockWorkbenchFT(String blockName)
     {
         super(Material.wood);

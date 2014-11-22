@@ -25,6 +25,12 @@ public abstract class ItemArmorFT extends ItemArmor
         public static final String adamantium = "adamantium";
     }
 
+    /**
+     * main armor constructor
+     * @param armorName the base name of the armor
+     * @param material the armor material
+     * @param type the type of armor (0 = Helmet, 1 = Chestplate, 2 = Leggings, 3 = Boots)
+     */
     public ItemArmorFT(String armorName, ArmorMaterial material, ArmorType type)
     {
         super(material, 1, type.ordinal());
@@ -49,6 +55,11 @@ public abstract class ItemArmorFT extends ItemArmor
         itemIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
+    /**
+     * gets the type of armor base on the armor slot
+     * @param slot the slot
+     * @return the armor type (Helmet, Chestplate, Leggings, Boots)
+     */
     protected String getArmorTypeName(int slot)
     {
         if (slot == 0)
@@ -69,6 +80,11 @@ public abstract class ItemArmorFT extends ItemArmor
         }
     }
 
+    /**
+     * gets the armor type based on item
+     * @param item the item
+     * @return the armor type
+     */
     protected String getArmorTypeName(Item item)
     {
         if (item instanceof ItemArmor)

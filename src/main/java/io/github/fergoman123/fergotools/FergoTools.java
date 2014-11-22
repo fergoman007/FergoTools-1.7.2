@@ -17,6 +17,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import io.github.fergoman123.fergotools.init.FergoToolsMod;
+import io.github.fergoman123.fergotools.nei.NeiFergoToolsConfig;
 import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergoutil.lib.ModConstants;
@@ -28,6 +29,8 @@ public class FergoTools
     @Instance(ModInfo.modid)
     private static FergoTools instance;
 
+    public static NeiFergoToolsConfig  neiConfig = new NeiFergoToolsConfig();
+
     public static FergoTools getInstance() {
         return instance;
     }
@@ -38,6 +41,7 @@ public class FergoTools
     @EventHandler
     public void preInit(FMLPreInitializationEvent evt)
     {
+        neiConfig.loadConfig();
         FergoToolsMod.preInit(evt);
     }
 

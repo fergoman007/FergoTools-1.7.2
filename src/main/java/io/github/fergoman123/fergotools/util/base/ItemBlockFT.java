@@ -9,6 +9,11 @@ import java.util.List;
 
 public abstract class ItemBlockFT extends ItemBlock
 {
+    /**
+     * this is the main structure for
+     * itemblocks
+     * @param block the block
+     */
     public ItemBlockFT(Block block) {
         super(block);
     }

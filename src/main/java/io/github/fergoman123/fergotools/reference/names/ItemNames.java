@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference.names;
 
+/**
+ * list of item names
+ */
 public class ItemNames
 {
     public static final String quartzHelmet = "quartzHelmet";

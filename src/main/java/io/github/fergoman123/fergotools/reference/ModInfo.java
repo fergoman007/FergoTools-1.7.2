@@ -3,6 +3,9 @@ package io.github.fergoman123.fergotools.reference;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * a list of mod information
+ */
 public class ModInfo {
 	
 	public static final String modid = "FergoTools";

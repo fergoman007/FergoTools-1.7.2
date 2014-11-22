@@ -13,6 +13,10 @@ package io.github.fergoman123.fergotools.util.item;
  import net.minecraft.init.Items;
  import net.minecraft.item.ItemStack;
 
+ /**
+  * this class is a list of all
+  * itemstacks for FergoTools
+  */
 public class FTStacks
 {
     public static FTContent con = new FTContent();

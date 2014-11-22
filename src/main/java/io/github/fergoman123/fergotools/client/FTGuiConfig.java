@@ -18,13 +18,12 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 
+ /**
+  * this class is used to show the configuration
+  * gui for Fergoman123's Tools
+  */
 public class FTGuiConfig extends GuiConfig
 {
-    /**
-     *
-     *
-     * @param screen the screen
-     */
     public FTGuiConfig(GuiScreen screen)
     {
         super(screen, new ConfigElement(ConfigHandler.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), ModInfo.modid, false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString()));

@@ -1,5 +1,9 @@
 package io.github.fergoman123.fergotools.reference;
 
+/**
+ * list of integer for items, blocks and other stuff
+ * @author fergoman123
+ */
 public class Ints
 {
 

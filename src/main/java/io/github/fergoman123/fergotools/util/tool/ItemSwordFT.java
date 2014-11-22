@@ -9,10 +9,9 @@
 
 package io.github.fergoman123.fergotools.util.tool;
 
- import io.github.fergoman123.fergotools.util.item.Materials;
+ import io.github.fergoman123.fergotools.creativetab.Tabs;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergoutil.item.ITooltipItem;
- import io.github.fergoman123.fergotools.creativetab.Tabs;
  import net.minecraft.client.renderer.texture.IIconRegister;
  import net.minecraft.entity.player.EntityPlayer;
  import net.minecraft.item.Item;
@@ -23,8 +22,13 @@ package io.github.fergoman123.fergotools.util.tool;
 
  public abstract class ItemSwordFT extends ItemSword implements ITooltipItem
 {
-    public Materials.Tools materials = new Materials.Tools();
-
+    /**
+     * this is the constructor for the base
+     * sword for FergoTools
+     * @param material the tool material of the sword
+     * @param maxUses the durability of the sword
+     * @param itemName the name of the sword
+     */
     public ItemSwordFT(Item.ToolMaterial material, int maxUses, String itemName) {
         super(material);
         this.setUnlocalizedName(itemName);

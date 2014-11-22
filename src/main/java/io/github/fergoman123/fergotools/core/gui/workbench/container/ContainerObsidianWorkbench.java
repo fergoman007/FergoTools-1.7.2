@@ -1,5 +1,6 @@
 package io.github.fergoman123.fergotools.core.gui.workbench.container;
 
+import io.github.fergoman123.fergotools.crafting.ow.CraftingManagerOW;
 import io.github.fergoman123.fergotools.util.base.workbench.ContainerWorkbenchFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -7,7 +8,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.world.World;
 
 /**
@@ -45,7 +45,7 @@ public class ContainerObsidianWorkbench extends ContainerWorkbenchFT
     }
 
     public void onCraftMatrixChanged(IInventory inventory) {
-        this.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.world));
+        this.craftResult.setInventorySlotContents(0, CraftingManagerOW.getInstance().findMatchingRecipe(this.craftMatrix, this.world));
     }
 
     @Override

@@ -20,12 +20,15 @@ import java.util.Random;
 
 public abstract class BlockGlassFT extends BlockBreakable
 {
+    /**
+     * the main constuctor
+     * @param blockName the blocks name
+     */
     public BlockGlassFT(String blockName)
     {
         super("glass", Material.glass, false);
         setBlockName(blockName);
         setCreativeTab(Tabs.tabFergoBlocks);
-        setResistance(50f);
         setBlockUnbreakable();
         setStepSound(Block.soundTypeGlass);
     }

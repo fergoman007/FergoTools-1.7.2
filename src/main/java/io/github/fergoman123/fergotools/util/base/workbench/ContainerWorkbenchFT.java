@@ -11,11 +11,23 @@ import net.minecraft.world.World;
 
 public abstract class ContainerWorkbenchFT extends Container
 {
+    /** the crafting grid */
     public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 3);
+    /** the crafting result */
     public IInventory craftResult = new InventoryCraftResult();
+    /** the world */
     public World world;
+    /** the x, y and z coordinates */
     public int x, y, z;
 
+    /**
+     * the main constuctor for the workbench container
+     * @param inventory the inventory of the player
+     * @param world the world in which the player is in
+     * @param x the x coordinate
+     * @param y the y coordinate
+     * @param z the z coordinate
+     */
     public ContainerWorkbenchFT(InventoryPlayer inventory, World world, int x, int y, int z)
     {
         super();

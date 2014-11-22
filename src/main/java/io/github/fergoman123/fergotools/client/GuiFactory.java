@@ -15,6 +15,11 @@ import net.minecraft.client.gui.GuiScreen;
 
 import java.util.Set;
 
+ /**
+  * this class is used to define the gui
+  * for the mods gui and it is the GuiConfig
+  * class of FergoTools.
+  */
 public class GuiFactory implements IModGuiFactory
 {
 

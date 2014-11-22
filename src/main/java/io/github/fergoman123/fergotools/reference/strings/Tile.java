@@ -1,15 +1,15 @@
 package io.github.fergoman123.fergotools.reference.strings;
 
+/**
+ * a list of nbt tags and
+ * tile entity ids
+ */
 public class Tile
 {
     public static final String tilePrefix = "tile.FergoTools:";
 
     public static final String burnTime = "BurnTime";
     public static final String cookTime = "CookTime";
-
-    //Macerator only
-    public static final String maxPower = "MaxPower";
-    public static final String power = "Power";
 
     public static final String customName = "CustomName";
     public static final String slot = "Slot";
@@ -25,20 +25,5 @@ public class Tile
     public static final String adamantiumFurnaceTile = tilePrefix + "AdamantiumFurnace";
     public static final String silkFurnaceTile = tilePrefix + "SilkFurnace";
     public static final String redstoneFurnaceTile = tilePrefix + "RedstoneFurnace";
-    public static final String maceratorTile = tilePrefix + "Macerator";
-
-    public static final String[] tileList =
-            {
-                    quartzFurnaceTile,
-                    obsidianFurnaceTile,
-                    emeraldFurnaceTile,
-                    lapisFurnaceTile,
-                    bronzeFurnaceTile,
-                    coalFurnaceTile,
-                    glowstoneFurnaceTile,
-                    adamantiumFurnaceTile,
-                    silkFurnaceTile,
-                    redstoneFurnaceTile,
-                    maceratorTile
-            };
+    public static final String maceratorTile = tilePrefix + "Macerator";;
 }

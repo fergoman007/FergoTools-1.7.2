@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference.strings;
 
+/**
+ * a list for creative tab names
+ */
 public class Tab
 {
     public static final String tabFergoTools = "FergoTools:tabFergoTools";

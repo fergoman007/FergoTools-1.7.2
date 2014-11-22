@@ -2,6 +2,9 @@ package io.github.fergoman123.fergotools.reference;
 
 import cpw.mods.fml.common.ModMetadata;
 
+/**
+ * a manual mcmod.info file with no need to have the file
+ */
 public class MetadataFT
 {
 

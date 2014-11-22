@@ -17,6 +17,10 @@ package io.github.fergoman123.fergotools.util.item;
  import net.minecraft.item.ItemStack;
  import net.minecraftforge.oredict.OreDictionary;
 
+ /**
+  * this class is a list of recipes for
+  * FergoTools
+  */
  public class RecipeList {
 
     public static final char charX = 'x';

@@ -9,7 +9,12 @@ import net.minecraft.block.material.Material;
 
 public abstract class BlockFurnaceFT extends BlockFergoFurnace
 {
-
+    /**
+     * base class for furnace
+     * @param isActive whether or not the furnace is active
+     * @param material the block material
+     * @param furnaceType the name of the furnace
+     */
     public BlockFurnaceFT(boolean isActive, Material material, String furnaceType) {
         super(isActive, material, furnaceType);
     }

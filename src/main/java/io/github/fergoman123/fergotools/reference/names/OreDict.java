@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference.names;
 
+/**
+ * a list of ore dictionary values for item information
+ */
 public class OreDict {
     public static final String oreDict = "oreDict.";
 

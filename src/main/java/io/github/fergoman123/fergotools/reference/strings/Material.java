@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference.strings;
 
+/**
+ * a list of strings for tool and armor materials
+ */
 public class Material
 {
     public static final String quartzToolMat = "quartz";

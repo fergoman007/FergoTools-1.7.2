@@ -319,6 +319,11 @@ container.FergoTools:adamantiumWorkbench=Adamantium Workbench
 container.FergoTools:silkWorkbench=Silk Workbench
 container.FergoTools:redstoneWorkbench=Redstone Workbench
 
+# Nei
+gui.nei.FergoTools:macerator=Macerating
+gui.nei.FergoTools:craftingShapeless=Shapeless Crafting
+gui.nei.FergoTools:craftingShaped=Shaped Crafting
+
 # Tool Tips
 tooltip.FergoTools:holdShift=<Hold Shift for Info>
 tooltip.FergoTools:adamantiumTool=NOTE: Extremely Overpowered!
@@ -326,6 +331,7 @@ tooltip.FergoTools:adamantiumInfi=Durability: Infinity
 tooltip.FergoTools:expCollector=Used as a Crafting Item
 tooltip.FergoTools:shardExp=Right Click to Gain 1 Level of Exp
 tooltip.FergoTools:durability=Durability:
+tooltip.FergoTools:adminBlock=Admin Block
 
 tooltip.FergoTools:gemExp=Stores 5 Experience Levels
 tooltip.FergoTools:gemExp2=Stores 10 Experience Levels

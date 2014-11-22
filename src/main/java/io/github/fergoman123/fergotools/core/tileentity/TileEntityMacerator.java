@@ -170,12 +170,12 @@ public final class TileEntityMacerator extends TileEntityFurnaceFT {
             }
             else
             {
-                ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
+                ItemStack stack = MaceratorRecipes.macerating().getSmeltingResult(this.slots[0]);
                 if (stack == null)return false;
                 if (!this.isOre(this.slots[0]))return false;
                 if (this.slots[2] == null)return true;
                 if (!this.slots[2].isItemEqual(stack))return false;
-                int result = slots[2].stackSize + stack.stackSize*2;
+                int result = slots[2].stackSize + stack.stackSize;
                 return (result <= getInventoryStackLimit() && result <= this.slots[2].getMaxStackSize());
             }
         }
@@ -184,16 +184,15 @@ public final class TileEntityMacerator extends TileEntityFurnaceFT {
         {
             if (this.canSmelt())
             {
-                ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
+                ItemStack stack = MaceratorRecipes.macerating().getSmeltingResult(this.slots[0]);
 
                 if (this.slots[2] == null)
                 {
                     this.slots[2] = stack.copy();
-                    this.slots[2].stackSize*=2;
                 }
                 else if (this.slots[2].getItem() == stack.getItem())
                 {
-                    this.slots[2].stackSize += stack.stackSize*2;
+                    this.slots[2].stackSize += stack.stackSize;
                 }
 
                 --this.slots[0].stackSize;
@@ -205,7 +204,7 @@ public final class TileEntityMacerator extends TileEntityFurnaceFT {
             }
         }
 
-        private static int getItemBurnTime(ItemStack stack)
+        public static int getItemBurnTime(ItemStack stack)
         {
             if (stack == null)
             {

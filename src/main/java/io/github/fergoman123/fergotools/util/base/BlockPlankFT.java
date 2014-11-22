@@ -14,6 +14,10 @@ import java.util.Random;
 
 public abstract class BlockPlankFT extends Block
 {
+    /**
+     * main constructor
+     * @param blockName the block's name
+     */
     public BlockPlankFT(String blockName)
     {
         super(Material.wood);

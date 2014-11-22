@@ -2,6 +2,9 @@ package io.github.fergoman123.fergotools.reference;
 
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 
+/**
+ * a list of reference strings
+ */
 public class Reference {
 
     public static final String textureLoc = NameHelper.getAssetsLocation(ModInfo.modid);

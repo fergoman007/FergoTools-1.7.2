@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference.names;
 
+/**
+ * a list of armor tool tips
+ */
 public class ArmorTooltipLocale
 {
     public static final String reductAmount = "tooltip.FergoTools:reduct";

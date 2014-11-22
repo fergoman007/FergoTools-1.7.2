@@ -23,6 +23,9 @@ public class Materials {
         Armor.initMaterials();
     }
 
+    /**
+     * this class initialises the tool materials
+     */
     public static final class Tools
     {
         public static ToolMaterial quartz;
@@ -55,6 +58,9 @@ public class Materials {
         }
     }
 
+    /**
+     * this class initialises the armor materials
+     */
     public static final class Armor
     {
         public static ArmorMaterial quartzArmor;

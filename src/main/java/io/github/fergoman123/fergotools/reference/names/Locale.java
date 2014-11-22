@@ -3,6 +3,9 @@ package io.github.fergoman123.fergotools.reference.names;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 
+/**
+ * a list of strings for item and block information
+ */
 public class Locale
 {
     public static final String modPrefix = Reference.textureLoc;
@@ -10,6 +13,7 @@ public class Locale
     public static final String toolTipPrefix = NameHelper.getTooltip() + modPrefix;
 
     public static final String durabilityToolTip = toolTipPrefix + "durability";
+    public static final String adminBlock = toolTipPrefix + "adminBlock";
 
     public static final String expCollectorToolTip = toolTipPrefix + "expCollector";
     public static final String gemExpToolTip = toolTipPrefix + "gemExp";
@@ -56,4 +60,9 @@ public class Locale
     public static final String silkFurnaceSpeed = "furnace.speed.silk";
     public static final String redstoneFurnaceSpeed = "furnace.speed.redstone";
     public static final String maceratorSpeed = "furnace.speed.macerator";
+
+    // nei
+    public static final String neiMacerator = "gui.nei." + modPrefix + "macerator";
+    public static final String neiCraftingShapeless = "gui.nei." + modPrefix + "craftingShapeless";
+    public static final String neiCraftingShaped = "gui.nei." + modPrefix + "craftingShaped";
 }

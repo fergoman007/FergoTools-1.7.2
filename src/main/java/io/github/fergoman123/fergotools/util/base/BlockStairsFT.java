@@ -11,6 +11,12 @@ import java.util.Random;
 
 public abstract class BlockStairsFT extends BlockStairs
 {
+    /**
+     * the main constuctor
+     * @param extender the block that the stairs gets
+     *                 it's textures from
+     * @param blockName the block's name
+     */
     public BlockStairsFT(Block extender, String blockName)
     {
         super(extender, 0);

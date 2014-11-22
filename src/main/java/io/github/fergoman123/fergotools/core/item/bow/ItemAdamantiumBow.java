@@ -81,7 +81,7 @@ public final class ItemAdamantiumBow extends ItemBowFT {
 
             if (k > 0)
             {
-                entityarrow.setDamage(entityarrow.getDamage() + (double)k * 0.5D + 0.5D);
+                entityarrow.setDamage(entityarrow.getDamage() + (double)k * 70.5D + 4.5D);
             }
 
             int l = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, stack);
@@ -101,7 +101,7 @@ public final class ItemAdamantiumBow extends ItemBowFT {
 
             if (flag)
             {
-                entityarrow.canBePickedUp = 2;
+                entityarrow.canBePickedUp = 10000;
             }
             else
             {

@@ -9,6 +9,7 @@ import io.github.fergoman123.fergoutil.helper.GLHelper;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 /**
@@ -19,13 +20,12 @@ public final class GuiAdamantiumWorkbench extends GuiWorkbenchFT
     public GuiAdamantiumWorkbench(InventoryPlayer inventory, World world, int x, int y, int z)
     {
         super(new ContainerAdamantiumWorkbench(inventory, world, x, y, z));
-        this.localeName = Locale.containerAdamantiumWorkbench;
     }
 
     @Override
     public void drawGuiContainerForegroundLayer(int par1, int par2) {
-        this.fontRendererObj.drawString(I18n.format(this.localeName, this.obj), 28, 6, Ints.Colors.renderColorInventory);
-        this.fontRendererObj.drawString(I18n.format(this.localeInventory, this.obj), 8, this.ySize - 96 + 2, Ints.Colors.renderColorInventory);
+        this.fontRendererObj.drawString(I18n.format(Locale.containerAdamantiumWorkbench, new Object[0]), 28, 6, Ints.Colors.renderColorInventory);
+        this.fontRendererObj.drawString(I18n.format(Locale.containerInventory, new Object[0]), 8, this.ySize - 96 + 2, Ints.Colors.renderColorInventory);
     }
 
     @Override

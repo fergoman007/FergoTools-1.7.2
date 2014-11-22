@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference.strings;
 
+/**
+ * a list of furnace types
+ */
 public class FurnaceType
 {
     public static final String quartzFurnace = "quartzFurnace";

@@ -9,6 +9,10 @@
 
 package io.github.fergoman123.fergotools.config;
 
+ /**
+  * this class defines the defaults
+  * for the config
+  */
 public class Defaults
 {
     public static final int enchantabilityDefault = 30;

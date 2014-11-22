@@ -1,6 +1,8 @@
 package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.recipes.MaceratorRecipesInit;
+import io.github.fergoman123.fergotools.recipes.ObsidianWorkbenchRecipes;
 import io.github.fergoman123.fergotools.util.item.FTStacks;
 import io.github.fergoman123.fergotools.util.item.RecipeList;
 import io.github.fergoman123.fergoutil.helper.RecipeHelper;
@@ -227,5 +229,8 @@ public class Recipes
         RecipeHelper.addRecipe(new ItemStack(FTContent.adamantiumWorkbench), RecipeList.adamantiumWorkbench);
         RecipeHelper.addRecipe(new ItemStack(FTContent.silkWorkbench), RecipeList.silkWorkbench);
         RecipeHelper.addRecipe(new ItemStack(FTContent.redstoneWorkbench), RecipeList.redstoneWorkbench);
+
+        ObsidianWorkbenchRecipes.initRecipes();
+        MaceratorRecipesInit.initRecipes();
     }
 }

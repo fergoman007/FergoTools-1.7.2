@@ -19,6 +19,7 @@ import io.github.fergoman123.fergotools.core.item.shears.*;
 import io.github.fergoman123.fergotools.core.item.shovel.*;
 import io.github.fergoman123.fergotools.core.item.stick.*;
 import io.github.fergoman123.fergotools.core.item.sword.*;
+import io.github.fergoman123.fergotools.core.itemblock.ItemBlockFergoGlass;
 import io.github.fergoman123.fergotools.core.itemblock.block.*;
 import io.github.fergoman123.fergotools.core.itemblock.furnaceactive.*;
 import io.github.fergoman123.fergotools.core.itemblock.furnaceidle.*;
@@ -42,6 +43,11 @@ import net.minecraft.item.Item;
 
 import static io.github.fergoman123.fergoutil.helper.RegisterHelper.*;
 
+/**
+ * this class is the core of FergoTools.
+ * this is where all of the blocks, items
+ * and tile entities are registered
+ */
 public class FTContent
 {
     public static Item quartzPickaxe;
@@ -283,7 +289,9 @@ public class FTContent
 
     public static Block blockFergoGlass;
 
-
+    /**
+     * this initialises all of the items and blocks.
+     */
     public static void init()
     {
         quartzPickaxe = new ItemQuartzPickaxe(Tools.quartz, Tools.quartz.getMaxUses(), ItemNames.quartzPickaxe);
@@ -527,6 +535,9 @@ public class FTContent
         blockFergoGlass = new BlockFergoGlass(BlockNames.blockFergoGlass);
     }
 
+    /**
+     * this registers all of the items
+     */
     public static void registerItems()
     {
         registerItem(quartzPickaxe, ItemNames.quartzPickaxe);
@@ -683,6 +694,9 @@ public class FTContent
         registerItem(stickRedstone, ItemNames.stickRedstone);
     }
 
+    /**
+     * this registers all of the blocks
+     */
     public static void registerBlocks()
     {
         registerBlock(oreExperience, ItemBlockOreExperience.class, BlockNames.oreExperience);
@@ -769,9 +783,13 @@ public class FTContent
         registerBlock(silkWorkbench, BlockNames.silkWorkbench);
         registerBlock(redstoneWorkbench, BlockNames.redstoneWorkbench);
 
-        registerBlock(blockFergoGlass, BlockNames.blockFergoGlass);
+        registerBlock(blockFergoGlass, ItemBlockFergoGlass.class, BlockNames.blockFergoGlass);
     }
 
+    /**
+     * this registers all of the tile entities
+     * for the mod
+     */
     public static void registerTileEntities()
     {
         registerTileEntity(TileEntityQuartzFurnace.class, Tile.quartzFurnaceTile);

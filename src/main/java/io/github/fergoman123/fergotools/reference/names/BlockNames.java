@@ -1,5 +1,8 @@
 package io.github.fergoman123.fergotools.reference.names;
 
+/**
+ * a list of block names
+ */
 public class BlockNames
 {
     public static final String oreExperience = "oreExperience";

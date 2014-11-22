@@ -16,7 +16,10 @@ import java.util.Random;
 
 public abstract class BlockLogFT extends BlockLog
 {
-
+    /**
+     * this is the main constructor for
+     * the log base file
+     */
     public BlockLogFT()
     {
         super();

@@ -40,7 +40,7 @@ public class GuiMacerator extends GuiFT
         if (macerator.isBurning())
         {
             int cookTime = macerator.getBurnTimeRemainingScaled(12);
-            drawTexturedModalRect(startX + 25, startY + 24 + 12 - cookTime, 176, 12 - cookTime, 14, cookTime + 2);
+            drawTexturedModalRect(startX + 25, startY + 24 + 12 - cookTime, 176, 12 - cookTime, 14, cookTime + 2);//176
         }
 
         int scaleAdjustment = macerator.getCookProgressScaled(24);

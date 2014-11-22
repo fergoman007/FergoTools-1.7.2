@@ -25,6 +25,7 @@ public class Textures
     public static final String ctLocFront =  "ct/front/";
     public static final String woodLoc = "wood/";
     public static final String stickLoc = "stick/";
+    public static final String saplingLoc = "sapling/";
 
     public static final String png = ".png";
 
