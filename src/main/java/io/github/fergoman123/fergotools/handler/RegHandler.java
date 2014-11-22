@@ -13,7 +13,6 @@ package io.github.fergoman123.fergotools.handler;
  import io.github.fergoman123.fergotools.core.FTContent;
  import io.github.fergoman123.fergotools.reference.names.BlockNames;
  import io.github.fergoman123.fergotools.reference.names.ItemNames;
- import io.github.fergoman123.fergotools.util.GuiHandler;
  import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 
  public class RegHandler {

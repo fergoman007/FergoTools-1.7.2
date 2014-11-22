@@ -9,27 +9,24 @@
 
 package io.github.fergoman123.fergotools;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import io.github.fergoman123.fergotools.init.FergoToolsMod;
-import io.github.fergoman123.fergotools.nei.NeiFergoToolsConfig;
-import io.github.fergoman123.fergotools.reference.ModInfo;
-import io.github.fergoman123.fergotools.reference.Reference;
-import io.github.fergoman123.fergoutil.lib.ModConstants;
-import io.github.fergoman123.fergoutil.proxy.IProxy;
+ import cpw.mods.fml.common.Mod;
+ import cpw.mods.fml.common.Mod.EventHandler;
+ import cpw.mods.fml.common.Mod.Instance;
+ import cpw.mods.fml.common.SidedProxy;
+ import cpw.mods.fml.common.event.FMLInitializationEvent;
+ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+ import io.github.fergoman123.fergotools.init.FergoToolsMod;
+ import io.github.fergoman123.fergotools.reference.ModInfo;
+ import io.github.fergoman123.fergotools.reference.Reference;
+ import io.github.fergoman123.fergoutil.lib.ModConstants;
+ import io.github.fergoman123.fergoutil.proxy.IProxy;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dependency, guiFactory = Reference.guiFactoryClass)
 public class FergoTools
 {
     @Instance(ModInfo.modid)
     private static FergoTools instance;
-
-    public static NeiFergoToolsConfig  neiConfig = new NeiFergoToolsConfig();
 
     public static FergoTools getInstance() {
         return instance;
@@ -41,7 +38,6 @@ public class FergoTools
     @EventHandler
     public void preInit(FMLPreInitializationEvent evt)
     {
-        neiConfig.loadConfig();
         FergoToolsMod.preInit(evt);
     }
 

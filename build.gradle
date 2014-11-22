@@ -17,10 +17,6 @@ buildscript {
 
 repositories{
 	maven{
-            name = 'CB Repo'
-            url = "http://chickenbones.net/maven/"
-        }
-	maven{
 	name = 'Fergoman123s Repo'
 	url = "http://fergoman123.github.io/maven/"
 	}	
@@ -60,9 +56,12 @@ version = "${config.minecraft_version}-${config.mod_version}.${config.build_numb
 
 dependencies {
     compile "io.github.fergoman123:FergoUtil:1.7.10-1.0.6:dev"
-	compile "codechicken:CodeChickenLib:1.7.10-1.1.1.99:dev"
-    compile "codechicken:CodeChickenCore:1.7.10-1.0.4.29:dev"
-    compile "codechicken:NotEnoughItems:1.7.10-1.0.3.67:dev"
+}
+
+idea{
+	module{
+		downloadSources=true
+	}
 }
 
 version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
