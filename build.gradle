@@ -16,10 +16,15 @@ buildscript {
 }
 
 repositories{
+maven{
+	name = 'CB Repo'
+	url = "http://chickenbones.net/maven/"
+	}	
+	
 	maven{
 	name = 'Fergoman123s Repo'
 	url = "http://fergoman123.github.io/maven/"
-	}	
+	}
 }
 
 task("incrementBuildNumber")
