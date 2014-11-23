@@ -60,7 +60,7 @@ minecraft {
 version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
 
 dependencies {
-    compile "${config.dep}"
+    compile "io.github.fergoman123:FergoUtil:1.7.10-1.0.6:dev"
     compile "codechicken:CodeChickenLib:${config.minecraft_version}-${config.cclVersion}:dev"
     compile "codechicken:CodeChickenCore:${config.minecraft_version}-${config.cccVersion}:dev"
     compile "codechicken:NotEnoughItems:${config.minecraft_version}-${config.neiVersion}:dev"
