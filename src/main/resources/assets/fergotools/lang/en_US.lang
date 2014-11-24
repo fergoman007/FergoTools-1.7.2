@@ -335,57 +335,14 @@ tooltip.FergoTools:staffExp=Right Click to Store 5 Experience Levels
 tooltip.FergoTools:staffExp2=Right Click to Store 10 Experience Levels
 tooltip.FergoTools:staffExp3=Right Click to Store 30 Experience Levels
 
-tooltip.FergoTools:reduct=Reduction Amounts:
+tooltip.FergoTools:macerator=Only smelts Ores
 
-tooltip.FergoTools:quartz.helmet=Helmet: 4
-tooltip.FergoTools:quartz.chestplate=Chestplate: 9
-tooltip.FergoTools:quartz.leggings=Leggings: 7
-tooltip.FergoTools:quartz.boots=Boots: 3
+tooltip.FergoTools:reduct=Reduction Amount:
 
-tooltip.FergoTools:obsidian.helmet=Helmet: 5
-tooltip.FergoTools:obsidian.chestplate=Chestplate: 10
-tooltip.FergoTools:obsidian.leggings=Leggings: 8
-tooltip.FergoTools:obsidian.boots=Boots: 4
-
-tooltip.FergoTools:emerald.helmet=Helmet: 6
-tooltip.FergoTools:emerald.chestplate=Chestplate: 11
-tooltip.FergoTools:emerald.leggings=Leggings: 9
-tooltip.FergoTools:emerald.boots=Boots: 5
-
-tooltip.FergoTools:lapis.helmet=Helmet: 7
-tooltip.FergoTools:lapis.chestplate=Chestplate: 10
-tooltip.FergoTools:lapis.leggings=Leggings: 12
-tooltip.FergoTools:lapis.boots=Boots: 6
-
-tooltip.FergoTools:bronze.helmet=Helmet: 8
-tooltip.FergoTools:bronze.chestplate=Chestplate: 11
-tooltip.FergoTools:bronze.leggings=Leggings: 13
-tooltip.FergoTools:bronze.boots=Boots: 7
-
-tooltip.FergoTools:coal.helmet=Helmet: 9
-tooltip.FergoTools:coal.chestplate=Chestplate: 12
-tooltip.FergoTools:coal.leggings=Leggings: 14
-tooltip.FergoTools:coal.boots=Boots: 8
-
-tooltip.FergoTools:glowstone.helmet=Helmet: 10
-tooltip.FergoTools:glowstone.chestplate=Chestplate: 13
-tooltip.FergoTools:glowstone.leggings=Leggings: 15
-tooltip.FergoTools:glowstone.boots=Boots: 9
-
-tooltip.FergoTools:redstone.helmet=Helmet: 2
-tooltip.FergoTools:redstone.chestplate=Chestplate: 6
-tooltip.FergoTools:redstone.leggings=Leggings: 5
-tooltip.FergoTools:redstone.boots=Boots: 2
-
-tooltip.FergoTools:adamantium.helmet=Helmet: 20
-tooltip.FergoTools:adamantium.chestplate=Chestplate: 20
-tooltip.FergoTools:adamantium.leggings=Leggings: 20
-tooltip.FergoTools:adamantium.boots=Boots: 20
-
-tooltip.FergoTools:adamantium.abilities.helmet=Helmet: Gives you Water Breathing and Saturation
-tooltip.FergoTools:adamantium.abilities.chest=Chestplate: Gives you Flight and Absorbtion
-tooltip.FergoTools:adamantium.abilities.legs=Leggings: Gives you Jump Boost
-tooltip.FergoTools:adamantium.abilities.boots=Boots: Gives you Speed
+tooltip.FergoTools:adamantium.abilities.helmet=Gives you Water Breathing and Saturation
+tooltip.FergoTools:adamantium.abilities.chest=Gives you Flight and Absorbtion
+tooltip.FergoTools:adamantium.abilities.legs=Gives you Jump Boost
+tooltip.FergoTools:adamantium.abilities.boots=Gives you Speed
 
 # Ore Dictionary
 oreDict.name=Ore Dictionary Name:

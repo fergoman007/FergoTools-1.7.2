@@ -1,3 +1,12 @@
+/*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package io.github.fergoman123.fergotools.core.tileentity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -17,9 +26,6 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
-/**
- * Created by Fergoman123.
- */
 public class TileEntityQuartzFurnace extends TileEntityFurnaceFT
 {
     public String getInventoryName(){return this.hasCustomInventoryName() ? this.customName : Locale.containerQuartzFurnace;}

@@ -1,3 +1,12 @@
+/*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package io.github.fergoman123.fergotools.core.gui.workbench;
 
 import io.github.fergoman123.fergotools.core.gui.workbench.container.ContainerSilkWorkbench;
@@ -10,9 +19,6 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.world.World;
 
-/**
- * Created by Fergoman123.
- */
 public final class GuiSilkWorkbench extends GuiWorkbenchFT
 {
     public GuiSilkWorkbench(InventoryPlayer inventory, World world, int x, int y, int z)

@@ -21,5 +21,6 @@ public final class ItemBlockMaceratorActive extends ItemBlockFT {
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
         list.add(NameHelper.translateToLocal(Locale.maceratorSpeed));
+        list.add(NameHelper.translateToLocal(Locale.maceratorToolTip));
     }
 }

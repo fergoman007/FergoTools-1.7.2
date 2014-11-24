@@ -11,6 +11,7 @@ package io.github.fergoman123.fergotools.util.base;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
@@ -68,6 +69,8 @@ public abstract class ItemBowFT extends ItemBow
 
     public abstract IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining);
 
-    public abstract void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b);
-
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
+        list.add(NameHelper.translateToLocal(Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
+    }
 }

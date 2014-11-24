@@ -1,3 +1,12 @@
+/*
+  * Fergoman123's Tools
+  * Copyright (c) 2014 fergoman123.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the GNU Lesser Public License v2.1
+  * which accompanies this distribution, and is available at
+  * http://www.gnu.org/licenses/gpl-3.0.html
+  */
+
 package io.github.fergoman123.fergotools.reference.names;
 
 import io.github.fergoman123.fergotools.reference.Reference;
@@ -24,6 +33,7 @@ public class Locale
     public static final String staffExpToolTip3 = toolTipPrefix + "staffExp3";
     public static final String expShardToolTip = toolTipPrefix + "shardExp";
     public static final String adamantiumToolTip =  toolTipPrefix + "adamantiumTool";
+    public static final String maceratorToolTip = toolTipPrefix + "macerator";
 
     public static final String containerQuartzFurnace = containerPrefix + "quartzFurnace";
     public static final String containerObsidianFurnace = containerPrefix + "obsidianFurnace";
@@ -63,6 +73,4 @@ public class Locale
 
     // nei
     public static final String neiMacerator = "gui.nei." + modPrefix + "macerator";
-    public static final String neiCraftingShapeless = "gui.nei." + modPrefix + "craftingShapeless";
-    public static final String neiCraftingShaped = "gui.nei." + modPrefix + "craftingShaped";
 }
