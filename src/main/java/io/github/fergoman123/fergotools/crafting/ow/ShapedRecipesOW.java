@@ -36,18 +36,18 @@ public class ShapedRecipesOW implements IRecipe
         return this.recipeOutput;
     }
 
-    public boolean matches(InventoryCrafting p_77569_1_, World p_77569_2_)
+    public boolean matches(InventoryCrafting inv, World world)
     {
         for (int i = 0; i <= 3 - this.recipeWidth; ++i)
         {
             for (int j = 0; j <= 3 - this.recipeHeight; ++j)
             {
-                if (this.checkMatch(p_77569_1_, i, j, true))
+                if (this.checkMatch(inv, i, j, true))
                 {
                     return true;
                 }
 
-                if (this.checkMatch(p_77569_1_, i, j, false))
+                if (this.checkMatch(inv, i, j, false))
                 {
                     return true;
                 }
@@ -57,7 +57,7 @@ public class ShapedRecipesOW implements IRecipe
         return false;
     }
 
-    private boolean checkMatch(InventoryCrafting p_77573_1_, int p_77573_2_, int p_77573_3_, boolean p_77573_4_)
+    private boolean checkMatch(InventoryCrafting inv, int p_77573_2_, int p_77573_3_, boolean p_77573_4_)
     {
         for (int k = 0; k < 3; ++k)
         {
@@ -79,7 +79,7 @@ public class ShapedRecipesOW implements IRecipe
                     }
                 }
 
-                ItemStack itemstack1 = p_77573_1_.getStackInRowAndColumn(k, l);
+                ItemStack itemstack1 = inv.getStackInRowAndColumn(k, l);
 
                 if (itemstack1 != null || itemstack != null)
                 {
@@ -128,11 +128,5 @@ public class ShapedRecipesOW implements IRecipe
     public int getRecipeSize()
     {
         return this.recipeWidth * this.recipeHeight;
-    }
-
-    public ShapedRecipesOW func_92100_c()
-    {
-        this.field_92101_f = true;
-        return this;
     }
 }

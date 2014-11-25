@@ -20,16 +20,13 @@ import java.util.List;
 
 public class ShapelessRecipesOW implements IRecipe
 {
-    /** Is the ItemStack that you get when craft the recipe. */
     private final ItemStack recipeOutput;
-    /** Is a List of ItemStack that composes the recipe. */
     public final List recipeItems;
-    private static final String __OBFID = "CL_00000094";
 
-    public ShapelessRecipesOW(ItemStack p_i1918_1_, List p_i1918_2_)
+    public ShapelessRecipesOW(ItemStack recipeOutput, List recipeItems)
     {
-        this.recipeOutput = p_i1918_1_;
-        this.recipeItems = p_i1918_2_;
+        this.recipeOutput = recipeOutput;
+        this.recipeItems = recipeItems;
     }
 
     public ItemStack getRecipeOutput()
@@ -40,7 +37,7 @@ public class ShapelessRecipesOW implements IRecipe
     /**
      * Used to check if a recipe matches current crafting inventory
      */
-    public boolean matches(InventoryCrafting p_77569_1_, World p_77569_2_)
+    public boolean matches(InventoryCrafting inv, World world)
     {
         ArrayList arraylist = new ArrayList(this.recipeItems);
 
@@ -48,7 +45,7 @@ public class ShapelessRecipesOW implements IRecipe
         {
             for (int j = 0; j < 3; ++j)
             {
-                ItemStack itemstack = p_77569_1_.getStackInRowAndColumn(j, i);
+                ItemStack itemstack = inv.getStackInRowAndColumn(j, i);
 
                 if (itemstack != null)
                 {
@@ -78,17 +75,11 @@ public class ShapelessRecipesOW implements IRecipe
         return arraylist.isEmpty();
     }
 
-    /**
-     * Returns an Item that is the result of this recipe
-     */
-    public ItemStack getCraftingResult(InventoryCrafting p_77572_1_)
+    public ItemStack getCraftingResult(InventoryCrafting inv)
     {
         return this.recipeOutput.copy();
     }
 
-    /**
-     * Returns the size of the recipe area
-     */
     public int getRecipeSize()
     {
         return this.recipeItems.size();

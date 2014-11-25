@@ -103,3 +103,12 @@ task devJar(type: Jar){
 artifacts{
     archives sourceJar, devJar
 }
+
+uploadArchives{
+    repositories{
+        mavenDeployer
+                {
+                    repository(url: "file://C:/Projects/Site/maven/io/github//fergoman123/FergoTools/${project.version}")
+                }
+    }
+}
