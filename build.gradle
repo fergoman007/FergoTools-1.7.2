@@ -49,7 +49,7 @@ configFile.withReader {
 }
 
 version = config.mod_version
-group= "io.github.fergoman123.fergotools" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "io.github.fergoman123" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "FergoTools"
 
 minecraft {
@@ -64,12 +64,6 @@ dependencies {
     compile "codechicken:CodeChickenLib:${config.minecraft_version}-${config.cclVersion}:dev"
     compile "codechicken:CodeChickenCore:${config.minecraft_version}-${config.cccVersion}:dev"
     compile "codechicken:NotEnoughItems:${config.minecraft_version}-${config.neiVersion}:dev"
-}
-
-idea{
-	module{
-		downloadSources=true
-	}
 }
 
 version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
@@ -108,7 +102,7 @@ uploadArchives{
     repositories{
         mavenDeployer
                 {
-                    repository(url: "file://C:/Projects/Site/maven/io/github//fergoman123/FergoTools/${project.version}")
+                    repository(url: "file://C:/Projects/Site/maven/")
                 }
     }
 }
