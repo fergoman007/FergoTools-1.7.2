@@ -13,7 +13,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemShovelFT;
 
 public final class ItemSilkShovel extends ItemShovelFT
 {
-    public ItemSilkShovel(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemSilkShovel(String itemName) {
+        super(materials.silk, itemName);
     }
 }

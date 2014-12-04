@@ -9,12 +9,13 @@
 
 package io.github.fergoman123.fergotools.core.item.axe;
 
+import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergotools.util.tool.ItemAxeFT;
 
 public final class ItemEmeraldAxe extends ItemAxeFT
 {
 
-    public ItemEmeraldAxe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemEmeraldAxe(String itemName) {
+        super(Materials.Tools.emerald, itemName);
     }
 }

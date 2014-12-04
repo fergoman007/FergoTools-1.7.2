@@ -18,8 +18,8 @@ import java.util.Random;
 public class BlockCoalStorage extends BlockFT
 {
 
-    public BlockCoalStorage(Material material, String blockName) {
-        super(material, blockName);
+    public BlockCoalStorage(String blockName) {
+        super(Material.iron, blockName);
     }
 
     public Item getItemDropped(int metadata, Random random, int fortune)

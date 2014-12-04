@@ -17,6 +17,7 @@ import io.github.fergoman123.fergotools.core.tileentity.TileEntityLapisFurnace;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -36,8 +37,8 @@ import java.util.Random;
 
 public class BlockLapisFurnace extends BlockFurnaceFT
 {
-    public BlockLapisFurnace(boolean isActive, Material material, String furnaceType) {
-        super(isActive, material, furnaceType);
+    public BlockLapisFurnace(boolean isActive) {
+        super(isActive, Material.iron, FurnaceType.lapisFurnace);
         this.isActive = isActive;
     }
 
@@ -69,7 +70,7 @@ public class BlockLapisFurnace extends BlockFurnaceFT
         } else if (!player.isSneaking()) {
             TileEntityLapisFurnace furnace = (TileEntityLapisFurnace) world.getTileEntity(x, y, z);
             if (furnace != null) {
-                player.openGui(FergoTools.getInstance(), GuiIds.lapisCrystalFurnace.ordinal(), world, x, y, z);
+                player.openGui(new FergoTools(), GuiIds.lapisCrystalFurnace.ordinal(), world, x, y, z);
             }
             return true;
         } else {

@@ -13,7 +13,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemShovelFT;
 
 public final class ItemAdamantiumShovel extends ItemShovelFT
 {
-    public ItemAdamantiumShovel(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemAdamantiumShovel(String itemName) {
+        super(materials.adamantium, itemName);
     }
 }

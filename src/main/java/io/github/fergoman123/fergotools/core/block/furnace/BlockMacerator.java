@@ -17,6 +17,7 @@ import io.github.fergoman123.fergotools.core.tileentity.TileEntityMacerator;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergoutil.helper.BlockHelper;
 import net.minecraft.block.Block;
@@ -37,8 +38,8 @@ import java.util.Random;
 
 public class BlockMacerator extends BlockFurnaceFT
 {
-    public BlockMacerator(boolean isActive, Material material, String furnaceType) {
-        super(isActive, material, furnaceType);
+    public BlockMacerator(boolean isActive) {
+        super(isActive, Material.iron, FurnaceType.macerator);
         this.isActive = isActive;
     }
 

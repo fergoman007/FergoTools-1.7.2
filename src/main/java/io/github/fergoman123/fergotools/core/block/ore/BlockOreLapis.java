@@ -19,8 +19,8 @@ import java.util.Random;
 public class BlockOreLapis extends BlockFT
 {
 
-    public BlockOreLapis(Material material, String blockName) {
-        super(material, blockName);
+    public BlockOreLapis(String blockName) {
+        super(Material.rock, blockName);
     }
 
     @Override

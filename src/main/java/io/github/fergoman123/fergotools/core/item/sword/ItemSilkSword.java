@@ -13,8 +13,8 @@ import io.github.fergoman123.fergotools.util.tool.ItemSwordFT;
 
 public final class ItemSilkSword extends ItemSwordFT
 {
-    public ItemSilkSword(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemSilkSword(String itemName) {
+        super(materials.silk, itemName);
     }
 
 }

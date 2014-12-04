@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemSwordFT;
 public final class ItemRedstoneSword extends ItemSwordFT
 {
 
-    public ItemRedstoneSword(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemRedstoneSword(String itemName) {
+        super(materials.redstone, itemName);
     }
 }

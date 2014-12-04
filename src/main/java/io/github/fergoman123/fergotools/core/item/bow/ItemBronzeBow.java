@@ -42,8 +42,8 @@ public final class ItemBronzeBow extends ItemBowFT {
     @SideOnly(CLIENT)
     private IIcon[] texture;
 
-    public ItemBronzeBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemBronzeBow(String itemName) {
+        super(Materials.Tools.bronze.getMaxUses(), itemName);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

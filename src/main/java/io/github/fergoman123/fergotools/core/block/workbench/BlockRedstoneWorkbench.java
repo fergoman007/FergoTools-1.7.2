@@ -49,7 +49,7 @@ public final class BlockRedstoneWorkbench extends BlockWorkbenchFT
         }
         else if (!player.isSneaking())
         {
-            player.openGui(FergoTools.getInstance(), GuiIds.redstoneWorkbench.ordinal(), world, x, y, z);
+            player.openGui(new FergoTools(), GuiIds.redstoneWorkbench.ordinal(), world, x, y, z);
             return true;
         }
         else

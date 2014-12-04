@@ -9,6 +9,7 @@
 
 package io.github.fergoman123.fergotools.core;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import io.github.fergoman123.fergotools.core.block.BlockFergoGlass;
 import io.github.fergoman123.fergotools.core.block.furnace.*;
 import io.github.fergoman123.fergotools.core.block.log.*;
@@ -37,20 +38,17 @@ import io.github.fergoman123.fergotools.core.itemblock.ore.*;
 import io.github.fergoman123.fergotools.core.itemblock.plank.*;
 import io.github.fergoman123.fergotools.core.itemblock.stair.*;
 import io.github.fergoman123.fergotools.core.tileentity.*;
-import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.reference.strings.Tile;
-import io.github.fergoman123.fergotools.util.base.ItemArmorFT.ArmorNames;
-import io.github.fergoman123.fergotools.util.item.Materials.Armor;
-import io.github.fergoman123.fergotools.util.item.Materials.Tools;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-
-import static io.github.fergoman123.fergoutil.helper.RegisterHelper.*;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
 
 /**
  * this class is the core of FergoTools.
@@ -298,70 +296,67 @@ public class FTContent
 
     public static Block blockFergoGlass;
 
-    /**
-     * this initialises all of the items and blocks.
-     */
     public static void init()
     {
-        quartzPickaxe = new ItemQuartzPickaxe(Tools.quartz, Tools.quartz.getMaxUses(), ItemNames.quartzPickaxe);
-        quartzShovel = new ItemQuartzShovel(Tools.quartz, Tools.quartz.getMaxUses(), ItemNames.quartzShovel);
-        quartzAxe = new ItemQuartzAxe(Tools.quartz, Tools.quartz.getMaxUses(), ItemNames.quartzAxe);
-        quartzHoe = new ItemQuartzHoe(Tools.quartz, Tools.quartz.getMaxUses(), ItemNames.quartzHoe);
-        quartzSword = new ItemQuartzSword(Tools.quartz, Tools.quartz.getMaxUses(), ItemNames.quartzSword);
+        quartzPickaxe = new ItemQuartzPickaxe(ItemNames.quartzPickaxe);
+        quartzShovel = new ItemQuartzShovel(ItemNames.quartzShovel);
+        quartzAxe = new ItemQuartzAxe(ItemNames.quartzAxe);
+        quartzHoe = new ItemQuartzHoe(ItemNames.quartzHoe);
+        quartzSword = new ItemQuartzSword(ItemNames.quartzSword);
 
-        obsidianPickaxe = new ItemObsidianPickaxe(Tools.obsidian, Tools.obsidian.getMaxUses(), ItemNames.obsidianPickaxe);
-        obsidianShovel = new ItemObsidianShovel(Tools.obsidian, Tools.obsidian.getMaxUses(), ItemNames.obsidianShovel);
-        obsidianAxe = new ItemObsidianAxe(Tools.obsidian, Tools.obsidian.getMaxUses(), ItemNames.obsidianAxe);
-        obsidianHoe = new ItemObsidianHoe(Tools.obsidian, Tools.obsidian.getMaxUses(), ItemNames.obsidianHoe);
-        obsidianSword = new ItemObsidianSword(Tools.obsidian, Tools.obsidian.getMaxUses(), ItemNames.obsidianSword);
+        obsidianPickaxe = new ItemObsidianPickaxe(ItemNames.obsidianPickaxe);
+        obsidianShovel = new ItemObsidianShovel(ItemNames.obsidianShovel);
+        obsidianAxe = new ItemObsidianAxe(ItemNames.obsidianAxe);
+        obsidianHoe = new ItemObsidianHoe(ItemNames.obsidianHoe);
+        obsidianSword = new ItemObsidianSword(ItemNames.obsidianSword);
 
-        emeraldPickaxe = new ItemEmeraldPickaxe(Tools.emerald, Tools.emerald.getMaxUses(), ItemNames.emeraldPickaxe);
-        emeraldShovel = new ItemEmeraldShovel(Tools.emerald, Tools.emerald.getMaxUses(), ItemNames.emeraldShovel);
-        emeraldAxe = new ItemEmeraldAxe(Tools.emerald, Tools.emerald.getMaxUses(), ItemNames.emeraldAxe);
-        emeraldHoe = new ItemEmeraldHoe(Tools.emerald, Tools.emerald.getMaxUses(), ItemNames.emeraldHoe);
-        emeraldSword = new ItemEmeraldSword(Tools.emerald, Tools.emerald.getMaxUses(), ItemNames.emeraldSword);
+        emeraldPickaxe = new ItemEmeraldPickaxe(ItemNames.emeraldPickaxe);
+        emeraldShovel = new ItemEmeraldShovel(ItemNames.emeraldShovel);
+        emeraldAxe = new ItemEmeraldAxe(ItemNames.emeraldAxe);
+        emeraldHoe = new ItemEmeraldHoe(ItemNames.emeraldHoe);
+        emeraldSword = new ItemEmeraldSword(ItemNames.emeraldSword);
 
-        lapisPickaxe = new ItemLapisPickaxe(Tools.lapis, Tools.lapis.getMaxUses(), ItemNames.lapisPickaxe);
-        lapisShovel = new ItemLapisShovel(Tools.lapis, Tools.lapis.getMaxUses(), ItemNames.lapisShovel);
-        lapisAxe = new ItemLapisAxe(Tools.lapis, Tools.lapis.getMaxUses(), ItemNames.lapisAxe);
-        lapisHoe = new ItemLapisHoe(Tools.lapis, Tools.lapis.getMaxUses(), ItemNames.lapisHoe);
-        lapisSword = new ItemLapisSword(Tools.lapis, Tools.lapis.getMaxUses(), ItemNames.lapisSword);
+        lapisPickaxe = new ItemLapisPickaxe(ItemNames.lapisPickaxe);
+        lapisShovel = new ItemLapisShovel(ItemNames.lapisShovel);
+        lapisAxe = new ItemLapisAxe(ItemNames.lapisAxe);
+        lapisHoe = new ItemLapisHoe(ItemNames.lapisHoe);
+        lapisSword = new ItemLapisSword(ItemNames.lapisSword);
 
-        bronzePickaxe = new ItemBronzePickaxe(Tools.bronze, Tools.bronze.getMaxUses(), ItemNames.bronzePickaxe);
-        bronzeShovel = new ItemBronzeShovel(Tools.bronze, Tools.bronze.getMaxUses(), ItemNames.bronzeShovel);
-        bronzeAxe = new ItemBronzeAxe(Tools.bronze, Tools.bronze.getMaxUses(), ItemNames.bronzeAxe);
-        bronzeHoe = new ItemBronzeHoe(Tools.bronze, Tools.bronze.getMaxUses(), ItemNames.bronzeHoe);
-        bronzeSword = new ItemBronzeSword(Tools.bronze, Tools.bronze.getMaxUses(), ItemNames.bronzeSword);
+        bronzePickaxe = new ItemBronzePickaxe(ItemNames.bronzePickaxe);
+        bronzeShovel = new ItemBronzeShovel(ItemNames.bronzeShovel);
+        bronzeAxe = new ItemBronzeAxe(ItemNames.bronzeAxe);
+        bronzeHoe = new ItemBronzeHoe(ItemNames.bronzeHoe);
+        bronzeSword = new ItemBronzeSword(ItemNames.bronzeSword);
 
-        coalPickaxe = new ItemCoalPickaxe(Tools.coal, Tools.coal.getMaxUses(), ItemNames.coalPickaxe);
-        coalShovel = new ItemCoalShovel(Tools.coal, Tools.coal.getMaxUses(), ItemNames.coalShovel);
-        coalAxe = new ItemCoalAxe(Tools.coal, Tools.coal.getMaxUses(), ItemNames.coalAxe);
-        coalHoe = new ItemCoalHoe(Tools.coal, Tools.coal.getMaxUses(), ItemNames.coalHoe);
-        coalSword = new ItemCoalSword(Tools.coal, Tools.coal.getMaxUses(), ItemNames.coalSword);
+        coalPickaxe = new ItemCoalPickaxe(ItemNames.coalPickaxe);
+        coalShovel = new ItemCoalShovel(ItemNames.coalShovel);
+        coalAxe = new ItemCoalAxe(ItemNames.coalAxe);
+        coalHoe = new ItemCoalHoe(ItemNames.coalHoe);
+        coalSword = new ItemCoalSword(ItemNames.coalSword);
 
-        glowstonePickaxe = new ItemGlowstonePickaxe(Tools.glowstone, Tools.glowstone.getMaxUses(), ItemNames.glowstonePickaxe);
-        glowstoneShovel = new ItemGlowstoneShovel(Tools.glowstone, Tools.glowstone.getMaxUses(), ItemNames.glowstoneShovel);
-        glowstoneAxe = new ItemGlowstoneAxe(Tools.glowstone, Tools.glowstone.getMaxUses(), ItemNames.glowstoneAxe);
-        glowstoneHoe = new ItemGlowstoneHoe(Tools.glowstone, Tools.glowstone.getMaxUses(), ItemNames.glowstoneHoe);
-        glowstoneSword = new ItemGlowstoneSword(Tools.glowstone, Tools.glowstone.getMaxUses(), ItemNames.glowstoneSword);
+        glowstonePickaxe = new ItemGlowstonePickaxe(ItemNames.glowstonePickaxe);
+        glowstoneShovel = new ItemGlowstoneShovel(ItemNames.glowstoneShovel);
+        glowstoneAxe = new ItemGlowstoneAxe(ItemNames.glowstoneAxe);
+        glowstoneHoe = new ItemGlowstoneHoe(ItemNames.glowstoneHoe);
+        glowstoneSword = new ItemGlowstoneSword(ItemNames.glowstoneSword);
 
-        adamantiumPickaxe = new ItemAdamantiumPickaxe(Tools.adamantium, Tools.adamantium.getMaxUses(), ItemNames.adamantiumPickaxe);
-        adamantiumShovel = new ItemAdamantiumShovel(Tools.adamantium, Tools.adamantium.getMaxUses(), ItemNames.adamantiumShovel);
-        adamantiumAxe = new ItemAdamantiumAxe(Tools.adamantium, Tools.adamantium.getMaxUses(), ItemNames.adamantiumAxe);
-        adamantiumHoe = new ItemAdamantiumHoe(Tools.adamantium, Tools.adamantium.getMaxUses(), ItemNames.adamantiumHoe);
-        adamantiumSword = new ItemAdamantiumSword(Tools.adamantium, Tools.adamantium.getMaxUses(), ItemNames.adamantiumSword);
+        adamantiumPickaxe = new ItemAdamantiumPickaxe(ItemNames.adamantiumPickaxe);
+        adamantiumShovel = new ItemAdamantiumShovel(ItemNames.adamantiumShovel);
+        adamantiumAxe = new ItemAdamantiumAxe(ItemNames.adamantiumAxe);
+        adamantiumHoe = new ItemAdamantiumHoe(ItemNames.adamantiumHoe);
+        adamantiumSword = new ItemAdamantiumSword(ItemNames.adamantiumSword);
 
-        silkPickaxe = new ItemSilkPickaxe(Tools.silk, Tools.silk.getMaxUses(), ItemNames.silkPickaxe);
-        silkShovel = new ItemSilkShovel(Tools.silk, Tools.silk.getMaxUses(), ItemNames.silkShovel);
-        silkAxe = new ItemSilkAxe(Tools.silk, Tools.silk.getMaxUses(), ItemNames.silkAxe);
-        silkHoe = new ItemSilkHoe(Tools.silk, Tools.silk.getMaxUses(), ItemNames.silkHoe);
-        silkSword = new ItemSilkSword(Tools.silk, Tools.silk.getMaxUses(), ItemNames.silkSword);
+        silkPickaxe = new ItemSilkPickaxe(ItemNames.silkPickaxe);
+        silkShovel = new ItemSilkShovel(ItemNames.silkShovel);
+        silkAxe = new ItemSilkAxe(ItemNames.silkAxe);
+        silkHoe = new ItemSilkHoe(ItemNames.silkHoe);
+        silkSword = new ItemSilkSword(ItemNames.silkSword);
 
-        redstonePickaxe = new ItemRedstonePickaxe(Tools.redstone, Tools.redstone.getMaxUses(), ItemNames.redstonePickaxe);
-        redstoneShovel = new ItemRedstoneShovel(Tools.redstone, Tools.redstone.getMaxUses(), ItemNames.redstoneShovel);
-        redstoneAxe = new ItemRedstoneAxe(Tools.redstone, Tools.redstone.getMaxUses(), ItemNames.redstoneAxe);
-        redstoneHoe = new ItemRedstoneHoe(Tools.redstone, Tools.redstone.getMaxUses(), ItemNames.redstoneHoe);
-        redstoneSword = new ItemRedstoneSword(Tools.redstone, Tools.redstone.getMaxUses(), ItemNames.redstoneSword);
+        redstonePickaxe = new ItemRedstonePickaxe(ItemNames.redstonePickaxe);
+        redstoneShovel = new ItemRedstoneShovel(ItemNames.redstoneShovel);
+        redstoneAxe = new ItemRedstoneAxe(ItemNames.redstoneAxe);
+        redstoneHoe = new ItemRedstoneHoe(ItemNames.redstoneHoe);
+        redstoneSword = new ItemRedstoneSword(ItemNames.redstoneSword);
 
         ingotObsidian = new ItemObsidianIngot(ItemNames.ingotObsidian);
         gemEmerald = new ItemEmeraldGem(ItemNames.gemEmerald);
@@ -376,76 +371,75 @@ public class FTContent
         gemExp2 = new ItemGemExp2(ItemNames.gemExp2);
         gemExp3 = new ItemGemExp3(ItemNames.gemExp3);
 
+        staffExp = new ItemStaffExp(ItemNames.staffExp);
 
         shardExp = new ItemExpShard(ItemNames.shardExp);
         expCollector = new ItemExpCollector(ItemNames.expCollector);
 
-        staffExp = new ItemStaffExp(ItemNames.staffExp);
+        quartzHelmet = new ItemArmorQuartz(ArmorType.HELMET);
+        quartzChestplate = new ItemArmorQuartz(ArmorType.CHEST);
+        quartzLeggings = new ItemArmorQuartz(ArmorType.LEGS);
+        quartzBoots = new ItemArmorQuartz(ArmorType.BOOTS);
 
-        quartzHelmet = new ItemArmorQuartz(ArmorNames.quartz, Armor.quartzArmor, ArmorType.HELMET);
-        quartzChestplate = new ItemArmorQuartz(ArmorNames.quartz, Armor.quartzArmor, ArmorType.CHEST);
-        quartzLeggings = new ItemArmorQuartz(ArmorNames.quartz, Armor.quartzArmor, ArmorType.LEGS);
-        quartzBoots = new ItemArmorQuartz(ArmorNames.quartz, Armor.quartzArmor, ArmorType.BOOTS);
+        obsidianHelmet = new ItemArmorObsidian(ArmorType.HELMET);
+        obsidianChestplate = new ItemArmorObsidian(ArmorType.CHEST);
+        obsidianLeggings = new ItemArmorObsidian(ArmorType.LEGS);
+        obsidianBoots = new ItemArmorObsidian(ArmorType.BOOTS);
 
-        obsidianHelmet = new ItemArmorObsidian(ArmorNames.obsidian, Armor.obsidianArmor, ArmorType.HELMET);
-        obsidianChestplate = new ItemArmorObsidian(ArmorNames.obsidian, Armor.obsidianArmor, ArmorType.CHEST);
-        obsidianLeggings = new ItemArmorObsidian(ArmorNames.obsidian, Armor.obsidianArmor, ArmorType.LEGS);
-        obsidianBoots = new ItemArmorObsidian(ArmorNames.obsidian, Armor.obsidianArmor, ArmorType.BOOTS);
+        emeraldHelmet = new ItemArmorEmerald(ArmorType.HELMET);
+        emeraldChestplate = new ItemArmorEmerald(ArmorType.CHEST);
+        emeraldLeggings = new ItemArmorEmerald(ArmorType.LEGS);
+        emeraldBoots = new ItemArmorEmerald(ArmorType.BOOTS);
 
-        emeraldHelmet = new ItemArmorEmerald(ArmorNames.emerald, Armor.emeraldArmor, ArmorType.HELMET);
-        emeraldChestplate = new ItemArmorEmerald(ArmorNames.emerald, Armor.emeraldArmor, ArmorType.CHEST);
-        emeraldLeggings = new ItemArmorEmerald(ArmorNames.emerald, Armor.emeraldArmor, ArmorType.LEGS);
-        emeraldBoots = new ItemArmorEmerald(ArmorNames.emerald, Armor.emeraldArmor, ArmorType.BOOTS);
+        lapisHelmet = new ItemArmorLapis(ArmorType.HELMET);
+        lapisChestplate = new ItemArmorLapis(ArmorType.CHEST);
+        lapisLeggings = new ItemArmorLapis(ArmorType.LEGS);
+        lapisBoots = new ItemArmorLapis(ArmorType.BOOTS);
 
-        lapisHelmet = new ItemArmorLapis(ArmorNames.lapis, Armor.lapisArmor, ArmorType.HELMET);
-        lapisChestplate = new ItemArmorLapis(ArmorNames.lapis, Armor.lapisArmor, ArmorType.CHEST);
-        lapisLeggings = new ItemArmorLapis(ArmorNames.lapis, Armor.lapisArmor, ArmorType.LEGS);
-        lapisBoots = new ItemArmorLapis(ArmorNames.lapis, Armor.lapisArmor, ArmorType.BOOTS);
+        bronzeHelmet = new ItemArmorBronze(ArmorType.HELMET);
+        bronzeChestplate = new ItemArmorBronze(ArmorType.CHEST);
+        bronzeLeggings = new ItemArmorBronze(ArmorType.LEGS);
+        bronzeBoots = new ItemArmorBronze(ArmorType.BOOTS);
 
-        bronzeHelmet = new ItemArmorBronze(ArmorNames.bronze, Armor.bronzeArmor, ArmorType.HELMET);
-        bronzeChestplate = new ItemArmorBronze(ArmorNames.bronze, Armor.bronzeArmor, ArmorType.CHEST);
-        bronzeLeggings = new ItemArmorBronze(ArmorNames.bronze, Armor.bronzeArmor, ArmorType.LEGS);
-        bronzeBoots = new ItemArmorBronze(ArmorNames.bronze, Armor.bronzeArmor, ArmorType.BOOTS);
+        coalHelmet = new ItemArmorCoal(ArmorType.HELMET);
+        coalChestplate = new ItemArmorCoal(ArmorType.CHEST);
+        coalLeggings = new ItemArmorCoal(ArmorType.LEGS);
+        coalBoots = new ItemArmorCoal(ArmorType.BOOTS);
 
-        coalHelmet = new ItemArmorCoal(ArmorNames.coal, Armor.coalArmor, ArmorType.HELMET);
-        coalChestplate = new ItemArmorCoal(ArmorNames.coal, Armor.coalArmor, ArmorType.CHEST);
-        coalLeggings = new ItemArmorCoal(ArmorNames.coal, Armor.coalArmor, ArmorType.LEGS);
-        coalBoots = new ItemArmorCoal(ArmorNames.coal, Armor.coalArmor, ArmorType.BOOTS);
+        glowstoneHelmet = new ItemArmorGlowstone(ArmorType.HELMET);
+        glowstoneChestplate = new ItemArmorGlowstone(ArmorType.CHEST);
+        glowstoneLeggings = new ItemArmorGlowstone(ArmorType.LEGS);
+        glowstoneBoots = new ItemArmorGlowstone(ArmorType.BOOTS);
 
-        glowstoneHelmet = new ItemArmorGlowstone(ArmorNames.glowstone, Armor.glowstoneArmor, ArmorType.HELMET);
-        glowstoneChestplate = new ItemArmorGlowstone(ArmorNames.glowstone, Armor.glowstoneArmor, ArmorType.CHEST);
-        glowstoneLeggings = new ItemArmorGlowstone(ArmorNames.glowstone, Armor.glowstoneArmor, ArmorType.LEGS);
-        glowstoneBoots = new ItemArmorGlowstone(ArmorNames.glowstone, Armor.glowstoneArmor, ArmorType.BOOTS);
+        adamantiumHelmet = new ItemArmorAdamantium(ArmorType.HELMET);
+        adamantiumChestplate = new ItemArmorAdamantium(ArmorType.CHEST);
+        adamantiumLeggings = new ItemArmorAdamantium(ArmorType.LEGS);
+        adamantiumBoots = new ItemArmorAdamantium(ArmorType.BOOTS);
 
-        adamantiumHelmet = new ItemArmorAdamantium(ArmorNames.adamantium, Armor.adamantiumArmor, ArmorType.HELMET);
-        adamantiumChestplate = new ItemArmorAdamantium(ArmorNames.adamantium, Armor.adamantiumArmor, ArmorType.CHEST);
-        adamantiumLeggings = new ItemArmorAdamantium(ArmorNames.adamantium, Armor.adamantiumArmor, ArmorType.LEGS);
-        adamantiumBoots = new ItemArmorAdamantium(ArmorNames.adamantium, Armor.adamantiumArmor, ArmorType.BOOTS);
+        redstoneHelmet = new ItemArmorRedstone(ArmorType.HELMET);
+        redstoneChestplate = new ItemArmorRedstone(ArmorType.CHEST);
+        redstoneLeggings = new ItemArmorRedstone(ArmorType.LEGS);
+        redstoneBoots = new ItemArmorRedstone(ArmorType.BOOTS);
 
-        redstoneHelmet = new ItemArmorRedstone(ArmorNames.redstone, Armor.redstoneArmor, ArmorType.HELMET);
-        redstoneChestplate = new ItemArmorRedstone(ArmorNames.redstone, Armor.redstoneArmor, ArmorType.CHEST);
-        redstoneLeggings = new ItemArmorRedstone(ArmorNames.redstone, Armor.redstoneArmor, ArmorType.LEGS);
-        redstoneBoots = new ItemArmorRedstone(ArmorNames.redstone, Armor.redstoneArmor, ArmorType.BOOTS);
+        bowQuartz = new ItemQuartzBow(ItemNames.bowQuartz);
+        bowObsidian = new ItemObsidianBow(ItemNames.bowObsidian);
+        bowEmerald = new ItemEmeraldBow(ItemNames.bowEmerald);
+        bowLapis = new ItemLapisBow(ItemNames.bowLapis);
+        bowBronze = new ItemBronzeBow(ItemNames.bowBronze);
+        bowCoal = new ItemCoalBow(ItemNames.bowCoal);
+        bowGlowstone = new ItemGlowstoneBow(ItemNames.bowGlowstone);
+        bowAdamantium = new ItemAdamantiumBow(ItemNames.bowAdamantium);
 
-        bowQuartz = new ItemQuartzBow(Tools.quartz.getMaxUses(), ItemNames.bowQuartz);
-        bowObsidian = new ItemObsidianBow(Tools.obsidian.getMaxUses(), ItemNames.bowObsidian);
-        bowEmerald = new ItemEmeraldBow(Tools.emerald.getMaxUses(), ItemNames.bowEmerald);
-        bowLapis = new ItemLapisBow(Tools.lapis.getMaxUses(), ItemNames.bowLapis);
-        bowBronze = new ItemBronzeBow(Tools.bronze.getMaxUses(), ItemNames.bowBronze);
-        bowCoal = new ItemCoalBow(Tools.coal.getMaxUses(), ItemNames.bowCoal);
-        bowGlowstone = new ItemGlowstoneBow(Tools.glowstone.getMaxUses(), ItemNames.bowGlowstone);
-        bowAdamantium = new ItemAdamantiumBow(Tools.adamantium.getMaxUses(), ItemNames.bowAdamantium);
-
-        quartzShears = new ItemQuartzShears(Tools.quartz.getMaxUses(), ItemNames.quartzShears);
-        obsidianShears = new ItemObsidianShears(Tools.obsidian.getMaxUses(), ItemNames.obsidianShears);
-        emeraldShears = new ItemEmeraldShears(Tools.emerald.getMaxUses(), ItemNames.emeraldShears);
-        lapisShears = new ItemLapisShears(Tools.lapis.getMaxUses(), ItemNames.lapisShears);
-        bronzeShears = new ItemBronzeShears(Tools.bronze.getMaxUses(), ItemNames.bronzeShears);
-        coalShears = new ItemCoalShears(Tools.coal.getMaxUses(), ItemNames.coalShears);
-        glowstoneShears = new ItemGlowstoneShears(Tools.glowstone.getMaxUses(), ItemNames.glowstoneShears);
-        adamantiumShears = new ItemAdamantiumShears(Tools.adamantium.getMaxUses(), ItemNames.adamantiumShears);
-        silkShears = new ItemSilkShears(Tools.silk.getMaxUses(),ItemNames.silkShears);
-        redstoneShears = new ItemRedstoneShears(Tools.redstone.getMaxUses(), ItemNames.redstoneShears);
+        quartzShears = new ItemQuartzShears(ItemNames.quartzShears);
+        obsidianShears = new ItemObsidianShears(ItemNames.obsidianShears);
+        emeraldShears = new ItemEmeraldShears(ItemNames.emeraldShears);
+        lapisShears = new ItemLapisShears(ItemNames.lapisShears);
+        bronzeShears = new ItemBronzeShears(ItemNames.bronzeShears);
+        coalShears = new ItemCoalShears(ItemNames.coalShears);
+        glowstoneShears = new ItemGlowstoneShears(ItemNames.glowstoneShears);
+        adamantiumShears = new ItemAdamantiumShears(ItemNames.adamantiumShears);
+        silkShears = new ItemSilkShears(ItemNames.silkShears);
+        redstoneShears = new ItemRedstoneShears(ItemNames.redstoneShears);
 
         stickObsidian = new ItemStickObsidian(ItemNames.stickObsidian);
         stickEmerald = new ItemStickEmerald(ItemNames.stickEmerald);
@@ -457,52 +451,52 @@ public class FTContent
         stickSilk = new ItemStickSilk(ItemNames.stickSilk);
         stickRedstone = new ItemStickRedstone(ItemNames.stickRedstone);
 
-        oreExperience = new BlockOreExperience(Material.rock, BlockNames.oreExperience);
-        oreObsidian = new BlockOreObsidian(Material.rock, BlockNames.oreObsidian);
-        oreGemEmerald = new BlockOreEmerald(Material.rock, BlockNames.oreEmeraldCrystal);
-        oreGemLapis = new BlockOreEmerald(Material.rock, BlockNames.oreLapisCrystal);
-        oreBronze = new BlockOreBronze(Material.rock, BlockNames.oreBronze);
-        oreAdamantium = new BlockOreAdamantium(Material.rock, BlockNames.oreAdamantium);
-        oreRedstone = new BlockOreRedstone(Material.rock, BlockNames.oreCrystalRed);
+        oreExperience = new BlockOreExperience(BlockNames.oreExperience);
+        oreObsidian = new BlockOreObsidian(BlockNames.oreObsidian);
+        oreGemEmerald = new BlockOreEmerald(BlockNames.oreLapisCrystal);
+        oreGemLapis = new BlockOreLapis(BlockNames.oreEmeraldCrystal);
+        oreBronze = new BlockOreBronze(BlockNames.oreBronze);
+        oreAdamantium = new BlockOreAdamantium(BlockNames.oreAdamantium);
+        oreRedstone = new BlockOreRedstone(BlockNames.oreCrystalRed);
 
-        blockExperience = new BlockExperience(Material.iron, BlockNames.blockExperience);
-        blockExpCollector = new BlockExpCollector(Material.iron, BlockNames.blockExpCollector);
-        blockObsidian = new BlockObsidianStorage(Material.iron, BlockNames.blockObsidian);
-        blockEmerald = new BlockEmeraldCrystal(Material.iron, BlockNames.blockEmeraldCrystal);
-        blockLapis = new BlockLapisCrystal(Material.iron, BlockNames.blockLapisCrystal);
-        blockBronze = new BlockBronze(Material.iron, BlockNames.blockBronze);
-        blockCoal = new BlockCoalStorage(Material.iron, BlockNames.blockCoal);
-        blockGlowstone = new BlockGlowstoneStorage(Material.iron, BlockNames.blockGlowstone);
-        blockAdamantium = new BlockAdamantium(Material.iron, BlockNames.blockAdamantium);
-        blockSilkGem = new BlockSilkGem(Material.iron, BlockNames.blockSilkGem);
-        blockRedstone = new BlockRedstone(Material.iron, BlockNames.blockRedstoneCrystal);
+        blockExperience = new BlockExperience(BlockNames.blockExperience);
+        blockExpCollector = new BlockExpCollector(BlockNames.blockExpCollector);
+        blockObsidian = new BlockObsidianStorage(BlockNames.blockObsidian);
+        blockEmerald = new BlockEmeraldCrystal(BlockNames.blockEmeraldCrystal);
+        blockLapis = new BlockLapisCrystal(BlockNames.blockLapisCrystal);
+        blockBronze = new BlockBronze(BlockNames.blockBronze);
+        blockCoal = new BlockCoalStorage(BlockNames.blockCoal);
+        blockGlowstone = new BlockGlowstoneStorage(BlockNames.blockGlowstone);
+        blockAdamantium = new BlockAdamantium(BlockNames.blockAdamantium);
+        blockSilkGem = new BlockSilkGem(BlockNames.blockSilkGem);
+        blockRedstone = new BlockRedstone(BlockNames.blockRedstoneCrystal);
 
-        quartzFurnaceIdle = new BlockQuartzFurnace(false, Material.rock, FurnaceType.quartzFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        obsidianFurnaceIdle = new BlockObsidianFurnace(false, Material.iron, FurnaceType.obsidianFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        emeraldFurnaceIdle = new BlockEmeraldFurnace(false, Material.iron, FurnaceType.emeraldFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        lapisFurnaceIdle = new BlockLapisFurnace(false, Material.iron, FurnaceType.lapisFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        bronzeFurnaceIdle = new BlockBronzeFurnace(false, Material.iron, FurnaceType.bronzeFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        coalFurnaceIdle = new BlockCoalFurnace(false, Material.iron, FurnaceType.coalFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false, Material.glass, FurnaceType.glowstoneFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false, Material.iron, FurnaceType.adamantiumFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        silkFurnaceIdle = new BlockSilkFurnace(false, Material.iron, FurnaceType.silkFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        redstoneFurnaceIdle = new BlockRedstoneFurnace(false, Material.iron, FurnaceType.redstoneFurnace).setCreativeTab(Tabs.tabFergoFurnaces);
-        maceratorIdle = new BlockMacerator(false, Material.iron, FurnaceType.macerator).setCreativeTab(Tabs.tabFergoFurnaces);
+        quartzFurnaceIdle = new BlockQuartzFurnace(false);
+        obsidianFurnaceIdle = new BlockObsidianFurnace(false);
+        emeraldFurnaceIdle = new BlockEmeraldFurnace(false);
+        lapisFurnaceIdle = new BlockLapisFurnace(false);
+        bronzeFurnaceIdle = new BlockBronzeFurnace(false);
+        coalFurnaceIdle = new BlockCoalFurnace(false);
+        glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false);
+        adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false);
+        silkFurnaceIdle = new BlockSilkFurnace(false);
+        redstoneFurnaceIdle = new BlockRedstoneFurnace(false);
+        maceratorIdle = new BlockMacerator(false);
 
-        quartzFurnaceActive = new BlockQuartzFurnace(true, Material.rock, FurnaceType.quartzFurnace).setLightLevel(0.875f);
-        obsidianFurnaceActive = new BlockObsidianFurnace(true, Material.iron, FurnaceType.obsidianFurnace).setLightLevel(0.875f);
-        emeraldFurnaceActive = new BlockEmeraldFurnace(true, Material.iron, FurnaceType.emeraldFurnace).setLightLevel(0.875f);
-        lapisFurnaceActive = new BlockLapisFurnace(true, Material.iron, FurnaceType.lapisFurnace).setLightLevel(0.875f);
-        bronzeFurnaceActive = new BlockBronzeFurnace(true, Material.iron, FurnaceType.bronzeFurnace).setLightLevel(0.875f);
-        coalFurnaceActive = new BlockCoalFurnace(true, Material.iron, FurnaceType.coalFurnace).setLightLevel(0.875f);
-        glowstoneFurnaceActive = new BlockGlowstoneFurnace(true, Material.glass, FurnaceType.glowstoneFurnace).setLightLevel(0.875f);
-        adamantiumFurnaceActive = new BlockAdamantiumFurnace(true, Material.iron, FurnaceType.adamantiumFurnace).setLightLevel(0.875f);
-        silkFurnaceActive = new BlockSilkFurnace(true, Material.iron, FurnaceType.silkFurnace).setLightLevel(0.875f);
-        redstoneFurnaceActive = new BlockRedstoneFurnace(true, Material.iron, FurnaceType.redstoneFurnace).setLightLevel(0.875f);
-        maceratorActive = new BlockMacerator(true, Material.iron, FurnaceType.macerator).setLightLevel(0.875f);
+        quartzFurnaceActive = new BlockQuartzFurnace(true);
+        obsidianFurnaceActive = new BlockObsidianFurnace(true);
+        emeraldFurnaceActive = new BlockEmeraldFurnace(true);
+        lapisFurnaceActive = new BlockLapisFurnace(true);
+        bronzeFurnaceActive = new BlockBronzeFurnace(true);
+        coalFurnaceActive = new BlockCoalFurnace(true);
+        glowstoneFurnaceActive = new BlockGlowstoneFurnace(true);
+        adamantiumFurnaceActive = new BlockAdamantiumFurnace(true);
+        silkFurnaceActive = new BlockSilkFurnace(true);
+        redstoneFurnaceActive = new BlockRedstoneFurnace(true);
+        maceratorActive = new BlockMacerator(true);
 
         logObsidian = new BlockLogObsidian(BlockNames.logObsidian);
-        logEmerald = new BlockLogEmerald(BlockNames.logEmerald);
+        logEmerald = new BlockLogObsidian(BlockNames.logEmerald);
         logLapis = new BlockLogLapis(BlockNames.logLapis);
         logBronze = new BlockLogBronze(BlockNames.logBronze);
         logCoal = new BlockLogCoal(BlockNames.logCoal);
@@ -521,15 +515,15 @@ public class FTContent
         plankSilk = new BlockPlankSilk(BlockNames.plankSilk);
         plankRedstone = new BlockPlankRedstone(BlockNames.plankRedstone);
 
-        stairObsidian = new BlockStairObsidian(plankObsidian, BlockNames.stairObsidian);
-        stairEmerald = new BlockStairEmerald(plankEmerald, BlockNames.stairEmerald);
-        stairLapis = new BlockStairLapis(plankLapis, BlockNames.stairLapis);
-        stairBronze = new BlockStairBronze(plankBronze, BlockNames.stairBronze);
-        stairCoal = new BlockStairCoal(plankCoal, BlockNames.stairCoal);
-        stairGlowstone = new BlockStairGlowstone(plankGlowstone, BlockNames.stairGlowstone);
-        stairAdamantium = new BlockStairAdamantium(plankAdamantium, BlockNames.stairAdamantium);
-        stairSilk = new BlockStairSilk(plankSilk, BlockNames.stairSilk);
-        stairRedstone = new BlockStairRedstone(plankRedstone, BlockNames.stairRedstone);
+        stairObsidian = new BlockStairObsidian(BlockNames.stairObsidian);
+        stairEmerald = new BlockStairEmerald(BlockNames.stairEmerald);
+        stairLapis = new BlockStairLapis(BlockNames.stairLapis);
+        stairBronze = new BlockStairBronze(BlockNames.stairBronze);
+        stairCoal = new BlockStairCoal(BlockNames.stairCoal);
+        stairGlowstone = new BlockStairGlowstone(BlockNames.stairGlowstone);
+        stairAdamantium = new BlockStairAdamantium(BlockNames.stairAdamantium);
+        stairSilk = new BlockStairSilk(BlockNames.stairSilk);
+        stairRedstone = new BlockStairRedstone(BlockNames.stairRedstone);
 
         obsidianWorkbench = new BlockObsidianWorkbench(BlockNames.obsidianWorkbench);
         emeraldWorkbench = new BlockEmeraldWorkbench(BlockNames.emeraldWorkbench);
@@ -812,6 +806,26 @@ public class FTContent
         registerTileEntity(TileEntitySilkFurnace.class, Tile.silkFurnaceTile);
         registerTileEntity(TileEntityRedstoneFurnace.class, Tile.redstoneFurnaceTile);
         registerTileEntity(TileEntityMacerator.class, Tile.maceratorTile);
+    }
+
+    public static void registerBlock(Block block, Class<? extends ItemBlock> itemclass, String name)
+    {
+        RegisterHelper.registerBlock(block, itemclass, name);
+    }
+
+    public static void registerBlock(Block block, String name)
+    {
+        RegisterHelper.registerBlock(block, name);
+    }
+
+    public static void registerItem(Item item, String name)
+    {
+        RegisterHelper.registerItem(item, name);
+    }
+
+    public static void registerTileEntity(Class<? extends TileEntity> tileClass, String id)
+    {
+        RegisterHelper.registerTileEntity(tileClass, id);
     }
 
 

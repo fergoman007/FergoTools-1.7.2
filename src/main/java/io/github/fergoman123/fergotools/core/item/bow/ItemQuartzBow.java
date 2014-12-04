@@ -36,8 +36,8 @@ public final class ItemQuartzBow extends ItemBowFT {
 
     public final String[] pullArray = new String[]{"_1", "_2", "_3"};
 
-    public ItemQuartzBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemQuartzBow(String itemName) {
+        super(Materials.Tools.quartz.getMaxUses(), itemName);
     }
 
 

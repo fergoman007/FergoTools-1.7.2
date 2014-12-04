@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemShovelFT;
 public final class ItemRedstoneShovel extends ItemShovelFT
 {
 
-    public ItemRedstoneShovel(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemRedstoneShovel(String itemName) {
+        super(materials.redstone, itemName);
     }
 }

@@ -17,8 +17,8 @@ import java.util.Random;
 
 public class BlockExpCollector extends BlockFT {
 
-    public BlockExpCollector(Material material, String blockName) {
-        super(material, blockName);
+    public BlockExpCollector(String blockName) {
+        super(Material.iron, blockName);
     }
 
     @Override

@@ -18,8 +18,8 @@ import java.util.Random;
 public class BlockLapisCrystal extends BlockFT
 {
 
-    public BlockLapisCrystal(Material material, String blockName) {
-        super(material, blockName);
+    public BlockLapisCrystal(String blockName) {
+        super(Material.iron, blockName);
     }
 
     @Override

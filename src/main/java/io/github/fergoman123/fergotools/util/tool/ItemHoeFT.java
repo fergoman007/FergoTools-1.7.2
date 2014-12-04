@@ -24,18 +24,12 @@ package io.github.fergoman123.fergotools.util.tool;
 
  public abstract class ItemHoeFT extends ItemHoe{
 
-     /**
-      * this is the constructor for the base
-      * hoe for FergoTools
-      * @param material the tool material of the hoe
-      * @param maxUses the durability of the hoe
-      * @param itemName the name of the hoe
-      */
-    public ItemHoeFT(ToolMaterial material, int maxUses, String itemName) {
+    public static final Materials.Tools materials = new Materials.Tools();
+
+    public ItemHoeFT(ToolMaterial material, String itemName) {
         super(material);
         this.setUnlocalizedName(itemName);
-        this.setMaxStackSize(1);
-        this.setMaxDamage(maxUses);
+        this.setMaxDamage(material.getMaxUses());
         this.setCreativeTab(Tabs.tabFergoTools);
         this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }

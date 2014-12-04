@@ -18,6 +18,7 @@ import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -37,9 +38,9 @@ import java.util.Random;
 
 public class BlockObsidianFurnace extends BlockFurnaceFT
 {
-    public BlockObsidianFurnace(boolean isActive, Material material, String furnaceType)
+    public BlockObsidianFurnace(boolean isActive)
     {
-        super(isActive, material, furnaceType);
+        super(isActive, Material.iron, FurnaceType.obsidianFurnace);
         this.isActive = isActive;
     }
 

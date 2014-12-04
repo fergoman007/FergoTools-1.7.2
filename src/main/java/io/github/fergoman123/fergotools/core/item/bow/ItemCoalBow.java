@@ -42,8 +42,8 @@ public final class ItemCoalBow extends ItemBowFT {
     @SideOnly(CLIENT)
     private IIcon[] texture;
 
-    public ItemCoalBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemCoalBow(String itemName) {
+        super(Materials.Tools.coal.getMaxUses(), itemName);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

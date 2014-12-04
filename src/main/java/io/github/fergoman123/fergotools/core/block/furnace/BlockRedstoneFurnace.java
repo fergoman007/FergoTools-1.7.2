@@ -18,6 +18,7 @@ import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergoutil.helper.BlockHelper;
 import net.minecraft.block.Block;
@@ -38,8 +39,8 @@ import java.util.Random;
 
 public class BlockRedstoneFurnace extends BlockFurnaceFT
 {
-    public BlockRedstoneFurnace(boolean isActive, Material material, String furnaceType) {
-        super(isActive, material, furnaceType);
+    public BlockRedstoneFurnace(boolean isActive) {
+        super(isActive, Material.iron, FurnaceType.redstoneFurnace);
     }
 
 
@@ -80,7 +81,7 @@ public class BlockRedstoneFurnace extends BlockFurnaceFT
             TileEntityRedstoneFurnace furnace = (TileEntityRedstoneFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.getInstance(), GuiIds.redstoneFurnace.ordinal(), world, x, y, z);
+                player.openGui(new FergoTools(), GuiIds.redstoneFurnace.ordinal(), world, x, y, z);
             }
             return true;
         }

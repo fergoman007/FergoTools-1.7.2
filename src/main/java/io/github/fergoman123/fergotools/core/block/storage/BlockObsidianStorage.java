@@ -18,8 +18,8 @@ import java.util.Random;
 public class BlockObsidianStorage extends BlockFT
 {
 
-    public BlockObsidianStorage(Material material, String blockName) {
-        super(material, blockName);
+    public BlockObsidianStorage(String blockName) {
+        super(Material.iron, blockName);
     }
 
     @Override

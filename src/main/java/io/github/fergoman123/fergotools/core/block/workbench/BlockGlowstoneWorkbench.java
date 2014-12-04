@@ -48,7 +48,7 @@ public final class BlockGlowstoneWorkbench extends BlockWorkbenchFT
         }
         else if (!player.isSneaking())
         {
-            player.openGui(FergoTools.getInstance(), GuiIds.glowstoneWorkBench.ordinal(), world, x, y, z);
+            player.openGui(new FergoTools(), GuiIds.glowstoneWorkBench.ordinal(), world, x, y, z);
             return true;
         }
         else

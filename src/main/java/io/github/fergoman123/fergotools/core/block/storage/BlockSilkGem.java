@@ -18,8 +18,8 @@ import java.util.Random;
 public class BlockSilkGem extends BlockFT
 {
 
-    public BlockSilkGem(Material material, String blockName) {
-        super(material, blockName);
+    public BlockSilkGem(String blockName) {
+        super(Material.iron, blockName);
     }
 
     @Override

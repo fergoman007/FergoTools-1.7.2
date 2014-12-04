@@ -42,8 +42,8 @@ public final class ItemGlowstoneBow extends ItemBowFT {
     @SideOnly(CLIENT)
     private IIcon[] texture;
 
-    public ItemGlowstoneBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemGlowstoneBow(String itemName) {
+        super(Materials.Tools.glowstone.getMaxUses(), itemName);
     }
 
 

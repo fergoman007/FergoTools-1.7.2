@@ -42,8 +42,8 @@ public final class ItemObsidianBow extends ItemBowFT {
     @SideOnly(CLIENT)
     private IIcon[] texture;
 
-    public ItemObsidianBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemObsidianBow(String itemName) {
+        super(Materials.Tools.obsidian.getMaxUses(), itemName);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

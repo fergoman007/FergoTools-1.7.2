@@ -42,8 +42,8 @@ public final class ItemAdamantiumBow extends ItemBowFT {
     @SideOnly(CLIENT)
     private IIcon[] texture;
 
-    public ItemAdamantiumBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemAdamantiumBow(String itemName) {
+        super(Materials.Tools.adamantium.getMaxUses(), itemName);
     }
 
 

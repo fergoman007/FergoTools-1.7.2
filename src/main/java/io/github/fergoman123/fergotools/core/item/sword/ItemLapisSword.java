@@ -14,8 +14,8 @@ import io.github.fergoman123.fergotools.util.tool.ItemSwordFT;
 public final class ItemLapisSword extends ItemSwordFT
 {
 
-    public ItemLapisSword(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemLapisSword(String itemName) {
+        super(materials.lapis, itemName);
     }
 
 }

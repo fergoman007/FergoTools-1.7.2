@@ -16,6 +16,7 @@ import io.github.fergoman123.fergotools.reference.names.ArmorTooltipLocale;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.PotionList;
 import io.github.fergoman123.fergotools.util.base.ItemArmorFT;
+import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.entity.Entity;
@@ -28,8 +29,8 @@ import java.util.List;
 public final class ItemArmorAdamantium extends ItemArmorFT
 {
 
-    public ItemArmorAdamantium(String armorName, ArmorMaterial material, ArmorType type) {
-        super(armorName, material, type);
+    public ItemArmorAdamantium(ArmorType type) {
+        super(ArmorNames.adamantium, Materials.Armor.adamantiumArmor, type);
     }
 
     public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)

@@ -17,8 +17,8 @@ import java.util.Random;
 
 public class BlockBronze extends BlockFT
 {
-    public BlockBronze(Material material, String blockName) {
-        super(material, blockName);
+    public BlockBronze(String blockName) {
+        super(Material.iron, blockName);
     }
 
     @Override

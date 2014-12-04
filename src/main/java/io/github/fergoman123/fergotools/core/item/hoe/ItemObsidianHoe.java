@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemHoeFT;
 public final class ItemObsidianHoe extends ItemHoeFT
 {
 
-    public ItemObsidianHoe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemObsidianHoe(String itemName) {
+        super(materials.obsidian, itemName);
     }
 }

@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemHoeFT;
 public final class ItemBronzeHoe extends ItemHoeFT
 {
 
-    public ItemBronzeHoe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemBronzeHoe(String itemName) {
+        super(materials.bronze, itemName);
     }
 }

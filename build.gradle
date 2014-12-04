@@ -38,6 +38,7 @@ task("incrementBuildNumber")
             }
         }
 
+apply plugin: 'scala'
 apply plugin: 'forge'
 
 ext.configFile = file "build.properties"

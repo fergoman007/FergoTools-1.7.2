@@ -11,6 +11,7 @@ package io.github.fergoman123.fergotools.util.tool;
 
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import io.github.fergoman123.fergotools.reference.names.Locale;
+ import io.github.fergoman123.fergotools.util.item.Materials;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import net.minecraft.client.renderer.texture.IIconRegister;
  import net.minecraft.entity.player.EntityPlayer;
@@ -26,14 +27,14 @@ package io.github.fergoman123.fergotools.util.tool;
       * this is the constructor for the base
       * shovel for FergoTools
       * @param material the tool material of the shovel
-      * @param maxUses the durability of the shovel
       * @param itemName the name of the shovel
       */
-    public ItemShovelFT(Item.ToolMaterial material, int maxUses, String itemName) {
+
+     public static final Materials.Tools materials = new Materials.Tools();
+    public ItemShovelFT(Item.ToolMaterial material, String itemName) {
         super(material);
         this.setUnlocalizedName(itemName);
-        this.setMaxStackSize(1);
-        this.setMaxDamage(maxUses);
+        this.setMaxDamage(material.getMaxUses());
         this.setCreativeTab(Tabs.tabFergoTools);
         this.setTextureName(String.format("%s%s", NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }

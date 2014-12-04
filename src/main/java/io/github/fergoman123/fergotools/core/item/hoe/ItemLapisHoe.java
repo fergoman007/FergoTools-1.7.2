@@ -9,12 +9,13 @@
 
 package io.github.fergoman123.fergotools.core.item.hoe;
 
+import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergotools.util.tool.ItemHoeFT;
 
 public final class ItemLapisHoe extends ItemHoeFT
 {
 
-    public ItemLapisHoe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemLapisHoe(String itemName) {
+        super(Materials.Tools.lapis, itemName);
     }
 }

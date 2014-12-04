@@ -18,8 +18,8 @@ import java.util.Random;
 public class BlockExperience extends BlockFT
 {
 
-    public BlockExperience(Material material, String blockName) {
-        super(material, blockName);
+    public BlockExperience(String blockName) {
+        super(Material.iron, blockName);
     }
 
     @Override

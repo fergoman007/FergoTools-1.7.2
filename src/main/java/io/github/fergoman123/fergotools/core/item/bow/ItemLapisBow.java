@@ -42,8 +42,8 @@ public final class ItemLapisBow extends ItemBowFT {
     @SideOnly(CLIENT)
     private IIcon[] texture;
 
-    public ItemLapisBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemLapisBow(String itemName) {
+        super(Materials.Tools.lapis.getMaxUses(), itemName);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

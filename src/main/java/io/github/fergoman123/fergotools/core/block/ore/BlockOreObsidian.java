@@ -18,8 +18,8 @@ import java.util.Random;
 public class BlockOreObsidian extends BlockFT
 {
 
-    public BlockOreObsidian(Material material, String blockName) {
-        super(material, blockName);
+    public BlockOreObsidian(String blockName) {
+        super(Material.rock, blockName);
     }
 
     public Item getItemDropped(int metadata, Random random, int fortune)

@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemShovelFT;
 public final class ItemObsidianShovel extends ItemShovelFT
 {
 
-    public ItemObsidianShovel(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemObsidianShovel(String itemName) {
+        super(materials.obsidian, itemName);
     }
 }

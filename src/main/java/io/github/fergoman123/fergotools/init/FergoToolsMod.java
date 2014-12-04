@@ -16,11 +16,14 @@ import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
 import io.github.fergoman123.fergotools.core.FTContent;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
+import io.github.fergoman123.fergotools.event.OnLivingUpdateEvent;
+import io.github.fergoman123.fergotools.event.OnPlayerLoggedInEvent;
 import io.github.fergoman123.fergotools.handler.RegHandler;
 import io.github.fergoman123.fergotools.helper.LogHelper;
 import io.github.fergoman123.fergotools.reference.MetadataFT;
 import io.github.fergoman123.fergotools.reference.strings.Messages;
 import io.github.fergoman123.fergotools.util.item.Materials;
+import net.minecraftforge.common.MinecraftForge;
 
 public class FergoToolsMod
 {
@@ -33,8 +36,6 @@ public class FergoToolsMod
         Tabs.init();
         Materials.init();
         FTContent.init();
-        FTContent.registerItems();
-        FTContent.registerBlocks();
 
     }
 

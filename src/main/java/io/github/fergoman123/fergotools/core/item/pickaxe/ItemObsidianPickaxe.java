@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemPickaxeFT;
 public final class ItemObsidianPickaxe extends ItemPickaxeFT
 {
 
-    public ItemObsidianPickaxe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemObsidianPickaxe(String itemName) {
+        super(materials.obsidian, itemName);
     }
 }

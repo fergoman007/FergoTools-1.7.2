@@ -13,7 +13,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemHoeFT;
 
 public final class ItemAdamantiumHoe extends ItemHoeFT
 {
-    public ItemAdamantiumHoe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemAdamantiumHoe(String itemName) {
+        super(materials.adamantium, itemName);
     }
 }

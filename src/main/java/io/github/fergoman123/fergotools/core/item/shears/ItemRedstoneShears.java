@@ -9,12 +9,13 @@
 
 package io.github.fergoman123.fergotools.core.item.shears;
 
+import io.github.fergoman123.fergotools.util.item.Materials;
 import io.github.fergoman123.fergotools.util.tool.ItemShearsFT;
 
 public final class ItemRedstoneShears extends ItemShearsFT
 {
 
-    public ItemRedstoneShears(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemRedstoneShears(String itemName) {
+        super(Materials.Tools.redstone.getMaxUses(), itemName);
     }
 }

@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemPickaxeFT;
 public final class ItemEmeraldPickaxe extends ItemPickaxeFT
 {
 
-    public ItemEmeraldPickaxe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemEmeraldPickaxe(String itemName) {
+        super(materials.emerald, itemName);
     }
 }

@@ -42,8 +42,8 @@ public final class ItemEmeraldBow extends ItemBowFT {
     @SideOnly(CLIENT)
     private IIcon[] texture;
 
-    public ItemEmeraldBow(int maxUses, String itemName) {
-        super(maxUses, itemName);
+    public ItemEmeraldBow(String itemName) {
+        super(Materials.Tools.emerald.getMaxUses(), itemName);
     }
 
     public void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4)

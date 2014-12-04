@@ -18,8 +18,8 @@ import java.util.Random;
 public class BlockOreBronze extends BlockFT
 {
 
-    public BlockOreBronze(Material material, String blockName) {
-        super(material, blockName);
+    public BlockOreBronze(String blockName) {
+        super(Material.rock, blockName);
     }
 
     @Override

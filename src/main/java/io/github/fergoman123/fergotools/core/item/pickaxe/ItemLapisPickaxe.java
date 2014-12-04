@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemPickaxeFT;
 public final class ItemLapisPickaxe extends ItemPickaxeFT
 {
 
-    public ItemLapisPickaxe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemLapisPickaxe(String itemName) {
+        super(materials.lapis, itemName);
     }
 }

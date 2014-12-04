@@ -11,6 +11,7 @@ package io.github.fergoman123.fergotools.util.tool;
 
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import io.github.fergoman123.fergotools.reference.names.Locale;
+ import io.github.fergoman123.fergotools.util.item.Materials;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergoutil.item.ITooltipItem;
  import net.minecraft.client.renderer.texture.IIconRegister;
@@ -27,14 +28,14 @@ package io.github.fergoman123.fergotools.util.tool;
      * this is the constructor for the base
      * sword for FergoTools
      * @param material the tool material of the sword
-     * @param maxUses the durability of the sword
      * @param itemName the name of the sword
      */
-    public ItemSwordFT(Item.ToolMaterial material, int maxUses, String itemName) {
+    public static final Materials.Tools materials = new Materials.Tools();
+
+    public ItemSwordFT(Item.ToolMaterial material, String itemName) {
         super(material);
         this.setUnlocalizedName(itemName);
-        this.setMaxDamage(maxUses);
-        this.setMaxStackSize(1);
+        this.setMaxDamage(material.getMaxUses());
         this.setCreativeTab(Tabs.tabFergoTools);
     }
 

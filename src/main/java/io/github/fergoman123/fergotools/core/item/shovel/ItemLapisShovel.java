@@ -14,8 +14,8 @@ import io.github.fergoman123.fergotools.util.tool.ItemShovelFT;
 public final class ItemLapisShovel extends ItemShovelFT
 {
 
-    public ItemLapisShovel(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemLapisShovel(String itemName) {
+        super(materials.lapis, itemName);
     }
 
 }

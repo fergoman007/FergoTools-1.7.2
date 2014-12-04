@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemPickaxeFT;
 public final class ItemBronzePickaxe extends ItemPickaxeFT
 {
 
-    public ItemBronzePickaxe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemBronzePickaxe(String itemName) {
+        super(materials.bronze, itemName);
     }
 }

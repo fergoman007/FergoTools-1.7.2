@@ -31,10 +31,10 @@ public class FergoTools
     public static FergoTools getInstance() {
         return instance;
     }
-    
+
     @SidedProxy(clientSide = Reference.clientProxyClass, serverSide = Reference.serverProxyClass)
     public static IProxy proxy;
-    
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent evt)
     {
@@ -46,7 +46,7 @@ public class FergoTools
     {
         FergoToolsMod.load(evt);
     }
-	
+
 	@EventHandler
 	public void modsLoaded(FMLPostInitializationEvent evt)
     {

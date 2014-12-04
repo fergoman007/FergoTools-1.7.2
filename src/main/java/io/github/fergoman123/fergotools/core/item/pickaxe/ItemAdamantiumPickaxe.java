@@ -13,7 +13,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemPickaxeFT;
 
 public final class ItemAdamantiumPickaxe extends ItemPickaxeFT
 {
-    public ItemAdamantiumPickaxe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemAdamantiumPickaxe(String itemName) {
+        super(materials.adamantium, itemName);
     }
 }

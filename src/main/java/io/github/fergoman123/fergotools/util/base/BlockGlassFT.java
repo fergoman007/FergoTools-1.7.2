@@ -26,7 +26,7 @@ public abstract class BlockGlassFT extends BlockBreakable
      */
     public BlockGlassFT(String blockName)
     {
-        super("glass", Material.glass, false);
+        super("glass", Material.rock, false);
         setBlockName(blockName);
         setCreativeTab(Tabs.tabFergoBlocks);
         setBlockUnbreakable();

@@ -18,6 +18,7 @@ import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -37,9 +38,9 @@ import java.util.Random;
 
 public class BlockGlowstoneFurnace extends BlockFurnaceFT
 {
-    public BlockGlowstoneFurnace(boolean isActive, Material material, String furnaceType)
+    public BlockGlowstoneFurnace(boolean isActive)
     {
-        super(isActive, material, furnaceType);
+        super(isActive, Material.iron, FurnaceType.glowstoneFurnace);
         this.isActive = isActive;
     }
 

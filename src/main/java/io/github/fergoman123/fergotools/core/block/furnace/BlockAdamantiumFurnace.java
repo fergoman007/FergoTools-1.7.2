@@ -18,6 +18,7 @@ import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -37,8 +38,8 @@ import java.util.Random;
 
 public class BlockAdamantiumFurnace extends BlockFurnaceFT
 {
-    public BlockAdamantiumFurnace(boolean isActive, Material material, String furnaceType) {
-        super(isActive, material, furnaceType);
+    public BlockAdamantiumFurnace(boolean isActive) {
+        super(isActive, Material.iron, FurnaceType.adamantiumFurnace);
         this.isActive = isActive;
     }
 
@@ -79,7 +80,7 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT
             TileEntityAdamantiumFurnace furnace = (TileEntityAdamantiumFurnace)world.getTileEntity(x, y, z);
             if (furnace != null)
             {
-                player.openGui(FergoTools.getInstance(), GuiIds.adamantiumFurnace.ordinal(), world, x, y, z);
+                player.openGui(new FergoTools(), GuiIds.adamantiumFurnace.ordinal(), world, x, y, z);
             }
             return true;
         }

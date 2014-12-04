@@ -49,7 +49,7 @@ public final class BlockSilkWorkbench extends BlockWorkbenchFT
         }
         else if (!player.isSneaking())
         {
-            player.openGui(FergoTools.getInstance(), GuiIds.silkWorkbench.ordinal(), world, x, y, z);
+            player.openGui(new FergoTools(), GuiIds.silkWorkbench.ordinal(), world, x, y, z);
             return true;
         }
         else

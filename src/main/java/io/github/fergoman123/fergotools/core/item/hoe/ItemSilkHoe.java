@@ -13,7 +13,7 @@ import io.github.fergoman123.fergotools.util.tool.ItemHoeFT;
 
 public final class ItemSilkHoe extends ItemHoeFT
 {
-    public ItemSilkHoe(ToolMaterial material, int maxUses, String itemName) {
-        super(material, maxUses, itemName);
+    public ItemSilkHoe(String itemName) {
+        super(materials.silk, itemName);
     }
 }

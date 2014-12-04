@@ -49,7 +49,7 @@ public final class BlockEmeraldWorkbench extends BlockWorkbenchFT
         }
         else if (!player.isSneaking())
         {
-            player.openGui(FergoTools.getInstance(), GuiIds.emeraldWorkbench.ordinal(), world, x, y, z);
+            player.openGui(new FergoTools(), GuiIds.emeraldWorkbench.ordinal(), world, x, y, z);
             return true;
         }
         else
