@@ -37,6 +37,7 @@ import java.util.Random;
 
 public class BlockLapisFurnace extends BlockFurnaceFT
 {
+
     public BlockLapisFurnace(boolean isActive) {
         super(isActive, Material.iron, FurnaceType.lapisFurnace);
         this.isActive = isActive;

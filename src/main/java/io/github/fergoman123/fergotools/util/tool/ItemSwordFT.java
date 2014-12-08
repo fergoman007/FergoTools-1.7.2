@@ -14,7 +14,9 @@ package io.github.fergoman123.fergotools.util.tool;
  import io.github.fergoman123.fergotools.util.item.Materials;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergoutil.item.ITooltipItem;
+ import io.github.fergoman123.fergoutil.item.tool.ItemFergoSword;
  import net.minecraft.client.renderer.texture.IIconRegister;
+ import net.minecraft.creativetab.CreativeTabs;
  import net.minecraft.entity.player.EntityPlayer;
  import net.minecraft.item.Item;
  import net.minecraft.item.ItemStack;
@@ -22,47 +24,9 @@ package io.github.fergoman123.fergotools.util.tool;
 
  import java.util.List;
 
- public abstract class ItemSwordFT extends ItemSword implements ITooltipItem
+ public class ItemSwordFT extends ItemFergoSword
 {
-    /**
-     * this is the constructor for the base
-     * sword for FergoTools
-     * @param material the tool material of the sword
-     * @param itemName the name of the sword
-     */
-    public static final Materials.Tools materials = new Materials.Tools();
-
-    public ItemSwordFT(Item.ToolMaterial material, String itemName) {
-        super(material);
-        this.setUnlocalizedName(itemName);
-        this.setMaxDamage(material.getMaxUses());
-        this.setCreativeTab(Tabs.tabFergoTools);
+    public ItemSwordFT(ToolMaterial material, String itemName) {
+        super(material, 0, itemName, Tabs.tabFergoTools);
     }
-
-    public String getUnlocalizedName()
-    {
-        return String.format("item.%s%s", NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-    }
-
-    public String getUnlocalizedName(ItemStack stack)
-    {
-        return String.format("item.%s%s", NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
-    }
-
-    public void registerIcons(IIconRegister register)
-    {
-        itemIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
-    }
-
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
-        list.add(getTranslatedText(Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
-    }
-
-    public String getTranslatedText(String translatedText)
-    {
-        String string = NameHelper.translateToLocal(translatedText);
-        return string;
-    }
-
 }

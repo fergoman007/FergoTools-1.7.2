@@ -538,10 +538,16 @@ public class FTContent
         blockFergoGlass = new BlockFergoGlass(BlockNames.blockFergoGlass);
     }
 
+    public static void mainRegistry()
+    {
+        registerItems();
+        registerBlocks();
+    }
+
     /**
      * this registers all of the items
      */
-    public static void registerItems()
+    private static void registerItems()
     {
         registerItem(quartzPickaxe, ItemNames.quartzPickaxe);
         registerItem(quartzShovel, ItemNames.quartzShovel);
@@ -700,7 +706,7 @@ public class FTContent
     /**
      * this registers all of the blocks
      */
-    public static void registerBlocks()
+    private static void registerBlocks()
     {
         registerBlock(oreExperience, ItemBlockOreExperience.class, BlockNames.oreExperience);
         registerBlock(oreObsidian, ItemBlockOreObsidian.class, BlockNames.oreObsidian);

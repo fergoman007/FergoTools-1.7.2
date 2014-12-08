@@ -9,10 +9,14 @@
   package io.github.fergoman123.fergotools.util.base;
 
 
-import io.github.fergoman123.fergoutil.tileentity.TileEntityFergoFurnace;
+ import net.minecraft.inventory.ISidedInventory;
+ import net.minecraft.tileentity.TileEntity;
 
-/**
+ /**
  * this class serves as a pass-through for a furnace tile entity
  * @author fergoman123
  */
-public abstract class TileEntityFurnaceFT extends TileEntityFergoFurnace {}
+public abstract class TileEntityFurnaceFT extends TileEntity implements ISidedInventory
+ {
+     public String customName;
+ }

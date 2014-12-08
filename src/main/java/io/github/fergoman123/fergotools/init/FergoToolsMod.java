@@ -42,6 +42,7 @@ public class FergoToolsMod
     public static void load(FMLInitializationEvent evt)
     {
         LogHelper.info(Messages.initMessage);
+        FTContent.mainRegistry();
         FTContent.registerTileEntities();
         RegHandler.init();
         RegHandler.registerOres();
