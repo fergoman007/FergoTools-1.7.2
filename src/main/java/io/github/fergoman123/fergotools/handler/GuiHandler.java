@@ -101,7 +101,7 @@ public class GuiHandler  implements IGuiHandler
         {
             return new ContainerCoalWorkbench(inventory, world, x, y, z);
         }
-        else if (id == GuiIds.glowstoneWorkBench.ordinal())
+        else if (id == GuiIds.glowstoneWorkbench.ordinal())
         {
             return new ContainerGlowstoneWorkbench(inventory, world,x, y, z);
         }
@@ -199,7 +199,7 @@ public class GuiHandler  implements IGuiHandler
         {
             return new GuiCoalWorkbench(inventory, world, x, y, z);
         }
-        else if (id == GuiIds.glowstoneWorkBench.ordinal())
+        else if (id == GuiIds.glowstoneWorkbench.ordinal())
         {
             return new GuiGlowstoneWorkbench(inventory, world,x, y, z);
         }

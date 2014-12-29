@@ -9,40 +9,52 @@
 
 package io.github.fergoman123.fergotools.util.base;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import io.github.fergoman123.fergotools.reference.names.Locale;
-import io.github.fergoman123.fergoutil.helper.NameHelper;
-import io.github.fergoman123.fergotools.creativetab.Tabs;
-import io.github.fergoman123.fergotools.reference.Reference;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemBow;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
+ import cpw.mods.fml.relauncher.Side;
+ import cpw.mods.fml.relauncher.SideOnly;
+ import io.github.fergoman123.fergotools.creativetab.Tabs;
+ import io.github.fergoman123.fergotools.helper.ItemHelper;
+ import io.github.fergoman123.fergotools.reference.Reference;
+ import io.github.fergoman123.fergoutil.helper.NameHelper;
+ import io.github.fergoman123.fergoutil.item.ItemBowFergo;
+ import net.minecraft.client.renderer.texture.IIconRegister;
+ import net.minecraft.creativetab.CreativeTabs;
+ import net.minecraft.enchantment.Enchantment;
+ import net.minecraft.enchantment.EnchantmentHelper;
+ import net.minecraft.entity.player.EntityPlayer;
+ import net.minecraft.entity.projectile.EntityArrow;
+ import net.minecraft.init.Items;
+ import net.minecraft.item.EnumAction;
+ import net.minecraft.item.Item;
+ import net.minecraft.item.ItemBow;
+ import net.minecraft.item.ItemStack;
+ import net.minecraft.util.IIcon;
+ import net.minecraft.world.World;
+ import net.minecraftforge.common.MinecraftForge;
+ import net.minecraftforge.event.entity.player.ArrowLooseEvent;
+ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 
-import java.util.List;
-
-public abstract class ItemBowFT extends ItemBow
+ public class ItemBowFT extends ItemBow
 {
+    public static final String[] pullArray = new String[]{"_0", "_1", "_2", "_3"};
 
     @SideOnly(Side.CLIENT)
     public IIcon[] textures;
 
-    /**
-     * main constuctor
-     * @param maxUses the durability
-     * @param itemName the item's name
-     */
-    public ItemBowFT(int maxUses, String itemName)
+    public String textureName;
+    public Item repairItem;
+
+    public ItemBowFT(ToolMaterial material, String textureName, Item repairItem)
     {
         super();
-        this.setMaxDamage(maxUses);
-        this.setUnlocalizedName(itemName);
+        this.textureName = textureName;
+        this.repairItem = repairItem;
+        this.setMaxDamage(material.getMaxUses());
         this.setMaxStackSize(1);
-        this.setCreativeTab(Tabs.tabFergoBows);
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem) {
+        return repairItem.isItemEqual(new ItemStack(this.repairItem)) || super.getIsRepairable(itemToRepair, repairItem);
     }
 
     public String getUnlocalizedName()
@@ -55,22 +67,32 @@ public abstract class ItemBowFT extends ItemBow
         return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
-    public abstract void onPlayerStoppedUsing(ItemStack stack, World world, EntityPlayer player, int par4);
+    public void registerIcons(IIconRegister register)
+    {
+        this.textures = new IIcon[pullArray.length];
+        for (int i = 0; i < pullArray.length; i++)
+        {
+            this.textures[i] = register.registerIcon(String.format
+                    ("%sbow/%s/bow%s%s", Reference.textureLoc, this.textureName.toLowerCase(), this.textureName, pullArray[i]));
+        }
+    }
 
-    public abstract ItemStack onEaten(ItemStack stack, World world, EntityPlayer player);
-
-    public abstract EnumAction getItemUseAction(ItemStack stack);
-
-    public abstract ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player);
-
-    public abstract int getItemEnchantability();
-
-    public abstract void registerIcons(IIconRegister register);
-
-    public abstract IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining);
-
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
-        list.add(NameHelper.translateToLocal(Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
+    public IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining)
+    {
+        if(player.getItemInUse() == null) return this.itemIcon;
+        int pulling = stack.getMaxItemUseDuration() - useRemaining;
+        if(pulling >= 18)
+        {
+            return textures[2];
+        }
+        else if(pulling > 13)
+        {
+            return textures[1];
+        }
+        else if(pulling > 0)
+        {
+            return textures[0];
+        }
+        return this.itemIcon;
     }
 }

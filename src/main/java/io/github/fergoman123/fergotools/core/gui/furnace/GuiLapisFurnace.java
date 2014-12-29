@@ -11,8 +11,8 @@ package io.github.fergoman123.fergotools.core.gui.furnace;
 
 import io.github.fergoman123.fergotools.core.gui.furnace.container.ContainerLapisFurnace;
 import io.github.fergoman123.fergotools.core.tileentity.TileEntityLapisFurnace;
-import io.github.fergoman123.fergotools.reference.Ints;
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.ints.ColorInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.GuiFT;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
@@ -31,8 +31,8 @@ public class GuiLapisFurnace extends GuiFT
     @Override
     public void drawGuiContainerForegroundLayer(int par1, int par2) {
         String s = furnace.hasCustomInventoryName() ? this.furnace.getInventoryName() : GuiHelper.format(this.furnace.getInventoryName());
-        this.fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, Ints.Colors.renderColorInventory);
-        this.fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 126 + 2, Ints.Colors.renderColorInventory);
+        this.fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, ColorInts.renderColorInventory);
+        this.fontRendererObj.drawString(GuiHelper.format(Locale.containerInventory), 8, ySize - 126 + 2, ColorInts.renderColorInventory);
     }
 
     @Override

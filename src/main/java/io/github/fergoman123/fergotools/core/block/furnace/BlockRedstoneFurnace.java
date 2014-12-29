@@ -12,13 +12,12 @@ package io.github.fergoman123.fergotools.core.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.core.tileentity.TileEntityRedstoneFurnace;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergoutil.helper.BlockHelper;
 import net.minecraft.block.Block;
@@ -40,7 +39,7 @@ import java.util.Random;
 public class BlockRedstoneFurnace extends BlockFurnaceFT
 {
     public BlockRedstoneFurnace(boolean isActive) {
-        super(isActive, Material.iron, FurnaceType.redstoneFurnace);
+        super(isActive, Material.iron);
     }
 
 
@@ -65,9 +64,9 @@ public class BlockRedstoneFurnace extends BlockFurnaceFT
 
     public void registerBlockIcons(IIconRegister register)
     {
-        this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockRedstoneCrystal);
+        this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockGemRedstone);
         this.icons[0] = register.registerIcon(Reference.textureLoc + (this.isActive ? BlockNames.redstoneFurnaceActive : BlockNames.redstoneFurnaceIdle));
-        this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockRedstoneCrystal);
+        this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockGemRedstone);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -91,7 +90,7 @@ public class BlockRedstoneFurnace extends BlockFurnaceFT
         }
     }
 
-    public static void updateRedstoneFurnaceBlockState(boolean active, World world, int x, int y, int z)
+    public static void updateBlockState(boolean active, World world, int x, int y, int z)
     {
         int l = world.getBlockMetadata(x, y, z);
         TileEntity tile = world.getTileEntity(x, y, z);
@@ -203,6 +202,9 @@ public class BlockRedstoneFurnace extends BlockFurnaceFT
 
     public Item getItem(World world, int x, int y, int z)
     {
-        return BlockHelper.getItemFromBlock(FTContent.redstoneFurnaceIdle);
+        return BlockHelper.getItemFromBlock(
+
+
+                FTContent.redstoneFurnaceIdle);
     }
 }

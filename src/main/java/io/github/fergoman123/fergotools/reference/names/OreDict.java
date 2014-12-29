@@ -19,22 +19,22 @@ public class OreDict {
 
     public static final String oreExperience = oreDict + BlockNames.oreExperience;
     public static final String oreObsidian = oreDict + BlockNames.oreObsidian;
-    public static final String oreEmeraldCrystal = oreDict + BlockNames.oreEmeraldCrystal;
-    public static final String oreLapisCrystal = oreDict + BlockNames.oreLapisCrystal;
+    public static final String oreEmeraldCrystal = oreDict + BlockNames.oreGemEmerald;
+    public static final String oreLapisCrystal = oreDict + BlockNames.oreGemLapis;
     public static final String oreBronze = oreDict + BlockNames.oreBronze;
     public static final String oreAdamantium = oreDict + BlockNames.oreAdamantium;
-    public static final String oreCrystalRed = oreDict + BlockNames.oreCrystalRed;
+    public static final String oreCrystalRed = oreDict + BlockNames.oreGemRedstone;
 
     public static final String blockExperience = oreDict + BlockNames.blockExperience;
     public static final String blockObsidian = oreDict + BlockNames.blockObsidian;
-    public static final String blockEmeraldCrystal = oreDict + BlockNames.blockEmeraldCrystal;
-    public static final String blockLapisCrystal = oreDict + BlockNames.blockLapisCrystal;
+    public static final String blockEmeraldCrystal = oreDict + BlockNames.blockGemEmerald;
+    public static final String blockLapisCrystal = oreDict + BlockNames.blockGemLapis;
     public static final String blockBronze = oreDict + BlockNames.blockBronze;
     public static final String blockCoal = oreDict + BlockNames.blockCoal;
     public static final String blockGlowstone = oreDict + BlockNames.blockGlowstone;
     public static final String blockAdamantium = oreDict + BlockNames.blockAdamantium;
-    public static final String blockSilkGem = oreDict + BlockNames.blockSilkGem;
-    public static final String blockRedstoneCrystal = oreDict + BlockNames.blockRedstoneCrystal;
+    public static final String blockSilkGem = oreDict + BlockNames.blockGemSilk;
+    public static final String blockRedstoneCrystal = oreDict + BlockNames.blockGemRedstone;
 
     public static final String ingotObsidian = oreDict + ItemNames.ingotObsidian;
     public static final String ingotBronze = oreDict + ItemNames.ingotBronze;

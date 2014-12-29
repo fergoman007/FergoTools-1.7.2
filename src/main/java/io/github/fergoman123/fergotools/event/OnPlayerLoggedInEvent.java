@@ -11,7 +11,7 @@ package io.github.fergoman123.fergotools.event;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
-import io.github.fergoman123.fergotools.helper.LogHelper;
+import io.github.fergoman123.fergotools.FergoTools;
 
 public class OnPlayerLoggedInEvent
 {
@@ -20,7 +20,7 @@ public class OnPlayerLoggedInEvent
     @SubscribeEvent
     public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent evt)
     {
-        LogHelper.info(evt.player.getDisplayName() + " has Logged In!!");
-        LogHelper.info("FergoTools Successfully Added Into Game");
+        FergoTools.getLogger().info(evt.player.getDisplayName() + " has Logged In!!");
+        FergoTools.getLogger().info("FergoTools Successfully Added Into Game");
     }
 }

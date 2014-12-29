@@ -12,13 +12,12 @@ package io.github.fergoman123.fergotools.core.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.core.tileentity.TileEntityAdamantiumFurnace;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -39,7 +38,7 @@ import java.util.Random;
 public class BlockAdamantiumFurnace extends BlockFurnaceFT
 {
     public BlockAdamantiumFurnace(boolean isActive) {
-        super(isActive, Material.iron, FurnaceType.adamantiumFurnace);
+        super(isActive, Material.iron);
         this.isActive = isActive;
     }
 

@@ -10,6 +10,7 @@
 package io.github.fergoman123.fergotools.core.block.plank;
 
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.BlockPlankFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
@@ -18,8 +19,8 @@ import java.util.Random;
 
 public final class BlockPlankGlowstone extends BlockPlankFT
 {
-    public BlockPlankGlowstone(String blockName) {
-        super(blockName);
+    public BlockPlankGlowstone() {
+        super(Locale.types[5]);
     }
 
     @Override

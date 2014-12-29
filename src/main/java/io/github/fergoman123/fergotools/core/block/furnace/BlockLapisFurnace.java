@@ -12,12 +12,11 @@ package io.github.fergoman123.fergotools.core.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.core.tileentity.TileEntityLapisFurnace;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -39,7 +38,7 @@ public class BlockLapisFurnace extends BlockFurnaceFT
 {
 
     public BlockLapisFurnace(boolean isActive) {
-        super(isActive, Material.iron, FurnaceType.lapisFurnace);
+        super(isActive, Material.iron);
         this.isActive = isActive;
     }
 
@@ -60,9 +59,9 @@ public class BlockLapisFurnace extends BlockFurnaceFT
     }
 
     public void registerBlockIcons(IIconRegister register) {
-        this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockLapisCrystal);
+        this.blockIcon = register.registerIcon(Textures.resourcePrefix + BlockNames.blockGemLapis);
         this.icons[0] = register.registerIcon(Textures.resourcePrefix + (this.isActive ? BlockNames.lapisFurnaceActive : BlockNames.lapisFurnaceIdle));
-        this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockLapisCrystal);
+        this.icons[1] = register.registerIcon(Textures.resourcePrefix + BlockNames.blockGemLapis);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {

@@ -9,98 +9,98 @@
 
 package io.github.fergoman123.fergotools.util.base;
 
+import io.github.fergoman123.fergotools.creativetab.Tabs;
+import io.github.fergoman123.fergotools.helper.ItemHelper;
+import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergoutil.item.ArmorType;
-import io.github.fergoman123.fergotools.creativetab.Tabs;
-import io.github.fergoman123.fergotools.reference.Reference;
+import io.github.fergoman123.fergoutil.item.ItemArmorFergo;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
+import java.util.List;
+
 public abstract class ItemArmorFT extends ItemArmor
 {
+    public Item repairItem;
+    public String texture;
 
-    public static final class ArmorNames
-    {
-        public static final String quartz = "quartz";
-        public static final String obsidian = "obsidian";
-        public static final String emerald = "emerald";
-        public static final String lapis = "lapis";
-        public static final String bronze = "bronze";
-        public static final String coal = "coal";
-        public static final String glowstone = "glowstone";
-        public static final String redstone = "redstone";
-        public static final String adamantium = "adamantium";
-    }
-
-    /**
-     * main armor constructor
-     * @param armorName the base name of the armor
-     * @param material the armor material
-     * @param type the type of armor (0 = Helmet, 1 = Chestplate, 2 = Leggings, 3 = Boots)
-     */
-    public ItemArmorFT(String armorName, ArmorMaterial material, ArmorType type)
+    public ItemArmorFT(ArmorMaterial material, ArmorType type, Item repairItem, String texture)
     {
         super(material, 1, type.ordinal());
-        this.setUnlocalizedName(armorName);
+        this.repairItem = repairItem;
+        this.texture = texture;
         this.setCreativeTab(Tabs.tabFergoArmor);
-        this.setMaxStackSize(1);
-        this.setTextureName(String.format("%s%s%s", Reference.textureLoc, armorName, getArmorTypeName(this.armorType)));
+    }
+
+    public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem)
+    {
+        return repairItem.isItemEqual(new ItemStack(this.repairItem)) || super.getIsRepairable(itemToRepair, repairItem);
     }
 
     public String getUnlocalizedName()
     {
-        return String.format("item.%s%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()), getArmorTypeName(this.armorType));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     public String getUnlocalizedName(ItemStack stack)
     {
-        return String.format("item.%s%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)), getArmorTypeName(stack.getItem()));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
+    }
+
+    @Override
+    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+        if (slot == ArmorType.HELMET.ordinal() || slot == ArmorType.CHEST.ordinal() || slot == ArmorType.BOOTS.ordinal())
+        {
+            return String.format("%stextures/armor/%s/%s_2", Reference.textureLoc, this.texture, this.texture);
+        }
+
+        if (slot == ArmorType.LEGS.ordinal())
+        {
+            return String.format("%stextures/armor/%s/%s_2", Reference.textureLoc, this.texture, this.texture);
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public void registerIcons(IIconRegister register)
     {
-        itemIcon = register.registerIcon(String.format("%s", NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
+        itemIcon = register.registerIcon(String.format
+                ("%s%s/%s/%s", Reference.textureLoc, "armor", this.texture, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
     }
 
-    /**
-     * gets the type of armor base on the armor slot
-     * @param slot the slot
-     * @return the armor type (Helmet, Chestplate, Leggings, Boots)
-     */
-    protected String getArmorTypeName(int slot)
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b)
     {
-        if (slot == 0)
+        if (this.armorType == ArmorType.HELMET.ordinal())
         {
-            return "Helmet";
+            list.add("Reduction Amount :" + this.getArmorMaterial().getDamageReductionAmount(0));
+            list.add(NameHelper.getDurabilityString(stack));
         }
-        else if (slot == 1)
-        {
-            return "Chestplate";
-        }
-        else if (slot == 2)
-        {
-            return "Leggings";
-        }
-        else
-        {
-            return "Boots";
-        }
-    }
 
-    /**
-     * gets the armor type based on item
-     * @param item the item
-     * @return the armor type
-     */
-    protected String getArmorTypeName(Item item)
-    {
-        if (item instanceof ItemArmor)
+        if (this.armorType == ArmorType.CHEST.ordinal())
         {
-            ItemArmor itemArmor = (ItemArmor) item;
-            return getArmorTypeName(itemArmor.armorType);
+            list.add("Reduction Amount :" + this.getArmorMaterial().getDamageReductionAmount(1));
+            list.add(NameHelper.getDurabilityString(stack));
         }
-        return "";
+
+        if (this.armorType == ArmorType.LEGS.ordinal())
+        {
+            list.add("Reduction Amount :" + this.getArmorMaterial().getDamageReductionAmount(2));
+            list.add(NameHelper.getDurabilityString(stack));
+        }
+
+        if (this.armorType == ArmorType.BOOTS.ordinal())
+        {
+            list.add("Reduction Amount :" + this.getArmorMaterial().getDamageReductionAmount(3));
+            list.add(NameHelper.getDurabilityString(stack));
+        }
     }
 }

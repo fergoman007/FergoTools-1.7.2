@@ -13,8 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.core.block.furnace.BlockGlowstoneFurnace;
-import io.github.fergoman123.fergotools.crafting.GlowstoneFurnaceRecipes;
-import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
 import net.minecraft.block.Block;
@@ -22,6 +21,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
@@ -30,7 +30,7 @@ public final class TileEntityGlowstoneFurnace extends TileEntityFurnaceFT {
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.customName : Locale.containerGlowstoneFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerGlowstoneFurnace;
     }
 
     @Override
@@ -56,14 +56,14 @@ public final class TileEntityGlowstoneFurnace extends TileEntityFurnaceFT {
 
         if (compound.hasKey("CustomName", 8))
         {
-            this.customName = compound.getString("CustomName");
+            this.localizedName = compound.getString("CustomName");
         }
     }
 
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int speed)
     {
-        return this.cookTime * speed / Ints.Furnace.glowstoneFurnaceSpeed;
+        return this.cookTime * speed / FurnaceInts.glowstoneFurnaceSpeed;
     }
 
     @SideOnly(Side.CLIENT)
@@ -71,7 +71,7 @@ public final class TileEntityGlowstoneFurnace extends TileEntityFurnaceFT {
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = Ints.Furnace.glowstoneFurnaceSpeed;
+            this.currentItemBurnTime = FurnaceInts.glowstoneFurnaceSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
@@ -115,7 +115,7 @@ public final class TileEntityGlowstoneFurnace extends TileEntityFurnaceFT {
             {
                 ++this.cookTime;
 
-                if (this.cookTime == Ints.Furnace.glowstoneFurnaceSpeed)
+                if (this.cookTime == FurnaceInts.glowstoneFurnaceSpeed)
                 {
                     this.cookTime = 0;
                     this.smeltItem();
@@ -148,7 +148,7 @@ public final class TileEntityGlowstoneFurnace extends TileEntityFurnaceFT {
         }
         else
         {
-            ItemStack stack = GlowstoneFurnaceRecipes.instance().getSmeltingResult(this.slots[0]);
+            ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
             if (stack == null)return false;
             if (this.slots[2] == null)return true;
             if (!this.slots[2].isItemEqual(stack))return false;
@@ -161,7 +161,7 @@ public final class TileEntityGlowstoneFurnace extends TileEntityFurnaceFT {
     {
         if (this.canSmelt())
         {
-            ItemStack stack = GlowstoneFurnaceRecipes.instance().getSmeltingResult(this.slots[0]);
+            ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
 
             if (this.slots[2] == null)
             {

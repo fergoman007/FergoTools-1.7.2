@@ -9,6 +9,7 @@
  package io.github.fergoman123.fergotools.util.base;
 
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.OreDict;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
@@ -19,18 +20,12 @@ import net.minecraft.item.ItemStack;
 
 import java.util.List;
 
-public abstract class ItemStickFT extends Item
+public class ItemStickFT extends Item
 {
-    /**
-     * main constructor
-     * @param itemName the item's name
-     */
-    public ItemStickFT(String itemName)
+    public ItemStickFT()
     {
         super();
-        this.setUnlocalizedName(itemName);
         this.setMaxStackSize(64);
-        this.setNoRepair();
         this.setCreativeTab(Tabs.tabFergoWood);
     }
 
@@ -49,5 +44,12 @@ public abstract class ItemStickFT extends Item
         itemIcon = register.registerIcon(String.format("%s%s%s", Reference.textureLoc, Textures.stickLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
     }
 
-    public abstract void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b);
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b)
+    {
+        for (String i : OreDict.stickWoodArray)
+        {
+            list.add(NameHelper.translateToLocal(i));
+        }
+    }
 }

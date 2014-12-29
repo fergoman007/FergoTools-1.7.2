@@ -10,7 +10,7 @@
 package io.github.fergoman123.fergotools.util.item;
 
 
- import io.github.fergoman123.fergotools.core.FTContent;
+ import io.github.fergoman123.fergotools.api.content.FTContent;
  import io.github.fergoman123.fergoutil.helper.RecipeHelper;
  import net.minecraft.init.Blocks;
  import net.minecraft.init.Items;

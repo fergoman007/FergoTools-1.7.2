@@ -10,92 +10,82 @@
 package io.github.fergoman123.fergotools.core.tileentity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.core.block.furnace.BlockMacerator;
 import io.github.fergoman123.fergotools.crafting.MaceratorRecipes;
-import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
-import io.github.fergoman123.fergotools.reference.strings.Tile;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
+import io.github.fergoman123.fergoutil.util.NBTTags;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.oredict.OreDictionary;
 
 public final class TileEntityMacerator extends TileEntityFurnaceFT {
 
-        public String getInventoryName()
-        {
-            return this.hasCustomInventoryName() ? this.customName : Locale.containerMacerator;
-        }
 
-        @Override
-        public void readFromNBT(NBTTagCompound compound) {
-            super.readFromNBT(compound);
-            NBTTagList list = compound.getTagList(Tile.items, 10);
-            this.slots = new ItemStack[this.getSizeInventory()];
+    @Override
+    public String getInventoryName() {
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerMacerator;
+    }
 
-            for (int i = 0; i < list.tagCount(); ++i)
+    @Override
+    public void readFromNBT(NBTTagCompound compound) {
+        super.readFromNBT(compound);
+        NBTTagList list = compound.getTagList(NBTTags.items, 10);
+        this.slots = new ItemStack[this.getSizeInventory()];
+
+        for (int i = 0; i < list.tagCount(); i++) {
+            NBTTagCompound compound1 = list.getCompoundTagAt(i);
+            byte b0 = compound1.getByte(NBTTags.slot);
+
+            if (b0 >= 0 && b0 < this.slots.length)
             {
-                NBTTagCompound compound1 = list.getCompoundTagAt(i);
-                byte b0 = compound1.getByte(Tile.slot);
-
-                if (b0 >= 0 && b0 < this.slots.length)
-                {
-                    this.slots[b0] = ItemStack.loadItemStackFromNBT(compound1);
-                }
-            }
-
-            this.burnTime = compound.getShort(Tile.burnTime);
-            this.cookTime = compound.getShort(Tile.cookTime);
-            this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
-
-            if (compound.hasKey(Tile.customName, 8))
-            {
-                this.customName = compound.getString(Tile.customName);
+                this.slots[b0] = ItemStack.loadItemStackFromNBT(compound1);
             }
         }
 
-        public int getInventoryStackLimit()
+        this.burnTime = compound.getShort(NBTTags.burnTime);
+        this.cookTime = compound.getShort(NBTTags.cookTime);
+        this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
+
+        if (compound.hasKey(NBTTags.customName, 8))
         {
-            return inventoryStackLimit;
+            this.localizedName = compound.getString(NBTTags.customName);
+        }
+    }
+
+    @Override
+    public int getCookProgressScaled(int speed) {
+        return this.cookTime * speed / FurnaceInts.maceratorSpeed;
+    }
+
+    @Override
+    public int getBurnTimeRemainingScaled(int speed) {
+        if (currentItemBurnTime == 0)
+        {
+            currentItemBurnTime = FurnaceInts.maceratorSpeed;
         }
 
-        @SideOnly(Side.CLIENT)
-        public int getCookProgressScaled(int speed)
+        return burnTime * speed / currentItemBurnTime;
+    }
+
+    @Override
+    public void updateEntity() {
+        boolean flag = this.isBurning();
+        boolean flag1 = false;
+
+        if (this.burnTime > 0)
         {
-            return this.cookTime * speed / Ints.Furnace.maceratorSpeed;
+            --this.burnTime;
         }
 
-        @SideOnly(Side.CLIENT)
-        public int getBurnTimeRemainingScaled(int speed)
+        if (!this.worldObj.isRemote)
         {
-            if (this.currentItemBurnTime == 0)
-            {
-                this.currentItemBurnTime = Ints.Furnace.maceratorSpeed;
-            }
-
-            return this.burnTime * speed / this.currentItemBurnTime;
-        }
-
-        public boolean isBurning(){return this.burnTime > 0;}
-
-        public void updateEntity()
-        {
-            boolean flag = this.burnTime > 0;
-            boolean flag1 = false;
-
-            if (this.burnTime > 0)
-            {
-                --this.burnTime;
-            }
-
-            if (!this.worldObj.isRemote)
+            if (this.burnTime != 0 || this.slots[1] != null && this.slots[0] != null)
             {
                 if (this.burnTime == 0 && this.canSmelt())
                 {
@@ -120,8 +110,7 @@ public final class TileEntityMacerator extends TileEntityFurnaceFT {
                 if (this.isBurning() && this.canSmelt())
                 {
                     ++this.cookTime;
-
-                    if (this.cookTime == Ints.Furnace.maceratorSpeed)
+                    if (this.cookTime == FurnaceInts.maceratorSpeed)
                     {
                         this.cookTime = 0;
                         this.smeltItem();
@@ -132,21 +121,22 @@ public final class TileEntityMacerator extends TileEntityFurnaceFT {
                 {
                     this.cookTime = 0;
                 }
-
-                if (flag != this.burnTime > 0)
-                {
-                    flag1 = true;
-                    BlockMacerator.updateBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-                }
             }
 
-            if (flag1)
+            if (flag != this.burnTime > 0)
             {
-                this.markDirty();
+                flag1 = true;
+                BlockMacerator.updateBlockState(this.isBurning(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
 
-        public boolean isOre(ItemStack stack)
+        if (flag1)
+        {
+            this.markDirty();
+        }
+    }
+
+    public boolean isOre(ItemStack stack)
         {
             String[] ores = OreDictionary.getOreNames();
             for (int i = 0; i < ores.length; i++)
@@ -226,13 +216,15 @@ public final class TileEntityMacerator extends TileEntityFurnaceFT {
             }
         }
 
-        public static boolean isItemFuel(ItemStack stack)
-        {
-            return getItemBurnTime(stack) > 0;
-        }
+    public static boolean isItemFuel(ItemStack stack)
+    {
+        return getItemBurnTime(stack) > 0;
+    }
 
-        @Override
-        public boolean isItemValidForSlot(int slot, ItemStack stack) {
-            return slot == 2 ? false : (slot == 1 ? isItemFuel(stack) : true);
-        }
+    @Override
+    public boolean isItemValidForSlot(int slot, ItemStack stack) {
+        return slot == 2 ? false : (slot == 1 ? isItemFuel(stack) : true);
+    }
+
+
 }

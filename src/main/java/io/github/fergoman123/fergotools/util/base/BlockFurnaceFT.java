@@ -10,26 +10,33 @@
 package io.github.fergoman123.fergotools.util.base;
 
 
+import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public abstract class BlockFurnaceFT extends BlockContainer
 {
     public boolean isActive;
     public static boolean keepInventory;
-    /**
-     * base class for furnace
-     * @param isActive whether or not the furnace is active
-     * @param material the block material
-     * @param furnaceType the name of the furnace
-     */
-    public BlockFurnaceFT(boolean isActive, Material material, String furnaceType) {
+    public final Random rand = new Random();
+    public IIcon[] icons = new IIcon[2];
+
+    public BlockFurnaceFT(boolean isActive, Material material) {
         super(material);
-        this.setBlockName(furnaceType);
+
+        if (!(isActive = false)) {
+            this.setLightLevel(0.9f);
+        } else {
+            this.setCreativeTab(Tabs.tabFergoFurnaces);
+        }
+
         this.setHardness(3.5f);
         this.setResistance(2000f);
         this.isActive = isActive;
@@ -71,6 +78,6 @@ public abstract class BlockFurnaceFT extends BlockContainer
 
     public String getUnlocalizedName()
     {
-        return String.format("tile.%s%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()), NameHelper.getFurnaceType(this.isActive));
+        return String.format("tile.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 }

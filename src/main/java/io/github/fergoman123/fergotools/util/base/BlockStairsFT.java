@@ -20,16 +20,10 @@ import java.util.Random;
 
 public abstract class BlockStairsFT extends BlockStairs
 {
-    /**
-     * the main constuctor
-     * @param extender the block that the stairs gets
-     *                 it's textures from
-     * @param blockName the block's name
-     */
-    public BlockStairsFT(Block extender, String blockName)
+
+    public BlockStairsFT(Block extender)
     {
         super(extender, 0);
-        this.setBlockName(blockName);
         this.setHardness(2.0f);
         this.setLightOpacity(0);
         this.setCreativeTab(Tabs.tabFergoWood);

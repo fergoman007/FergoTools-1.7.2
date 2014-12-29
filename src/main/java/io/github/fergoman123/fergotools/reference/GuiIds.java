@@ -30,9 +30,8 @@ public enum GuiIds
     lapisWorkbench,
     bronzeWorkbench,
     coalWorkbench,
-    glowstoneWorkBench,
+    glowstoneWorkbench,
     adamantiumWorkbench,
     silkWorkbench,
-    redstoneWorkbench,
-    bag
+    redstoneWorkbench
 }

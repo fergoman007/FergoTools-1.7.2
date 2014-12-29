@@ -9,6 +9,7 @@
 
 package io.github.fergoman123.fergotools.util.base;
 
+import io.github.fergoman123.fergotools.core.block.plank.BlockPlankObsidian;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
@@ -21,16 +22,15 @@ import net.minecraft.world.IBlockAccess;
 
 import java.util.Random;
 
-public abstract class BlockPlankFT extends Block
+public class BlockPlankFT extends Block
 {
-    /**
-     * main constructor
-     * @param blockName the block's name
-     */
-    public BlockPlankFT(String blockName)
+
+    public String texture;
+
+    public BlockPlankFT(String texture)
     {
         super(Material.wood);
-        this.setBlockName(blockName);
+        this.texture = texture;
         this.setCreativeTab(Tabs.tabFergoWood);
 
     }
@@ -42,10 +42,8 @@ public abstract class BlockPlankFT extends Block
 
     @Override
     public void registerBlockIcons(IIconRegister register) {
-        blockIcon = register.registerIcon(String.format("%s%s%s", Reference.textureLoc, Textures.woodLoc, NameHelper.getUnwrappedUnlocalizedNameForRegistry(this.getUnlocalizedName())));
+        blockIcon = register.registerIcon(String.format("%splank/%s/%s", Reference.textureLoc, this.texture.toLowerCase(), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
     }
-
-    public abstract Item getItemDropped(int metadata, Random random, int fortune);
 
     @Override
     public boolean isWood(IBlockAccess world, int x, int y, int z) {

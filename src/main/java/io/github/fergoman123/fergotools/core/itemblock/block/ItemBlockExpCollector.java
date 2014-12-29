@@ -9,7 +9,8 @@
 
 package io.github.fergoman123.fergotools.core.itemblock.block;
 
-import io.github.fergoman123.fergotools.core.FTContent;
+
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.util.base.ItemBlockFT;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

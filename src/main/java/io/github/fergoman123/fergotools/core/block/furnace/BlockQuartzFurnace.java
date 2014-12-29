@@ -12,12 +12,11 @@ package io.github.fergoman123.fergotools.core.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.core.tileentity.TileEntityQuartzFurnace;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -39,7 +38,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 {
     public BlockQuartzFurnace(boolean isActive)
     {
-        super(isActive, Material.rock, FurnaceType.quartzFurnace);
+        super(isActive, Material.rock);
         this.isActive = isActive;
     }
 
@@ -81,6 +80,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
             if (furnace != null)
             {
                 player.openGui(new FergoTools(), GuiIds.quartzFurnace.ordinal(), world, x, y, z);
+                FergoTools.getLogger().info("Opened Quartz Furnace");
             }
             return true;
         }

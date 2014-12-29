@@ -10,6 +10,7 @@
 package io.github.fergoman123.fergotools.core.block.log;
 
 import io.github.fergoman123.fergotools.reference.Textures;
+import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.BlockRotatedPillarFT;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
@@ -17,8 +18,8 @@ import net.minecraft.util.IIcon;
 public final class BlockLogRedstone extends BlockRotatedPillarFT
 {
 
-    public BlockLogRedstone(String blockName) {
-        super(blockName);
+    public BlockLogRedstone() {
+        super(Locale.types[8]);
     }
 
     @Override

@@ -13,7 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.core.block.furnace.BlockObsidianFurnace;
-import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
 import net.minecraft.block.Block;
@@ -28,12 +28,7 @@ import net.minecraft.nbt.NBTTagList;
 public final class TileEntityObsidianFurnace extends TileEntityFurnaceFT {
 
     public String getInventoryName() {
-        return this.hasCustomInventoryName() ? this.customName : Locale.containerObsidianFurnace;
-    }
-
-    public void setGuiDisplayName(String displayName)
-    {
-        this.customName = displayName;
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerObsidianFurnace;
     }
 
     @Override
@@ -53,16 +48,16 @@ public final class TileEntityObsidianFurnace extends TileEntityFurnaceFT {
 
         if (compound.hasKey("CustomName", 8))
         {
-            this.customName = compound.getString("CustomName");
+            this.localizedName = compound.getString("CustomName");
         }
     }
 
     @SideOnly(Side.CLIENT)
-    public int getCookProgressScaled(int speed){return this.cookTime * speed / Ints.Furnace.obsidianFurnaceSpeed;}
+    public int getCookProgressScaled(int speed){return this.cookTime * speed / FurnaceInts.obsidianFurnaceSpeed;}
 
     @SideOnly(Side.CLIENT)
     public int getBurnTimeRemainingScaled(int speed){
-        if (this.currentItemBurnTime == 0){this.currentItemBurnTime = Ints.Furnace.obsidianFurnaceSpeed;}
+        if (this.currentItemBurnTime == 0){this.currentItemBurnTime = FurnaceInts.obsidianFurnaceSpeed;}
         return this.burnTime * speed / this.currentItemBurnTime;
     }
 
@@ -85,7 +80,7 @@ public final class TileEntityObsidianFurnace extends TileEntityFurnaceFT {
                     }}}
             if (this.isBurning() && this.canSmelt()){
                 ++this.cookTime;
-                if (this.cookTime == Ints.Furnace.obsidianFurnaceSpeed){
+                if (this.cookTime == FurnaceInts.obsidianFurnaceSpeed){
                     this.cookTime = 0;
                     this.smeltItem();
                     flag1 = true;}}else{this.cookTime = 0;}
@@ -164,5 +159,8 @@ public final class TileEntityObsidianFurnace extends TileEntityFurnaceFT {
         return getItemBurnTime(stack) > 0;
     }
 
-    public boolean isItemValidForSlot(int slot, ItemStack stack) {return slot == 2 ? false : (slot == 1 ? isItemFuel(stack) : true);}
+    public boolean isItemValidForSlot(int slot, ItemStack stack)
+    {
+        return slot == 2 ? false : (slot == 1 ? isItemFuel(stack) : true);
+    }
 }

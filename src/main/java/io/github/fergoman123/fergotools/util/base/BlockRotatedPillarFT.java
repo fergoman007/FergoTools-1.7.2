@@ -20,20 +20,15 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public abstract class BlockRotatedPillarFT extends BlockRotatedPillar
+public class BlockRotatedPillarFT extends BlockRotatedPillar
 {
-    /** the top and side icons */
     public IIcon topIcon, sideIcon;
-
-    /**
-     * main constructor
-     * @param blockName the block's name
-     */
-    public BlockRotatedPillarFT(String blockName)
+    public String type;
+    public BlockRotatedPillarFT(String type)
     {
         super(Material.wood);
         this.setHardness(2.0f);
-        this.setBlockName(blockName);
+        this.type = type;
         this.setStepSound(Block.soundTypeWood);
         this.setCreativeTab(Tabs.tabFergoWood);
     }
@@ -43,9 +38,19 @@ public abstract class BlockRotatedPillarFT extends BlockRotatedPillar
         return String.format("tile.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
-    public abstract IIcon getSideIcon(int meta);
-    public abstract IIcon getTopIcon(int meta);
-    public abstract void registerBlockIcons(IIconRegister register);
+
+    public IIcon getSideIcon(int meta) {
+        return this.sideIcon;
+    }
+
+    public IIcon getTopIcon(int meta) {
+        return this.topIcon;
+    }
+
+    public void registerBlockIcons(IIconRegister register) {
+        this.sideIcon = register.registerIcon(String.format("%slog/%s/%s", Reference.textureLoc, this.type.toLowerCase(), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
+        this.topIcon = register.registerIcon(String.format("%slog/%s/%sTop", Reference.textureLoc, this.type.toLowerCase(), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName())));
+    }
 
     public boolean isWood(IBlockAccess world, int x, int y, int z) {
         return true;

@@ -9,7 +9,8 @@
 
 package io.github.fergoman123.fergotools.core.itemblock.ore;
 
-import io.github.fergoman123.fergotools.core.FTContent;
+
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.reference.names.OreDict;
 import io.github.fergoman123.fergotools.util.base.ItemBlockFT;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
@@ -23,7 +24,7 @@ public final class ItemBlockOreRedstone extends ItemBlockFT
 {
 
     public ItemBlockOreRedstone(Block block) {
-        super(FTContent.oreRedstone);
+        super(FTContent.oreGemRedstone);
     }
 
     @Override

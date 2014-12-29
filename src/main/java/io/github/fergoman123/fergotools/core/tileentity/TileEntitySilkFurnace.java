@@ -13,7 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.core.block.furnace.BlockSilkFurnace;
-import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
 import io.github.fergoman123.fergoutil.helper.BlockHelper;
@@ -28,10 +28,9 @@ import net.minecraft.nbt.NBTTagList;
 
 public final class TileEntitySilkFurnace extends TileEntityFurnaceFT {
 
-
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.customName : Locale.containerSilkFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerSilkFurnace;
     }
 
     @Override
@@ -57,14 +56,14 @@ public final class TileEntitySilkFurnace extends TileEntityFurnaceFT {
 
         if (compound.hasKey("CustomName", 8))
         {
-            this.customName = compound.getString("CustomName");
+            this.localizedName = compound.getString("CustomName");
         }
     }
 
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int speed)
     {
-        return this.cookTime * speed / Ints.Furnace.silkFurnaceSpeed;
+        return this.cookTime * speed / FurnaceInts.silkFurnaceSpeed;
     }
 
     @SideOnly(Side.CLIENT)
@@ -72,13 +71,11 @@ public final class TileEntitySilkFurnace extends TileEntityFurnaceFT {
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = Ints.Furnace.silkFurnaceSpeed;
+            this.currentItemBurnTime = FurnaceInts.silkFurnaceSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
     }
-
-    public boolean isBurning(){return this.burnTime > 0;}
 
     public void updateEntity()
     {
@@ -116,7 +113,7 @@ public final class TileEntitySilkFurnace extends TileEntityFurnaceFT {
             {
                 ++this.cookTime;
 
-                if (this.cookTime == Ints.Furnace.silkFurnaceSpeed)
+                if (this.cookTime == FurnaceInts.silkFurnaceSpeed)
                 {
                     this.cookTime = 0;
                     this.smeltItem();

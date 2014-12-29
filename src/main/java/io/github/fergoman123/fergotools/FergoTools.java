@@ -21,15 +21,24 @@ package io.github.fergoman123.fergotools;
  import io.github.fergoman123.fergotools.reference.Reference;
  import io.github.fergoman123.fergoutil.lib.ModConstants;
  import io.github.fergoman123.fergoutil.proxy.IProxy;
+ import org.apache.logging.log4j.LogManager;
+ import org.apache.logging.log4j.Logger;
 
-@Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dependency, guiFactory = Reference.guiFactoryClass)
+ @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dependency, guiFactory = Reference.guiFactoryClass)
 public class FergoTools
 {
     @Instance(ModInfo.modid)
     private static FergoTools instance;
 
+    private static final Logger logger = LogManager.getLogger(ModInfo.modid);
+
     public static FergoTools getInstance() {
         return instance;
+    }
+
+    public static Logger getLogger()
+    {
+        return logger;
     }
 
     @SidedProxy(clientSide = Reference.clientProxyClass, serverSide = Reference.serverProxyClass)

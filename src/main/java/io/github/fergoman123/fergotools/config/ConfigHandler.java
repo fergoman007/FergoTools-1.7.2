@@ -12,9 +12,9 @@ package io.github.fergoman123.fergotools.config;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergoutil.helper.ConfigHelper;
-import io.github.fergoman123.fergotools.helper.LogHelper;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
@@ -57,6 +57,7 @@ public class ConfigHandler
     {
         if (evt.modID.equalsIgnoreCase(ModInfo.modid))
         {
+            FergoTools.getLogger().info("Loaded Config!");
             loadConfig();
         }
     }

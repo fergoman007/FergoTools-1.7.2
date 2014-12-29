@@ -9,7 +9,8 @@
 
 package io.github.fergoman123.fergotools.core.itemblock.block;
 
-import io.github.fergoman123.fergotools.core.FTContent;
+
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.reference.names.OreDict;
 import io.github.fergoman123.fergotools.util.base.ItemBlockFT;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
@@ -21,7 +22,7 @@ import java.util.List;
 
 public final class ItemBlockSilkGem extends ItemBlockFT {
     public ItemBlockSilkGem(Block block) {
-        super(FTContent.blockSilkGem);
+        super(FTContent.blockGemSilk);
     }
 
     @Override

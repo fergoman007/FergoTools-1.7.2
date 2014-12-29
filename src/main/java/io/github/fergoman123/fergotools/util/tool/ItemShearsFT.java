@@ -12,31 +12,32 @@ package io.github.fergoman123.fergotools.util.tool;
 
  import io.github.fergoman123.fergotools.creativetab.Tabs;
  import io.github.fergoman123.fergotools.reference.Reference;
- import io.github.fergoman123.fergotools.reference.names.Locale;
+ import io.github.fergoman123.fergotools.util.item.TM;
  import io.github.fergoman123.fergoutil.helper.NameHelper;
+ import io.github.fergoman123.fergoutil.item.ItemShearsFergo;
  import net.minecraft.client.renderer.texture.IIconRegister;
+ import net.minecraft.creativetab.CreativeTabs;
  import net.minecraft.entity.player.EntityPlayer;
+ import net.minecraft.item.Item;
  import net.minecraft.item.ItemShears;
  import net.minecraft.item.ItemStack;
 
  import java.util.List;
 
- public abstract class ItemShearsFT extends ItemShears
+ public class ItemShearsFT extends ItemShears
 {
-    /**
-     * this is the constructor for the base
-     * shears for FergoTools
-     * @param maxUses the durability of the shears
-     * @param itemName the name of the shears
-     */
-    public ItemShearsFT(int maxUses, String itemName)
-    {
+    public Item repairItem;
+
+    public ItemShearsFT(ToolMaterial material, Item repairItem) {
         super();
-        this.setUnlocalizedName(itemName);
-        this.setMaxDamage(maxUses);
+        this.repairItem = repairItem;
+        this.setMaxDamage(material.getMaxUses());
         this.setCreativeTab(Tabs.tabFergoShears);
-        this.setMaxStackSize(1);
-        this.setTextureName(String.format("%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack itemToRepair, ItemStack repairItem) {
+        return repairItem.isItemEqual(new ItemStack(this.repairItem)) || super.getIsRepairable(itemToRepair, repairItem);
     }
 
     public String getUnlocalizedName()
@@ -46,22 +47,16 @@ package io.github.fergoman123.fergotools.util.tool;
 
     public String getUnlocalizedName(ItemStack stack)
     {
-        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
-    @Override
-    public void registerIcons(IIconRegister register) {
-        itemIcon = register.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+    public void registerIcons(IIconRegister register)
+    {
+        itemIcon = register.registerIcon(String.format("%stool/shears/%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
     }
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean b) {
-        list.add(getTranslatedText(Locale.durabilityToolTip) + (stack.getMaxDamage() - stack.getItemDamageForDisplay()) + "/" + stack.getMaxDamage());
-    }
-
-    public String getTranslatedText(String translatedText)
-    {
-        String string = NameHelper.translateToLocal(translatedText);
-        return string;
+        list.add(NameHelper.getDurabilityString(stack));
     }
 }

@@ -20,6 +20,9 @@ import net.minecraft.entity.player.InventoryPlayer;
 public abstract class ContainerFT extends FergoContainer{
     /** the players inventory */
     public InventoryPlayer invPlayer;
+    public int playerInvRows = 3;
+    public int playerInvCols = 9;
+    public int lastBurnTime, lastCookTime, lastItemBurnTime;
 
     /**
      * adds the player inventory to the container

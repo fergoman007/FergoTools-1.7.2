@@ -9,7 +9,7 @@
 
 package io.github.fergoman123.fergotools.recipes;
 
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.crafting.ow.CraftingManagerOW;
 import io.github.fergoman123.fergotools.util.item.FTStacks;
 import io.github.fergoman123.fergotools.util.item.RecipeList;
@@ -293,7 +293,8 @@ public class ObsidianWorkbenchRecipes
         CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.ingotCoal, 9), new ItemStack(FTContent.blockCoal));
         CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.ingotGlowstone, 9), new ItemStack(FTContent.blockGlowstone));
         CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.shardExp, 9), new ItemStack(FTContent.blockExperience));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.gemSilk, 9), new ItemStack(FTContent.blockSilkGem));
+        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.gemSilk, 9), new ItemStack(FTContent.blockGemSilk));
+        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.expCollector, 9), new ItemStack(FTContent.blockExpCollector));
 
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.gemSilk), RecipeList.silkGem);
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.expCollector), RecipeList.expCollector);
@@ -309,19 +310,8 @@ public class ObsidianWorkbenchRecipes
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockGlowstone), RecipeList.blockGlowstone);
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockAdamantium), RecipeList.blockAdamantium);
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockExperience), RecipeList.blockExperience);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockSilkGem), RecipeList.blockSilkGem);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockRedstone), RecipeList.blockRedstone);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockGemSilk), RecipeList.blockSilkGem);
 
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.ingotObsidian), new ItemStack(FTContent.blockObsidian));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.gemEmerald, 9), new ItemStack(FTContent.blockEmerald));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.gemLapis, 9), new ItemStack(FTContent.blockLapis));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.ingotBronze, 9), new ItemStack(FTContent.blockBronze));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.ingotAdamantium, 9), new ItemStack(FTContent.blockAdamantium));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.ingotCoal, 9), new ItemStack(FTContent.blockCoal));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.ingotGlowstone, 9), new ItemStack(FTContent.blockGlowstone));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.shardExp, 9), new ItemStack(FTContent.blockExperience));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.gemSilk, 9), new ItemStack(FTContent.blockSilkGem));
-        CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.expCollector, 9), new ItemStack(FTContent.blockExpCollector));
 
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.gemSilk), new Object[]{" x ", "xyx", " x ", 'x', Items.diamond, 'y', new ItemStack(Blocks.wool, 1, OreDictionary.WILDCARD_VALUE)});
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.expCollector, 32), new Object[]{"xxx", "xyx", "xxx", 'x', FTContent.shardExp, 'y', Items.diamond});
@@ -334,7 +324,7 @@ public class ObsidianWorkbenchRecipes
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockGlowstone), RecipeList.blockGlowstone);
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockAdamantium), RecipeList.blockAdamantium);
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockExperience), RecipeList.blockExperience);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockSilkGem), RecipeList.blockSilkGem);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockGemSilk), RecipeList.blockSilkGem);
         CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.blockRedstone), RecipeList.blockRedstone);
 
         CraftingManagerOW.getInstance().addRecipe(FTStacks.quartzPickaxe, RecipeList.quartzPickaxe);
@@ -475,14 +465,14 @@ public class ObsidianWorkbenchRecipes
         CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.plankSilk, 4), new ItemStack(FTContent.logSilk));
         CraftingManagerOW.getInstance().addShapelessRecipe(new ItemStack(FTContent.plankRedstone, 4), new ItemStack(FTContent.logRedstone));
 
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.obsidianWorkbench), RecipeList.obsidianWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.emeraldWorkbench), RecipeList.emeraldWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.lapisWorkbench), RecipeList.lapisWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.bronzeWorkbench), RecipeList.bronzeWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.coalWorkbench), RecipeList.coalWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.glowstoneWorkbench), RecipeList.glowstoneWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.adamantiumWorkbench), RecipeList.adamantiumWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.silkWorkbench), RecipeList.silkWorkbench);
-        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.redstoneWorkbench), RecipeList.redstoneWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 0), RecipeList.obsidianWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 1), RecipeList.emeraldWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 2), RecipeList.lapisWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 3), RecipeList.bronzeWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 4), RecipeList.coalWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 5), RecipeList.glowstoneWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 6), RecipeList.adamantiumWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 7), RecipeList.silkWorkbench);
+        CraftingManagerOW.getInstance().addRecipe(new ItemStack(FTContent.fergoWorkbench, 1, 8), RecipeList.redstoneWorkbench);
     }
 }

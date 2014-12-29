@@ -10,16 +10,13 @@
 package io.github.fergoman123.fergotools.core.tileentity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.core.block.furnace.BlockLapisFurnace;
-import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
 import io.github.fergoman123.fergoutil.util.NBTTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
@@ -30,22 +27,23 @@ import net.minecraft.nbt.NBTTagList;
 public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
 {
 
-    public String getInventoryName()
-    {
-        return this.hasCustomInventoryName() ? this.customName : Locale.containerLapisFurnace;
+    @Override
+    public String getInventoryName() {
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerLapisFurnace;
     }
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
         NBTTagList list = compound.getTagList(NBTTags.items, 10);
-        this.slots = new ItemStack[this.getInventoryStackLimit()];
+        this.slots = new ItemStack[this.getSizeInventory()];
 
-        for (int i = 0; i < list.tagCount(); ++i) {
+        for (int i = 0; i < list.tagCount(); i++) {
             NBTTagCompound compound1 = list.getCompoundTagAt(i);
             byte b0 = compound1.getByte(NBTTags.slot);
 
-            if (b0 >= 0 && b0 < this.slots.length) {
+            if (b0 >= 0 && b0 < this.slots.length)
+            {
                 this.slots[b0] = ItemStack.loadItemStackFromNBT(compound1);
             }
         }
@@ -54,31 +52,30 @@ public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
         this.cookTime = compound.getShort(NBTTags.cookTime);
         this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 
-        if (compound.hasKey(NBTTags.customName, 8)) {
-            this.customName = compound.getString(NBTTags.customName);
+        if (compound.hasKey(NBTTags.customName, 8))
+        {
+            this.localizedName = compound.getString(NBTTags.customName);
         }
     }
 
-    @SideOnly(Side.CLIENT)
-    public int getCookProgressScaled(int speed)
-    {
-        return this.cookTime * speed / Ints.Furnace.lapisFurnaceSpeed;
+    @Override
+    public int getCookProgressScaled(int speed) {
+        return this.cookTime * speed / FurnaceInts.lapisFurnaceSpeed;
     }
 
-    @SideOnly(Side.CLIENT)
-    public int getBurnTimeRemainingScaled(int speed)
-    {
+    @Override
+    public int getBurnTimeRemainingScaled(int speed) {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = Ints.Furnace.lapisFurnaceSpeed;
+            this.currentItemBurnTime = FurnaceInts.lapisFurnaceSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
     }
 
-    public void updateEntity()
-    {
-        boolean flag = this.burnTime > 0;
+    @Override
+    public void updateEntity() {
+        boolean flag = this.isBurning();
         boolean flag1 = false;
 
         if (this.burnTime > 0)
@@ -88,46 +85,48 @@ public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
 
         if (!this.worldObj.isRemote)
         {
-            if (this.burnTime == 0 && this.canSmelt())
+            if (this.burnTime != 0 || this.slots[1] != null && this.slots[0] != null)
             {
-                this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
-
-                if (this.burnTime > 0)
+                if (this.burnTime == 0 && this.canSmelt())
                 {
-                    flag1 = true;
+                    this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
 
-                    if (this.slots[1] != null)
+                    if (this.burnTime > 0)
                     {
-                        --this.slots[1].stackSize;
+                        flag1 = true;
 
-                        if (this.slots[1].stackSize == 0)
+                        if (this.slots[1] != null)
                         {
-                            this.slots[1] = slots[1].getItem().getContainerItem(slots[1]);
+                            --this.slots[1].stackSize;
+
+                            if (this.slots[1].stackSize == 0)
+                            {
+                                this.slots[1] = slots[1].getItem().getContainerItem(slots[1]);
+                            }
                         }
                     }
                 }
-            }
 
-            if (this.isBurning() && this.canSmelt())
-            {
-                ++this.cookTime;
-
-                if (this.cookTime == Ints.Furnace.lapisFurnaceSpeed)
+                if (this.isBurning() && this.canSmelt())
+                {
+                    ++this.cookTime;
+                    if (this.cookTime == FurnaceInts.lapisFurnaceSpeed)
+                    {
+                        this.cookTime = 0;
+                        this.smeltItem();
+                        flag1 = true;
+                    }
+                }
+                else
                 {
                     this.cookTime = 0;
-                    this.smeltItem();
-                    flag1 = true;
                 }
-            }
-            else
-            {
-                this.cookTime = 0;
             }
 
             if (flag != this.burnTime > 0)
             {
                 flag1 = true;
-                BlockLapisFurnace.updateBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                BlockLapisFurnace.updateBlockState(this.isBurning(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
 
@@ -137,8 +136,8 @@ public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
         }
     }
 
-    public boolean canSmelt()
-    {
+    @Override
+    public boolean canSmelt() {
         if (this.slots[0] == null)
         {
             return false;
@@ -146,16 +145,16 @@ public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
         else
         {
             ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
-            if (stack == null)return false;
+            if (stack == null) return false;
             if (this.slots[2] == null)return true;
             if (!this.slots[2].isItemEqual(stack))return false;
             int result = slots[2].stackSize + stack.stackSize;
-            return (result <= getInventoryStackLimit() && result <= this.slots[2].getMaxStackSize());
+            return result <= getInventoryStackLimit() && result <= this.slots[2].getMaxStackSize();
         }
     }
 
-    public void smeltItem()
-    {
+    @Override
+    public void smeltItem() {
         if (this.canSmelt())
         {
             ItemStack stack = FurnaceRecipes.smelting().getSmeltingResult(this.slots[0]);
@@ -178,7 +177,7 @@ public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
         }
     }
 
-    private static int getItemBurnTime(ItemStack stack)
+    public static int getItemBurnTime(ItemStack stack)
     {
         if (stack == null)
         {
@@ -188,7 +187,7 @@ public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
         {
             Item item = stack.getItem();
 
-            if (item instanceof ItemBlock && Block.getBlockFromItem(item) != null)
+            if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air)
             {
                 Block block = Block.getBlockFromItem(item);
 
@@ -225,10 +224,6 @@ public final class TileEntityLapisFurnace extends TileEntityFurnaceFT
         return getItemBurnTime(stack) > 0;
     }
 
-    public boolean isUseableByPlayer(EntityPlayer player)
-    {
-        return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : player.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
-    }
     @Override
     public boolean isItemValidForSlot(int slot, ItemStack stack) {
         return slot == 2 ? false : (slot == 1 ? isItemFuel(stack) : true);

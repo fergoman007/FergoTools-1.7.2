@@ -10,7 +10,7 @@
 package io.github.fergoman123.fergotools.handler;
 
  import io.github.fergoman123.fergotools.FergoTools;
- import io.github.fergoman123.fergotools.core.FTContent;
+ import io.github.fergoman123.fergotools.api.content.FTContent;
  import io.github.fergoman123.fergotools.reference.names.BlockNames;
  import io.github.fergoman123.fergotools.reference.names.ItemNames;
  import io.github.fergoman123.fergoutil.helper.RegisterHelper;
@@ -30,22 +30,22 @@ package io.github.fergoman123.fergotools.handler;
     public static void registerOres()
     {
         RegisterHelper.registerOre(BlockNames.oreObsidian, FTContent.oreObsidian);
-        RegisterHelper.registerOre(BlockNames.oreEmeraldCrystal, FTContent.oreGemEmerald);
-        RegisterHelper.registerOre(BlockNames.oreLapisCrystal, FTContent.oreGemLapis);
+        RegisterHelper.registerOre(BlockNames.oreGemEmerald, FTContent.oreGemEmerald);
+        RegisterHelper.registerOre(BlockNames.oreGemLapis, FTContent.oreGemLapis);
         RegisterHelper.registerOre(BlockNames.oreBronze, FTContent.oreBronze);
         RegisterHelper.registerOre(BlockNames.oreAdamantium, FTContent.oreAdamantium);
         RegisterHelper.registerOre(BlockNames.oreExperience, FTContent.oreExperience);
-        RegisterHelper.registerOre(BlockNames.oreCrystalRed, FTContent.oreRedstone);
+        RegisterHelper.registerOre(BlockNames.oreGemRedstone, FTContent.oreGemRedstone);
 
         RegisterHelper.registerOre(BlockNames.blockObsidian, FTContent.blockObsidian);
-        RegisterHelper.registerOre(BlockNames.blockEmeraldCrystal, FTContent.blockEmerald);
-        RegisterHelper.registerOre(BlockNames.blockLapisCrystal, FTContent.blockLapis);
+        RegisterHelper.registerOre(BlockNames.blockGemEmerald, FTContent.blockEmerald);
+        RegisterHelper.registerOre(BlockNames.blockGemLapis, FTContent.blockLapis);
         RegisterHelper.registerOre(BlockNames.blockBronze, FTContent.blockBronze);
         RegisterHelper.registerOre(BlockNames.blockCoal, FTContent.blockCoal);
         RegisterHelper.registerOre(BlockNames.blockGlowstone, FTContent.blockGlowstone);
         RegisterHelper.registerOre(BlockNames.blockAdamantium, FTContent.blockAdamantium);
-        RegisterHelper.registerOre(BlockNames.blockSilkGem, FTContent.blockSilkGem);
-        RegisterHelper.registerOre(BlockNames.blockRedstoneCrystal, FTContent.blockRedstone);
+        RegisterHelper.registerOre(BlockNames.blockGemSilk, FTContent.blockGemSilk);
+        RegisterHelper.registerOre(BlockNames.blockGemRedstone, FTContent.blockRedstone);
 
         RegisterHelper.registerOre(ItemNames.ingotObsidian, FTContent.ingotObsidian);
         RegisterHelper.registerOre(ItemNames.gemEmerald, FTContent.gemEmerald);

@@ -13,7 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.core.block.furnace.BlockAdamantiumFurnace;
-import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
 import net.minecraft.block.Block;
@@ -29,7 +29,7 @@ public final class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.customName : Locale.containerAdamantiumFurnace;
+        return this.hasCustomInventoryName() ? this.localizedName : Locale.containerAdamantiumFurnace;
     }
 
     @Override
@@ -55,14 +55,14 @@ public final class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
 
         if (compound.hasKey("CustomName", 8))
         {
-            this.customName = compound.getString("CustomName");
+            this.localizedName = compound.getString("CustomName");
         }
     }
 
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int speed)
     {
-        return this.cookTime * speed / Ints.Furnace.adamantiumFurnaceSpeed;
+        return this.cookTime * speed / FurnaceInts.adamantiumFurnaceSpeed;
     }
 
     @SideOnly(Side.CLIENT)
@@ -70,7 +70,7 @@ public final class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = Ints.Furnace.adamantiumFurnaceSpeed;
+            this.currentItemBurnTime = FurnaceInts.adamantiumFurnaceSpeed;
         }
 
         return this.burnTime * speed / this.currentItemBurnTime;
@@ -114,7 +114,7 @@ public final class TileEntityAdamantiumFurnace extends TileEntityFurnaceFT {
             {
                 ++this.cookTime;
 
-                if (this.cookTime == Ints.Furnace.adamantiumFurnaceSpeed)
+                if (this.cookTime == FurnaceInts.adamantiumFurnaceSpeed)
                 {
                     this.cookTime = 0;
                     this.smeltItem();

@@ -10,7 +10,7 @@
 package io.github.fergoman123.fergotools.event;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingEvent;
 

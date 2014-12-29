@@ -9,9 +9,8 @@
 
 package io.github.fergoman123.fergotools.core.block.stair;
 
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.util.base.BlockStairsFT;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 import java.util.Random;
@@ -19,8 +18,8 @@ import java.util.Random;
 public final class BlockStairBronze extends BlockStairsFT
 {
 
-    public BlockStairBronze(String blockName) {
-        super(FTContent.plankBronze, blockName);
+    public BlockStairBronze() {
+        super(FTContent.plankBronze);
     }
 
     @Override

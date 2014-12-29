@@ -9,9 +9,8 @@
 
 package io.github.fergoman123.fergotools.recipes;
 
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.crafting.MaceratorRecipes;
-import io.github.fergoman123.fergotools.util.item.FTStacks;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -36,6 +35,6 @@ public class MaceratorRecipesInit
         MaceratorRecipes.macerating().addSmeltingRecipeForBlock(Blocks.glowstone, new ItemStack(FTContent.ingotGlowstone, 2), 2.5f);
         MaceratorRecipes.macerating().addSmeltingRecipeForBlock(FTContent.oreAdamantium, new ItemStack(FTContent.ingotAdamantium, 2), 2.5f);
         MaceratorRecipes.macerating().addSmeltingRecipeForBlock(FTContent.oreExperience, new ItemStack(FTContent.shardExp, 10), 2.5f);
-        MaceratorRecipes.macerating().addSmeltingRecipeForBlock(FTContent.oreRedstone, new ItemStack(FTContent.gemRedstone, 2), 2.5f);
+        MaceratorRecipes.macerating().addSmeltingRecipeForBlock(FTContent.oreGemRedstone, new ItemStack(FTContent.gemRedstone, 2), 2.5f);
     }
 }

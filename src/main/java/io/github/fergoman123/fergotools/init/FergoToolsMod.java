@@ -14,36 +14,37 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.core.FTBlocks;
+import io.github.fergoman123.fergotools.core.FTItems;
+import io.github.fergoman123.fergotools.core.FTTileEntities;
 import io.github.fergoman123.fergotools.creativetab.Tabs;
-import io.github.fergoman123.fergotools.event.OnLivingUpdateEvent;
-import io.github.fergoman123.fergotools.event.OnPlayerLoggedInEvent;
 import io.github.fergoman123.fergotools.handler.RegHandler;
-import io.github.fergoman123.fergotools.helper.LogHelper;
 import io.github.fergoman123.fergotools.reference.MetadataFT;
 import io.github.fergoman123.fergotools.reference.strings.Messages;
-import io.github.fergoman123.fergotools.util.item.Materials;
-import net.minecraftforge.common.MinecraftForge;
+import io.github.fergoman123.fergotools.util.item.AM;
+import io.github.fergoman123.fergotools.util.item.TM;
 
 public class FergoToolsMod
 {
     public static void preInit(FMLPreInitializationEvent evt)
     {
-        LogHelper.info(Messages.preInitMessage);
+        FergoTools.getLogger().info(Messages.preInitMessage);
         MetadataFT.writeMetadata(evt.getModMetadata());
         ConfigHandler.init(evt.getSuggestedConfigurationFile());
         FergoTools.proxy.registerEventHandlers();
+        FTItems.init();
+        FTBlocks.init();
         Tabs.init();
-        Materials.init();
-        FTContent.init();
+        TM.initMaterials();
+        AM.initMaterials();
+        FTBlocks.init();
 
     }
 
     public static void load(FMLInitializationEvent evt)
     {
-        LogHelper.info(Messages.initMessage);
-        FTContent.mainRegistry();
-        FTContent.registerTileEntities();
+        FergoTools.getLogger().info(Messages.initMessage);
+        FTTileEntities.registerTileEntities();
         RegHandler.init();
         RegHandler.registerOres();
         Recipes.init();
@@ -51,6 +52,6 @@ public class FergoToolsMod
 
     public static void modsLoaded(FMLPostInitializationEvent evt)
     {
-        LogHelper.info(Messages.postInitMessage);
+        FergoTools.getLogger().info(Messages.postInitMessage);
     }
 }

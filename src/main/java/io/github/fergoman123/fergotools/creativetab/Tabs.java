@@ -9,12 +9,12 @@
 
 package io.github.fergoman123.fergotools.creativetab;
 
-import io.github.fergoman123.fergotools.core.FTContent;
-import io.github.fergoman123.fergotools.reference.strings.Tab;
-import io.github.fergoman123.fergoutil.creativetab.FergoCreativeTab;
-import io.github.fergoman123.fergoutil.helper.NameHelper;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
+ import io.github.fergoman123.fergotools.api.content.FTContent;
+ import io.github.fergoman123.fergotools.reference.strings.Tab;
+ import io.github.fergoman123.fergoutil.creativetab.FergoCreativeTab;
+ import io.github.fergoman123.fergoutil.helper.NameHelper;
+ import net.minecraft.init.Blocks;
+ import net.minecraft.item.Item;
 
  public class Tabs
 {

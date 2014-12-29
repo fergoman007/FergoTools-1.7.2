@@ -10,7 +10,7 @@
 package io.github.fergoman123.fergotools.handler;
 
  import cpw.mods.fml.common.IWorldGenerator;
- import io.github.fergoman123.fergotools.core.FTContent;
+ import io.github.fergoman123.fergotools.api.content.FTContent;
  import io.github.fergoman123.fergoutil.helper.GenerationHelper;
  import net.minecraft.world.World;
  import net.minecraft.world.chunk.IChunkProvider;
@@ -44,7 +44,7 @@ public class WorldGenerationHandler implements IWorldGenerator
             GenerationHelper.addEndOreSpawn(FTContent.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
             GenerationHelper.addEndOreSpawn(FTContent.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
             GenerationHelper.addEndOreSpawn(FTContent.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(FTContent.oreRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(FTContent.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -62,7 +62,7 @@ public class WorldGenerationHandler implements IWorldGenerator
             GenerationHelper.addOverWorldOreSpawn(FTContent.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
             GenerationHelper.addOverWorldOreSpawn(FTContent.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
             GenerationHelper.addOverWorldOreSpawn(FTContent.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(FTContent.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -80,7 +80,7 @@ public class WorldGenerationHandler implements IWorldGenerator
             GenerationHelper.addNetherOreSpawn(FTContent.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
             GenerationHelper.addNetherOreSpawn(FTContent.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
             GenerationHelper.addNetherOreSpawn(FTContent.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addNetherOreSpawn(FTContent.oreRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(FTContent.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 

@@ -31,8 +31,8 @@ public class BlockFergoGlass extends BlockGlassFT {
     private boolean shouldRenderSelectionBox = true;
     private int renderPass = 0;
 
-    public BlockFergoGlass(String blockName) {
-        super(blockName);
+    public BlockFergoGlass() {
+        super();
         this.setResistance(6000000.0F);
     }
 

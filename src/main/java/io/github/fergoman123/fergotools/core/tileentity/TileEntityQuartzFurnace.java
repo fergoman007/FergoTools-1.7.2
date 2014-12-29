@@ -13,7 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.core.block.furnace.BlockQuartzFurnace;
-import io.github.fergoman123.fergotools.reference.Ints;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import io.github.fergoman123.fergotools.reference.strings.Tile;
 import io.github.fergoman123.fergotools.util.base.TileEntityFurnaceFT;
@@ -28,7 +28,7 @@ import net.minecraft.nbt.NBTTagList;
 
 public class TileEntityQuartzFurnace extends TileEntityFurnaceFT
 {
-    public String getInventoryName(){return this.hasCustomInventoryName() ? this.customName : Locale.containerQuartzFurnace;}
+    public String getInventoryName(){return this.hasCustomInventoryName() ? this.localizedName : Locale.containerQuartzFurnace;}
 
     public void readFromNBT(NBTTagCompound compound){
         super.readFromNBT(compound);
@@ -45,15 +45,15 @@ public class TileEntityQuartzFurnace extends TileEntityFurnaceFT
         this.cookTime = compound.getShort(Tile.cookTime);
         this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
 
-        if (compound.hasKey(Tile.customName, 8)){this.customName = compound.getString(Tile.customName);}
+        if (compound.hasKey(Tile.customName, 8)){this.localizedName = compound.getString(Tile.customName);}
     }
 
     @SideOnly(Side.CLIENT)
-    public int getCookProgressScaled(int speed){return this.cookTime * speed / Ints.Furnace.quartzFurnaceSpeed;}
+    public int getCookProgressScaled(int speed){return this.cookTime * speed / FurnaceInts.quartzFurnaceSpeed;}
 
     @Override
     public int getBurnTimeRemainingScaled(int speed) {
-        if (this.currentItemBurnTime == 0) {this.currentItemBurnTime = Ints.Furnace.quartzFurnaceSpeed;}
+        if (this.currentItemBurnTime == 0) {this.currentItemBurnTime = FurnaceInts.quartzFurnaceSpeed;}
         return this.burnTime * speed / this.currentItemBurnTime;
     }
 
@@ -77,7 +77,7 @@ public class TileEntityQuartzFurnace extends TileEntityFurnaceFT
             }
             if (this.isBurning() && this.canSmelt()){
                 ++this.cookTime;
-                if (this.cookTime == Ints.Furnace.quartzFurnaceSpeed){
+                if (this.cookTime == FurnaceInts.quartzFurnaceSpeed){
                     this.cookTime = 0;
                     this.smeltItem();
                     flag1 = true;

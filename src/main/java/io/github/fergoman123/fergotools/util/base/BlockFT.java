@@ -10,8 +10,9 @@
 package io.github.fergoman123.fergotools.util.base;
 
 
- import io.github.fergoman123.fergoutil.helper.NameHelper;
  import io.github.fergoman123.fergotools.creativetab.Tabs;
+ import io.github.fergoman123.fergotools.reference.Reference;
+ import io.github.fergoman123.fergoutil.helper.NameHelper;
  import net.minecraft.block.Block;
  import net.minecraft.block.material.Material;
  import net.minecraft.client.renderer.texture.IIconRegister;
@@ -21,35 +22,37 @@ package io.github.fergoman123.fergotools.util.base;
 
  public abstract class BlockFT extends Block
 {
-    /**
-     * the base constructor for block classes
-     * @param material the block material
-     * @param blockName the block name
-     */
-    public BlockFT(Material material, String blockName)
-    {
+
+
+    public BlockFT(Material material) {
         super(material);
-        this.setBlockName(blockName);
         this.setCreativeTab(Tabs.tabFergoBlocks);
+        this.setHardness(2.5f);
+        this.setResistance(50f);
     }
 
     public String getUnlocalizedName()
     {
-        return String.format("tile.%s%s", NameHelper.getModString(1), NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("tile.%s%s", Reference.textureLoc, NameHelper.getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
-    public void registerBlockIcons(IIconRegister register)
+    public abstract void registerBlockIcons(IIconRegister register);
+
+    public static String getBlockType(int type)
     {
-        blockIcon = register.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+        if (type == 0)
+        {
+            return "ore";
+        }
+        else if (type == 1)
+        {
+            return "block";
+        }
+        else
+        {
+            return null;
+        }
     }
 
-    /**
-     *  gets the block or item dropped when block
-     *  is broken
-     * @param metadata the metadata of the item or block
-     * @param rand the random
-     * @param fortune the fortune
-     * @return block or item
-     */
     public abstract Item getItemDropped(int metadata, Random rand, int fortune);
 }

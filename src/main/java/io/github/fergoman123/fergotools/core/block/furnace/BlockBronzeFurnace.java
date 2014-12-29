@@ -12,13 +12,12 @@ package io.github.fergoman123.fergotools.core.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.core.tileentity.TileEntityBronzeFurnace;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -39,7 +38,7 @@ import java.util.Random;
 public class BlockBronzeFurnace extends BlockFurnaceFT
 {
     public BlockBronzeFurnace(boolean isActive) {
-        super(isActive, Material.iron, FurnaceType.bronzeFurnace);
+        super(isActive, Material.iron);
         this.isActive = isActive;
     }
 
@@ -90,7 +89,7 @@ public class BlockBronzeFurnace extends BlockFurnaceFT
         }
     }
 
-    public static void updateBronzeFurnaceBlockState(boolean active, World world, int x, int y, int z)
+    public static void updateBlockState(boolean active, World world, int x, int y, int z)
     {
         int l = world.getBlockMetadata(x, y, z);
         TileEntity tile = world.getTileEntity(x, y, z);

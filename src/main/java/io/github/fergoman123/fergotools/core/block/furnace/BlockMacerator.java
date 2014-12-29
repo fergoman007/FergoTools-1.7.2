@@ -12,12 +12,11 @@ package io.github.fergoman123.fergotools.core.block.furnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.core.FTContent;
+import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.core.tileentity.TileEntityMacerator;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergotools.reference.strings.FurnaceType;
 import io.github.fergoman123.fergotools.util.base.BlockFurnaceFT;
 import io.github.fergoman123.fergoutil.helper.BlockHelper;
 import net.minecraft.block.Block;
@@ -39,7 +38,7 @@ import java.util.Random;
 public class BlockMacerator extends BlockFurnaceFT
 {
     public BlockMacerator(boolean isActive) {
-        super(isActive, Material.iron, FurnaceType.macerator);
+        super(isActive, Material.iron);
         this.isActive = isActive;
     }
 

@@ -47,7 +47,7 @@ public class Locale
     public static final String containerRedstoneFurnace = containerPrefix + "redstoneFurnace";
     public static final String containerMacerator = containerPrefix + "macerator";
 
-    public static final String containerObsidianWorkbench = containerPrefix + "obsidianWorkbench";
+    public static final String containerObsidianWorkbench = containerPrefix + "fergoWorkbench";
     public static final String containerEmeraldWorkbench = containerPrefix + "emeraldWorkbench";
     public static final String containerLapisWorkbench = containerPrefix + "lapisWorkbench";
     public static final String containerBronzeWorkbench = containerPrefix + "bronzeWorkbench";
@@ -73,4 +73,6 @@ public class Locale
 
     // nei
     public static final String neiMacerator = "gui.nei." + modPrefix + "macerator";
+
+    public static final String[] types = {"Obsidian", "Emerald", "Lapis", "Bronze", "Coal", "Glowstone", "Adamantium", "Silk", "Redstone"};
 }

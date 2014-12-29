@@ -16,27 +16,27 @@ public class BlockNames
 {
     public static final String oreExperience = "oreExperience";
     public static final String oreObsidian = "oreObsidian";
-    public static final String oreEmeraldCrystal = "oreEmeraldCrystal";
-    public static final String oreLapisCrystal = "oreLapisCrystal";
+    public static final String oreGemEmerald = "oreGemEmerald";
+    public static final String oreGemLapis = "oreGemLapis";
     public static final String oreBronze = "oreBronze";
     public static final String oreAdamantium = "oreAdamantium";
-    public static final String oreCrystalRed = "oreCrystalRed";
+    public static final String oreGemRedstone = "oreCrystalRed";
 
-    public static final String[] ores = {oreExperience, oreObsidian, oreEmeraldCrystal, oreLapisCrystal, oreBronze, oreAdamantium, oreCrystalRed};
+    public static final String[] ores = {oreExperience, oreObsidian, oreGemEmerald, oreGemLapis, oreBronze, oreAdamantium, oreGemRedstone};
 
     public static final String blockExperience = "blockExperience";
     public static final String blockObsidian = "blockObsidian";
-    public static final String blockEmeraldCrystal = "blockEmeraldCrystal";
-    public static final String blockLapisCrystal = "blockLapisCrystal";
+    public static final String blockGemEmerald = "blockGemEmerald";
+    public static final String blockGemLapis = "blockGemLapis";
     public static final String blockBronze = "blockBronze";
     public static final String blockCoal = "blockCoal";
     public static final String blockGlowstone = "blockGlowstone";
     public static final String blockAdamantium = "blockAdamantium";
-    public static final String blockSilkGem = "blockSilkGem";
-    public static final String blockRedstoneCrystal = "blockRedstoneCrystal";
+    public static final String blockGemSilk = "blockGemSilk";
+    public static final String blockGemRedstone = "blockGemRedstone";
     public static final String blockExpCollector = "blockExpCollector";
 
-    public static final String[] blocks = {blockObsidian, blockEmeraldCrystal, blockLapisCrystal, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockSilkGem, blockRedstoneCrystal, blockExperience, blockExpCollector};
+    public static final String[] blocks = {blockObsidian, blockGemEmerald, blockGemLapis, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockGemSilk, blockGemRedstone, blockExperience, blockExpCollector};
 
     public static final String blockFergoGlass = "blockFergoGlass";
 
@@ -103,6 +103,7 @@ public class BlockNames
 
     public static final String[] planks = {plankObsidian, plankEmerald, plankLapis, plankBronze, plankCoal, plankGlowstone, plankAdamantium, plankSilk, plankRedstone};
 
+    public static final String fergoWorkbench = "fergoWorkbench";
     public static final String obsidianWorkbench = "obsidianWorkbench";
     public static final String emeraldWorkbench = "emeraldWorkbench";
     public static final String lapisWorkbench = "lapisWorkbench";
@@ -152,4 +153,28 @@ public class BlockNames
     public static final String stairRedstone = "stairRedstone";
 
     public static final String[] stairs = {stairObsidian, stairEmerald, stairLapis, stairBronze, stairCoal, stairGlowstone, stairAdamantium, stairSilk, stairRedstone};
+
+    public static final String slabObsidianSingle = "slabObsidianSingle";
+    public static final String slabEmeraldSingle = "slabEmeraldSingle";
+    public static final String slabLapisSingle = "slabLapisSingle";
+    public static final String slabBronzeSingle = "slabBronzeSingle";
+    public static final String slabCoalSingle = "slabCoalSingle";
+    public static final String slabGlowstoneSingle = "slabGlowstoneSingle";
+    public static final String slabAdamantiumSingle = "slabAdamantiumSingle";
+    public static final String slabSilkSingle = "slabSilkSingle";
+    public static final String slabRedstoneSingle = "slabRedstoneSingle";
+
+    public static final String[] slabSingle = {slabObsidianSingle,slabEmeraldSingle,slabLapisSingle,slabBronzeSingle,slabCoalSingle,slabGlowstoneSingle, slabAdamantiumSingle, slabSilkSingle, slabRedstoneSingle};
+
+    public static final String slabObsidianDouble = "slabObsidianDouble";
+    public static final String slabEmeraldDouble = "slabEmeraldDouble";
+    public static final String slabLapisDouble = "slabLapisDouble";
+    public static final String slabBronzeDouble = "slabBronzeDouble";
+    public static final String slabCoalDouble = "slabCoalDouble";
+    public static final String slabGlowstoneDouble = "slabGlowstoneDouble";
+    public static final String slabAdamantiumDouble = "slabAdamantiumDouble";
+    public static final String slabSilkDouble = "slabSilkDouble";
+    public static final String slabRedstoneDouble = "slabRedstoneDouble";
+
+    public static final String[] slabDouble = {slabObsidianDouble, slabEmeraldDouble, slabLapisDouble, slabBronzeDouble, slabCoalDouble, slabGlowstoneDouble, slabAdamantiumDouble, slabSilkDouble, slabRedstoneDouble};
 }
