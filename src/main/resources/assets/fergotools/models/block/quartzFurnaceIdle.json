@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "fergotools:blocks/furnace/quartzFurnaceSide",
+    "front": "fergotools:blocks/furnace/idle/quartzFurnaceIdle",
+    "side": "fergotools:blocks/furnace/quartzFurnaceSide"
+  }
+}

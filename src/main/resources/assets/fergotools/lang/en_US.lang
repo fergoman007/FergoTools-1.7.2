@@ -1,396 +1,69 @@
-# Creative Tabs
-FergoTools:tabFergoTools=Fergoman123's Tools (Tools)
-FergoTools:tabFergoBlocks=Fergoman123's Tools (Blocks)
-FergoTools:tabFergoFurnaces=Fergoman123's Tools (Furnaces)
-FergoTools:tabFergoItems=Fergoman123's Tools (Items)
-FergoTools:tabFergoArmor=Fergoman123's Tools (Armor)
-FergoTools:tabFergoBows=Fergoman123's Tools (Bows)
-FergoTools:tabFergoShears=Fergoman123's Tools (Shears)
-FergoTools:tabFergoWood=Fergoman123's Tools (Wood)
-FergoTools:tabFergoCT=Fergoman123's Tools (Workbenches)
+fergotools.tab.tabfergotools=Fergoman123's Tools
 
-# Tools
-item.FergoTools:quartzPickaxe.name=Quartz Pickaxe
-item.FergoTools:quartzShovel.name=Quartz Shovel
-item.FergoTools:quartzAxe.name=Quartz Axe
-item.FergoTools:quartzHoe.name=Quartz Hoe
-item.FergoTools:quartzSword.name=Quartz Sword
+fergotools.holdshift=<Hold Shift for Info>
 
-item.FergoTools:obsidianPickaxe.name=Obsidian Pickaxe
-item.FergoTools:obsidianShovel.name=Obsidian Shovel
-item.FergoTools:obsidianAxe.name=Obsidian Axe
-item.FergoTools:obsidianHoe.name=Obsidian Hoe
-item.FergoTools:obsidianSword.name=Obsidian Sword
+fergotools.oredict=Ore Dictionary Name:
+fergotool.tooltip.crafting=Crafting Item
 
-item.FergoTools:emeraldPickaxe.name=Emerald Pickaxe
-item.FergoTools:emeraldShovel.name=Emerald Shovel
-item.FergoTools:emeraldAxe.name=Emerald Axe
-item.FergoTools:emeraldHoe.name=Emerald Hoe
-item.FergoTools:emeraldSword.name=Emerald Sword
+fergotools.tooltip.staffexp.rclick=R-Click to Store 5 Levels of Experience
+fergotools.tooltip.staffexp2.rclick=R-Click to Store 10 Levels of Experience
+fergotools.tooltip.staffexp3.rclick=R-Click to Store 30 Levels of Experience
 
-item.FergoTools:lapisPickaxe.name=Lapis Pickaxe
-item.FergoTools:lapisShovel.name=Lapis Shovel
-item.FergoTools:lapisAxe.name=Lapis Axe
-item.FergoTools:lapisHoe.name=Lapis Hoe
-item.FergoTools:lapisSword.name=Lapis Sword
+fergotools.tooltip.staffexp.srclick=Shift R-Click to Retrieve 5 Levels of Experience
+fergotools.tooltip.staffexp2.srclick=Shift R-Click to Retrieve 10 Levels of Experience
+fergotools.tooltip.staffexp3.srclick=Shift R-Click to Retrieve 30 Levels of Experience
 
-item.FergoTools:bronzePickaxe.name=Bronze Pickaxe
-item.FergoTools:bronzeShovel.name=Bronze Shovel
-item.FergoTools:bronzeAxe.name=Bronze Axe
-item.FergoTools:bronzeHoe.name=Bronze Hoe
-item.FergoTools:bronzeSword.name=Bronze Sword
+fergotools.tooltip.gemexp=Stores 5 Levels of Experience
+fergotools.tooltip.gemexp2=Stores 10 Levels of Experience
+fergotools.tooltip.gemexp3=Stores 30 Levels of Experience
 
-item.FergoTools:coalPickaxe.name=Coal Pickaxe
-item.FergoTools:coalShovel.name=Coal Shovel
-item.FergoTools:coalAxe.name=Coal Axe
-item.FergoTools:coalHoe.name=Coal Hoe
-item.FergoTools:coalSword.name=Coal Sword
+item.fergotools.ingotObsidian.name=Obsidian Ingot
+item.fergotools.gemEmerald.name=Emerald Gem
+item.fergotools.gemLapis.name=Lapis Gem
+item.fergotools.ingotBronze.name=Bronze Ingot
+item.fergotools.ingotCoal.name=Coal Ingot
+item.fergotools.ingotGlowstone.name=Glowstone Ingot
+item.fergotools.ingotAdamantium.name=Adamantium Ingot
+item.fergotools.gemSilk.name=Silk Gem
+item.fergotools.gemRedstone.name=Redstone Gem
+item.fergotools.staffExp.staffExp.name=Basic Staff of Experience
+item.fergotools.staffExp.staffExp2.name=Greater Staff of Experience
+item.fergotools.staffExp.staffExp3.name=Ultimate Staff of Experience
+item.fergotools.gemExp.name=Experience Crystal
+item.fergotools.gemExp2.name=Experience Crystal
+item.fergotools.gemExp3.name=Experience Crystal
 
-item.FergoTools:glowstonePickaxe.name=Glowstone Pickaxe
-item.FergoTools:glowstoneShovel.name=Glowstone Shovel
-item.FergoTools:glowstoneAxe.name=Glowstone Axe
-item.FergoTools:glowstoneHoe.name=Glowstone Hoe
-item.FergoTools:glowstoneSword.name=Glowstone Sword
+tile.fergotools.oreExperience.name=Experience Ore
+tile.fergotools.oreObsidian.name=Obsidian Ore
+tile.fergotools.oreGemEmerald=Emerald Crystal Ore
+tile.fergotools.oreGemLapis.name=Lapis Crystal Ore
+tile.fergotools.oreBronze.name=Bronze Ore
+tile.fergotools.oreAdamantium.name=Adamantium Ore
+tile.fergotools.oreGemRedstone.name=Redstone Crystal Ore
 
-item.FergoTools:adamantiumPickaxe.name=Adamantium Pickaxe
-item.FergoTools:adamantiumShovel.name=Adamantium Shovel
-item.FergoTools:adamantiumAxe.name=Adamantium Axe
-item.FergoTools:adamantiumHoe.name=Adamantium Hoe
-item.FergoTools:adamantiumSword.name=Adamantium Sword
+tile.fergotools.blockExperience.name=Experience Block
+tile.fergotools.blockExpCollector.name=Experience Collector Block
+tile.fergotools.blockObsidian.name=Obsidian Block
+tile.fergotools.blockGemEmerald.name=Emerald Crystal Block
+tile.fergotools.blockGemLapis.name=Lapis Crystal Block
+tile.fergotools.blockBronze.name=Bronze Block
+tile.fergotools.blockCoal.name=Coal Block
+tile.fergotools.blockGlowstone.name=Glowstone Block
+tile.fergotools.blockAdamantium.name=Adamantium Block
+tile.fergotools.blockGemSilk.name=Silk Gem Block
+tile.fergotools.blockGemRedstone.name=Redstone Crystal Block
 
-item.FergoTools:silkPickaxe.name=Silk Pickaxe
-item.FergoTools:silkShovel.name=Silk Shovel
-item.FergoTools:silkAxe.name=Silk Axe
-item.FergoTools:silkHoe.name=Silk Hoe
-item.FergoTools:silkSword.name=Silk Sword
+tile.fergotools.quartzFurnaceIdle.name=Quartz Furnace
+tile.fergotools.quartzFurnaceActive.name=Quartz Furnace
 
-item.FergoTools:redstonePickaxe.name=Redstone Pickaxe
-item.FergoTools:redstoneShovel.name=Redstone Shovel
-item.FergoTools:redstoneAxe.name=Redstone Axe
-item.FergoTools:redstoneHoe.name=Redstone Hoe
-item.FergoTools:redstoneSword.name=Redstone Sword
+fergotools.container.quartzfurnace=Quartz Furnace
 
-# Armor
-item.FergoTools:quartzHelmet.name=Quartz Helmet
-item.FergoTools:quartzChestplate.name=Quartz Chestplate
-item.FergoTools:quartzLeggings.name=Quartz Leggings
-item.FergoTools:quartzBoots.name=Quartz Boots
+fergotools.toolmaterial=Tool Material:
+fergotools.usesleft=Uses Left:
+fergotools.harvest=Harvest Level:
+fergotools.maxuses=Max Uses:
+fergotools.eff=Efficiency:
+fergotools.damagevsentity=Damage Vs Entity:
+fergotools.enchantability=Enchantability:
 
-item.FergoTools:obsidianHelmet.name=Obsidian Helmet
-item.FergoTools:obsidianChestplate.name=Obsidian Chestplate
-item.FergoTools:obsidianLeggings.name=Obsidian Leggings
-item.FergoTools:obsidianBoots.name=Obsidian Boots
-
-item.FergoTools:emeraldHelmet.name=Emerald Helmet
-item.FergoTools:emeraldChestplate.name=Emerald Chestplate
-item.FergoTools:emeraldLeggings.name=Emerald Leggings
-item.FergoTools:emeraldBoots.name=Emerald Boots
-
-item.FergoTools:lapisHelmet.name=Lapis Helmet
-item.FergoTools:lapisChestplate.name=Lapis Chestplate
-item.FergoTools:lapisLeggings.name=Lapis Leggings
-item.FergoTools:lapisBoots.name=Lapis Boots
-
-item.FergoTools:bronzeHelmet.name=Bronze Helmet
-item.FergoTools:bronzeChestplate.name=Bronze Chestplate
-item.FergoTools:bronzeLeggings.name=Bronze Leggings
-item.FergoTools:bronzeBoots.name=Bronze Boots
-
-item.FergoTools:coalHelmet.name=Coal Helmet
-item.FergoTools:coalChestplate.name=Coal Chestplate
-item.FergoTools:coalLeggings.name=Coal Leggings
-item.FergoTools:coalBoots.name=Coal Boots
-
-item.FergoTools:glowstoneHelmet.name=Glowstone Helmet
-item.FergoTools:glowstoneChestplate.name=Glowstone Chestplate
-item.FergoTools:glowstoneLeggings.name=Glowstone Leggings
-item.FergoTools:glowstoneBoots.name=Glowstone Boots
-
-item.FergoTools:redstoneHelmet.name=Redstone Helmet
-item.FergoTools:redstoneChestplate.name=Redstone Chestplate
-item.FergoTools:redstoneLeggings.name=Redstone Leggings
-item.FergoTools:redstoneBoots.name=Redstone Boots
-
-item.FergoTools:adamantiumHelmet.name=Adamantium Helmet
-item.FergoTools:adamantiumChestplate.name=Adamantium Chestplate
-item.FergoTools:adamantiumLeggings.name=Adamantium Leggings
-item.FergoTools:adamantiumBoots.name=Adamantium Boots
-
-# Blocks
-tile.FergoTools:oreExperience.name=Experience Ore
-tile.FergoTools:oreObsidian.name=Obsidian Ore
-tile.FergoTools:oreEmeraldCrystal.name=Emerald Crystal Ore
-tile.FergoTools:oreLapisCrystal.name=Lapis Crystal Ore
-tile.FergoTools:oreBronze.name=Bronze Ore
-tile.FergoTools:oreCrystalRed.name=Redstone Crystal Ore
-tile.FergoTools:oreAdamantium.name=Adamantium Ore
-
-tile.FergoTools:blockObsidian.name=Obsidian Block
-tile.FergoTools:blockEmeraldCrystal.name=Emerald Crystal Block
-tile.FergoTools:blockLapisCrystal.name=Lapis Crystal Block
-tile.FergoTools:blockBronze.name=Bronze Block
-tile.FergoTools:blockCoal.name=Coal Block
-tile.FergoTools:blockGlowstone.name=Glowstone Block
-tile.FergoTools:blockAdamantium.name=Adamantium Block
-tile.FergoTools:blockSilkGem.name=Silk Gem Block
-tile.FergoTools:blockRedstoneCrystal.name=Redstone Crystal Block
-tile.FergoTools:blockExperience.name=Experience Block
-tile.FergoTools:blockExpCollector.name=Experience Collector Block
-
-tile.FergoTools:blockFergoGlass.name=Fergoman123's Glass
-
-tile.FergoTools:logFergo.logObsidian.name=Obsidian Wood
-tile.FergoTools:logFergo.logEmerald.name=Emerald Wood
-tile.Fergotools:logFergo.logLapis.name=Lapis Wood
-tile.FergoTools:logFergo.logBronze.name=Bronze Wood
-tile.FergoTools:logFergo.logCoal.name=Coal Wood
-tile.FergoTools:logFergo.logGlowstone.name=Glowstone Wood
-tile.FergoTools:logFergo.logAdamantium.name=Adamantium Wood
-tile.FergoTools:logFergo.logSilk.name=Silk Wood
-tile.FergoTools:logFergo.logRedstone.name=Redstone Wood
-
-tile.FergoTools:plankFergo.plankSilk.name=Silk Wood Planks
-tile.FergoTools:plankFergo.plankCoal.name=Coal Wood Planks
-tile.FergoTools:plankFergo.plankBronze.name=Bronze Wood Planks
-tile.FergoTools:plankFergo.plankLapis.name=Lapis Wood Planks
-tile.FergoTools:plankFergo.plankAdamantium.name=Adamantium Wood Planks
-tile.FergoTools:plankFergo.plankObsidian.name=Obsidian Wood Planks
-tile.FergoTools:plankFergo.plankEmerald.name=Emerald Wood Planks
-tile.FergoTools:plankFergo.plankGlowstone.name=Glowstone Wood Planks
-tile.FergoTools:plankFergo.plankRedstone.name=Redstone Wood Planks
-
-tile.FergoTools:leavesFergo.obsidianLeaves.name=Obsidian Leaves
-tile.FergoTools:leavesFergo.emeraldLeaves.name=Emerald Leaves
-tile.FergoTools:leavesFergo.lapisLeaves.name=Lapis Leaves
-tile.FergoTools:leavesFergo.bronzeLeaves.name=Bronze Leaves
-tile.FergoTools:leavesFergo.coalLeaves.name=Coal Leaves
-tile.FergoTools:leavesFergo.glowstoneLeaves.name=Glowstone Leaves
-tile.FergoTools:leavesFergo.adamantiumLeaves.name=Adamantium Leaves
-tile.FergoTools:leavesFergo.silkLeaves.name=Silk Leaves
-tile.FergoTools:leavesFergo.redstoneLeaves.name=Redstone Leaves
-
-tile.FergoTools:saplingFergo.saplingObsidian.name=Obsidian Sapling
-tile.FergoTools:saplingFergo.saplingEmerald.name=Emerald Sapling
-tile.FergoTools:saplingFergo.saplingLapis.name=Lapis Sapling
-tile.FergoTools:saplingFergo.saplingBronze.name=Bronze Sapling
-tile.FergoTools:saplingFergo.saplingCoal.name=Coal Sapling
-tile.FergoTools:saplingFergo.saplingGlowstone.name=Glowstone Sapling
-tile.FergoTools:saplingFergo.saplingAdamantium.name=Adamantium Sapling
-tile.FergoTools:saplingFergo.saplingSilk.name=Silk Sapling
-tile.FergoTools:saplingFergo.saplingRedstone.name=Redstone Sapling
-
-tile.FergoTools:obsidianWorkbench.name=Obsidian Workbench
-tile.FergoTools:emeraldWorkbench.name=Emerald Workbench
-tile.FergoTools:lapisWorkbench.name=Lapis Workbench
-tile.FergoTools:bronzeWorkbench.name=Bronze Workbench
-tile.FergoTools:coalWorkbench.name=Coal Workbench
-tile.FergoTools:glowstoneWorkbench.name=Glowstone Workbench
-tile.FergoTools:adamantiumWorkbench.name=Adamantium Workbench
-tile.FergoTools:silkWorkbench.name=Silk Workbench
-tile.FergoTools:redstoneWorkbench.name=Redstone Workbench
-
-item.FergoTools:stickObsidian.name=Obsidian Stick
-item.FergoTools:stickEmerald.name=Emerald Stick
-item.FergoTools:stickLapis.name=Lapis Stick
-item.FergoTools:stickBronze.name=Bronze Stick
-item.FergoTools:stickCoal.name=Coal Stick
-item.FergoTools:stickGlowstone.name=Glowstone Stick
-item.FergoTools:stickAdamantium.name=Adamantium Stick
-item.FergoTools:stickSilk.name=Silk Stick
-item.FergoTools:stickRedstone.name=Redstone Stick
-
-# Crafting Materials
-item.FergoTools:shardExp.name=Experience Shard
-item.FergoTools:ingotObsidian.name=Obsidian Ingot
-item.FergoTools:gemEmerald.name=Emerald Crystal
-item.FergoTools:gemLapis.name=Lapis Crystal
-item.FergoTools:ingotBronze.name=Bronze Ingot
-item.FergoTools:ingotCoal.name=Coal Ingot
-item.FergoTools:ingotGlowstone.name=Glowstone Ingot
-item.FergoTools:ingotAdamantium.name=Adamantium Ingot
-item.FergoTools:gemSilk.name=Silk Gem
-item.FergoTools:gemRedstone.name=Red Crystal
-item.FergoTools:expCollector.name=Experience Collector
-
-item.FergoTools:staffExp.staffExp.name=Basic Staff of Experience
-item.FergoTools:staffExp.staffExp2.name=Greater Staff of Experience
-item.FergoTools:staffExp.staffExp3.name=Ultimate Staff of Experience
-
-item.FergoTools:gemExp.name=Experience Crystal
-item.FergoTools:gemExp2.name=Experience Crystal
-item.FergoTools:gemExp3.name=Experience Crystal
-
-item.FergoTools:quartzShears.name=Quartz Shears
-item.FergoTools:obsidianShears.name=Obsidian Shears
-item.FergoTools:emeraldShears.name=Emerald Shears
-item.FergoTools:lapisShears.name=Lapis Shears
-item.FergoTools:bronzeShears.name=Bronze Shears
-item.FergoTools:coalShears.name=Coal Shears
-item.FergoTools:glowstoneShears.name=Glowstone Shears
-item.FergoTools:adamantiumShears.name=Adamantium Shears
-item.FergoTools:silkShears.name=Silk Shears
-item.FergoTools:redstoneShears.name=Redstone Shears
-
-# Bows
-item.FergoTools:bowQuartz.name=Quartz Bow
-item.FergoTools:bowObsidian.name=Obsidian Bow
-item.FergoTools:bowEmerald.name=Emerald Bow
-item.FergoTools:bowLapis.name=Lapis Bow
-item.FergoTools:bowBronze.name=Bronze Bow
-item.FergoTools:bowCoal.name=Coal Bow
-item.FergoTools:bowGlowstone.name=Glowstone Bow
-item.FergoTools:bowAdamantium.name=Adamantium Bow
-
-# Furnaces
-tile.FergoTools:quartzFurnaceIdle.name=Quartz Furnace
-tile.FergoTools:obsidianFurnaceIdle.name=Obsidian Furnace
-tile.FergoTools:emeraldFurnaceIdle.name=Emerald Furnace
-tile.FergoTools:lapisFurnaceIdle.name=Lapis Furnace
-tile.FergoTools:bronzeFurnaceIdle.name=Bronze Furnace
-tile.FergoTools:coalFurnaceIdle.name=Coal Furnace
-tile.FergoTools:glowstoneFurnaceIdle.name=Glowstone Furnace
-tile.FergoTools:adamantiumFurnaceIdle.name=Adamantium Furnace
-tile.FergoTools:silkFurnaceIdle.name=Silk Furnace
-tile.FergoTools:redstoneFurnaceIdle.name=Redstone Furnace
-tile.FergoTools:maceratorIdle.name=Macerator
-
-tile.FergoTools:quartzFurnaceActive.name=Quartz Furnace
-tile.FergoTools:obsidianFurnaceActive.name=Obsidian Furnace
-tile.FergoTools:emeraldFurnaceActive.name=Emerald Furnace
-tile.FergoTools:lapisFurnaceActive.name=Lapis Furnace
-tile.FergoTools:bronzeFurnaceActive.name=Bronze Furnace
-tile.FergoTools:coalFurnaceActive.name=Coal Furnace
-tile.FergoTools:glowstoneFurnaceActive.name=Glowstone Furnace
-tile.FergoTools:adamantiumFurnaceActive.name=Adamantium Furnace
-tile.FergoTools:silkFurnaceActive.name=Silk Furnace
-tile.FergoTools:redstoneFurnaceActive.name=Redstone Furnace
-tile.FergoTools:maceratorActive.name=Macerator
-
-tile.FergoTools:logObsidian.name=Obsidian Wood
-tile.FergoTools:logEmerald.name=Emerald Wood
-tile.FergoTools:logLapis.name=Lapis Wood
-tile.FergoTools:logBronze.name=Bronze Wood
-tile.FergoTools:logCoal.name=Coal Wood
-tile.FergoTools:logGlowstone.name=Glowstone Wood
-tile.FergoTools:logAdamantium.name=Adamantium Wood
-tile.FergoTools:logSilk.name=Silk Wood
-tile.FergoTools:logRedstone.name=Redstone Wood
-
-tile.FergoTools:plankObsidian.name=Obsidian Wood Planks
-tile.FergoTools:plankEmerald.name=Emerald Wood Planks
-tile.FergoTools:plankLapis.name=Lapis Wood Planks
-tile.FergoTools:plankBronze.name=Bronze Wood Planks
-tile.FergoTools:plankCoal.name=Coal Wood Planks
-tile.FergoTools:plankGlowstone.name=Glowstone Wood Planks
-tile.FergoTools:plankAdamantium.name=Adamantium Wood Planks
-tile.FergoTools:plankSilk.name=Silk Wood Planks
-tile.FergoTools:plankRedstone.name=Redstone Wood Planks
-
-tile.FergoTools:stairObsidian.name=Obsidian Wood Stairs
-tile.FergoTools:stairEmerald.name=Emerald Wood Stairs
-tile.FergoTools:stairLapis.name=Lapis Wood Stairs
-tile.FergoTools:stairBronze.name=Bronze Wood Stairs
-tile.FergoTools:stairCoal.name=Coal Wood Stairs
-tile.FergoTools:stairGlowstone.name=Glowstone Wood Stairs
-tile.FergoTools:stairAdamantium.name=Adamantium Wood Stairs
-tile.FergoTools:stairSilk.name=Silk Wood Stairs
-tile.FergoTools:stairRedstone.name=Redstone Wood Stairs
-
-# Gui Containers
-container.FergoTools:quartzFurnace=Quartz Furnace
-container.FergoTools:obsidianFurnace=Obsidian Furnace
-container.FergoTools:emeraldFurnace=Emerald Furnace
-container.FergoTools:lapisFurnace=Lapis Furnace
-container.FergoTools:bronzeFurnace=Bronze Furnace
-container.FergoTools:coalFurnace=Coal Furnace
-container.FergoTools:glowstoneFurnace=Glowstone Furnace
-container.FergoTools:adamantiumFurnace=Adamantium Furnace
-container.FergoTools:silkFurnace=Silk Furnace
-container.FergoTools:redstoneFurnace=Redstone Furnace
-container.FergoTools:macerator=Macerator
-
-container.FergoTools:obsidianWorkbench=Obsidian Workbench
-container.FergoTools:emeraldWorkbench=Emerald Workbench
-container.FergoTools:lapisWorkbench=Lapis Workbench
-container.FergoTools:bronzeWorkbench=Bronze Workbench
-container.FergoTools:coalWorkbench=Coal Workbench
-container.FergoTools:glowstoneWorkbench=Glowstone Workbench
-container.FergoTools:adamantiumWorkbench=Adamantium Workbench
-container.FergoTools:silkWorkbench=Silk Workbench
-container.FergoTools:redstoneWorkbench=Redstone Workbench
-
-# Tool Tips
-tooltip.FergoTools:holdShift=<Hold Shift for Info>
-tooltip.FergoTools:adamantiumTool=NOTE: Extremely Overpowered!
-tooltip.FergoTools:adamantiumInfi=Durability: Infinity
-tooltip.FergoTools:expCollector=Used as a Crafting Item
-tooltip.FergoTools:shardExp=Right Click to Gain 1 Level of Exp
-tooltip.FergoTools:durability=Durability:
-tooltip.FergoTools:adminBlock=Admin Block
-
-tooltip.FergoTools:gemExp=Stores 5 Experience Levels
-tooltip.FergoTools:gemExp2=Stores 10 Experience Levels
-tooltip.FergoTools:gemExp3=Stores 30 Experience Levels
-tooltip.FergoTools:staffExp=Right Click to Store 5 Experience Levels
-tooltip.FergoTools:staffExp2=Right Click to Store 10 Experience Levels
-tooltip.FergoTools:staffExp3=Right Click to Store 30 Experience Levels
-
-tooltip.FergoTools:macerator=Only smelts Ores
-
-tooltip.FergoTools:reduct=Reduction Amount:
-
-tooltip.FergoTools:adamantium.abilities.helmet=Gives you Water Breathing and Saturation
-tooltip.FergoTools:adamantium.abilities.chest=Gives you Flight and Absorbtion
-tooltip.FergoTools:adamantium.abilities.legs=Gives you Jump Boost
-tooltip.FergoTools:adamantium.abilities.boots=Gives you Speed
-
-# Ore Dictionary
-oreDict.name=Ore Dictionary Name:
-
-oreDict.oreExperience=oreExperience
-oreDict.oreObsidian=oreObsidian
-oreDict.oreEmeraldCrystal=oreEmeraldCrystal
-oreDict.oreLapisCrystal=oreLapisCrystal
-oreDict.oreBronze=oreBronze
-oreDict.oreAdamantium=oreAdamantium
-oreDict.oreCrystalRed=oreCrystalRed
-
-oreDict.blockExperience=blockExperience
-oreDict.blockObsidian=blockObsidian
-oreDict.blockEmeraldCrystal=blockEmeraldCrystal
-oreDict.blockLapisCrystal=blockLapisCrystal
-oreDict.blockBronze=blockBronze
-oreDict.blockCoal=blockCoal
-oreDict.blockGlowstone=blockGlowstone
-oreDict.blockAdamantium=blockAdamantium
-oreDict.blockSilkGem=blockSilkGem
-oreDict.blockRedstoneCrystal=blockRedstoneCrystal
-
-oreDict.logWood=logWood
-oreDict.plankWood=plankWood
-oreDict.stairWood=stairWood
-oreDict.stickWood=stickWood
-
-oreDict.ingotObsidian=ingotObsidian
-oreDict.ingotBronze=ingotBronze
-oreDict.ingotCoal=ingotCoal
-oreDict.ingotGlowstone=ingotGlowstone
-oreDict.ingotAdamantium=ingotAdamantium
-oreDict.gemEmerald=gemEmerald
-oreDict.gemLapis=gemLapis
-oreDict.gemSilk=gemSilk
-oreDict.gemRedstone=gemRedstone
-oreDict.shardExp=shardExp
-
-# Furnace Speed
-furnace.speed.quartz=Furnace Speed: x1
-furnace.speed.obsidian=Furnace Speed: x1.15
-furnace.speed.emerald=Furnace Speed: x1.33
-furnace.speed.lapis=Furnace Speed: x1.6
-furnace.speed.bronze=Furnace Speed: x2
-furnace.speed.coal=Furnace Speed: x2.6
-furnace.speed.glowstone=Furnace Speed: x4
-furnace.speed.redstone=Furnace Speed: x8
-furnace.speed.silk=Furnace Speed: x20
-furnace.speed.adamantium=Furnace Speed: x40
-furnace.speed.macerator=Furnace Speed: x50
+fergotools.tooltip.shardexp=R-Click to recieve 1 Level of Experience
