@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.common.slot;
 
-import io.github.fergoman123.fergotools.common.tileentity.TileEntityQuartzFurnace;
+import io.github.fergoman123.fergotools.common.tileentity.TileQuartzFurnace;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -18,7 +18,7 @@ public class SlotQuartzFurnaceFuel extends Slot
      */
     public boolean isItemValid(ItemStack stack)
     {
-        return TileEntityQuartzFurnace.isItemFuel(stack) || isBucket(stack);
+        return TileQuartzFurnace.isItemFuel(stack) || isBucket(stack);
     }
 
     public int getItemStackLimit(ItemStack stack)

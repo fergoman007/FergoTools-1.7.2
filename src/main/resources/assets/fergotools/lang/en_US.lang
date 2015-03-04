@@ -57,6 +57,7 @@ tile.fergotools.quartzFurnaceIdle.name=Quartz Furnace
 tile.fergotools.quartzFurnaceActive.name=Quartz Furnace
 
 fergotools.container.quartzfurnace=Quartz Furnace
+fergotools.container.macerator=Macerator
 
 fergotools.toolmaterial=Tool Material:
 fergotools.usesleft=Uses Left:

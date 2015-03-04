@@ -2,6 +2,7 @@ package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.BlockFurnaceFT;
+import io.github.fergoman123.fergotools.common.tileentity.TileCoalFurnace;
 import io.github.fergoman123.fergotools.info.BlockNames;
 import io.github.fergoman123.fergotools.info.GuiIds;
 import io.github.fergoman123.fergotools.init.ModBlocks;
@@ -16,23 +17,22 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
-import io.github.fergoman123.fergotools.common.tileentity.TileQuartzFurnace;
 
 import java.util.Random;
 
-public class BlockQuartzFurnace extends BlockFurnaceFT
+public class BlockCoalFurnace extends BlockFurnaceFT
 {
-    public static final BlockQuartzFurnace idle = new BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
-    public static final BlockQuartzFurnace active = new BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
+    public static final BlockCoalFurnace idle = new BlockCoalFurnace(false, BlockNames.coalFurnaceIdle);
+    public static final BlockCoalFurnace active = new BlockCoalFurnace(true, BlockNames.coalFurnaceActive);
 
-    public BlockQuartzFurnace(boolean isActive, String name)
+    public BlockCoalFurnace(boolean isActive, String name)
     {
-        super(isActive, Material.rock, name);
+        super(isActive, Material.iron, name);
     }
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);
+        return Item.getItemFromBlock(ModBlocks.coalFurnaceIdle);
     }
 
     @Override
@@ -41,13 +41,13 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
         {
             return true;
         }
-        else if(!playerIn.isSneaking())
+        else if (!playerIn.isSneaking())
         {
-            TileQuartzFurnace furnace = (TileQuartzFurnace)worldIn.getTileEntity(pos);
+            TileCoalFurnace furnace = (TileCoalFurnace)worldIn.getTileEntity(pos);
             if (furnace != null)
             {
-                playerIn.openGui(FergoTools.instance, GuiIds.quartzFurnace.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
-                FergoTools.getLogger().info("Open Quartz Furnace");
+                playerIn.openGui(FergoTools.instance, GuiIds.coalFurnace.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
+                FergoTools.getLogger().info("Open Coal Furnace");
             }
             return true;
         }
@@ -60,25 +60,26 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
     public static void setState(boolean active, World world, BlockPos pos)
     {
         IBlockState state = world.getBlockState(pos);
-        TileEntity tileEntity = world.getTileEntity(pos);
+        TileEntity tile = world.getTileEntity(pos);
         keepInventory = true;
 
         if (active)
         {
-            world.setBlockState(pos, ModBlocks.quartzFurnaceActive.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
-            world.setBlockState(pos, ModBlocks.quartzFurnaceActive.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
+            world.setBlockState(pos, ModBlocks.coalFurnaceActive.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
+            world.setBlockState(pos, ModBlocks.coalFurnaceActive.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
         }
         else
         {
-            world.setBlockState(pos, ModBlocks.quartzFurnaceIdle.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
-            world.setBlockState(pos, ModBlocks.quartzFurnaceIdle.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
+            world.setBlockState(pos, ModBlocks.coalFurnaceIdle.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
+            world.setBlockState(pos, ModBlocks.coalFurnaceIdle.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
         }
 
         keepInventory = false;
 
-        if (tileEntity != null) {
-            tileEntity.validate();
-            world.setTileEntity(pos, tileEntity);
+        if (tile != null)
+        {
+            tile.validate();
+            world.setTileEntity(pos, tile);
         }
     }
 
@@ -86,7 +87,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
         if (!keepInventory)
         {
-            TileQuartzFurnace furnace = (TileQuartzFurnace)worldIn.getTileEntity(pos);
+            TileCoalFurnace furnace = (TileCoalFurnace)worldIn.getTileEntity(pos);
             if (furnace != null)
             {
                 InventoryHelper.dropInventoryItems(worldIn, pos, furnace);
@@ -98,7 +99,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
     @Override
     public TileEntity createNewTileEntity(World world, int meta) {
-        return new TileQuartzFurnace();
+        return new TileCoalFurnace();
     }
 
     @Override
@@ -107,12 +108,12 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
         if (stack.hasDisplayName())
         {
-            ((TileQuartzFurnace)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
+            ((TileCoalFurnace)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
         }
     }
 
     @Override
     public Item getItem(World world, BlockPos pos) {
-        return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);
+        return Item.getItemFromBlock(ModBlocks.coalFurnaceIdle);
     }
 }

@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.common.inventory;
 
 import io.github.fergoman123.fergotools.common.slot.SlotQuartzFurnaceFuel;
-import io.github.fergoman123.fergotools.common.tileentity.TileEntityQuartzFurnace;
+import io.github.fergoman123.fergotools.common.tileentity.TileQuartzFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
@@ -127,7 +127,7 @@ public class ContainerQuartzFurnace extends Container
                         return null;
                     }
                 }
-                else if (TileEntityQuartzFurnace.isItemFuel(itemstack1))
+                else if (TileQuartzFurnace.isItemFuel(itemstack1))
                 {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false))
                     {

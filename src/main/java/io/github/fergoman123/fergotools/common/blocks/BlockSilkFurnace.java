@@ -2,9 +2,11 @@ package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.BlockFurnaceFT;
+import io.github.fergoman123.fergotools.common.tileentity.TileSilkFurnace;
 import io.github.fergoman123.fergotools.info.BlockNames;
 import io.github.fergoman123.fergotools.info.GuiIds;
 import io.github.fergoman123.fergotools.init.ModBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,23 +18,22 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
-import io.github.fergoman123.fergotools.common.tileentity.TileQuartzFurnace;
 
 import java.util.Random;
 
-public class BlockQuartzFurnace extends BlockFurnaceFT
+public class BlockSilkFurnace extends BlockFurnaceFT
 {
-    public static final BlockQuartzFurnace idle = new BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
-    public static final BlockQuartzFurnace active = new BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
+    public static final Block idle = new BlockSilkFurnace(false, BlockNames.silkFurnaceIdle);
+    public static final Block active = new BlockSilkFurnace(true, BlockNames.silkFurnaceActive);
 
-    public BlockQuartzFurnace(boolean isActive, String name)
+    public BlockSilkFurnace(boolean isActive, String name)
     {
-        super(isActive, Material.rock, name);
+        super(isActive, Material.iron, name);
     }
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);
+        return Item.getItemFromBlock(ModBlocks.silkFurnaceIdle);
     }
 
     @Override
@@ -43,7 +44,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
         }
         else if(!playerIn.isSneaking())
         {
-            TileQuartzFurnace furnace = (TileQuartzFurnace)worldIn.getTileEntity(pos);
+            TileSilkFurnace furnace = (TileSilkFurnace)worldIn.getTileEntity(pos);
             if (furnace != null)
             {
                 playerIn.openGui(FergoTools.instance, GuiIds.quartzFurnace.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
@@ -70,7 +71,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
         }
         else
         {
-            world.setBlockState(pos, ModBlocks.quartzFurnaceIdle.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
+            world.setBlockState(pos, ModBlocks.silkFurnaceIdle.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
             world.setBlockState(pos, ModBlocks.quartzFurnaceIdle.getDefaultState().withProperty(FACING, state.getValue(FACING)), 3);
         }
 
@@ -86,7 +87,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
         if (!keepInventory)
         {
-            TileQuartzFurnace furnace = (TileQuartzFurnace)worldIn.getTileEntity(pos);
+            TileSilkFurnace furnace = (TileSilkFurnace)worldIn.getTileEntity(pos);
             if (furnace != null)
             {
                 InventoryHelper.dropInventoryItems(worldIn, pos, furnace);
@@ -98,7 +99,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
     @Override
     public TileEntity createNewTileEntity(World world, int meta) {
-        return new TileQuartzFurnace();
+        return new TileSilkFurnace();
     }
 
     @Override
@@ -107,7 +108,7 @@ public class BlockQuartzFurnace extends BlockFurnaceFT
 
         if (stack.hasDisplayName())
         {
-            ((TileQuartzFurnace)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
+            ((TileSilkFurnace)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
         }
     }
 

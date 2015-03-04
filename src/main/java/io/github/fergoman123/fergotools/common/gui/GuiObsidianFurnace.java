@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.common.gui;
 
-import io.github.fergoman123.fergotools.common.inventory.ContainerMacerator;
-import io.github.fergoman123.fergotools.common.tileentity.TileMacerator;
+import io.github.fergoman123.fergotools.common.inventory.ContainerObsidianFurnace;
+import io.github.fergoman123.fergotools.common.tileentity.TileObsidianFurnace;
 import io.github.fergoman123.fergotools.info.Textures;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -9,22 +9,21 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 
-public class GuiMacerator extends GuiContainer
+public class GuiObsidianFurnace extends GuiContainer
 {
     private final InventoryPlayer invPlayer;
     private IInventory furnace;
 
-
-    public GuiMacerator(InventoryPlayer invPlayer, IInventory furnace)
+    public GuiObsidianFurnace(InventoryPlayer invPlayer, IInventory furnace)
     {
-        super(new ContainerMacerator(invPlayer, furnace));
+        super(new ContainerObsidianFurnace(invPlayer, furnace));
         this.invPlayer = invPlayer;
         this.furnace = furnace;
     }
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        String s = NameHelper.translate(this.furnace.getDisplayName().getUnformattedText());
+        String s = NameHelper.translate(this.furnace.getDisplayName().getFormattedText());
         fontRendererObj.drawString(s, this.xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
         fontRendererObj.drawString(this.invPlayer.getDisplayName().getUnformattedText(), 8, this.ySize - 126 + 2, 4210752);
     }
@@ -32,19 +31,20 @@ public class GuiMacerator extends GuiContainer
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
     {
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(Textures.maceratorGui);
-        int k = (this.width - this.xSize) / 2;
-        int l = (this.height - this.ySize) / 2;
-        this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
+        this.mc.getTextureManager().bindTexture(Textures.obsidianFurnaceGui);
+        int startX = (this.width - this.xSize) / 2;
+        int startY = (this.height - this.ySize) / 2;
+        this.drawTexturedModalRect(startX, startY, 0, 0, this.xSize, this.ySize);
+        int i1;
 
-        if (TileMacerator.isBurning(this.furnace))
+        if (TileObsidianFurnace.isBurning(this.furnace))
         {
-            int cookTime = this.getBurmTimeRemainingScaled(13);
-            this.drawTexturedModalRect(k + 25, l + 24 + 12 - cookTime, 176, 12 - cookTime, 13, cookTime + 1);
+            i1 = this.getBurmTimeRemainingScaled(13);
+            this.drawTexturedModalRect(startX + 25, startY + 24 + 12 - i1, 176, 12 - i1, 13, i1 + 1);
         }
 
-        int scaleAdjustment = this.getCookProgressScaled(24);
-        this.drawTexturedModalRect(k + 80, l + 21, 176, 14, scaleAdjustment + 1, 16);
+        i1 = this.getCookProgressScaled(24);
+        this.drawTexturedModalRect(startX + 80, startY + 21, 176, 14, i1 + 1, 16);
     }
 
     private int getCookProgressScaled(int p_175381_1_)

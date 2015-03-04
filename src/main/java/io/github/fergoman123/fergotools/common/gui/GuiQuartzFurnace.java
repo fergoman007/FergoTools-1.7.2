@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.common.gui;
 
 import io.github.fergoman123.fergotools.common.inventory.ContainerQuartzFurnace;
-import io.github.fergoman123.fergotools.common.tileentity.TileEntityQuartzFurnace;
+import io.github.fergoman123.fergotools.common.tileentity.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.info.Textures;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -37,7 +37,7 @@ public class GuiQuartzFurnace extends GuiContainer
         this.drawTexturedModalRect(startX, startY, 0, 0, this.xSize, this.ySize);
         int i1;
 
-        if (TileEntityQuartzFurnace.isBurning(this.furnace))
+        if (TileQuartzFurnace.isBurning(this.furnace))
         {
             i1 = this.getBurmTimeRemainingScaled(13);
             this.drawTexturedModalRect(startX + 25, startY + 24 + 12 - i1, 176, 12 - i1, 13, i1 + 1);

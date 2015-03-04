@@ -3,13 +3,14 @@ package io.github.fergoman123.fergotools.init;
 import io.github.fergoman123.fergotools.api.BlockOreBlockFT;
 import io.github.fergoman123.fergotools.api.BlockOreItemFT;
 import io.github.fergoman123.fergotools.api.BlockStorageFT;
-import io.github.fergoman123.fergotools.common.blocks.BlockMacerator;
-import io.github.fergoman123.fergotools.common.blocks.BlockQuartzFurnace;
+import io.github.fergoman123.fergotools.common.blocks.*;
 import io.github.fergoman123.fergotools.info.BlockNames;
 import io.github.fergoman123.fergotools.info.ModInfo;
 import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks
 {
@@ -91,11 +92,20 @@ public class ModBlocks
         blockGemSilk = new BlockStorageFT(BlockNames.blockGemSilk);
         blockGemRedstone = new BlockStorageFT(BlockNames.blockGemRedstone);
 
-        quartzFurnaceIdle = new BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
-        quartzFurnaceActive = new BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
+        quartzFurnaceIdle = BlockQuartzFurnace.idle;
+        quartzFurnaceActive = BlockQuartzFurnace.active;
 
-        maceratorIdle = new BlockMacerator(false, BlockNames.maceratorIdle);
-        maceratorActive = new BlockMacerator(true, BlockNames.maceratorActive);
+        obsidianFurnaceIdle = BlockObsidianFurnace.idle;
+        obsidianFurnaceActive = BlockObsidianFurnace.active;
+
+        silkFurnaceIdle = BlockSilkFurnace.idle;
+        silkFurnaceActive = BlockSilkFurnace.active;
+
+        redstoneFurnaceIdle = BlockRedstoneFurnace.idle;
+        redstoneFurnaceActive = BlockRedstoneFurnace.active;
+
+        maceratorIdle = BlockMacerator.idle;
+        maceratorActive = BlockMacerator.active;
     }
 
     public static void register()
@@ -140,5 +150,4 @@ public class ModBlocks
     {
         RegisterHelper.registerBlock(block, itemBlock, ModInfo.modid, name, modelNames);
     }
-
 }

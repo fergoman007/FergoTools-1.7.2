@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.common.slot;
 
-import io.github.fergoman123.fergotools.common.tileentity.TileEntityMacerator;
+import io.github.fergoman123.fergotools.common.tileentity.TileMacerator;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -13,7 +13,7 @@ public class SlotMaceratorFuel extends Slot {
 
     @Override
     public boolean isItemValid(ItemStack stack) {
-        return TileEntityMacerator.isItemFuel(stack) || isBucket(stack);
+        return TileMacerator.isItemFuel(stack) || isBucket(stack);
     }
 
     @Override

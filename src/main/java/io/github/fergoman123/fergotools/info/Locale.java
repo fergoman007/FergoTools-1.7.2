@@ -54,5 +54,5 @@ public class Locale
     public static final String containerAdamantiumFurnace = "fergotools.container.adamantiumfurnace";
     public static final String containerSilkFurnace = "fergotools.container.silkfurnace";
     public static final String containerRedstoneFurnace = "fergotools.container.redstonefurnace";
-    public static final String containerMacerator = "fergotools.container.maceratorfurnace";
+    public static final String containerMacerator = "fergotools.container.macerator";
 }

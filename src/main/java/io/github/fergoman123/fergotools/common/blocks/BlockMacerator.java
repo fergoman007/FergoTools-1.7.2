@@ -2,8 +2,8 @@ package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.BlockFurnaceFT;
-import io.github.fergoman123.fergotools.common.tileentity.TileEntityMacerator;
-import io.github.fergoman123.fergotools.common.tileentity.TileEntityQuartzFurnace;
+import io.github.fergoman123.fergotools.common.tileentity.TileMacerator;
+import io.github.fergoman123.fergotools.info.BlockNames;
 import io.github.fergoman123.fergotools.info.GuiIds;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import net.minecraft.block.material.Material;
@@ -22,6 +22,9 @@ import java.util.Random;
 
 public class BlockMacerator extends BlockFurnaceFT
 {
+    public static final BlockMacerator idle = new BlockMacerator(false, BlockNames.maceratorIdle);
+    public static final BlockMacerator active = new BlockMacerator(true, BlockNames.maceratorActive);
+
     public BlockMacerator(boolean isActive, String name)
     {
         super(isActive, Material.rock, name);
@@ -40,11 +43,11 @@ public class BlockMacerator extends BlockFurnaceFT
         }
         else if(!playerIn.isSneaking())
         {
-            TileEntityMacerator furnace = (TileEntityMacerator)worldIn.getTileEntity(pos);
+            TileMacerator furnace = (TileMacerator)worldIn.getTileEntity(pos);
             if (furnace != null)
             {
                 playerIn.openGui(FergoTools.instance, GuiIds.macerator.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
-                FergoTools.getLogger().info("Open Quartz Furnace");
+                FergoTools.getLogger().info("Open Macerator");
             }
             return true;
         }
@@ -83,7 +86,7 @@ public class BlockMacerator extends BlockFurnaceFT
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
         if (!keepInventory)
         {
-            TileEntityMacerator furnace = (TileEntityMacerator)worldIn.getTileEntity(pos);
+            TileMacerator furnace = (TileMacerator)worldIn.getTileEntity(pos);
             if (furnace != null)
             {
                 InventoryHelper.dropInventoryItems(worldIn, pos, furnace);
@@ -95,7 +98,7 @@ public class BlockMacerator extends BlockFurnaceFT
 
     @Override
     public TileEntity createNewTileEntity(World world, int meta) {
-        return new TileEntityMacerator();
+        return new TileMacerator();
     }
 
     @Override
@@ -104,7 +107,7 @@ public class BlockMacerator extends BlockFurnaceFT
 
         if (stack.hasDisplayName())
         {
-            ((TileEntityMacerator)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
+            ((TileMacerator)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
         }
     }
 

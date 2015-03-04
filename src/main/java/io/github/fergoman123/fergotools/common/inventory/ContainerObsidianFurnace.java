@@ -1,33 +1,30 @@
 package io.github.fergoman123.fergotools.common.inventory;
 
-import io.github.fergoman123.fergotools.common.slot.SlotMaceratorFuel;
-import io.github.fergoman123.fergotools.common.slot.SlotMaceratorOutput;
-import io.github.fergoman123.fergotools.common.tileentity.TileMacerator;
-import io.github.fergoman123.fergotools.item.crafting.MaceratorRecipes;
+import io.github.fergoman123.fergotools.common.slot.SlotQuartzFurnaceFuel;
+import io.github.fergoman123.fergotools.common.tileentity.TileObsidianFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ICrafting;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ContainerMacerator extends Container {
-
-    private final IInventory furnace;
+public class ContainerObsidianFurnace extends Container
+{
+    private final IInventory tileFurnace;
     private int field_178152_f;
     private int field_178153_g;
     private int field_178154_h;
     private int field_178155_i;
+    private static final String __OBFID = "CL_00001748";
 
-    public ContainerMacerator(InventoryPlayer invPlayer, IInventory furnace)
+    public ContainerObsidianFurnace(InventoryPlayer invPlayer, IInventory furnace)
     {
-        this.furnace = furnace;
+        this.tileFurnace = furnace;
         this.addSlotToContainer(new Slot(furnace, 0, 62, 22));
-        this.addSlotToContainer(new SlotMaceratorFuel(furnace, 1, 42, 22));
-        this.addSlotToContainer(new SlotMaceratorOutput(invPlayer.player, furnace, 2, 110, 22));
+        this.addSlotToContainer(new SlotQuartzFurnaceFuel(furnace, 1, 42, 22));
+        this.addSlotToContainer(new SlotFurnaceOutput(invPlayer.player, furnace, 2, 110, 22));
         int i;
 
         for (i = 0; i < 3; ++i)
@@ -47,7 +44,7 @@ public class ContainerMacerator extends Container {
     public void onCraftGuiOpened(ICrafting listener)
     {
         super.onCraftGuiOpened(listener);
-        listener.func_175173_a(this, this.furnace);
+        listener.func_175173_a(this, this.tileFurnace);
     }
 
     /**
@@ -61,42 +58,42 @@ public class ContainerMacerator extends Container {
         {
             ICrafting icrafting = (ICrafting)this.crafters.get(i);
 
-            if (this.field_178152_f != this.furnace.getField(2))
+            if (this.field_178152_f != this.tileFurnace.getField(2))
             {
-                icrafting.sendProgressBarUpdate(this, 2, this.furnace.getField(2));
+                icrafting.sendProgressBarUpdate(this, 2, this.tileFurnace.getField(2));
             }
 
-            if (this.field_178154_h != this.furnace.getField(0))
+            if (this.field_178154_h != this.tileFurnace.getField(0))
             {
-                icrafting.sendProgressBarUpdate(this, 0, this.furnace.getField(0));
+                icrafting.sendProgressBarUpdate(this, 0, this.tileFurnace.getField(0));
             }
 
-            if (this.field_178155_i != this.furnace.getField(1))
+            if (this.field_178155_i != this.tileFurnace.getField(1))
             {
-                icrafting.sendProgressBarUpdate(this, 1, this.furnace.getField(1));
+                icrafting.sendProgressBarUpdate(this, 1, this.tileFurnace.getField(1));
             }
 
-            if (this.field_178153_g != this.furnace.getField(3))
+            if (this.field_178153_g != this.tileFurnace.getField(3))
             {
-                icrafting.sendProgressBarUpdate(this, 3, this.furnace.getField(3));
+                icrafting.sendProgressBarUpdate(this, 3, this.tileFurnace.getField(3));
             }
         }
 
-        this.field_178152_f = this.furnace.getField(2);
-        this.field_178154_h = this.furnace.getField(0);
-        this.field_178155_i = this.furnace.getField(1);
-        this.field_178153_g = this.furnace.getField(3);
+        this.field_178152_f = this.tileFurnace.getField(2);
+        this.field_178154_h = this.tileFurnace.getField(0);
+        this.field_178155_i = this.tileFurnace.getField(1);
+        this.field_178153_g = this.tileFurnace.getField(3);
     }
 
     @SideOnly(Side.CLIENT)
     public void updateProgressBar(int id, int data)
     {
-        this.furnace.setField(id, data);
+        this.tileFurnace.setField(id, data);
     }
 
     public boolean canInteractWith(EntityPlayer playerIn)
     {
-        return this.furnace.isUseableByPlayer(playerIn);
+        return this.tileFurnace.isUseableByPlayer(playerIn);
     }
 
     /**
@@ -123,14 +120,14 @@ public class ContainerMacerator extends Container {
             }
             else if (index != 1 && index != 0)
             {
-                if (MaceratorRecipes.instance().getSmeltingResult(itemstack1) != null)
+                if (FurnaceRecipes.instance().getSmeltingResult(itemstack1) != null)
                 {
                     if (!this.mergeItemStack(itemstack1, 0, 1, false))
                     {
                         return null;
                     }
                 }
-                else if (TileMacerator.isItemFuel(itemstack1))
+                else if (TileObsidianFurnace.isItemFuel(itemstack1))
                 {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false))
                     {
