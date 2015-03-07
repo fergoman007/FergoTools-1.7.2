@@ -15,7 +15,8 @@ package io.github.fergoman123.fergotools.info;
 {
     public static final String modid = "FergoTools";
     public static final String name = "Fergoman123's Tools";
-    public static final String version = "1.8-2.0";
+    public static final String mcVersion = "1.8.0";
+    public static final String version = "2.0.0";
     public static final String author = "Fergoman123";
     public static final List<String> authors = Arrays.asList(author);
     public static final String url = "fergoman123.github.io";

@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "facing=north": {"model": "fergotools:maceratorActive"},
+    "facing=south": {"model": "fergotools:maceratorActive", "y": 180},
+    "facing=west":  {"model": "fergotools:maceratorActive", "y": 270},
+    "facing=east":  {"model": "fergotools:maceratorActive", "y": 90}
+  }
+}

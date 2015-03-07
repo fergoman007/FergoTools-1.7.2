@@ -1,0 +1,8 @@
+{
+  "veriants":{
+    "facing=north": {"model": "fergotools:maceratorIdle"},
+    "facing=south": {"model": "fergotools:maceratorIdle", "y": 180},
+    "facing=west":  {"model": "fergotools:maceratorIdle", "y": 270},
+    "facing=east":  {"model": "fergotools:maceratorIdle", "y": 90}
+  }
+}

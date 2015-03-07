@@ -44,6 +44,13 @@ public class Locale
         public static final String redstone = "material.redstone";
     }
 
+    public static final class Furnace
+    {
+        public static final String material = "fergotools.furnace.blockmaterial";
+        public static final String state = "fergotools.furnace.blockstate";
+        public static final String speed = "fergotools.furnace.speed";
+    }
+
     public static final String containerQuartzFurnace = "fergotools.container.quartzfurnace";
     public static final String containerObsidianFurnace = "fergotools.container.obsidianfurnace";
     public static final String containerEmeraldFurnace = "fergotools.container.emeraldfurnace";
@@ -55,4 +62,6 @@ public class Locale
     public static final String containerSilkFurnace = "fergotools.container.silkfurnace";
     public static final String containerRedstoneFurnace = "fergotools.container.redstonefurnace";
     public static final String containerMacerator = "fergotools.container.macerator";
+
+    public static final String containerInventory = "container.inventory";
 }

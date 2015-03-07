@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "facing=north": {"model": "fergotools:redstoneFurnaceActive"},
+    "facing=south": {"model": "fergotools:redstoneFurnaceActive", "y": 180},
+    "facing=west":  {"model": "fergotools:redstoneFurnaceActive", "y": 270},
+    "facing=east":  {"model": "fergotools:redstoneFurnaceActive", "y": 90}
+  }
+}

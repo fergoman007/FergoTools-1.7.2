@@ -3,14 +3,12 @@ package io.github.fergoman123.fergotools.init;
 import io.github.fergoman123.fergotools.api.BlockOreBlockFT;
 import io.github.fergoman123.fergotools.api.BlockOreItemFT;
 import io.github.fergoman123.fergotools.api.BlockStorageFT;
-import io.github.fergoman123.fergotools.common.blocks.*;
+import io.github.fergoman123.fergotools.common.furnace.*;
 import io.github.fergoman123.fergotools.info.BlockNames;
 import io.github.fergoman123.fergotools.info.ModInfo;
 import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import scala.tools.nsc.typechecker.Namers$class;
 
 public class ModBlocks
 {
@@ -92,20 +90,38 @@ public class ModBlocks
         blockGemSilk = new BlockStorageFT(BlockNames.blockGemSilk);
         blockGemRedstone = new BlockStorageFT(BlockNames.blockGemRedstone);
 
-        quartzFurnaceIdle = BlockQuartzFurnace.idle;
-        quartzFurnaceActive = BlockQuartzFurnace.active;
+        quartzFurnaceIdle = new QuartzFurnace.BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
+        quartzFurnaceActive = new QuartzFurnace.BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
 
-        obsidianFurnaceIdle = BlockObsidianFurnace.idle;
-        obsidianFurnaceActive = BlockObsidianFurnace.active;
+        obsidianFurnaceIdle = new ObsidianFurnace.BlockObsidianFurnace(false, BlockNames.obsidianFurnaceIdle);
+        obsidianFurnaceActive = new ObsidianFurnace.BlockObsidianFurnace(true, BlockNames.obsidianFurnaceActive);
 
-        silkFurnaceIdle = BlockSilkFurnace.idle;
-        silkFurnaceActive = BlockSilkFurnace.active;
+        emeraldFurnaceIdle = new EmeraldFurnace.BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
+        emeraldFurnaceActive = new EmeraldFurnace.BlockEmeraldFurnace(true, BlockNames.emeraldFurnaceActive);
 
-        redstoneFurnaceIdle = BlockRedstoneFurnace.idle;
-        redstoneFurnaceActive = BlockRedstoneFurnace.active;
+        lapisFurnaceIdle = new LapisFurnace.BlockLapisFurnace(false, BlockNames.lapisFurnaceIdle);
+        lapisFurnaceActive = new LapisFurnace.BlockLapisFurnace(true, BlockNames.lapisFurnaceActive);
 
-        maceratorIdle = BlockMacerator.idle;
-        maceratorActive = BlockMacerator.active;
+        bronzeFurnaceIdle = new BronzeFurnace.BlockBronzeFurnace(false, BlockNames.bronzeFurnaceIdle);
+        bronzeFurnaceActive = new BronzeFurnace.BlockBronzeFurnace(true, BlockNames.bronzeFurnaceActive);
+
+        coalFurnaceIdle = new CoalFurnace.BlockCoalFurnace(false, BlockNames.coalFurnaceIdle);
+        coalFurnaceActive = new CoalFurnace.BlockCoalFurnace(true, BlockNames.coalFurnaceActive);
+
+        glowstoneFurnaceIdle = new GlowstoneFurnace.BlockGlowstoneFurnace(false, BlockNames.glowstoneFurnaceIdle);
+        glowstoneFurnaceActive = new GlowstoneFurnace.BlockGlowstoneFurnace(true, BlockNames.glowstoneFurnaceActive);
+
+        adamantiumFurnaceIdle = new AdamantiumFurnace.BlockAdamantiumFurnace(false, BlockNames.adamantiumFurnaceIdle);
+        adamantiumFurnaceActive = new AdamantiumFurnace.BlockAdamantiumFurnace(true, BlockNames.adamantiumFurnaceActive);
+
+        silkFurnaceIdle = new SilkFurnace.BlockSilkFurnace(false, BlockNames.silkFurnaceIdle);
+        silkFurnaceActive = new SilkFurnace.BlockSilkFurnace(true, BlockNames.silkFurnaceActive);
+
+        redstoneFurnaceIdle = new RedstoneFurnace.BlockRedstoneFurnace(false, BlockNames.redstoneFurnaceIdle);
+        redstoneFurnaceActive = new RedstoneFurnace.BlockRedstoneFurnace(true, BlockNames.redstoneFurnaceActive);
+
+        maceratorIdle = new Macerator.BlockMacerator(false, BlockNames.maceratorIdle);
+        maceratorActive = new Macerator.BlockMacerator(true, BlockNames.maceratorActive);
     }
 
     public static void register()
@@ -133,21 +149,38 @@ public class ModBlocks
         registerBlock(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
         registerBlock(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
 
+        registerBlock(obsidianFurnaceIdle, BlockNames.obsidianFurnaceIdle);
+        registerBlock(obsidianFurnaceActive, BlockNames.obsidianFurnaceActive);
+
+        registerBlock(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
+        registerBlock(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
+
+        registerBlock(lapisFurnaceIdle, BlockNames.lapisFurnaceIdle);
+        registerBlock(lapisFurnaceActive, BlockNames.lapisFurnaceActive);
+
+        registerBlock(bronzeFurnaceIdle, BlockNames.bronzeFurnaceIdle);
+        registerBlock(bronzeFurnaceActive, BlockNames.bronzeFurnaceActive);
+
+        registerBlock(coalFurnaceIdle, BlockNames.coalFurnaceIdle);
+        registerBlock(coalFurnaceActive, BlockNames.coalFurnaceActive);
+
+        registerBlock(glowstoneFurnaceIdle, BlockNames.glowstoneFurnaceIdle);
+        registerBlock(glowstoneFurnaceActive, BlockNames.glowstoneFurnaceActive);
+
+        registerBlock(adamantiumFurnaceIdle, BlockNames.adamantiumFurnaceIdle);
+        registerBlock(adamantiumFurnaceActive, BlockNames.adamantiumFurnaceActive);
+
+        registerBlock(silkFurnaceIdle, BlockNames.silkFurnaceIdle);
+        registerBlock(silkFurnaceActive, BlockNames.silkFurnaceActive);
+
+        registerBlock(redstoneFurnaceIdle, BlockNames.redstoneFurnaceIdle);
+        registerBlock(redstoneFurnaceActive, BlockNames.redstoneFurnaceActive);
+
         registerBlock(maceratorIdle, BlockNames.maceratorIdle);
         registerBlock(maceratorActive, BlockNames.maceratorActive);
     }
 
-    public static void registerBlock(Block block, Class<? extends ItemBlock> itemBlock, String name)
-    {
-        RegisterHelper.registerBlock(block, itemBlock, ModInfo.modid, name);
-    }
-
     public static void registerBlock(Block block, String name){
         RegisterHelper.registerBlock(block, ModInfo.modid, name);
-    }
-
-    public static void registerBlock(Block block, Class<? extends ItemBlock> itemBlock, String name, String[] modelNames)
-    {
-        RegisterHelper.registerBlock(block, itemBlock, ModInfo.modid, name, modelNames);
     }
 }

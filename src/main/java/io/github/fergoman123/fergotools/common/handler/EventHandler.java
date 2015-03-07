@@ -1,10 +1,12 @@
 package io.github.fergoman123.fergotools.common.handler;
 
 import io.github.fergoman123.fergotools.api.*;
+import io.github.fergoman123.fergotools.common.furnace.QuartzFurnace;
 import io.github.fergoman123.fergotools.common.items.ItemExpShard;
 import io.github.fergoman123.fergotools.common.items.ItemStaffExp;
 import io.github.fergoman123.fergotools.info.ItemNames;
 import io.github.fergoman123.fergotools.info.Locale;
+import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
@@ -197,6 +199,15 @@ public class EventHandler
                     list.add(NameHelper.translate(Locale.eff) + " " +  sword.getToolMaterial().getEfficiencyOnProperMaterial());
                     list.add(NameHelper.translate(Locale.damagevsentity) + " " + sword.getToolMaterial());
                     list.add(NameHelper.translate(Locale.enchantability) + " " +  sword.getToolMaterial().getEnchantability());
+                }
+
+                if (block instanceof QuartzFurnace.BlockQuartzFurnace)
+                {
+                    QuartzFurnace.BlockQuartzFurnace quartzFurnace = (QuartzFurnace.BlockQuartzFurnace)block;
+
+                    list.add(NameHelper.translate(Locale.Furnace.material) + " " + quartzFurnace.getMaterial().toString());
+                    list.add(NameHelper.translate(Locale.Furnace.state) + " " + (quartzFurnace.getIsActive() ? "Active" : "Idle"));
+                    list.add(NameHelper.translate(Locale.Furnace.speed) + " " + 200 * 200 + "x");
                 }
             }
         }

@@ -31,7 +31,7 @@ public class BlockNames
     public static final String emeraldFurnaceIdle = "emeraldFurnaceIdle";
     public static final String emeraldFurnaceActive = "emeraldFurnaceActive";
 
-    public static final String lapisFurnaceIdle = "emeraldFurnaceIdle";
+    public static final String lapisFurnaceIdle = "lapisFurnaceIdle";
     public static final String lapisFurnaceActive = "lapisFurnaceActive";
 
     public static final String bronzeFurnaceIdle = "bronzeFurnaceIdle";

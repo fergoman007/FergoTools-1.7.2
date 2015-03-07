@@ -49,16 +49,18 @@ public class FurnaceConstants
 
     public static final class Tile
     {
-        public static final String quartzFurnace = "fergotools.quartzfurnace";
-        public static final String obsidianFurnace = "fergotools.obsidianfurnace";
-        public static final String emeraldFurnace = "fergotools.emeraldFurnace";
-        public static final String lapisFurnace = "fergotools.lapisfurnace";
-        public static final String bronzeFurnace = "fergotools.bronzefurnace";
-        public static final String coalFurnace = "fergotools.coalfurnace";
-        public static final String glowstoneFurnace = "fergotools.glowstonefurnace";
-        public static final String adamantiumFurnace = "fergotools.adamantiumfurnace";
-        public static final String silkFurnace = "fergotools.silkfurnace";
-        public static final String redstoneFurnace = "fergotools.redstonefurnace";
-        public static final String macerator = "fergotools.macerator";
+        public static final String quartzFurnace = "quartzfurnace";
+        public static final String obsidianFurnace = "obsidianfurnace";
+        public static final String emeraldFurnace = "emeraldFurnace";
+        public static final String lapisFurnace = "lapisfurnace";
+        public static final String bronzeFurnace = "bronzefurnace";
+        public static final String coalFurnace = "coalfurnace";
+        public static final String glowstoneFurnace = "glowstonefurnace";
+        public static final String adamantiumFurnace = "adamantiumfurnace";
+        public static final String silkFurnace = "silkfurnace";
+        public static final String redstoneFurnace = "redstonefurnace";
+        public static final String macerator = "macerator";
+
+        public static final String[] list = {quartzFurnace, obsidianFurnace, emeraldFurnace, lapisFurnace, bronzeFurnace, coalFurnace, glowstoneFurnace, adamantiumFurnace, silkFurnace, redstoneFurnace, macerator};
     }
 }
