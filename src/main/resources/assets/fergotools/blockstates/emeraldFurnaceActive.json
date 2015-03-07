@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "facing=north": {"model": "fergotools:emeraldFurnaceActive"},
+    "facing=south": {"model": "fergotools:emeraldFurnaceActive", "y": 180},
+    "facing=west":  {"model": "fergotools:emeraldFurnaceActive", "y": 270},
+    "facing=east":  {"model": "fergotools:emeraldFurnaceActive", "y": 90}
+  }
+}

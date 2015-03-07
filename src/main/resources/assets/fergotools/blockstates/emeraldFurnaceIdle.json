@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "facing=north": {"model": "emeraldFurnaceIdle"},
+    "facing=south": {"model": "emeraldFurnaceIdle", "y": 180},
+    "facing=west":  {"model": "emeraldFurnaceIdle", "y": 270},
+    "facing=east":  {"model": "emeraldFurnaceIdle", "y": 90}
+  }
+}

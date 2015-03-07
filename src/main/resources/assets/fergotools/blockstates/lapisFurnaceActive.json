@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "facing=north": {"model": "fergotools:lapisFurnaceActive"},
+    "facing=south": {"model": "fergotools:lapisFurnaceActive", "y": 180},
+    "facing=west":  {"model": "fergotools:lapisFurnaceActive", "y": 270},
+    "facing=east":  {"model": "fergotools:lapisFurnaceActive", "y": 90}
+  }
+}
