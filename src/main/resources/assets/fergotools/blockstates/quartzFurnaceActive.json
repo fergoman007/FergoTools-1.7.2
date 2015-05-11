@@ -1,8 +1,0 @@
-{
-  "variants":{
-    "facing=north": {"model": "quartzFurnaceActive"},
-    "facing=south": {"model": "quartzFurnaceActive", "y": 180},
-    "facing=west":  {"model": "quartzFurnaceActive", "y": 270},
-    "facing=east":  {"model": "quartzFurnaceActive", "y": 90}
-  }
-}

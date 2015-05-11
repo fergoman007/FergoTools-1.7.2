@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "fergotools:oreGemRedstone" }
-	}
+  "variants":{
+    "normal": {"model":"fergotools:oreGemRedstone"}
+  }
 }

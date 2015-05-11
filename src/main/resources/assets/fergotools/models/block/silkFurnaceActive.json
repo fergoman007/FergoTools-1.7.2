@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures":{
-    "top": "fergotools:blocks/blockGemSilk",
-    "front": "fergotools:blocks/furnace/active/silkFurnaceActive",
-    "side": "fergotools:blocks/blockGemSilk"
-  }
-}

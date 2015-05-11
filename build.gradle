@@ -50,12 +50,19 @@ archivesBaseName = "FergoTools"
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
     runDir = "run/assets"
+	mappings = "${config.mapping_version}"
 }
 
 version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"
 
 dependencies {
-    compile "io.github.fergoman123:FergoUtil:1.7.10-1.1.18:dev"
+    compile "io.github.fergoman123:FergoUtil:${config.minecraft_version}-${config.fu_version}:dev"
+}
+
+idea{
+	module{
+		downloadSources = true
+	}
 }
 
 version = "${config.minecraft_version}-${config.mod_version}.${config.build_number}"

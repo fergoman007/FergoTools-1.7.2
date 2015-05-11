@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "fergotools:oreExperience" }
-	}
+  "variants":{
+    "normal": {"model":"fergotools:oreExperience"}
+  }
 }

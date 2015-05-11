@@ -3,7 +3,7 @@ fergotools.tab.tabfergotools=Fergoman123's Tools
 fergotools.holdshift=<Hold Shift for Info>
 
 fergotools.oredict=Ore Dictionary Name:
-fergotool.tooltip.crafting=Crafting Item
+fergotools.tooltip.crafting=Crafting Item
 
 fergotools.tooltip.staffexp.rclick=R-Click to Store 5 Levels of Experience
 fergotools.tooltip.staffexp2.rclick=R-Click to Store 10 Levels of Experience
@@ -29,32 +29,44 @@ item.fergotools.gemRedstone.name=Redstone Gem
 item.fergotools.staffExp.staffExp.name=Basic Staff of Experience
 item.fergotools.staffExp.staffExp2.name=Greater Staff of Experience
 item.fergotools.staffExp.staffExp3.name=Ultimate Staff of Experience
-item.fergotools.gemExp.name=Experience Crystal
-item.fergotools.gemExp2.name=Experience Crystal
-item.fergotools.gemExp3.name=Experience Crystal
+item.fergotools.gemExp.gemExp.name=Experience Crystal
+item.fergotools.gemExp.gemExp2.name=Experience Crystal
+item.fergotools.gemExp.gemExp3.name=Experience Crystal
+item.fergotools.shardExp.name=Experience Shard
+item.fergotools.expCollector.name=Experience Collector
 
 tile.fergotools.oreExperience.name=Experience Ore
 tile.fergotools.oreObsidian.name=Obsidian Ore
-tile.fergotools.oreGemEmerald=Emerald Crystal Ore
+tile.fergotools.oreGemEmerald.name=Emerald Crystal Ore
 tile.fergotools.oreGemLapis.name=Lapis Crystal Ore
 tile.fergotools.oreBronze.name=Bronze Ore
 tile.fergotools.oreAdamantium.name=Adamantium Ore
 tile.fergotools.oreGemRedstone.name=Redstone Crystal Ore
 
-tile.fergotools.blockExperience.name=Experience Block
-tile.fergotools.blockExpCollector.name=Experience Collector Block
-tile.fergotools.blockObsidian.name=Obsidian Block
-tile.fergotools.blockGemEmerald.name=Emerald Crystal Block
-tile.fergotools.blockGemLapis.name=Lapis Crystal Block
-tile.fergotools.blockBronze.name=Bronze Block
-tile.fergotools.blockCoal.name=Coal Block
-tile.fergotools.blockGlowstone.name=Glowstone Block
-tile.fergotools.blockAdamantium.name=Adamantium Block
-tile.fergotools.blockGemSilk.name=Silk Gem Block
-tile.fergotools.blockGemRedstone.name=Redstone Crystal Block
+tile.fergotools.blockFTStorage.blockExperience.name=Experience Block
+tile.fergotools.blockFTStorage.blockExpCollector.name=Experience Collector Block
+tile.fergotools.blockFTStorage.blockObsidian.name=Obsidian Block
+tile.fergotools.blockFTStorage.blockGemEmerald.name=Emerald Crystal Block
+tile.fergotools.blockFTStorage.blockGemLapis.name=Lapis Crystal Block
+tile.fergotools.blockFTStorage.blockBronze.name=Bronze Block
+tile.fergotools.blockFTStorage.blockCoal.name=Coal Block
+tile.fergotools.blockFTStorage.blockGlowstone.name=Glowstone Block
+tile.fergotools.blockFTStorage.blockAdamantium.name=Adamantium Block
+tile.fergotools.blockFTStorage.blockGemSilk.name=Silk Gem Block
+tile.fergotools.blockFTStorage.blockGemRedstone.name=Redstone Crystal Block
 
 tile.fergotools.quartzFurnaceIdle.name=Quartz Furnace
 tile.fergotools.quartzFurnaceActive.name=Quartz Furnace
+tile.fergotools.obsidianFurnaceIdle.name=Obsidian Furnace
+tile.fergotools.obsidianFurnaceActive.name=Obsidian Furnace
+tile.fergotools.emeraldFurnaceIdle.name=Emerald Furnace
+tile.fergotools.emeraldFurnaceActive.name=Emerald Furnace
+
+item.fergotools.quartzPickaxe.name=Quartz Pickaxe
+item.fergotools.quartzShovel.name=Quartz Shovel
+item.fergotools.quartzAxe.name=Quartz Axe
+item.fergotools.quartzHoe.name=Quartz Hoe
+item.fergotools.quartzSword.name=Quartz Sword
 
 fergotools.container.quartzfurnace=Quartz Furnace
 fergotools.container.macerator=Macerator
@@ -67,4 +79,21 @@ fergotools.eff=Efficiency:
 fergotools.damagevsentity=Damage Vs Entity:
 fergotools.enchantability=Enchantability:
 
-fergotools.tooltip.shardexp=R-Click to recieve 1 Level of Experience
+fergotools.tooltip.oredict=Ore Dictionary Name:
+
+fergotools.tooltip.shardExp.rclick=R-Click to recieve 1 Level of Experience
+fergotools.tooltip.holdShift=<Hold Shift for Info>
+fergotools.tooltip.expCollector.ctItem=Crafting Item
+
+fergotools.tooltip.oredict.ingotObsidian=ingotObsidian
+fergotools.tooltip.oredict.gemEmerald=gemEmerald
+fergotools.tooltip.oredict.gemLapis=gemLapis
+fergotools.tooltip.oredict.ingotBronze=ingotBronze
+fergotools.tooltip.oredict.ingotCoal=ingotCoal
+fergotools.tooltip.oredict.ingotGlowstone=ingotGlowstone
+fergotools.tooltip.oredict.ingotAdamantium=ingotAdamantium
+fergotools.tooltip.oredict.gemSilk=gemSilk
+fergotools.tooltip.oredict.gemRedstone=gemRedstone
+fergotools.tooltip.oredict.shardExp=shardExp
+
+container.fergotools.quartzfurnace=Quartz Furnace

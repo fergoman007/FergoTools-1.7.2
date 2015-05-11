@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "fergotools:oreAdamantium" }
-	}
+  "variants":{
+    "normal": {"model":"fergotools:oreAdamantium"}
+  }
 }

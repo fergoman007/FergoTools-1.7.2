@@ -1,8 +1,0 @@
-{
-  "variants":{
-    "facing=north": {"model": "fergotools:adamantiumFurnaceIdle"},
-    "facing=south": {"model": "fergotools:adamantiumFurnaceIdle", "y": 180},
-    "facing=west":  {"model": "fergotools:adamantiumFurnaceIdle", "y": 270},
-    "facing=east":  {"model": "fergotools:adamantiumFurnaceIdle", "y": 90}
-  }
-}

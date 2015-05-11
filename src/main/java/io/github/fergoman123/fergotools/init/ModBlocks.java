@@ -1,130 +1,139 @@
 package io.github.fergoman123.fergotools.init;
 
-import io.github.fergoman123.fergotools.api.BlockOreBlockFT;
-import io.github.fergoman123.fergotools.api.BlockOreItemFT;
-import io.github.fergoman123.fergotools.api.BlockStorageFT;
-import io.github.fergoman123.fergotools.common.furnace.*;
-import io.github.fergoman123.fergotools.info.BlockNames;
-import io.github.fergoman123.fergotools.info.ModInfo;
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
+import io.github.fergoman123.fergotools.api.base.*;
+import io.github.fergoman123.fergotools.api.content.WoodTypes;
+import io.github.fergoman123.fergotools.common.Tiles.TileQuartzFurnace;
+import io.github.fergoman123.fergotools.common.blocks.BlockSaplingFT;
+import io.github.fergoman123.fergotools.common.blocks.Furnaces.BlockQuartzFurnace;
+import io.github.fergoman123.fergotools.common.blocks.Ores.*;
+import io.github.fergoman123.fergotools.common.blocks.wood.*;
+import io.github.fergoman123.fergotools.common.itemblock.*;
+import io.github.fergoman123.fergotools.reference.ModInfo;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
+import io.github.fergoman123.fergoutil.helper.GRHelper;
+import io.github.fergoman123.fergoutil.model.ModelHelper;
 import net.minecraft.block.Block;
-import scala.tools.nsc.typechecker.Namers$class;
+import net.minecraft.client.resources.model.ModelBakery;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks
 {
+    public static BlockOreFT oreExperience;
+    public static BlockOreFT oreObsidian;
+    public static BlockOreFT oreGemEmerald;
+    public static BlockOreFT oreGemLapis;
+    public static BlockOreFT oreBronze;
+    public static BlockOreFT oreAdamantium;
+    public static BlockOreFT oreGemRedstone;
 
-    public static Block oreExperience;
-    public static Block oreObsidian;
-    public static Block oreGemEmerald;
-    public static Block oreGemLapis;
-    public static Block oreBronze;
-    public static Block oreAdamantium;
-    public static Block oreGemRedstone;
+    public static BlockMultiFergo storageFT;
 
-    public static Block blockExperience;
-    public static Block blockExpCollector;
-    public static Block blockObsidian;
-    public static Block blockGemEmerald;
-    public static Block blockGemLapis;
-    public static Block blockBronze;
-    public static Block blockCoal;
-    public static Block blockGlowstone;
-    public static Block blockAdamantium;
-    public static Block blockGemSilk;
-    public static Block blockGemRedstone;
+    public static BlockFurnaceFT quartzFurnaceIdle;
+    public static BlockFurnaceFT obsidianFurnaceIdle;
+    public static BlockFurnaceFT emeraldFurnaceIdle;
+    public static BlockFurnaceFT lapisFurnaceIdle;
+    public static BlockFurnaceFT bronzeFurnaceIdle;
+    public static BlockFurnaceFT coalFurnaceIdle;
+    public static BlockFurnaceFT glowstoneFurnaceIdle;
+    public static BlockFurnaceFT adamantiumFurnaceIdle;
+    public static BlockFurnaceFT silkFurnaceIdle;
+    public static BlockFurnaceFT redstoneFurnaceIdle;
+    public static BlockFurnaceFT maceratorIdle;
 
-    public static Block quartzFurnaceIdle;
-    public static Block quartzFurnaceActive;
+    public static BlockFurnaceFT quartzFurnaceActive;
+    public static BlockFurnaceFT obsidianFurnaceActive;
+    public static BlockFurnaceFT emeraldFurnaceActive;
+    public static BlockFurnaceFT lapisFurnaceActive;
+    public static BlockFurnaceFT bronzeFurnaceActive;
+    public static BlockFurnaceFT coalFurnaceActive;
+    public static BlockFurnaceFT glowstoneFurnaceActive;
+    public static BlockFurnaceFT adamantiumFurnaceActive;
+    public static BlockFurnaceFT silkFurnaceActive;
+    public static BlockFurnaceFT redstoneFurnaceActive;
+    public static BlockFurnaceFT maceratorActive;
 
-    public static Block obsidianFurnaceIdle;
-    public static Block obsidianFurnaceActive;
+    public static BlockLogFT logFT;
+    public static BlockMultiFergo plankFT;
 
-    public static Block emeraldFurnaceIdle;
-    public static Block emeraldFurnaceActive;
+    public static BlockStairsFT stairObsidian;
+    public static BlockStairsFT stairEmerald;
+    public static BlockStairsFT stairLapis;
+    public static BlockStairsFT stairBronze;
+    public static BlockStairsFT stairCoal;
+    public static BlockStairsFT stairGlowstone;
+    public static BlockStairsFT stairAdamantium;
+    public static BlockStairsFT stairSilk;
+    public static BlockStairsFT stairRedstone;
 
-    public static Block lapisFurnaceIdle;
-    public static Block lapisFurnaceActive;
+    public static BlockWoodSlabFT singleSlabFT;
+    public static BlockWoodSlabFT doubleSlabFT;
 
-    public static Block bronzeFurnaceIdle;
-    public static Block bronzeFurnaceActive;
+    public static BlockLeavesFT leavesFT;
 
-    public static Block coalFurnaceIdle;
-    public static Block coalFurnaceActive;
-
-    public static Block glowstoneFurnaceIdle;
-    public static Block glowstoneFurnaceActive;
-
-    public static Block adamantiumFurnaceIdle;
-    public static Block adamantiumFurnaceActive;
-
-    public static Block silkFurnaceIdle;
-    public static Block silkFurnaceActive;
-
-    public static Block redstoneFurnaceIdle;
-    public static Block redstoneFurnaceActive;
-
-    public static Block maceratorIdle;
-    public static Block maceratorActive;
-
-
+    public static BlockSaplingFT saplingFT;
 
     public static void init()
     {
-        oreExperience = new BlockOreItemFT(BlockNames.oreExperience, ModItems.shardExp, 5);
-        oreObsidian = new BlockOreBlockFT(BlockNames.oreObsidian);
-        oreGemEmerald = new BlockOreItemFT(BlockNames.oreGemEmerald, ModItems.gemEmerald, 1);
-        oreGemLapis = new BlockOreItemFT(BlockNames.oreGemLapis, ModItems.gemLapis, 1);
-        oreBronze = new BlockOreBlockFT(BlockNames.oreBronze);
-        oreAdamantium = new BlockOreBlockFT(BlockNames.oreAdamantium);
-        oreGemRedstone = new BlockOreItemFT(BlockNames.oreGemRedstone, ModItems.gemRedstone, 1);
+        oreExperience = new BlockOreExperience();
+        oreObsidian = new BlockOreObsidian();
+        oreGemEmerald = new BlockOreEmerald();
+        oreGemLapis = new BlockOreLapis();
+        oreBronze = new BlockOreBronze();
+        oreAdamantium = new BlockOreAdamantium();
+        oreGemRedstone = new BlockOreRedstone();
 
-        blockExperience = new BlockStorageFT(BlockNames.blockExperience);
-        blockExpCollector = new BlockStorageFT(BlockNames.blockExpCollector);
-        blockObsidian = new BlockStorageFT(BlockNames.blockObsidian);
-        blockGemEmerald = new BlockStorageFT(BlockNames.blockGemEmerald);
-        blockGemLapis = new BlockStorageFT(BlockNames.blockGemLapis);
-        blockBronze = new BlockStorageFT(BlockNames.blockBronze);
-        blockCoal = new BlockStorageFT(BlockNames.blockCoal);
-        blockGlowstone = new BlockStorageFT(BlockNames.blockGlowstone);
-        blockAdamantium = new BlockStorageFT(BlockNames.blockAdamantium);
-        blockGemSilk = new BlockStorageFT(BlockNames.blockGemSilk);
-        blockGemRedstone = new BlockStorageFT(BlockNames.blockGemRedstone);
+        storageFT = new BlockStorageFT(BlockNames.blocks, BlockNames.storageFT);
 
-        quartzFurnaceIdle = new QuartzFurnace.BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
-        quartzFurnaceActive = new QuartzFurnace.BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
+        quartzFurnaceIdle = new BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
+//    obsidianFurnaceIdle = new BlockObsidianFurnace(false, BlockNames.obsidianFurnaceIdle);
+//    emeraldFurnaceIdle = new BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
+//    lapisFurnaceIdle = new BlockLapisFurnace(false, BlockNames.lapisFurnaceIdle);
+//    bronzeFurnaceIdle = new BlockBronzeFurnace(false, BlockNames.bronzeFurnaceIdle);
+//    coalFurnaceIdle = new BlockCoalFurnace(false, BlockNames.coalFurnaceIdle);
+//    glowstoneFurnaceIdle = new BlockGlowstoneFurnace(false, BlockNames.glowstoneFurnaceIdle);
+//    adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false, BlockNames.adamantiumFurnaceIdle);
+//    silkFurnaceIdle = new BlockSilkFurnace(false, BlockNames.silkFurnaceIdle);
+//    redstoneFurnaceIdle = new BlockRedstoneFurnace(false, BlockNames.redstoneFurnaceIdle);
+//    maceratorIdle = new BlockMacerator(false, BlockNames.maceratorIdle);
 
-        obsidianFurnaceIdle = new ObsidianFurnace.BlockObsidianFurnace(false, BlockNames.obsidianFurnaceIdle);
-        obsidianFurnaceActive = new ObsidianFurnace.BlockObsidianFurnace(true, BlockNames.obsidianFurnaceActive);
+        quartzFurnaceActive = new BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
+//    obsidianFurnaceActive = new BlockObsidianFurnace(true, BlockNames.obsidianFurnaceActive);
+//    emeraldFurnaceActive = new BlockEmeraldFurnace(true, BlockNames.emeraldFurnaceActive);
+//    lapisFurnaceActive = new BlockLapisFurnace(true, BlockNames.lapisFurnaceActive);
+//    bronzeFurnaceActive = new BlockBronzeFurnace(true, BlockNames.bronzeFurnaceActive);
+//    coalFurnaceActive = new BlockCoalFurnace(true, BlockNames.coalFurnaceActive);
+//    glowstoneFurnaceActive = new BlockGlowstoneFurnace(true, BlockNames.glowstoneFurnaceActive);
+//    adamantiumFurnaceActive = new BlockAdamantiumFurnace(true, BlockNames.adamantiumFurnaceActive);
+//    silkFurnaceActive = new BlockSilkFurnace(true, BlockNames.silkFurnaceActive);
+//    redstoneFurnaceActive = new BlockRedstoneFurnace(true, BlockNames.redstoneFurnaceActive);
+//    maceratorActive = new BlockMacerator(true, BlockNames.maceratorActive);
 
-        emeraldFurnaceIdle = new EmeraldFurnace.BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
-        emeraldFurnaceActive = new EmeraldFurnace.BlockEmeraldFurnace(true, BlockNames.emeraldFurnaceActive);
 
-        lapisFurnaceIdle = new LapisFurnace.BlockLapisFurnace(false, BlockNames.lapisFurnaceIdle);
-        lapisFurnaceActive = new LapisFurnace.BlockLapisFurnace(true, BlockNames.lapisFurnaceActive);
+        logFT = new BlockWoodLogFT(BlockNames.logFT);
+        plankFT = new BlockPlankFT(BlockNames.plankFT);
 
-        bronzeFurnaceIdle = new BronzeFurnace.BlockBronzeFurnace(false, BlockNames.bronzeFurnaceIdle);
-        bronzeFurnaceActive = new BronzeFurnace.BlockBronzeFurnace(true, BlockNames.bronzeFurnaceActive);
+        stairObsidian = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.obsidian), BlockNames.stairs[0]);
+        stairEmerald = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.emerald), BlockNames.stairs[1]);
+        stairLapis = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.lapis), BlockNames.stairs[2]);
+        stairBronze = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.bronze), BlockNames.stairs[3]);
+        stairCoal = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.coal), BlockNames.stairs[4]);
+        stairGlowstone = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.glowstone), BlockNames.stairs[5]);
+        stairAdamantium = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.adamantium), BlockNames.stairs[6]);
+        stairSilk = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.silk), BlockNames.stairs[7]);
+        stairRedstone = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.redstone), BlockNames.stairs[8]);
 
-        coalFurnaceIdle = new CoalFurnace.BlockCoalFurnace(false, BlockNames.coalFurnaceIdle);
-        coalFurnaceActive = new CoalFurnace.BlockCoalFurnace(true, BlockNames.coalFurnaceActive);
+        singleSlabFT = new BlockHSFT(BlockNames.slabSingleFT);
+        doubleSlabFT = new BlockDSFT(BlockNames.slabDoubleFT);
+        leavesFT = new BlockLeavesImpl(BlockNames.leavesFT);
+        saplingFT = new BlockSaplingFT(BlockNames.saplingFT);
 
-        glowstoneFurnaceIdle = new GlowstoneFurnace.BlockGlowstoneFurnace(false, BlockNames.glowstoneFurnaceIdle);
-        glowstoneFurnaceActive = new GlowstoneFurnace.BlockGlowstoneFurnace(true, BlockNames.glowstoneFurnaceActive);
-
-        adamantiumFurnaceIdle = new AdamantiumFurnace.BlockAdamantiumFurnace(false, BlockNames.adamantiumFurnaceIdle);
-        adamantiumFurnaceActive = new AdamantiumFurnace.BlockAdamantiumFurnace(true, BlockNames.adamantiumFurnaceActive);
-
-        silkFurnaceIdle = new SilkFurnace.BlockSilkFurnace(false, BlockNames.silkFurnaceIdle);
-        silkFurnaceActive = new SilkFurnace.BlockSilkFurnace(true, BlockNames.silkFurnaceActive);
-
-        redstoneFurnaceIdle = new RedstoneFurnace.BlockRedstoneFurnace(false, BlockNames.redstoneFurnaceIdle);
-        redstoneFurnaceActive = new RedstoneFurnace.BlockRedstoneFurnace(true, BlockNames.redstoneFurnaceActive);
-
-        maceratorIdle = new Macerator.BlockMacerator(false, BlockNames.maceratorIdle);
-        maceratorActive = new Macerator.BlockMacerator(true, BlockNames.maceratorActive);
     }
 
-    public static void register()
+    public static void registerBlocks()
     {
         registerBlock(oreExperience, BlockNames.oreExperience);
         registerBlock(oreObsidian, BlockNames.oreObsidian);
@@ -134,53 +143,58 @@ public class ModBlocks
         registerBlock(oreAdamantium, BlockNames.oreAdamantium);
         registerBlock(oreGemRedstone, BlockNames.oreGemRedstone);
 
-        registerBlock(blockExperience, BlockNames.blockExperience);
-        registerBlock(blockExpCollector, BlockNames.blockExpCollector);
-        registerBlock(blockObsidian, BlockNames.blockObsidian);
-        registerBlock(blockGemEmerald, BlockNames.blockGemEmerald);
-        registerBlock(blockGemLapis, BlockNames.blockGemLapis);
-        registerBlock(blockBronze, BlockNames.blockBronze);
-        registerBlock(blockCoal, BlockNames.blockCoal);
-        registerBlock(blockGlowstone, BlockNames.blockGlowstone);
-        registerBlock(blockAdamantium, BlockNames.blockAdamantium);
-        registerBlock(blockGemSilk, BlockNames.blockGemSilk);
-        registerBlock(blockGemRedstone, BlockNames.blockGemRedstone);
+        registerBlock(storageFT, BlockNames.storageFT);
 
-        registerBlock(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
-        registerBlock(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
+        registerFurnace(quartzFurnaceIdle, quartzFurnaceActive, TileQuartzFurnace.class, "quartzFurnace", BlockNames.quartzFurnaceIdle, BlockNames.quartzFurnaceActive);
 
-        registerBlock(obsidianFurnaceIdle, BlockNames.obsidianFurnaceIdle);
-        registerBlock(obsidianFurnaceActive, BlockNames.obsidianFurnaceActive);
+        registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logs, BlockNames.logFT);
+        registerBlock(plankFT, ItemBlockPlankFT.class, BlockNames.planks, BlockNames.plankFT);
 
-        registerBlock(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
-        registerBlock(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
+        registerStair(stairObsidian, BlockNames.stairObsidian);
+        registerStair(stairEmerald, BlockNames.stairEmerald);
+        registerStair(stairLapis, BlockNames.stairLapis);
+        registerStair(stairBronze, BlockNames.stairBronze);
+        registerStair(stairCoal, BlockNames.stairCoal);
+        registerStair(stairGlowstone, BlockNames.stairGlowstone);
+        registerStair(stairAdamantium, BlockNames.stairAdamantium);
+        registerStair(stairSilk, BlockNames.stairSilk);
 
-        registerBlock(lapisFurnaceIdle, BlockNames.lapisFurnaceIdle);
-        registerBlock(lapisFurnaceActive, BlockNames.lapisFurnaceActive);
-
-        registerBlock(bronzeFurnaceIdle, BlockNames.bronzeFurnaceIdle);
-        registerBlock(bronzeFurnaceActive, BlockNames.bronzeFurnaceActive);
-
-        registerBlock(coalFurnaceIdle, BlockNames.coalFurnaceIdle);
-        registerBlock(coalFurnaceActive, BlockNames.coalFurnaceActive);
-
-        registerBlock(glowstoneFurnaceIdle, BlockNames.glowstoneFurnaceIdle);
-        registerBlock(glowstoneFurnaceActive, BlockNames.glowstoneFurnaceActive);
-
-        registerBlock(adamantiumFurnaceIdle, BlockNames.adamantiumFurnaceIdle);
-        registerBlock(adamantiumFurnaceActive, BlockNames.adamantiumFurnaceActive);
-
-        registerBlock(silkFurnaceIdle, BlockNames.silkFurnaceIdle);
-        registerBlock(silkFurnaceActive, BlockNames.silkFurnaceActive);
-
-        registerBlock(redstoneFurnaceIdle, BlockNames.redstoneFurnaceIdle);
-        registerBlock(redstoneFurnaceActive, BlockNames.redstoneFurnaceActive);
-
-        registerBlock(maceratorIdle, BlockNames.maceratorIdle);
-        registerBlock(maceratorActive, BlockNames.maceratorActive);
+        registerBlock(singleSlabFT, ItemBlockSlabSingle.class, BlockNames.slabSingle, BlockNames.slabSingleFT);
+        registerBlock(doubleSlabFT, ItemBlockSlabDouble.class, BlockNames.slabDouble, BlockNames.slabDoubleFT);
+        registerBlock(leavesFT, ItemBlockLeavesFT.class, BlockNames.leaves, BlockNames.leavesFT);
+        registerBlock(saplingFT, ItemBlockSaplingFT.class, BlockNames.saplings, BlockNames.saplingFT);
     }
 
-    public static void registerBlock(Block block, String name){
-        RegisterHelper.registerBlock(block, ModInfo.modid, name);
+    public static void registerBlock(Block block, String name)
+    {
+        GRHelper.registerBlock(block, ModInfo.modid, name);
+    }
+
+    public static void registerStair(BlockStairsFT stair, String name)
+    {
+        GameRegistry.registerBlock(stair, name);
+        ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(stair), 0, new ModelResLocFT(name));
+        ModelBakery.addVariantName(Item.getItemFromBlock(stair), ModInfo.modid.toLowerCase() + ":" + name);
+    }
+
+    public static void registerFurnace(BlockFurnaceFT idle, BlockFurnaceFT active, Class<? extends TileEntity> tile, String tileName, String idleName, String activeName)
+    {
+        GameRegistry.registerBlock(idle, idleName);
+        GameRegistry.registerBlock(active, activeName);
+        GameRegistry.registerTileEntity(tile, tileName);
+        ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(idle), 0, new ModelResLocFT(idleName));
+        ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(active), 0, new ModelResLocFT(activeName));
+        ModelBakery.addVariantName(Item.getItemFromBlock(idle), ModInfo.modid + ":" + idleName);
+        ModelBakery.addVariantName(Item.getItemFromBlock(active), ModInfo.modid + ":" + activeName);
+    }
+
+    public static void registerBlock(Block block, Class<? extends ItemBlock> itemClass, String[] models, String name)
+    {
+        GameRegistry.registerBlock(block, itemClass, name);
+        for(int i = 0; i < models.length; i++)
+        {
+            ModelHelper.getItemModelMesher().register(ItemBlock.getItemFromBlock(block), i, new ModelResLocFT(models[i]));
+            ModelBakery.addVariantName(Item.getItemFromBlock(block), ModInfo.modid + ":" + models[i]);
+        }
     }
 }

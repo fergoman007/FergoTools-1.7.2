@@ -1,20 +1,17 @@
 package io.github.fergoman123.fergotools.common.items;
 
-import io.github.fergoman123.fergotools.api.ItemFT;
-import net.minecraft.entity.player.EntityPlayer;
+import io.github.fergoman123.fergotools.api.base.ItemFT;
+import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 
 public class ItemExpShard extends ItemFT
 {
-    public ItemExpShard(String name) {
-        super(name);
+    public ItemExpShard() {
+        super(ItemNames.shardExp);
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
-        playerIn.addExperienceLevel(1);
-        itemStackIn.stackSize--;
-        return itemStackIn;
+    public boolean hasEffect(ItemStack stack) {
+        return true;
     }
 }

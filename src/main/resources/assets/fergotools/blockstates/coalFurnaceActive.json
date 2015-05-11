@@ -1,8 +1,0 @@
-{
-  "variants":{
-    "facing=north": {"model": "fergotools:coalFurnaceActive"},
-    "facing=south": {"model": "fergotools:coalFurnaceActive", "y": 180},
-    "facing=west":  {"model": "fergotools:coalFurnaceActive", "y": 270},
-    "facing=east":  {"model": "fergotools:coalFurnaceActive", "y": 90}
-  }
-}

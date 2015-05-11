@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "axis=y,variant=logobsidian": {"model": "fergotools:log/obsidian/logObsidian"},
+    "axis=x,variant=logobsidian": {"model": "fergotools:log/obsidian/logObsidianSide"},
+    "axis=z,variant=logobsidian": {"model": "fergotools:log/obsidian/logObsidianSide"},
+    "axis=none,variant=logobsidian": {"model": "fergotools:log/obsidian/logObsidianBark"}
+  }
+}

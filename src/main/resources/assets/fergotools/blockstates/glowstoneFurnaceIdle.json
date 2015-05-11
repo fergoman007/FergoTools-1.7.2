@@ -1,8 +1,0 @@
-{
-  "variants":{
-    "facing=north": {"model": "fergotools:glowstoneFurnaceIdle"},
-    "facing=south": {"model": "fergotools:glowstoneFurnaceIdle", "y": 180},
-    "facing=west":  {"model": "fergotools:glowstoneFurnaceIdle", "y": 270},
-    "facing=east":  {"model": "fergotools:glowstoneFurnaceIdle", "y": 90}
-  }
-}

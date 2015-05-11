@@ -1,8 +1,0 @@
-{
-  "variants":{
-    "facing=north": {"model": "obsidianFurnaceActive"},
-    "facing=south": {"model": "obsidianFurnaceActive", "y": 180},
-    "facing=west":  {"model": "obsidianFurnaceActive", "y": 270},
-    "facing=east":  {"model": "obsidianFurnaceActive", "y": 90}
-  }
-}

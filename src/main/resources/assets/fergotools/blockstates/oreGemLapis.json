@@ -1,5 +1,5 @@
 {
-	"variants": {
-		"normal": { "model": "fergotools:oreGemLapis" }
-	}
+  "variants":{
+    "normal": {"model":"fergotools:oreGemLapis"}
+  }
 }

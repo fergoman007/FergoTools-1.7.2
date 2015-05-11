@@ -1,6 +1,6 @@
 {
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "fergotools:blocks/oreBronze"
-	}
+  "parent": "block/cube_all",
+  "textures":{
+    "all": "fergotools:blocks/oreBronze"
+  }
 }

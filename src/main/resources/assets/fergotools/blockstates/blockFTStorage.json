@@ -1,0 +1,15 @@
+{
+  "variants":{
+    "variant=blockexperience":   {"model": "fergotools:blockExperience"},
+    "variant=blockgemsilk":      {"model": "fergotools:blockGemSilk"},
+    "variant=blockgemlapis":     {"model": "fergotools:blockGemLapis"},
+    "variant=blockadamantium":   {"model": "fergotools:blockAdamantium"},
+    "variant=blockgememerald":   {"model": "fergotools:blockGemEmerald"},
+    "variant=blockgemredstone":  {"model": "fergotools:blockGemRedstone"},
+    "variant=blockglowstone":    {"model": "fergotools:blockGlowstone"},
+    "variant=blockcoal":         {"model": "fergotools:blockCoal"},
+    "variant=blockbronze":       {"model": "fergotools:blockBronze"},
+    "variant=blockexpcollector": {"model": "fergotools:blockExpCollector"},
+    "variant=blockobsidian":     {"model": "fergotools:blockObsidian"}
+  }
+}
