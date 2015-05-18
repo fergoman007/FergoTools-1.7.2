@@ -11,14 +11,12 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.handler.GuiHandler;
 import io.github.fergoman123.fergotools.handler.RegHandler;
 import io.github.fergoman123.fergotools.reference.MetadataFT;
 import io.github.fergoman123.fergotools.reference.strings.Messages;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class FergoToolsMod
 {
@@ -28,13 +26,18 @@ public class FergoToolsMod
         MetadataFT.writeMetadata(evt.getModMetadata());
         ConfigHandler.init(evt.getSuggestedConfigurationFile());
         FergoTools.proxy.registerEventHandlers();
+        ModItems.init();
+        ModBlocks.init();
     }
 
     public static void load(FMLInitializationEvent evt)
     {
         FergoTools.getLogger().info(Messages.initMessage);
-        ModRegister.init();
         RegHandler.init();
+        ModBlocks.registerBlocks();
+        ModBlocks.registerModels();
+        ModItems.registerItems();
+        ModItems.registerModels();
 //        RegHandler.registerOres();
 //        Recipes.init();
     }

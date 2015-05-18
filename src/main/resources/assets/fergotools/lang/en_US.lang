@@ -1,17 +1,15 @@
 fergotools.tab.tabfergotools=Fergoman123's Tools
 
-fergotools.holdshift=<Hold Shift for Info>
-
 fergotools.oredict=Ore Dictionary Name:
 fergotools.tooltip.crafting=Crafting Item
 
-fergotools.tooltip.staffexp.rclick=R-Click to Store 5 Levels of Experience
-fergotools.tooltip.staffexp2.rclick=R-Click to Store 10 Levels of Experience
-fergotools.tooltip.staffexp3.rclick=R-Click to Store 30 Levels of Experience
+fergotools.tooltip.staffexp.rc=R-Click to Store 5 Levels of Experience
+fergotools.tooltip.staffexp2.rc=R-Click to Store 10 Levels of Experience
+fergotools.tooltip.staffexp3.rc=R-Click to Store 30 Levels of Experience
 
-fergotools.tooltip.staffexp.srclick=Shift R-Click to Retrieve 5 Levels of Experience
-fergotools.tooltip.staffexp2.srclick=Shift R-Click to Retrieve 10 Levels of Experience
-fergotools.tooltip.staffexp3.srclick=Shift R-Click to Retrieve 30 Levels of Experience
+fergotools.tooltip.staffexp.src=Shift R-Click to Retrieve 5 Levels of Experience
+fergotools.tooltip.staffexp2.src=Shift R-Click to Retrieve 10 Levels of Experience
+fergotools.tooltip.staffexp3.src=Shift R-Click to Retrieve 30 Levels of Experience
 
 fergotools.tooltip.gemexp=Stores 5 Levels of Experience
 fergotools.tooltip.gemexp2=Stores 10 Levels of Experience
@@ -26,9 +24,9 @@ item.fergotools.ingotGlowstone.name=Glowstone Ingot
 item.fergotools.ingotAdamantium.name=Adamantium Ingot
 item.fergotools.gemSilk.name=Silk Gem
 item.fergotools.gemRedstone.name=Redstone Gem
-item.fergotools.staffExp.staffExp.name=Basic Staff of Experience
-item.fergotools.staffExp.staffExp2.name=Greater Staff of Experience
-item.fergotools.staffExp.staffExp3.name=Ultimate Staff of Experience
+item.fergotools.staffExp.name=Basic Staff of Experience
+item.fergotools.staffExp2.name=Greater Staff of Experience
+item.fergotools.staffExp3.name=Ultimate Staff of Experience
 item.fergotools.gemExp.gemExp.name=Experience Crystal
 item.fergotools.gemExp.gemExp2.name=Experience Crystal
 item.fergotools.gemExp.gemExp3.name=Experience Crystal
@@ -57,16 +55,27 @@ tile.fergotools.blockFTStorage.blockGemRedstone.name=Redstone Crystal Block
 
 tile.fergotools.quartzFurnaceIdle.name=Quartz Furnace
 tile.fergotools.quartzFurnaceActive.name=Quartz Furnace
-tile.fergotools.obsidianFurnaceIdle.name=Obsidian Furnace
-tile.fergotools.obsidianFurnaceActive.name=Obsidian Furnace
-tile.fergotools.emeraldFurnaceIdle.name=Emerald Furnace
-tile.fergotools.emeraldFurnaceActive.name=Emerald Furnace
 
 item.fergotools.quartzPickaxe.name=Quartz Pickaxe
 item.fergotools.quartzShovel.name=Quartz Shovel
 item.fergotools.quartzAxe.name=Quartz Axe
 item.fergotools.quartzHoe.name=Quartz Hoe
 item.fergotools.quartzSword.name=Quartz Sword
+
+tile.fergotools.plankFT.plankObsidian.name=Obsidian Wood Planks
+tile.fergotools.plankFT.plankEmerald.name=Emerald Wood Planks
+tile.fergotools.plankFT.plankLapis.name=Lapis Wood Planks
+tile.fergotools.plankFT.plankBronze.name=Bronze Wood Planks
+tile.fergotools.plankFT.plankCoal.name=Coal Wood Planks
+tile.fergotools.plankFT.plankGlowstone.name=Glowstone Wood Planks
+tile.fergotools.plankFT.plankAdamantium.name=Adamantium Wood Planks
+tile.fergotools.plankFT.plankSilk.name=Silk Wood Planks
+tile.fergotools.plankFT.plankRedstone.name=Redstone Wood Planks
+
+tile.fergotools.workbenchFT.obsidianWorkbench.name=Obsidian Crafting Table
+tile.fergotools.workbenchFT.emeraldWorkbench.name=Emerald Crafting Table
+tile.fergotools.workbenchFT.lapisWorkbench.name=Lapis Crafting Table
+tile.fergotools.workbenchFT.bronzeWorkbench.name=Bronze Crafting Table
 
 fergotools.container.quartzfurnace=Quartz Furnace
 fergotools.container.macerator=Macerator

@@ -1,0 +1,13 @@
+{
+  "variants":{
+    "variant=plankobsidian":{"model": "fergotools:plankObsidian"},
+    "variant=plankemerald":{"model":"fergotools:plankEmerald"},
+    "variant=planklapis":{"model":"fergotools:plankLapis"},
+    "variant=plankbronze":{"model":"fergotools:plankBronze"},
+    "variant=plankcoal":{"model":"fergotools:plankCoal"},
+    "variant=plankglowstone":{"model":"fergotools:plankGlowstone"},
+    "variant=plankadamantium":{"model":"fergotools:plankAdamantium"},
+    "variant=planksilk":{"model":"fergotools:plankSilk"},
+    "variant=plankredstone":{"model":"fergotools:plankRedstone"}
+  }
+}

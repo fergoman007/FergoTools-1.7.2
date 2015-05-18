@@ -10,12 +10,12 @@
 package io.github.fergoman123.fergotools.util.tool;
 
 
-import io.github.fergoman123.fergotools.creativetab.Tabs;
+import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergoutil.item.ItemShearsFergo;
 import net.minecraft.item.Item;
 
 public class ItemShearsFT extends ItemShearsFergo {
     public ItemShearsFT(ToolMaterial material, Item repairItem, String name) {
-        super(material, 0, Tabs.tabFergoShears, repairItem, name);
+        super(material, 0, FergoTools.tabFergoTools, repairItem, name);
     }
 }

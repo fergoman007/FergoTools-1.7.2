@@ -1,0 +1,5 @@
+{
+  "variants":{
+    "check_decay=true,decayable=true,variant=leavesObsidian":{"model": ""}
+  }
+}

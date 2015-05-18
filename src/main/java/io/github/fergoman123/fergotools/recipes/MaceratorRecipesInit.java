@@ -9,8 +9,9 @@
 
 package io.github.fergoman123.fergotools.recipes;
 
-import io.github.fergoman123.fergotools.api.content.FTContent;
 import io.github.fergoman123.fergotools.crafting.MaceratorRecipes;
+import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergotools.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -28,15 +29,15 @@ public class MaceratorRecipesInit
         addBlockRecipe(Blocks.lapis_ore, new ItemStack(Items.dye, 2, 4), 0.4F);
         addBlockRecipe(Blocks.quartz_ore, new ItemStack(Items.quartz, 2), 0.4F);
 
-        addBlockRecipe(FTContent.oreObsidian, new ItemStack(FTContent.ingotObsidian, 2), 2.5f);
-        addBlockRecipe(FTContent.oreGemEmerald, new ItemStack(FTContent.gemEmerald, 2), 2.5f);
-        addBlockRecipe(FTContent.oreGemLapis, new ItemStack(FTContent.gemLapis, 2), 2.5f);
-        addBlockRecipe(FTContent.oreBronze, new ItemStack(FTContent.ingotBronze, 2), 2.5f);
-        addBlockRecipe(Blocks.coal_block, new ItemStack(FTContent.ingotCoal, 2), 2.5f);
-        addBlockRecipe(Blocks.glowstone, new ItemStack(FTContent.ingotGlowstone, 2), 2.5f);
-        addBlockRecipe(FTContent.oreAdamantium, new ItemStack(FTContent.ingotAdamantium, 2), 2.5f);
-        addBlockRecipe(FTContent.oreExperience, new ItemStack(FTContent.shardExp, 10), 2.5f);
-        addBlockRecipe(FTContent.oreGemRedstone, new ItemStack(FTContent.gemRedstone, 2), 2.5f);
+        addBlockRecipe(ModBlocks.oreObsidian, new ItemStack(ModItems.ingotObsidian, 2), 2.5f);
+        addBlockRecipe(ModBlocks.oreGemEmerald, new ItemStack(ModItems.gemEmerald, 2), 2.5f);
+        addBlockRecipe(ModBlocks.oreGemLapis, new ItemStack(ModItems.gemLapis, 2), 2.5f);
+        addBlockRecipe(ModBlocks.oreBronze, new ItemStack(ModItems.ingotBronze, 2), 2.5f);
+        addBlockRecipe(Blocks.coal_block, new ItemStack(ModItems.ingotCoal, 2), 2.5f);
+        addBlockRecipe(Blocks.glowstone, new ItemStack(ModItems.ingotGlowstone, 2), 2.5f);
+        addBlockRecipe(ModBlocks.oreAdamantium, new ItemStack(ModItems.ingotAdamantium, 2), 2.5f);
+        addBlockRecipe(ModBlocks.oreExperience, new ItemStack(ModItems.shardExp, 10), 2.5f);
+        addBlockRecipe(ModBlocks.oreGemRedstone, new ItemStack(ModItems.gemRedstone, 2), 2.5f);
     }
 
     public static void addBlockRecipe(Block input, ItemStack output, float xp)

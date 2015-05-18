@@ -9,23 +9,22 @@
 
 package io.github.fergoman123.fergotools;
 
- import io.github.fergoman123.fergotools.api.content.FTContent;
  import io.github.fergoman123.fergotools.init.FergoToolsMod;
- import io.github.fergoman123.fergotools.reference.ModInfo;
- import io.github.fergoman123.fergotools.reference.Reference;
- import io.github.fergoman123.fergotools.reference.strings.Tab;
- import io.github.fergoman123.fergoutil.proxy.IProxy;
- import io.github.fergoman123.fergoutil.reference.ModConstants;
- import net.minecraft.creativetab.CreativeTabs;
- import net.minecraft.item.Item;
- import net.minecraft.util.StatCollector;
- import net.minecraftforge.fml.common.Mod;
- import net.minecraftforge.fml.common.SidedProxy;
- import net.minecraftforge.fml.common.event.FMLInitializationEvent;
- import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
- import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
- import org.apache.logging.log4j.LogManager;
- import org.apache.logging.log4j.Logger;
+import io.github.fergoman123.fergotools.init.ModItems;
+import io.github.fergoman123.fergotools.reference.ModInfo;
+import io.github.fergoman123.fergotools.reference.Reference;
+import io.github.fergoman123.fergoutil.proxy.IProxy;
+import io.github.fergoman123.fergoutil.reference.ModConstants;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.util.StatCollector;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
  @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dep, guiFactory = Reference.guiFactoryClass)
 public class FergoTools
@@ -33,7 +32,7 @@ public class FergoTools
     public static final CreativeTabs tabFergoTools = new CreativeTabs("fergotools.tabFergoTools") {
         @Override
         public Item getTabIconItem() {
-            return FTContent.shardExp;
+            return ModItems.shardExp;
         }
 
         @Override
@@ -57,7 +56,8 @@ public class FergoTools
     }
 
     @SidedProxy(clientSide = Reference.clientProxyClass, serverSide = Reference.serverProxyClass)
-    public static IProxy proxy;
+    public static IProxy
+            proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent evt)

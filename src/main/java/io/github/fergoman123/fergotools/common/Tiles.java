@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.common;
 
 import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
-import io.github.fergoman123.fergotools.common.Containers.ContainerQuartzFurnace;
+import io.github.fergoman123.fergotools.common.FurnaceContainers.ContainerQuartzFurnace;
 import io.github.fergoman123.fergotools.common.blocks.Furnaces.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;

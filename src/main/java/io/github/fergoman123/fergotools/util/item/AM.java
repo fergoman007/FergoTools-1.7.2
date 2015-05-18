@@ -1,9 +1,6 @@
 package io.github.fergoman123.fergotools.util.item;
 
 import io.github.fergoman123.fergotools.api.content.ArmorMaterials;
-import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.reference.ints.ArmorInts;
-import io.github.fergoman123.fergotools.reference.strings.Material;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -19,7 +16,10 @@ public class AM {
     public static final ArmorMaterial adamantiumArmor = addArmorMaterial(ArmorMaterials.adamantium);
     public static final ArmorMaterial redstoneArmor = addArmorMaterial(ArmorMaterials.redstone);
 
-    public static ArmorMaterial addArmorMaterial(ArmorMaterials material) {
-        return EnumHelper.addArmorMaterial(material.getName(), material.getName(), material.getMaxDamage(), material.getReductAmounts(), material.getEnchantability());
+    public static ArmorMaterial addArmorMaterial(ArmorMaterials material)
+    {
+        ArmorMaterial armorMaterial = EnumHelper.addArmorMaterial(material.getName(), material.getName(), material.getMaxDamage(), material.getReductAmounts(), material.getEnchantability());
+        armorMaterial.customCraftingMaterial = material.getRepairItem();
+        return armorMaterial;
     }
 }

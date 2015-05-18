@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "fergotools:blocks/wood/plankObsidian",
+    "top": "fergotools:blocks/wood/plankObsidian",
+    "side": "fergotools:blocks/wood/plankObsidian"
+  }
+}

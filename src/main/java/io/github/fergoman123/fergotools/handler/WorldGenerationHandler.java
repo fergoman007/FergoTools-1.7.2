@@ -9,13 +9,13 @@
 
 package io.github.fergoman123.fergotools.handler;
 
- import io.github.fergoman123.fergotools.api.content.FTContent;
- import io.github.fergoman123.fergoutil.helper.GenerationHelper;
- import net.minecraft.world.World;
- import net.minecraft.world.chunk.IChunkProvider;
- import net.minecraftforge.fml.common.IWorldGenerator;
+ import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergoutil.helper.GenerationHelper;
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.fml.common.IWorldGenerator;
 
- import java.util.Random;
+import java.util.Random;
 
 public class WorldGenerationHandler implements IWorldGenerator
 {
@@ -38,13 +38,13 @@ public class WorldGenerationHandler implements IWorldGenerator
 		    int yCoord = random.nextInt(256);
 		    int zCoord = z + random.nextInt(16);
 
-            GenerationHelper.addEndOreSpawn(FTContent.oreObsidian, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(FTContent.oreGemEmerald, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(FTContent.oreGemLapis, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(FTContent.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(FTContent.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
-            GenerationHelper.addEndOreSpawn(FTContent.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addEndOreSpawn(FTContent.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreObsidian, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreGemEmerald, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreGemLapis, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addEndOreSpawn(ModBlocks.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -56,13 +56,13 @@ public class WorldGenerationHandler implements IWorldGenerator
 		    int yCoord = random.nextInt(256);
 		    int zCoord = z + random.nextInt(16);
 
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreObsidian, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreGemEmerald, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreGemLapis, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addOverWorldOreSpawn(FTContent.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreObsidian, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreGemEmerald, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreGemLapis, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addOverWorldOreSpawn(ModBlocks.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 
@@ -74,13 +74,13 @@ public class WorldGenerationHandler implements IWorldGenerator
 		    int yCoord = random.nextInt(256);
 		    int zCoord = z + random.nextInt(16);
 
-            GenerationHelper.addNetherOreSpawn(FTContent.oreObsidian, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addNetherOreSpawn(FTContent.oreGemEmerald, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addNetherOreSpawn(FTContent.oreGemLapis, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addNetherOreSpawn(FTContent.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addNetherOreSpawn(FTContent.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
-            GenerationHelper.addNetherOreSpawn(FTContent.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
-            GenerationHelper.addNetherOreSpawn(FTContent.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreObsidian, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreGemEmerald, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreGemLapis, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreBronze, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreAdamantium, world, random, x, z, 16, 16, 1, 1, 11, 62);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreExperience, world, random, x, z, 16, 16, 5, 4, 11, 62);
+            GenerationHelper.addNetherOreSpawn(ModBlocks.oreGemRedstone, world, random, x, z, 16, 16, 5, 4, 11, 62);
 		}
 	}
 

@@ -1,10 +1,7 @@
 package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.api.base.*;
-import io.github.fergoman123.fergotools.common.items.ItemExpShard;
-import io.github.fergoman123.fergotools.common.items.ItemStaffExp;
-import io.github.fergoman123.fergotools.common.items.ItemStaffExp2;
-import io.github.fergoman123.fergotools.common.items.ItemStaffExp3;
+import io.github.fergoman123.fergotools.common.items.*;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import io.github.fergoman123.fergotools.util.VariantNameFT;
 import io.github.fergoman123.fergotools.util.item.AM;
@@ -13,11 +10,9 @@ import io.github.fergoman123.fergotools.util.tool.ItemShearsFT;
 import io.github.fergoman123.fergoutil.item.ArmorType;
 import io.github.fergoman123.fergoutil.model.ModelHelper;
 import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class ModItems
 {
@@ -41,61 +36,61 @@ public class ModItems
     public static Item shardExp;
     public static Item expCollector;
 
-    public static Item quartzPickaxe;
+    public static ItemPickaxeFT quartzPickaxe;
     public static Item quartzShovel;
     public static Item quartzAxe;
     public static Item quartzHoe;
     public static Item quartzSword;
 
-    public static Item obsidianPickaxe;
+    public static ItemPickaxeFT obsidianPickaxe;
     public static Item obsidianShovel;
     public static Item obsidianAxe;
     public static Item obsidianHoe;
     public static Item obsidianSword;
 
-    public static Item emeraldPickaxe;
+    public static ItemPickaxeFT emeraldPickaxe;
     public static Item emeraldShovel;
     public static Item emeraldAxe;
     public static Item emeraldHoe;
     public static Item emeraldSword;
 
-    public static Item lapisPickaxe;
+    public static ItemPickaxeFT lapisPickaxe;
     public static Item lapisShovel;
     public static Item lapisAxe;
     public static Item lapisHoe;
     public static Item lapisSword;
 
-    public static Item bronzePickaxe;
+    public static ItemPickaxeFT bronzePickaxe;
     public static Item bronzeShovel;
     public static Item bronzeAxe;
     public static Item bronzeHoe;
     public static Item bronzeSword;
 
-    public static Item coalPickaxe;
+    public static ItemPickaxeFT coalPickaxe;
     public static Item coalShovel;
     public static Item coalAxe;
     public static Item coalHoe;
     public static Item coalSword;
 
-    public static Item glowstonePickaxe;
+    public static ItemPickaxeFT glowstonePickaxe;
     public static Item glowstoneShovel;
     public static Item glowstoneAxe;
     public static Item glowstoneHoe;
     public static Item glowstoneSword;
 
-    public static Item adamantiumPickaxe;
+    public static ItemPickaxeFT adamantiumPickaxe;
     public static Item adamantiumShovel;
     public static Item adamantiumAxe;
     public static Item adamantiumHoe;
     public static Item adamantiumSword;
 
-    public static Item silkPickaxe;
+    public static ItemPickaxeFT silkPickaxe;
     public static Item silkShovel;
     public static Item silkAxe;
     public static Item silkHoe;
     public static Item silkSword;
 
-    public static Item redstonePickaxe;
+    public static ItemPickaxeFT redstonePickaxe;
     public static Item redstoneShovel;
     public static Item redstoneAxe;
     public static Item redstoneHoe;
@@ -309,17 +304,17 @@ public class ModItems
         bowRedstone = new ItemBowFT(TM.redstone, gemRedstone, ItemNames.bowRedstone[0]);
 
         quartzShears = new ItemShearsFT(TM.quartz, Items.quartz, ItemNames.quartzShears);
-        obsidianShears = new ;
-        emeraldShears;
-        lapisShears;
-        bronzeShears;
-        coalShears;
-        glowstoneShears;
-        adamantiumShears;
-        silkShears;
-        redstoneShears;
+        obsidianShears = new ItemShearsFT(TM.obsidian, ingotObsidian, ItemNames.obsidianShears);
+        emeraldShears = new ItemShearsFT(TM.emerald, gemEmerald, ItemNames.emeraldShears);
+        lapisShears = new ItemShearsFT(TM.lapis, gemLapis, ItemNames.lapisShears);
+        bronzeShears = new ItemShearsFT(TM.bronze, ingotBronze, ItemNames.bronzeShears);
+        coalShears = new ItemShearsFT(TM.coal, ingotCoal, ItemNames.coalShears);
+        glowstoneShears = new ItemShearsFT(TM.glowstone, ingotGlowstone, ItemNames.glowstoneShears);
+        adamantiumShears = new ItemShearsFT(TM.adamantium, ingotAdamantium, ItemNames.adamantiumShears);
+        silkShears = new ItemShearsFT(TM.silk, gemSilk, ItemNames.silkShears);
+        redstoneShears = new ItemShearsFT(TM.redstone, gemRedstone, ItemNames.redstoneShears);
 
-        stickFT;
+        stickFT = new ItemStickFT();
     }
 
     public static void registerItems()
@@ -446,22 +441,227 @@ public class ModItems
         registerItem(redstoneChestplate, ItemNames.redstoneChestplate);
         registerItem(redstoneLeggings, ItemNames.redstoneLeggings);
         registerItem(redstoneBoots, ItemNames.redstoneBoots);
+
+        registerItem(bowQuartz, ItemNames.bowQuartz[0]);
+        registerItem(bowObsidian, ItemNames.bowObsidian[0]);
+        registerItem(bowEmerald, ItemNames.bowEmerald[0]);
+        registerItem(bowLapis, ItemNames.bowLapis[0]);
+        registerItem(bowBronze, ItemNames.bowBronze[0]);
+        registerItem(bowCoal, ItemNames.bowCoal[0]);
+        registerItem(bowGlowstone, ItemNames.bowGlowstone[0]);
+        registerItem(bowAdamantium, ItemNames.bowAdamantium[0]);
+        registerItem(bowSilk, ItemNames.bowSilk[0]);
+        registerItem(bowRedstone, ItemNames.bowRedstone[0]);
+
+        registerItem(quartzShears, ItemNames.quartzShears);
+        registerItem(obsidianShears, ItemNames.obsidianShears);
+        registerItem(emeraldShears, ItemNames.emeraldShears);
+        registerItem(lapisShears, ItemNames.lapisShears);
+        registerItem(bronzeShears, ItemNames.bronzeShears);
+        registerItem(coalShears, ItemNames.coalShears);
+        registerItem(glowstoneShears, ItemNames.glowstoneShears);
+        registerItem(adamantiumShears, ItemNames.adamantiumShears);
+        registerItem(silkShears, ItemNames.silkShears);
+        registerItem(redstoneShears, ItemNames.redstoneShears);
+
+        registerItem(stickFT, ItemNames.stickFT);
     }
 
     public static void registerModels()
     {
-        registerModel(ingotObsidian, 0, ItemNames.ingotObsidian);
-        registerModel(gemEmerald, 0, ItemNames.gemEmerald);
-        registerModel(gemLapis, 0, ItemNames.gemLapis);
-        registerModel(ingotBronze, 0, ItemNames.ingotBronze);
-        registerModel(ingotCoal, 0, ItemNames.ingotCoal);
-        registerModel(ingotGlowstone, 0, ItemNames.ingotGlowstone);
-        registerModel(ingotAdamantium, 0, ItemNames.ingotAdamantium);
-        registerModel(gemSilk, 0, ItemNames.gemSilk);
-        registerModel(gemRedstone, 0, ItemNames.gemRedstone);
-        registerModel(gemExp, 0, ItemNames.gemExp);
-        registerModel(gemExp2, 0, ItemNames.gemExp2);
-        registerModel(gemExp3, 0, ItemNames.gemExp3);
+        registerModel(ingotObsidian, ItemNames.ingotObsidian);
+        registerModel(gemEmerald, ItemNames.gemEmerald);
+        registerModel(gemLapis, ItemNames.gemLapis);
+        registerModel(ingotBronze, ItemNames.ingotBronze);
+        registerModel(ingotCoal, ItemNames.ingotCoal);
+        registerModel(ingotGlowstone, ItemNames.ingotGlowstone);
+        registerModel(ingotAdamantium, ItemNames.ingotAdamantium);
+        registerModel(gemSilk, ItemNames.gemSilk);
+        registerModel(gemRedstone, ItemNames.gemRedstone);
+        registerModel(gemExp, ItemNames.gemExp);
+        registerModel(gemExp2, ItemNames.gemExp2);
+        registerModel(gemExp3, ItemNames.gemExp3);
+        registerModel(staffExp, ItemNames.staffExpVariants[0]);
+        registerModel(staffExp2, ItemNames.staffExpVariants[1]);
+        registerModel(staffExp3, ItemNames.staffExpVariants[2]);
+        registerModel(shardExp, ItemNames.shardExp);
+        registerModel(expCollector, ItemNames.expCollector);
+
+        registerModel(quartzPickaxe, ItemNames.quartzPickaxe);
+        registerModel(quartzShovel, ItemNames.quartzShovel);
+        registerModel(quartzAxe, ItemNames.quartzAxe);
+        registerModel(quartzHoe, ItemNames.quartzHoe);
+        registerModel(quartzSword, ItemNames.quartzSword);
+
+        registerModel(obsidianPickaxe, ItemNames.obsidianPickaxe);
+        registerModel(obsidianShovel, ItemNames.obsidianShovel);
+        registerModel(obsidianAxe, ItemNames.obsidianAxe);
+        registerModel(obsidianHoe, ItemNames.obsidianHoe);
+        registerModel(obsidianSword, ItemNames.obsidianSword);
+
+        registerModel(emeraldPickaxe, ItemNames.emeraldPickaxe);
+        registerModel(emeraldShovel, ItemNames.emeraldShovel);
+        registerModel(emeraldAxe, ItemNames.emeraldAxe);
+        registerModel(emeraldHoe, ItemNames.emeraldHoe);
+        registerModel(emeraldSword, ItemNames.emeraldSword);
+
+        registerModel(lapisPickaxe, ItemNames.lapisPickaxe);
+        registerModel(lapisShovel, ItemNames.lapisShovel);
+        registerModel(lapisAxe, ItemNames.lapisAxe);
+        registerModel(lapisHoe, ItemNames.lapisHoe);
+        registerModel(lapisSword, ItemNames.lapisSword);
+
+        registerModel(bronzePickaxe, ItemNames.bronzePickaxe);
+        registerModel(bronzeShovel, ItemNames.bronzeShovel);
+        registerModel(bronzeAxe, ItemNames.bronzeAxe);
+        registerModel(bronzeHoe, ItemNames.bronzeHoe);
+        registerModel(bronzeSword, ItemNames.bronzeSword);
+
+        registerModel(coalPickaxe, ItemNames.coalPickaxe);
+        registerModel(coalShovel, ItemNames.coalShovel);
+        registerModel(coalAxe, ItemNames.coalAxe);
+        registerModel(coalHoe, ItemNames.coalHoe);
+        registerModel(coalSword, ItemNames.coalSword);
+
+        registerModel(glowstonePickaxe, ItemNames.glowstonePickaxe);
+        registerModel(glowstoneShovel, ItemNames.glowstoneShovel);
+        registerModel(glowstoneAxe, ItemNames.glowstoneAxe);
+        registerModel(glowstoneHoe, ItemNames.glowstoneHoe);
+        registerModel(glowstoneSword, ItemNames.glowstoneSword);
+
+        registerModel(adamantiumPickaxe, ItemNames.adamantiumPickaxe);
+        registerModel(adamantiumShovel, ItemNames.adamantiumShovel);
+        registerModel(adamantiumAxe, ItemNames.adamantiumAxe);
+        registerModel(adamantiumHoe, ItemNames.adamantiumHoe);
+        registerModel(adamantiumSword, ItemNames.adamantiumSword);
+
+        registerModel(silkPickaxe, ItemNames.silkPickaxe);
+        registerModel(silkShovel, ItemNames.silkShovel);
+        registerModel(silkAxe, ItemNames.silkAxe);
+        registerModel(silkHoe, ItemNames.silkHoe);
+        registerModel(silkSword, ItemNames.silkSword);
+
+        registerModel(redstonePickaxe, ItemNames.redstonePickaxe);
+        registerModel(redstoneShovel, ItemNames.redstoneShovel);
+        registerModel(redstoneAxe, ItemNames.redstoneAxe);
+        registerModel(redstoneHoe, ItemNames.redstoneHoe);
+        registerModel(redstoneSword, ItemNames.redstoneSword);
+
+        registerModel(quartzHelmet, ItemNames.quartzHelmet);
+        registerModel(quartzChestplate, ItemNames.quartzChestplate);
+        registerModel(quartzLeggings, ItemNames.quartzLeggings);
+        registerModel(quartzBoots, ItemNames.quartzBoots);
+
+        registerModel(obsidianHelmet, ItemNames.obsidianHelmet);
+        registerModel(obsidianChestplate, ItemNames.obsidianChestplate);
+        registerModel(obsidianLeggings, ItemNames.obsidianLeggings);
+        registerModel(obsidianBoots, ItemNames.obsidianBoots);
+
+        registerModel(emeraldHelmet, ItemNames.emeraldHelmet);
+        registerModel(emeraldChestplate, ItemNames.emeraldChestplate);
+        registerModel(emeraldLeggings, ItemNames.emeraldLeggings);
+        registerModel(emeraldBoots, ItemNames.emeraldBoots);
+
+        registerModel(lapisHelmet, ItemNames.lapisHelmet);
+        registerModel(lapisChestplate, ItemNames.lapisChestplate);
+        registerModel(lapisLeggings, ItemNames.lapisLeggings);
+        registerModel(lapisBoots, ItemNames.lapisBoots);
+
+        registerModel(bronzeHelmet, ItemNames.bronzeHelmet);
+        registerModel(bronzeChestplate, ItemNames.bronzeChestplate);
+        registerModel(bronzeLeggings, ItemNames.bronzeLeggings);
+        registerModel(bronzeBoots, ItemNames.bronzeBoots);
+
+        registerModel(coalHelmet, ItemNames.coalHelmet);
+        registerModel(coalChestplate, ItemNames.coalChestplate);
+        registerModel(coalLeggings, ItemNames.coalLeggings);
+        registerModel(coalBoots, ItemNames.coalBoots);
+
+        registerModel(glowstoneHelmet, ItemNames.glowstoneHelmet);
+        registerModel(glowstoneChestplate, ItemNames.glowstoneChestplate);
+        registerModel(glowstoneLeggings, ItemNames.glowstoneLeggings);
+        registerModel(glowstoneBoots, ItemNames.glowstoneBoots);
+
+        registerModel(adamantiumHelmet, ItemNames.adamantiumHelmet);
+        registerModel(adamantiumChestplate, ItemNames.adamantiumChestplate);
+        registerModel(adamantiumLeggings, ItemNames.adamantiumLeggings);
+        registerModel(adamantiumBoots, ItemNames.adamantiumBoots);
+
+        registerModel(redstoneHelmet, ItemNames.redstoneHelmet);
+        registerModel(redstoneChestplate, ItemNames.redstoneChestplate);
+        registerModel(redstoneLeggings, ItemNames.redstoneLeggings);
+        registerModel(redstoneBoots, ItemNames.redstoneBoots);
+
+        registerModel(bowQuartz, ItemNames.bowQuartz[0]);
+        registerModel(bowQuartz, ItemNames.bowQuartz[1]);
+        registerModel(bowQuartz, ItemNames.bowQuartz[2]);
+        registerModel(bowQuartz, ItemNames.bowQuartz[3]);
+
+        registerModel(bowObsidian, ItemNames.bowObsidian[0]);
+        registerModel(bowObsidian, ItemNames.bowObsidian[1]);
+        registerModel(bowObsidian, ItemNames.bowObsidian[2]);
+        registerModel(bowObsidian, ItemNames.bowObsidian[3]);
+
+        registerModel(bowEmerald, ItemNames.bowEmerald[0]);
+        registerModel(bowEmerald, ItemNames.bowEmerald[1]);
+        registerModel(bowEmerald, ItemNames.bowEmerald[2]);
+        registerModel(bowEmerald, ItemNames.bowEmerald[3]);
+
+        registerModel(bowLapis, ItemNames.bowLapis[0]);
+        registerModel(bowLapis, ItemNames.bowLapis[1]);
+        registerModel(bowLapis, ItemNames.bowLapis[2]);
+        registerModel(bowLapis, ItemNames.bowLapis[3]);
+
+        registerModel(bowBronze, ItemNames.bowBronze[0]);
+        registerModel(bowBronze, ItemNames.bowBronze[1]);
+        registerModel(bowBronze, ItemNames.bowBronze[2]);
+        registerModel(bowBronze, ItemNames.bowBronze[3]);
+
+        registerModel(bowCoal, ItemNames.bowCoal[0]);
+        registerModel(bowCoal, ItemNames.bowCoal[1]);
+        registerModel(bowCoal, ItemNames.bowCoal[2]);
+        registerModel(bowCoal, ItemNames.bowCoal[3]);
+
+        registerModel(bowGlowstone, ItemNames.bowGlowstone[0]);
+        registerModel(bowGlowstone, ItemNames.bowGlowstone[1]);
+        registerModel(bowGlowstone, ItemNames.bowGlowstone[2]);
+        registerModel(bowGlowstone, ItemNames.bowGlowstone[3]);
+
+        registerModel(bowAdamantium, ItemNames.bowAdamantium[0]);
+        registerModel(bowAdamantium, ItemNames.bowAdamantium[1]);
+        registerModel(bowAdamantium, ItemNames.bowAdamantium[2]);
+        registerModel(bowAdamantium, ItemNames.bowAdamantium[3]);
+
+        registerModel(bowSilk, ItemNames.bowSilk[0]);
+        registerModel(bowSilk, ItemNames.bowSilk[1]);
+        registerModel(bowSilk, ItemNames.bowSilk[2]);
+        registerModel(bowSilk, ItemNames.bowSilk[3]);
+
+        registerModel(bowRedstone, ItemNames.bowRedstone[0]);
+        registerModel(bowRedstone, ItemNames.bowRedstone[1]);
+        registerModel(bowRedstone, ItemNames.bowRedstone[2]);
+        registerModel(bowRedstone, ItemNames.bowRedstone[3]);
+
+        registerModel(quartzShears, ItemNames.quartzShears);
+        registerModel(obsidianShears, ItemNames.obsidianShears);
+        registerModel(emeraldShears, ItemNames.emeraldShears);
+        registerModel(lapisShears, ItemNames.lapisShears);
+        registerModel(bronzeShears, ItemNames.bronzeShears);
+        registerModel(coalShears, ItemNames.coalShears);
+        registerModel(glowstoneShears, ItemNames.glowstoneShears);
+        registerModel(adamantiumShears, ItemNames.adamantiumShears);
+        registerModel(silkShears, ItemNames.silkShears);
+        registerModel(redstoneShears, ItemNames.redstoneShears);
+
+        registerModel(stickFT, 0, ItemNames.sticks[0]);
+        registerModel(stickFT, 1, ItemNames.sticks[1]);
+        registerModel(stickFT, 2, ItemNames.sticks[2]);
+        registerModel(stickFT, 3, ItemNames.sticks[3]);
+        registerModel(stickFT, 4, ItemNames.sticks[4]);
+        registerModel(stickFT, 5, ItemNames.sticks[5]);
+        registerModel(stickFT, 6, ItemNames.sticks[6]);
+        registerModel(stickFT, 7, ItemNames.sticks[7]);
+        registerModel(stickFT, 8, ItemNames.sticks[8]);
 
     }
 
@@ -473,5 +673,10 @@ public class ModItems
     public static void registerModel(Item item, int meta, String name){
         ModelHelper.getItemModelMesher().register(item, meta, new ModelResLocFT(name));
         ModelBakery.addVariantName(item, new VariantNameFT(name).getFullName());
+    }
+
+    public static void registerModel(Item item, String name)
+    {
+        registerModel(item, 0, name);
     }
 }

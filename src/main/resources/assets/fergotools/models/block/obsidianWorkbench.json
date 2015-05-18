@@ -1,0 +1,12 @@
+{
+"parent": "block/cube",
+"textures":{
+"particle":"fergotools:blocks/wood/plankObsidian",
+"down":"fergotools:blocks/wood/plankObsidian",
+"up":"fergotools:blocks/workbench/obsidian/obsidianWorkbenchTop",
+"north":"fergotools:blocks/workbench/obsidian/obsidianWorkbenchFront",
+"east":"fergotools:blocks/workbench/obsidian/obsidianWorkbenchSide",
+"south":"fergotools:blocks/workbench/obsidian/obsidianWorkbenchSide",
+"west":"fergotools:blocks/workbench/obsidian/obsidianWorkbenchFront"
+}
+}

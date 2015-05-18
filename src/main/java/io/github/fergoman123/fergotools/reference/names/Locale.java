@@ -10,7 +10,6 @@
 package io.github.fergoman123.fergotools.reference.names;
 
 import io.github.fergoman123.fergotools.reference.Reference;
-import io.github.fergoman123.fergoutil.helper.NameHelper;
 
 /**
  * a list of strings for item and block information

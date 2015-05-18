@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.api.base;
 
+import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.StorageTypes;
-import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
@@ -18,7 +18,7 @@ public class BlockStorageFT extends BlockMultiFergo
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", StorageTypes.class);
 
     public BlockStorageFT(String[] subNames, String name) {
-        super(Material.iron, 0, Tabs.tabFergoBlocks, 5.0f, 10.0f, subNames, name);
+        super(Material.iron, 0, FergoTools.tabFergoTools, 5.0f, 10.0f, subNames, name);
     }
 
     @Override

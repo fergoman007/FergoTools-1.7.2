@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.api.base.BlockOreFT;
-import io.github.fergoman123.fergotools.api.content.FTContent;
+import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -18,7 +18,7 @@ public class Ores
 
         @Override
         public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-            return FTContent.shardExp;
+            return ModItems.shardExp;
         }
 
         @Override
@@ -54,7 +54,7 @@ public class Ores
 
         @Override
         public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-            return FTContent.gemEmerald;
+            return ModItems.gemEmerald;
         }
 
         @Override
@@ -72,7 +72,7 @@ public class Ores
 
         @Override
         public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-            return FTContent.gemLapis;
+            return ModItems.gemLapis;
         }
 
         @Override
@@ -126,7 +126,7 @@ public class Ores
 
         @Override
         public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-            return FTContent.gemRedstone;
+            return ModItems.gemRedstone;
         }
 
         @Override

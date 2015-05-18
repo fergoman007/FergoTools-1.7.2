@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.api.base;
 
-import io.github.fergoman123.fergotools.creativetab.Tabs;
+import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.helper.NBTHelper;
 import io.github.fergoman123.fergotools.helper.StaffExpHelper;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
@@ -17,7 +17,7 @@ public class ItemStaffExpBase extends Item
     {
         super();
         this.type = type;
-        this.setCreativeTab(Tabs.tabFergoItems);
+        this.setCreativeTab(FergoTools.tabFergoTools);
         this.setUnlocalizedName(ItemNames.staffExpVariants[type]);
     }
 
@@ -36,34 +36,34 @@ public class ItemStaffExpBase extends Item
         return stack.hasTagCompound();
     }
 
-    public double getStoredExp(ItemStack stack)
+    public int getStoredExp(ItemStack stack)
     {
         if (stack.getTagCompound() == null)
         {
             stack.setTagCompound(new NBTTagCompound());
         }
 
-        return NBTHelper.getDouble(stack, "StoredExp");
+        return NBTHelper.getInt(stack, "StoredExp");
     }
 
-    public void setStoredExp(ItemStack stack, double amount)
+    public void setStoredExp(ItemStack stack, int amount)
     {
         if (stack.getTagCompound() == null)
         {
             stack.setTagCompound(new NBTTagCompound());
         }
 
-        NBTHelper.setDouble(stack, "StoredExp", amount);
+        NBTHelper.setInteger(stack, "StoredExp", amount);
     }
 
-    public void addExp(ItemStack stack, double amount)
+    public void addExp(ItemStack stack, int amount)
     {
         setStoredExp(stack, getStoredExp(stack) + amount);
     }
 
-    public void removeExp(ItemStack stack, double amount)
+    public void removeExp(ItemStack stack, int amount)
     {
-        double result = getStoredExp(stack) - amount;
+        int result = getStoredExp(stack) - amount;
 
         if (result < 0)
         {

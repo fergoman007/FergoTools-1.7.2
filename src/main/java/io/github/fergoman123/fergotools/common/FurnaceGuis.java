@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.common;
 
-import io.github.fergoman123.fergotools.common.Containers.ContainerQuartzFurnace;
+import io.github.fergoman123.fergotools.common.FurnaceContainers.ContainerQuartzFurnace;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergoutil.gui.GuiFurnaceFergo;
 import io.github.fergoman123.fergoutil.helper.GLStateHelper;

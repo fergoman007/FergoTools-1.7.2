@@ -2,22 +2,20 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.api.base.*;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
-import io.github.fergoman123.fergotools.common.Tiles.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.common.blocks.BlockSaplingFT;
+import io.github.fergoman123.fergotools.common.blocks.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.common.blocks.Furnaces.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.common.blocks.Ores.*;
 import io.github.fergoman123.fergotools.common.blocks.wood.*;
 import io.github.fergoman123.fergotools.common.itemblock.*;
-import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.util.VariantNameFT;
 import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
-import io.github.fergoman123.fergoutil.helper.GRHelper;
 import io.github.fergoman123.fergoutil.model.ModelHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks
@@ -76,6 +74,16 @@ public class ModBlocks
 
     public static BlockSaplingFT saplingFT;
 
+    public static BlockWorkbenchFT obsidianWorkbench;
+    public static BlockWorkbenchFT emeraldWorkbench;
+    public static BlockWorkbenchFT lapisWorkbench;
+    public static BlockWorkbenchFT bronzeWorkbench;
+    public static BlockWorkbenchFT coalWorkbench;
+    public static BlockWorkbenchFT glowstoneWorkbench;
+    public static BlockWorkbenchFT adamantiumWorkbench;
+    public static BlockWorkbenchFT silkWorkbench;
+    public static BlockWorkbenchFT redstoneWorkbench;
+
     public static void init()
     {
         oreExperience = new BlockOreExperience();
@@ -131,6 +139,15 @@ public class ModBlocks
         leavesFT = new BlockLeavesImpl(BlockNames.leavesFT);
         saplingFT = new BlockSaplingFT(BlockNames.saplingFT);
 
+        obsidianWorkbench = new BlockWorkbenchFT(0);
+        emeraldWorkbench = new BlockWorkbenchFT(1);
+        lapisWorkbench = new BlockWorkbenchFT(2);
+        bronzeWorkbench = new BlockWorkbenchFT(3);
+        coalWorkbench = new BlockWorkbenchFT(4);
+        glowstoneWorkbench = new BlockWorkbenchFT(5);
+        adamantiumWorkbench = new BlockWorkbenchFT(6);
+        silkWorkbench = new BlockWorkbenchFT(7);
+        redstoneWorkbench = new BlockWorkbenchFT(8);
     }
 
     public static void registerBlocks()
@@ -145,56 +162,168 @@ public class ModBlocks
 
         registerBlock(storageFT, BlockNames.storageFT);
 
-        registerFurnace(quartzFurnaceIdle, quartzFurnaceActive, TileQuartzFurnace.class, "quartzFurnace", BlockNames.quartzFurnaceIdle, BlockNames.quartzFurnaceActive);
+        // idle
+        registerBlock(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
 
-        registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logs, BlockNames.logFT);
-        registerBlock(plankFT, ItemBlockPlankFT.class, BlockNames.planks, BlockNames.plankFT);
+        // active
+        registerBlock(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
 
-        registerStair(stairObsidian, BlockNames.stairObsidian);
-        registerStair(stairEmerald, BlockNames.stairEmerald);
-        registerStair(stairLapis, BlockNames.stairLapis);
-        registerStair(stairBronze, BlockNames.stairBronze);
-        registerStair(stairCoal, BlockNames.stairCoal);
-        registerStair(stairGlowstone, BlockNames.stairGlowstone);
-        registerStair(stairAdamantium, BlockNames.stairAdamantium);
-        registerStair(stairSilk, BlockNames.stairSilk);
+        registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logFT);
+        registerBlock(plankFT, ItemBlockPlankFT.class, BlockNames.plankFT);
 
-        registerBlock(singleSlabFT, ItemBlockSlabSingle.class, BlockNames.slabSingle, BlockNames.slabSingleFT);
-        registerBlock(doubleSlabFT, ItemBlockSlabDouble.class, BlockNames.slabDouble, BlockNames.slabDoubleFT);
-        registerBlock(leavesFT, ItemBlockLeavesFT.class, BlockNames.leaves, BlockNames.leavesFT);
-        registerBlock(saplingFT, ItemBlockSaplingFT.class, BlockNames.saplings, BlockNames.saplingFT);
+        registerBlock(stairObsidian, BlockNames.stairObsidian);
+        registerBlock(stairEmerald, BlockNames.stairEmerald);
+        registerBlock(stairLapis, BlockNames.stairLapis);
+        registerBlock(stairBronze, BlockNames.stairBronze);
+        registerBlock(stairCoal, BlockNames.stairCoal);
+        registerBlock(stairGlowstone, BlockNames.stairGlowstone);
+        registerBlock(stairAdamantium, BlockNames.stairAdamantium);
+        registerBlock(stairSilk, BlockNames.stairSilk);
+        registerBlock(stairRedstone, BlockNames.stairRedstone);
+
+        registerBlock(singleSlabFT, ItemBlockSlabSingle.class, BlockNames.slabSingleFT);
+        registerBlock(doubleSlabFT, ItemBlockSlabDouble.class, BlockNames.slabDoubleFT);
+        registerBlock(leavesFT, ItemBlockLeavesFT.class, BlockNames.leavesFT);
+        registerBlock(saplingFT, ItemBlockSaplingFT.class, BlockNames.saplingFT);
+
+        registerBlock(obsidianWorkbench, BlockNames.workbenches[0]);
+        registerBlock(emeraldWorkbench, BlockNames.workbenches[1]);
+        registerBlock(lapisWorkbench, BlockNames.workbenches[2]);
+        registerBlock(bronzeWorkbench, BlockNames.workbenches[3]);
+        registerBlock(coalWorkbench, BlockNames.workbenches[4]);
+        registerBlock(glowstoneWorkbench, BlockNames.workbenches[5]);
+        registerBlock(adamantiumWorkbench, BlockNames.workbenches[6]);
+        registerBlock(silkWorkbench, BlockNames.workbenches[7]);
+        registerBlock(redstoneWorkbench, BlockNames.workbenches[8]);
+    }
+
+    public static void registerModels()
+    {
+        registerModel(oreExperience, BlockNames.oreExperience);
+        registerModel(oreObsidian, BlockNames.oreObsidian);
+        registerModel(oreGemEmerald, BlockNames.oreGemEmerald);
+        registerModel(oreGemLapis, BlockNames.oreGemLapis);
+        registerModel(oreBronze, BlockNames.oreBronze);
+        registerModel(oreAdamantium, BlockNames.oreAdamantium);
+        registerModel(oreGemRedstone, BlockNames.oreGemRedstone);
+
+        registerModel(storageFT, 0, BlockNames.blocks[0]);
+        registerModel(storageFT, 1, BlockNames.blocks[1]);
+        registerModel(storageFT, 2, BlockNames.blocks[2]);
+        registerModel(storageFT, 3, BlockNames.blocks[3]);
+        registerModel(storageFT, 4, BlockNames.blocks[4]);
+        registerModel(storageFT, 5, BlockNames.blocks[5]);
+        registerModel(storageFT, 6, BlockNames.blocks[6]);
+        registerModel(storageFT, 7, BlockNames.blocks[7]);
+        registerModel(storageFT, 8, BlockNames.blocks[8]);
+        registerModel(storageFT, 9, BlockNames.blocks[9]);
+        registerModel(storageFT, 10, BlockNames.blocks[10]);
+
+        // idle
+        registerModel(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
+
+        //active
+        registerModel(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
+
+        registerModel(logFT, 0, BlockNames.logs[0]);
+        registerModel(logFT, 1, BlockNames.logs[1]);
+        registerModel(logFT, 2, BlockNames.logs[2]);
+        registerModel(logFT, 3, BlockNames.logs[3]);
+        registerModel(logFT, 4, BlockNames.logs[4]);
+        registerModel(logFT, 5, BlockNames.logs[5]);
+        registerModel(logFT, 6, BlockNames.logs[6]);
+        registerModel(logFT, 7, BlockNames.logs[7]);
+        registerModel(logFT, 8, BlockNames.logs[8]);
+
+        registerModel(plankFT, 0, BlockNames.planks[0]);
+        registerModel(plankFT, 1, BlockNames.planks[1]);
+        registerModel(plankFT, 2, BlockNames.planks[2]);
+        registerModel(plankFT, 3, BlockNames.planks[3]);
+        registerModel(plankFT, 4, BlockNames.planks[4]);
+        registerModel(plankFT, 5, BlockNames.planks[5]);
+        registerModel(plankFT, 6, BlockNames.planks[6]);
+        registerModel(plankFT, 7, BlockNames.planks[7]);
+        registerModel(plankFT, 8, BlockNames.planks[8]);
+
+        registerModel(stairObsidian, BlockNames.stairs[0]);
+        registerModel(stairEmerald, BlockNames.stairs[1]);
+        registerModel(stairLapis, BlockNames.stairs[2]);
+        registerModel(stairBronze, BlockNames.stairs[3]);
+        registerModel(stairCoal, BlockNames.stairs[4]);
+        registerModel(stairGlowstone, BlockNames.stairs[5]);
+        registerModel(stairAdamantium, BlockNames.stairs[6]);
+        registerModel(stairSilk, BlockNames.stairs[7]);
+        registerModel(stairRedstone, BlockNames.stairs[8]);
+
+        registerModel(singleSlabFT, 0, BlockNames.slabSingle[0]);
+        registerModel(singleSlabFT, 1, BlockNames.slabSingle[1]);
+        registerModel(singleSlabFT, 2, BlockNames.slabSingle[2]);
+        registerModel(singleSlabFT, 3, BlockNames.slabSingle[3]);
+        registerModel(singleSlabFT, 4, BlockNames.slabSingle[4]);
+        registerModel(singleSlabFT, 5, BlockNames.slabSingle[5]);
+        registerModel(singleSlabFT, 6, BlockNames.slabSingle[6]);
+        registerModel(singleSlabFT, 7, BlockNames.slabSingle[7]);
+        registerModel(singleSlabFT, 8, BlockNames.slabSingle[8]);
+
+        registerModel(doubleSlabFT, 0, BlockNames.slabDouble[0]);
+        registerModel(doubleSlabFT, 1, BlockNames.slabDouble[1]);
+        registerModel(doubleSlabFT, 2, BlockNames.slabDouble[2]);
+        registerModel(doubleSlabFT, 3, BlockNames.slabDouble[3]);
+        registerModel(doubleSlabFT, 4, BlockNames.slabDouble[4]);
+        registerModel(doubleSlabFT, 5, BlockNames.slabDouble[5]);
+        registerModel(doubleSlabFT, 6, BlockNames.slabDouble[6]);
+        registerModel(doubleSlabFT, 7, BlockNames.slabDouble[7]);
+        registerModel(doubleSlabFT, 8, BlockNames.slabDouble[8]);
+
+        registerModel(leavesFT, 0, BlockNames.leaves[0]);
+        registerModel(leavesFT, 1, BlockNames.leaves[1]);
+        registerModel(leavesFT, 2, BlockNames.leaves[2]);
+        registerModel(leavesFT, 3, BlockNames.leaves[3]);
+        registerModel(leavesFT, 4, BlockNames.leaves[4]);
+        registerModel(leavesFT, 5, BlockNames.leaves[5]);
+        registerModel(leavesFT, 6, BlockNames.leaves[6]);
+        registerModel(leavesFT, 7, BlockNames.leaves[7]);
+        registerModel(leavesFT, 8, BlockNames.leaves[8]);
+
+        registerModel(saplingFT, 0, BlockNames.saplings[0]);
+        registerModel(saplingFT, 1, BlockNames.saplings[1]);
+        registerModel(saplingFT, 2, BlockNames.saplings[2]);
+        registerModel(saplingFT, 3, BlockNames.saplings[3]);
+        registerModel(saplingFT, 4, BlockNames.saplings[4]);
+        registerModel(saplingFT, 5, BlockNames.saplings[5]);
+        registerModel(saplingFT, 6, BlockNames.saplings[6]);
+        registerModel(saplingFT, 7, BlockNames.saplings[7]);
+        registerModel(saplingFT, 8, BlockNames.saplings[8]);
+
+        registerModel(obsidianWorkbench, BlockNames.workbenches[0]);
+        registerModel(emeraldWorkbench, BlockNames.workbenches[1]);
+        registerModel(lapisWorkbench, BlockNames.workbenches[2]);
+        registerModel(bronzeWorkbench, BlockNames.workbenches[3]);
+        registerModel(coalWorkbench, BlockNames.workbenches[4]);
+        registerModel(glowstoneWorkbench, BlockNames.workbenches[5]);
+        registerModel(adamantiumWorkbench, BlockNames.workbenches[6]);
+        registerModel(silkWorkbench, BlockNames.workbenches[7]);
+        registerModel(redstoneWorkbench, BlockNames.workbenches[8]);
     }
 
     public static void registerBlock(Block block, String name)
     {
-        GRHelper.registerBlock(block, ModInfo.modid, name);
+        GameRegistry.registerBlock(block, name);
     }
 
-    public static void registerStair(BlockStairsFT stair, String name)
-    {
-        GameRegistry.registerBlock(stair, name);
-        ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(stair), 0, new ModelResLocFT(name));
-        ModelBakery.addVariantName(Item.getItemFromBlock(stair), ModInfo.modid.toLowerCase() + ":" + name);
-    }
-
-    public static void registerFurnace(BlockFurnaceFT idle, BlockFurnaceFT active, Class<? extends TileEntity> tile, String tileName, String idleName, String activeName)
-    {
-        GameRegistry.registerBlock(idle, idleName);
-        GameRegistry.registerBlock(active, activeName);
-        GameRegistry.registerTileEntity(tile, tileName);
-        ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(idle), 0, new ModelResLocFT(idleName));
-        ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(active), 0, new ModelResLocFT(activeName));
-        ModelBakery.addVariantName(Item.getItemFromBlock(idle), ModInfo.modid + ":" + idleName);
-        ModelBakery.addVariantName(Item.getItemFromBlock(active), ModInfo.modid + ":" + activeName);
-    }
-
-    public static void registerBlock(Block block, Class<? extends ItemBlock> itemClass, String[] models, String name)
+    public static void registerBlock(Block block, Class<? extends ItemBlock> itemClass, String name)
     {
         GameRegistry.registerBlock(block, itemClass, name);
-        for(int i = 0; i < models.length; i++)
-        {
-            ModelHelper.getItemModelMesher().register(ItemBlock.getItemFromBlock(block), i, new ModelResLocFT(models[i]));
-            ModelBakery.addVariantName(Item.getItemFromBlock(block), ModInfo.modid + ":" + models[i]);
-        }
+    }
+
+    public static void registerModel(Block block, int meta, String name)
+    {
+        ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResLocFT(name));
+        ModelBakery.addVariantName(Item.getItemFromBlock(block), new VariantNameFT(name).getFullName());
+    }
+
+    public static void registerModel(Block block, String name)
+    {
+        registerModel(block, 0, name);
     }
 }

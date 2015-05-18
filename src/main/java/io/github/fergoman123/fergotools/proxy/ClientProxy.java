@@ -12,6 +12,7 @@ package io.github.fergoman123.fergotools.proxy;
 
 import io.github.fergoman123.fergotools.config.ConfigHandler;
 import io.github.fergoman123.fergotools.event.AdamantiumArmorEvent;
+import io.github.fergoman123.fergotools.event.ItemToolTipEvent;
 import io.github.fergoman123.fergotools.event.OnPlayerLoggedInEvent;
 import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 
@@ -34,5 +35,6 @@ public class ClientProxy extends CommonProxy
         RegisterHelper.registerEvent(OnPlayerLoggedInEvent.instance);
         RegisterHelper.registerEvent(AdamantiumArmorEvent.instance);
         RegisterHelper.registerEvent(ConfigHandler.instance);
+        RegisterHelper.registerEvent(ItemToolTipEvent.instance);
     }
 }

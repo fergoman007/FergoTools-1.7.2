@@ -1,11 +1,9 @@
 package io.github.fergoman123.fergotools.common.blocks.wood;
 
+import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
-import io.github.fergoman123.fergotools.creativetab.Tabs;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergoutil.block.BlockSlabFergo;
-import net.minecraft.block.BlockPlanks;
-import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -25,7 +23,7 @@ public abstract class BlockWoodSlabFT extends BlockSlabFergo
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
 
     public BlockWoodSlabFT(String name) {
-        super(Material.wood, 0, Tabs.tabFergoWood, name);
+        super(Material.wood, 0, FergoTools.tabFergoTools, name);
         IBlockState state = this.blockState.getBaseState();
 
         if (!this.isDouble())
@@ -76,9 +74,9 @@ public abstract class BlockWoodSlabFT extends BlockSlabFergo
     public int getMetaFromState(IBlockState state)
     {
         byte b0 = 0;
-        int i = b0 | ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        int i = b0 | ((WoodTypes)state.getValue(VARIANT)).getMeta();
 
-        if (!this.isDouble() && state.getValue(HALF) == BlockSlab.EnumBlockHalf.TOP)
+        if (!this.isDouble() && state.getValue(HALF) == EnumBlockHalf.TOP)
         {
             i |= 8;
         }

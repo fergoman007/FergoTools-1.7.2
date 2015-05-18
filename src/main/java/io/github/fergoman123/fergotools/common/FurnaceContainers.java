@@ -11,7 +11,7 @@ import net.minecraft.inventory.SlotFurnaceOutput;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class Containers
+public class FurnaceContainers
 {
     public static final class ContainerQuartzFurnace extends ContainerFurnaceFergo
     {

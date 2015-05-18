@@ -22,7 +22,7 @@ public class BlockNames
     public static final String oreGemLapis = "oreGemLapis";
     public static final String oreBronze = "oreBronze";
     public static final String oreAdamantium = "oreAdamantium";
-    public static final String oreGemRedstone = "oreCrystalRed";
+    public static final String oreGemRedstone = "oreGemRedstone";
 
     public static final String[] ores = {oreExperience, oreObsidian, oreGemEmerald, oreGemLapis, oreBronze, oreAdamantium, oreGemRedstone};
 
@@ -39,7 +39,20 @@ public class BlockNames
     public static final String blockGemRedstone = "blockGemRedstone";
     public static final String blockExpCollector = "blockExpCollector";
 
-    public static final String[] blocks = {blockExperience, blockExpCollector, blockObsidian, blockGemEmerald, blockGemLapis, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockGemSilk, blockGemRedstone};
+    public static final String[] blocks =
+            {
+                    blockExperience,
+                    blockExpCollector,
+                    blockObsidian,
+                    blockGemEmerald,
+                    blockGemLapis,
+                    blockBronze,
+                    blockCoal,
+                    blockGlowstone,
+                    blockAdamantium,
+                    blockGemSilk,
+                    blockGemRedstone
+            };
 
     public static final String blockFergoGlass = "blockFergoGlass";
 
@@ -105,7 +118,7 @@ public class BlockNames
 
     public static final String[] planks = {plankObsidian, plankEmerald, plankLapis, plankBronze, plankCoal, plankGlowstone, plankAdamantium, plankSilk, plankRedstone};
 
-    public static final String fergoWorkbench = "fergoWorkbench";
+    public static final String workbenchFT = "workbenchFT";
     public static final String obsidianWorkbench = "obsidianWorkbench";
     public static final String emeraldWorkbench = "emeraldWorkbench";
     public static final String lapisWorkbench = "lapisWorkbench";

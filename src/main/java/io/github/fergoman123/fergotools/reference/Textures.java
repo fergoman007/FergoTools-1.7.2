@@ -50,7 +50,7 @@ public class Textures
     public static final ResourceLocation redstoneFurnaceGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "redstoneFurnace" + png);
     public static final ResourceLocation maceratorGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiFurnace + "macerator" + png);
 
-    public static final ResourceLocation obsidianWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "fergoWorkbench" + png);
+    public static final ResourceLocation obsidianWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "obsidianWorkbench" + png);
     public static final ResourceLocation emeraldWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "emeraldWorkbench" + png);
     public static final ResourceLocation lapisWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "lapisWorkbench" + png);
     public static final ResourceLocation bronzeWorkbenchGuiTexture = ResourceLocationHelper.getModdedResourceLocation(guiSheetLocation + guiWorkbench + "BronzeWorkbench" + png);

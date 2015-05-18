@@ -10,15 +10,12 @@
 package io.github.fergoman123.fergotools.handler;
 
  import io.github.fergoman123.fergotools.FergoTools;
- import io.github.fergoman123.fergotools.api.content.FTContent;
- import io.github.fergoman123.fergotools.reference.names.BlockNames;
- import io.github.fergoman123.fergotools.reference.names.ItemNames;
- import io.github.fergoman123.fergoutil.helper.RegisterHelper;
- import net.minecraft.block.Block;
- import net.minecraft.item.Item;
- import net.minecraft.item.ItemStack;
- import net.minecraftforge.fml.common.network.NetworkRegistry;
- import net.minecraftforge.oredict.OreDictionary;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
  public class RegHandler {
 
@@ -34,66 +31,66 @@ package io.github.fergoman123.fergotools.handler;
 
     public static void registerOres()
     {
-        registerOre(BlockNames.oreObsidian, FTContent.oreObsidian);
-        registerOre(BlockNames.oreGemEmerald, FTContent.oreGemEmerald);
-        registerOre(BlockNames.oreGemLapis, FTContent.oreGemLapis);
-        registerOre(BlockNames.oreBronze, FTContent.oreBronze);
-        registerOre(BlockNames.oreAdamantium, FTContent.oreAdamantium);
-        registerOre(BlockNames.oreExperience, FTContent.oreExperience);
-        registerOre(BlockNames.oreGemRedstone, FTContent.oreGemRedstone);
-
-        registerOre(BlockNames.blockObsidian, FTContent.blockObsidian);
-        registerOre(BlockNames.blockGemEmerald, FTContent.blockGemEmerald);
-        registerOre(BlockNames.blockGemLapis, FTContent.blockGemLapis);
-        registerOre(BlockNames.blockBronze, FTContent.blockBronze);
-        registerOre(BlockNames.blockCoal, FTContent.blockCoal);
-        registerOre(BlockNames.blockGlowstone, FTContent.blockGlowstone);
-        registerOre(BlockNames.blockAdamantium, FTContent.blockAdamantium);
-        registerOre(BlockNames.blockGemSilk, FTContent.blockGemSilk);
-        registerOre(BlockNames.blockGemRedstone, FTContent.blockGemRedstone);
-
-        registerOre(ItemNames.ingotObsidian, FTContent.ingotObsidian);
-        registerOre(ItemNames.gemEmerald, FTContent.gemEmerald);
-        registerOre(ItemNames.gemLapis, FTContent.gemLapis);
-        registerOre(ItemNames.ingotBronze, FTContent.ingotBronze);
-        registerOre(ItemNames.ingotCoal, FTContent.ingotCoal);
-        registerOre(ItemNames.ingotGlowstone, FTContent.ingotGlowstone);
-        registerOre(ItemNames.ingotAdamantium, FTContent.ingotAdamantium);
-        registerOre(ItemNames.gemSilk, FTContent.gemSilk);
-        registerOre(ItemNames.gemRedstone, FTContent.gemRedstone);
-        registerOre(ItemNames.shardExp, FTContent.shardExp);
-
-        registerOre("logWood", FTContent.logObsidian);
-        registerOre("logWood", FTContent.logEmerald);
-        registerOre("logWood", FTContent.logLapis);
-        registerOre("logWood", FTContent.logBronze);
-        registerOre("logWood", FTContent.logCoal);
-        registerOre("logWood", FTContent.logGlowstone);
-        registerOre("logWood", FTContent.logAdamantium);
-        registerOre("logWood", FTContent.logSilk);
-        registerOre("logWood", FTContent.logRedstone);
-
-        registerOre("plankWood", FTContent.plankObsidian);
-        registerOre("plankWood", FTContent.plankEmerald);
-        registerOre("plankWood", FTContent.plankLapis);
-        registerOre("plankWood", FTContent.plankBronze);
-        registerOre("plankWood", FTContent.plankCoal);
-        registerOre("plankWood", FTContent.plankGlowstone);
-        registerOre("plankWood", FTContent.plankAdamantium);
-        registerOre("plankWood", FTContent.plankSilk);
-        registerOre("plankWood", FTContent.plankRedstone);
-
-        registerOre("stairWood", FTContent.stairObsidian);
-        registerOre("stairWood", FTContent.stairEmerald);
-        registerOre("stairWood", FTContent.stairLapis);
-        registerOre("stairWood", FTContent.stairBronze);
-        registerOre("stairWood", FTContent.stairCoal);
-        registerOre("stairWood", FTContent.stairGlowstone);
-        registerOre("stairWood", FTContent.stairAdamantium);
-        registerOre("stairWood", FTContent.stairSilk);
-        registerOre("stairWood", FTContent.stairRedstone);
-
-        registerOre("stickWood", new ItemStack(FTContent.stickFT, 1, OreDictionary.WILDCARD_VALUE));
+//        registerOre(BlockNames.oreObsidian, FTContent.oreObsidian);
+//        registerOre(BlockNames.oreGemEmerald, FTContent.oreGemEmerald);
+//        registerOre(BlockNames.oreGemLapis, FTContent.oreGemLapis);
+//        registerOre(BlockNames.oreBronze, FTContent.oreBronze);
+//        registerOre(BlockNames.oreAdamantium, FTContent.oreAdamantium);
+//        registerOre(BlockNames.oreExperience, FTContent.oreExperience);
+//        registerOre(BlockNames.oreGemRedstone, FTContent.oreGemRedstone);
+//
+//        registerOre(BlockNames.blockObsidian, FTContent.blockObsidian);
+//        registerOre(BlockNames.blockGemEmerald, FTContent.blockGemEmerald);
+//        registerOre(BlockNames.blockGemLapis, FTContent.blockGemLapis);
+//        registerOre(BlockNames.blockBronze, FTContent.blockBronze);
+//        registerOre(BlockNames.blockCoal, FTContent.blockCoal);
+//        registerOre(BlockNames.blockGlowstone, FTContent.blockGlowstone);
+//        registerOre(BlockNames.blockAdamantium, FTContent.blockAdamantium);
+//        registerOre(BlockNames.blockGemSilk, FTContent.blockGemSilk);
+//        registerOre(BlockNames.blockGemRedstone, FTContent.blockGemRedstone);
+//
+//        registerOre(ItemNames.ingotObsidian, FTContent.ingotObsidian);
+//        registerOre(ItemNames.gemEmerald, FTContent.gemEmerald);
+//        registerOre(ItemNames.gemLapis, FTContent.gemLapis);
+//        registerOre(ItemNames.ingotBronze, FTContent.ingotBronze);
+//        registerOre(ItemNames.ingotCoal, FTContent.ingotCoal);
+//        registerOre(ItemNames.ingotGlowstone, FTContent.ingotGlowstone);
+//        registerOre(ItemNames.ingotAdamantium, FTContent.ingotAdamantium);
+//        registerOre(ItemNames.gemSilk, FTContent.gemSilk);
+//        registerOre(ItemNames.gemRedstone, FTContent.gemRedstone);
+//        registerOre(ItemNames.shardExp, FTContent.shardExp);
+//
+//        registerOre("logWood", FTContent.logObsidian);
+//        registerOre("logWood", FTContent.logEmerald);
+//        registerOre("logWood", FTContent.logLapis);
+//        registerOre("logWood", FTContent.logBronze);
+//        registerOre("logWood", FTContent.logCoal);
+//        registerOre("logWood", FTContent.logGlowstone);
+//        registerOre("logWood", FTContent.logAdamantium);
+//        registerOre("logWood", FTContent.logSilk);
+//        registerOre("logWood", FTContent.logRedstone);
+//
+//        registerOre("plankWood", FTContent.plankObsidian);
+//        registerOre("plankWood", FTContent.plankEmerald);
+//        registerOre("plankWood", FTContent.plankLapis);
+//        registerOre("plankWood", FTContent.plankBronze);
+//        registerOre("plankWood", FTContent.plankCoal);
+//        registerOre("plankWood", FTContent.plankGlowstone);
+//        registerOre("plankWood", FTContent.plankAdamantium);
+//        registerOre("plankWood", FTContent.plankSilk);
+//        registerOre("plankWood", FTContent.plankRedstone);
+//
+//        registerOre("stairWood", FTContent.stairObsidian);
+//        registerOre("stairWood", FTContent.stairEmerald);
+//        registerOre("stairWood", FTContent.stairLapis);
+//        registerOre("stairWood", FTContent.stairBronze);
+//        registerOre("stairWood", FTContent.stairCoal);
+//        registerOre("stairWood", FTContent.stairGlowstone);
+//        registerOre("stairWood", FTContent.stairAdamantium);
+//        registerOre("stairWood", FTContent.stairSilk);
+//        registerOre("stairWood", FTContent.stairRedstone);
+//
+//        registerOre("stickWood", new ItemStack(FTContent.stickFT, 1, OreDictionary.WILDCARD_VALUE));
     }
 
      public static void registerOre(String oreName, Item item)

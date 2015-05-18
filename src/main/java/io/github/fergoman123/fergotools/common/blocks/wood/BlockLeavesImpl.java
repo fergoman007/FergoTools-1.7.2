@@ -4,6 +4,7 @@ import io.github.fergoman123.fergotools.api.base.BlockLeavesFT;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -63,6 +64,11 @@ public class BlockLeavesImpl extends BlockLeavesFT {
         for (WoodTypes type : WoodTypes.values()) {
             list.add(new ItemStack(itemIn, 1, type.getMeta()));
         }
+    }
+
+    @Override
+    protected BlockState createBlockState() {
+        return new BlockState(this, VARIANT, CHECK_DECAY, DECAYABLE);
     }
 
     @Override
