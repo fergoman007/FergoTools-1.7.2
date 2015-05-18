@@ -9,11 +9,13 @@
 
 package io.github.fergoman123.fergotools;
 
+ import io.github.fergoman123.fergotools.helper.ModelHandler;
  import io.github.fergoman123.fergotools.init.FergoToolsMod;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergotools.reference.Reference;
-import io.github.fergoman123.fergoutil.proxy.IProxy;
+ import io.github.fergoman123.fergoutil.model.ModelHelper;
+ import io.github.fergoman123.fergoutil.proxy.IProxy;
 import io.github.fergoman123.fergoutil.reference.ModConstants;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -25,6 +27,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+ import java.io.IOException;
 
  @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dep, guiFactory = Reference.guiFactoryClass)
 public class FergoTools
@@ -63,6 +67,8 @@ public class FergoTools
     public void preInit(FMLPreInitializationEvent evt)
     {
         FergoToolsMod.preInit(evt);
+        ModelHandler.writeFile("oreObsidian", "oreObsidian");
+
     }
 
 	@Mod.EventHandler

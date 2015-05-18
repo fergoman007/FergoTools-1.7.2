@@ -1,6 +1,5 @@
 package io.github.fergoman123.fergotools.common.gui.workbench;
 
-import io.github.fergoman123.fergotools.common.gui.workbench.container.ContainerWorkbenchFT;
 import net.minecraft.block.Block;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;

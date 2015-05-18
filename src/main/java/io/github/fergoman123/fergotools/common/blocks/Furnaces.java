@@ -46,7 +46,7 @@ public class Furnaces
 
                 if (furnace != null)
                 {
-                    GuiHelper.openGui(playerIn, FergoTools.getInstance(), GuiIds.quartzFurnace.ordinal(), worldIn, pos);
+                    GuiHelper.openGui(playerIn, FergoTools.getInstance(), GuiIds.quartzFurnace, worldIn, pos);
                     FergoTools.getLogger().info("Opened Quartz Furnace");
                     return true;
                 }
