@@ -4,6 +4,47 @@
     "axis=y,variant=logobsidian": {"model": "fergotools:logObsidian"},
     "axis=x,variant=logobsidian":{ "model": "fergotools:logObsidianSide", "y": 90 },
     "axis=z,variant=logobsidian": {"model": "fergotools:logObsidianSide"},
-    "axis=none,variant=logobsidian": {"model": "fergotools:logObsidianBark"}
+    "axis=none,variant=logobsidian": {"model": "fergotools:logObsidianBark"},
+
+    "axis=y,variant=logemerald": {"model": "fergotools:logEmerald"},
+    "axis=x,variant=logemerald":{ "model": "fergotools:logEmeraldSide", "y": 90 },
+    "axis=z,variant=logemerald": {"model": "fergotools:logEmeraldSide"},
+    "axis=none,variant=logemerald": {"model": "fergotools:logEmeraldBark"},
+
+
+    "axis=y,variant=loglapis": {"model": "fergotools:logLapis"},
+    "axis=x,variant=loglapis":{ "model": "fergotools:logLapisSide", "y": 90 },
+    "axis=z,variant=loglapis": {"model": "fergotools:logLapisSide"},
+    "axis=none,variant=loglapis": {"model": "fergotools:logLapisBark"},
+
+    "axis=y,variant=logbronze": {"model": "fergotools:logBronze"},
+    "axis=x,variant=logbronze":{ "model": "fergotools:logBronzeSide", "y": 90 },
+    "axis=z,variant=logbronze": {"model": "fergotools:logBronzeSide"},
+    "axis=none,variant=logbronze": {"model": "fergotools:logBronzeBark"},
+
+    "axis=y,variant=logcoal": {"model": "fergotools:logCoal"},
+    "axis=x,variant=logcoal":{ "model": "fergotools:logCoalSide", "y": 90 },
+    "axis=z,variant=logcoal": {"model": "fergotools:logCoalSide"},
+    "axis=none,variant=logcoal": {"model": "fergotools:logCoalBark"},
+
+    "axis=y,variant=logglowstone": {"model": "fergotools:logGlowstone"},
+    "axis=x,variant=logglowstone":{ "model": "fergotools:logGlowstoneSide", "y": 90 },
+    "axis=z,variant=logglowstone": {"model": "fergotools:logGlowstoneSide"},
+    "axis=none,variant=logglowstone": {"model": "fergotools:logGlowstoneBark"},
+
+    "axis=y,variant=logadamantium": {"model": "fergotools:logAdamantium"},
+    "axis=x,variant=logadamantium":{ "model": "fergotools:logAdamantiumSide", "y": 90 },
+    "axis=z,variant=logadamantium": {"model": "fergotools:logAdamantiumSide"},
+    "axis=none,variant=logadamantium": {"model": "fergotools:logAdamantiumBark"},
+
+    "axis=y,variant=logsilk": {"model": "fergotools:logSilk"},
+    "axis=x,variant=logsilk":{ "model": "fergotools:logSilkSide", "y": 90 },
+    "axis=z,variant=logsilk": {"model": "fergotools:logSilkSide"},
+    "axis=none,variant=logsilk": {"model": "fergotools:logSilkBark"},
+
+    "axis=y,variant=logredstone": {"model": "fergotools:logRedstone"},
+    "axis=x,variant=logredstone":{ "model": "fergotools:logRedstoneSide", "y": 90 },
+    "axis=z,variant=logredstone": {"model": "fergotools:logRedstoneSide"},
+    "axis=none,variant=logredstone": {"model": "fergotools:logRedstoneBark"},
   }
 }

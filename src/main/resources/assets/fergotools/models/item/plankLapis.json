@@ -1,5 +1,5 @@
 {
-  "parent": "fergotools:block/logObsidian",
+  "parent": "fergotools:block/plankLapis",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

@@ -85,35 +85,44 @@ public class GuiHandler  implements IGuiHandler
             case GuiIds.macerator:
 
             case GuiIds.obsidianWorkbench:
-                return new GuiWorkbenchFT(inventory, world, pos, ModBlocks.obsidianWorkbench, Locale.containerObsidianWorkbench, Textures.obsidianWorkbenchGuiTexture);
-            break;
+                return new GuiWorkbenchFT(
+                        inventory, world, pos,
+                        ModBlocks.obsidianWorkbench, Locale.containerObsidianWorkbench, Textures.obsidianWorkbenchGuiTexture
+                );
             case GuiIds.emeraldWorkbench:
-                return new GuiWorkbenchFT
-                        (
-                                inventory,
-                                world,
-                                pos,
-                                ModBlocks.emeraldWorkbench,
-                                Locale.containerEmeraldWorkbench,
-                                Textures.emeraldWorkbenchGuiTexture
+                return new GuiWorkbenchFT(
+                                inventory, world, pos,
+                                ModBlocks.emeraldWorkbench, Locale.containerEmeraldWorkbench, Textures.emeraldWorkbenchGuiTexture
                         );
-                break;
             case GuiIds.lapisWorkbench:
-                return new GuiWorkbenchFT
-                        (
-                                inventory,
-                                world,
-                                pos,
-                                ModBlocks.lapisWorkbench,
-                                Locale.containerLapisWorkbench,
-                                Textures.lapisWorkbenchGuiTexture
+                return new GuiWorkbenchFT(
+                                inventory, world, pos,
+                                ModBlocks.lapisWorkbench, Locale.containerLapisWorkbench, Textures.lapisWorkbenchGuiTexture
                         );
             case GuiIds.bronzeWorkbench:
+                return new GuiWorkbenchFT(inventory, world, pos,
+                        ModBlocks.bronzeWorkbench, Locale.containerBronzeWorkbench, Textures.bronzeWorkbenchGuiTexture
+                        );
             case GuiIds.coalWorkbench:
+                return new GuiWorkbenchFT(inventory, world, pos,
+                        ModBlocks.coalWorkbench, Locale.containerCoalWorkbench, Textures.coalWorkbenchGuiTexture
+                );
             case GuiIds.glowstoneWorkbench:
+                return new GuiWorkbenchFT(inventory, world, pos,
+                        ModBlocks.glowstoneWorkbench, Locale.containerGlowstoneWorkbench, Textures.glowstoneWorkbenchGuiTexture
+                );
             case GuiIds.adamantiumWorkbench:
+                return new GuiWorkbenchFT(inventory, world, pos,
+                        ModBlocks.adamantiumWorkbench, Locale.containerAdamantiumWorkbench, Textures.adamantiumWorkbenchGuiTexture
+                );
             case GuiIds.silkWorkbench:
+                return new GuiWorkbenchFT(inventory, world, pos,
+                        ModBlocks.silkWorkbench, Locale.containerSilkWorkbench, Textures.silkWorkbenchGuiTexture
+                );
             case GuiIds.redstoneWorkbench:
+                return new GuiWorkbenchFT(inventory, world, pos,
+                        ModBlocks.redstoneWorkbench, Locale.containerRedstoneWorkbench, Textures.redstoneWorkbenchGuiTexture
+                );
         }
         return null;
     }

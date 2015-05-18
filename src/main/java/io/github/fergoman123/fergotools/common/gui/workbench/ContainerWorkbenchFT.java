@@ -1,4 +1,4 @@
-package io.github.fergoman123.fergotools.common.gui.workbench.container;
+package io.github.fergoman123.fergotools.common.gui.workbench;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
