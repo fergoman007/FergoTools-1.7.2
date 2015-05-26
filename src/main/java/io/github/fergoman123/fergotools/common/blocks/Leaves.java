@@ -1,7 +1,8 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
-import io.github.fergoman123.fergotools.api.base.BlockLeavesFT;
+import io.github.fergoman123.fergotools.api.base.BlockBases.BlockLeavesFT;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergoutil.block.BlockLeavesFergo;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,8 +23,7 @@ import java.util.List;
 
 public class Leaves
 {
-    public static final class BlockLeavesObsidian extends BlockLeavesFT
-    {
+    public static final class BlockLeavesObsidian extends BlockLeavesFT {
         public BlockLeavesObsidian() {
             super(BlockNames.leaves[0]);
         }
@@ -77,8 +77,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesEmerald extends BlockLeavesFT
-    {
+    public static final class BlockLeavesEmerald extends BlockLeavesFT {
         public BlockLeavesEmerald() {
             super(BlockNames.leaves[1]);
         }
@@ -130,8 +129,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesLapis extends BlockLeavesFT
-    {
+    public static final class BlockLeavesLapis extends BlockLeavesFT {
         public BlockLeavesLapis() {
             super(BlockNames.leaves[2]);
         }
@@ -183,8 +181,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesBronze extends BlockLeavesFT
-    {
+    public static final class BlockLeavesBronze extends BlockLeavesFT {
         public BlockLeavesBronze() {
             super(BlockNames.leaves[3]);
         }
@@ -236,8 +233,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesCoal extends BlockLeavesFT
-    {
+    public static final class BlockLeavesCoal extends BlockLeavesFT {
         public BlockLeavesCoal() {
             super(BlockNames.leaves[4]);
         }
@@ -289,8 +285,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesGlowstone extends BlockLeavesFT
-    {
+    public static final class BlockLeavesGlowstone extends BlockLeavesFT {
         public BlockLeavesGlowstone() {
             super(BlockNames.leaves[5]);
         }
@@ -342,8 +337,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesAdamantium extends BlockLeavesFT
-    {
+    public static final class BlockLeavesAdamantium extends BlockLeavesFT {
         public BlockLeavesAdamantium() {
             super(BlockNames.leaves[6]);
         }
@@ -395,8 +389,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesSilk extends BlockLeavesFT
-    {
+    public static final class BlockLeavesSilk extends BlockLeavesFT {
         public BlockLeavesSilk() {
             super(BlockNames.leaves[7]);
         }
@@ -448,8 +441,7 @@ public class Leaves
         }
     }
 
-    public static final class BlockLeavesRedstone extends BlockLeavesFT
-    {
+    public static final class BlockLeavesRedstone extends BlockLeavesFT {
         public BlockLeavesRedstone() {
             super(BlockNames.leaves[8]);
         }

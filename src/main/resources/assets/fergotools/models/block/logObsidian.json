@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures":{
     "end":"fergotools:blocks/wood/logObsidianTop",
-    "side":"fergotools:block/wood/logObsidian"
+    "side":"fergotools:blocks/wood/logObsidian"
   }
 }

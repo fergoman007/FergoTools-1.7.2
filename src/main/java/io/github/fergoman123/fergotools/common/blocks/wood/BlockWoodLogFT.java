@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.common.blocks.wood;
 
-import io.github.fergoman123.fergotools.api.base.BlockLogFT;
+import io.github.fergoman123.fergotools.api.base.BlockBases.BlockLogFT;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import io.github.fergoman123.fergoutil.enums.SwitchEnumAxis;
 import net.minecraft.block.properties.PropertyEnum;
@@ -31,7 +31,7 @@ public class BlockWoodLogFT extends BlockLogFT
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, WoodTypes.byMetadata(meta));
+        IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, WoodTypes.values()[meta]);
 
         switch (meta & 12)
         {
@@ -72,7 +72,7 @@ public class BlockWoodLogFT extends BlockLogFT
     }
 
     @Override
-    protected BlockState createBlockState() {
+    public BlockState createBlockState() {
         return new BlockState(this, VARIANT, LOG_AXIS);
     }
 

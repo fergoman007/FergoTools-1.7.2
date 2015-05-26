@@ -27,10 +27,6 @@ public class ConfigHandler
 
     public static int enchantability;
 
-    /**
-     * this initialises the config
-     * @param configFile the config file
-     */
     public static void init(File configFile)
     {
         if (config == null)
@@ -40,18 +36,10 @@ public class ConfigHandler
         }
     }
 
-    /**
-     * this loads the config from the config file
-     */
     private static void loadConfig() {
         enchantability = config.getInt("enchantability", ConfigHelper.getCategoryGeneral(), Defaults.enchantabilityDefault, 1, 30, "Enchantability Modifier (Min = 1, Max = 30, Default = 30)");
     }
 
-    /**
-     * this event is trigger when the config is changed
-     * within the Config Gui.
-     * @param evt the event
-     */
     @SubscribeEvent
     public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent evt)
     {

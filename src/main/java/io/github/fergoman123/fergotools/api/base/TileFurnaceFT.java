@@ -68,4 +68,9 @@ public abstract class TileFurnaceFT extends TileFurnaceFergo
 
         }
     }
+
+    public static boolean isItemFuel(ItemStack stack)
+    {
+        return getItemBurnTime(stack) > 0;
+    }
 }

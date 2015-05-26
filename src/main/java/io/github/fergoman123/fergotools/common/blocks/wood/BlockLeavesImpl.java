@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.common.blocks.wood;
 
-import io.github.fergoman123.fergotools.api.base.BlockLeavesFT;
+import io.github.fergoman123.fergotools.api.base.BlockBases.BlockLeavesFT;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.PropertyEnum;

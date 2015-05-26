@@ -38,7 +38,7 @@ public class BlockPlankFT extends BlockMultiFergo
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(VARIANT, WoodTypes.byMetadata(meta));
+        return this.getDefaultState().withProperty(VARIANT, WoodTypes.values()[meta]);
     }
 
     @Override

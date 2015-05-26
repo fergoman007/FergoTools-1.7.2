@@ -1,10 +1,10 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
-import io.github.fergoman123.fergotools.api.base.BlockOreFT;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
+import io.github.fergoman123.fergotools.api.base.BlockBases.BlockOreFT;
 
 import java.util.Random;
 

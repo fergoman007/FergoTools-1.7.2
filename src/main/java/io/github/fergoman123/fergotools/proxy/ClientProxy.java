@@ -10,6 +10,10 @@
 package io.github.fergoman123.fergotools.proxy;
 
 
+import io.github.fergoman123.fergotools.common.tileentities.TileEmeraldFurnace;
+import io.github.fergoman123.fergotools.common.tileentities.TileMacerator;
+import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
+import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
 import io.github.fergoman123.fergotools.event.AdamantiumArmorEvent;
 import io.github.fergoman123.fergotools.event.ItemToolTipEvent;
@@ -21,7 +25,11 @@ public class ClientProxy extends CommonProxy
 
     @Override
     public void registerTileEntities() {
+        RegisterHelper.registerTileEntity(TileQuartzFurnace.class, "quartzFurnace");
+        RegisterHelper.registerTileEntity(TileObsidianFurnace.class, "obsidianFurnace");
+        RegisterHelper.registerTileEntity(TileEmeraldFurnace.class, "emeraldFurnace");
 
+        RegisterHelper.registerTileEntity(TileMacerator.class, "macerator");
     }
 
     @Override

@@ -9,11 +9,11 @@
 
 package io.github.fergoman123.fergotools.handler;
 
-import io.github.fergoman123.fergotools.common.FurnaceContainers.ContainerQuartzFurnace;
-import io.github.fergoman123.fergotools.common.FurnaceGuis.GuiQuartzFurnace;
-import io.github.fergoman123.fergotools.common.Tiles.TileQuartzFurnace;
+import io.github.fergoman123.fergotools.common.gui.furnace.GuiQuartzFurnace;
+import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerQuartzFurnace;
 import io.github.fergoman123.fergotools.common.gui.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.common.gui.workbench.GuiWorkbenchFT;
+import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergotools.reference.Textures;
@@ -37,8 +37,8 @@ public class GuiHandler implements IGuiHandler {
             case GuiIds.quartzFurnace:
                 return new ContainerQuartzFurnace(invPlayer, (TileQuartzFurnace) tileEntity);
             case GuiIds.obsidianFurnace:
-            case GuiIds.emeraldCrystalFurnace:
-            case GuiIds.lapisCrystalFurnace:
+            case GuiIds.emeraldFurnace:
+            case GuiIds.lapisFurnace:
             case GuiIds.bronzeFurnace:
             case GuiIds.coalFurnace:
             case GuiIds.glowstoneFurnace:
@@ -80,8 +80,8 @@ public class GuiHandler implements IGuiHandler {
             case GuiIds.quartzFurnace:
                 return new GuiQuartzFurnace(inventory, (TileQuartzFurnace) tileEntity);
             case GuiIds.obsidianFurnace:
-            case GuiIds.emeraldCrystalFurnace:
-            case GuiIds.lapisCrystalFurnace:
+            case GuiIds.emeraldFurnace:
+            case GuiIds.lapisFurnace:
             case GuiIds.bronzeFurnace:
             case GuiIds.coalFurnace:
             case GuiIds.glowstoneFurnace:

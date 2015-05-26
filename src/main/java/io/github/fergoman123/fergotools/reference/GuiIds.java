@@ -16,8 +16,8 @@ public class GuiIds
 {
     public static final int quartzFurnace = 0;
     public static final int obsidianFurnace = 1;
-    public static final int emeraldCrystalFurnace = 2;
-    public static final int lapisCrystalFurnace = 3;
+    public static final int emeraldFurnace = 2;
+    public static final int lapisFurnace = 3;
     public static final int bronzeFurnace = 4;
     public static final int coalFurnace = 5;
     public static final int glowstoneFurnace = 6;

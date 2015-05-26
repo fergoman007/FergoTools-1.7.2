@@ -1,10 +1,9 @@
 package io.github.fergoman123.fergotools.init;
 
-import io.github.fergoman123.fergotools.api.base.*;
+import io.github.fergoman123.fergotools.api.base.BlockBases.*;
+import io.github.fergoman123.fergotools.api.base.ModelResLocFT;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
-import io.github.fergoman123.fergotools.common.blocks.BlockSaplingFT;
-import io.github.fergoman123.fergotools.common.blocks.BlockWorkbenchFT;
-import io.github.fergoman123.fergotools.common.blocks.Furnaces.BlockQuartzFurnace;
+import io.github.fergoman123.fergotools.common.blocks.*;
 import io.github.fergoman123.fergotools.common.blocks.Ores.*;
 import io.github.fergoman123.fergotools.common.blocks.wood.*;
 import io.github.fergoman123.fergotools.common.itemblock.*;
@@ -18,8 +17,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ModBlocks
-{
+public class ModBlocks {
     public static BlockOreFT oreExperience;
     public static BlockOreFT oreObsidian;
     public static BlockOreFT oreGemEmerald;
@@ -84,8 +82,7 @@ public class ModBlocks
     public static BlockWorkbenchFT silkWorkbench;
     public static BlockWorkbenchFT redstoneWorkbench;
 
-    public static void init()
-    {
+    public static void init() {
         oreExperience = new BlockOreExperience();
         oreObsidian = new BlockOreObsidian();
         oreGemEmerald = new BlockOreEmerald();
@@ -97,8 +94,8 @@ public class ModBlocks
         storageFT = new BlockStorageFT(BlockNames.blocks, BlockNames.storageFT);
 
         quartzFurnaceIdle = new BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
-//    obsidianFurnaceIdle = new BlockObsidianFurnace(false, BlockNames.obsidianFurnaceIdle);
-//    emeraldFurnaceIdle = new BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
+        obsidianFurnaceIdle = new BlockObsidianFurnace(false, BlockNames.obsidianFurnaceIdle);
+        emeraldFurnaceIdle = new BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
 //    lapisFurnaceIdle = new BlockLapisFurnace(false, BlockNames.lapisFurnaceIdle);
 //    bronzeFurnaceIdle = new BlockBronzeFurnace(false, BlockNames.bronzeFurnaceIdle);
 //    coalFurnaceIdle = new BlockCoalFurnace(false, BlockNames.coalFurnaceIdle);
@@ -106,11 +103,11 @@ public class ModBlocks
 //    adamantiumFurnaceIdle = new BlockAdamantiumFurnace(false, BlockNames.adamantiumFurnaceIdle);
 //    silkFurnaceIdle = new BlockSilkFurnace(false, BlockNames.silkFurnaceIdle);
 //    redstoneFurnaceIdle = new BlockRedstoneFurnace(false, BlockNames.redstoneFurnaceIdle);
-//    maceratorIdle = new BlockMacerator(false, BlockNames.maceratorIdle);
+        maceratorIdle = new BlockMacerator(false, BlockNames.maceratorIdle);
 
         quartzFurnaceActive = new BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
-//    obsidianFurnaceActive = new BlockObsidianFurnace(true, BlockNames.obsidianFurnaceActive);
-//    emeraldFurnaceActive = new BlockEmeraldFurnace(true, BlockNames.emeraldFurnaceActive);
+        obsidianFurnaceActive = new BlockObsidianFurnace(true, BlockNames.obsidianFurnaceActive);
+        emeraldFurnaceActive = new BlockEmeraldFurnace(true, BlockNames.emeraldFurnaceActive);
 //    lapisFurnaceActive = new BlockLapisFurnace(true, BlockNames.lapisFurnaceActive);
 //    bronzeFurnaceActive = new BlockBronzeFurnace(true, BlockNames.bronzeFurnaceActive);
 //    coalFurnaceActive = new BlockCoalFurnace(true, BlockNames.coalFurnaceActive);
@@ -118,7 +115,7 @@ public class ModBlocks
 //    adamantiumFurnaceActive = new BlockAdamantiumFurnace(true, BlockNames.adamantiumFurnaceActive);
 //    silkFurnaceActive = new BlockSilkFurnace(true, BlockNames.silkFurnaceActive);
 //    redstoneFurnaceActive = new BlockRedstoneFurnace(true, BlockNames.redstoneFurnaceActive);
-//    maceratorActive = new BlockMacerator(true, BlockNames.maceratorActive);
+        maceratorActive = new BlockMacerator(true, BlockNames.maceratorActive);
 
 
         logFT = new BlockWoodLogFT(BlockNames.logFT);
@@ -150,8 +147,7 @@ public class ModBlocks
         redstoneWorkbench = new BlockWorkbenchFT(8);
     }
 
-    public static void registerBlocks()
-    {
+    public static void registerBlocks() {
         registerBlock(oreExperience, BlockNames.oreExperience);
         registerBlock(oreObsidian, BlockNames.oreObsidian);
         registerBlock(oreGemEmerald, BlockNames.oreGemEmerald);
@@ -164,9 +160,17 @@ public class ModBlocks
 
         // idle
         registerBlock(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
+        registerBlock(obsidianFurnaceIdle, BlockNames.obsidianFurnaceIdle);
+        registerBlock(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
+
+        registerBlock(maceratorIdle, BlockNames.maceratorIdle);
 
         // active
         registerBlock(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
+        registerBlock(obsidianFurnaceActive, BlockNames.obsidianFurnaceActive);
+        registerBlock(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
+
+        registerBlock(maceratorActive, BlockNames.maceratorActive);
 
         registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logFT);
         registerBlock(plankFT, ItemBlockPlankFT.class, BlockNames.plankFT);
@@ -197,8 +201,7 @@ public class ModBlocks
         registerBlock(redstoneWorkbench, BlockNames.workbenches[8]);
     }
 
-    public static void registerModels()
-    {
+    public static void registerModels() {
         registerModel(oreExperience, BlockNames.oreExperience);
         registerModel(oreObsidian, BlockNames.oreObsidian);
         registerModel(oreGemEmerald, BlockNames.oreGemEmerald);
@@ -221,9 +224,17 @@ public class ModBlocks
 
         // idle
         registerModel(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
+        registerModel(obsidianFurnaceIdle, BlockNames.obsidianFurnaceIdle);
+        registerModel(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
+
+        registerModel(maceratorIdle, BlockNames.maceratorIdle);
 
         //active
         registerModel(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
+        registerModel(obsidianFurnaceActive, BlockNames.obsidianFurnaceActive);
+        registerModel(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
+
+        registerModel(maceratorActive, BlockNames.maceratorActive);
 
         registerModel(logFT, 0, BlockNames.logs[0]);
         registerModel(logFT, 1, BlockNames.logs[1]);
@@ -306,24 +317,20 @@ public class ModBlocks
         registerModel(redstoneWorkbench, BlockNames.workbenches[8]);
     }
 
-    public static void registerBlock(Block block, String name)
-    {
+    public static void registerBlock(Block block, String name) {
         GameRegistry.registerBlock(block, name);
     }
 
-    public static void registerBlock(Block block, Class<? extends ItemBlock> itemClass, String name)
-    {
+    public static void registerBlock(Block block, Class<? extends ItemBlock> itemClass, String name) {
         GameRegistry.registerBlock(block, itemClass, name);
     }
 
-    public static void registerModel(Block block, int meta, String name)
-    {
+    public static void registerModel(Block block, int meta, String name) {
         ModelHelper.getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResLocFT(name));
         ModelBakery.addVariantName(Item.getItemFromBlock(block), new VariantNameFT(name).getFullName());
     }
 
-    public static void registerModel(Block block, String name)
-    {
+    public static void registerModel(Block block, String name) {
         registerModel(block, 0, name);
     }
 }

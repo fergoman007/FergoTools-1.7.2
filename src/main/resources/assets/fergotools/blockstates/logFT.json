@@ -45,6 +45,6 @@
     "axis=y,variant=logredstone": {"model": "fergotools:logRedstone"},
     "axis=x,variant=logredstone":{ "model": "fergotools:logRedstoneSide", "y": 90 },
     "axis=z,variant=logredstone": {"model": "fergotools:logRedstoneSide"},
-    "axis=none,variant=logredstone": {"model": "fergotools:logRedstoneBark"},
+    "axis=none,variant=logredstone": {"model": "fergotools:logRedstoneBark"}
   }
 }

@@ -12,4 +12,9 @@ public class FTHelper
     {
         GuiHelper.openGui(player, FergoTools.getInstance(), ID, world, pos);
     }
+
+    public static void logInfo(String message)
+    {
+        FergoTools.getLogger().info(message);
+    }
 }

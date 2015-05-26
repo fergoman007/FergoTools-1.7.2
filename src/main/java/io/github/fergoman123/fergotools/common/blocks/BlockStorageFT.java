@@ -1,4 +1,4 @@
-package io.github.fergoman123.fergotools.api.base;
+package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.StorageTypes;
