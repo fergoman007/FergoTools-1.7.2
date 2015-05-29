@@ -16,6 +16,7 @@ import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergoutil.block.BlockFurnaceFergo;
+import io.github.fergoman123.fergoutil.info.BlockInfo;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -31,9 +32,9 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class BlockQuartzFurnace extends BlockFurnaceFT {
-    public BlockQuartzFurnace(boolean isActive, String name)
+    public BlockQuartzFurnace(boolean isActive, BlockInfo info)
     {
-        super(Material.rock, isActive, name);
+        super(isActive, info);
     }
 
     @Override

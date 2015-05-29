@@ -7,10 +7,10 @@ import io.github.fergoman123.fergotools.common.blocks.*;
 import io.github.fergoman123.fergotools.common.blocks.Ores.*;
 import io.github.fergoman123.fergotools.common.blocks.wood.*;
 import io.github.fergoman123.fergotools.common.itemblock.*;
+import io.github.fergoman123.fergotools.reference.BlockInfos;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.util.VariantNameFT;
 import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
-import io.github.fergoman123.fergoutil.model.ModelHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.item.Item;
@@ -93,7 +93,7 @@ public class ModBlocks {
 
         storageFT = new BlockStorageFT(BlockNames.blocks, BlockNames.storageFT);
 
-        quartzFurnaceIdle = new BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
+        quartzFurnaceIdle = new BlockQuartzFurnace(false, BlockInfos.quartzFurnaceIdle);
         obsidianFurnaceIdle = new BlockObsidianFurnace(false, BlockNames.obsidianFurnaceIdle);
 //        emeraldFurnaceIdle = new BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
 //    lapisFurnaceIdle = new BlockLapisFurnace(false, BlockNames.lapisFurnaceIdle);

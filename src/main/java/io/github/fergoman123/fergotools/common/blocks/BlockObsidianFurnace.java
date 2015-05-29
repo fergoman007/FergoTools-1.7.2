@@ -9,12 +9,12 @@
 
 package io.github.fergoman123.fergotools.common.blocks;
 
-import io.github.fergoman123.fergotools.api.base.BlockBases;
+import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
-import net.minecraft.block.material.Material;
+import io.github.fergoman123.fergoutil.info.BlockInfo;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,9 +28,9 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockObsidianFurnace extends BlockBases.BlockFurnaceFT {
-    public BlockObsidianFurnace(boolean isActive, String name) {
-        super(Material.iron, isActive, name);
+public class BlockObsidianFurnace extends BlockFurnaceFT {
+    public BlockObsidianFurnace(boolean isActive, BlockInfo info) {
+        super(isActive, info);
     }
 
     @Override
