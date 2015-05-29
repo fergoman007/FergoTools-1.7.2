@@ -1,13 +1,14 @@
 package io.github.fergoman123.fergotools.common.items;
 
 import io.github.fergoman123.fergotools.api.base.ItemFT;
+import io.github.fergoman123.fergotools.reference.ItemInfos;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import net.minecraft.item.ItemStack;
 
 public class ItemExpShard extends ItemFT
 {
     public ItemExpShard() {
-        super(ItemNames.shardExp);
+        super(ItemInfos.shardExp);
     }
 
     @Override

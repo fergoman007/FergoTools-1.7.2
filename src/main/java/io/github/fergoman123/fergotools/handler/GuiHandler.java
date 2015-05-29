@@ -10,9 +10,12 @@
 package io.github.fergoman123.fergotools.handler;
 
 import io.github.fergoman123.fergotools.common.gui.furnace.GuiQuartzFurnace;
+import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerObsidianFurnace;
 import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerQuartzFurnace;
+import io.github.fergoman123.fergotools.common.gui.furnace.GuiObsidianFurnace;
 import io.github.fergoman123.fergotools.common.gui.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.common.gui.workbench.GuiWorkbenchFT;
+import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
 import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
@@ -37,6 +40,7 @@ public class GuiHandler implements IGuiHandler {
             case GuiIds.quartzFurnace:
                 return new ContainerQuartzFurnace(invPlayer, (TileQuartzFurnace) tileEntity);
             case GuiIds.obsidianFurnace:
+                return new ContainerObsidianFurnace(invPlayer, (TileObsidianFurnace)tileEntity);
             case GuiIds.emeraldFurnace:
             case GuiIds.lapisFurnace:
             case GuiIds.bronzeFurnace:
@@ -73,13 +77,14 @@ public class GuiHandler implements IGuiHandler {
     public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
         BlockPos pos = new BlockPos(x, y, z);
         TileEntity tileEntity = world.getTileEntity(pos);
-        InventoryPlayer inventory = player.inventory;
+        InventoryPlayer invPlayer = player.inventory;
 
         //todo GUI's
         switch (id) {
             case GuiIds.quartzFurnace:
-                return new GuiQuartzFurnace(inventory, (TileQuartzFurnace) tileEntity);
+                return new GuiQuartzFurnace(invPlayer, (TileQuartzFurnace) tileEntity);
             case GuiIds.obsidianFurnace:
+                return new GuiObsidianFurnace(invPlayer, (TileObsidianFurnace) tileEntity);
             case GuiIds.emeraldFurnace:
             case GuiIds.lapisFurnace:
             case GuiIds.bronzeFurnace:
@@ -92,41 +97,41 @@ public class GuiHandler implements IGuiHandler {
 
             case GuiIds.obsidianWorkbench:
                 return new GuiWorkbenchFT(
-                        inventory, world, pos,
+                        invPlayer, world, pos,
                         ModBlocks.obsidianWorkbench, Locale.containerObsidianWorkbench, Textures.obsidianWorkbenchGuiTexture
                 );
             case GuiIds.emeraldWorkbench:
                 return new GuiWorkbenchFT(
-                        inventory, world, pos,
+                        invPlayer, world, pos,
                         ModBlocks.emeraldWorkbench, Locale.containerEmeraldWorkbench, Textures.emeraldWorkbenchGuiTexture
                 );
             case GuiIds.lapisWorkbench:
                 return new GuiWorkbenchFT(
-                        inventory, world, pos,
+                        invPlayer, world, pos,
                         ModBlocks.lapisWorkbench, Locale.containerLapisWorkbench, Textures.lapisWorkbenchGuiTexture
                 );
             case GuiIds.bronzeWorkbench:
-                return new GuiWorkbenchFT(inventory, world, pos,
+                return new GuiWorkbenchFT(invPlayer, world, pos,
                         ModBlocks.bronzeWorkbench, Locale.containerBronzeWorkbench, Textures.bronzeWorkbenchGuiTexture
                 );
             case GuiIds.coalWorkbench:
-                return new GuiWorkbenchFT(inventory, world, pos,
+                return new GuiWorkbenchFT(invPlayer, world, pos,
                         ModBlocks.coalWorkbench, Locale.containerCoalWorkbench, Textures.coalWorkbenchGuiTexture
                 );
             case GuiIds.glowstoneWorkbench:
-                return new GuiWorkbenchFT(inventory, world, pos,
+                return new GuiWorkbenchFT(invPlayer, world, pos,
                         ModBlocks.glowstoneWorkbench, Locale.containerGlowstoneWorkbench, Textures.glowstoneWorkbenchGuiTexture
                 );
             case GuiIds.adamantiumWorkbench:
-                return new GuiWorkbenchFT(inventory, world, pos,
+                return new GuiWorkbenchFT(invPlayer, world, pos,
                         ModBlocks.adamantiumWorkbench, Locale.containerAdamantiumWorkbench, Textures.adamantiumWorkbenchGuiTexture
                 );
             case GuiIds.silkWorkbench:
-                return new GuiWorkbenchFT(inventory, world, pos,
+                return new GuiWorkbenchFT(invPlayer, world, pos,
                         ModBlocks.silkWorkbench, Locale.containerSilkWorkbench, Textures.silkWorkbenchGuiTexture
                 );
             case GuiIds.redstoneWorkbench:
-                return new GuiWorkbenchFT(inventory, world, pos,
+                return new GuiWorkbenchFT(invPlayer, world, pos,
                         ModBlocks.redstoneWorkbench, Locale.containerRedstoneWorkbench, Textures.redstoneWorkbenchGuiTexture
                 );
         }

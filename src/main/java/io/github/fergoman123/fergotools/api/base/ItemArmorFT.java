@@ -10,6 +10,7 @@
 package io.github.fergoman123.fergotools.api.base;
 
 import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergoutil.info.ArmorInfo;
 import io.github.fergoman123.fergoutil.item.ArmorType;
 import io.github.fergoman123.fergoutil.item.ItemArmorFergo;
 import net.minecraft.item.Item;
@@ -17,8 +18,8 @@ import net.minecraft.item.Item;
 public class ItemArmorFT extends ItemArmorFergo
 {
 
-    public ItemArmorFT(ArmorMaterial material, ArmorType type, Item repairItem, String name)
+    public ItemArmorFT(ArmorInfo info)
     {
-        super(material, type, 0, FergoTools.tabFergoTools, repairItem, name);
+        super(0, FergoTools.tabFergoTools, info);
     }
 }

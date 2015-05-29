@@ -11,7 +11,9 @@ package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.api.base.BlockBases;
 import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
+import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergotools.reference.GuiIds;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -33,12 +35,29 @@ public class BlockObsidianFurnace extends BlockBases.BlockFurnaceFT {
 
     @Override
     public Item getItemDropped(IBlockState state, Random random, int fortune) {
-        return null;
+        return getItemFromBlock(ModBlocks.obsidianFurnaceIdle);
     }
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-        return false;
+        if (worldIn.isRemote)
+        {
+            return true;
+        }
+        else if (!playerIn.isSneaking())
+        {
+            TileObsidianFurnace tile = (TileObsidianFurnace)worldIn.getTileEntity(pos);
+            if (tile != null)
+            {
+                FTHelper.openGui(playerIn, GuiIds.obsidianFurnace, worldIn, pos);
+                return true;
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     @Override
@@ -47,7 +66,7 @@ public class BlockObsidianFurnace extends BlockBases.BlockFurnaceFT {
 
         if (stack.hasDisplayName())
         {
-
+            ((TileObsidianFurnace)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
         }
     }
 

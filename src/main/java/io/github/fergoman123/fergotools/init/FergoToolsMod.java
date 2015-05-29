@@ -25,7 +25,7 @@ public class FergoToolsMod
         FergoTools.getLogger().info(Messages.preInitMessage);
         MetadataFT.writeMetadata(evt.getModMetadata());
         ConfigHandler.init(evt.getSuggestedConfigurationFile());
-        FergoTools.proxy.registerEventHandlers();
+        FergoTools.getProxy().registerEventHandlers();
         ModItems.init();
         ModBlocks.init();
     }
@@ -38,6 +38,7 @@ public class FergoToolsMod
         ModBlocks.registerModels();
         ModItems.registerItems();
         ModItems.registerModels();
+        FergoTools.getProxy().registerTileEntities();
 //        RegHandler.registerOres();
 //        Recipes.init();
     }

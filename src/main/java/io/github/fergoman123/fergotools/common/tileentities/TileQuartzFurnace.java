@@ -3,6 +3,7 @@ package io.github.fergoman123.fergotools.common.tileentities;
 import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
 import io.github.fergoman123.fergotools.common.blocks.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerQuartzFurnace;
+import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -97,7 +98,7 @@ public class TileQuartzFurnace extends TileFurnaceFT
     @Override
     public int getFurnaceSpeed(ItemStack stack) {
 //        return FurnaceInts.quartzFurnaceSpeed;
-        return 2000;
+        return 200;
     }
 
     @Override
@@ -149,11 +150,6 @@ public class TileQuartzFurnace extends TileFurnaceFT
     @Override
     public boolean isItemValidForSlot(int index, ItemStack stack) {
         return index != 2 && (index != 1 || isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
-    }
-
-    public static boolean isItemFuel(ItemStack stack)
-    {
-        return getItemBurnTime(stack) > 0;
     }
 
     @Override

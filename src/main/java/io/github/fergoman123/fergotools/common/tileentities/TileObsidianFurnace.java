@@ -10,7 +10,10 @@
 package io.github.fergoman123.fergotools.common.tileentities;
 
 import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
+import io.github.fergoman123.fergotools.common.blocks.BlockObsidianFurnace;
+import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerMacerator;
 import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerObsidianFurnace;
+import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.reference.names.Locale;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -40,116 +43,114 @@ public class TileObsidianFurnace extends TileFurnaceFT
             --this.burnTime;
         }
 
-        if (!this.worldObj.isRemote)
+        if (!worldObj.isRemote)
         {
-            if (!this.isBurning() && (this.slots[1] == null || this.slots[0] == null))
+            if (!isBurning() && (slots[1] == null || slots[0] == null))
             {
-                if (!this.isBurning() && this.cookTime > 0)
+                if (!isBurning() && cookTime > 0)
                 {
-                    this.cookTime = MathHelper.clamp_int(this.cookTime - 2, 0, this.totalCookTime);
+                    cookTime = MathHelper.clamp_int(cookTime - 2, 0, totalCookTime);
                 }
             }
             else
             {
-                if (!this.isBurning() && this.canSmelt())
+                if (isBurning() && canSmelt())
                 {
-                    this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
+                    currentItemBurnTime = burnTime = getItemBurnTime(slots[1]);
 
-                    if (this.isBurning())
+                    if (isBurning())
                     {
                         flag1 = true;
 
-                        if (this.slots[1] != null)
+                        if (slots[1] != null)
                         {
-                            --this.slots[1].stackSize;
+                            --slots[1].stackSize;
 
-                            if (this.slots[1].stackSize == 0)
+                            if (slots[1].stackSize == 0)
                             {
-                                this.slots[1] = slots[1].getItem().getContainerItem(slots[1]);
+                                slots[1] = slots[1].getItem().getContainerItem(slots[1]);
                             }
                         }
                     }
                 }
 
-                if (this.isBurning() && this.canSmelt())
+                if (isBurning() && canSmelt())
                 {
-                    ++this.cookTime;
+                    ++cookTime;
 
-                    if (this.cookTime == this.totalCookTime)
+                    if (cookTime == totalCookTime)
                     {
-                        this.cookTime = 0;
-                        this.totalCookTime = this.getFurnaceSpeed(this.slots[0]);
-                        this.smeltItem();
+                        cookTime = 0;
+                        totalCookTime = getFurnaceSpeed(slots[0]);
+                        smeltItem();
                         flag1 = true;
                     }
                 }
                 else
                 {
-                    this.cookTime = 0;
+                    cookTime = 0;
                 }
             }
 
-            if (flag != this.isBurning())
+            if (flag != isBurning())
             {
                 flag1 = true;
-                BlockObsidianFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockObsidianFurnace.setState(isBurning(), worldObj, pos);
             }
         }
 
         if (flag1)
         {
-            this.markDirty();
+            markDirty();
         }
     }
 
     @Override
     public int getFurnaceSpeed(ItemStack stack) {
-//        return FurnaceInts.quartzFurnaceSpeed;
-        return 2000;
+        return FurnaceInts.obsidianFurnaceSpeed;
     }
 
     @Override
     public boolean canSmelt() {
-        if (this.slots[0] == null)
+        if (slots[0] == null)
         {
             return false;
         }
         else
         {
-            ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(this.slots[0]);
+            ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(slots[0]);
             if (stack == null)return false;
-            if (this.slots[2] == null)return true;
-            if (!this.slots[2].isItemEqual(stack))return false;
-            int result = slots[2].stackSize + stack.stackSize;
-            return result <= getInventoryStackLimit() && result <= this.slots[2].getMaxStackSize();
+            if (slots[2] == null)return true;
+            if (!slots[2].isItemEqual(stack))return false;
+            int res = slots[2].stackSize + stack.stackSize;
+            return res <= getInventoryStackLimit() && res <= slots[2].getMaxStackSize();
         }
     }
 
     @Override
     public void smeltItem() {
-        if (this.canSmelt())
+        if (canSmelt())
         {
-            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult(this.slots[0]);
+            ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(slots[0]);
 
-            if (this.slots[2] == null)
+            if (slots[2] == null)
             {
-                this.slots[2] = itemstack.copy();
+                slots[2] = stack.copy();
             }
-            else if (this.slots[2].getItem() == itemstack.getItem())
-            {
-                this.slots[2].stackSize += itemstack.stackSize; // Forge BugFix: Results may have multiple items
-            }
-
-            if (this.slots[0].getItem() == Item.getItemFromBlock(Blocks.sponge) && this.slots[0].getMetadata() == 1 && this.slots[1] != null && this.slots[1].getItem() == Items.bucket)
-            {
-                this.slots[1] = new ItemStack(Items.water_bucket);
+            else if (slots[2].getItem() == stack.getItem()){
+                slots[2].stackSize += stack.stackSize;
             }
 
-            --this.slots[0].stackSize;
-
-            if (this.slots[0].stackSize <= 0)
+            if (slots[0].getItem() == Item.getItemFromBlock(Blocks.sponge) && slots[0].getMetadata() == 1 && slots[1] != null && slots[1].getItem() == Items.bucket)
             {
-                this.slots[0] = null;
+                slots[1] = new ItemStack(Items.water_bucket);
+            }
+
+            --slots[0].stackSize;
+
+            if (slots[0].stackSize <= 0)
+            {
+                slots[0] = null;
             }
         }
     }
@@ -159,14 +160,9 @@ public class TileObsidianFurnace extends TileFurnaceFT
         return index != 2 && (index != 1 || isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
     }
 
-    public static boolean isItemFuel(ItemStack stack)
-    {
-        return getItemBurnTime(stack) > 0;
-    }
-
     @Override
     public String getGuiID() {
-        return "fergotools:quartzFurnace";
+        return "fergotools:obsidianFurnace";
     }
 
     @Override

@@ -95,7 +95,7 @@ public class ModBlocks {
 
         quartzFurnaceIdle = new BlockQuartzFurnace(false, BlockNames.quartzFurnaceIdle);
         obsidianFurnaceIdle = new BlockObsidianFurnace(false, BlockNames.obsidianFurnaceIdle);
-        emeraldFurnaceIdle = new BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
+//        emeraldFurnaceIdle = new BlockEmeraldFurnace(false, BlockNames.emeraldFurnaceIdle);
 //    lapisFurnaceIdle = new BlockLapisFurnace(false, BlockNames.lapisFurnaceIdle);
 //    bronzeFurnaceIdle = new BlockBronzeFurnace(false, BlockNames.bronzeFurnaceIdle);
 //    coalFurnaceIdle = new BlockCoalFurnace(false, BlockNames.coalFurnaceIdle);
@@ -107,7 +107,7 @@ public class ModBlocks {
 
         quartzFurnaceActive = new BlockQuartzFurnace(true, BlockNames.quartzFurnaceActive);
         obsidianFurnaceActive = new BlockObsidianFurnace(true, BlockNames.obsidianFurnaceActive);
-        emeraldFurnaceActive = new BlockEmeraldFurnace(true, BlockNames.emeraldFurnaceActive);
+//        emeraldFurnaceActive = new BlockEmeraldFurnace(true, BlockNames.emeraldFurnaceActive);
 //    lapisFurnaceActive = new BlockLapisFurnace(true, BlockNames.lapisFurnaceActive);
 //    bronzeFurnaceActive = new BlockBronzeFurnace(true, BlockNames.bronzeFurnaceActive);
 //    coalFurnaceActive = new BlockCoalFurnace(true, BlockNames.coalFurnaceActive);
@@ -161,14 +161,14 @@ public class ModBlocks {
         // idle
         registerBlock(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
         registerBlock(obsidianFurnaceIdle, BlockNames.obsidianFurnaceIdle);
-        registerBlock(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
+//        registerBlock(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
 
         registerBlock(maceratorIdle, BlockNames.maceratorIdle);
 
         // active
         registerBlock(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
         registerBlock(obsidianFurnaceActive, BlockNames.obsidianFurnaceActive);
-        registerBlock(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
+//        registerBlock(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
 
         registerBlock(maceratorActive, BlockNames.maceratorActive);
 
@@ -225,14 +225,14 @@ public class ModBlocks {
         // idle
         registerModel(quartzFurnaceIdle, BlockNames.quartzFurnaceIdle);
         registerModel(obsidianFurnaceIdle, BlockNames.obsidianFurnaceIdle);
-        registerModel(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
+//        registerModel(emeraldFurnaceIdle, BlockNames.emeraldFurnaceIdle);
 
         registerModel(maceratorIdle, BlockNames.maceratorIdle);
 
         //active
         registerModel(quartzFurnaceActive, BlockNames.quartzFurnaceActive);
         registerModel(obsidianFurnaceActive, BlockNames.obsidianFurnaceActive);
-        registerModel(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
+//        registerModel(emeraldFurnaceActive, BlockNames.emeraldFurnaceActive);
 
         registerModel(maceratorActive, BlockNames.maceratorActive);
 

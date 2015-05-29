@@ -11,19 +11,13 @@ package io.github.fergoman123.fergotools.common.gui.furnace.container;
 
 import io.github.fergoman123.fergotools.api.base.ContainerFurnaceFT;
 import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
-import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
-import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.Slot;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class ContainerObsidianFurnace extends ContainerFurnaceFT
+public class ContainerSilkFurnace extends ContainerFurnaceFT
 {
-    public ContainerObsidianFurnace(InventoryPlayer invPlayer, IInventory furnace) {
-        super(invPlayer, furnace, new TileQuartzFurnace());
+    public ContainerSilkFurnace(InventoryPlayer invPlayer, IInventory furnace) {
+        super(invPlayer, furnace, null);
+        //todo silk furnace
     }
 }

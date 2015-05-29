@@ -5,6 +5,8 @@ import io.github.fergoman123.fergotools.helper.NBTHelper;
 import io.github.fergoman123.fergotools.helper.StaffExpHelper;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.info.ItemInfo;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -12,13 +14,15 @@ import net.minecraft.nbt.NBTTagCompound;
 public class ItemStaffExpBase extends Item
 {
     private int type;
+    private ItemInfo info;
 
-    public ItemStaffExpBase(int type)
+    public ItemStaffExpBase(int type, ItemInfo info)
     {
         super();
         this.type = type;
         this.setCreativeTab(FergoTools.tabFergoTools);
-        this.setUnlocalizedName(ItemNames.staffExpVariants[type]);
+        this.setUnlocalizedName(info.getName());
+        this.info = info;
     }
 
     @Override
@@ -87,5 +91,14 @@ public class ItemStaffExpBase extends Item
 
     public int getType() {
         return type;
+    }
+
+    public ItemInfo getInfo() {
+        return info;
+    }
+
+    public ModelResourceLocation getModel()
+    {
+        return new ModelResourceLocation(getInfo().getModel(), "inventory");
     }
 }

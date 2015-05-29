@@ -10,12 +10,11 @@
 package io.github.fergoman123.fergotools.proxy;
 
 
-import io.github.fergoman123.fergotools.common.tileentities.TileEmeraldFurnace;
 import io.github.fergoman123.fergotools.common.tileentities.TileMacerator;
 import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
 import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.event.AdamantiumArmorEvent;
+import io.github.fergoman123.fergotools.event.OnArmorTickEvent;
 import io.github.fergoman123.fergotools.event.ItemToolTipEvent;
 import io.github.fergoman123.fergotools.event.OnPlayerLoggedInEvent;
 import io.github.fergoman123.fergoutil.helper.RegisterHelper;
@@ -27,7 +26,7 @@ public class ClientProxy extends CommonProxy
     public void registerTileEntities() {
         RegisterHelper.registerTileEntity(TileQuartzFurnace.class, "quartzFurnace");
         RegisterHelper.registerTileEntity(TileObsidianFurnace.class, "obsidianFurnace");
-        RegisterHelper.registerTileEntity(TileEmeraldFurnace.class, "emeraldFurnace");
+//        RegisterHelper.registerTileEntity(TileEmeraldFurnace.class, "emeraldFurnace");
 
         RegisterHelper.registerTileEntity(TileMacerator.class, "macerator");
     }
@@ -41,7 +40,7 @@ public class ClientProxy extends CommonProxy
     public void registerEventHandlers()
     {
         RegisterHelper.registerEvent(OnPlayerLoggedInEvent.instance);
-        RegisterHelper.registerEvent(AdamantiumArmorEvent.instance);
+        RegisterHelper.registerEvent(OnArmorTickEvent.instance);
         RegisterHelper.registerEvent(ConfigHandler.instance);
         RegisterHelper.registerEvent(ItemToolTipEvent.instance);
     }

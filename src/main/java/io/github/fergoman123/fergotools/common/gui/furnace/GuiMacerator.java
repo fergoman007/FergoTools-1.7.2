@@ -19,6 +19,11 @@ import net.minecraft.inventory.IInventory;
 public class GuiMacerator extends GuiFurnaceFT
 {
     public GuiMacerator(InventoryPlayer invPlayer, IInventory furnace) {
-        super(new ContainerMacerator(invPlayer, furnace), new TileMacerator(), invPlayer, furnace, Textures.maceratorGuiTexture);
+        super(new ContainerMacerator(invPlayer, furnace), new TileMacerator(), invPlayer, furnace);
+    }
+
+    @Override
+    public void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
+
     }
 }

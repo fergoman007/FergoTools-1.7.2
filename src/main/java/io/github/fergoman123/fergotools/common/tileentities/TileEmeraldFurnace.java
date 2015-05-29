@@ -92,7 +92,8 @@ public class TileEmeraldFurnace extends TileFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockEmeraldFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                //todo emerald furnace block
+//                BlockEmeraldFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 

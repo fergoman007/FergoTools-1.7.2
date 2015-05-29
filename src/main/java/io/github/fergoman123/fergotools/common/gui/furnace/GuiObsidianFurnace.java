@@ -10,8 +10,8 @@
 package io.github.fergoman123.fergotools.common.gui.furnace;
 
 import io.github.fergoman123.fergotools.api.base.GuiFurnaceFT;
-import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerQuartzFurnace;
-import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
+import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerObsidianFurnace;
+import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
 import io.github.fergoman123.fergotools.reference.Textures;
 import io.github.fergoman123.fergoutil.helper.GLStateHelper;
 import io.github.fergoman123.fergoutil.helper.GuiHelper;
@@ -19,14 +19,12 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
-public class GuiQuartzFurnace extends GuiFurnaceFT
+public class GuiObsidianFurnace extends GuiFurnaceFT
 {
-
-    public GuiQuartzFurnace(InventoryPlayer invPlayer, IInventory furnace) {
-        super(new ContainerQuartzFurnace(invPlayer, furnace), new TileQuartzFurnace(), invPlayer, furnace);
+    public GuiObsidianFurnace(InventoryPlayer invPlayer, IInventory furnace) {
+        super(new ContainerObsidianFurnace(invPlayer, furnace), new TileObsidianFurnace(), invPlayer, furnace);
     }
 
-    @Override
     public void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GLStateHelper.color();
         GuiHelper.bindTexture(getGuiTexture());
@@ -46,6 +44,6 @@ public class GuiQuartzFurnace extends GuiFurnaceFT
 
     @Override
     public ResourceLocation getGuiTexture() {
-        return Textures.quartzFurnaceGuiTexture;
+        return Textures.obsidianFurnaceGuiTexture;
     }
 }

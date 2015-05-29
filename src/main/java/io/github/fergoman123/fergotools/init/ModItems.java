@@ -2,6 +2,7 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.api.base.*;
 import io.github.fergoman123.fergotools.common.items.*;
+import io.github.fergoman123.fergotools.reference.ItemInfos;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
 import io.github.fergoman123.fergotools.util.VariantNameFT;
 import io.github.fergoman123.fergotools.util.item.AM;
@@ -167,141 +168,141 @@ public class ModItems
 
     public static void init()
     {
-        ingotObsidian = new ItemFT(ItemNames.ingotObsidian);
-        gemEmerald = new ItemFT(ItemNames.gemEmerald);
-        gemLapis = new ItemFT(ItemNames.gemLapis);
-        ingotBronze = new ItemFT(ItemNames.ingotBronze);
-        ingotCoal = new ItemFT(ItemNames.ingotCoal);
-        ingotGlowstone = new ItemFT(ItemNames.ingotGlowstone);
-        ingotAdamantium = new ItemFT(ItemNames.ingotAdamantium);
-        gemSilk = new ItemFT(ItemNames.gemSilk);
-        gemRedstone = new ItemFT(ItemNames.gemRedstone);
-        gemExp = new ItemFT(ItemNames.gemExp);
-        gemExp2 = new ItemFT(ItemNames.gemExp2);
-        gemExp3 = new ItemFT(ItemNames.gemExp3);
+        ingotObsidian = new ItemFT(ItemInfos.ingotObsidian);
+        gemEmerald = new ItemFT(ItemInfos.gemEmerald);
+        gemLapis = new ItemFT(ItemInfos.gemLapis);
+        ingotBronze = new ItemFT(ItemInfos.ingotBronze);
+        ingotCoal = new ItemFT(ItemInfos.ingotCoal);
+        ingotGlowstone = new ItemFT(ItemInfos.ingotGlowstone);
+        ingotAdamantium = new ItemFT(ItemInfos.ingotAdamantium);
+        gemSilk = new ItemFT(ItemInfos.gemSilk);
+        gemRedstone = new ItemFT(ItemInfos.gemRedstone);
+        gemExp = new ItemFT(ItemInfos.gemExp);
+        gemExp2 = new ItemFT(ItemInfos.gemExp2);
+        gemExp3 = new ItemFT(ItemInfos.gemExp3);
 
         staffExp = new ItemStaffExp();
         staffExp2 = new ItemStaffExp2();
         staffExp3 = new ItemStaffExp3();
 
         shardExp = new ItemExpShard();
-        expCollector = new ItemFT(ItemNames.expCollector);
+        expCollector = new ItemFT(ItemInfos.expCollector);
 
-        quartzPickaxe = new ItemPickaxeFT(TM.quartz, ItemNames.quartzPickaxe);
-        quartzShovel = new ItemShovelFT(TM.quartz, ItemNames.quartzShovel);
-        quartzAxe = new ItemAxeFT(TM.quartz, ItemNames.quartzAxe);
-        quartzHoe = new ItemHoeFT(TM.quartz, ItemNames.quartzHoe);
-        quartzSword = new ItemSwordFT(TM.quartz, ItemNames.quartzSword);
+        quartzPickaxe = new ItemPickaxeFT(ItemInfos.quartzPickaxe);
+        quartzShovel = new ItemShovelFT(ItemInfos.quartzShovel);
+        quartzAxe = new ItemAxeFT(ItemInfos.quartzAxe);
+        quartzHoe = new ItemHoeFT(ItemInfos.quartzHoe);
+        quartzSword = new ItemSwordFT(ItemInfos.quartzSword);
 
-        obsidianPickaxe = new ItemPickaxeFT(TM.obsidian, ItemNames.obsidianPickaxe);
-        obsidianShovel = new ItemShovelFT(TM.obsidian, ItemNames.obsidianShovel);
-        obsidianAxe = new ItemAxeFT(TM.obsidian, ItemNames.obsidianAxe);
-        obsidianHoe = new ItemHoeFT(TM.obsidian, ItemNames.obsidianHoe);
-        obsidianSword = new ItemSwordFT(TM.obsidian, ItemNames.obsidianSword);
+        obsidianPickaxe = new ItemPickaxeFT(ItemInfos.obsidianPickaxe);
+        obsidianShovel = new ItemShovelFT(ItemInfos.obsidianShovel);
+        obsidianAxe = new ItemAxeFT(ItemInfos.obsidianAxe);
+        obsidianHoe = new ItemHoeFT(ItemInfos.obsidianHoe);
+        obsidianSword = new ItemSwordFT(ItemInfos.obsidianSword);
 
-        emeraldPickaxe = new ItemPickaxeFT(TM.emerald, ItemNames.emeraldPickaxe);
-        emeraldShovel = new ItemShovelFT(TM.emerald, ItemNames.emeraldShovel);
-        emeraldAxe = new ItemAxeFT(TM.emerald, ItemNames.emeraldAxe);
-        emeraldHoe = new ItemHoeFT(TM.emerald, ItemNames.emeraldHoe);
-        emeraldSword = new ItemSwordFT(TM.emerald, ItemNames.emeraldSword);
+        emeraldPickaxe = new ItemPickaxeFT(ItemInfos.emeraldPickaxe);
+        emeraldShovel = new ItemShovelFT(ItemInfos.emeraldShovel);
+        emeraldAxe = new ItemAxeFT(ItemInfos.emeraldAxe);
+        emeraldHoe = new ItemHoeFT(ItemInfos.emeraldHoe);
+        emeraldSword = new ItemSwordFT(ItemInfos.emeraldSword);
 
-        lapisPickaxe = new ItemPickaxeFT(TM.lapis, ItemNames.lapisPickaxe);
-        lapisShovel = new ItemShovelFT(TM.lapis, ItemNames.lapisShovel);
-        lapisAxe = new ItemAxeFT(TM.lapis, ItemNames.lapisAxe);
-        lapisHoe = new ItemHoeFT(TM.lapis, ItemNames.lapisHoe);
-        lapisSword = new ItemSwordFT(TM.lapis, ItemNames.lapisSword);
+        lapisPickaxe = new ItemPickaxeFT(ItemInfos.lapisPickaxe);
+        lapisShovel = new ItemShovelFT(ItemInfos.lapisShovel);
+        lapisAxe = new ItemAxeFT(ItemInfos.lapisAxe);
+        lapisHoe = new ItemHoeFT(ItemInfos.lapisHoe);
+        lapisSword = new ItemSwordFT(ItemInfos.lapisSword);
 
-        bronzePickaxe = new ItemPickaxeFT(TM.bronze, ItemNames.bronzePickaxe);
-        bronzeShovel = new ItemShovelFT(TM.bronze, ItemNames.bronzeShovel);
-        bronzeAxe = new ItemAxeFT(TM.bronze, ItemNames.bronzeAxe);
-        bronzeHoe = new ItemHoeFT(TM.bronze, ItemNames.bronzeHoe);
-        bronzeSword = new ItemSwordFT(TM.bronze, ItemNames.bronzeSword);
+        bronzePickaxe = new ItemPickaxeFT(ItemInfos.bronzePickaxe);
+        bronzeShovel = new ItemShovelFT(ItemInfos.bronzeShovel);
+        bronzeAxe = new ItemAxeFT(ItemInfos.bronzeAxe);
+        bronzeHoe = new ItemHoeFT(ItemInfos.bronzeHoe);
+        bronzeSword = new ItemSwordFT(ItemInfos.bronzeSword);
 
-        coalPickaxe = new ItemPickaxeFT(TM.coal, ItemNames.coalPickaxe);
-        coalShovel = new ItemShovelFT(TM.coal, ItemNames.coalShovel);
-        coalAxe = new ItemAxeFT(TM.coal, ItemNames.coalAxe);
-        coalHoe = new ItemHoeFT(TM.coal, ItemNames.coalHoe);
-        coalSword = new ItemSwordFT(TM.coal, ItemNames.coalSword);
+        coalPickaxe = new ItemPickaxeFT(ItemInfos.coalPickaxe);
+        coalShovel = new ItemShovelFT(ItemInfos.coalShovel);
+        coalAxe = new ItemAxeFT(ItemInfos.coalAxe);
+        coalHoe = new ItemHoeFT(ItemInfos.coalHoe);
+        coalSword = new ItemSwordFT(ItemInfos.coalSword);
 
-        glowstonePickaxe = new ItemPickaxeFT(TM.glowstone, ItemNames.glowstonePickaxe);
-        glowstoneShovel = new ItemShovelFT(TM.glowstone, ItemNames.glowstoneShovel);
-        glowstoneAxe = new ItemAxeFT(TM.glowstone, ItemNames.glowstoneAxe);
-        glowstoneHoe = new ItemHoeFT(TM.glowstone, ItemNames.glowstoneHoe);
-        glowstoneSword = new ItemSwordFT(TM.glowstone, ItemNames.glowstoneSword);
+        glowstonePickaxe = new ItemPickaxeFT(ItemInfos.glowstonePickaxe);
+        glowstoneShovel = new ItemShovelFT(ItemInfos.glowstoneShovel);
+        glowstoneAxe = new ItemAxeFT(ItemInfos.glowstoneAxe);
+        glowstoneHoe = new ItemHoeFT(ItemInfos.glowstoneHoe);
+        glowstoneSword = new ItemSwordFT(ItemInfos.glowstoneSword);
 
-        adamantiumPickaxe = new ItemPickaxeFT(TM.adamantium, ItemNames.adamantiumPickaxe);
-        adamantiumShovel = new ItemShovelFT(TM.adamantium, ItemNames.adamantiumShovel);
-        adamantiumAxe = new ItemAxeFT(TM.adamantium, ItemNames.adamantiumAxe);
-        adamantiumHoe = new ItemHoeFT(TM.adamantium, ItemNames.adamantiumHoe);
-        adamantiumSword = new ItemSwordFT(TM.adamantium, ItemNames.adamantiumSword);
+        adamantiumPickaxe = new ItemPickaxeFT(ItemInfos.adamantiumPickaxe);
+        adamantiumShovel = new ItemShovelFT(ItemInfos.adamantiumShovel);
+        adamantiumAxe = new ItemAxeFT(ItemInfos.adamantiumAxe);
+        adamantiumHoe = new ItemHoeFT(ItemInfos.adamantiumHoe);
+        adamantiumSword = new ItemSwordFT(ItemInfos.adamantiumSword);
 
-        silkPickaxe = new ItemPickaxeFT(TM.silk, ItemNames.silkPickaxe);
-        silkShovel = new ItemShovelFT(TM.silk, ItemNames.silkShovel);
-        silkAxe = new ItemAxeFT(TM.silk, ItemNames.silkAxe);
-        silkHoe = new ItemHoeFT(TM.silk, ItemNames.silkHoe);
-        silkSword = new ItemSwordFT(TM.silk, ItemNames.silkSword);
+        silkPickaxe = new ItemPickaxeFT(ItemInfos.silkPickaxe);
+        silkShovel = new ItemShovelFT(ItemInfos.silkShovel);
+        silkAxe = new ItemAxeFT(ItemInfos.silkAxe);
+        silkHoe = new ItemHoeFT(ItemInfos.silkHoe);
+        silkSword = new ItemSwordFT(ItemInfos.silkSword);
 
-        redstonePickaxe = new ItemPickaxeFT(TM.redstone, ItemNames.redstonePickaxe);
-        redstoneShovel = new ItemShovelFT(TM.redstone, ItemNames.redstoneShovel);
-        redstoneAxe = new ItemAxeFT(TM.redstone, ItemNames.redstoneAxe);
-        redstoneHoe = new ItemHoeFT(TM.redstone, ItemNames.redstoneHoe);
-        redstoneSword = new ItemSwordFT(TM.redstone, ItemNames.redstoneSword);
+        redstonePickaxe = new ItemPickaxeFT(ItemInfos.redstonePickaxe);
+        redstoneShovel = new ItemShovelFT(ItemInfos.redstoneShovel);
+        redstoneAxe = new ItemAxeFT(ItemInfos.redstoneAxe);
+        redstoneHoe = new ItemHoeFT(ItemInfos.redstoneHoe);
+        redstoneSword = new ItemSwordFT(ItemInfos.redstoneSword);
 
-        quartzHelmet = new ItemArmorFT(AM.quartzArmor, ArmorType.helmet, Items.quartz, ItemNames.quartzHelmet);
-        quartzChestplate = new ItemArmorFT(AM.quartzArmor, ArmorType.chestplate, Items.quartz, ItemNames.quartzChestplate);
-        quartzLeggings = new ItemArmorFT(AM.quartzArmor, ArmorType.leggings, Items.quartz, ItemNames.quartzLeggings);
-        quartzBoots = new ItemArmorFT(AM.quartzArmor, ArmorType.boots, Items.quartz, ItemNames.quartzBoots);
+        quartzHelmet = new ItemArmorFT(ItemInfos.quartzHelmet);
+        quartzChestplate = new ItemArmorFT(ItemInfos.quartzChestplate);
+        quartzLeggings = new ItemArmorFT(ItemInfos.quartzLeggings);
+        quartzBoots = new ItemArmorFT(ItemInfos.quartzBoots);
 
-        obsidianHelmet = new ItemArmorFT(AM.obsidianArmor, ArmorType.helmet, ingotObsidian, ItemNames.obsidianHelmet);
-        obsidianChestplate = new ItemArmorFT(AM.obsidianArmor, ArmorType.chestplate, ingotObsidian, ItemNames.obsidianChestplate);
-        obsidianLeggings = new ItemArmorFT(AM.obsidianArmor, ArmorType.leggings, ingotObsidian, ItemNames.obsidianLeggings);
-        obsidianBoots = new ItemArmorFT(AM.obsidianArmor, ArmorType.boots, ingotObsidian, ItemNames.obsidianBoots);
+        obsidianHelmet = new ItemArmorFT(ItemInfos.obsidianHelmet);
+        obsidianChestplate = new ItemArmorFT(ItemInfos.obsidianChestplate);
+        obsidianLeggings = new ItemArmorFT(ItemInfos.obsidianLeggings);
+        obsidianBoots = new ItemArmorFT(ItemInfos.obsidianBoots);
 
-        emeraldHelmet = new ItemArmorFT(AM.emeraldArmor, ArmorType.helmet, gemEmerald, ItemNames.emeraldHelmet);
-        emeraldChestplate = new ItemArmorFT(AM.emeraldArmor, ArmorType.chestplate, gemEmerald, ItemNames.emeraldChestplate);
-        emeraldLeggings = new ItemArmorFT(AM.emeraldArmor, ArmorType.leggings, gemEmerald, ItemNames.emeraldLeggings);
-        emeraldBoots = new ItemArmorFT(AM.emeraldArmor, ArmorType.boots, gemEmerald, ItemNames.emeraldBoots);
+        emeraldHelmet = new ItemArmorFT(ItemInfos.emeraldHelmet);
+        emeraldChestplate = new ItemArmorFT(ItemInfos.emeraldChestplate);
+        emeraldLeggings = new ItemArmorFT(ItemInfos.emeraldLeggings);
+        emeraldBoots = new ItemArmorFT(ItemInfos.emeraldBoots);
 
-        lapisHelmet = new ItemArmorFT(AM.lapisArmor, ArmorType.helmet, gemLapis, ItemNames.lapisHelmet);
-        lapisChestplate = new ItemArmorFT(AM.lapisArmor, ArmorType.chestplate, gemLapis, ItemNames.lapisChestplate);
-        lapisLeggings = new ItemArmorFT(AM.lapisArmor, ArmorType.leggings, gemLapis, ItemNames.lapisLeggings);
-        lapisBoots = new ItemArmorFT(AM.lapisArmor, ArmorType.boots, gemLapis, ItemNames.lapisBoots);
+        lapisHelmet = new ItemArmorFT(ItemInfos.lapisHelmet);
+        lapisChestplate = new ItemArmorFT(ItemInfos.lapisChestplate);
+        lapisLeggings = new ItemArmorFT(ItemInfos.lapisLeggings);
+        lapisBoots = new ItemArmorFT(ItemInfos.lapisBoots);
 
-        bronzeHelmet = new ItemArmorFT(AM.bronzeArmor, ArmorType.helmet, ingotBronze, ItemNames.bronzeHelmet);
-        bronzeChestplate = new ItemArmorFT(AM.bronzeArmor, ArmorType.chestplate, ingotBronze, ItemNames.bronzeChestplate);
-        bronzeLeggings = new ItemArmorFT(AM.bronzeArmor, ArmorType.leggings, ingotBronze, ItemNames.bronzeLeggings);
-        bronzeBoots = new ItemArmorFT(AM.bronzeArmor, ArmorType.boots, ingotBronze, ItemNames.bronzeBoots);
+        bronzeHelmet = new ItemArmorFT(ItemInfos.bronzeHelmet);
+        bronzeChestplate = new ItemArmorFT(ItemInfos.bronzeChestplate);
+        bronzeLeggings = new ItemArmorFT(ItemInfos.bronzeLeggings);
+        bronzeBoots = new ItemArmorFT(ItemInfos.bronzeBoots);
 
-        coalHelmet = new ItemArmorFT(AM.coalArmor, ArmorType.helmet, ingotCoal, ItemNames.coalHelmet);
-        coalChestplate = new ItemArmorFT(AM.coalArmor, ArmorType.chestplate, ingotCoal, ItemNames.coalChestplate);
-        coalLeggings = new ItemArmorFT(AM.coalArmor, ArmorType.leggings, ingotCoal, ItemNames.coalLeggings);
-        coalBoots = new ItemArmorFT(AM.coalArmor, ArmorType.boots, ingotCoal, ItemNames.coalBoots);
+        coalHelmet = new ItemArmorFT(ItemInfos.coalHelmet);
+        coalChestplate = new ItemArmorFT(ItemInfos.coalChestplate);
+        coalLeggings = new ItemArmorFT(ItemInfos.coalLeggings);
+        coalBoots = new ItemArmorFT(ItemInfos.coalBoots);
 
-        glowstoneHelmet = new ItemArmorFT(AM.glowstoneArmor, ArmorType.helmet, ingotGlowstone, ItemNames.glowstoneHelmet);
-        glowstoneChestplate = new ItemArmorFT(AM.glowstoneArmor, ArmorType.chestplate, ingotGlowstone, ItemNames.glowstoneChestplate);
-        glowstoneLeggings = new ItemArmorFT(AM.glowstoneArmor, ArmorType.leggings, ingotGlowstone, ItemNames.glowstoneLeggings);
-        glowstoneBoots = new ItemArmorFT(AM.glowstoneArmor, ArmorType.boots, ingotGlowstone, ItemNames.glowstoneBoots);
+        glowstoneHelmet = new ItemArmorFT(ItemInfos.glowstoneHelmet);
+        glowstoneChestplate = new ItemArmorFT(ItemInfos.glowstoneChestplate);
+        glowstoneLeggings = new ItemArmorFT(ItemInfos.glowstoneLeggings);
+        glowstoneBoots = new ItemArmorFT(ItemInfos.glowstoneBoots);
 
-        adamantiumHelmet = new ItemArmorFT(AM.adamantiumArmor, ArmorType.helmet, ingotAdamantium, ItemNames.adamantiumHelmet);
-        adamantiumChestplate = new ItemArmorFT(AM.adamantiumArmor, ArmorType.chestplate, ingotAdamantium, ItemNames.adamantiumChestplate);
-        adamantiumLeggings = new ItemArmorFT(AM.adamantiumArmor, ArmorType.leggings, ingotAdamantium, ItemNames.adamantiumLeggings);
-        adamantiumBoots = new ItemArmorFT(AM.adamantiumArmor, ArmorType.boots, ingotAdamantium, ItemNames.adamantiumBoots);
+        adamantiumHelmet = new ItemArmorFT(ItemInfos.adamantiumHelmet);
+        adamantiumChestplate = new ItemArmorFT(ItemInfos.adamantiumChestplate);
+        adamantiumLeggings = new ItemArmorFT(ItemInfos.adamantiumLeggings);
+        adamantiumBoots = new ItemArmorFT(ItemInfos.adamantiumBoots);
 
-        redstoneHelmet = new ItemArmorFT(AM.redstoneArmor, ArmorType.helmet, gemRedstone, ItemNames.redstoneHelmet);
-        redstoneChestplate = new ItemArmorFT(AM.redstoneArmor, ArmorType.chestplate, gemRedstone, ItemNames.redstoneChestplate);
-        redstoneLeggings = new ItemArmorFT(AM.redstoneArmor, ArmorType.leggings, gemRedstone, ItemNames.redstoneLeggings);
-        redstoneBoots = new ItemArmorFT(AM.redstoneArmor, ArmorType.boots, gemRedstone, ItemNames.redstoneBoots);
+        redstoneHelmet = new ItemArmorFT(ItemInfos.redstoneHelmet);
+        redstoneChestplate = new ItemArmorFT(ItemInfos.redstoneChestplate);
+        redstoneLeggings = new ItemArmorFT(ItemInfos.redstoneLeggings);
+        redstoneBoots = new ItemArmorFT(ItemInfos.redstoneBoots);
 
-        bowQuartz = new ItemBowFT(TM.quartz, Items.quartz, ItemNames.bowQuartz[0]);
-        bowObsidian = new ItemBowFT(TM.obsidian, ingotObsidian, ItemNames.bowObsidian[0]);
-        bowEmerald = new ItemBowFT(TM.emerald, gemEmerald, ItemNames.bowEmerald[0]);
-        bowLapis = new ItemBowFT(TM.lapis, gemLapis, ItemNames.bowLapis[0]);
-        bowBronze = new ItemBowFT(TM.bronze, ingotBronze, ItemNames.bowBronze[0]);
-        bowCoal = new ItemBowFT(TM.coal, ingotCoal, ItemNames.bowCoal[0]);
-        bowGlowstone = new ItemBowFT(TM.glowstone, ingotGlowstone, ItemNames.bowGlowstone[0]);
-        bowAdamantium = new ItemBowFT(TM.adamantium, ingotAdamantium, ItemNames.bowAdamantium[0]);
-        bowSilk = new ItemBowFT(TM.silk, gemSilk, ItemNames.bowSilk[0]);
-        bowRedstone = new ItemBowFT(TM.redstone, gemRedstone, ItemNames.bowRedstone[0]);
+        bowQuartz = new ItemBowFT(ItemInfos.bowQuartz);
+        bowObsidian = new ItemBowFT(ItemInfos.bowObsidian);
+        bowEmerald = new ItemBowFT(ItemInfos.bowEmerald);
+        bowLapis = new ItemBowFT(ItemInfos.bowLapis);
+        bowBronze = new ItemBowFT(ItemInfos.bowBronze);
+        bowCoal = new ItemBowFT(ItemInfos.bowCoal);
+        bowGlowstone = new ItemBowFT(ItemInfos.bowGlowstone);
+        bowAdamantium = new ItemBowFT(ItemInfos.bowAdamantium);
+        bowSilk = new ItemBowFT(ItemInfos.bowSilk);
+        bowRedstone = new ItemBowFT(ItemInfos.bowRedstone);
 
         quartzShears = new ItemShearsFT(TM.quartz, Items.quartz, ItemNames.quartzShears);
         obsidianShears = new ItemShearsFT(TM.obsidian, ingotObsidian, ItemNames.obsidianShears);

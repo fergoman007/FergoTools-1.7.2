@@ -16,14 +16,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class AdamantiumArmorEvent
+public class OnArmorTickEvent
 {
-    public static final AdamantiumArmorEvent instance = new AdamantiumArmorEvent();
-
-
+    public static final OnArmorTickEvent instance = new OnArmorTickEvent();
 
     @SubscribeEvent
-    public void onLivingUpdateEvent(LivingEvent.LivingUpdateEvent event)
+    public void onArmorTick(LivingEvent.LivingUpdateEvent event)
     {
         if (event.entityLiving != null)
         {

@@ -5,11 +5,43 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.Container;
 import net.minecraft.item.*;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public abstract class TileFurnaceFT extends TileFurnaceFergo
 {
+
+    public void readFromNBT(NBTTagCompound compound)
+    {
+        super.readFromNBT(compound);
+        NBTTagList list = compound.getTagList("Items", Constants.NBT.TAG_COMPOUND);
+        slots = new ItemStack[getSizeInventory()];
+
+        for (int i = 0; i < list.tagCount(); i++) {
+            NBTTagCompound compound1 = list.getCompoundTagAt(i);
+            byte b0 = compound1.getByte("Slot");
+
+            if (b0 >= 0 && b0 < slots.length)
+            {
+                slots[b0] = ItemStack.loadItemStackFromNBT(compound1);
+            }
+        }
+
+        burnTime = compound.getShort("BurnTime");
+        cookTime = compound.getShort("CookTime");
+        totalCookTime = compound.getShort("CookTimeTotal");
+        currentItemBurnTime = getItemBurnTime(slots[1]);
+
+        if (compound.hasKey("CustomName", Constants.NBT.TAG_STRING))
+        {
+            customName = compound.getString("CustomName");
+        }
+    }
+
     public static int getItemBurnTime(ItemStack stack)
     {
         if (stack == null)

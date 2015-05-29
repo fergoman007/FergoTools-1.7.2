@@ -53,8 +53,13 @@ public class FergoTools {
         return logger;
     }
 
+    public static IProxy getProxy()
+    {
+        return proxy;
+    }
+
     @SidedProxy(clientSide = Reference.clientProxyClass, serverSide = Reference.serverProxyClass)
-    public static IProxy proxy;
+    private static IProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent evt) {

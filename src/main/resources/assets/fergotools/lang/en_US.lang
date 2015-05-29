@@ -77,7 +77,7 @@ tile.fergotools.workbenchFT.emeraldWorkbench.name=Emerald Crafting Table
 tile.fergotools.workbenchFT.lapisWorkbench.name=Lapis Crafting Table
 tile.fergotools.workbenchFT.bronzeWorkbench.name=Bronze Crafting Table
 
-fergotools.container.quartzfurnace=Quartz Furnace
+container.FergoTools:quartzFurnace=Quartz Furnace
 fergotools.container.macerator=Macerator
 
 fergotools.toolmaterial=Tool Material:
