@@ -9,11 +9,16 @@
 
 package io.github.fergoman123.fergotools.api.content;
 
+import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
+import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.names.OreDict;
+import io.github.fergoman123.fergoutil.oredict.OreDictBlock;
 import io.github.fergoman123.fergoutil.oredict.OreDictItem;
 import io.github.fergoman123.fergoutil.oredict.OreDictItemStack;
 import net.minecraft.item.ItemStack;
+import sun.org.mozilla.javascript.internal.ast.Block;
 
 public class OreDictRegistry
 {
@@ -46,6 +51,14 @@ public class OreDictRegistry
     public static final OreDictItemStack stickFT7 = new OreDictItemStack(ItemNames.sticks[7], new ItemStack(ModItems.stickFT, 1, 7));
     public static final OreDictItemStack stickFT8 = new OreDictItemStack(ItemNames.sticks[8], new ItemStack(ModItems.stickFT, 1, 8));
 
+    public static final OreDictBlock oreExperience = new OreDictBlock(BlockNames.oreExperience, ModBlocks.oreExperience);
+    public static final OreDictBlock oreObsidian = new OreDictBlock(BlockNames.oreObsidian, ModBlocks.oreObsidian);
+    public static final OreDictBlock oreGemEmerald = new OreDictBlock(BlockNames.oreGemEmerald, ModBlocks.oreGemEmerald);
+    public static final OreDictBlock oreGemLapis = new OreDictBlock(BlockNames.oreGemLapis, ModBlocks.oreGemLapis);
+    public static final OreDictBlock oreBronze = new OreDictBlock(BlockNames.oreBronze, ModBlocks.oreBronze);
+    public static final OreDictBlock oreAdamantium = new OreDictBlock(BlockNames.oreAdamantium, ModBlocks.oreAdamantium);
+    public static final OreDictBlock oreGemRedstone = new OreDictBlock(BlockNames.oreGemRedstone, ModBlocks.oreGemRedstone);
+
     public static void registerOres()
     {
         ingotObsidian.registerOre();
@@ -76,5 +89,29 @@ public class OreDictRegistry
         stickFT6.registerOre();
         stickFT7.registerOre();
         stickFT8.registerOre();
+
+        oreExperience.registerOre();
+        oreObsidian.registerOre();
+        oreGemEmerald.registerOre();
+        oreGemLapis.registerOre();
+        oreBronze.registerOre();
+        oreAdamantium.registerOre();
+        oreGemRedstone.registerOre();
+
+        OreDictItemStack[] blockStorageFT = new OreDictItemStack[BlockNames.blocks.length];
+        for (int i = 0; i < blockStorageFT.length; i++) {
+            blockStorageFT[i] = new OreDictItemStack(BlockNames.blocks[i], new ItemStack(ModBlocks.storageFT, 1, i));
+            blockStorageFT[i].registerOre();
+        }
+
+        OreDictItemStack[] logs = new OreDictItemStack[BlockNames.logs.length];
+        for (int i = 0; i < logs.length; i++) {
+            logs[i] = new OreDictItemStack("logWood", new ItemStack(ModBlocks.logFT, 1, i));
+        }
+
+        OreDictItemStack[] planks = new OreDictItemStack[BlockNames.planks.length];
+        for (int i = 0; i < planks.length; i++) {
+            planks[i] = new OreDictItemStack("plankWood", new ItemStack(ModBlocks.plankFT, 1, i));
+        }
     }
 }

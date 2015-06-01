@@ -1,7 +1,9 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.init.ModItems;
+import io.github.fergoman123.fergotools.reference.BlockInfos;
 import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergoutil.info.BlockInfo;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import io.github.fergoman123.fergotools.api.base.BlockBases.BlockOreFT;
@@ -13,7 +15,7 @@ public class Ores
     public static final class BlockOreExperience extends BlockOreFT
     {
         public BlockOreExperience() {
-            super(BlockNames.oreExperience);
+            super(BlockInfos.oreExperience);
         }
 
         @Override
@@ -31,7 +33,7 @@ public class Ores
     {
         public BlockOreObsidian()
         {
-            super(BlockNames.oreObsidian);
+            super(BlockInfos.oreObsidian);
         }
 
         @Override
@@ -49,7 +51,7 @@ public class Ores
     {
         public BlockOreEmerald()
         {
-            super(BlockNames.oreGemEmerald);
+            super(BlockInfos.oreGemEmerald);
         }
 
         @Override
@@ -67,7 +69,7 @@ public class Ores
     {
         public BlockOreLapis()
         {
-            super(BlockNames.oreGemLapis);
+            super(BlockInfos.oreGemLapis);
         }
 
         @Override
@@ -85,7 +87,7 @@ public class Ores
     {
         public BlockOreBronze()
         {
-            super(BlockNames.oreBronze);
+            super(BlockInfos.oreBronze);
         }
 
         @Override
@@ -103,7 +105,7 @@ public class Ores
     {
         public BlockOreAdamantium()
         {
-            super(BlockNames.oreAdamantium);
+            super(BlockInfos.oreAdamantium);
         }
 
         @Override
@@ -121,7 +123,7 @@ public class Ores
     {
         public BlockOreRedstone()
         {
-            super(BlockNames.oreGemRedstone);
+            super(BlockInfos.oreGemRedstone);
         }
 
         @Override

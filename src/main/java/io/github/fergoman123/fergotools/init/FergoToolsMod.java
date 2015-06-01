@@ -11,7 +11,6 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.handler.RegHandler;
 import io.github.fergoman123.fergotools.reference.MetadataFT;
 import io.github.fergoman123.fergotools.reference.strings.Messages;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
