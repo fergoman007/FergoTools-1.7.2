@@ -10,7 +10,8 @@
 package io.github.fergoman123.fergotools.handler;
 
  import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
+ import io.github.fergoman123.fergotools.util.OreDictList;
+ import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -31,6 +32,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
     public static void registerOres()
     {
+        registerOre(OreDictList.oreObsidian);
 //        registerOre(BlockNames.oreObsidian, FTContent.oreObsidian);
 //        registerOre(BlockNames.oreGemEmerald, FTContent.oreGemEmerald);
 //        registerOre(BlockNames.oreGemLapis, FTContent.oreGemLapis);

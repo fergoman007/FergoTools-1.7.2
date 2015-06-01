@@ -11,6 +11,7 @@ package io.github.fergoman123.fergotools;
 
 import io.github.fergoman123.fergotools.init.FergoToolsMod;
 import io.github.fergoman123.fergotools.init.ModItems;
+import io.github.fergoman123.fergotools.log.LoggerFT;
 import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergotools.reference.Reference;
 import io.github.fergoman123.fergoutil.proxy.IProxy;
@@ -23,7 +24,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dep, guiFactory = Reference.guiFactoryClass)
@@ -43,14 +43,14 @@ public class FergoTools {
     @Mod.Instance(ModInfo.modid)
     private static FergoTools instance;
 
-    private static final Logger logger = LogManager.getLogger(ModInfo.modid);
+    private static final LoggerFT logger = new LoggerFT();
 
     public static FergoTools getInstance() {
         return instance;
     }
 
     public static Logger getLogger() {
-        return logger;
+        return logger.getLogger();
     }
 
     public static IProxy getProxy()

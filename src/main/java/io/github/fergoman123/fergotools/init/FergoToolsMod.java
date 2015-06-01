@@ -29,7 +29,6 @@ public class FergoToolsMod
         ModItems.init();
         ModBlocks.init();
     }
-
     public static void load(FMLInitializationEvent evt)
     {
         FergoTools.getLogger().info(Messages.initMessage);
@@ -39,8 +38,8 @@ public class FergoToolsMod
         ModItems.registerItems();
         ModItems.registerModels();
         FergoTools.getProxy().registerTileEntities();
-//        RegHandler.registerOres();
-//        Recipes.init();
+        RegHandler.registerOres();
+        Recipes.init();
     }
 
     public static void modsLoaded(FMLPostInitializationEvent evt)
