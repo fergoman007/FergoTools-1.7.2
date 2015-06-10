@@ -13,19 +13,17 @@ import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileMacerator;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
-
-import java.util.Random;
 
 public class BlockMacerator extends BlockFurnaceFT {
     public BlockMacerator(boolean isActive, String name) {
@@ -33,8 +31,8 @@ public class BlockMacerator extends BlockFurnaceFT {
     }
 
     @Override
-    public Item getItemDropped(IBlockState state, Random random, int fortune) {
-        return getItemFromBlock(ModBlocks.maceratorIdle);
+    public Block getBlockDropped() {
+        return ModBlocks.maceratorIdle;
     }
 
     @Override
@@ -71,8 +69,8 @@ public class BlockMacerator extends BlockFurnaceFT {
     }
 
     @Override
-    public Item getItem(World world, BlockPos pos) {
-        return getItemFromBlock(ModBlocks.maceratorIdle);
+    public Block getBlock() {
+        return ModBlocks.maceratorIdle;
     }
 
     @Override

@@ -1,12 +1,10 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
+import io.github.fergoman123.fergotools.api.base.BlockBases.BlockOreFT;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.BlockInfos;
-import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergoutil.info.BlockInfo;
+import io.github.fergoman123.fergotools.reference.gui.BlockNames;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
-import io.github.fergoman123.fergotools.api.base.BlockBases.BlockOreFT;
 
 import java.util.Random;
 
@@ -15,7 +13,7 @@ public class Ores
     public static final class BlockOreExperience extends BlockOreFT
     {
         public BlockOreExperience() {
-            super(BlockInfos.oreExperience);
+            super(BlockNames.oreExperience);
         }
 
         @Override
@@ -33,7 +31,7 @@ public class Ores
     {
         public BlockOreObsidian()
         {
-            super(BlockInfos.oreObsidian);
+            super(BlockNames.oreObsidian);
         }
 
         @Override
@@ -51,7 +49,7 @@ public class Ores
     {
         public BlockOreEmerald()
         {
-            super(BlockInfos.oreGemEmerald);
+            super(BlockNames.oreGemEmerald);
         }
 
         @Override
@@ -69,7 +67,7 @@ public class Ores
     {
         public BlockOreLapis()
         {
-            super(BlockInfos.oreGemLapis);
+            super(BlockNames.oreGemLapis);
         }
 
         @Override
@@ -87,7 +85,7 @@ public class Ores
     {
         public BlockOreBronze()
         {
-            super(BlockInfos.oreBronze);
+            super(BlockNames.oreBronze);
         }
 
         @Override
@@ -105,7 +103,7 @@ public class Ores
     {
         public BlockOreAdamantium()
         {
-            super(BlockInfos.oreAdamantium);
+            super(BlockNames.oreAdamantium);
         }
 
         @Override
@@ -123,7 +121,7 @@ public class Ores
     {
         public BlockOreRedstone()
         {
-            super(BlockInfos.oreGemRedstone);
+            super(BlockNames.oreGemRedstone);
         }
 
         @Override

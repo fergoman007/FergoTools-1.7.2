@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.util;
 
-import io.github.fergoman123.fergotools.reference.ModInfo;
+import io.github.fergoman123.fergotools.reference.gui.ModInfo;
 import io.github.fergoman123.fergoutil.util.VariantName;
 
 public class VariantNameFT extends VariantName

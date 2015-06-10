@@ -11,14 +11,12 @@ package io.github.fergoman123.fergotools.api.content;
 
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.names.BlockNames;
-import io.github.fergoman123.fergotools.reference.names.ItemNames;
-import io.github.fergoman123.fergotools.reference.names.OreDict;
+import io.github.fergoman123.fergotools.reference.gui.BlockNames;
+import io.github.fergoman123.fergotools.reference.gui.ItemNames;
 import io.github.fergoman123.fergoutil.oredict.OreDictBlock;
 import io.github.fergoman123.fergoutil.oredict.OreDictItem;
 import io.github.fergoman123.fergoutil.oredict.OreDictItemStack;
 import net.minecraft.item.ItemStack;
-import sun.org.mozilla.javascript.internal.ast.Block;
 
 public class OreDictRegistry
 {

@@ -70,7 +70,7 @@ package io.github.fergoman123.fergotools.crafting;
         return this.smeltingList;
     }
 
-    public float func_151398_b(ItemStack stack)
+    public float getSmeltingExperience(ItemStack stack)
     {
         float ret = stack.getItem().getSmeltingExperience(stack);
         if (ret != -1)return ret;
@@ -88,6 +88,6 @@ package io.github.fergoman123.fergotools.crafting;
         }
         while (!this.compareItemStacks(stack, (ItemStack) entry.getKey()));
 
-        return ((Float)entry.getValue()).floatValue();
+        return (Float) entry.getValue();
     }
 }

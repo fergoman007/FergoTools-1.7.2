@@ -10,18 +10,22 @@
 package io.github.fergoman123.fergotools.api.base;
 
 import io.github.fergoman123.fergoutil.gui.GuiFurnaceFergo;
+import io.github.fergoman123.fergoutil.helper.GLStateHelper;
+import io.github.fergoman123.fergoutil.helper.GuiHelper;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
-public abstract class GuiFurnaceFT extends GuiFurnaceFergo
+public class GuiFurnaceFT extends GuiFurnaceFergo
 {
     private TileFurnaceFT furnaceInstance;
+    private ResourceLocation texture;
 
-    public GuiFurnaceFT(Container container, TileFurnaceFT furnaceInstance, InventoryPlayer invPlayer, IInventory furnace) {
+    public GuiFurnaceFT(Container container, ResourceLocation texture, TileFurnaceFT furnaceInstance, InventoryPlayer invPlayer, IInventory furnace) {
         super(container, invPlayer, furnace);
         this.furnaceInstance = furnaceInstance;
+        this.texture = texture;
     }
 
     @Override
@@ -32,12 +36,25 @@ public abstract class GuiFurnaceFT extends GuiFurnaceFergo
     }
 
     @Override
-    public abstract void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY);
+    public void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
+        GLStateHelper.color();
+        GuiHelper.bindTexture(this.texture);
+        int startX = (width - xSize) / 2;
+        int startY = (height - ySize) / 2;
+        drawTexturedModalRect(startX, startY, 0, 0, xSize, ySize);
+
+        if (this.getFurnaceInstance().isBurning(furnace))
+        {
+            int cookTime = getBurnTimeRemainingScaled(12);
+            drawTexturedModalRect(startX + 63, startY + 15 + 12 - cookTime, 176, 12 - cookTime, 14, cookTime + 2);
+        }
+
+        int scaleAdjustment = getCookProgressScaled(24);
+        drawTexturedModalRect(startX + 83, startY + 12, 176, 14, scaleAdjustment + 1, 16);
+    }
 
     public TileFurnaceFT getFurnaceInstance()
     {
         return furnaceInstance;
     }
-
-    public abstract ResourceLocation getGuiTexture();
 }

@@ -9,11 +9,13 @@
 
 package io.github.fergoman123.fergotools;
 
-import io.github.fergoman123.fergotools.init.FergoToolsMod;
-import io.github.fergoman123.fergotools.init.ModItems;
+import io.github.fergoman123.fergotools.config.ConfigHandler;
+import io.github.fergoman123.fergotools.init.*;
 import io.github.fergoman123.fergotools.log.LoggerFT;
-import io.github.fergoman123.fergotools.reference.ModInfo;
-import io.github.fergoman123.fergotools.reference.Reference;
+import io.github.fergoman123.fergotools.reference.gui.MetadataFT;
+import io.github.fergoman123.fergotools.reference.gui.ModInfo;
+import io.github.fergoman123.fergotools.reference.gui.Reference;
+import io.github.fergoman123.fergotools.reference.gui.strings.Messages;
 import io.github.fergoman123.fergoutil.proxy.IProxy;
 import io.github.fergoman123.fergoutil.reference.ModConstants;
 import net.minecraft.creativetab.CreativeTabs;
@@ -63,17 +65,27 @@ public class FergoTools {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent evt) {
-        FergoToolsMod.preInit(evt);
-
+        getLogger().info(Messages.preInitMessage);
+        MetadataFT.writeMetadata(evt.getModMetadata());
+        ConfigHandler.init(evt.getSuggestedConfigurationFile());
+        getProxy().registerEventHandlers();
+        ModItems.init();
+        ModBlocks.init();
+        ModAchievements.init();
     }
 
     @Mod.EventHandler
     public void load(FMLInitializationEvent evt) {
-        FergoToolsMod.load(evt);
+        getLogger().info(Messages.initMessage);
+        ModItems.registerItems();
+        ModBlocks.registerBlocks();
+        getProxy().registerTileEntities();
+        getProxy().registerModels();
+        Recipes.init();
     }
 
     @Mod.EventHandler
     public void modsLoaded(FMLPostInitializationEvent evt) {
-        FergoToolsMod.modsLoaded(evt);
+        getLogger().info(Messages.postInitMessage);
     }
 }

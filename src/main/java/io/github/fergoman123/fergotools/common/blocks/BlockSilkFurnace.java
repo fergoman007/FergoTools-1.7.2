@@ -1,31 +1,30 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
-import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.base.BlockBases;
 import io.github.fergoman123.fergotools.common.tileentities.TileSilkFurnace;
+import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergoutil.info.BlockInfo;
+import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class BlockSilkFurnace extends BlockBases.BlockFurnaceFT
 {
-    public BlockSilkFurnace(boolean isActive, BlockInfo info) {
-        super(isActive, info);
+    public BlockSilkFurnace(boolean isActive, String name) {
+        super(Material.iron, isActive, name);
     }
 
     @Override
-    public Item getItemDropped(IBlockState state, Random random, int fortune) {
-        return getItemFromBlock(ModBlocks.silkFurnaceIdle);
+    public Block getBlockDropped() {
+        return ModBlocks.silkFurnaceIdle;
     }
 
     @Override
@@ -35,8 +34,10 @@ public class BlockSilkFurnace extends BlockBases.BlockFurnaceFT
             TileSilkFurnace furnace = (TileSilkFurnace)worldIn.getTileEntity(pos);
             if (furnace != null)
             {
-                playerIn.openGui(FergoTools.getInstance());
+                FTHelper.openGui(playerIn, GuiIds.silkFurnace, worldIn, pos);
+                return true;
             }
+            return true;
         }
         else
         {
@@ -54,8 +55,8 @@ public class BlockSilkFurnace extends BlockBases.BlockFurnaceFT
     }
 
     @Override
-    public Item getItem(World world, BlockPos pos) {
-        return getItemFromBlock(ModBlocks.silkFurnaceIdle);
+    public Block getBlock() {
+        return ModBlocks.silkFurnaceIdle;
     }
 
     @Override

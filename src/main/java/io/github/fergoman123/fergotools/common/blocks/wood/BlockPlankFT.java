@@ -2,7 +2,6 @@ package io.github.fergoman123.fergotools.common.blocks.wood;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
-import io.github.fergoman123.fergotools.reference.names.BlockNames;
 import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
@@ -19,7 +18,7 @@ public class BlockPlankFT extends BlockMultiFergo
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
 
     public BlockPlankFT(String name) {
-        super(Material.wood, 0, FergoTools.tabFergoTools, 2.0f, 5.0f, BlockNames.planks, name);
+        super(Material.wood, 0, FergoTools.tabFergoTools, 2.0f, 5.0f, name);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian));
     }
 

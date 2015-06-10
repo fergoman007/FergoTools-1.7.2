@@ -1,30 +1,20 @@
-/*
- * Fergoman123's Tools
- * Copyright (c) 2014 fergoman123.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser Public License v2.1
- * which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/gpl-3.0.html
- */
-
 package io.github.fergoman123.fergotools.common.tileentities;
 
 import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
 import io.github.fergoman123.fergotools.common.blocks.BlockMacerator;
-import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerMacerator;
+import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.ContainerMacerator;
 import io.github.fergoman123.fergotools.crafting.MaceratorRecipes;
-import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
-import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.gui.ints.FurnaceInts;
+import io.github.fergoman123.fergotools.reference.gui.Locale;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class TileMacerator extends TileFurnaceFT
 {
-
     @Override
     public String getCommandSenderName() {
         return Locale.containerMacerator;
@@ -107,41 +97,20 @@ public class TileMacerator extends TileFurnaceFT
         return FurnaceInts.maceratorSpeed;
     }
 
-    public boolean isOre(ItemStack stack)
-    {
-        String[] ores = OreDictionary.getOreNames();
-        for (int i = 0; i < ores.length; i++) {
-            if (ores[i].contains("ore"))
-            {
-                if (OreDictionary.getOres(ores[i]) != null)
-                {
-                    for (int j = 0; j < OreDictionary.getOres(ores[i]).size(); j++) {
-                        if (OreDictionary.getOres(ores[i]).get(j).getItem() == stack.getItem());
-                        {
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
-    }
-
     @Override
     public boolean canSmelt() {
-        if (slots[0] == null)
+        if (this.slots[0] == null)
         {
             return false;
         }
         else
         {
-            ItemStack stack = MaceratorRecipes.macerating().getSmeltingResult(slots[0]);
+            ItemStack stack = MaceratorRecipes.macerating().getSmeltingResult(this.slots[0]);
             if (stack == null)return false;
-            if (!isOre(this.slots[0]))return false;
-            if (slots[2] == null)return true;
-            if (!slots[2].isItemEqual(stack))return false;
+            if (this.slots[2] == null)return true;
+            if (!this.slots[2].isItemEqual(stack))return false;
             int result = slots[2].stackSize + stack.stackSize;
-            return result <= getInventoryStackLimit() && result <= slots[2].getMaxStackSize();
+            return result <= getInventoryStackLimit() && result <= this.slots[2].getMaxStackSize();
         }
     }
 
@@ -149,15 +118,15 @@ public class TileMacerator extends TileFurnaceFT
     public void smeltItem() {
         if (this.canSmelt())
         {
-            ItemStack stack = MaceratorRecipes.macerating().getSmeltingResult(this.slots[0]);
+            ItemStack itemstack = MaceratorRecipes.macerating().getSmeltingResult(this.slots[0]);
 
             if (this.slots[2] == null)
             {
-                this.slots[2] = stack.copy();
+                this.slots[2] = itemstack.copy();
             }
-            else if (this.slots[2].getItem() == stack.getItem())
+            else if (this.slots[2].getItem() == itemstack.getItem())
             {
-                this.slots[2].stackSize += stack.stackSize;
+                this.slots[2].stackSize += itemstack.stackSize;
             }
 
             --this.slots[0].stackSize;
@@ -171,8 +140,8 @@ public class TileMacerator extends TileFurnaceFT
 
     @Override
     public boolean isItemValidForSlot(int index, ItemStack stack) {
-        return index != 2 && (index != 1 || isItemFuel(stack));
-}
+        return index != 2 && (index != 1 || isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
+    }
 
     @Override
     public String getGuiID() {

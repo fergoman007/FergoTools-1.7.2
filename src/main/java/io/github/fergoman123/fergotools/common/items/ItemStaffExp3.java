@@ -2,7 +2,7 @@ package io.github.fergoman123.fergotools.common.items;
 
 import io.github.fergoman123.fergotools.api.base.ItemStaffExpBase;
 import io.github.fergoman123.fergotools.helper.StaffExpHelper;
-import io.github.fergoman123.fergotools.reference.ItemInfos;
+import io.github.fergoman123.fergotools.reference.gui.ItemNames;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 public class ItemStaffExp3 extends ItemStaffExpBase
 {
     public ItemStaffExp3(){
-        super(2, ItemInfos.staffExp3);
+        super(2, ItemNames.staffExp3);
     }
 
     @Override

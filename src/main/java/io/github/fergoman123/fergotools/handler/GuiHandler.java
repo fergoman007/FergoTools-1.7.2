@@ -9,18 +9,15 @@
 
 package io.github.fergoman123.fergotools.handler;
 
-import io.github.fergoman123.fergotools.common.gui.furnace.GuiQuartzFurnace;
-import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerObsidianFurnace;
-import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerQuartzFurnace;
-import io.github.fergoman123.fergotools.common.gui.furnace.GuiObsidianFurnace;
 import io.github.fergoman123.fergotools.common.gui.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.common.gui.workbench.GuiWorkbenchFT;
-import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
-import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
+import io.github.fergoman123.fergotools.common.tileentities.*;
+import io.github.fergoman123.fergotools.common.gui.FurnaceGuis.*;
+import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.*;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergotools.reference.Textures;
-import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import io.github.fergoman123.fergotools.reference.gui.Textures;
+import io.github.fergoman123.fergotools.reference.gui.Locale;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -34,23 +31,29 @@ public class GuiHandler implements IGuiHandler {
         BlockPos pos = new BlockPos(x, y, z);
         TileEntity tileEntity = world.getTileEntity(pos);
         InventoryPlayer invPlayer = player.inventory;
-
-        //todo Containers
         switch (id) {
             case GuiIds.quartzFurnace:
                 return new ContainerQuartzFurnace(invPlayer, (TileQuartzFurnace) tileEntity);
             case GuiIds.obsidianFurnace:
                 return new ContainerObsidianFurnace(invPlayer, (TileObsidianFurnace)tileEntity);
             case GuiIds.emeraldFurnace:
+                return new ContainerEmeraldFurnace(invPlayer, (TileEmeraldFurnace)tileEntity);
             case GuiIds.lapisFurnace:
+                return new ContainerLapisFurnace(invPlayer, (TileLapisFurnace)tileEntity);
             case GuiIds.bronzeFurnace:
+                return new ContainerBronzeFurnace(invPlayer, (TileBronzeFurnace)tileEntity);
             case GuiIds.coalFurnace:
+                return new ContainerCoalFurnace(invPlayer, (TileCoalFurnace)tileEntity);
             case GuiIds.glowstoneFurnace:
+                return new ContainerGlowstoneFurnace(invPlayer, (TileGlowstoneFurnace)tileEntity);
             case GuiIds.adamantiumFurnace:
+                return new ContainerAdamantiumFurnace(invPlayer, (TileAdamantiumFurnace)tileEntity);
             case GuiIds.silkFurnace:
+                return new ContainerSilkFurnace(invPlayer, (TileSilkFurnace)tileEntity);
             case GuiIds.redstoneFurnace:
+                return new ContainerRedstoneFurnace(invPlayer, (TileRedstoneFurnace)tileEntity);
             case GuiIds.macerator:
-
+                return new ContainerMacerator(invPlayer, (TileMacerator)tileEntity);
             case GuiIds.obsidianWorkbench:
                 return new ContainerWorkbenchFT(invPlayer, world, pos, ModBlocks.obsidianWorkbench);
             case GuiIds.emeraldWorkbench:
@@ -82,18 +85,27 @@ public class GuiHandler implements IGuiHandler {
         //todo GUI's
         switch (id) {
             case GuiIds.quartzFurnace:
-                return new GuiQuartzFurnace(invPlayer, (TileQuartzFurnace) tileEntity);
+                return new GuiQuartzFurnace(invPlayer, (TileQuartzFurnace)tileEntity);
             case GuiIds.obsidianFurnace:
-                return new GuiObsidianFurnace(invPlayer, (TileObsidianFurnace) tileEntity);
+                return new GuiObsidianFurnace(invPlayer, (TileObsidianFurnace)tileEntity);
             case GuiIds.emeraldFurnace:
+                return new GuiEmeraldFurnace(invPlayer, (TileEmeraldFurnace)tileEntity);
             case GuiIds.lapisFurnace:
+                return new GuiLapisFurnace(invPlayer, (TileLapisFurnace)tileEntity);
             case GuiIds.bronzeFurnace:
+                return new GuiBronzeFurnace(invPlayer, (TileBronzeFurnace)tileEntity);
             case GuiIds.coalFurnace:
+                return new GuiCoalFurnace(invPlayer, (TileCoalFurnace)tileEntity);
             case GuiIds.glowstoneFurnace:
+                return new GuiGlowstoneFurnace(invPlayer, (TileGlowstoneFurnace)tileEntity);
             case GuiIds.adamantiumFurnace:
+                return new GuiAdamantiumFurnace(invPlayer, (TileAdamantiumFurnace)tileEntity);
             case GuiIds.silkFurnace:
+                return new GuiSilkFurnace(invPlayer, (TileSilkFurnace)tileEntity);
             case GuiIds.redstoneFurnace:
+                return new GuiRedstoneFurnace(invPlayer, (TileRedstoneFurnace)tileEntity);
             case GuiIds.macerator:
+                return new GuiMacerator(invPlayer, (TileMacerator)tileEntity);
 
             case GuiIds.obsidianWorkbench:
                 return new GuiWorkbenchFT(

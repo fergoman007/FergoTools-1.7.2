@@ -2,8 +2,8 @@ package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.helper.FTHelper;
-import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergotools.reference.names.BlockNames;
+import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import io.github.fergoman123.fergotools.reference.gui.BlockNames;
 import io.github.fergoman123.fergoutil.block.BlockWorkbenchFergo;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;

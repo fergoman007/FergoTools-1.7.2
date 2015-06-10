@@ -11,12 +11,9 @@ package io.github.fergoman123.fergotools.api.base;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergoutil.block.*;
-import io.github.fergoman123.fergoutil.info.BlockInfo;
-import io.github.fergoman123.fergoutil.info.StairsInfo;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -26,29 +23,29 @@ public class BlockBases
 {
     public static class BlockFT extends BlockFergo
     {
-        public BlockFT(float hardness, float resistance, BlockInfo info) {
-            super(0, FergoTools.tabFergoTools, hardness, resistance, info);
+        public BlockFT(Material material, float hardness, float resistance, String name) {
+            super(material, 0, FergoTools.tabFergoTools, hardness, resistance, name);
         }
     }
 
     public static abstract class BlockFurnaceFT extends BlockFurnaceFergo
     {
-        public BlockFurnaceFT(boolean isActive, BlockInfo info) {
-            super(isActive, 0, FergoTools.tabFergoTools, info);
+        public BlockFurnaceFT(Material material, boolean isActive, String name) {
+            super(material, isActive, 0, FergoTools.tabFergoTools, name);
         }
     }
 
     public static abstract class BlockLeavesFT extends BlockLeavesFergo
     {
-        public BlockLeavesFT(BlockInfo info) {
-            super(0, FergoTools.tabFergoTools, info);
+        public BlockLeavesFT(String name) {
+            super(0, FergoTools.tabFergoTools, name);
         }
     }
 
     public static abstract class BlockLogFT extends BlockLogFergo
     {
-        public BlockLogFT(BlockInfo info) {
-            super(0, FergoTools.tabFergoTools, info);
+        public BlockLogFT(String name) {
+            super(0, FergoTools.tabFergoTools, name);
         }
 
         public abstract IBlockState getStateFromMeta(int meta);
@@ -60,8 +57,8 @@ public class BlockBases
 
     public static abstract class BlockOreFT extends BlockFT
     {
-        public BlockOreFT(BlockInfo info) {
-            super(2.5f, 5f, info);
+        public BlockOreFT(String name) {
+            super(Material.rock, 2.5f, 5f, name);
         }
 
         public abstract Item getItemDropped(IBlockState state, Random random, int fortune);
@@ -70,8 +67,8 @@ public class BlockBases
 
     public static class BlockStairsFT extends BlockStairsFergo
     {
-        public BlockStairsFT(StairsInfo info) {
-            super(0, FergoTools.tabFergoTools, info);
+        public BlockStairsFT(IBlockState modelState, String name) {
+            super(modelState, 0, FergoTools.tabFergoTools, name);
         }
     }
 }

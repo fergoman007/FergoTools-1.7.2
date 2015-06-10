@@ -1,17 +1,10 @@
-/*
- * Fergoman123's Tools
- * Copyright (c) 2014 fergoman123.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser Public License v2.1
- * which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/gpl-3.0.html
- */
-
 package io.github.fergoman123.fergotools.common.tileentities;
 
 import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
-import io.github.fergoman123.fergotools.common.gui.furnace.container.ContainerEmeraldFurnace;
-import io.github.fergoman123.fergotools.reference.names.Locale;
+import io.github.fergoman123.fergotools.common.blocks.BlockEmeraldFurnace;
+import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.ContainerEmeraldFurnace;
+import io.github.fergoman123.fergotools.reference.gui.ints.FurnaceInts;
+import io.github.fergoman123.fergotools.reference.gui.Locale;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
@@ -92,8 +85,7 @@ public class TileEmeraldFurnace extends TileFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                //todo emerald furnace block
-//                BlockEmeraldFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockEmeraldFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
@@ -105,7 +97,7 @@ public class TileEmeraldFurnace extends TileFurnaceFT
 
     @Override
     public int getFurnaceSpeed(ItemStack stack) {
-        return 0;//todo furnace speed
+        return FurnaceInts.emeraldFurnaceSpeed;
     }
 
     @Override
@@ -157,11 +149,6 @@ public class TileEmeraldFurnace extends TileFurnaceFT
     @Override
     public boolean isItemValidForSlot(int index, ItemStack stack) {
         return index != 2 && (index != 1 || isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
-    }
-
-    public static boolean isItemFuel(ItemStack stack)
-    {
-        return getItemBurnTime(stack) > 0;
     }
 
     @Override

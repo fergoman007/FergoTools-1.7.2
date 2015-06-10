@@ -13,42 +13,34 @@ import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileObsidianFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergoutil.info.BlockInfo;
+import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class BlockObsidianFurnace extends BlockFurnaceFT {
-    public BlockObsidianFurnace(boolean isActive, BlockInfo info) {
-        super(isActive, info);
+    public BlockObsidianFurnace(boolean isActive, String name) {
+        super(Material.iron, isActive, name);
     }
 
     @Override
-    public Item getItemDropped(IBlockState state, Random random, int fortune) {
-        return getItemFromBlock(ModBlocks.obsidianFurnaceIdle);
+    public Block getBlockDropped() {
+        return ModBlocks.obsidianFurnaceIdle;
     }
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-        if (worldIn.isRemote)
-        {
-            return true;
-        }
-        else if (!playerIn.isSneaking())
-        {
-            TileObsidianFurnace tile = (TileObsidianFurnace)worldIn.getTileEntity(pos);
-            if (tile != null)
-            {
+        if (worldIn.isRemote && !playerIn.isSneaking()){
+            TileObsidianFurnace furnace = (TileObsidianFurnace)worldIn.getTileEntity(pos);
+            if (furnace != null){
                 FTHelper.openGui(playerIn, GuiIds.obsidianFurnace, worldIn, pos);
                 return true;
             }
@@ -64,20 +56,17 @@ public class BlockObsidianFurnace extends BlockFurnaceFT {
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
 
-        if (stack.hasDisplayName())
-        {
+        if (stack.hasDisplayName()){
             ((TileObsidianFurnace)worldIn.getTileEntity(pos)).setCustomInventoryName(stack.getDisplayName());
         }
     }
 
     @Override
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-        if (!keepInventory)
-        {
-            TileObsidianFurnace tile = (TileObsidianFurnace)worldIn.getTileEntity(pos);
-            if (tile != null)
-            {
-                InventoryHelper.dropInventoryItems(worldIn, pos, tile);
+        if (!keepInventory){
+            TileObsidianFurnace furnace = (TileObsidianFurnace)worldIn.getTileEntity(pos);
+            if (furnace != null){
+                InventoryHelper.dropInventoryItems(worldIn, pos, furnace);
                 worldIn.updateComparatorOutputLevel(pos, this);
             }
         }
@@ -86,12 +75,11 @@ public class BlockObsidianFurnace extends BlockFurnaceFT {
     }
 
     @Override
-    public Item getItem(World world, BlockPos pos) {
-        return getItemFromBlock(ModBlocks.obsidianFurnaceIdle);
+    public Block getBlock() {
+        return ModBlocks.obsidianFurnaceIdle;
     }
 
-    @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
+    public TileEntity createNewTileEntity(World world, int meta){
         return new TileObsidianFurnace();
     }
 
@@ -99,6 +87,7 @@ public class BlockObsidianFurnace extends BlockFurnaceFT {
     {
         IBlockState state = world.getBlockState(pos);
         TileEntity entity = world.getTileEntity(pos);
+
         keepInventory = true;
 
         if (active)
@@ -113,9 +102,7 @@ public class BlockObsidianFurnace extends BlockFurnaceFT {
         }
 
         keepInventory = false;
-
-        if (entity != null)
-        {
+        if (entity != null) {
             entity.validate();
             world.setTileEntity(pos, entity);
         }

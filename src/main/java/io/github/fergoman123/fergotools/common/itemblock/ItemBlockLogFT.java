@@ -1,26 +1,13 @@
 package io.github.fergoman123.fergotools.common.itemblock;
 
-import io.github.fergoman123.fergotools.api.content.WoodTypes;
+import io.github.fergoman123.fergotools.reference.gui.BlockNames;
+import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 
-public class ItemBlockLogFT extends ItemBlock
+public class ItemBlockLogFT extends ItemBlockVariants
 {
     public ItemBlockLogFT(Block block)
     {
-        super(block);
-        this.setMaxDamage(0);
-        this.setHasSubtypes(true);
-    }
-
-    @Override
-    public int getMetadata(int damage) {
-        return damage;
-    }
-
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + WoodTypes.values()[stack.getItemDamage()].getName();
+        super(block, BlockNames.logs);
     }
 }

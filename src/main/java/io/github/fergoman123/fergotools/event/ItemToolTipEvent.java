@@ -50,64 +50,6 @@ public class ItemToolTipEvent {
             }
         }
 
-        if (item instanceof ItemPickaxeFT) {
-            ItemPickaxeFT pickaxeFT = (ItemPickaxeFT) item;
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.tm") + " " + pickaxeFT.getToolMaterialName());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.hl") + " " + pickaxeFT.getToolMaterial().getHarvestLevel());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.md") + " " + pickaxeFT.getToolMaterial().getMaxUses());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.eff") + " " + pickaxeFT.getToolMaterial().getEfficiencyOnProperMaterial());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.dam") + " " + pickaxeFT.getToolMaterial().getDamageVsEntity());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ench") + " " + pickaxeFT.getToolMaterial().getEnchantability());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ul") + " " + (stack.getMaxDamage() - stack.getItemDamage()));
-        }
-
-        if (item instanceof ItemShovelFT) {
-            ItemShovelFT shovelFT = (ItemShovelFT) item;
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.tm") + " " + shovelFT.getToolMaterialName());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.hl") + " " + shovelFT.getToolMaterial().getHarvestLevel());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.md") + " " + shovelFT.getToolMaterial().getMaxUses());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.eff") + " " + shovelFT.getToolMaterial().getEfficiencyOnProperMaterial());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.dam") + " " + shovelFT.getToolMaterial().getDamageVsEntity());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ench") + " " + shovelFT.getToolMaterial().getEnchantability());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ul") + " " + (stack.getMaxDamage() - stack.getItemDamage()));
-        }
-
-        if (item instanceof ItemAxeFT)
-        {
-            ItemAxeFT axeFT = (ItemAxeFT)item;
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.tm") + " " + axeFT.getToolMaterialName());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.hl") + " " + axeFT.getToolMaterial().getHarvestLevel());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.md") + " " + axeFT.getToolMaterial().getMaxUses());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.eff") + " " + axeFT.getToolMaterial().getEfficiencyOnProperMaterial());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.dam") + " " + axeFT.getToolMaterial().getDamageVsEntity());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ench") + " " + axeFT.getToolMaterial().getEnchantability());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ul") + " " + (stack.getMaxDamage() - stack.getItemDamage()));
-        }
-
-        if (item instanceof ItemHoeFT)
-        {
-            ItemHoeFT hoeFT = (ItemHoeFT)item;
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.tm") + " " + hoeFT.getMaterialName());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.hl") + " " + hoeFT.getMaterial().getHarvestLevel());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.md") + " " + hoeFT.getMaterial().getMaxUses());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.eff") + " " + hoeFT.getMaterial().getEfficiencyOnProperMaterial());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.dam") + " " + hoeFT.getMaterial().getDamageVsEntity());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ench") + " " + hoeFT.getMaterial().getEnchantability());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ul") + " " + (stack.getMaxDamage() - stack.getItemDamage()));
-        }
-
-        if (item instanceof ItemSwordFT)
-        {
-            ItemSwordFT swordFT = (ItemSwordFT)item;
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.tm") + " " + swordFT.getToolMaterialName());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.hl") + " " + swordFT.getMaterial().getHarvestLevel());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.md") + " " + swordFT.getMaterial().getMaxUses());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.eff") + " " + swordFT.getMaterial().getEfficiencyOnProperMaterial());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.dam") + " " + swordFT.getMaterial().getDamageVsEntity());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ench") + " " + swordFT.getMaterial().getEnchantability());
-            list.add(StatCollector.translateToLocal("fergotools.tooltip.ul") + " " + (stack.getMaxDamage() - stack.getItemDamage()));
-        }
-
         if (block == ModBlocks.oreExperience) {
             list.add(StatCollector.translateToLocal("fergotools.tooltip.oredict"));
             list.add(StatCollector.translateToLocal("fergotools.tooltip.oredictname.oreexperience"));

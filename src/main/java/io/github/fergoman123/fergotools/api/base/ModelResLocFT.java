@@ -1,11 +1,11 @@
 package io.github.fergoman123.fergotools.api.base;
 
-import io.github.fergoman123.fergotools.reference.ModInfo;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 
-public class ModelResLocFT extends ModelHelper.ModelResLocFergo
+public class ModelResLocFT extends ModelResourceLocation
 {
 
     public ModelResLocFT(String name) {
-        super(ModInfo.modid, name);
+        super("fergotools:" + name, "inventory");
     }
 }

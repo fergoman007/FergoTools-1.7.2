@@ -11,7 +11,6 @@ package io.github.fergoman123.fergotools.handler;
 
  import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.util.MetadataList.StorageFT;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -26,7 +25,7 @@ public class FuelHandler implements IFuelHandler {
             return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Items.coal));
         }
 
-        if (fuel == new ItemStack(ModBlocks.storageFT, 1, StorageFT.blockCoal))
+        if (fuel == new ItemStack(ModBlocks.storageFT, 1))
         {
             return 9 * TileEntityFurnace.getItemBurnTime(new ItemStack(Blocks.coal_block));
         }

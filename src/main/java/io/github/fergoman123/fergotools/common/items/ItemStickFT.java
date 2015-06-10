@@ -1,7 +1,12 @@
 package io.github.fergoman123.fergotools.common.items;
 
 import io.github.fergoman123.fergotools.api.base.ItemMultiFT;
-import io.github.fergoman123.fergotools.reference.names.ItemNames;
+import io.github.fergoman123.fergotools.reference.gui.ItemNames;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+import java.util.List;
 
 public class ItemStickFT extends ItemMultiFT
 {
@@ -9,4 +14,10 @@ public class ItemStickFT extends ItemMultiFT
         super(ItemNames.sticks, ItemNames.stickFT);
     }
 
+    @Override
+    public void getSubItems(Item itemIn, CreativeTabs tab, List list) {
+        for (int i = 0; i < ItemNames.sticks.length; i++) {
+            list.add(new ItemStack(itemIn, 1, i));
+        }
+    }
 }
