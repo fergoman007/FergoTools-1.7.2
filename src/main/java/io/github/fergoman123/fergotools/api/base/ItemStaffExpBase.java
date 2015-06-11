@@ -4,6 +4,7 @@ import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.helper.NBTHelper;
 import io.github.fergoman123.fergotools.helper.StaffExpHelper;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -86,5 +87,9 @@ public class ItemStaffExpBase extends Item
 
     public int getType() {
         return type;
+    }
+
+    public void registerModel(){
+        RegisterHelper.registerModel(this, getUnlocalizedName().substring(5));
     }
 }

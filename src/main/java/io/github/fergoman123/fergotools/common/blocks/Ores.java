@@ -2,7 +2,7 @@ package io.github.fergoman123.fergotools.common.blocks;
 
 import io.github.fergoman123.fergotools.api.base.BlockBases.BlockOreFT;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.reference.gui.BlockNames;
+import io.github.fergoman123.fergotools.reference.BlockNames;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 

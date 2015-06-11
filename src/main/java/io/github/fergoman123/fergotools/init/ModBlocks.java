@@ -6,9 +6,11 @@ import io.github.fergoman123.fergotools.common.blocks.*;
 import io.github.fergoman123.fergotools.common.blocks.Ores.*;
 import io.github.fergoman123.fergotools.common.blocks.wood.*;
 import io.github.fergoman123.fergotools.common.itemblock.*;
-import io.github.fergoman123.fergotools.reference.gui.BlockNames;
+import io.github.fergoman123.fergotools.reference.BlockNames;
 import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
+import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
 import net.minecraft.block.Block;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
@@ -62,7 +64,15 @@ public class ModBlocks {
     public static BlockWoodSlabFT singleSlabFT;
     public static BlockWoodSlabFT doubleSlabFT;
 
-    public static BlockLeavesFT leavesFT;
+    public static BlockLeavesFT leavesObsidian;
+    public static BlockLeavesFT leavesEmerald;
+    public static BlockLeavesFT leavesLapis;
+    public static BlockLeavesFT leavesBronze;
+    public static BlockLeavesFT leavesCoal;
+    public static BlockLeavesFT leavesGlowstone;
+    public static BlockLeavesFT leavesAdamantium;
+    public static BlockLeavesFT leavesSilk;
+    public static BlockLeavesFT leavesRedstone;
 
     public static BlockSaplingFT saplingFT;
 
@@ -111,7 +121,6 @@ public class ModBlocks {
         redstoneFurnaceActive = new BlockRedstoneFurnace(true, BlockNames.redstoneFurnaceActive);
         maceratorActive = new BlockMacerator(true, BlockNames.maceratorActive);
 
-
         logFT = new BlockWoodLogFT(BlockNames.logFT);
         plankFT = new BlockPlankFT(BlockNames.plankFT);
 
@@ -127,8 +136,18 @@ public class ModBlocks {
 
         singleSlabFT = new BlockHSFT(BlockNames.slabSingleFT);
         doubleSlabFT = new BlockDSFT(BlockNames.slabDoubleFT);
-        leavesFT = new BlockLeavesImpl(BlockNames.leavesFT);
-        saplingFT = new BlockSaplingFT(BlockNames.saplingFT);
+
+        leavesObsidian = new Leaves.BlockLeavesObsidian();
+        leavesEmerald = new Leaves.BlockLeavesEmerald();
+        leavesLapis = new Leaves.BlockLeavesLapis();
+        leavesBronze = new Leaves.BlockLeavesBronze();
+        leavesCoal = new Leaves.BlockLeavesCoal();
+        leavesGlowstone = new Leaves.BlockLeavesGlowstone();
+        leavesAdamantium = new Leaves.BlockLeavesAdamantium();
+        leavesSilk = new Leaves.BlockLeavesSilk();
+        leavesRedstone = new Leaves.BlockLeavesRedstone();
+
+        saplingFT = new BlockSaplingFT(BlockNames.saplings, BlockNames.saplingFT);
 
         obsidianWorkbench = new BlockWorkbenchFT(0);
         emeraldWorkbench = new BlockWorkbenchFT(1);
@@ -177,7 +196,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(maceratorActive, BlockNames.maceratorActive);
 
         GameRegistry.registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logFT);
-        GameRegistry.registerBlock(plankFT, ItemBlockPlankFT.class, BlockNames.plankFT);
+        registerBlock(plankFT, BlockNames.plankFT, true);
 
         GameRegistry.registerBlock(stairObsidian, BlockNames.stairObsidian);
         GameRegistry.registerBlock(stairEmerald, BlockNames.stairEmerald);
@@ -191,7 +210,17 @@ public class ModBlocks {
 
         GameRegistry.registerBlock(singleSlabFT, ItemBlockSlabSingle.class, BlockNames.slabSingleFT);
         GameRegistry.registerBlock(doubleSlabFT, ItemBlockSlabDouble.class, BlockNames.slabDoubleFT);
-        GameRegistry.registerBlock(leavesFT, ItemBlockLeavesFT.class, BlockNames.leavesFT);
+
+        GameRegistry.registerBlock(leavesObsidian, BlockNames.leavesObsidian);
+        GameRegistry.registerBlock(leavesEmerald, BlockNames.leavesEmerald);
+        GameRegistry.registerBlock(leavesLapis, BlockNames.leavesLapis);
+        GameRegistry.registerBlock(leavesBronze, BlockNames.leavesBronze);
+        GameRegistry.registerBlock(leavesCoal, BlockNames.leavesCoal);
+        GameRegistry.registerBlock(leavesGlowstone, BlockNames.leavesGlowstone);
+        GameRegistry.registerBlock(leavesAdamantium, BlockNames.leavesAdamantium);
+        GameRegistry.registerBlock(leavesSilk, BlockNames.leavesSilk);
+        GameRegistry.registerBlock(leavesRedstone, BlockNames.leavesRedstone);
+
         GameRegistry.registerBlock(saplingFT, ItemBlockSaplingFT.class, BlockNames.saplingFT);
 
         GameRegistry.registerBlock(obsidianWorkbench, BlockNames.workbenches[0]);
@@ -205,7 +234,16 @@ public class ModBlocks {
         GameRegistry.registerBlock(redstoneWorkbench, BlockNames.workbenches[8]);
     }
 
-    public static void registerBlock(Block block, String name) {
-        registerBlock(block, name);
+    private static void registerBlock(Block block, String name, boolean hasItemBlock)
+    {
+        if (!hasItemBlock){
+            GameRegistry.registerBlock(block, name);
+        }else {
+            GameRegistry.registerBlock(block, ItemBlockVariants.class, name);
+        }
+    }
+
+    public static void registerBlockWithCustomItemBlock(Block block, Class<? extends ItemBlock> customItemBlock, String name){
+
     }
 }

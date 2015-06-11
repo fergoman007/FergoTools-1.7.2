@@ -4,6 +4,8 @@ import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergoutil.block.BlockSlabFergo;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -21,8 +23,9 @@ import java.util.Random;
 public abstract class BlockWoodSlabFT extends BlockSlabFergo
 {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
+    private String[] subNames;
 
-    public BlockWoodSlabFT(String name) {
+    public BlockWoodSlabFT(String[] subNames, String name) {
         super(Material.wood, 0, FergoTools.tabFergoTools, name);
         IBlockState state = this.blockState.getBaseState();
 
@@ -32,6 +35,7 @@ public abstract class BlockWoodSlabFT extends BlockSlabFergo
         }
 
         this.setDefaultState(state.withProperty(VARIANT, WoodTypes.obsidian));
+        this.subNames = subNames;
     }
 
     @Override
@@ -46,7 +50,7 @@ public abstract class BlockWoodSlabFT extends BlockSlabFergo
 
     @Override
     public String getUnlocalizedName(int meta) {
-        return super.getUnlocalizedName() + "." + WoodTypes.byMetadata(meta).getName();
+        return super.getUnlocalizedName() + ".slab" +  WoodTypes.byMetadata(meta).getName();
     }
 
     @Override
@@ -59,16 +63,11 @@ public abstract class BlockWoodSlabFT extends BlockSlabFergo
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
-        list.add(new ItemStack(itemIn, 1, WoodTypes.obsidian.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.emerald.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.lapis.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.bronze.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.coal.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.glowstone.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.adamantium.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.silk.getMeta()));
-        list.add(new ItemStack(itemIn, 1, WoodTypes.redstone.getMeta()));
+        for (WoodTypes type : WoodTypes.values()){
+            list.add(new ItemStack(itemIn, 1, type.getMeta()));
+        }
     }
 
     public int getMetaFromState(IBlockState state)
@@ -89,8 +88,18 @@ public abstract class BlockWoodSlabFT extends BlockSlabFergo
         return this.isDouble() ? new BlockState(this, VARIANT) : new BlockState(this, HALF, VARIANT);
     }
 
+    public String[] getSubNames() {
+        return subNames;
+    }
+
     @Override
     public int damageDropped(IBlockState state) {
         return ((WoodTypes)state.getValue(VARIANT)).getMeta();
+    }
+    
+    public void registerModel(){
+        for (int i = 0; i < getSubNames().length; i++) {
+            RegisterHelper.registerModel(this, i, NameHelper.getModString(0) + subNames[i]);
+        }
     }
 }

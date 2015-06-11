@@ -4,23 +4,25 @@ import net.minecraft.util.IStringSerializable;
 
 public enum WoodTypes implements IStringSerializable
 {
-    obsidian(0),
-    emerald(1),
-    lapis(2),
-    bronze(3),
-    coal(4),
-    glowstone(5),
-    adamantium(6),
-    silk(7),
-    redstone(8);
+    obsidian(0, "Obsidian"),
+    emerald(1, "Emerald"),
+    lapis(2, "Lapis"),
+    bronze(3, "Bronze"),
+    coal(4, "Coal"),
+    glowstone(5, "Glowstone"),
+    adamantium(6, "Adamantium"),
+    silk(7, "Silk"),
+    redstone(8, "Redstone");
 
     private static final WoodTypes[] VALUES = new WoodTypes[values().length];
 
     private final int meta;
+    private final String name;
 
-    private WoodTypes(int meta)
+    private WoodTypes(int meta, String name)
     {
         this.meta = meta;
+        this.name = name;
     }
 
     public int getMeta() {
@@ -39,6 +41,6 @@ public enum WoodTypes implements IStringSerializable
 
     public String getName()
     {
-        return this.name();
+        return this.name;
     }
 }

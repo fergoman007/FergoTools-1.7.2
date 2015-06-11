@@ -2,6 +2,8 @@ package io.github.fergoman123.fergotools.common.blocks.wood;
 
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import io.github.fergoman123.fergotools.world.gen.WorldGenTreesFT;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.properties.PropertyEnum;
@@ -24,15 +26,16 @@ import java.util.Random;
 public class BlockSaplingFT extends BlockBush implements IGrowable {
     public static final PropertyEnum TYPE = PropertyEnum.create("type", WoodTypes.class);
     public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
-    private static final String __OBFID = "CL_00000305";
+    private String[] subNames;
 
-    public BlockSaplingFT(String name)
+    public BlockSaplingFT(String[] subNames, String name)
     {
         this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, WoodTypes.obsidian).withProperty(STAGE, 0));
         float f = 0.4F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
         this.setCreativeTab(CreativeTabs.tabDecorations);
         this.setUnlocalizedName(name);
+        this.subNames = subNames;
     }
 
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
@@ -131,15 +134,11 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
      * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
      */
     @SideOnly(Side.CLIENT)
+    @SuppressWarnings("unchecked")
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-        WoodTypes[] aenumtype = WoodTypes.values();
-        int i = aenumtype.length;
-
-        for (int j = 0; j < i; ++j)
-        {
-            WoodTypes enumtype = aenumtype[j];
-            list.add(new ItemStack(itemIn, 1, enumtype.getMeta()));
+        for (int i = 0; i < getSubNames().length; i++) {
+            list.add(new ItemStack(itemIn, 1, i));
         }
     }
 
@@ -263,6 +262,20 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             {
                 ;
             }
+        }
+    }
+
+    public String getUnlocalizedName(){
+        return NameHelper.formatBlockName(NameHelper.getModString(0), NameHelper.getUnlocalizedName(super.getUnlocalizedName()));
+    }
+
+    public String[] getSubNames() {
+        return subNames;
+    }
+
+    public void registerModels(){
+        for (int i = 0; i < getSubNames().length; i++) {
+            RegisterHelper.registerModel(this, i, getUnlocalizedName().substring(5));
         }
     }
 }

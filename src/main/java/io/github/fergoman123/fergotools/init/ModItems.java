@@ -7,134 +7,135 @@ import io.github.fergoman123.fergotools.util.item.AM;
 import io.github.fergoman123.fergotools.util.item.TM;
 import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems
 {
-    public static Item ingotObsidian;
-    public static Item gemEmerald;
-    public static Item gemLapis;
-    public static Item ingotBronze;
-    public static Item ingotCoal;
-    public static Item ingotGlowstone;
-    public static Item ingotAdamantium;
-    public static Item gemSilk;
-    public static Item gemRedstone;
-    public static Item gemExp;
-    public static Item gemExp2;
-    public static Item gemExp3;
+    public static ItemFT ingotObsidian;
+    public static ItemFT gemEmerald;
+    public static ItemFT gemLapis;
+    public static ItemFT ingotBronze;
+    public static ItemFT ingotCoal;
+    public static ItemFT ingotGlowstone;
+    public static ItemFT ingotAdamantium;
+    public static ItemFT gemSilk;
+    public static ItemFT gemRedstone;
+    public static ItemFT gemExp;
+    public static ItemFT gemExp2;
+    public static ItemFT gemExp3;
 
-    public static Item staffExp;
-    public static Item staffExp2;
-    public static Item staffExp3;
+    public static ItemStaffExpBase staffExp;
+    public static ItemStaffExpBase staffExp2;
+    public static ItemStaffExpBase staffExp3;
 
-    public static Item shardExp;
-    public static Item expCollector;
+    public static ItemFT shardExp;
+    public static ItemFT expCollector;
 
     public static ItemPickaxeFT quartzPickaxe;
-    public static Item quartzShovel;
-    public static Item quartzAxe;
-    public static Item quartzHoe;
-    public static Item quartzSword;
+    public static ItemShovelFT quartzShovel;
+    public static ItemAxeFT quartzAxe;
+    public static ItemHoeFT quartzHoe;
+    public static ItemSwordFT quartzSword;
 
     public static ItemPickaxeFT obsidianPickaxe;
-    public static Item obsidianShovel;
-    public static Item obsidianAxe;
-    public static Item obsidianHoe;
-    public static Item obsidianSword;
+    public static ItemShovelFT obsidianShovel;
+    public static ItemAxeFT obsidianAxe;
+    public static ItemHoeFT obsidianHoe;
+    public static ItemSwordFT obsidianSword;
 
     public static ItemPickaxeFT emeraldPickaxe;
-    public static Item emeraldShovel;
-    public static Item emeraldAxe;
-    public static Item emeraldHoe;
-    public static Item emeraldSword;
+    public static ItemShovelFT emeraldShovel;
+    public static ItemAxeFT emeraldAxe;
+    public static ItemHoeFT emeraldHoe;
+    public static ItemSwordFT emeraldSword;
 
     public static ItemPickaxeFT lapisPickaxe;
-    public static Item lapisShovel;
-    public static Item lapisAxe;
-    public static Item lapisHoe;
-    public static Item lapisSword;
+    public static ItemShovelFT lapisShovel;
+    public static ItemAxeFT lapisAxe;
+    public static ItemHoeFT lapisHoe;
+    public static ItemSwordFT lapisSword;
 
     public static ItemPickaxeFT bronzePickaxe;
-    public static Item bronzeShovel;
-    public static Item bronzeAxe;
-    public static Item bronzeHoe;
-    public static Item bronzeSword;
+    public static ItemShovelFT bronzeShovel;
+    public static ItemAxeFT bronzeAxe;
+    public static ItemHoeFT bronzeHoe;
+    public static ItemSwordFT bronzeSword;
 
     public static ItemPickaxeFT coalPickaxe;
-    public static Item coalShovel;
-    public static Item coalAxe;
-    public static Item coalHoe;
-    public static Item coalSword;
+    public static ItemShovelFT coalShovel;
+    public static ItemAxeFT coalAxe;
+    public static ItemHoeFT coalHoe;
+    public static ItemSwordFT coalSword;
 
     public static ItemPickaxeFT glowstonePickaxe;
-    public static Item glowstoneShovel;
-    public static Item glowstoneAxe;
-    public static Item glowstoneHoe;
-    public static Item glowstoneSword;
+    public static ItemShovelFT glowstoneShovel;
+    public static ItemAxeFT glowstoneAxe;
+    public static ItemHoeFT glowstoneHoe;
+    public static ItemSwordFT glowstoneSword;
 
     public static ItemPickaxeFT adamantiumPickaxe;
-    public static Item adamantiumShovel;
-    public static Item adamantiumAxe;
-    public static Item adamantiumHoe;
-    public static Item adamantiumSword;
+    public static ItemShovelFT adamantiumShovel;
+    public static ItemAxeFT adamantiumAxe;
+    public static ItemHoeFT adamantiumHoe;
+    public static ItemSwordFT adamantiumSword;
 
     public static ItemPickaxeFT silkPickaxe;
-    public static Item silkShovel;
-    public static Item silkAxe;
-    public static Item silkHoe;
-    public static Item silkSword;
+    public static ItemShovelFT silkShovel;
+    public static ItemAxeFT silkAxe;
+    public static ItemHoeFT silkHoe;
+    public static ItemSwordFT silkSword;
 
     public static ItemPickaxeFT redstonePickaxe;
-    public static Item redstoneShovel;
-    public static Item redstoneAxe;
-    public static Item redstoneHoe;
-    public static Item redstoneSword;
+    public static ItemShovelFT redstoneShovel;
+    public static ItemAxeFT redstoneAxe;
+    public static ItemHoeFT redstoneHoe;
+    public static ItemSwordFT redstoneSword;
 
-    public static Item quartzHelmet;
-    public static Item quartzChestplate;
-    public static Item quartzLeggings;
-    public static Item quartzBoots;
+    public static ItemArmorFT quartzHelmet;
+    public static ItemArmorFT quartzChestplate;
+    public static ItemArmorFT quartzLeggings;
+    public static ItemArmorFT quartzBoots;
 
-    public static Item obsidianHelmet;
-    public static Item obsidianChestplate;
-    public static Item obsidianLeggings;
-    public static Item obsidianBoots;
+    public static ItemArmorFT obsidianHelmet;
+    public static ItemArmorFT obsidianChestplate;
+    public static ItemArmorFT obsidianLeggings;
+    public static ItemArmorFT obsidianBoots;
 
-    public static Item emeraldHelmet;
-    public static Item emeraldChestplate;
-    public static Item emeraldLeggings;
-    public static Item emeraldBoots;
+    public static ItemArmorFT emeraldHelmet;
+    public static ItemArmorFT emeraldChestplate;
+    public static ItemArmorFT emeraldLeggings;
+    public static ItemArmorFT emeraldBoots;
 
-    public static Item lapisHelmet;
-    public static Item lapisChestplate;
-    public static Item lapisLeggings;
-    public static Item lapisBoots;
+    public static ItemArmorFT lapisHelmet;
+    public static ItemArmorFT lapisChestplate;
+    public static ItemArmorFT lapisLeggings;
+    public static ItemArmorFT lapisBoots;
 
-    public static Item bronzeHelmet;
-    public static Item bronzeChestplate;
-    public static Item bronzeLeggings;
-    public static Item bronzeBoots;
+    public static ItemArmorFT bronzeHelmet;
+    public static ItemArmorFT bronzeChestplate;
+    public static ItemArmorFT bronzeLeggings;
+    public static ItemArmorFT bronzeBoots;
 
-    public static Item coalHelmet;
-    public static Item coalChestplate;
-    public static Item coalLeggings;
-    public static Item coalBoots;
+    public static ItemArmorFT coalHelmet;
+    public static ItemArmorFT coalChestplate;
+    public static ItemArmorFT coalLeggings;
+    public static ItemArmorFT coalBoots;
 
-    public static Item glowstoneHelmet;
-    public static Item glowstoneChestplate;
-    public static Item glowstoneLeggings;
-    public static Item glowstoneBoots;
+    public static ItemArmorFT glowstoneHelmet;
+    public static ItemArmorFT glowstoneChestplate;
+    public static ItemArmorFT glowstoneLeggings;
+    public static ItemArmorFT glowstoneBoots;
 
-    public static Item adamantiumHelmet;
-    public static Item adamantiumChestplate;
-    public static Item adamantiumLeggings;
-    public static Item adamantiumBoots;
+    public static ItemArmorFT adamantiumHelmet;
+    public static ItemArmorFT adamantiumChestplate;
+    public static ItemArmorFT adamantiumLeggings;
+    public static ItemArmorFT adamantiumBoots;
 
-    public static Item redstoneHelmet;
-    public static Item redstoneChestplate;
-    public static Item redstoneLeggings;
-    public static Item redstoneBoots;
+    public static ItemArmorFT redstoneHelmet;
+    public static ItemArmorFT redstoneChestplate;
+    public static ItemArmorFT redstoneLeggings;
+    public static ItemArmorFT redstoneBoots;
 
     public static ItemBowFT bowQuartz;
     public static ItemBowFT bowObsidian;
