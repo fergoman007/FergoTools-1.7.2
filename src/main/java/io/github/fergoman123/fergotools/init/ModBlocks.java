@@ -7,6 +7,7 @@ import io.github.fergoman123.fergotools.common.blocks.Ores.*;
 import io.github.fergoman123.fergotools.common.blocks.wood.*;
 import io.github.fergoman123.fergotools.common.itemblock.*;
 import io.github.fergoman123.fergotools.reference.BlockNames;
+import io.github.fergoman123.fergoutil.block.BlockContainerFergo;
 import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
 import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
 import net.minecraft.block.Block;
@@ -47,6 +48,8 @@ public class ModBlocks {
     public static BlockFurnaceFT silkFurnaceActive;
     public static BlockFurnaceFT redstoneFurnaceActive;
     public static BlockFurnaceFT maceratorActive;
+
+    public static BlockContainerFergo netherrackFurnace;
 
     public static BlockLogFT logFT;
     public static BlockMultiFergo plankFT;
@@ -121,7 +124,7 @@ public class ModBlocks {
         redstoneFurnaceActive = new BlockRedstoneFurnace(true, BlockNames.redstoneFurnaceActive);
         maceratorActive = new BlockMacerator(true, BlockNames.maceratorActive);
 
-        logFT = new BlockWoodLogFT(BlockNames.logFT);
+//        logFT = new BlockWoodLogFT(BlockNames.logFT);
         plankFT = new BlockPlankFT(BlockNames.plankFT);
 
         stairObsidian = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.obsidian), BlockNames.stairs[0]);
@@ -195,7 +198,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(redstoneFurnaceActive, BlockNames.redstoneFurnaceActive);
         GameRegistry.registerBlock(maceratorActive, BlockNames.maceratorActive);
 
-        GameRegistry.registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logFT);
+//        GameRegistry.registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logFT);
         registerBlock(plankFT, BlockNames.plankFT, true);
 
         GameRegistry.registerBlock(stairObsidian, BlockNames.stairObsidian);

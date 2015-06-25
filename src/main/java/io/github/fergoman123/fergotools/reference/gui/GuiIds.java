@@ -25,13 +25,14 @@ public class GuiIds
     public static final int silkFurnace = 8;
     public static final int redstoneFurnace = 9;
     public static final int macerator = 10;
-    public static final int obsidianWorkbench = 11;
-    public static final int emeraldWorkbench = 12;
-    public static final int lapisWorkbench = 13;
-    public static final int bronzeWorkbench = 14;
-    public static final int coalWorkbench = 15;
-    public static final int glowstoneWorkbench = 16;
-    public static final int adamantiumWorkbench = 17;
-    public static final int silkWorkbench = 18;
-    public static final int redstoneWorkbench = 19;
+    public static final int netherrackFurnace = 11;
+    public static final int obsidianWorkbench = 12;
+    public static final int emeraldWorkbench = 13;
+    public static final int lapisWorkbench = 14;
+    public static final int bronzeWorkbench = 15;
+    public static final int coalWorkbench = 16;
+    public static final int glowstoneWorkbench = 17;
+    public static final int adamantiumWorkbench = 18;
+    public static final int silkWorkbench = 19;
+    public static final int redstoneWorkbench = 20;
 }
