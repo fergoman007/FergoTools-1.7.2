@@ -1,16 +1,19 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
+import java.util.Random;
+
 import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileLapisFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import io.github.fergoman123.fergotools.reference.GuiIds;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
@@ -20,11 +23,6 @@ import net.minecraft.world.World;
 public class BlockLapisFurnace extends BlockFurnaceFT {
     public BlockLapisFurnace(boolean isActive, String name) {
         super(Material.iron, isActive, name);
-    }
-
-    @Override
-    public Block getBlockDropped() {
-        return ModBlocks.lapisFurnaceIdle;
     }
 
     @Override
@@ -64,12 +62,7 @@ public class BlockLapisFurnace extends BlockFurnaceFT {
 
         super.breakBlock(worldIn, pos, state);
     }
-
-    @Override
-    public Block getBlock() {
-        return ModBlocks.lapisFurnaceIdle;
-    }
-
+    
     public TileEntity createNewTileEntity(World world, int meta){
         return new TileLapisFurnace();
     }
@@ -98,4 +91,16 @@ public class BlockLapisFurnace extends BlockFurnaceFT {
             world.setTileEntity(pos, entity);
         }
     }
+
+	@Override
+	public Item getItemDropped(IBlockState state, Random random, int fortune) {
+		return Item.getItemFromBlock(ModBlocks.lapisFurnaceIdle);
+	}
+
+	@Override
+	public Item getItem(World world, BlockPos pos) {
+		return Item.getItemFromBlock(ModBlocks.lapisFurnaceIdle);
+	}
+    
+    
 }

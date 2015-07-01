@@ -4,7 +4,7 @@ import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileBronzeFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import io.github.fergoman123.fergotools.reference.GuiIds;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

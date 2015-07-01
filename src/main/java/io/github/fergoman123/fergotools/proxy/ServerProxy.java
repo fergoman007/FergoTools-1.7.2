@@ -9,6 +9,8 @@
 
 package io.github.fergoman123.fergotools.proxy;
 
+import io.github.fergoman123.fergoutil.proxy.CommonProxy;
+
 public class ServerProxy extends CommonProxy{
 
     @Override
@@ -19,11 +21,6 @@ public class ServerProxy extends CommonProxy{
     @Override
     public void registerRenderers() {
         //NOOP
-    }
-
-    @Override
-    public void registerModels() {
-
     }
 
 

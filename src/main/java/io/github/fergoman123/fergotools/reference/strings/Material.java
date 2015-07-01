@@ -7,7 +7,7 @@
   * http://www.gnu.org/licenses/gpl-3.0.html
   */
 
-package io.github.fergoman123.fergotools.reference.gui.strings;
+package io.github.fergoman123.fergotools.reference.strings;
 
 /**
  * a list of strings for tool and armor materials

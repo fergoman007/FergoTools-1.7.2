@@ -12,6 +12,7 @@ package io.github.fergoman123.fergotools.event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import io.github.fergoman123.fergotools.FergoTools;
+import io.github.fergoman123.fergotools.log.LoggerFT;
 
 public class OnPlayerLoggedInEvent
 {
@@ -20,7 +21,7 @@ public class OnPlayerLoggedInEvent
     @SubscribeEvent
     public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent evt)
     {
-        FergoTools.getLogger().info(evt.player.getDisplayName() + " has Logged In!!");
-        FergoTools.getLogger().info("FergoTools Successfully Added Into Game");
+    	LoggerFT.info(evt.player.getDisplayName() + " has Logged In!!");
+    	LoggerFT.info("FergoTools Successfully Added Into Game");
     }
 }

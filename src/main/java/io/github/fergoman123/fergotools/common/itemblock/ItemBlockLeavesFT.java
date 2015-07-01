@@ -7,6 +7,6 @@ import net.minecraft.block.Block;
 public class ItemBlockLeavesFT extends ItemBlockVariants
 {
     public ItemBlockLeavesFT(Block block) {
-        super(block, BlockNames.leaves);
+        super(block);
     }
 }

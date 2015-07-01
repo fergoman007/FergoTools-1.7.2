@@ -30,7 +30,7 @@ public class BlockLeavesImpl extends BlockLeavesFT {
 
     public BlockLeavesImpl(String name) {
         super(name);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(CHECK_DECAY, true).withProperty(DECAYABLE, true));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(checkDecay, true).withProperty(decayable, true));
     }
 
     @SideOnly(Side.CLIENT)
@@ -48,14 +48,14 @@ public class BlockLeavesImpl extends BlockLeavesFT {
     }
 
     @Override
-    protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance) {
+	public void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance) {
         if (worldIn.rand.nextInt(chance) == 0) {
             spawnAsEntity(worldIn, pos, new ItemStack(Items.apple, 1, 0));
         }
     }
 
     @Override
-    protected int getSaplingDropChance(IBlockState state) {
+	public int getSaplingDropChance(IBlockState state) {
         return 20;
     }
 
@@ -68,7 +68,7 @@ public class BlockLeavesImpl extends BlockLeavesFT {
 
     @Override
     protected BlockState createBlockState() {
-        return new BlockState(this, VARIANT, CHECK_DECAY, DECAYABLE);
+        return new BlockState(this, VARIANT, checkDecay, decayable);
     }
 
     @Override
@@ -78,7 +78,7 @@ public class BlockLeavesImpl extends BlockLeavesFT {
 
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, this.getWoodType(meta)).withProperty(DECAYABLE, (meta & 4) == 0).withProperty(CHECK_DECAY, (meta & 8) > 0);
+        return this.getDefaultState().withProperty(VARIANT, this.getWoodType(meta)).withProperty(decayable, (meta & 4) == 0).withProperty(decayable, (meta & 8) > 0);
     }
 
     public int getMetaFromState(IBlockState state)
@@ -86,12 +86,12 @@ public class BlockLeavesImpl extends BlockLeavesFT {
         byte b0 = 0;
         int i = b0 | ((WoodTypes)state.getValue(VARIANT)).getMeta();
 
-        if (!(Boolean)state.getValue(DECAYABLE))
+        if (!(Boolean)state.getValue(decayable))
         {
             i |= 4;
         }
 
-        if ((Boolean)state.getValue(CHECK_DECAY))
+        if ((Boolean)state.getValue(decayable))
         {
             i |= 8;
         }
@@ -127,4 +127,10 @@ public class BlockLeavesImpl extends BlockLeavesFT {
         IBlockState state = world.getBlockState(pos);
         return new ArrayList(Arrays.asList(new ItemStack(this, 1, ((WoodTypes) state.getValue(VARIANT)).getMeta())));
     }
+
+	@Override
+	public Block getBlock() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

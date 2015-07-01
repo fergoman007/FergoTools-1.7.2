@@ -11,7 +11,7 @@ package io.github.fergoman123.fergotools.client;
 
 
 import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.reference.gui.ModInfo;
+import io.github.fergoman123.fergotools.reference.ModInfo;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;

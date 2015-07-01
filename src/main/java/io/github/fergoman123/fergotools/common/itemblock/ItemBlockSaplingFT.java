@@ -6,6 +6,6 @@ import net.minecraft.block.Block;
 
 public class ItemBlockSaplingFT extends ItemBlockVariants{
     public ItemBlockSaplingFT(Block block) {
-        super(block, BlockNames.saplings);
+        super(block);
     }
 }

@@ -7,7 +7,7 @@
   * http://www.gnu.org/licenses/gpl-3.0.html
   */
 
-package io.github.fergoman123.fergotools.reference.gui;
+package io.github.fergoman123.fergotools.reference;
 
 /**
  * list of gui id's

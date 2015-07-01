@@ -3,7 +3,7 @@ package io.github.fergoman123.fergotools.common.tileentities;
 import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
 import io.github.fergoman123.fergotools.common.blocks.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.ContainerQuartzFurnace;
-import io.github.fergoman123.fergotools.reference.gui.Locale;
+import io.github.fergoman123.fergotools.reference.Locale;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;

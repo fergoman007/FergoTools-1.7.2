@@ -93,11 +93,4 @@ public class BlockWoodLogFT extends BlockLogFT
     public int damageDropped(IBlockState state) {
         return ((WoodTypes)state.getValue(VARIANT)).getMeta();
     }
-
-    @Override
-    public void registerModels() {
-        for (int i = 0; i < subNames.length; i++) {
-            RegisterHelper.registerModel(this, i, NameHelper.getModString(0) + getSubNames()[i]);
-        }
-    }
 }

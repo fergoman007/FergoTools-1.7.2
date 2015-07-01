@@ -137,8 +137,8 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
     @SuppressWarnings("unchecked")
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-        for (int i = 0; i < getSubNames().length; i++) {
-            list.add(new ItemStack(itemIn, 1, i));
+        for(int i = 0; i < WoodTypes.values().length; i++){
+        	list.add(new ItemStack(itemIn, i, WoodTypes.values()[i].getMeta()));
         }
     }
 
@@ -197,7 +197,7 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var6)
             {
-                ;
+                var6.printStackTrace();
             }
 
             try
@@ -206,7 +206,7 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var5)
             {
-                ;
+                var5.printStackTrace();
             }
 
             try
@@ -215,7 +215,7 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var4)
             {
-                ;
+                var4.printStackTrace();
             }
 
             try
@@ -224,7 +224,7 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var3)
             {
-                ;
+                var3.printStackTrace();
             }
 
             try
@@ -233,7 +233,7 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var2)
             {
-                ;
+                var2.printStackTrace();
             }
 
             try
@@ -242,7 +242,7 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var1)
             {
-                ;
+                var1.printStackTrace();
             }
 
             try
@@ -251,7 +251,7 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var1)
             {
-                ;
+                var1.printStackTrace();
             }
 
             try
@@ -260,22 +260,12 @@ public class BlockSaplingFT extends BlockBush implements IGrowable {
             }
             catch (NoSuchFieldError var1)
             {
-                ;
+                var1.printStackTrace();
             }
         }
     }
-
+    
     public String getUnlocalizedName(){
-        return NameHelper.formatBlockName(NameHelper.getModString(0), NameHelper.getUnlocalizedName(super.getUnlocalizedName()));
-    }
-
-    public String[] getSubNames() {
-        return subNames;
-    }
-
-    public void registerModels(){
-        for (int i = 0; i < getSubNames().length; i++) {
-            RegisterHelper.registerModel(this, i, getUnlocalizedName().substring(5));
-        }
+    	return NameHelper.formatBlockName(0, NameHelper.getUnlocalizedName(super.getUnlocalizedName()));
     }
 }

@@ -6,6 +6,6 @@ import net.minecraft.block.Block;
 public class ItemBlockStorageFT extends ItemBlockVariants
 {
     public ItemBlockStorageFT(Block block) {
-        super();
+        super(block);
     }
 }

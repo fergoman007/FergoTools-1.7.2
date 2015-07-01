@@ -1,4 +1,4 @@
-package io.github.fergoman123.fergotools.reference.gui.ints;
+package io.github.fergoman123.fergotools.reference.ints;
 
 public class ToolInts
 {

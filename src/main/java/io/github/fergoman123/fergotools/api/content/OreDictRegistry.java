@@ -12,7 +12,7 @@ package io.github.fergoman123.fergotools.api.content;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.BlockNames;
-import io.github.fergoman123.fergotools.reference.gui.ItemNames;
+import io.github.fergoman123.fergotools.reference.ItemNames;
 import io.github.fergoman123.fergoutil.oredict.OreDictBlock;
 import io.github.fergoman123.fergoutil.oredict.OreDictItem;
 import io.github.fergoman123.fergoutil.oredict.OreDictItemStack;

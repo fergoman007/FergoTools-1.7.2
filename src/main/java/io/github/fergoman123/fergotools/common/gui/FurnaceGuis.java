@@ -2,7 +2,7 @@ package io.github.fergoman123.fergotools.common.gui;
 
 import io.github.fergoman123.fergotools.api.base.GuiFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.*;
-import io.github.fergoman123.fergotools.reference.gui.Textures;
+import io.github.fergoman123.fergotools.reference.Textures;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.*;

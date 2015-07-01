@@ -7,7 +7,7 @@
   * http://www.gnu.org/licenses/gpl-3.0.html
   */
 
-package io.github.fergoman123.fergotools.reference.gui;
+package io.github.fergoman123.fergotools.reference;
 
 import java.util.Arrays;
 import java.util.List;

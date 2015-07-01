@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.common.items;
 
 import io.github.fergoman123.fergotools.api.base.ItemMultiFT;
-import io.github.fergoman123.fergotools.reference.gui.ItemNames;
+import io.github.fergoman123.fergotools.reference.ItemNames;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

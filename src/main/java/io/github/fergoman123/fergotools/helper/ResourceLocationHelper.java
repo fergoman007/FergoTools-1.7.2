@@ -9,7 +9,7 @@
 
 package io.github.fergoman123.fergotools.helper;
 
-import io.github.fergoman123.fergotools.reference.gui.Reference;
+import io.github.fergoman123.fergotools.reference.Reference;
 import net.minecraft.util.ResourceLocation;
 
 public class ResourceLocationHelper {

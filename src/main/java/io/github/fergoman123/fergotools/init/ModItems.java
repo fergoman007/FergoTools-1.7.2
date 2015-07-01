@@ -2,7 +2,7 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.api.base.*;
 import io.github.fergoman123.fergotools.common.items.*;
-import io.github.fergoman123.fergotools.reference.gui.ItemNames;
+import io.github.fergoman123.fergotools.reference.ItemNames;
 import io.github.fergoman123.fergotools.util.item.AM;
 import io.github.fergoman123.fergotools.util.item.TM;
 import io.github.fergoman123.fergoutil.item.ArmorType;

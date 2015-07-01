@@ -10,7 +10,6 @@
 package io.github.fergoman123.fergotools.api.base;
 
 import io.github.fergoman123.fergotools.common.slot.SlotMacerator;
-import io.github.fergoman123.fergotools.common.slot.SlotMaceratorOutput;
 import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import io.github.fergoman123.fergoutil.gui.ContainerFurnaceFergo;
 import net.minecraft.entity.Entity;
@@ -45,10 +44,6 @@ public class ContainerFurnaceFT extends ContainerFurnaceFergo
     public Slot addOutputSlot(EntityPlayer player, IInventory inventory, int slotIndex, int xPos, int yPos)
     {
         return this.addSlotToContainer(new SlotFurnaceOutput(player, inventory, slotIndex, xPos, yPos));
-    }
-
-    public Slot addMaceratorOutputSlot(EntityPlayer player, IInventory inventory, int slotIndex, int xPos, int yPos){
-        return this.addSlotToContainer(new SlotMaceratorOutput(player, inventory, slotIndex, xPos, yPos));
     }
 
     public Slot addFurnaceFuelSlot(IInventory inventory, int slotIndex, int xPos, int yPos)

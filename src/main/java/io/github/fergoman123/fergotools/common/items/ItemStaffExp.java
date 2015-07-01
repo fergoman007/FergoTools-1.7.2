@@ -2,7 +2,7 @@ package io.github.fergoman123.fergotools.common.items;
 
 import io.github.fergoman123.fergotools.api.base.ItemStaffExpBase;
 import io.github.fergoman123.fergotools.helper.StaffExpHelper;
-import io.github.fergoman123.fergotools.reference.gui.ItemNames;
+import io.github.fergoman123.fergotools.reference.ItemNames;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;

@@ -14,7 +14,7 @@ import io.github.fergoman123.fergotools.common.tileentities.TileNetherrackFurnac
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.BlockNames;
-import io.github.fergoman123.fergotools.reference.gui.GuiIds;
+import io.github.fergoman123.fergotools.reference.GuiIds;
 import io.github.fergoman123.fergoutil.block.BlockContainerFergo;
 import io.github.fergoman123.fergoutil.item.ItemBlockFergo;
 import io.github.fergoman123.fergoutil.item.ItemBlockFergo.ItemBlockNormalFergo;
@@ -252,10 +252,5 @@ public class BlockNetherrackFurnace extends BlockContainerFergo
                 var1.printStackTrace();
             }
         }
-    }
-
-    @Override
-    public Class<? extends ItemBlockFergo> getItemBlock() {
-        return ItemBlockNormalFergo.class;
     }
 }

@@ -33,4 +33,11 @@ public class GuiNetherrackFurnace extends GuiContainer {
         this.fontRendererObj.drawString(StatCollector.translateToLocal(s), this.xSize / 2 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
         this.fontRendererObj.drawString(this.invPlayer.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
     }
+
+	@Override
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
+		
+	}
+	
+	
 }

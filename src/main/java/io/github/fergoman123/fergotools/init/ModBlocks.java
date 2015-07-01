@@ -199,7 +199,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(maceratorActive, BlockNames.maceratorActive);
 
 //        GameRegistry.registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logFT);
-        registerBlock(plankFT, BlockNames.plankFT, true);
+        GameRegistry.registerBlock(plankFT, ItemBlockVariants.class, BlockNames.plankFT);
 
         GameRegistry.registerBlock(stairObsidian, BlockNames.stairObsidian);
         GameRegistry.registerBlock(stairEmerald, BlockNames.stairEmerald);

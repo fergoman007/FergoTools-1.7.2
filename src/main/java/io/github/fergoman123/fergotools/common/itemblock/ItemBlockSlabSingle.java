@@ -6,6 +6,6 @@ import net.minecraft.block.Block;
 
 public class ItemBlockSlabSingle extends ItemBlockVariants {
     public ItemBlockSlabSingle(Block block) {
-        super(block, BlockNames.slabSingle);
+        super(block);
     }
 }
