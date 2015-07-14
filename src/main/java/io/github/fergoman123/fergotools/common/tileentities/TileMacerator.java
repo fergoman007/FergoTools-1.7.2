@@ -4,7 +4,6 @@ import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
 import io.github.fergoman123.fergotools.common.blocks.BlockMacerator;
 import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.ContainerMacerator;
 import io.github.fergoman123.fergotools.crafting.MaceratorRecipes;
-import io.github.fergoman123.fergotools.reference.Locale;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -16,7 +15,7 @@ import net.minecraft.util.MathHelper;
 public class TileMacerator extends TileFurnaceFT
 {
     @Override
-    public String getCommandSenderName() {
+    public String getName() {
         return Locale.containerMacerator;
     }
 

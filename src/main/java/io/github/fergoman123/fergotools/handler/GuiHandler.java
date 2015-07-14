@@ -16,8 +16,6 @@ import io.github.fergoman123.fergotools.common.gui.FurnaceGuis.*;
 import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.*;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
-import io.github.fergoman123.fergotools.reference.Locale;
-import io.github.fergoman123.fergotools.reference.Textures;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.tileentity.TileEntity;

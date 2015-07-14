@@ -1,8 +1,8 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
-import io.github.fergoman123.fergotools.api.base.BlockBases.BlockOreFT;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.BlockNames;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 
@@ -10,6 +10,12 @@ import java.util.Random;
 
 public class Ores
 {
+    public static class BlockOreFT extends BlockFT{
+        public BlockOreFT(String name) {
+            super(Material.rock, 2.5f, 5f, name);
+        }
+    }
+
     public static final class BlockOreExperience extends BlockOreFT
     {
         public BlockOreExperience() {

@@ -105,7 +105,7 @@ public class TileNetherrackFurnace extends TileEntityLockable implements IUpdate
     }
 
     @Override
-    public String getCommandSenderName() {
+    public String getName() {
         return "fergotools.container.netherrackFurnace";
     }
 

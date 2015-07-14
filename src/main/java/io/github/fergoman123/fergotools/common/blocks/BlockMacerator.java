@@ -15,6 +15,7 @@ import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileMacerator;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergotools.log.LoggerFT;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -45,7 +46,7 @@ public class BlockMacerator extends BlockFurnaceFT {
             if (macerator != null)
             {
                 FTHelper.openGui(playerIn, GuiIds.macerator, worldIn, pos);
-                FTHelper.logInfo("Opened Macerator");
+                LoggerFT.info("Opened Macerator");
                 return true;
             }
             return true;

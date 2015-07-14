@@ -1,11 +1,22 @@
 package io.github.fergoman123.fergotools.api.base;
 
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergoutil.item.ItemMultiFergo;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
-public abstract class ItemMultiFT extends ItemMultiFergo
+public class ItemMultiFT extends Item
 {
+	private String[] names;
+	
     public ItemMultiFT(String[] names, String name) {
-        super(0, FergoTools.tabFergoTools, names, name);
+        super();
+        this.setCreativeTab(FergoTools.tabFergoTools);
+        this.names = names;
+        this.setUnlocalizedName("ft." + name);
+        this.setHasSubtypes(true);
+    }
+    
+    public String getUnlocalizedName(ItemStack stack){
+    	return super.getUnlocalizedName() + "." + this.names[stack.getItemDamage()];
     }
 }

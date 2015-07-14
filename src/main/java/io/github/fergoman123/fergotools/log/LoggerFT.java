@@ -5,8 +5,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import io.github.fergoman123.fergotools.reference.ModInfo;
-import io.github.fergoman123.fergoutil.log.LoggerFergo;
-
 public class LoggerFT
 {
     private static Logger log = null;

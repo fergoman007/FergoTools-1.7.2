@@ -2,6 +2,11 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.api.base.*;
 import io.github.fergoman123.fergotools.common.items.*;
+import io.github.fergoman123.fergotools.common.items.bow.ItemBowBronze;
+import io.github.fergoman123.fergotools.common.items.bow.ItemBowCoal;
+import io.github.fergoman123.fergotools.common.items.bow.ItemBowGlowstone;
+import io.github.fergoman123.fergotools.common.items.pickaxe.ItemQuartzPickaxe;
+import io.github.fergoman123.fergotools.common.items.shovel.ItemQuartzShovel;
 import io.github.fergoman123.fergotools.reference.ItemNames;
 import io.github.fergoman123.fergotools.util.item.AM;
 import io.github.fergoman123.fergotools.util.item.TM;
@@ -172,19 +177,19 @@ public class ModItems
         ingotAdamantium = new ItemFT(ItemNames.ingotAdamantium);
         gemSilk = new ItemFT(ItemNames.gemSilk);
         gemRedstone = new ItemFT(ItemNames.gemRedstone);
-        gemExp = new ItemFT(ItemNames.gemExp);
-        gemExp2 = new ItemFT(ItemNames.gemExp2);
-        gemExp3 = new ItemFT(ItemNames.gemExp3);
+        gemExp = new ItemGemExp();
+        gemExp2 = new ItemGemExp2();
+        gemExp3 = new ItemGemExp3();
 
         staffExp = new ItemStaffExp();
         staffExp2 = new ItemStaffExp2();
         staffExp3 = new ItemStaffExp3();
 
         shardExp = new ItemExpShard();
-        expCollector = new ItemFT(ItemNames.expCollector);
+        expCollector = new ItemExpCollector();
 
-        quartzPickaxe = new ItemPickaxeFT(TM.quartz, ItemNames.quartzPickaxe);
-        quartzShovel = new ItemShovelFT(TM.quartz, ItemNames.quartzShovel);
+        quartzPickaxe = new ItemQuartzPickaxe();
+        quartzShovel = new ItemQuartzShovel();
         quartzAxe = new ItemAxeFT(TM.quartz, ItemNames.quartzAxe);
         quartzHoe = new ItemHoeFT(TM.quartz, ItemNames.quartzHoe);
         quartzSword = new ItemSwordFT(TM.quartz, ItemNames.quartzSword);
@@ -288,16 +293,16 @@ public class ModItems
         redstoneLeggings = new ItemArmorFT(AM.redstoneArmor, ArmorType.leggings, ItemNames.redstoneLeggings);
         redstoneBoots = new ItemArmorFT(AM.redstoneArmor, ArmorType.boots, ItemNames.redstoneBoots);
 
-        bowQuartz = new ItemBowFT(TM.quartz, ItemNames.bowQuartz[0]);
-        bowObsidian = new ItemBowFT(TM.obsidian, ItemNames.bowObsidian[0]);
-        bowEmerald = new ItemBowFT(TM.emerald, ItemNames.bowEmerald[0]);
-        bowLapis = new ItemBowFT(TM.lapis, ItemNames.bowLapis[0]);
-        bowBronze = new ItemBowFT(TM.bronze, ItemNames.bowBronze[0]);
-        bowCoal = new ItemBowFT(TM.coal, ItemNames.bowCoal[0]);
-        bowGlowstone = new ItemBowFT(TM.glowstone, ItemNames.bowGlowstone[0]);
-        bowAdamantium = new ItemBowFT(TM.adamantium, ItemNames.bowAdamantium[0]);
-        bowSilk = new ItemBowFT(TM.silk, ItemNames.bowSilk[0]);
-        bowRedstone = new ItemBowFT(TM.redstone, ItemNames.bowRedstone[0]);
+        bowQuartz = new ItemBowFT(TM.quartz, ItemNames.bowQuartz);
+        bowObsidian = new ItemBowFT(TM.obsidian, ItemNames.bowObsidian);
+        bowEmerald = new ItemBowFT(TM.emerald, ItemNames.bowEmerald);
+        bowLapis = new ItemBowFT(TM.lapis, ItemNames.bowLapis);
+        bowBronze = new ItemBowBronze();
+        bowCoal = new ItemBowCoal();
+        bowGlowstone = new ItemBowGlowstone();
+        bowAdamantium = new ItemBowFT(TM.adamantium, ItemNames.bowAdamantium);
+        bowSilk = new ItemBowFT(TM.silk, ItemNames.bowSilk);
+        bowRedstone = new ItemBowFT(TM.redstone, ItemNames.bowRedstone);
 
         quartzShears = new ItemShearsFT(TM.quartz, ItemNames.quartzShears);
         obsidianShears = new ItemShearsFT(TM.obsidian, ItemNames.obsidianShears);

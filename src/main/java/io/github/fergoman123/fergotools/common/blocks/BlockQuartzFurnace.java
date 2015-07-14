@@ -9,6 +9,8 @@
 
 package io.github.fergoman123.fergotools.common.blocks;
 
+import java.util.Random;
+
 import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
@@ -20,6 +22,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
@@ -30,10 +33,9 @@ public class BlockQuartzFurnace extends BlockFurnaceFT {
     public BlockQuartzFurnace(boolean isActive, String name) {
         super(Material.rock, isActive, name);
     }
-
-    @Override
-    public Block getBlockDropped() {
-        return ModBlocks.quartzFurnaceIdle;
+    
+    public Item getItemDropped(IBlockState state, Random rand, int fortune){
+    	return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);
     }
 
     @Override
@@ -73,11 +75,6 @@ public class BlockQuartzFurnace extends BlockFurnaceFT {
     }
 
     @Override
-    public Block getBlock() {
-        return ModBlocks.quartzFurnaceIdle;
-    }
-
-    @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TileQuartzFurnace();
     }
@@ -102,4 +99,9 @@ public class BlockQuartzFurnace extends BlockFurnaceFT {
             world.setTileEntity(pos, tile);
         }
     }
+
+	@Override
+	public Item getItem(World world, BlockPos pos) {
+		return Item.getItemFromBlock(ModBlocks.quartzFurnaceIdle);
+	}
 }

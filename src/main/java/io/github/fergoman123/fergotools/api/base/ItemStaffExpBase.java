@@ -23,12 +23,12 @@ public class ItemStaffExpBase extends Item
 
     @Override
     public String getUnlocalizedName() {
-        return NameHelper.formatItemName(NameHelper.getModString(0), NameHelper.getUnlocalizedName(super.getUnlocalizedName()));
+        return NameHelper.formatItemName(0, NameHelper.getUnlocalizedName(super.getUnlocalizedName()));
     }
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return NameHelper.formatItemName(NameHelper.getModString(0), NameHelper.getUnlocalizedName(super.getUnlocalizedName(stack)));
+        return NameHelper.formatItemName(0, NameHelper.getUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 
     @Override
@@ -87,9 +87,5 @@ public class ItemStaffExpBase extends Item
 
     public int getType() {
         return type;
-    }
-
-    public void registerModel(){
-        RegisterHelper.registerModel(this, getUnlocalizedName().substring(5));
     }
 }

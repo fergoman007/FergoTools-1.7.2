@@ -15,24 +15,17 @@ public class ItemStaffExp3 extends ItemStaffExpBase
 
     @Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
-        if(getStoredExp(stack) > StaffExpHelper.getMaxExp(this.getType()))
-        {
+        if(getStoredExp(stack) > StaffExpHelper.getMaxExp(this.getType())) {
             setStoredExp(stack, StaffExpHelper.getMaxExp(this.getType()));
         }
 
-        if (getStoredExp(stack) == StaffExpHelper.getMaxExp(this.getType()))
-        {
+        if (getStoredExp(stack) == StaffExpHelper.getMaxExp(this.getType())) {
             return stack;
-        }
-        else
-        {
-            if (player.experienceLevel > 30 && !player.isSneaking())
-            {
+        } else {
+            if (player.experienceLevel > 30 && !player.isSneaking()) {
                 player.addExperienceLevel(-30);
                 addExp(stack, 30);
-            }
-            else
-            {
+            } else {
                 player.addExperienceLevel(30);
                 removeExp(stack, 30);
             }

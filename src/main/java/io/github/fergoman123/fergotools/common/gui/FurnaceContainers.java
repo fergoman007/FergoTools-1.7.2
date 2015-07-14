@@ -76,7 +76,7 @@ public class FurnaceContainers
         public void addInventorySlots() {
             addSlot(furnace, 0, 80, 31);
             addMaceratorFuelSlot(furnace, 1, 62, 31);
-            addMaceratorOutputSlot(invPlayer.player, furnace, 2, 98, 31);
+            addOutputSlot(invPlayer.player, furnace, 2, 98, 31);
         }
     }
 }

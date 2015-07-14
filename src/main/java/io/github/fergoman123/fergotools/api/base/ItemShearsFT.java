@@ -10,11 +10,27 @@
 package io.github.fergoman123.fergotools.api.base;
 
 
-import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergoutil.item.ItemShearsFergo;
+import java.util.List;
 
-public class ItemShearsFT extends ItemShearsFergo {
+import io.github.fergoman123.fergoutil.helper.NameHelper;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemShears;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
+
+public class ItemShearsFT extends ItemShears {
+	private ToolMaterial material;
+	
     public ItemShearsFT(ToolMaterial material, String name) {
-        super(material, 0, FergoTools.tabFergoTools, name);
+    	super();
+    	this.setMaxDamage(material.getMaxUses());
+    	this.setUnlocalizedName("ft." + name);
+    	this.material = material;
+    }
+    
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List list, boolean advanced) {
+    	list.add(StatCollector.translateToLocal("ft.tooltip.toolmat") + " " + this.material.toString());
+    	list.add(StatCollector.translateToLocal("ft.tooltip.uses") + " " + NameHelper.getDurabilityString(stack));
     }
 }

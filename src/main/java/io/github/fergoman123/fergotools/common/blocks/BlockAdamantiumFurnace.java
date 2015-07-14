@@ -1,5 +1,7 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
+import java.util.Random;
+
 import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileAdamantiumFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
@@ -11,6 +13,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
@@ -21,11 +24,16 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT {
     public BlockAdamantiumFurnace(boolean isActive, String name) {
         super(Material.iron, isActive, name);
     }
+    
+	@Override
+	public Item getItemDropped(IBlockState state, Random random, int fortune) {
+		return Item.getItemFromBlock(ModBlocks.adamantiumFurnaceIdle);
+	}
 
-    @Override
-    public Block getBlockDropped() {
-        return ModBlocks.adamantiumFurnaceIdle;
-    }
+	@Override
+	public Item getItem(World world, BlockPos pos) {
+		return Item.getItemFromBlock(ModBlocks.adamantiumFurnaceIdle);
+	}
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
@@ -63,11 +71,6 @@ public class BlockAdamantiumFurnace extends BlockFurnaceFT {
         }
 
         super.breakBlock(worldIn, pos, state);
-    }
-
-    @Override
-    public Block getBlock() {
-        return ModBlocks.adamantiumFurnaceIdle;
     }
 
     public TileEntity createNewTileEntity(World world, int meta){

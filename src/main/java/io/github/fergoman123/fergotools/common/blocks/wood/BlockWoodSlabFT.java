@@ -96,10 +96,4 @@ public abstract class BlockWoodSlabFT extends BlockSlabFergo
     public int damageDropped(IBlockState state) {
         return ((WoodTypes)state.getValue(VARIANT)).getMeta();
     }
-    
-    public void registerModel(){
-        for (int i = 0; i < getSubNames().length; i++) {
-            RegisterHelper.registerModel(this, i, NameHelper.getModString(0) + subNames[i]);
-        }
-    }
 }

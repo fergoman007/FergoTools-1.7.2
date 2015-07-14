@@ -10,9 +10,6 @@
 package io.github.fergoman123.fergotools.api.base;
 
 import io.github.fergoman123.fergotools.common.slot.SlotMacerator;
-import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
-import io.github.fergoman123.fergoutil.gui.ContainerFurnaceFergo;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;

@@ -17,12 +17,10 @@ import java.util.List;
 public class BlockWoodLogFT extends BlockLogFT
 {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
-    private String[] subNames;
 
-    public BlockWoodLogFT(String[] subNames, String name) {
+    public BlockWoodLogFT(String name) {
         super(name);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(LOG_AXIS, EnumAxis.Y));
-        this.subNames = subNames;
     }
 
     @Override
@@ -60,7 +58,7 @@ public class BlockWoodLogFT extends BlockLogFT
         byte b0 = 0;
         int i = b0 | ((WoodTypes)state.getValue(VARIANT)).getMeta();
 
-        switch (SwitchEnumAxis.AXIS_LOOKUP[((EnumAxis)state.getValue(LOG_AXIS)).ordinal()])
+        switch (SwitchEnumAxis.AXIS_LOOKUP[((EnumAxis)state.getValue(AXIS)).ordinal()])
         {
             case 1:
                 i |= 4;
@@ -83,10 +81,6 @@ public class BlockWoodLogFT extends BlockLogFT
     @Override
     public ItemStack createStackedBlock(IBlockState state) {
     return new ItemStack(Item.getItemFromBlock(this), 1, ((WoodTypes)state.getValue(VARIANT)).getMeta());
-    }
-
-    public String[] getSubNames() {
-        return subNames;
     }
 
     @Override

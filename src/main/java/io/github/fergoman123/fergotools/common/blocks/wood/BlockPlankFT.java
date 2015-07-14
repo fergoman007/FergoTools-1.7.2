@@ -2,6 +2,7 @@ package io.github.fergoman123.fergotools.common.blocks.wood;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
+import io.github.fergoman123.fergotools.reference.BlockNames;
 import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
@@ -12,15 +13,17 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
+import java.util.Random;
 
 public class BlockPlankFT extends BlockMultiFergo
 {
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
-
     public BlockPlankFT(String name) {
-        super(Material.wood, 0, FergoTools.tabFergoTools, 2.0f, 5.0f, name);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian));
-    }
+		super(Material.wood, 0, FergoTools.tabFergoTools, 2.0f, 5.0f, BlockNames.planks, name);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian));
+	}
+
+	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
+
 
     @Override
     public int damageDropped(IBlockState state) {
@@ -49,4 +52,9 @@ public class BlockPlankFT extends BlockMultiFergo
     public BlockState createBlockState() {
         return new BlockState(this, VARIANT);
     }
+
+	@Override
+	public Item getItemDropped(IBlockState state, Random random, int fortune) {
+		return Item.getItemFromBlock(this);
+	}
 }

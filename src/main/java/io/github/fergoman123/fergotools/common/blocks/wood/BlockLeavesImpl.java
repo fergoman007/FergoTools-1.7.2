@@ -3,6 +3,8 @@ package io.github.fergoman123.fergotools.common.blocks.wood;
 import io.github.fergoman123.fergotools.api.base.BlockBases.BlockLeavesFT;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
@@ -23,93 +25,102 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class BlockLeavesImpl extends BlockLeavesFT {
+	
+	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
 
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
+	public BlockLeavesImpl(String name) {
+		super(name);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
+	}
+	
+	public int getRenderColor(IBlockState state){
+		if(state.getBlock() != this){
+			return super.getRenderColor(state);
+		} else {
+			WoodTypes type = (WoodTypes)state.getValue(VARIANT);
+			return type == WoodTypes.emerald ? ColorizerFoliage.getFoliageColorPine() : (type == WoodTypes.lapis ? ColorizerFoliage.getFoliageColorBirch() : super.getRenderColor(state));
+		}
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass) {
+		IBlockState iblockstate = worldIn.getBlockState(pos);
 
-    public BlockLeavesImpl(String name) {
-        super(name);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(checkDecay, true).withProperty(decayable, true));
-    }
+        if (iblockstate.getBlock() == this)
+        {
+            WoodTypes enumtype = (WoodTypes)iblockstate.getValue(VARIANT);
 
-    @SideOnly(Side.CLIENT)
-    public int getRenderColor(IBlockState state) {
-        if (state.getBlock() != this) {
-            return super.getRenderColor(state);
-        } else {
-            return ColorizerFoliage.getFoliageColorBasic();
+            if (enumtype == WoodTypes.emerald)
+            {
+                return ColorizerFoliage.getFoliageColorPine();
+            }
+
+            if (enumtype == WoodTypes.lapis)
+            {
+                return ColorizerFoliage.getFoliageColorBirch();
+            }
         }
-    }
 
-    @Override
-    public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass) {
-        return ColorizerFoliage.getFoliageColorBasic();
-    }
-
-    @Override
-	public void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance) {
-        if (worldIn.rand.nextInt(chance) == 0) {
-            spawnAsEntity(worldIn, pos, new ItemStack(Items.apple, 1, 0));
-        }
-    }
-
-    @Override
-	public int getSaplingDropChance(IBlockState state) {
-        return 20;
-    }
-
-    @Override
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
-        for (WoodTypes type : WoodTypes.values()) {
-            list.add(new ItemStack(itemIn, 1, type.getMeta()));
-        }
-    }
-
-    @Override
-    protected BlockState createBlockState() {
-        return new BlockState(this, VARIANT, checkDecay, decayable);
-    }
-
-    @Override
-    protected ItemStack createStackedBlock(IBlockState state) {
-        return new ItemStack(Item.getItemFromBlock(this), 1, ((WoodTypes) state.getValue(VARIANT)).getMeta());
-    }
-
-    public IBlockState getStateFromMeta(int meta)
+        return super.colorMultiplier(worldIn, pos, renderPass);
+	}
+	
+	public void dropApple(World world, BlockPos pos, IBlockState state, int chance){
+		spawnAsEntity(world, pos, new ItemStack(Items.apple, 1, 0));
+	}
+	
+	public int getSaplingDropChance(IBlockState state){
+		return state.getValue(VARIANT) == WoodTypes.emerald ? 40 : super.getSaplingDropChance(state);
+	}
+	
+	public void getSubBlocks(Item item, CreativeTabs tab, List list){
+		for(WoodTypes type : WoodTypes.values()){
+			list.add(new ItemStack(item, 1, type.getMeta()));
+		}
+	}
+	
+	public ItemStack createStackedBlock(IBlockState state){
+		return new ItemStack(Item.getItemFromBlock(this), 1, ((WoodTypes)state.getValue(VARIANT)).getMeta());
+	}
+	
+	public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, this.getWoodType(meta)).withProperty(decayable, (meta & 4) == 0).withProperty(decayable, (meta & 8) > 0);
+        return this.getDefaultState().withProperty(VARIANT, this.getWoodType(meta)).withProperty(DECAYABLE, Boolean.valueOf((meta & 4) == 0)).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
     }
-
-    public int getMetaFromState(IBlockState state)
+	
+	public int getMetaFromState(IBlockState state)
     {
         byte b0 = 0;
-        int i = b0 | ((WoodTypes)state.getValue(VARIANT)).getMeta();
+        int i = b0 | ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
 
-        if (!(Boolean)state.getValue(decayable))
+        if (!((Boolean)state.getValue(DECAYABLE)).booleanValue())
         {
             i |= 4;
         }
 
-        if ((Boolean)state.getValue(decayable))
+        if (((Boolean)state.getValue(CHECK_DECAY)).booleanValue())
         {
             i |= 8;
         }
 
         return i;
     }
-
-    public WoodTypes getWoodType(int meta)
-    {
-        return WoodTypes.byMetadata(meta);
-    }
-
-    @Override
-    public int damageDropped(IBlockState state) {
-        return ((WoodTypes)state.getValue(VARIANT)).getMeta();
-    }
-
-    public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)
+	
+	public WoodTypes getWoodType(int meta){
+		return WoodTypes.byMetadata((meta & 3) % 4);
+	}
+	
+	public BlockState createBlockState(){
+		return new BlockState(this, VARIANT, CHECK_DECAY, DECAYABLE);
+	}
+	
+	public int damageDropped(IBlockState state){
+		return ((WoodTypes)state.getValue(VARIANT)).getMeta();
+	}
+	
+	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)
     {
         if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears)
         {
@@ -121,16 +132,10 @@ public class BlockLeavesImpl extends BlockLeavesFT {
             super.harvestBlock(worldIn, player, pos, state, te);
         }
     }
-
-    @Override
-    public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
-        IBlockState state = world.getBlockState(pos);
-        return new ArrayList(Arrays.asList(new ItemStack(this, 1, ((WoodTypes) state.getValue(VARIANT)).getMeta())));
-    }
-
+	
 	@Override
-	public Block getBlock() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
+		IBlockState state = world.getBlockState(pos);
+		return new ArrayList<ItemStack>(Arrays.asList(new ItemStack(this, 1, ((WoodTypes)state.getValue(VARIANT)).getMeta())));
 	}
 }

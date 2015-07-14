@@ -59,16 +59,16 @@ public class ItemNames
     public static final String adamantiumLeggings = "adamantiumLeggings";
     public static final String adamantiumBoots = "adamantiumBoots";
 
-    public static final String[] bowQuartz = {"bowQuartz", "bowQuartz_0", "bowQuartz_1", "bowQuartz_2"};
-    public static final String[] bowObsidian = {"bowObsidian", "bowObsidian_0", "bowObsidian_1", "bowObsidian_2"};
-    public static final String[] bowEmerald = {"bowEmerald", "bowEmerald_0", "bowEmerald_1", "bowEmerald_2"};
-    public static final String[] bowLapis = {"bowLapis", "bowLapis_0", "bowLapis_1", "bowLapis_2"};
-    public static final String[] bowBronze = {"bowBronze", "bowBronze_0", "bowBronze_1", "bowBronze_2"};
-    public static final String[] bowCoal = {"bowCoal", "bowCoal_0", "bowCoal_1", "bowCoal_2"};
-    public static final String[] bowGlowstone = {"bowGlowstone", "bowGlowstone_0", "bowGlowstone_1", "bowGlowstone_2"};
-    public static final String[] bowAdamantium = {"bowAdamantium", "bowAdamantium_0", "bowAdamantium_1", "bowAdamantium_2"};
-    public static final String[] bowSilk = {"bowSilk", "bowSilk_0", "bowSilk_1", "bowSilk_2"};
-    public static final String[] bowRedstone = {"bowRedstone", "bowRedstone_0", "bowRedstone_1", "bowRedstone_2"};
+    public static final String bowQuartz = "bowQuartz";
+    public static final String bowObsidian = "bowObsidian";
+    public static final String bowEmerald = "bowEmerald";
+    public static final String bowLapis = "bowLapis";
+    public static final String bowBronze = "bowBronze";
+    public static final String bowCoal = "bowCoal";
+    public static final String bowGlowstone = "bowGlowstone";
+    public static final String bowAdamantium = "bowAdamantium";
+    public static final String bowSilk = "bowSilk";
+    public static final String bowRedstone = "bowRedstone";
 
     public static final String ingotObsidian = "ingotObsidian";
     public static final String gemEmerald = "gemEmerald";

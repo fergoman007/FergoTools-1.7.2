@@ -1,5 +1,7 @@
 package io.github.fergoman123.fergotools.common.blocks;
 
+import java.util.Random;
+
 import io.github.fergoman123.fergotools.api.base.BlockBases.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.TileBronzeFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
@@ -11,6 +13,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
@@ -21,12 +24,16 @@ public class BlockBronzeFurnace extends BlockFurnaceFT {
     public BlockBronzeFurnace(boolean isActive, String name) {
         super(Material.iron, isActive, name);
     }
-
-    @Override
-    public Block getBlockDropped() {
-        return ModBlocks.bronzeFurnaceIdle;
+    
+    public Item getItemDropped(IBlockState state, Random rand, int fortune){
+    	return Item.getItemFromBlock(ModBlocks.bronzeFurnaceIdle);
     }
-
+    
+    @Override
+    public Item getItem(World world, BlockPos pos) {
+    	return Item.getItemFromBlock(ModBlocks.bronzeFurnaceIdle);
+    }
+    
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
         if (worldIn.isRemote && !playerIn.isSneaking()){
@@ -63,11 +70,6 @@ public class BlockBronzeFurnace extends BlockFurnaceFT {
         }
 
         super.breakBlock(worldIn, pos, state);
-    }
-
-    @Override
-    public Block getBlock() {
-        return ModBlocks.bronzeFurnaceIdle;
     }
 
     public TileEntity createNewTileEntity(World world, int meta){
