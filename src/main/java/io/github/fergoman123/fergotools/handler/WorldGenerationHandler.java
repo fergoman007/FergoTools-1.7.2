@@ -16,7 +16,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 import java.util.Random;
-
+@SuppressWarnings("unused")
 public class WorldGenerationHandler implements IWorldGenerator
 {
 
@@ -30,7 +30,7 @@ public class WorldGenerationHandler implements IWorldGenerator
 		case 1:generateEnd(world, random, chunkX * 16, chunkZ * 16);
 		}
 	}
-
+	
 	private void generateEnd(World world, Random random, int x, int z) {
 		for(int i = 0; i < 5; i++)
 		{

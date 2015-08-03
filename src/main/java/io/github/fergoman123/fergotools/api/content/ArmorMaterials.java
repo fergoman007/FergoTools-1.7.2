@@ -23,7 +23,7 @@ public enum ArmorMaterials
     private int enchantability;
     private Item repairItem;
 
-    private ArmorMaterials(String name, int maxDamage, int[] reductAmounts, int enchantability, Item repairItem)
+    ArmorMaterials(String name, int maxDamage, int[] reductAmounts, int enchantability, Item repairItem)
     {
         this.name = name;
         this.maxDamage = maxDamage;

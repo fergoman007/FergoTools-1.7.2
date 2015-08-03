@@ -1,6 +1,5 @@
 package io.github.fergoman123.fergotools.common.tileentities;
 
-import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
 import io.github.fergoman123.fergotools.common.blocks.BlockAdamantiumFurnace;
 import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.ContainerAdamantiumFurnace;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;

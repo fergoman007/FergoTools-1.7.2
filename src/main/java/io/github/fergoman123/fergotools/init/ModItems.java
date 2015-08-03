@@ -1,322 +1,170 @@
 package io.github.fergoman123.fergotools.init;
 
-import io.github.fergoman123.fergotools.api.base.*;
-import io.github.fergoman123.fergotools.common.items.*;
-import io.github.fergoman123.fergotools.common.items.bow.ItemBowBronze;
-import io.github.fergoman123.fergotools.common.items.bow.ItemBowCoal;
-import io.github.fergoman123.fergotools.common.items.bow.ItemBowGlowstone;
-import io.github.fergoman123.fergotools.common.items.pickaxe.ItemQuartzPickaxe;
-import io.github.fergoman123.fergotools.common.items.shovel.ItemQuartzShovel;
+import io.github.fergoman123.fergotools.common.items.ItemExpCollector;
+import io.github.fergoman123.fergotools.common.items.ItemExpShard;
+import io.github.fergoman123.fergotools.item.*;
+import io.github.fergoman123.fergotools.model.ModelResLocFT;
 import io.github.fergoman123.fergotools.reference.ItemNames;
 import io.github.fergoman123.fergotools.util.item.AM;
 import io.github.fergoman123.fergotools.util.item.TM;
 import io.github.fergoman123.fergoutil.item.ArmorType;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelBakery;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems
 {
-    public static ItemFT ingotObsidian;
-    public static ItemFT gemEmerald;
-    public static ItemFT gemLapis;
-    public static ItemFT ingotBronze;
-    public static ItemFT ingotCoal;
-    public static ItemFT ingotGlowstone;
-    public static ItemFT ingotAdamantium;
-    public static ItemFT gemSilk;
-    public static ItemFT gemRedstone;
-    public static ItemFT gemExp;
-    public static ItemFT gemExp2;
-    public static ItemFT gemExp3;
+    public static final ItemFT ingotObsidian = new ItemFT(ItemNames.ingotObsidian);
+    public static final ItemFT gemEmerald = new ItemFT(ItemNames.gemEmerald);
+    public static final ItemFT gemLapis = new ItemFT(ItemNames.gemLapis);
+    public static final ItemFT ingotBronze = new ItemFT(ItemNames.ingotBronze);
+    public static final ItemFT ingotCoal = new ItemFT(ItemNames.ingotCoal);
+    public static final ItemFT ingotGlowstone = new ItemFT(ItemNames.ingotGlowstone);
+    public static final ItemFT ingotAdamantium = new ItemFT(ItemNames.ingotAdamantium);
+    public static final ItemFT gemSilk = new ItemFT(ItemNames.gemSilk);
+    public static final ItemFT gemRedstone = new ItemFT(ItemNames.gemRedstone);
 
-    public static ItemStaffExpBase staffExp;
-    public static ItemStaffExpBase staffExp2;
-    public static ItemStaffExpBase staffExp3;
+    public static final ItemGemExpBase gemExp = new ItemGemExpBase(0);
+    public static final ItemGemExpBase gemExp2 = new ItemGemExpBase(1);
+    public static final ItemGemExpBase gemExp3 = new ItemGemExpBase(2);
 
-    public static ItemFT shardExp;
-    public static ItemFT expCollector;
+    public static final ItemStaffExpBase staffExp = new ItemStaffExpBase(0);
+    public static final ItemStaffExpBase staffExp2 = new ItemStaffExpBase(1);
+    public static final ItemStaffExpBase staffExp3 = new ItemStaffExpBase(2);
 
-    public static ItemPickaxeFT quartzPickaxe;
-    public static ItemShovelFT quartzShovel;
-    public static ItemAxeFT quartzAxe;
-    public static ItemHoeFT quartzHoe;
-    public static ItemSwordFT quartzSword;
+    public static final ItemFT shardExp = new ItemExpShard();
+    public static final ItemFT expCollector = new ItemExpCollector();
 
-    public static ItemPickaxeFT obsidianPickaxe;
-    public static ItemShovelFT obsidianShovel;
-    public static ItemAxeFT obsidianAxe;
-    public static ItemHoeFT obsidianHoe;
-    public static ItemSwordFT obsidianSword;
+    public static final ItemPickaxeFT quartzPickaxe = new ItemPickaxeFT(TM.quartz, ItemNames.quartzPickaxe);
+    public static final ItemShovelFT quartzShovel = new ItemShovelFT(TM.quartz, ItemNames.quartzShovel);
+    public static final ItemAxeFT quartzAxe = new ItemAxeFT(TM.quartz, ItemNames.quartzAxe);
+    public static final ItemHoeFT quartzHoe = new ItemHoeFT(TM.quartz, ItemNames.quartzHoe);
+    public static final ItemSwordFT quartzSword = new ItemSwordFT(TM.quartz, ItemNames.quartzSword);
 
-    public static ItemPickaxeFT emeraldPickaxe;
-    public static ItemShovelFT emeraldShovel;
-    public static ItemAxeFT emeraldAxe;
-    public static ItemHoeFT emeraldHoe;
-    public static ItemSwordFT emeraldSword;
+    public static final ItemPickaxeFT obsidianPickaxe = new ItemPickaxeFT(TM.obsidian, ItemNames.obsidianPickaxe);
+    public static final ItemShovelFT obsidianShovel = new ItemShovelFT(TM.obsidian, ItemNames.obsidianShovel);
+    public static final ItemAxeFT obsidianAxe = new ItemAxeFT(TM.obsidian, ItemNames.obsidianAxe);
+    public static final ItemHoeFT obsidianHoe = new ItemHoeFT(TM.obsidian, ItemNames.obsidianHoe);
+    public static final ItemSwordFT obsidianSword = new ItemSwordFT(TM.obsidian, ItemNames.obsidianSword);
 
-    public static ItemPickaxeFT lapisPickaxe;
-    public static ItemShovelFT lapisShovel;
-    public static ItemAxeFT lapisAxe;
-    public static ItemHoeFT lapisHoe;
-    public static ItemSwordFT lapisSword;
+    public static final ItemPickaxeFT emeraldPickaxe = new ItemPickaxeFT(TM.emerald, ItemNames.emeraldPickaxe);
+    public static final ItemShovelFT emeraldShovel = new ItemShovelFT(TM.emerald, ItemNames.emeraldShovel);
+    public static final ItemAxeFT emeraldAxe = new ItemAxeFT(TM.emerald, ItemNames.emeraldAxe);
+    public static final ItemHoeFT emeraldHoe = new ItemHoeFT(TM.emerald, ItemNames.emeraldHoe);
+    public static final ItemSwordFT emeraldSword = new ItemSwordFT(TM.emerald, ItemNames.emeraldSword);
 
-    public static ItemPickaxeFT bronzePickaxe;
-    public static ItemShovelFT bronzeShovel;
-    public static ItemAxeFT bronzeAxe;
-    public static ItemHoeFT bronzeHoe;
-    public static ItemSwordFT bronzeSword;
+    public static final ItemPickaxeFT lapisPickaxe = new ItemPickaxeFT(TM.lapis, ItemNames.lapisPickaxe);
+    public static final ItemShovelFT lapisShovel = new ItemShovelFT(TM.lapis, ItemNames.lapisShovel);
+    public static final ItemAxeFT lapisAxe = new ItemAxeFT(TM.lapis, ItemNames.lapisAxe);
+    public static final ItemHoeFT lapisHoe = new ItemHoeFT(TM.lapis, ItemNames.lapisHoe);
+    public static final ItemSwordFT lapisSword = new ItemSwordFT(TM.lapis, ItemNames.lapisSword);
 
-    public static ItemPickaxeFT coalPickaxe;
-    public static ItemShovelFT coalShovel;
-    public static ItemAxeFT coalAxe;
-    public static ItemHoeFT coalHoe;
-    public static ItemSwordFT coalSword;
+    public static final ItemPickaxeFT bronzePickaxe = new ItemPickaxeFT(TM.bronze, ItemNames.bronzePickaxe);
+    public static final ItemShovelFT bronzeShovel = new ItemShovelFT(TM.bronze, ItemNames.bronzeShovel);
+    public static final ItemAxeFT bronzeAxe = new ItemAxeFT(TM.bronze, ItemNames.bronzeAxe);
+    public static final ItemHoeFT bronzeHoe = new ItemHoeFT(TM.bronze, ItemNames.bronzeHoe);
+    public static final ItemSwordFT bronzeSword = new ItemSwordFT(TM.bronze, ItemNames.bronzeSword);
 
-    public static ItemPickaxeFT glowstonePickaxe;
-    public static ItemShovelFT glowstoneShovel;
-    public static ItemAxeFT glowstoneAxe;
-    public static ItemHoeFT glowstoneHoe;
-    public static ItemSwordFT glowstoneSword;
+    public static final ItemPickaxeFT coalPickaxe = new ItemPickaxeFT(TM.coal, ItemNames.coalPickaxe);
+    public static final ItemShovelFT coalShovel = new ItemShovelFT(TM.coal, ItemNames.coalShovel);
+    public static final ItemAxeFT coalAxe = new ItemAxeFT(TM.coal, ItemNames.coalAxe);
+    public static final ItemHoeFT coalHoe = new ItemHoeFT(TM.coal, ItemNames.coalHoe);
+    public static final ItemSwordFT coalSword = new ItemSwordFT(TM.coal, ItemNames.coalSword);
 
-    public static ItemPickaxeFT adamantiumPickaxe;
-    public static ItemShovelFT adamantiumShovel;
-    public static ItemAxeFT adamantiumAxe;
-    public static ItemHoeFT adamantiumHoe;
-    public static ItemSwordFT adamantiumSword;
+    public static final ItemPickaxeFT glowstonePickaxe = new ItemPickaxeFT(TM.glowstone, ItemNames.glowstonePickaxe);
+    public static final ItemShovelFT glowstoneShovel = new ItemShovelFT(TM.glowstone, ItemNames.glowstoneShovel);
+    public static final ItemAxeFT glowstoneAxe = new ItemAxeFT(TM.glowstone, ItemNames.glowstoneAxe);
+    public static final ItemHoeFT glowstoneHoe = new ItemHoeFT(TM.glowstone, ItemNames.glowstoneHoe);
+    public static final ItemSwordFT glowstoneSword = new ItemSwordFT(TM.glowstone, ItemNames.glowstoneSword);
 
-    public static ItemPickaxeFT silkPickaxe;
-    public static ItemShovelFT silkShovel;
-    public static ItemAxeFT silkAxe;
-    public static ItemHoeFT silkHoe;
-    public static ItemSwordFT silkSword;
+    public static final ItemPickaxeFT adamantiumPickaxe = new ItemPickaxeFT(TM.adamantium, ItemNames.adamantiumPickaxe);
+    public static final ItemShovelFT adamantiumShovel = new ItemShovelFT(TM.adamantium, ItemNames.adamantiumShovel);
+    public static final ItemAxeFT adamantiumAxe = new ItemAxeFT(TM.adamantium, ItemNames.adamantiumAxe);
+    public static final ItemHoeFT adamantiumHoe = new ItemHoeFT(TM.adamantium, ItemNames.adamantiumHoe);
+    public static final ItemSwordFT adamantiumSword = new ItemSwordFT(TM.adamantium, ItemNames.adamantiumSword);
 
-    public static ItemPickaxeFT redstonePickaxe;
-    public static ItemShovelFT redstoneShovel;
-    public static ItemAxeFT redstoneAxe;
-    public static ItemHoeFT redstoneHoe;
-    public static ItemSwordFT redstoneSword;
+    public static final ItemPickaxeFT silkPickaxe = new ItemPickaxeFT(TM.silk, ItemNames.silkPickaxe);
+    public static final ItemShovelFT silkShovel = new ItemShovelFT(TM.silk, ItemNames.silkShovel);
+    public static final ItemAxeFT silkAxe = new ItemAxeFT(TM.silk, ItemNames.silkAxe);
+    public static final ItemHoeFT silkHoe = new ItemHoeFT(TM.silk, ItemNames.silkHoe);
+    public static final ItemSwordFT silkSword = new ItemSwordFT(TM.silk, ItemNames.silkSword);
 
-    public static ItemArmorFT quartzHelmet;
-    public static ItemArmorFT quartzChestplate;
-    public static ItemArmorFT quartzLeggings;
-    public static ItemArmorFT quartzBoots;
+    public static final ItemPickaxeFT redstonePickaxe = new ItemPickaxeFT(TM.redstone, ItemNames.redstonePickaxe);
+    public static final ItemShovelFT redstoneShovel = new ItemShovelFT(TM.redstone, ItemNames.redstoneShovel);
+    public static final ItemAxeFT redstoneAxe = new ItemAxeFT(TM.redstone, ItemNames.redstoneAxe);
+    public static final ItemHoeFT redstoneHoe = new ItemHoeFT(TM.redstone, ItemNames.redstoneHoe);
+    public static final ItemSwordFT redstoneSword = new ItemSwordFT(TM.redstone, ItemNames.redstoneSword);
 
-    public static ItemArmorFT obsidianHelmet;
-    public static ItemArmorFT obsidianChestplate;
-    public static ItemArmorFT obsidianLeggings;
-    public static ItemArmorFT obsidianBoots;
+    public static final ItemArmorFT quartzHelmet = new ItemArmorQuartz(ArmorType.helmet, ItemNames.quartzHelmet);
+    public static final ItemArmorFT quartzChestplate = new ItemArmorQuartz(ArmorType.chestplate, ItemNames.quartzChestplate);
+    public static final ItemArmorFT quartzLeggings = new ItemArmorQuartz(ArmorType.leggings, ItemNames.quartzLeggings);
+    public static final ItemArmorFT quartzBoots = new ItemArmorQuartz(ArmorType.boots, ItemNames.quartzBoots);
 
-    public static ItemArmorFT emeraldHelmet;
-    public static ItemArmorFT emeraldChestplate;
-    public static ItemArmorFT emeraldLeggings;
-    public static ItemArmorFT emeraldBoots;
+    public static final ItemArmorFT obsidianHelmet = new ItemArmorObsidian(ArmorType.helmet, ItemNames.obsidianHelmet);
+    public static final ItemArmorFT obsidianChestplate = new ItemArmorObsidian(ArmorType.chestplate, ItemNames.obsidianChestplate);
+    public static final ItemArmorFT obsidianLeggings = new ItemArmorObsidian(ArmorType.leggings, ItemNames.obsidianLeggings);
+    public static final ItemArmorFT obsidianBoots = new ItemArmorObsidian(ArmorType.boots, ItemNames.obsidianBoots);
 
-    public static ItemArmorFT lapisHelmet;
-    public static ItemArmorFT lapisChestplate;
-    public static ItemArmorFT lapisLeggings;
-    public static ItemArmorFT lapisBoots;
+    public static final ItemArmorFT emeraldHelmet = new ItemArmorEmerald(ArmorType.helmet, ItemNames.emeraldHelmet);
+    public static final ItemArmorFT emeraldChestplate = new ItemArmorEmerald(ArmorType.chestplate, ItemNames.emeraldChestplate);
+    public static final ItemArmorFT emeraldLeggings = new ItemArmorEmerald(ArmorType.leggings, ItemNames.emeraldLeggings);
+    public static final ItemArmorFT emeraldBoots = new ItemArmorEmerald(ArmorType.boots, ItemNames.emeraldBoots);
 
-    public static ItemArmorFT bronzeHelmet;
-    public static ItemArmorFT bronzeChestplate;
-    public static ItemArmorFT bronzeLeggings;
-    public static ItemArmorFT bronzeBoots;
+    public static final ItemArmorFT lapisHelmet = new ItemArmorLapis(ArmorType.helmet, ItemNames.lapisHelmet);
+    public static final ItemArmorFT lapisChestplate = new ItemArmorLapis(ArmorType.chestplate, ItemNames.lapisChestplate);
+    public static final ItemArmorFT lapisLeggings = new ItemArmorLapis(ArmorType.leggings, ItemNames.lapisLeggings);
+    public static final ItemArmorFT lapisBoots = new ItemArmorLapis(ArmorType.boots, ItemNames.lapisBoots;
 
-    public static ItemArmorFT coalHelmet;
-    public static ItemArmorFT coalChestplate;
-    public static ItemArmorFT coalLeggings;
-    public static ItemArmorFT coalBoots;
+    public static final ItemArmorFT bronzeHelmet = new ItemArmorBronze(ArmorType.helmet, ItemNames.bronzeHelmet);
+    public static final ItemArmorFT bronzeChestplate = new ItemArmorBronze(ArmorType.chestplate, ItemNames.bronzeChestplate);
+    public static final ItemArmorFT bronzeLeggings = new ItemArmorBronze(ArmorType.leggings, ItemNames.bronzeLeggings);
+    public static final ItemArmorFT bronzeBoots = new ItemArmorBronze(ArmorType.boots, ItemNames.bronzeBoots);
 
-    public static ItemArmorFT glowstoneHelmet;
-    public static ItemArmorFT glowstoneChestplate;
-    public static ItemArmorFT glowstoneLeggings;
-    public static ItemArmorFT glowstoneBoots;
+    public static final ItemArmorFT coalHelmet;
+    public static final ItemArmorFT coalChestplate;
+    public static final ItemArmorFT coalLeggings;
+    public static final ItemArmorFT coalBoots;
 
-    public static ItemArmorFT adamantiumHelmet;
-    public static ItemArmorFT adamantiumChestplate;
-    public static ItemArmorFT adamantiumLeggings;
-    public static ItemArmorFT adamantiumBoots;
+    public static final ItemArmorFT glowstoneHelmet;
+    public static final ItemArmorFT glowstoneChestplate;
+    public static final ItemArmorFT glowstoneLeggings;
+    public static final ItemArmorFT glowstoneBoots;
 
-    public static ItemArmorFT redstoneHelmet;
-    public static ItemArmorFT redstoneChestplate;
-    public static ItemArmorFT redstoneLeggings;
-    public static ItemArmorFT redstoneBoots;
+    public static final ItemArmorFT adamantiumHelmet;
+    public static final ItemArmorFT adamantiumChestplate;
+    public static final ItemArmorFT adamantiumLeggings;
+    public static final ItemArmorFT adamantiumBoots;
 
-    public static ItemBowFT bowQuartz;
-    public static ItemBowFT bowObsidian;
-    public static ItemBowFT bowEmerald;
-    public static ItemBowFT bowLapis;
-    public static ItemBowFT bowBronze;
-    public static ItemBowFT bowCoal;
-    public static ItemBowFT bowGlowstone;
-    public static ItemBowFT bowAdamantium;
-    public static ItemBowFT bowSilk;
-    public static ItemBowFT bowRedstone;
+    public static final ItemArmorFT redstoneHelmet;
+    public static final ItemArmorFT redstoneChestplate;
+    public static final ItemArmorFT redstoneLeggings;
+    public static final ItemArmorFT redstoneBoots;
 
-    public static ItemShearsFT quartzShears;
-    public static ItemShearsFT obsidianShears;
-    public static ItemShearsFT emeraldShears;
-    public static ItemShearsFT lapisShears;
-    public static ItemShearsFT bronzeShears;
-    public static ItemShearsFT coalShears;
-    public static ItemShearsFT glowstoneShears;
-    public static ItemShearsFT adamantiumShears;
-    public static ItemShearsFT silkShears;
-    public static ItemShearsFT redstoneShears;
+    public static final ItemBowFT bowQuartz = new ItemBowFT(TM.quartz, ItemNames.bowQuartz);
+    public static final ItemBowFT bowObsidian = new ItemBowFT(TM.obsidian, ItemNames.bowObsidian);
+    public static final ItemBowFT bowEmerald = new ItemBowFT(TM.emerald, ItemNames.bowEmerald);
+    public static final ItemBowFT bowLapis = new ItemBowFT(TM.lapis, ItemNames.bowLapis);
+    public static final ItemBowFT bowBronze = new ItemBowFT(TM.bronze, ItemNames.bowBronze);
+    public static final ItemBowFT bowCoal = new ItemBowFT(TM.coal, ItemNames.bowCoal);
+    public static final ItemBowFT bowGlowstone = new ItemBowFT(TM.glowstone, ItemNames.bowGlowstone);
+    public static final ItemBowFT bowAdamantium = new ItemBowFT(TM.adamantium, ItemNames.bowAdamantium);
+    public static final ItemBowFT bowSilk = new ItemBowFT(TM.silk, ItemNames.bowSilk);
+    public static final ItemBowFT bowRedstone = new ItemBowFT(TM.redstone, ItemNames.bowRedstone);
 
-    public static ItemMultiFT stickFT;
+        public static final ItemShearsFT quartzShears = new ItemShearsFT(TM.quartz, ItemNames.quartzShears);
+        public static final ItemShearsFT obsidianShears = new ItemShearsFT(TM.obsidian, ItemNames.obsidianShears);
+        public static final ItemShearsFT emeraldShears = new ItemShearsFT(TM.emerald, ItemNames.emeraldShears);
+        public static final ItemShearsFT lapisShears = new ItemShearsFT(TM.lapis, ItemNames.lapisShears);
+        public static final ItemShearsFT bronzeShears = new ItemShearsFT(TM.bronze, ItemNames.bronzeShears);
+        public static final ItemShearsFT coalShears = new ItemShearsFT(TM.coal, ItemNames.coalShears);
+        public static final ItemShearsFT glowstoneShears = new ItemShearsFT(TM.glowstone, ItemNames.glowstoneShears);
+        public static final ItemShearsFT adamantiumShears = new ItemShearsFT(TM.adamantium, ItemNames.adamantiumShears);
+        public static final ItemShearsFT silkShears = new ItemShearsFT(TM.silk, ItemNames.silkShears);
+        public static final ItemShearsFT redstoneShears = new ItemShearsFT(TM.redstone, ItemNames.redstoneShears);
 
-    public static void init()
-    {
-        ingotObsidian = new ItemFT(ItemNames.ingotObsidian);
-        gemEmerald = new ItemFT(ItemNames.gemEmerald);
-        gemLapis = new ItemFT(ItemNames.gemLapis);
-        ingotBronze = new ItemFT(ItemNames.ingotBronze);
-        ingotCoal = new ItemFT(ItemNames.ingotCoal);
-        ingotGlowstone = new ItemFT(ItemNames.ingotGlowstone);
-        ingotAdamantium = new ItemFT(ItemNames.ingotAdamantium);
-        gemSilk = new ItemFT(ItemNames.gemSilk);
-        gemRedstone = new ItemFT(ItemNames.gemRedstone);
-        gemExp = new ItemGemExp();
-        gemExp2 = new ItemGemExp2();
-        gemExp3 = new ItemGemExp3();
-
-        staffExp = new ItemStaffExp();
-        staffExp2 = new ItemStaffExp2();
-        staffExp3 = new ItemStaffExp3();
-
-        shardExp = new ItemExpShard();
-        expCollector = new ItemExpCollector();
-
-        quartzPickaxe = new ItemQuartzPickaxe();
-        quartzShovel = new ItemQuartzShovel();
-        quartzAxe = new ItemAxeFT(TM.quartz, ItemNames.quartzAxe);
-        quartzHoe = new ItemHoeFT(TM.quartz, ItemNames.quartzHoe);
-        quartzSword = new ItemSwordFT(TM.quartz, ItemNames.quartzSword);
-
-        obsidianPickaxe = new ItemPickaxeFT(TM.obsidian, ItemNames.obsidianPickaxe);
-        obsidianShovel = new ItemShovelFT(TM.obsidian, ItemNames.obsidianShovel);
-        obsidianAxe = new ItemAxeFT(TM.obsidian, ItemNames.obsidianAxe);
-        obsidianHoe = new ItemHoeFT(TM.obsidian, ItemNames.obsidianHoe);
-        obsidianSword = new ItemSwordFT(TM.obsidian, ItemNames.obsidianSword);
-
-        emeraldPickaxe = new ItemPickaxeFT(TM.emerald, ItemNames.emeraldPickaxe);
-        emeraldShovel = new ItemShovelFT(TM.emerald, ItemNames.emeraldShovel);
-        emeraldAxe = new ItemAxeFT(TM.emerald, ItemNames.emeraldAxe);
-        emeraldHoe = new ItemHoeFT(TM.emerald, ItemNames.emeraldHoe);
-        emeraldSword = new ItemSwordFT(TM.emerald, ItemNames.emeraldSword);
-
-        lapisPickaxe = new ItemPickaxeFT(TM.lapis, ItemNames.lapisPickaxe);
-        lapisShovel = new ItemShovelFT(TM.lapis, ItemNames.lapisShovel);
-        lapisAxe = new ItemAxeFT(TM.lapis, ItemNames.lapisAxe);
-        lapisHoe = new ItemHoeFT(TM.lapis, ItemNames.lapisHoe);
-        lapisSword = new ItemSwordFT(TM.lapis, ItemNames.lapisSword);
-
-        bronzePickaxe = new ItemPickaxeFT(TM.bronze, ItemNames.bronzePickaxe);
-        bronzeShovel = new ItemShovelFT(TM.bronze, ItemNames.bronzeShovel);
-        bronzeAxe = new ItemAxeFT(TM.bronze, ItemNames.bronzeAxe);
-        bronzeHoe = new ItemHoeFT(TM.bronze, ItemNames.bronzeHoe);
-        bronzeSword = new ItemSwordFT(TM.bronze, ItemNames.bronzeSword);
-
-        coalPickaxe = new ItemPickaxeFT(TM.coal, ItemNames.coalPickaxe);
-        coalShovel = new ItemShovelFT(TM.coal, ItemNames.coalShovel);
-        coalAxe = new ItemAxeFT(TM.coal, ItemNames.coalAxe);
-        coalHoe = new ItemHoeFT(TM.coal, ItemNames.coalHoe);
-        coalSword = new ItemSwordFT(TM.coal, ItemNames.coalSword);
-
-        glowstonePickaxe = new ItemPickaxeFT(TM.glowstone, ItemNames.glowstonePickaxe);
-        glowstoneShovel = new ItemShovelFT(TM.glowstone, ItemNames.glowstoneShovel);
-        glowstoneAxe = new ItemAxeFT(TM.glowstone, ItemNames.glowstoneAxe);
-        glowstoneHoe = new ItemHoeFT(TM.glowstone, ItemNames.glowstoneHoe);
-        glowstoneSword = new ItemSwordFT(TM.glowstone, ItemNames.glowstoneSword);
-
-        adamantiumPickaxe = new ItemPickaxeFT(TM.adamantium, ItemNames.adamantiumPickaxe);
-        adamantiumShovel = new ItemShovelFT(TM.adamantium, ItemNames.adamantiumShovel);
-        adamantiumAxe = new ItemAxeFT(TM.adamantium, ItemNames.adamantiumAxe);
-        adamantiumHoe = new ItemHoeFT(TM.adamantium, ItemNames.adamantiumHoe);
-        adamantiumSword = new ItemSwordFT(TM.adamantium, ItemNames.adamantiumSword);
-
-        silkPickaxe = new ItemPickaxeFT(TM.silk, ItemNames.silkPickaxe);
-        silkShovel = new ItemShovelFT(TM.silk, ItemNames.silkShovel);
-        silkAxe = new ItemAxeFT(TM.silk, ItemNames.silkAxe);
-        silkHoe = new ItemHoeFT(TM.silk, ItemNames.silkHoe);
-        silkSword = new ItemSwordFT(TM.silk, ItemNames.silkSword);
-
-        redstonePickaxe = new ItemPickaxeFT(TM.redstone, ItemNames.redstonePickaxe);
-        redstoneShovel = new ItemShovelFT(TM.redstone, ItemNames.redstoneShovel);
-        redstoneAxe = new ItemAxeFT(TM.redstone, ItemNames.redstoneAxe);
-        redstoneHoe = new ItemHoeFT(TM.redstone, ItemNames.redstoneHoe);
-        redstoneSword = new ItemSwordFT(TM.redstone, ItemNames.redstoneSword);
-
-        quartzHelmet = new ItemArmorFT(AM.quartzArmor, ArmorType.helmet, ItemNames.quartzHelmet);
-        quartzChestplate = new ItemArmorFT(AM.quartzArmor, ArmorType.chestplate, ItemNames.quartzChestplate);
-        quartzLeggings = new ItemArmorFT(AM.quartzArmor, ArmorType.leggings, ItemNames.quartzLeggings);
-        quartzBoots = new ItemArmorFT(AM.quartzArmor, ArmorType.boots, ItemNames.quartzBoots);
-
-        obsidianHelmet = new ItemArmorFT(AM.obsidianArmor, ArmorType.helmet, ItemNames.obsidianHelmet);
-        obsidianChestplate = new ItemArmorFT(AM.obsidianArmor, ArmorType.chestplate, ItemNames.obsidianChestplate);
-        obsidianLeggings = new ItemArmorFT(AM.obsidianArmor, ArmorType.leggings, ItemNames.obsidianLeggings);
-        obsidianBoots = new ItemArmorFT(AM.obsidianArmor, ArmorType.boots, ItemNames.obsidianBoots);
-
-        emeraldHelmet = new ItemArmorFT(AM.emeraldArmor, ArmorType.helmet, ItemNames.emeraldHelmet);
-        emeraldChestplate = new ItemArmorFT(AM.emeraldArmor, ArmorType.chestplate, ItemNames.emeraldChestplate);
-        emeraldLeggings = new ItemArmorFT(AM.emeraldArmor, ArmorType.leggings, ItemNames.emeraldLeggings);
-        emeraldBoots = new ItemArmorFT(AM.emeraldArmor, ArmorType.boots, ItemNames.emeraldBoots);
-
-        lapisHelmet = new ItemArmorFT(AM.lapisArmor, ArmorType.helmet, ItemNames.lapisHelmet);
-        lapisChestplate = new ItemArmorFT(AM.lapisArmor, ArmorType.chestplate, ItemNames.lapisChestplate);
-        lapisLeggings = new ItemArmorFT(AM.lapisArmor, ArmorType.leggings, ItemNames.lapisLeggings);
-        lapisBoots = new ItemArmorFT(AM.lapisArmor, ArmorType.boots, ItemNames.lapisBoots);
-
-        bronzeHelmet = new ItemArmorFT(AM.bronzeArmor, ArmorType.helmet, ItemNames.bronzeHelmet);
-        bronzeChestplate = new ItemArmorFT(AM.bronzeArmor, ArmorType.chestplate, ItemNames.bronzeChestplate);
-        bronzeLeggings = new ItemArmorFT(AM.bronzeArmor, ArmorType.leggings, ItemNames.bronzeLeggings);
-        bronzeBoots = new ItemArmorFT(AM.bronzeArmor, ArmorType.boots, ItemNames.bronzeBoots);
-
-        coalHelmet = new ItemArmorFT(AM.coalArmor, ArmorType.helmet, ItemNames.coalHelmet);
-        coalChestplate = new ItemArmorFT(AM.coalArmor, ArmorType.chestplate, ItemNames.coalChestplate);
-        coalLeggings = new ItemArmorFT(AM.coalArmor, ArmorType.leggings, ItemNames.coalLeggings);
-        coalBoots = new ItemArmorFT(AM.coalArmor, ArmorType.boots, ItemNames.coalBoots);
-
-        glowstoneHelmet = new ItemArmorFT(AM.glowstoneArmor, ArmorType.helmet, ItemNames.glowstoneHelmet);
-        glowstoneChestplate = new ItemArmorFT(AM.glowstoneArmor, ArmorType.chestplate, ItemNames.glowstoneChestplate);
-        glowstoneLeggings = new ItemArmorFT(AM.glowstoneArmor, ArmorType.leggings, ItemNames.glowstoneLeggings);
-        glowstoneBoots = new ItemArmorFT(AM.glowstoneArmor, ArmorType.boots, ItemNames.glowstoneBoots);
-
-        adamantiumHelmet = new ItemArmorFT(AM.adamantiumArmor, ArmorType.helmet, ItemNames.adamantiumHelmet);
-        adamantiumChestplate = new ItemArmorFT(AM.adamantiumArmor, ArmorType.chestplate, ItemNames.adamantiumChestplate);
-        adamantiumLeggings = new ItemArmorFT(AM.adamantiumArmor, ArmorType.leggings, ItemNames.adamantiumLeggings);
-        adamantiumBoots = new ItemArmorFT(AM.adamantiumArmor, ArmorType.boots, ItemNames.adamantiumBoots);
-
-        redstoneHelmet = new ItemArmorFT(AM.redstoneArmor, ArmorType.helmet, ItemNames.redstoneHelmet);
-        redstoneChestplate = new ItemArmorFT(AM.redstoneArmor, ArmorType.chestplate, ItemNames.redstoneChestplate);
-        redstoneLeggings = new ItemArmorFT(AM.redstoneArmor, ArmorType.leggings, ItemNames.redstoneLeggings);
-        redstoneBoots = new ItemArmorFT(AM.redstoneArmor, ArmorType.boots, ItemNames.redstoneBoots);
-
-        bowQuartz = new ItemBowFT(TM.quartz, ItemNames.bowQuartz);
-        bowObsidian = new ItemBowFT(TM.obsidian, ItemNames.bowObsidian);
-        bowEmerald = new ItemBowFT(TM.emerald, ItemNames.bowEmerald);
-        bowLapis = new ItemBowFT(TM.lapis, ItemNames.bowLapis);
-        bowBronze = new ItemBowBronze();
-        bowCoal = new ItemBowCoal();
-        bowGlowstone = new ItemBowGlowstone();
-        bowAdamantium = new ItemBowFT(TM.adamantium, ItemNames.bowAdamantium);
-        bowSilk = new ItemBowFT(TM.silk, ItemNames.bowSilk);
-        bowRedstone = new ItemBowFT(TM.redstone, ItemNames.bowRedstone);
-
-        quartzShears = new ItemShearsFT(TM.quartz, ItemNames.quartzShears);
-        obsidianShears = new ItemShearsFT(TM.obsidian, ItemNames.obsidianShears);
-        emeraldShears = new ItemShearsFT(TM.emerald, ItemNames.emeraldShears);
-        lapisShears = new ItemShearsFT(TM.lapis, ItemNames.lapisShears);
-        bronzeShears = new ItemShearsFT(TM.bronze, ItemNames.bronzeShears);
-        coalShears = new ItemShearsFT(TM.coal, ItemNames.coalShears);
-        glowstoneShears = new ItemShearsFT(TM.glowstone, ItemNames.glowstoneShears);
-        adamantiumShears = new ItemShearsFT(TM.adamantium, ItemNames.adamantiumShears);
-        silkShears = new ItemShearsFT(TM.silk, ItemNames.silkShears);
-        redstoneShears = new ItemShearsFT(TM.redstone, ItemNames.redstoneShears);
-
-        stickFT = new ItemStickFT();
-    }
+        public static final ItemMultiFT stickFT = new ItemMultiFT(ItemNames.sticks, ItemNames.stickFT);
 
     public static void registerItems()
     {
@@ -443,16 +291,16 @@ public class ModItems
         GameRegistry.registerItem(redstoneLeggings, ItemNames.redstoneLeggings);
         GameRegistry.registerItem(redstoneBoots, ItemNames.redstoneBoots);
 
-        GameRegistry.registerItem(bowQuartz, ItemNames.bowQuartz[0]);
-        GameRegistry.registerItem(bowObsidian, ItemNames.bowObsidian[0]);
-        GameRegistry.registerItem(bowEmerald, ItemNames.bowEmerald[0]);
-        GameRegistry.registerItem(bowLapis, ItemNames.bowLapis[0]);
-        GameRegistry.registerItem(bowBronze, ItemNames.bowBronze[0]);
-        GameRegistry.registerItem(bowCoal, ItemNames.bowCoal[0]);
-        GameRegistry.registerItem(bowGlowstone, ItemNames.bowGlowstone[0]);
-        GameRegistry.registerItem(bowAdamantium, ItemNames.bowAdamantium[0]);
-        GameRegistry.registerItem(bowSilk, ItemNames.bowSilk[0]);
-        GameRegistry.registerItem(bowRedstone, ItemNames.bowRedstone[0]);
+        GameRegistry.registerItem(bowQuartz, ItemNames.bowQuartz);
+        GameRegistry.registerItem(bowObsidian, ItemNames.bowObsidian);
+        GameRegistry.registerItem(bowEmerald, ItemNames.bowEmerald);
+        GameRegistry.registerItem(bowLapis, ItemNames.bowLapis);
+        GameRegistry.registerItem(bowBronze, ItemNames.bowBronze);
+        GameRegistry.registerItem(bowCoal, ItemNames.bowCoal);
+        GameRegistry.registerItem(bowGlowstone, ItemNames.bowGlowstone);
+        GameRegistry.registerItem(bowAdamantium, ItemNames.bowAdamantium);
+        GameRegistry.registerItem(bowSilk, ItemNames.bowSilk);
+        GameRegistry.registerItem(bowRedstone, ItemNames.bowRedstone);
 
         GameRegistry.registerItem(quartzShears, ItemNames.quartzShears);
         GameRegistry.registerItem(obsidianShears, ItemNames.obsidianShears);
@@ -466,5 +314,151 @@ public class ModItems
         GameRegistry.registerItem(redstoneShears, ItemNames.redstoneShears);
 
         GameRegistry.registerItem(stickFT, ItemNames.stickFT);
+        registerModels();
+    }
+
+    public static void registerModels() {
+        register(ingotObsidian, new ModelResLocFT(ItemNames.ingotObsidian));
+        register(gemEmerald, new ModelResLocFT(ItemNames.gemEmerald));
+        register(gemLapis, new ModelResLocFT(ItemNames.gemLapis));
+        register(ingotBronze, new ModelResLocFT(ItemNames.ingotBronze));
+        register(ingotCoal, new ModelResLocFT(ItemNames.ingotCoal));
+        register(ingotGlowstone, new ModelResLocFT(ItemNames.ingotGlowstone));
+        register(ingotAdamantium, new ModelResLocFT(ItemNames.ingotAdamantium));
+        register(gemSilk, new ModelResLocFT(ItemNames.gemSilk));
+        register(gemRedstone, new ModelResLocFT(ItemNames.gemRedstone));
+
+        register(gemExp, new ModelResLocFT(ItemNames.gemExp));
+        register(gemExp2, new ModelResLocFT(ItemNames.gemExp2));
+        register(gemExp3, new ModelResLocFT(ItemNames.gemExp3));
+
+        for (int i = 0; i < ItemNames.staffExpVariants.length; i++) {
+            Item[] staffs = new Item[]{staffExp, staffExp2, staffExp3};
+            register(staffs[i], new ModelResLocFT(ItemNames.staffExpVariants[i]));
+        }
+
+        register(shardExp, new ModelResLocFT(ItemNames.shardExp));
+        register(expCollector, new ModelResLocFT(ItemNames.expCollector));
+
+        register(quartzPickaxe, new ModelResLocFT(ItemNames.quartzPickaxe));
+        register(quartzShovel, new ModelResLocFT(ItemNames.quartzShovel));
+        register(quartzAxe, new ModelResLocFT(ItemNames.quartzAxe));
+        register(quartzHoe, new ModelResLocFT(ItemNames.quartzHoe));
+        register(quartzSword, new ModelResLocFT(ItemNames.quartzSword));
+
+        register(obsidianPickaxe, new ModelResLocFT(ItemNames.obsidianPickaxe));
+        register(obsidianShovel, new ModelResLocFT(ItemNames.obsidianShovel));
+        register(obsidianAxe, new ModelResLocFT(ItemNames.obsidianAxe));
+        register(obsidianHoe, new ModelResLocFT(ItemNames.obsidianHoe));
+        register(obsidianSword, new ModelResLocFT(ItemNames.obsidianSword));
+
+        register(emeraldPickaxe, new ModelResLocFT(ItemNames.emeraldPickaxe));
+        register(emeraldShovel, new ModelResLocFT(ItemNames.emeraldShovel));
+        register(emeraldAxe, new ModelResLocFT(ItemNames.emeraldAxe));
+        register(emeraldHoe, new ModelResLocFT(ItemNames.emeraldHoe));
+        register(emeraldSword, new ModelResLocFT(ItemNames.emeraldSword));
+
+        register(lapisPickaxe, new ModelResLocFT(ItemNames.lapisPickaxe));
+        register(lapisShovel, new ModelResLocFT(ItemNames.lapisShovel));
+        register(lapisAxe, new ModelResLocFT(ItemNames.lapisAxe));
+        register(lapisHoe, new ModelResLocFT(ItemNames.lapisHoe));
+        register(lapisSword, new ModelResLocFT(ItemNames.lapisSword));
+
+        register(bronzePickaxe, new ModelResLocFT(ItemNames.bronzePickaxe));
+        register(bronzeShovel, new ModelResLocFT(ItemNames.bronzeShovel));
+        register(bronzeAxe, new ModelResLocFT(ItemNames.bronzeAxe));
+        register(bronzeHoe, new ModelResLocFT(ItemNames.bronzeHoe));
+        register(bronzeSword, new ModelResLocFT(ItemNames.bronzeSword));
+
+        register(coalPickaxe, new ModelResLocFT(ItemNames.coalPickaxe));
+        register(coalShovel, new ModelResLocFT(ItemNames.coalShovel));
+        register(coalAxe, new ModelResLocFT(ItemNames.coalAxe));
+        register(coalHoe, new ModelResLocFT(ItemNames.coalHoe));
+        register(coalSword, new ModelResLocFT(ItemNames.coalSword));
+
+        register(glowstonePickaxe, new ModelResLocFT(ItemNames.glowstonePickaxe));
+        register(glowstoneShovel, new ModelResLocFT(ItemNames.glowstoneShovel));
+        register(glowstoneAxe, new ModelResLocFT(ItemNames.glowstoneAxe));
+        register(glowstoneHoe, new ModelResLocFT(ItemNames.glowstoneHoe));
+        register(glowstoneSword, new ModelResLocFT(ItemNames.glowstoneSword));
+
+        register(adamantiumPickaxe, new ModelResLocFT(ItemNames.adamantiumPickaxe));
+        register(adamantiumShovel, new ModelResLocFT(ItemNames.adamantiumShovel));
+        register(adamantiumAxe, new ModelResLocFT(ItemNames.adamantiumAxe));
+        register(adamantiumHoe, new ModelResLocFT(ItemNames.adamantiumHoe));
+        register(adamantiumSword, new ModelResLocFT(ItemNames.adamantiumSword));
+
+        register(silkPickaxe, new ModelResLocFT(ItemNames.silkPickaxe));
+        register(silkShovel, new ModelResLocFT(ItemNames.silkShovel));
+        register(silkAxe, new ModelResLocFT(ItemNames.silkAxe));
+        register(silkHoe, new ModelResLocFT(ItemNames.silkHoe));
+        register(silkSword, new ModelResLocFT(ItemNames.silkSword));
+
+        register(redstonePickaxe, new ModelResLocFT(ItemNames.redstonePickaxe));
+        register(redstoneShovel, new ModelResLocFT(ItemNames.redstoneShovel));
+        register(redstoneAxe, new ModelResLocFT(ItemNames.redstoneAxe));
+        register(redstoneHoe, new ModelResLocFT(ItemNames.redstoneHoe));
+        register(redstoneSword, new ModelResLocFT(ItemNames.redstoneSword));
+
+        register(quartzHelmet, new ModelResLocFT(ItemNames.quartzHelmet));
+        register(quartzChestplate, new ModelResLocFT(ItemNames.quartzChestplate));
+        register(quartzLeggings, new ModelResLocFT(ItemNames.quartzLeggings));
+        register(quartzBoots, new ModelResLocFT(ItemNames.quartzBoots));
+
+        register(obsidianHelmet, new ModelResLocFT(ItemNames.obsidianHelmet));
+        register(obsidianChestplate, new ModelResLocFT(ItemNames.obsidianChestplate));
+        register(obsidianLeggings, new ModelResLocFT(ItemNames.obsidianLeggings));
+        register(obsidianBoots, new ModelResLocFT(ItemNames.obsidianBoots));
+
+        register(emeraldHelmet, new ModelResLocFT(ItemNames.emeraldHelmet));
+        register(emeraldChestplate, new ModelResLocFT(ItemNames.emeraldChestplate));
+        register(emeraldLeggings, new ModelResLocFT(ItemNames.emeraldLeggings));
+        register(emeraldBoots, new ModelResLocFT(ItemNames.emeraldBoots));
+
+        register(lapisHelmet, new ModelResLocFT(ItemNames.lapisHelmet));
+        register(lapisChestplate, new ModelResLocFT(ItemNames.lapisChestplate));
+        register(lapisLeggings, new ModelResLocFT(ItemNames.lapisLeggings));
+        register(lapisBoots, new ModelResLocFT(ItemNames.lapisBoots));
+
+        register(bronzeHelmet, new ModelResLocFT(ItemNames.bronzeHelmet));
+        register(bronzeChestplate, new ModelResLocFT(ItemNames.bronzeChestplate));
+        register(bronzeLeggings, new ModelResLocFT(ItemNames.bronzeLeggings));
+        register(bronzeBoots, new ModelResLocFT(ItemNames.bronzeBoots));
+
+        register(coalHelmet, new ModelResLocFT(ItemNames.coalHelmet));
+        register(coalChestplate, new ModelResLocFT(ItemNames.coalChestplate));
+        register(coalLeggings, new ModelResLocFT(ItemNames.coalLeggings));
+        register(coalBoots, new ModelResLocFT(ItemNames.coalBoots));
+
+        register(glowstoneHelmet, new ModelResLocFT(ItemNames.glowstoneHelmet));
+        register(glowstoneChestplate, new ModelResLocFT(ItemNames.glowstoneChestplate));
+        register(glowstoneLeggings, new ModelResLocFT(ItemNames.glowstoneLeggings));
+        register(glowstoneBoots, new ModelResLocFT(ItemNames.glowstoneBoots));
+
+        register(adamantiumHelmet, new ModelResLocFT(ItemNames.adamantiumHelmet));
+        register(adamantiumChestplate, new ModelResLocFT(ItemNames.adamantiumChestplate));
+        register(adamantiumLeggings, new ModelResLocFT(ItemNames.adamantiumLeggings));
+        register(adamantiumBoots, new ModelResLocFT(ItemNames.adamantiumBoots));
+
+        register(redstoneHelmet, new ModelResLocFT(ItemNames.redstoneHelmet));
+        register(redstoneChestplate, new ModelResLocFT(ItemNames.redstoneChestplate));
+        register(redstoneLeggings, new ModelResLocFT(ItemNames.redstoneLeggings));
+        register(redstoneBoots, new ModelResLocFT(ItemNames.redstoneBoots));
+    }
+
+    private static void registerVariants(){
+        addVariant();
+    }
+
+    public static void register(Item item, int meta, ModelResourceLocation model){
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, model);
+    }
+
+    public static void register(Item item, ModelResourceLocation model){
+        register(item, 0, model);
+    }
+
+    public static void addVariant(Item item, String variant){
+        ModelBakery.addVariantName(item, "fergotools:" + variant);
     }
 }

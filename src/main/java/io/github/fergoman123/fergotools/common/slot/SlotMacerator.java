@@ -9,7 +9,6 @@
 
 package io.github.fergoman123.fergotools.common.slot;
 
-import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
 import io.github.fergoman123.fergoutil.inventory.SlotFuelFergo;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;

@@ -10,15 +10,14 @@
 package io.github.fergoman123.fergotools.config;
 
 
-import net.minecraftforge.fml.client.event.ConfigChangedEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import io.github.fergoman123.fergotools.FergoTools;
+import java.io.File;
+
 import io.github.fergoman123.fergotools.log.LoggerFT;
 import io.github.fergoman123.fergotools.reference.ModInfo;
 import io.github.fergoman123.fergoutil.helper.ConfigHelper;
 import net.minecraftforge.common.config.Configuration;
-
-import java.io.File;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ConfigHandler
 {

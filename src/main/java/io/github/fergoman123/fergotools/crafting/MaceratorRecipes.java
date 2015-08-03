@@ -9,21 +9,18 @@
 
 package io.github.fergoman123.fergotools.crafting;
 
- import net.minecraft.block.Block;
- import net.minecraft.init.Blocks;
- import net.minecraft.init.Items;
- import net.minecraft.item.Item;
- import net.minecraft.item.ItemStack;
-
  import java.util.HashMap;
- import java.util.Iterator;
- import java.util.Map;
+import java.util.Iterator;
+import java.util.Map;
+
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 
  public class MaceratorRecipes
 {
     private static final MaceratorRecipes instance = new MaceratorRecipes();
-    private Map smeltingList = new HashMap();
-    private Map experienceList = new HashMap();
+    private Map<ItemStack, ItemStack> smeltingList = new HashMap<ItemStack, ItemStack>();
+    private Map<ItemStack, Float> experienceList = new HashMap<ItemStack, Float>();
 
     public static MaceratorRecipes macerating()
     {
@@ -41,7 +38,8 @@ package io.github.fergoman123.fergotools.crafting;
         this.experienceList.put(output, Float.valueOf(experience));
     }
 
-    public ItemStack getSmeltingResult(ItemStack stack)
+    @SuppressWarnings("rawtypes")
+	public ItemStack getSmeltingResult(ItemStack stack)
     {
         Iterator iterator = this.smeltingList.entrySet().iterator();
         Map.Entry entry;
@@ -65,12 +63,13 @@ package io.github.fergoman123.fergotools.crafting;
         return stack2.getItem() == stack1.getItem() && (stack2.getItemDamage() == 32767 || stack2.getItemDamage() == stack1.getItemDamage());
     }
 
-    public Map getSmeltingList()
+    public Map<ItemStack, ItemStack> getSmeltingList()
     {
         return this.smeltingList;
     }
 
-    public float getSmeltingExperience(ItemStack stack)
+    @SuppressWarnings("rawtypes")
+	public float getSmeltingExperience(ItemStack stack)
     {
         float ret = stack.getItem().getSmeltingExperience(stack);
         if (ret != -1)return ret;

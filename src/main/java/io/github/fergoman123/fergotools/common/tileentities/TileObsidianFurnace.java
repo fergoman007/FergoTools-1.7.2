@@ -1,6 +1,5 @@
 package io.github.fergoman123.fergotools.common.tileentities;
 
-import io.github.fergoman123.fergotools.api.base.TileFurnaceFT;
 import io.github.fergoman123.fergotools.common.blocks.BlockObsidianFurnace;
 import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.ContainerObsidianFurnace;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;

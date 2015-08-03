@@ -9,8 +9,7 @@
 
 package io.github.fergoman123.fergotools.util;
 
-import io.github.fergoman123.fergotools.api.base.ItemBowFT;
-import io.github.fergoman123.fergotools.api.base.ModelResLocFT;
+import io.github.fergoman123.fergotools.item.ItemBowFT;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;

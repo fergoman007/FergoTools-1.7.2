@@ -9,10 +9,9 @@
 
 package io.github.fergoman123.fergotools.event;
 
+import io.github.fergoman123.fergotools.log.LoggerFT;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
-import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergotools.log.LoggerFT;
 
 public class OnPlayerLoggedInEvent
 {

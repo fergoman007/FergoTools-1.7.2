@@ -1,6 +1,5 @@
 package io.github.fergoman123.fergotools.common.gui;
 
-import io.github.fergoman123.fergotools.api.base.GuiFurnaceFT;
 import io.github.fergoman123.fergotools.common.tileentities.*;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
