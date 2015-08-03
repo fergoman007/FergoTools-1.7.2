@@ -14,8 +14,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ModItems
-{
+public class ModItems {
     public static final ItemFT ingotObsidian = new ItemFT(ItemNames.ingotObsidian);
     public static final ItemFT gemEmerald = new ItemFT(ItemNames.gemEmerald);
     public static final ItemFT gemLapis = new ItemFT(ItemNames.gemLapis);
@@ -115,32 +114,32 @@ public class ModItems
     public static final ItemArmorFT lapisHelmet = new ItemArmorLapis(ArmorType.helmet, ItemNames.lapisHelmet);
     public static final ItemArmorFT lapisChestplate = new ItemArmorLapis(ArmorType.chestplate, ItemNames.lapisChestplate);
     public static final ItemArmorFT lapisLeggings = new ItemArmorLapis(ArmorType.leggings, ItemNames.lapisLeggings);
-    public static final ItemArmorFT lapisBoots = new ItemArmorLapis(ArmorType.boots, ItemNames.lapisBoots;
+    public static final ItemArmorFT lapisBoots = new ItemArmorLapis(ArmorType.boots, ItemNames.lapisBoots);
 
     public static final ItemArmorFT bronzeHelmet = new ItemArmorBronze(ArmorType.helmet, ItemNames.bronzeHelmet);
     public static final ItemArmorFT bronzeChestplate = new ItemArmorBronze(ArmorType.chestplate, ItemNames.bronzeChestplate);
     public static final ItemArmorFT bronzeLeggings = new ItemArmorBronze(ArmorType.leggings, ItemNames.bronzeLeggings);
     public static final ItemArmorFT bronzeBoots = new ItemArmorBronze(ArmorType.boots, ItemNames.bronzeBoots);
 
-    public static final ItemArmorFT coalHelmet;
-    public static final ItemArmorFT coalChestplate;
-    public static final ItemArmorFT coalLeggings;
-    public static final ItemArmorFT coalBoots;
+    public static final ItemArmorFT coalHelmet = new ItemArmorCoal(ArmorType.helmet, ItemNames.coalHelmet);
+    public static final ItemArmorFT coalChestplate = new ItemArmorCoal(ArmorType.chestplate, ItemNames.coalChestplate);
+    public static final ItemArmorFT coalLeggings = new ItemArmorCoal(ArmorType.leggings, ItemNames.coalLeggings);
+    public static final ItemArmorFT coalBoots = new ItemArmorCoal(ArmorType.boots, ItemNames.coalBoots);
 
-    public static final ItemArmorFT glowstoneHelmet;
-    public static final ItemArmorFT glowstoneChestplate;
-    public static final ItemArmorFT glowstoneLeggings;
-    public static final ItemArmorFT glowstoneBoots;
+    public static final ItemArmorFT glowstoneHelmet = new ItemArmorGlowstone(ArmorType.helmet, ItemNames.glowstoneHelmet);
+    public static final ItemArmorFT glowstoneChestplate = new ItemArmorGlowstone(ArmorType.chestplate, ItemNames.glowstoneChestplate);
+    public static final ItemArmorFT glowstoneLeggings = new ItemArmorGlowstone(ArmorType.leggings, ItemNames.glowstoneLeggings);
+    public static final ItemArmorFT glowstoneBoots = new ItemArmorGlowstone(ArmorType.boots, ItemNames.glowstoneBoots);
 
-    public static final ItemArmorFT adamantiumHelmet;
-    public static final ItemArmorFT adamantiumChestplate;
-    public static final ItemArmorFT adamantiumLeggings;
-    public static final ItemArmorFT adamantiumBoots;
+    public static final ItemArmorFT adamantiumHelmet = new ItemArmorAdamantium(ArmorType.helmet, ItemNames.adamantiumHelmet);
+    public static final ItemArmorFT adamantiumChestplate = new ItemArmorAdamantium(ArmorType.chestplate, ItemNames.adamantiumChestplate);
+    public static final ItemArmorFT adamantiumLeggings = new ItemArmorAdamantium(ArmorType.leggings, ItemNames.adamantiumLeggings);
+    public static final ItemArmorFT adamantiumBoots = new ItemArmorAdamantium(ArmorType.boots, ItemNames.adamantiumBoots);
 
-    public static final ItemArmorFT redstoneHelmet;
-    public static final ItemArmorFT redstoneChestplate;
-    public static final ItemArmorFT redstoneLeggings;
-    public static final ItemArmorFT redstoneBoots;
+    public static final ItemArmorFT redstoneHelmet = new ItemArmorRedstone(ArmorType.helmet, ItemNames.redstoneHelmet);
+    public static final ItemArmorFT redstoneChestplate = new ItemArmorRedstone(ArmorType.chestplate, ItemNames.redstoneChestplate);
+    public static final ItemArmorFT redstoneLeggings = new ItemArmorRedstone(ArmorType.leggings, ItemNames.redstoneLeggings);
+    public static final ItemArmorFT redstoneBoots = new ItemArmorRedstone(ArmorType.boots, ItemNames.redstoneBoots);
 
     public static final ItemBowFT bowQuartz = new ItemBowFT(TM.quartz, ItemNames.bowQuartz);
     public static final ItemBowFT bowObsidian = new ItemBowFT(TM.obsidian, ItemNames.bowObsidian);
@@ -153,21 +152,20 @@ public class ModItems
     public static final ItemBowFT bowSilk = new ItemBowFT(TM.silk, ItemNames.bowSilk);
     public static final ItemBowFT bowRedstone = new ItemBowFT(TM.redstone, ItemNames.bowRedstone);
 
-        public static final ItemShearsFT quartzShears = new ItemShearsFT(TM.quartz, ItemNames.quartzShears);
-        public static final ItemShearsFT obsidianShears = new ItemShearsFT(TM.obsidian, ItemNames.obsidianShears);
-        public static final ItemShearsFT emeraldShears = new ItemShearsFT(TM.emerald, ItemNames.emeraldShears);
-        public static final ItemShearsFT lapisShears = new ItemShearsFT(TM.lapis, ItemNames.lapisShears);
-        public static final ItemShearsFT bronzeShears = new ItemShearsFT(TM.bronze, ItemNames.bronzeShears);
-        public static final ItemShearsFT coalShears = new ItemShearsFT(TM.coal, ItemNames.coalShears);
-        public static final ItemShearsFT glowstoneShears = new ItemShearsFT(TM.glowstone, ItemNames.glowstoneShears);
-        public static final ItemShearsFT adamantiumShears = new ItemShearsFT(TM.adamantium, ItemNames.adamantiumShears);
-        public static final ItemShearsFT silkShears = new ItemShearsFT(TM.silk, ItemNames.silkShears);
-        public static final ItemShearsFT redstoneShears = new ItemShearsFT(TM.redstone, ItemNames.redstoneShears);
+    public static final ItemShearsFT quartzShears = new ItemShearsFT(TM.quartz, ItemNames.quartzShears);
+    public static final ItemShearsFT obsidianShears = new ItemShearsFT(TM.obsidian, ItemNames.obsidianShears);
+    public static final ItemShearsFT emeraldShears = new ItemShearsFT(TM.emerald, ItemNames.emeraldShears);
+    public static final ItemShearsFT lapisShears = new ItemShearsFT(TM.lapis, ItemNames.lapisShears);
+    public static final ItemShearsFT bronzeShears = new ItemShearsFT(TM.bronze, ItemNames.bronzeShears);
+    public static final ItemShearsFT coalShears = new ItemShearsFT(TM.coal, ItemNames.coalShears);
+    public static final ItemShearsFT glowstoneShears = new ItemShearsFT(TM.glowstone, ItemNames.glowstoneShears);
+    public static final ItemShearsFT adamantiumShears = new ItemShearsFT(TM.adamantium, ItemNames.adamantiumShears);
+    public static final ItemShearsFT silkShears = new ItemShearsFT(TM.silk, ItemNames.silkShears);
+    public static final ItemShearsFT redstoneShears = new ItemShearsFT(TM.redstone, ItemNames.redstoneShears);
 
-        public static final ItemMultiFT stickFT = new ItemMultiFT(ItemNames.sticks, ItemNames.stickFT);
+    public static final ItemMultiFT stickFT = new ItemMultiFT(ItemNames.sticks, ItemNames.stickFT);
 
-    public static void registerItems()
-    {
+    public static void registerItems() {
         GameRegistry.registerItem(ingotObsidian, ItemNames.ingotObsidian);
         GameRegistry.registerItem(gemEmerald, ItemNames.gemEmerald);
         GameRegistry.registerItem(gemLapis, ItemNames.gemLapis);
@@ -177,12 +175,15 @@ public class ModItems
         GameRegistry.registerItem(ingotAdamantium, ItemNames.ingotAdamantium);
         GameRegistry.registerItem(gemSilk, ItemNames.gemSilk);
         GameRegistry.registerItem(gemRedstone, ItemNames.gemRedstone);
+
         GameRegistry.registerItem(gemExp, ItemNames.gemExp);
         GameRegistry.registerItem(gemExp2, ItemNames.gemExp2);
         GameRegistry.registerItem(gemExp3, ItemNames.gemExp3);
-        GameRegistry.registerItem(staffExp, ItemNames.staffExpVariants[0]);
-        GameRegistry.registerItem(staffExp2, ItemNames.staffExpVariants[1]);
-        GameRegistry.registerItem(staffExp3, ItemNames.staffExpVariants[2]);
+
+        GameRegistry.registerItem(staffExp, ItemNames.staffExp);
+        GameRegistry.registerItem(staffExp2, ItemNames.staffExp2);
+        GameRegistry.registerItem(staffExp3, ItemNames.staffExp3);
+
         GameRegistry.registerItem(shardExp, ItemNames.shardExp);
         GameRegistry.registerItem(expCollector, ItemNames.expCollector);
 
@@ -314,151 +315,337 @@ public class ModItems
         GameRegistry.registerItem(redstoneShears, ItemNames.redstoneShears);
 
         GameRegistry.registerItem(stickFT, ItemNames.stickFT);
+
+
         registerModels();
+        registerVariants();
     }
 
-    public static void registerModels() {
-        register(ingotObsidian, new ModelResLocFT(ItemNames.ingotObsidian));
-        register(gemEmerald, new ModelResLocFT(ItemNames.gemEmerald));
-        register(gemLapis, new ModelResLocFT(ItemNames.gemLapis));
-        register(ingotBronze, new ModelResLocFT(ItemNames.ingotBronze));
-        register(ingotCoal, new ModelResLocFT(ItemNames.ingotCoal));
-        register(ingotGlowstone, new ModelResLocFT(ItemNames.ingotGlowstone));
-        register(ingotAdamantium, new ModelResLocFT(ItemNames.ingotAdamantium));
-        register(gemSilk, new ModelResLocFT(ItemNames.gemSilk));
-        register(gemRedstone, new ModelResLocFT(ItemNames.gemRedstone));
+    private static void registerModels() {
+        register(ingotObsidian, "fergotools:ingotObsidian");
+        register(gemEmerald, "fergotools:gemEmerald");
+        register(gemLapis, "fergotools:gemLapis");
+        register(ingotBronze, "fergotools:ingotBronze");
+        register(ingotCoal, "fergotools:ingotCoal");
+        register(ingotGlowstone, "fergotools:ingotGlowstone");
+        register(ingotAdamantium, "fergotools:ingotAdamantium");
+        register(gemSilk, "fergotools:gemSilk");
+        register(gemRedstone, "fergotools:gemRedstone");
 
-        register(gemExp, new ModelResLocFT(ItemNames.gemExp));
-        register(gemExp2, new ModelResLocFT(ItemNames.gemExp2));
-        register(gemExp3, new ModelResLocFT(ItemNames.gemExp3));
+        register(gemExp, "fergotools:gemExp");
+        register(gemExp2, "fergotools:gemExp2");
+        register(gemExp3, "fergotools:gemExp3");
 
-        for (int i = 0; i < ItemNames.staffExpVariants.length; i++) {
-            Item[] staffs = new Item[]{staffExp, staffExp2, staffExp3};
-            register(staffs[i], new ModelResLocFT(ItemNames.staffExpVariants[i]));
-        }
+        register(staffExp, "fergotools:staffExp");
+        register(staffExp2, "fergotools:staffExp2");
+        register(staffExp3, "fergotools:staffExp3");
 
-        register(shardExp, new ModelResLocFT(ItemNames.shardExp));
-        register(expCollector, new ModelResLocFT(ItemNames.expCollector));
+        register(shardExp, "fergotools:shardExp");
+        register(expCollector, "fergotools:expCollector");
 
-        register(quartzPickaxe, new ModelResLocFT(ItemNames.quartzPickaxe));
-        register(quartzShovel, new ModelResLocFT(ItemNames.quartzShovel));
-        register(quartzAxe, new ModelResLocFT(ItemNames.quartzAxe));
-        register(quartzHoe, new ModelResLocFT(ItemNames.quartzHoe));
-        register(quartzSword, new ModelResLocFT(ItemNames.quartzSword));
+        register(quartzPickaxe, "fergotools:quartzPickaxe");
+        register(quartzShovel, "fergotools:quartzShovel");
+        register(quartzAxe, "fergotools:quartzAxe");
+        register(quartzHoe, "fergotools:quartzHoe");
+        register(quartzSword, "fergotools:quartzSword");
 
-        register(obsidianPickaxe, new ModelResLocFT(ItemNames.obsidianPickaxe));
-        register(obsidianShovel, new ModelResLocFT(ItemNames.obsidianShovel));
-        register(obsidianAxe, new ModelResLocFT(ItemNames.obsidianAxe));
-        register(obsidianHoe, new ModelResLocFT(ItemNames.obsidianHoe));
-        register(obsidianSword, new ModelResLocFT(ItemNames.obsidianSword));
+        register(obsidianPickaxe, "fergotools:obsidianPickaxe");
+        register(obsidianShovel, "fergotools:obsidianShovel");
+        register(obsidianAxe, "fergotools:obsidianAxe");
+        register(obsidianHoe, "fergotools:obsidianHoe");
+        register(obsidianSword, "fergotools:obsidianSword");
 
-        register(emeraldPickaxe, new ModelResLocFT(ItemNames.emeraldPickaxe));
-        register(emeraldShovel, new ModelResLocFT(ItemNames.emeraldShovel));
-        register(emeraldAxe, new ModelResLocFT(ItemNames.emeraldAxe));
-        register(emeraldHoe, new ModelResLocFT(ItemNames.emeraldHoe));
-        register(emeraldSword, new ModelResLocFT(ItemNames.emeraldSword));
+        register(emeraldPickaxe, "fergotools:emeraldPickaxe");
+        register(emeraldShovel, "fergotools:emeraldShovel");
+        register(emeraldAxe, "fergotools:emeraldAxe");
+        register(emeraldHoe, "fergotools:emeraldHoe");
+        register(emeraldSword, "fergotools:emeraldSword");
 
-        register(lapisPickaxe, new ModelResLocFT(ItemNames.lapisPickaxe));
-        register(lapisShovel, new ModelResLocFT(ItemNames.lapisShovel));
-        register(lapisAxe, new ModelResLocFT(ItemNames.lapisAxe));
-        register(lapisHoe, new ModelResLocFT(ItemNames.lapisHoe));
-        register(lapisSword, new ModelResLocFT(ItemNames.lapisSword));
+        register(lapisPickaxe, "fergotools:lapisPickaxe");
+        register(lapisShovel, "fergotools:lapisShovel");
+        register(lapisAxe, "fergotools:lapisAxe");
+        register(lapisHoe, "fergotools:lapisHoe");
+        register(lapisSword, "fergotools:lapisSword");
 
-        register(bronzePickaxe, new ModelResLocFT(ItemNames.bronzePickaxe));
-        register(bronzeShovel, new ModelResLocFT(ItemNames.bronzeShovel));
-        register(bronzeAxe, new ModelResLocFT(ItemNames.bronzeAxe));
-        register(bronzeHoe, new ModelResLocFT(ItemNames.bronzeHoe));
-        register(bronzeSword, new ModelResLocFT(ItemNames.bronzeSword));
+        register(bronzePickaxe, "fergotools:bronzePickaxe");
+        register(bronzeShovel, "fergotools:bronzeShovel");
+        register(bronzeAxe, "fergotools:bronzeAxe");
+        register(bronzeHoe, "fergotools:bronzeHoe");
+        register(bronzeSword, "fergotools:bronzeSword");
 
-        register(coalPickaxe, new ModelResLocFT(ItemNames.coalPickaxe));
-        register(coalShovel, new ModelResLocFT(ItemNames.coalShovel));
-        register(coalAxe, new ModelResLocFT(ItemNames.coalAxe));
-        register(coalHoe, new ModelResLocFT(ItemNames.coalHoe));
-        register(coalSword, new ModelResLocFT(ItemNames.coalSword));
+        register(coalPickaxe, "fergotools:coalPickaxe");
+        register(coalShovel, "fergotools:coalShovel");
+        register(coalAxe, "fergotools:coalAxe");
+        register(coalHoe, "fergotools:coalHoe");
+        register(coalSword, "fergotools:coalSword");
 
-        register(glowstonePickaxe, new ModelResLocFT(ItemNames.glowstonePickaxe));
-        register(glowstoneShovel, new ModelResLocFT(ItemNames.glowstoneShovel));
-        register(glowstoneAxe, new ModelResLocFT(ItemNames.glowstoneAxe));
-        register(glowstoneHoe, new ModelResLocFT(ItemNames.glowstoneHoe));
-        register(glowstoneSword, new ModelResLocFT(ItemNames.glowstoneSword));
+        register(glowstonePickaxe, "fergotools:glowstonePickaxe");
+        register(glowstoneShovel, "fergotools:glowstoneShovel");
+        register(glowstoneAxe, "fergotools:glowstoneAxe");
+        register(glowstoneHoe, "fergotools:glowstoneHoe");
+        register(glowstoneSword, "fergotools:glowstoneSword");
 
-        register(adamantiumPickaxe, new ModelResLocFT(ItemNames.adamantiumPickaxe));
-        register(adamantiumShovel, new ModelResLocFT(ItemNames.adamantiumShovel));
-        register(adamantiumAxe, new ModelResLocFT(ItemNames.adamantiumAxe));
-        register(adamantiumHoe, new ModelResLocFT(ItemNames.adamantiumHoe));
-        register(adamantiumSword, new ModelResLocFT(ItemNames.adamantiumSword));
+        register(adamantiumPickaxe, "fergotools:adamantiumPickaxe");
+        register(adamantiumShovel, "fergotools:adamantiumShovel");
+        register(adamantiumAxe, "fergotools:adamantiumAxe");
+        register(adamantiumHoe, "fergotools:adamantiumHoe");
+        register(adamantiumSword, "fergotools:adamantiumSword");
 
-        register(silkPickaxe, new ModelResLocFT(ItemNames.silkPickaxe));
-        register(silkShovel, new ModelResLocFT(ItemNames.silkShovel));
-        register(silkAxe, new ModelResLocFT(ItemNames.silkAxe));
-        register(silkHoe, new ModelResLocFT(ItemNames.silkHoe));
-        register(silkSword, new ModelResLocFT(ItemNames.silkSword));
+        register(silkPickaxe, "fergotools:silkPickaxe");
+        register(silkShovel, "fergotools:silkShovel");
+        register(silkAxe, "fergotools:silkAxe");
+        register(silkHoe, "fergotools:silkHoe");
+        register(silkSword, "fergotools:silkSword");
 
-        register(redstonePickaxe, new ModelResLocFT(ItemNames.redstonePickaxe));
-        register(redstoneShovel, new ModelResLocFT(ItemNames.redstoneShovel));
-        register(redstoneAxe, new ModelResLocFT(ItemNames.redstoneAxe));
-        register(redstoneHoe, new ModelResLocFT(ItemNames.redstoneHoe));
-        register(redstoneSword, new ModelResLocFT(ItemNames.redstoneSword));
+        register(redstonePickaxe, "fergotools:redstonePickaxe");
+        register(redstoneShovel, "fergotools:redstoneShovel");
+        register(redstoneAxe, "fergotools:redstoneAxe");
+        register(redstoneHoe, "fergotools:redstoneHoe");
+        register(redstoneSword, "fergotools:redstoneSword");
 
-        register(quartzHelmet, new ModelResLocFT(ItemNames.quartzHelmet));
-        register(quartzChestplate, new ModelResLocFT(ItemNames.quartzChestplate));
-        register(quartzLeggings, new ModelResLocFT(ItemNames.quartzLeggings));
-        register(quartzBoots, new ModelResLocFT(ItemNames.quartzBoots));
+        register(quartzHelmet, "fergotools:quartzHelmet");
+        register(quartzChestplate, "fergotools:quartzChestplate");
+        register(quartzLeggings, "fergotools:quartzLeggings");
+        register(quartzBoots, "fergotools:quartzBoots");
 
-        register(obsidianHelmet, new ModelResLocFT(ItemNames.obsidianHelmet));
-        register(obsidianChestplate, new ModelResLocFT(ItemNames.obsidianChestplate));
-        register(obsidianLeggings, new ModelResLocFT(ItemNames.obsidianLeggings));
-        register(obsidianBoots, new ModelResLocFT(ItemNames.obsidianBoots));
+        register(obsidianHelmet, "fergotools:obsidianHelmet");
+        register(obsidianChestplate, "fergotools:obsidianChestplate");
+        register(obsidianLeggings, "fergotools:obsidianLeggings");
+        register(obsidianBoots, "fergotools:obsidianBoots");
 
-        register(emeraldHelmet, new ModelResLocFT(ItemNames.emeraldHelmet));
-        register(emeraldChestplate, new ModelResLocFT(ItemNames.emeraldChestplate));
-        register(emeraldLeggings, new ModelResLocFT(ItemNames.emeraldLeggings));
-        register(emeraldBoots, new ModelResLocFT(ItemNames.emeraldBoots));
+        register(emeraldHelmet, "fergotools:emeraldHelmet");
+        register(emeraldChestplate, "fergotools:emeraldChestplate");
+        register(emeraldLeggings, "fergotools:emeraldLeggings");
+        register(emeraldBoots, "fergotools:emeraldBoots");
 
-        register(lapisHelmet, new ModelResLocFT(ItemNames.lapisHelmet));
-        register(lapisChestplate, new ModelResLocFT(ItemNames.lapisChestplate));
-        register(lapisLeggings, new ModelResLocFT(ItemNames.lapisLeggings));
-        register(lapisBoots, new ModelResLocFT(ItemNames.lapisBoots));
+        register(lapisHelmet, "fergotools:lapisHelmet");
+        register(lapisChestplate, "fergotools:lapisChestplate");
+        register(lapisLeggings, "fergotools:lapisLeggings");
+        register(lapisBoots, "fergotools:lapisBoots");
 
-        register(bronzeHelmet, new ModelResLocFT(ItemNames.bronzeHelmet));
-        register(bronzeChestplate, new ModelResLocFT(ItemNames.bronzeChestplate));
-        register(bronzeLeggings, new ModelResLocFT(ItemNames.bronzeLeggings));
-        register(bronzeBoots, new ModelResLocFT(ItemNames.bronzeBoots));
+        register(bronzeHelmet, "fergotools:bronzeHelmet");
+        register(bronzeChestplate, "fergotools:bronzeChestplate");
+        register(bronzeLeggings, "fergotools:bronzeLeggings");
+        register(bronzeBoots, "fergotools:bronzeBoots");
 
-        register(coalHelmet, new ModelResLocFT(ItemNames.coalHelmet));
-        register(coalChestplate, new ModelResLocFT(ItemNames.coalChestplate));
-        register(coalLeggings, new ModelResLocFT(ItemNames.coalLeggings));
-        register(coalBoots, new ModelResLocFT(ItemNames.coalBoots));
+        register(coalHelmet, "fergotools:coalHelmet");
+        register(coalChestplate, "fergotools:coalChestplate");
+        register(coalLeggings, "fergotools:coalLeggings");
+        register(coalBoots, "fergotools:coalBoots");
 
-        register(glowstoneHelmet, new ModelResLocFT(ItemNames.glowstoneHelmet));
-        register(glowstoneChestplate, new ModelResLocFT(ItemNames.glowstoneChestplate));
-        register(glowstoneLeggings, new ModelResLocFT(ItemNames.glowstoneLeggings));
-        register(glowstoneBoots, new ModelResLocFT(ItemNames.glowstoneBoots));
+        register(glowstoneHelmet, "fergotools:glowstoneHelmet");
+        register(glowstoneChestplate, "fergotools:glowstoneChestplate");
+        register(glowstoneLeggings, "fergotools:glowstoneLeggings");
+        register(glowstoneBoots, "fergotools:glowstoneBoots");
 
-        register(adamantiumHelmet, new ModelResLocFT(ItemNames.adamantiumHelmet));
-        register(adamantiumChestplate, new ModelResLocFT(ItemNames.adamantiumChestplate));
-        register(adamantiumLeggings, new ModelResLocFT(ItemNames.adamantiumLeggings));
-        register(adamantiumBoots, new ModelResLocFT(ItemNames.adamantiumBoots));
+        register(adamantiumHelmet, "fergotools:adamantiumHelmet");
+        register(adamantiumChestplate, "fergotools:adamantiumChestplate");
+        register(adamantiumLeggings, "fergotools:adamantiumLeggings");
+        register(adamantiumBoots, "fergotools:adamantiumBoots");
 
-        register(redstoneHelmet, new ModelResLocFT(ItemNames.redstoneHelmet));
-        register(redstoneChestplate, new ModelResLocFT(ItemNames.redstoneChestplate));
-        register(redstoneLeggings, new ModelResLocFT(ItemNames.redstoneLeggings));
-        register(redstoneBoots, new ModelResLocFT(ItemNames.redstoneBoots));
+        register(redstoneHelmet, "fergotools:redstoneHelmet");
+        register(redstoneChestplate, "fergotools:redstoneChestplate");
+        register(redstoneLeggings, "fergotools:redstoneLeggings");
+        register(redstoneBoots, "fergotools:redstoneBoots");
+
+        register(bowQuartz, "fergotools:bowQuartz");
+        register(bowObsidian, "fergotools:bowObsidian");
+        register(bowEmerald, "fergotools:bowEmerald");
+        register(bowLapis, "fergotools:bowLapis");
+        register(bowBronze, "fergotools:bowBronze");
+        register(bowCoal, "fergotools:bowCoal");
+        register(bowGlowstone, "fergotools:bowGlowstone");
+        register(bowAdamantium, "fergotools:bowAdamantium");
+        register(bowSilk, "fergotools:bowSilk");
+        register(bowRedstone, "fergotools:bowRedstone");
+
+        register(quartzShears, "fergotools:quartzShears");
+        register(obsidianShears, "fergotools:obsidianShears");
+        register(emeraldShears, "fergotools:emeraldShears");
+        register(lapisShears, "fergotools:lapisShears");
+        register(bronzeShears, "fergotools:bronzeShears");
+        register(coalShears, "fergotools:coalShears");
+        register(glowstoneShears, "fergotools:glowstoneShears");
+        register(adamantiumShears, "fergotools:adamantiumShears");
+        register(silkShears, "fergotools:silkShears");
+        register(redstoneShears, "fergotools:redstoneShears");
+
+        register(stickFT, 0, "fergotools:stickObsidian");
+        register(stickFT, 1, "fergotools:stickEmerald");
+        register(stickFT, 2, "fergotools:stickLapis");
+        register(stickFT, 3, "fergotools:stickBronze");
+        register(stickFT, 4, "fergotools:stickCoal");
+        register(stickFT, 5, "fergotools:stickGlowstone");
+        register(stickFT, 6, "fergotools:stickAdamantium");
+        register(stickFT, 7, "fergotools:stickSilk");
+        register(stickFT, 8, "fergotools:stickRedstone");
     }
 
-    private static void registerVariants(){
-        addVariant();
+    private static void registerVariants() {
+        ModelBakery.addVariantName(ingotObsidian, "fergotools:ingotObsidian");
+        ModelBakery.addVariantName(gemEmerald, "fergotools:gemEmerald");
+        ModelBakery.addVariantName(gemLapis, "fergotools:gemLapis");
+        ModelBakery.addVariantName(ingotBronze, "fergotools:ingotBronze");
+        ModelBakery.addVariantName(ingotCoal, "fergotools:ingotCoal");
+        ModelBakery.addVariantName(ingotGlowstone, "fergotools:ingotGlowstone");
+        ModelBakery.addVariantName(ingotAdamantium, "fergotools:ingotAdamantium");
+        ModelBakery.addVariantName(gemSilk, "fergotools:gemSilk");
+        ModelBakery.addVariantName(gemRedstone, "fergotools:gemRedstone");
+
+        ModelBakery.addVariantName(gemExp, "fergotools:gemExp");
+        ModelBakery.addVariantName(gemExp2, "fergotools:gemExp2");
+        ModelBakery.addVariantName(gemExp3, "fergotools:gemExp3");
+
+        ModelBakery.addVariantName(staffExp, "fergotools:staffExp");
+        ModelBakery.addVariantName(staffExp2, "fergotools:staffExp2");
+        ModelBakery.addVariantName(staffExp3, "fergotools:staffExp3");
+
+        ModelBakery.addVariantName(shardExp, "fergotools:shardExp");
+        ModelBakery.addVariantName(expCollector, "fergotools:expCollector");
+
+        ModelBakery.addVariantName(quartzPickaxe, "fergotools:quartzPickaxe");
+        ModelBakery.addVariantName(quartzShovel, "fergotools:quartzShovel");
+        ModelBakery.addVariantName(quartzAxe, "fergotools:quartzAxe");
+        ModelBakery.addVariantName(quartzHoe, "fergotools:quartzHoe");
+        ModelBakery.addVariantName(quartzSword, "fergotools:quartzSword");
+
+        ModelBakery.addVariantName(obsidianPickaxe, "fergotools:obsidianPickaxe");
+        ModelBakery.addVariantName(obsidianShovel, "fergotools:obsidianShovel");
+        ModelBakery.addVariantName(obsidianAxe, "fergotools:obsidianAxe");
+        ModelBakery.addVariantName(obsidianHoe, "fergotools:obsidianHoe");
+        ModelBakery.addVariantName(obsidianSword, "fergotools:obsidianSword");
+
+        ModelBakery.addVariantName(emeraldPickaxe, "fergotools:emeraldPickaxe");
+        ModelBakery.addVariantName(emeraldShovel, "fergotools:emeraldShovel");
+        ModelBakery.addVariantName(emeraldAxe, "fergotools:emeraldAxe");
+        ModelBakery.addVariantName(emeraldHoe, "fergotools:emeraldHoe");
+        ModelBakery.addVariantName(emeraldSword, "fergotools:emeraldSword");
+
+        ModelBakery.addVariantName(lapisPickaxe, "fergotools:lapisPickaxe");
+        ModelBakery.addVariantName(lapisShovel, "fergotools:lapisShovel");
+        ModelBakery.addVariantName(lapisAxe, "fergotools:lapisAxe");
+        ModelBakery.addVariantName(lapisHoe, "fergotools:lapisHoe");
+        ModelBakery.addVariantName(lapisSword, "fergotools:lapisSword");
+
+        ModelBakery.addVariantName(bronzePickaxe, "fergotools:bronzePickaxe");
+        ModelBakery.addVariantName(bronzeShovel, "fergotools:bronzeShovel");
+        ModelBakery.addVariantName(bronzeAxe, "fergotools:bronzeAxe");
+        ModelBakery.addVariantName(bronzeHoe, "fergotools:bronzeHoe");
+        ModelBakery.addVariantName(bronzeSword, "fergotools:bronzeSword");
+
+        ModelBakery.addVariantName(coalPickaxe, "fergotools:coalPickaxe");
+        ModelBakery.addVariantName(coalShovel, "fergotools:coalShovel");
+        ModelBakery.addVariantName(coalAxe, "fergotools:coalAxe");
+        ModelBakery.addVariantName(coalHoe, "fergotools:coalHoe");
+        ModelBakery.addVariantName(coalSword, "fergotools:coalSword");
+
+        ModelBakery.addVariantName(glowstonePickaxe, "fergotools:glowstonePickaxe");
+        ModelBakery.addVariantName(glowstoneShovel, "fergotools:glowstoneShovel");
+        ModelBakery.addVariantName(glowstoneAxe, "fergotools:glowstoneAxe");
+        ModelBakery.addVariantName(glowstoneHoe, "fergotools:glowstoneHoe");
+        ModelBakery.addVariantName(glowstoneSword, "fergotools:glowstoneSword");
+
+        ModelBakery.addVariantName(adamantiumPickaxe, "fergotools:adamantiumPickaxe");
+        ModelBakery.addVariantName(adamantiumShovel, "fergotools:adamantiumShovel");
+        ModelBakery.addVariantName(adamantiumAxe, "fergotools:adamantiumAxe");
+        ModelBakery.addVariantName(adamantiumHoe, "fergotools:adamantiumHoe");
+        ModelBakery.addVariantName(adamantiumSword, "fergotools:adamantiumSword");
+
+        ModelBakery.addVariantName(silkPickaxe, "fergotools:silkPickaxe");
+        ModelBakery.addVariantName(silkShovel, "fergotools:silkShovel");
+        ModelBakery.addVariantName(silkAxe, "fergotools:silkAxe");
+        ModelBakery.addVariantName(silkHoe, "fergotools:silkHoe");
+        ModelBakery.addVariantName(silkSword, "fergotools:silkSword");
+
+        ModelBakery.addVariantName(redstonePickaxe, "fergotools:redstonePickaxe");
+        ModelBakery.addVariantName(redstoneShovel, "fergotools:redstoneShovel");
+        ModelBakery.addVariantName(redstoneAxe, "fergotools:redstoneAxe");
+        ModelBakery.addVariantName(redstoneHoe, "fergotools:redstoneHoe");
+        ModelBakery.addVariantName(redstoneSword, "fergotools:redstoneSword");
+
+        ModelBakery.addVariantName(quartzHelmet, "fergotools:quartzHelmet");
+        ModelBakery.addVariantName(quartzChestplate, "fergotools:quartzChestplate");
+        ModelBakery.addVariantName(quartzLeggings, "fergotools:quartzLeggings");
+        ModelBakery.addVariantName(quartzBoots, "fergotools:quartzBoots");
+
+        ModelBakery.addVariantName(obsidianHelmet, "fergotools:obsidianHelmet");
+        ModelBakery.addVariantName(obsidianChestplate, "fergotools:obsidianChestplate");
+        ModelBakery.addVariantName(obsidianLeggings, "fergotools:obsidianLeggings");
+        ModelBakery.addVariantName(obsidianBoots, "fergotools:obsidianBoots");
+
+        ModelBakery.addVariantName(emeraldHelmet, "fergotools:emeraldHelmet");
+        ModelBakery.addVariantName(emeraldChestplate, "fergotools:emeraldChestplate");
+        ModelBakery.addVariantName(emeraldLeggings, "fergotools:emeraldLeggings");
+        ModelBakery.addVariantName(emeraldBoots, "fergotools:emeraldBoots");
+
+        ModelBakery.addVariantName(lapisHelmet, "fergotools:lapisHelmet");
+        ModelBakery.addVariantName(lapisChestplate, "fergotools:lapisChestplate");
+        ModelBakery.addVariantName(lapisLeggings, "fergotools:lapisLeggings");
+        ModelBakery.addVariantName(lapisBoots, "fergotools:lapisBoots");
+
+        ModelBakery.addVariantName(bronzeHelmet, "fergotools:bronzeHelmet");
+        ModelBakery.addVariantName(bronzeChestplate, "fergotools:bronzeChestplate");
+        ModelBakery.addVariantName(bronzeLeggings, "fergotools:bronzeLeggings");
+        ModelBakery.addVariantName(bronzeBoots, "fergotools:bronzeBoots");
+
+        ModelBakery.addVariantName(coalHelmet, "fergotools:coalHelmet");
+        ModelBakery.addVariantName(coalChestplate, "fergotools:coalChestplate");
+        ModelBakery.addVariantName(coalLeggings, "fergotools:coalLeggings");
+        ModelBakery.addVariantName(coalBoots, "fergotools:coalBoots");
+
+        ModelBakery.addVariantName(glowstoneHelmet, "fergotools:glowstoneHelmet");
+        ModelBakery.addVariantName(glowstoneChestplate, "fergotools:glowstoneChestplate");
+        ModelBakery.addVariantName(glowstoneLeggings, "fergotools:glowstoneLeggings");
+        ModelBakery.addVariantName(glowstoneBoots, "fergotools:glowstoneBoots");
+
+        ModelBakery.addVariantName(adamantiumHelmet, "fergotools:adamantiumHelmet");
+        ModelBakery.addVariantName(adamantiumChestplate, "fergotools:adamantiumChestplate");
+        ModelBakery.addVariantName(adamantiumLeggings, "fergotools:adamantiumLeggings");
+        ModelBakery.addVariantName(adamantiumBoots, "fergotools:adamantiumBoots");
+
+        ModelBakery.addVariantName(redstoneHelmet, "fergotools:redstoneHelmet");
+        ModelBakery.addVariantName(redstoneChestplate, "fergotools:redstoneChestplate");
+        ModelBakery.addVariantName(redstoneLeggings, "fergotools:redstoneLeggings");
+        ModelBakery.addVariantName(redstoneBoots, "fergotools:redstoneBoots");
+
+        ModelBakery.addVariantName(bowQuartz, "fergotools:bowQuartz");
+        ModelBakery.addVariantName(bowObsidian, "fergotools:bowObsidian");
+        ModelBakery.addVariantName(bowEmerald, "fergotools:bowEmerald");
+        ModelBakery.addVariantName(bowLapis, "fergotools:bowLapis");
+        ModelBakery.addVariantName(bowBronze, "fergotools:bowBronze");
+        ModelBakery.addVariantName(bowCoal, "fergotools:bowCoal");
+        ModelBakery.addVariantName(bowGlowstone, "fergotools:bowGlowstone");
+        ModelBakery.addVariantName(bowAdamantium, "fergotools:bowAdamantium");
+        ModelBakery.addVariantName(bowSilk, "fergotools:bowSilk");
+        ModelBakery.addVariantName(bowRedstone, "fergotools:bowRedstone");
+
+        ModelBakery.addVariantName(quartzShears, "fergotools:quartzShears");
+        ModelBakery.addVariantName(obsidianShears, "fergotools:obsidianShears");
+        ModelBakery.addVariantName(emeraldShears, "fergotools:emeraldShears");
+        ModelBakery.addVariantName(lapisShears, "fergotools:lapisShears");
+        ModelBakery.addVariantName(bronzeShears, "fergotools:bronzeShears");
+        ModelBakery.addVariantName(coalShears, "fergotools:coalShears");
+        ModelBakery.addVariantName(glowstoneShears, "fergotools:glowstoneShears");
+        ModelBakery.addVariantName(adamantiumShears, "fergotools:adamantiumShears");
+        ModelBakery.addVariantName(silkShears, "fergotools:silkShears");
+        ModelBakery.addVariantName(redstoneShears, "fergotools:redstoneShears");
+
+        ModelBakery.addVariantName(stickFT, "fergotools:stickObsidian");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickEmerald");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickLapis");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickBronze");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickCoal");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickGlowstone");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickAdamantium");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickSilk");
+        ModelBakery.addVariantName(stickFT, "fergotools:stickRedstone");
     }
 
-    public static void register(Item item, int meta, ModelResourceLocation model){
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, model);
+    public static void register(Item item, int meta, String model) {
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(model, "inventory"));
     }
 
-    public static void register(Item item, ModelResourceLocation model){
+    public static void register(Item item, String model) {
         register(item, 0, model);
-    }
-
-    public static void addVariant(Item item, String variant){
-        ModelBakery.addVariantName(item, "fergotools:" + variant);
     }
 }

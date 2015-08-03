@@ -3,18 +3,16 @@ package io.github.fergoman123.fergotools.item;
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergoutil.item.ArmorType;
+import io.github.fergoman123.fergoutil.item.ItemArmorFergo;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ItemArmorFT extends ItemArmor{
+public class ItemArmorFT extends ItemArmorFergo{
     public ArmorMaterial material;
 
     public ItemArmorFT(ArmorMaterial material, ArmorType type, String name) {
-        super(material, 0, type.ordinal());
-        this.setCreativeTab(FergoTools.tabFergoTools);
-        this.setUnlocalizedName(name);
-        this.material = material;
+        super(material, "ft", FergoTools.tabFergoTools, type, name);
     }
 
     @Override
@@ -31,13 +29,5 @@ public class ItemArmorFT extends ItemArmor{
         } else {
             return null;
         }
-    }
-
-    public String getUnlocalizedName(){
-        return String.format("item.ft.%s", NameHelper.getUnlocalizedName(super.getUnlocalizedName()));
-    }
-
-    public String getUnlocalizedName(ItemStack stack){
-        return String.format("item.ft.%s", NameHelper.getUnlocalizedName(super.getUnlocalizedName(stack)));
     }
 }
