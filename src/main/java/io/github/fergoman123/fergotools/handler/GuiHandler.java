@@ -13,8 +13,10 @@ import io.github.fergoman123.fergotools.common.gui.workbench.ContainerWorkbenchF
 import io.github.fergoman123.fergotools.common.gui.workbench.GuiWorkbenchFT;
 import io.github.fergoman123.fergotools.common.tileentities.*;
 import io.github.fergoman123.fergotools.common.gui.FurnaceGuis.*;
+import io.github.fergoman123.fergotools.common.gui.furnace.GuiQuartzFurnace;
 import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.*;
 import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergotools.inventory.ContainerQuartzFurnace;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

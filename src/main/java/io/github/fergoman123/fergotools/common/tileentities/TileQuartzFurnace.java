@@ -1,7 +1,8 @@
 package io.github.fergoman123.fergotools.common.tileentities;
 
 import io.github.fergoman123.fergotools.common.blocks.BlockQuartzFurnace;
-import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.ContainerQuartzFurnace;
+import io.github.fergoman123.fergotools.inventory.ContainerQuartzFurnace;
+import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
@@ -11,12 +12,13 @@ import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 
-public class TileQuartzFurnace extends TileFurnaceFT
+public class TileQuartzFurnace extends TileEntityFurnaceFT
 {
     @Override
-    public String getName() {
+    public String getCommandSenderName() {
         return Locale.containerQuartzFurnace;
     }
 
@@ -43,7 +45,7 @@ public class TileQuartzFurnace extends TileFurnaceFT
             {
                 if (!this.isBurning() && this.canSmelt())
                 {
-                    this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.slots[1]);
+                    this.currentItemBurnTime = this.burnTime = getBurnTime(this.slots[1]);
 
                     if (this.isBurning())
                     {
@@ -68,7 +70,7 @@ public class TileQuartzFurnace extends TileFurnaceFT
                     if (this.cookTime == this.totalCookTime)
                     {
                         this.cookTime = 0;
-                        this.totalCookTime = this.getFurnaceSpeed(this.slots[0]);
+                        this.totalCookTime = this.getCookTime(this.slots[0]);
                         this.smeltItem();
                         flag1 = true;
                     }
@@ -93,7 +95,7 @@ public class TileQuartzFurnace extends TileFurnaceFT
     }
 
     @Override
-    public int getFurnaceSpeed(ItemStack stack) {
+    public int getCookTime(ItemStack stack) {
 //        return FurnaceInts.quartzFurnaceSpeed;
         return 200;
     }
@@ -158,4 +160,24 @@ public class TileQuartzFurnace extends TileFurnaceFT
     public Container createContainer(InventoryPlayer invPlayer, EntityPlayer player) {
         return new ContainerQuartzFurnace(invPlayer, this);
     }
+    
+    public boolean canInsertItem(int index, ItemStack stack, EnumFacing direction){
+    	return this.isItemValidForSlot(index, stack);
+    }
+    
+    public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction){
+    	if(direction == EnumFacing.DOWN && index == 1){
+    		Item item = stack.getItem();
+    		
+    		if(item != Items.water_bucket && item != Items.bucket){
+    			return false;
+    		}
+    	}
+    	return true;
+    }
+
+	@Override
+	public int[] getSlotsForFace(EnumFacing side) {
+		return side == EnumFacing.DOWN ? slotsBottom : (side == EnumFacing.UP ? slotsTop : slotsSides);
+	}
 }
