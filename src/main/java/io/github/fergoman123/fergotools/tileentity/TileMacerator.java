@@ -1,25 +1,21 @@
-package io.github.fergoman123.fergotools.common.tileentities;
+package io.github.fergoman123.fergotools.tileentity;
 
-import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
+import io.github.fergoman123.fergotools.block.BlockMacerator;
+import io.github.fergoman123.fergotools.crafting.MaceratorRecipes;
 import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
-import io.github.fergoman123.fergotools.tileentity.TileEntityFurnaceFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.SlotFurnaceFuel;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.util.MathHelper;
 
-public class TileBronzeFurnace extends TileEntityFurnaceFT
+public class TileMacerator extends TileEntityFurnaceFT
 {
     @Override
     public String getCommandSenderName() {
-        return Locale.containerBronzeFurnace;
+        return Locale.containerMacerator;
     }
 
     @Override
@@ -84,7 +80,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockBronzeFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockMacerator.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
@@ -96,7 +92,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public int getCookTime(ItemStack stack) {
-        return FurnaceInts.bronzeFurnaceSpeed;
+        return FurnaceInts.maceratorSpeed;
     }
 
     @Override
@@ -107,7 +103,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
         }
         else
         {
-            ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(this.slots[0]);
+            ItemStack stack = MaceratorRecipes.macerating().getSmeltingResult(this.slots[0]);
             if (stack == null)return false;
             if (this.slots[2] == null)return true;
             if (!this.slots[2].isItemEqual(stack))return false;
@@ -120,7 +116,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
     public void smeltItem() {
         if (this.canSmelt())
         {
-            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult(this.slots[0]);
+            ItemStack itemstack = MaceratorRecipes.macerating().getSmeltingResult(this.slots[0]);
 
             if (this.slots[2] == null)
             {
@@ -128,12 +124,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
             }
             else if (this.slots[2].getItem() == itemstack.getItem())
             {
-                this.slots[2].stackSize += itemstack.stackSize; // Forge BugFix: Results may have multiple items
-            }
-
-            if (this.slots[0].getItem() == Item.getItemFromBlock(Blocks.sponge) && this.slots[0].getMetadata() == 1 && this.slots[1] != null && this.slots[1].getItem() == Items.bucket)
-            {
-                this.slots[1] = new ItemStack(Items.water_bucket);
+                this.slots[2].stackSize += itemstack.stackSize;
             }
 
             --this.slots[0].stackSize;
@@ -152,12 +143,12 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public String getGuiID() {
-        return "fergotools:bronzeFurnace";
+        return "fergotools:macerator";
     }
 
     @Override
     public Container createContainer(InventoryPlayer invPlayer, EntityPlayer player) {
-//        return new ContainerBronzeFurnace(invPlayer, this);
+//        return new ContainerMacerator(invPlayer, this);
         return null; //TODO: fix this
     }
 }

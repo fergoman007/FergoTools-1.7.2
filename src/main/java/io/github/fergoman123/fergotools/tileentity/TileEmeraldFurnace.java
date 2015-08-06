@@ -1,9 +1,8 @@
-package io.github.fergoman123.fergotools.common.tileentities;
+package io.github.fergoman123.fergotools.tileentity;
 
-import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
+import io.github.fergoman123.fergotools.block.BlockEmeraldFurnace;
 import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
-import io.github.fergoman123.fergotools.tileentity.TileEntityFurnaceFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
@@ -13,13 +12,44 @@ import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 
-public class TileBronzeFurnace extends TileEntityFurnaceFT
+public class TileEmeraldFurnace extends TileEntityFurnaceFT
 {
     @Override
     public String getCommandSenderName() {
-        return Locale.containerBronzeFurnace;
+        return Locale.containerEmeraldFurnace;
+    }
+    
+    public void readFromNBT(NBTTagCompound compound)
+    {
+        super.readFromNBT(compound);
+        NBTTagList nbttaglist = compound.getTagList("Items", 10);
+        this.slots = new ItemStack[this.getSizeInventory()];
+
+        for (int i = 0; i < nbttaglist.tagCount(); ++i)
+        {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            byte b0 = nbttagcompound1.getByte("Slot");
+
+            if (b0 >= 0 && b0 < this.slots.length)
+            {
+                this.slots[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
+
+        this.burnTime = compound.getShort("BurnTime");
+        this.cookTime = compound.getShort("CookTime");
+        this.totalCookTime = compound.getShort("CookTimeTotal");
+        this.currentItemBurnTime = getBurnTime(this.slots[1]);
+
+        if (compound.hasKey("CustomName", 8))
+        {
+            this.inventoryName = compound.getString("CustomName");
+        }
     }
 
     @Override
@@ -84,7 +114,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockBronzeFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockEmeraldFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
@@ -96,7 +126,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public int getCookTime(ItemStack stack) {
-        return FurnaceInts.bronzeFurnaceSpeed;
+        return FurnaceInts.emeraldFurnaceSpeed;
     }
 
     @Override
@@ -152,12 +182,32 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public String getGuiID() {
-        return "fergotools:bronzeFurnace";
+        return "fergotools:emeraldFurnace";
     }
 
     @Override
     public Container createContainer(InventoryPlayer invPlayer, EntityPlayer player) {
-//        return new ContainerBronzeFurnace(invPlayer, this);
-        return null; //TODO: fix this
+//        return new ContainerEmeraldFurnace(invPlayer, this);
+    	return null; //TODO fix this
     }
+
+	@Override
+	public boolean canInsertItem(int index, ItemStack stack, EnumFacing direction) {
+		return this.isItemValidForSlot(index, stack);
+	}
+
+	@Override
+	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
+		if (direction == EnumFacing.DOWN && index == 1)
+        {
+            Item item = stack.getItem();
+
+            if (item != Items.water_bucket && item != Items.bucket)
+            {
+                return false;
+            }
+        }
+
+        return true;
+	}
 }

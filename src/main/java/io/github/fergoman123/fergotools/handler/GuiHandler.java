@@ -9,17 +9,29 @@
 
 package io.github.fergoman123.fergotools.handler;
 
+import io.github.fergoman123.fergotools.client.gui.GuiObsidianFurnace;
+import io.github.fergoman123.fergotools.client.gui.GuiQuartzFurnace;
 import io.github.fergoman123.fergotools.common.gui.workbench.ContainerWorkbenchFT;
 import io.github.fergoman123.fergotools.common.gui.workbench.GuiWorkbenchFT;
-import io.github.fergoman123.fergotools.common.tileentities.*;
-import io.github.fergoman123.fergotools.common.gui.FurnaceGuis.*;
-import io.github.fergoman123.fergotools.common.gui.furnace.GuiQuartzFurnace;
-import io.github.fergoman123.fergotools.common.gui.FurnaceContainers.*;
+import io.github.fergoman123.fergotools.common.tileentities.TileBronzeFurnace;
+import io.github.fergoman123.fergotools.common.tileentities.TileCoalFurnace;
 import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergotools.inventory.ContainerObsidianFurnace;
 import io.github.fergoman123.fergotools.inventory.ContainerQuartzFurnace;
+import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.tileentity.TileAdamantiumFurnace;
+import io.github.fergoman123.fergotools.tileentity.TileEmeraldFurnace;
+import io.github.fergoman123.fergotools.tileentity.TileGlowstoneFurnace;
+import io.github.fergoman123.fergotools.tileentity.TileLapisFurnace;
+import io.github.fergoman123.fergotools.tileentity.TileMacerator;
+import io.github.fergoman123.fergotools.tileentity.TileObsidianFurnace;
+import io.github.fergoman123.fergotools.tileentity.TileQuartzFurnace;
+import io.github.fergoman123.fergotools.tileentity.TileRedstoneFurnace;
+import io.github.fergoman123.fergotools.tileentity.TileSilkFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
@@ -79,7 +91,7 @@ public class GuiHandler implements IGuiHandler {
     @Override
     public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
         BlockPos pos = new BlockPos(x, y, z);
-        TileEntity tileEntity = world.getTileEntity(pos);
+        IInventory tileEntity = world.getTileEntity(pos);
         InventoryPlayer invPlayer = player.inventory;
 
         //todo GUI's

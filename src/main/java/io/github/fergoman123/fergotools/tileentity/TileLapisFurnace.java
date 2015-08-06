@@ -1,9 +1,8 @@
-package io.github.fergoman123.fergotools.common.tileentities;
+package io.github.fergoman123.fergotools.tileentity;
 
-import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
+import io.github.fergoman123.fergotools.block.BlockLapisFurnace;
 import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
-import io.github.fergoman123.fergotools.tileentity.TileEntityFurnaceFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
@@ -13,13 +12,14 @@ import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 
-public class TileBronzeFurnace extends TileEntityFurnaceFT
+public class TileLapisFurnace extends TileEntityFurnaceFT
 {
     @Override
     public String getCommandSenderName() {
-        return Locale.containerBronzeFurnace;
+        return Locale.containerLapisFurnace;
     }
 
     @Override
@@ -84,7 +84,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockBronzeFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockLapisFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
@@ -96,7 +96,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public int getCookTime(ItemStack stack) {
-        return FurnaceInts.bronzeFurnaceSpeed;
+        return FurnaceInts.lapisFurnaceSpeed;
     }
 
     @Override
@@ -152,12 +152,32 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public String getGuiID() {
-        return "fergotools:bronzeFurnace";
+        return "fergotools:lapisFurnace";
+    }
+    
+    @Override
+    public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
+    	if (direction == EnumFacing.DOWN && index == 1)
+        {
+            Item item = stack.getItem();
+
+            if (item != Items.water_bucket && item != Items.bucket)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+    
+    @Override
+    public boolean canInsertItem(int index, ItemStack stack, EnumFacing direction){
+    	return this.isItemValidForSlot(index, stack);
     }
 
     @Override
     public Container createContainer(InventoryPlayer invPlayer, EntityPlayer player) {
-//        return new ContainerBronzeFurnace(invPlayer, this);
-        return null; //TODO: fix this
+//        return new ContainerLapisFurnace(invPlayer, this);
+        return null;//TODO: fix this
     }
 }

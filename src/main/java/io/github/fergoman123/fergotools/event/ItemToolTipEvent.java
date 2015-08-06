@@ -2,6 +2,7 @@ package io.github.fergoman123.fergotools.event;
 
 import java.util.List;
 
+import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.item.ItemAxeFT;
 import io.github.fergoman123.fergotools.item.ItemGemExpBase;
@@ -10,6 +11,7 @@ import io.github.fergoman123.fergotools.item.ItemPickaxeFT;
 import io.github.fergoman123.fergotools.item.ItemShovelFT;
 import io.github.fergoman123.fergotools.item.ItemStaffExpBase;
 import io.github.fergoman123.fergotools.item.ItemSwordFT;
+import io.github.fergoman123.fergotools.reference.BlockNames;
 import io.github.fergoman123.fergotools.reference.ItemNames;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
@@ -78,6 +80,11 @@ public class ItemToolTipEvent {
 
         if (item == ModItems.expCollector){
             list.add(NameHelper.translate("ft.tooltip.ctitem"));
+        }
+        
+        if(block == ModBlocks.oreExperience){
+        	list.add(NameHelper.translate("ft.tooltip.odn"));
+        	list.add(BlockNames.oreExperience);
         }
 
         if (item instanceof ItemPickaxeFT){

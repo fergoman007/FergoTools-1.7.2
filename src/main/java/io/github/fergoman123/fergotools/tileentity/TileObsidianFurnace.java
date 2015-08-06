@@ -1,9 +1,8 @@
-package io.github.fergoman123.fergotools.common.tileentities;
+package io.github.fergoman123.fergotools.tileentity;
 
-import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
+import io.github.fergoman123.fergotools.block.BlockObsidianFurnace;
 import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
-import io.github.fergoman123.fergotools.tileentity.TileEntityFurnaceFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
@@ -13,13 +12,14 @@ import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 
-public class TileBronzeFurnace extends TileEntityFurnaceFT
+public class TileObsidianFurnace extends TileEntityFurnaceFT
 {
     @Override
     public String getCommandSenderName() {
-        return Locale.containerBronzeFurnace;
+        return Locale.containerObsidianFurnace;
     }
 
     @Override
@@ -84,7 +84,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockBronzeFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockObsidianFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
@@ -94,9 +94,8 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
         }
     }
 
-    @Override
     public int getCookTime(ItemStack stack) {
-        return FurnaceInts.bronzeFurnaceSpeed;
+        return FurnaceInts.obsidianFurnaceSpeed;
     }
 
     @Override
@@ -152,12 +151,16 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public String getGuiID() {
-        return "fergotools:bronzeFurnace";
+        return "fergotools:obsidianFurnace";
     }
 
     @Override
     public Container createContainer(InventoryPlayer invPlayer, EntityPlayer player) {
-//        return new ContainerBronzeFurnace(invPlayer, this);
-        return null; //TODO: fix this
+        return new io.github.fergoman123.fergotools.inventory.ContainerObsidianFurnace(invPlayer, this);
     }
+
+	@Override
+	public int[] getSlotsForFace(EnumFacing side) {
+		return side == EnumFacing.DOWN ? slotsBottom : (side == EnumFacing.UP ? slotsTop : slotsSides);
+	}
 }

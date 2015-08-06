@@ -1,29 +1,39 @@
 package io.github.fergoman123.fergotools.init;
 
+import com.jcraft.jorbis.Block;
+
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
-import io.github.fergoman123.fergotools.common.blocks.BlockAdamantiumFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockBronzeFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockCoalFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockEmeraldFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockFurnaceFT;
-import io.github.fergoman123.fergotools.common.blocks.BlockGlowstoneFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockLapisFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockMacerator;
-import io.github.fergoman123.fergotools.common.blocks.BlockMultiFT;
-import io.github.fergoman123.fergotools.common.blocks.BlockObsidianFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockQuartzFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockRedstoneFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockSilkFurnace;
-import io.github.fergoman123.fergotools.common.blocks.BlockStorageFT;
-import io.github.fergoman123.fergotools.common.blocks.BlockWorkbenchFT;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreAdamantium;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreBronze;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreEmerald;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreExperience;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreFT;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreLapis;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreObsidian;
-import io.github.fergoman123.fergotools.common.blocks.Ores.BlockOreRedstone;
+import io.github.fergoman123.fergotools.block.BlockAdamantiumFurnace;
+import io.github.fergoman123.fergotools.block.BlockAdamantiumWorkbench;
+import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
+import io.github.fergoman123.fergotools.block.BlockBronzeWorkbench;
+import io.github.fergoman123.fergotools.block.BlockCoalFurnace;
+import io.github.fergoman123.fergotools.block.BlockCoalWorkbench;
+import io.github.fergoman123.fergotools.block.BlockEmeraldFurnace;
+import io.github.fergoman123.fergotools.block.BlockEmeraldWorkbench;
+import io.github.fergoman123.fergotools.block.BlockFurnaceFT;
+import io.github.fergoman123.fergotools.block.BlockGlowstoneFurnace;
+import io.github.fergoman123.fergotools.block.BlockGlowstoneWorkbench;
+import io.github.fergoman123.fergotools.block.BlockLapisFurnace;
+import io.github.fergoman123.fergotools.block.BlockLapisWorkbench;
+import io.github.fergoman123.fergotools.block.BlockMacerator;
+import io.github.fergoman123.fergotools.block.BlockMultiFT;
+import io.github.fergoman123.fergotools.block.BlockObsidianFurnace;
+import io.github.fergoman123.fergotools.block.BlockObsidianWorkbench;
+import io.github.fergoman123.fergotools.block.BlockOreAdamantium;
+import io.github.fergoman123.fergotools.block.BlockOreBronze;
+import io.github.fergoman123.fergotools.block.BlockOreEmerald;
+import io.github.fergoman123.fergotools.block.BlockOreExperience;
+import io.github.fergoman123.fergotools.block.BlockOreFT;
+import io.github.fergoman123.fergotools.block.BlockOreLapis;
+import io.github.fergoman123.fergotools.block.BlockOreObsidian;
+import io.github.fergoman123.fergotools.block.BlockOreRedstone;
+import io.github.fergoman123.fergotools.block.BlockQuartzFurnace;
+import io.github.fergoman123.fergotools.block.BlockRedstoneFurnace;
+import io.github.fergoman123.fergotools.block.BlockSilkFurnace;
+import io.github.fergoman123.fergotools.block.BlockSilkWorkbench;
+import io.github.fergoman123.fergotools.block.BlockStorageFT;
+import io.github.fergoman123.fergotools.block.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.common.blocks.wood.BlockDSFT;
 import io.github.fergoman123.fergotools.common.blocks.wood.BlockHSFT;
 import io.github.fergoman123.fergotools.common.blocks.wood.BlockLeavesImpl;
@@ -38,6 +48,7 @@ import io.github.fergoman123.fergotools.common.itemblock.ItemBlockSlabSingle;
 import io.github.fergoman123.fergotools.common.itemblock.ItemBlockStorageFT;
 import io.github.fergoman123.fergotools.reference.BlockNames;
 import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
+import net.minecraft.block.BlockContainer;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
@@ -75,7 +86,7 @@ public class ModBlocks {
     public static BlockFurnaceFT redstoneFurnaceActive;
     public static BlockFurnaceFT maceratorActive;
 
-    public static BlockContainerFergo netherrackFurnace;
+    public static BlockContainer netherrackFurnace;
 
     public static BlockLogFT logFT;
     public static BlockMultiFT plankFT;
@@ -106,13 +117,13 @@ public class ModBlocks {
     public static BlockWorkbenchFT redstoneWorkbench;
 
     public static void init() {
-        oreExperience = new BlockOreExperience();
-        oreObsidian = new BlockOreObsidian();
-        oreGemEmerald = new BlockOreEmerald();
-        oreGemLapis = new BlockOreLapis();
-        oreBronze = new BlockOreBronze();
-        oreAdamantium = new BlockOreAdamantium();
-        oreGemRedstone = new BlockOreRedstone();
+        oreExperience = new BlockOreExperience(BlockNames.oreExperience);
+        oreObsidian = new BlockOreObsidian(BlockNames.oreObsidian);
+        oreGemEmerald = new BlockOreEmerald(BlockNames.oreGemEmerald);
+        oreGemLapis = new BlockOreLapis(BlockNames.oreGemLapis);
+        oreBronze = new BlockOreBronze(BlockNames.oreBronze);
+        oreAdamantium = new BlockOreAdamantium(BlockNames.oreAdamantium);
+        oreGemRedstone = new BlockOreRedstone(BlockNames.oreGemRedstone);
 
         storageFT = new BlockStorageFT(BlockNames.storageFT);
 
@@ -160,15 +171,15 @@ public class ModBlocks {
 
         
 
-        obsidianWorkbench = new BlockWorkbenchFT(0);
-        emeraldWorkbench = new BlockWorkbenchFT(1);
-        lapisWorkbench = new BlockWorkbenchFT(2);
-        bronzeWorkbench = new BlockWorkbenchFT(3);
-        coalWorkbench = new BlockWorkbenchFT(4);
-        glowstoneWorkbench = new BlockWorkbenchFT(5);
-        adamantiumWorkbench = new BlockWorkbenchFT(6);
-        silkWorkbench = new BlockWorkbenchFT(7);
-        redstoneWorkbench = new BlockWorkbenchFT(8);
+        obsidianWorkbench = new BlockObsidianWorkbench(BlockNames.obsidianWorkbench);
+        emeraldWorkbench = new BlockEmeraldWorkbench(BlockNames.emeraldWorkbench);
+        lapisWorkbench = new BlockLapisWorkbench(BlockNames.lapisWorkbench);
+        bronzeWorkbench = new BlockBronzeWorkbench(BlockNames.bronzeWorkbench);
+        coalWorkbench = new BlockCoalWorkbench(BlockNames.coalWorkbench);
+        glowstoneWorkbench = new BlockGlowstoneWorkbench(BlockNames.glowstoneWorkbench);
+        adamantiumWorkbench = new BlockAdamantiumWorkbench(BlockNames.adamantiumWorkbench);
+        silkWorkbench = new BlockSilkWorkbench(BlockNames.silkWorkbench);
+        redstoneWorkbench = new BlockRedstoneWorkbench(BlockNames.redstoneWorkbench);
     }
 
     public static void registerBlocks() {

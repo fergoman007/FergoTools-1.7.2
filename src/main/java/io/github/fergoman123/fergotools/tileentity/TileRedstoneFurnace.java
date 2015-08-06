@@ -1,9 +1,8 @@
-package io.github.fergoman123.fergotools.common.tileentities;
+package io.github.fergoman123.fergotools.tileentity;
 
-import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
+import io.github.fergoman123.fergotools.block.BlockRedstoneFurnace;
 import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
-import io.github.fergoman123.fergotools.tileentity.TileEntityFurnaceFT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
@@ -15,11 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.util.MathHelper;
 
-public class TileBronzeFurnace extends TileEntityFurnaceFT
+public class TileRedstoneFurnace extends TileEntityFurnaceFT
 {
     @Override
     public String getCommandSenderName() {
-        return Locale.containerBronzeFurnace;
+        return Locale.containerRedstoneFurnace;
     }
 
     @Override
@@ -84,7 +83,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockBronzeFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockRedstoneFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
@@ -96,7 +95,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public int getCookTime(ItemStack stack) {
-        return FurnaceInts.bronzeFurnaceSpeed;
+        return FurnaceInts.redstoneFurnaceSpeed;
     }
 
     @Override
@@ -152,12 +151,12 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public String getGuiID() {
-        return "fergotools:bronzeFurnace";
+        return "fergotools:redstoneFurnace";
     }
 
     @Override
     public Container createContainer(InventoryPlayer invPlayer, EntityPlayer player) {
-//        return new ContainerBronzeFurnace(invPlayer, this);
-        return null; //TODO: fix this
+//        return new ContainerRedstoneFurnace(invPlayer, this);
+    	return null; //TODO: fix this
     }
 }

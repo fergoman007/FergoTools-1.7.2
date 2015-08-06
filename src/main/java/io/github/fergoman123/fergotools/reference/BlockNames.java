@@ -9,8 +9,6 @@
 
 package io.github.fergoman123.fergotools.reference;
 
-import io.github.fergoman123.fergotools.common.blocks.BlockNetherrackFurnace;
-
 /**
  * a list of block names
  */

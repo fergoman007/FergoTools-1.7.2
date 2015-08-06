@@ -1,7 +1,7 @@
 package io.github.fergoman123.fergotools.inventory;
 
 import io.github.fergoman123.fergotools.common.gui.ContainerFurnaceFT;
-import io.github.fergoman123.fergotools.tileentity.TileQuartzFurnace;
+import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
@@ -11,9 +11,9 @@ import net.minecraft.inventory.SlotFurnaceOutput;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-public class ContainerQuartzFurnace extends ContainerFurnaceFT {
+public class ContainerObsidianFurnace extends ContainerFurnaceFT {
 
-	public ContainerQuartzFurnace(InventoryPlayer invPlayer, IInventory furnace) {
+	public ContainerObsidianFurnace(InventoryPlayer invPlayer, IInventory furnace) {
 		super(invPlayer, furnace);
 	}
 
@@ -110,4 +110,5 @@ public class ContainerQuartzFurnace extends ContainerFurnaceFT {
 
         return itemstack;
     }
+
 }
