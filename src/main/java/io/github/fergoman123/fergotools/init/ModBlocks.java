@@ -1,51 +1,10 @@
 package io.github.fergoman123.fergotools.init;
 
-import com.jcraft.jorbis.Block;
-
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
-import io.github.fergoman123.fergotools.block.BlockAdamantiumFurnace;
-import io.github.fergoman123.fergotools.block.BlockAdamantiumWorkbench;
-import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
-import io.github.fergoman123.fergotools.block.BlockBronzeWorkbench;
-import io.github.fergoman123.fergotools.block.BlockCoalFurnace;
-import io.github.fergoman123.fergotools.block.BlockCoalWorkbench;
-import io.github.fergoman123.fergotools.block.BlockEmeraldFurnace;
-import io.github.fergoman123.fergotools.block.BlockEmeraldWorkbench;
-import io.github.fergoman123.fergotools.block.BlockFurnaceFT;
-import io.github.fergoman123.fergotools.block.BlockGlowstoneFurnace;
-import io.github.fergoman123.fergotools.block.BlockGlowstoneWorkbench;
-import io.github.fergoman123.fergotools.block.BlockLapisFurnace;
-import io.github.fergoman123.fergotools.block.BlockLapisWorkbench;
-import io.github.fergoman123.fergotools.block.BlockMacerator;
-import io.github.fergoman123.fergotools.block.BlockMultiFT;
-import io.github.fergoman123.fergotools.block.BlockObsidianFurnace;
-import io.github.fergoman123.fergotools.block.BlockObsidianWorkbench;
-import io.github.fergoman123.fergotools.block.BlockOreAdamantium;
-import io.github.fergoman123.fergotools.block.BlockOreBronze;
-import io.github.fergoman123.fergotools.block.BlockOreEmerald;
-import io.github.fergoman123.fergotools.block.BlockOreExperience;
-import io.github.fergoman123.fergotools.block.BlockOreFT;
-import io.github.fergoman123.fergotools.block.BlockOreLapis;
-import io.github.fergoman123.fergotools.block.BlockOreObsidian;
-import io.github.fergoman123.fergotools.block.BlockOreRedstone;
-import io.github.fergoman123.fergotools.block.BlockQuartzFurnace;
-import io.github.fergoman123.fergotools.block.BlockRedstoneFurnace;
-import io.github.fergoman123.fergotools.block.BlockSilkFurnace;
-import io.github.fergoman123.fergotools.block.BlockSilkWorkbench;
-import io.github.fergoman123.fergotools.block.BlockStorageFT;
-import io.github.fergoman123.fergotools.block.BlockWorkbenchFT;
-import io.github.fergoman123.fergotools.common.blocks.wood.BlockDSFT;
-import io.github.fergoman123.fergotools.common.blocks.wood.BlockHSFT;
-import io.github.fergoman123.fergotools.common.blocks.wood.BlockLeavesImpl;
-import io.github.fergoman123.fergotools.common.blocks.wood.BlockPlankFT;
-import io.github.fergoman123.fergotools.common.blocks.wood.BlockWoodLogFT;
-import io.github.fergoman123.fergotools.common.blocks.wood.BlockWoodSlabFT;
-import io.github.fergoman123.fergotools.common.itemblock.ItemBlockLeavesFT;
-import io.github.fergoman123.fergotools.common.itemblock.ItemBlockLogFT;
-import io.github.fergoman123.fergotools.common.itemblock.ItemBlockSaplingFT;
-import io.github.fergoman123.fergotools.common.itemblock.ItemBlockSlabDouble;
-import io.github.fergoman123.fergotools.common.itemblock.ItemBlockSlabSingle;
-import io.github.fergoman123.fergotools.common.itemblock.ItemBlockStorageFT;
+import io.github.fergoman123.fergotools.block.*;
+import io.github.fergoman123.fergotools.block.BlockWoodLogFT;
+import io.github.fergoman123.fergotools.common.blocks.wood.*;
+import io.github.fergoman123.fergotools.common.itemblock.*;
 import io.github.fergoman123.fergotools.reference.BlockNames;
 import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
 import net.minecraft.block.BlockContainer;
@@ -88,7 +47,7 @@ public class ModBlocks {
 
     public static BlockContainer netherrackFurnace;
 
-    public static BlockLogFT logFT;
+    public static BlockWoodLogFT logFT;
     public static BlockMultiFT plankFT;
     public static BlockLeavesImpl leavesFT;
     public static BlockSaplingFT saplingFT;
@@ -154,7 +113,7 @@ public class ModBlocks {
         logFT = new BlockWoodLogFT(BlockNames.logFT);
         plankFT = new BlockPlankFT(BlockNames.plankFT);
         leavesFT = new BlockLeavesImpl(BlockNames.leavesFT);
-        saplingFT = new BlockSaplingFT();
+        saplingFT = new BlockSaplingFT(BlockNames.saplingFT);
 
         stairObsidian = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.obsidian), BlockNames.stairs[0]);
         stairEmerald = new BlockStairsFT(plankFT.getDefaultState().withProperty(BlockPlankFT.VARIANT, WoodTypes.emerald), BlockNames.stairs[1]);

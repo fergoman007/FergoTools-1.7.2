@@ -1,9 +1,8 @@
 package io.github.fergoman123.fergotools.common.blocks.wood;
 
-import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
+import io.github.fergoman123.fergotools.block.BlockMultiFT;
 import io.github.fergoman123.fergotools.reference.BlockNames;
-import io.github.fergoman123.fergoutil.block.BlockMultiFergo;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
@@ -15,10 +14,11 @@ import net.minecraft.item.ItemStack;
 import java.util.List;
 import java.util.Random;
 
-public class BlockPlankFT extends BlockMultiFergo
-{
+public class BlockPlankFT extends BlockMultiFT {
     public BlockPlankFT(String name) {
-		super(Material.wood, 0, FergoTools.tabFergoTools, 2.0f, 5.0f, BlockNames.planks, name);
+		super(Material.wood, BlockNames.planks, name);
+        this.setHardness(2.5f);
+        this.setResistance(5.0f);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian));
 	}
 
@@ -31,6 +31,7 @@ public class BlockPlankFT extends BlockMultiFergo
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void getSubBlocks(Item item, CreativeTabs tab, List list) {
         for(WoodTypes type : WoodTypes.values())
         {

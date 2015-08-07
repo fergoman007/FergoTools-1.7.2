@@ -1,10 +1,9 @@
-package io.github.fergoman123.fergotools.common.blocks.wood;
+package io.github.fergoman123.fergotools.block;
 
-import io.github.fergoman123.fergotools.api.base.BlockBases.BlockLeavesFT;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
-import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
@@ -25,7 +24,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public class BlockLeavesImpl extends BlockLeavesFT {
 	
@@ -33,7 +31,8 @@ public class BlockLeavesImpl extends BlockLeavesFT {
 
 	public BlockLeavesImpl(String name) {
 		super(name);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
+		this.setUnlocalizedName(name);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(CHECK_DECAY, true).withProperty(DECAYABLE, true));
 	}
 	
 	public int getRenderColor(IBlockState state){
@@ -87,7 +86,7 @@ public class BlockLeavesImpl extends BlockLeavesFT {
 	
 	public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, this.getWoodType(meta)).withProperty(DECAYABLE, Boolean.valueOf((meta & 4) == 0)).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
+        return this.getDefaultState().withProperty(VARIANT, this.getWoodType(meta)).withProperty(DECAYABLE, (meta & 4) == 0).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
     }
 	
 	public int getMetaFromState(IBlockState state)
@@ -95,12 +94,12 @@ public class BlockLeavesImpl extends BlockLeavesFT {
         byte b0 = 0;
         int i = b0 | ((BlockPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
 
-        if (!((Boolean)state.getValue(DECAYABLE)).booleanValue())
+        if (!(Boolean) state.getValue(DECAYABLE))
         {
             i |= 4;
         }
 
-        if (((Boolean)state.getValue(CHECK_DECAY)).booleanValue())
+        if ((Boolean) state.getValue(CHECK_DECAY))
         {
             i |= 8;
         }
