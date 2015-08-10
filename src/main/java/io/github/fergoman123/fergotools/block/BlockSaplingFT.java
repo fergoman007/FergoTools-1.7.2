@@ -59,7 +59,7 @@ public class BlockSaplingFT extends BlockBush implements IPlantable {
 
     public void grow(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-        if (((Integer)state.getValue(STAGE)).intValue() == 0)
+        if ((Integer) state.getValue(STAGE) == 0)
         {
             worldIn.setBlockState(pos, state.cycleProperty(STAGE), 4);
         }
@@ -77,7 +77,9 @@ public class BlockSaplingFT extends BlockBush implements IPlantable {
         int j = 0;
         boolean flag = false;
 
-        switch (SwitchEnumType.WOOD_TYPE_LOOKUP[((WoodTypes)state.getValue(TYPE)).ordinal()])
+        int meta = ((WoodTypes)state.getValue(TYPE)).getMeta();
+
+        switch (meta)
         {
         	case 0:
         		object = new WorldGenTreesFT(0, 0);
@@ -137,21 +139,9 @@ public class BlockSaplingFT extends BlockBush implements IPlantable {
         }
     }
 
-    /**
-     * Check whether the given BlockPos has a Sapling of the given type
-     */
-    public boolean isTypeAt(World worldIn, BlockPos pos, BlockPlanks.EnumType type)
-    {
-        IBlockState iblockstate = worldIn.getBlockState(pos);
-        return iblockstate.getBlock() == this && iblockstate.getValue(TYPE) == type;
-    }
-
-    /**
-     * Get the damage value that this Block should drop
-     */
     public int damageDropped(IBlockState state)
     {
-        return ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
+        return ((WoodTypes)state.getValue(TYPE)).getMeta();
     }
     
     
@@ -164,9 +154,6 @@ public class BlockSaplingFT extends BlockBush implements IPlantable {
 		}
     }
 
-    /**
-     * Whether this IGrowable can grow
-     */
     public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient)
     {
         return true;
@@ -187,84 +174,19 @@ public class BlockSaplingFT extends BlockBush implements IPlantable {
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(TYPE, BlockPlanks.EnumType.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
+        return this.getDefaultState().withProperty(TYPE, BlockPlanks.EnumType.byMetadata(meta & 7)).withProperty(STAGE, (meta & 8) >> 3);
     }
 
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
     public int getMetaFromState(IBlockState state)
     {
         byte b0 = 0;
         int i = b0 | ((BlockPlanks.EnumType)state.getValue(TYPE)).getMetadata();
-        i |= ((Integer)state.getValue(STAGE)).intValue() << 3;
+        i |= (Integer) state.getValue(STAGE) << 3;
         return i;
     }
 
     protected BlockState createBlockState()
     {
-        return new BlockState(this, new IProperty[] {TYPE, STAGE});
+        return new BlockState(this, TYPE, STAGE);
     }
-
-    static final class SwitchEnumType
-        {
-            static final int[] WOOD_TYPE_LOOKUP = new int[WoodTypes.values().length];
-
-            static
-            {
-                try
-                {
-                    WOOD_TYPE_LOOKUP[BlockPlanks.EnumType.SPRUCE.ordinal()] = 1;
-                }
-                catch (NoSuchFieldError var6)
-                {
-                    ;
-                }
-
-                try
-                {
-                    WOOD_TYPE_LOOKUP[BlockPlanks.EnumType.BIRCH.ordinal()] = 2;
-                }
-                catch (NoSuchFieldError var5)
-                {
-                    ;
-                }
-
-                try
-                {
-                    WOOD_TYPE_LOOKUP[BlockPlanks.EnumType.JUNGLE.ordinal()] = 3;
-                }
-                catch (NoSuchFieldError var4)
-                {
-                    ;
-                }
-
-                try
-                {
-                    WOOD_TYPE_LOOKUP[BlockPlanks.EnumType.ACACIA.ordinal()] = 4;
-                }
-                catch (NoSuchFieldError var3)
-                {
-                    ;
-                }
-
-                try
-                {
-                    WOOD_TYPE_LOOKUP[BlockPlanks.EnumType.DARK_OAK.ordinal()] = 5;
-                }
-                catch (NoSuchFieldError var2)
-                {
-                    ;
-                }
-
-                try
-                {
-                    WOOD_TYPE_LOOKUP[BlockPlanks.EnumType.OAK.ordinal()] = 6;
-                }
-                catch (NoSuchFieldError var1)
-                {
-                    ;
-                }
-            }
-        }
 }

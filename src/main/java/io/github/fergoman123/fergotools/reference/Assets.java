@@ -25,6 +25,16 @@ public class Assets {
         public static final String containerRedstoneFurnace = getContainerTooltip("redstoneFurnace");
         public static final String containerMacerator = getContainerTooltip("macerator");
 
+        public static final String containerObsidianWorkbench = getContainerTooltip("obsidianWorkbench");
+        public static final String containerEmeraldWorkbench = getContainerTooltip("emeraldWorkbench");
+        public static final String containerLapisWorkbench = getContainerTooltip("lapisWorkbench");
+        public static final String containerBronzeWorkbench = getContainerTooltip("BronzeWorkbench");
+        public static final String containerCoalWorkbench = getContainerTooltip("coalWorkbench");
+        public static final String containergGlowstoneWorkbench = getContainerTooltip("glowstoneWorkbench");
+        public static final String containerAdamantiumWorkbench = getContainerTooltip("adamantiumWorkbench");
+        public static final String containerSilkWorkbench = getContainerTooltip("silkWorkbench");
+        public static final String containerRedstoneWorkbench = getContainerTooltip("redstoneWorkbench");
+
         public static final String oreDictName = "ft.oredict.name";
 
         public static String getToolTip(String tooltip){

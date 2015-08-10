@@ -1,8 +1,8 @@
 package io.github.fergoman123.fergotools.client.gui;
 
-import io.github.fergoman123.fergotools.common.tileentities.TileQuartzFurnace;
 import io.github.fergoman123.fergotools.inventory.ContainerObsidianFurnace;
 import io.github.fergoman123.fergotools.reference.Assets.GuiTextures;
+import io.github.fergoman123.fergotools.tileentity.TileQuartzFurnace;
 import io.github.fergoman123.fergoutil.gui.GuiFurnaceFergo;
 import io.github.fergoman123.fergoutil.helper.GLStateHelper;
 import net.minecraft.entity.player.InventoryPlayer;
