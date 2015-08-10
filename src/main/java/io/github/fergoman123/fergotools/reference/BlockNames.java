@@ -89,8 +89,6 @@ public class BlockNames
     public static final String maceratorIdle = "maceratorIdle";
     public static final String maceratorActive = "maceratorActive";
 
-    public static final String netherrackFurnace = "netherrackFurnace";
-
     public static final String[] furnaceIdle = {quartzFurnaceIdle, obsidianFurnaceIdle, emeraldFurnaceIdle, lapisFurnaceIdle, bronzeFurnaceIdle, coalFurnaceIdle, glowstoneFurnaceIdle, adamantiumFurnaceIdle, silkFurnaceIdle, redstoneFurnaceIdle, maceratorIdle};
     public static final String[] furnaceActive = {quartzFurnaceActive, obsidianFurnaceActive, emeraldFurnaceActive, lapisFurnaceActive, bronzeFurnaceActive, coalFurnaceActive, glowstoneFurnaceActive, adamantiumFurnaceActive, silkFurnaceActive, redstoneFurnaceActive, maceratorActive};
 

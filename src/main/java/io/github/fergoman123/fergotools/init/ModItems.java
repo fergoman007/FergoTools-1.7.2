@@ -2,10 +2,28 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.common.items.ItemExpCollector;
 import io.github.fergoman123.fergotools.common.items.ItemExpShard;
-import io.github.fergoman123.fergotools.item.*;
-import io.github.fergoman123.fergotools.model.ModelResLocFT;
+import io.github.fergoman123.fergotools.item.ItemArmorAdamantium;
+import io.github.fergoman123.fergotools.item.ItemArmorBronze;
+import io.github.fergoman123.fergotools.item.ItemArmorCoal;
+import io.github.fergoman123.fergotools.item.ItemArmorEmerald;
+import io.github.fergoman123.fergotools.item.ItemArmorFT;
+import io.github.fergoman123.fergotools.item.ItemArmorGlowstone;
+import io.github.fergoman123.fergotools.item.ItemArmorLapis;
+import io.github.fergoman123.fergotools.item.ItemArmorObsidian;
+import io.github.fergoman123.fergotools.item.ItemArmorQuartz;
+import io.github.fergoman123.fergotools.item.ItemArmorRedstone;
+import io.github.fergoman123.fergotools.item.ItemAxeFT;
+import io.github.fergoman123.fergotools.item.ItemBowFT;
+import io.github.fergoman123.fergotools.item.ItemFT;
+import io.github.fergoman123.fergotools.item.ItemGemExpBase;
+import io.github.fergoman123.fergotools.item.ItemHoeFT;
+import io.github.fergoman123.fergotools.item.ItemMultiFT;
+import io.github.fergoman123.fergotools.item.ItemPickaxeFT;
+import io.github.fergoman123.fergotools.item.ItemShearsFT;
+import io.github.fergoman123.fergotools.item.ItemShovelFT;
+import io.github.fergoman123.fergotools.item.ItemStaffExpBase;
+import io.github.fergoman123.fergotools.item.ItemSwordFT;
 import io.github.fergoman123.fergotools.reference.ItemNames;
-import io.github.fergoman123.fergotools.util.item.AM;
 import io.github.fergoman123.fergotools.util.item.TM;
 import io.github.fergoman123.fergoutil.item.ArmorType;
 import net.minecraft.client.Minecraft;
@@ -165,7 +183,7 @@ public class ModItems {
 
     public static final ItemMultiFT stickFT = new ItemMultiFT(ItemNames.sticks, ItemNames.stickFT);
 
-    public static void registerItems() {
+    public void register() {
         GameRegistry.registerItem(ingotObsidian, ItemNames.ingotObsidian);
         GameRegistry.registerItem(gemEmerald, ItemNames.gemEmerald);
         GameRegistry.registerItem(gemLapis, ItemNames.gemLapis);
@@ -321,7 +339,7 @@ public class ModItems {
         registerVariants();
     }
 
-    private static void registerModels() {
+    private void registerModels() {
         register(ingotObsidian, "fergotools:ingotObsidian");
         register(gemEmerald, "fergotools:gemEmerald");
         register(gemLapis, "fergotools:gemLapis");
@@ -481,7 +499,7 @@ public class ModItems {
         register(stickFT, 8, "fergotools:stickRedstone");
     }
 
-    private static void registerVariants() {
+    private void registerVariants() {
         ModelBakery.addVariantName(ingotObsidian, "fergotools:ingotObsidian");
         ModelBakery.addVariantName(gemEmerald, "fergotools:gemEmerald");
         ModelBakery.addVariantName(gemLapis, "fergotools:gemLapis");

@@ -1,10 +1,10 @@
 package io.github.fergoman123.fergotools.common.blocks.wood;
 
-import io.github.fergoman123.fergotools.api.base.BlockBases.BlockLogFT;
+import java.util.List;
+
+import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
-import io.github.fergoman123.fergoutil.enums.SwitchEnumAxis;
-import io.github.fergoman123.fergoutil.helper.NameHelper;
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
@@ -12,18 +12,20 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import java.util.List;
-
-public class BlockWoodLogFT extends BlockLogFT
+public class BlockWoodLogFT extends BlockLog
 {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
 
     public BlockWoodLogFT(String name) {
-        super(name);
+        super();
+        this.setUnlocalizedName(name);
+        this.setCreativeTab(FergoTools.tabFergoTools);
+        this.setHardness(2.5f);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, WoodTypes.obsidian).withProperty(LOG_AXIS, EnumAxis.Y));
     }
 
-    @Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
         for(WoodTypes type : WoodTypes.values())
         {
@@ -86,5 +88,40 @@ public class BlockWoodLogFT extends BlockLogFT
     @Override
     public int damageDropped(IBlockState state) {
         return ((WoodTypes)state.getValue(VARIANT)).getMeta();
+    }
+    
+    static final class SwitchEnumAxis
+    {
+        static final int[] AXIS_LOOKUP = new int[BlockLog.EnumAxis.values().length];
+        
+        static
+        {
+            try
+            {
+                AXIS_LOOKUP[BlockLog.EnumAxis.X.ordinal()] = 1;
+            }
+            catch (NoSuchFieldError var3)
+            {
+                ;
+            }
+
+            try
+            {
+                AXIS_LOOKUP[BlockLog.EnumAxis.Z.ordinal()] = 2;
+            }
+            catch (NoSuchFieldError var2)
+            {
+                ;
+            }
+
+            try
+            {
+                AXIS_LOOKUP[BlockLog.EnumAxis.NONE.ordinal()] = 3;
+            }
+            catch (NoSuchFieldError var1)
+            {
+                ;
+            }
+        }
     }
 }

@@ -10,7 +10,9 @@
 package io.github.fergoman123.fergotools;
 
 import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.init.*;
+import io.github.fergoman123.fergotools.init.ModBlocks;
+import io.github.fergoman123.fergotools.init.ModItems;
+import io.github.fergoman123.fergotools.init.Recipes;
 import io.github.fergoman123.fergotools.log.LoggerFT;
 import io.github.fergoman123.fergotools.reference.MetadataFT;
 import io.github.fergoman123.fergotools.reference.ModInfo;
@@ -26,7 +28,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.Logger;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dep, guiFactory = Reference.guiFactoryClass)
 public class FergoTools {
@@ -44,8 +45,6 @@ public class FergoTools {
 
     @Mod.Instance(ModInfo.modid)
     private static FergoTools instance;
-
-    private static final LoggerFT logger = new LoggerFT();
 
     public static FergoTools getInstance() {
         return instance;
@@ -65,15 +64,13 @@ public class FergoTools {
         MetadataFT.writeMetadata(evt.getModMetadata());
         ConfigHandler.init(evt.getSuggestedConfigurationFile());
         getProxy().registerEventHandlers();
-        ModItems.init();
-        ModBlocks.init();
     }
 
     @Mod.EventHandler
     public void load(FMLInitializationEvent evt) {
     	LoggerFT.info(Messages.initMessage);
-        ModItems.registerItems();
-        ModBlocks.registerBlocks();
+        (new ModItems()).register();
+        (new ModBlocks()).register();
         getProxy().registerTileEntities();
         getProxy().registerRenderers();
         Recipes.init();
