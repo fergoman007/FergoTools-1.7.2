@@ -1,6 +1,6 @@
 /*
  * Fergoman123's Tools
- * Copyright (c) 2014 fergoman123.
+ * Copyright (c) 2014-2015 fergoman123.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Lesser Public License v2.1
  * which accompanies this distribution, and is available at
@@ -9,6 +9,7 @@
 
 package io.github.fergoman123.fergotools.common.slot;
 
+import io.github.fergoman123.fergotools.tileentity.TileEntityFurnaceFT;
 import io.github.fergoman123.fergoutil.inventory.SlotFuelFergo;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -22,6 +23,6 @@ public class SlotMacerator extends SlotFuelFergo
 
     @Override
     public boolean isItemValid(ItemStack stack) {
-        return TileFurnaceFT.getMaceratorBurnTime(stack) > 0;
+        return TileEntityFurnaceFT.getMaceratorBurnTime(stack) > 0;
     }
 }

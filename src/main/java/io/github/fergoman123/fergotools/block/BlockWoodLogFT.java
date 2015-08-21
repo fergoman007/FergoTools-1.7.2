@@ -1,5 +1,7 @@
 package io.github.fergoman123.fergotools.block;
 
+import java.util.List;
+
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import net.minecraft.block.BlockLog;
@@ -9,8 +11,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
-import java.util.List;
 
 public class BlockWoodLogFT extends BlockLog {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", WoodTypes.class);
@@ -22,7 +22,8 @@ public class BlockWoodLogFT extends BlockLog {
         this.setCreativeTab(FergoTools.tabFergoTools);
     }
 
-    @Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
         for(WoodTypes type : WoodTypes.values()){
             list.add(new ItemStack(itemIn, 1, type.getMeta()));

@@ -1,6 +1,6 @@
-package io.github.fergoman123.fergotools.common.tileentities;
+package io.github.fergoman123.fergotools.tileentity;
 
-import io.github.fergoman123.fergotools.block.BlockBronzeFurnace;
+import io.github.fergoman123.fergotools.block.BlockCoalFurnace;
 import io.github.fergoman123.fergotools.reference.Assets.Locale;
 import io.github.fergoman123.fergotools.reference.ints.FurnaceInts;
 import io.github.fergoman123.fergotools.tileentity.TileEntityFurnaceFT;
@@ -13,13 +13,14 @@ import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 
-public class TileBronzeFurnace extends TileEntityFurnaceFT
+public class TileCoalFurnace extends TileEntityFurnaceFT
 {
     @Override
     public String getCommandSenderName() {
-        return Locale.containerBronzeFurnace;
+    	return Locale.containerCoalFurnace;
     }
 
     @Override
@@ -84,7 +85,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
             if (flag != this.isBurning())
             {
                 flag1 = true;
-                BlockBronzeFurnace.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockCoalFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
@@ -96,7 +97,7 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
 
     @Override
     public int getCookTime(ItemStack stack) {
-        return FurnaceInts.bronzeFurnaceSpeed;
+        return FurnaceInts.coalFurnaceSpeed;
     }
 
     @Override
@@ -149,15 +150,20 @@ public class TileBronzeFurnace extends TileEntityFurnaceFT
     public boolean isItemValidForSlot(int index, ItemStack stack) {
         return index != 2 && (index != 1 || isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
     }
+    
+    @Override
+    public boolean canInsertItem(int index, ItemStack stack, EnumFacing direction) {
+    	return this.isItemValidForSlot(index, stack);
+    }
 
     @Override
     public String getGuiID() {
-        return "fergotools:bronzeFurnace";
+        return "fergotools:coalFurnace";
     }
 
     @Override
     public Container createContainer(InventoryPlayer invPlayer, EntityPlayer player) {
-//        return new ContainerBronzeFurnace(invPlayer, this);
-        return null; //TODO: fix this
+//        return new ContainerCoalFurnace(invPlayer, this);
+    	return null;
     }
 }

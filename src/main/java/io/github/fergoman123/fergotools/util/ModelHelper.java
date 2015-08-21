@@ -34,10 +34,10 @@ public class ModelHelper
     }
 
     public static void registerBowItem(ItemBowFT bow, String bowName){
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResLocFT(bowName));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResLocFT(bowName + "_0"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResLocFT(bowName + "_1"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResLocFT(bowName + "_2"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResourceLocation("fergotools" + bowName));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResourceLocation("fergotools" + bowName + "_0"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResourceLocation("fergotools" + bowName + "_1"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bow, 0, new ModelResourceLocation("fergotools" + bowName + "_2"));
         ModelBakery.addVariantName(bow, bowName);
         ModelBakery.addVariantName(bow, bowName + "_0");
         ModelBakery.addVariantName(bow, bowName + "_1");

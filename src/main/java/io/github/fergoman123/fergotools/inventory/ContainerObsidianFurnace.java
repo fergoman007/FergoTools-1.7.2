@@ -1,6 +1,5 @@
 package io.github.fergoman123.fergotools.inventory;
 
-import io.github.fergoman123.fergotools.common.gui.ContainerFurnaceFT;
 import io.github.fergoman123.fergotools.tileentity.TileQuartzFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

@@ -9,11 +9,13 @@ import io.github.fergoman123.fergotools.block.BlockCoalFurnace;
 import io.github.fergoman123.fergotools.block.BlockCoalWorkbench;
 import io.github.fergoman123.fergotools.block.BlockEmeraldFurnace;
 import io.github.fergoman123.fergotools.block.BlockEmeraldWorkbench;
+import io.github.fergoman123.fergotools.block.BlockFT;
 import io.github.fergoman123.fergotools.block.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.block.BlockGlowstoneFurnace;
 import io.github.fergoman123.fergotools.block.BlockGlowstoneWorkbench;
 import io.github.fergoman123.fergotools.block.BlockLapisFurnace;
 import io.github.fergoman123.fergotools.block.BlockLapisWorkbench;
+import io.github.fergoman123.fergotools.block.BlockLeavesImpl;
 import io.github.fergoman123.fergotools.block.BlockMacerator;
 import io.github.fergoman123.fergotools.block.BlockMultiFT;
 import io.github.fergoman123.fergotools.block.BlockObsidianFurnace;
@@ -30,6 +32,7 @@ import io.github.fergoman123.fergotools.block.BlockPlankFT;
 import io.github.fergoman123.fergotools.block.BlockPlankFT.BlockStates;
 import io.github.fergoman123.fergotools.block.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.block.BlockRedstoneFurnace;
+import io.github.fergoman123.fergotools.block.BlockRedstoneWorkbench;
 import io.github.fergoman123.fergotools.block.BlockSaplingFT;
 import io.github.fergoman123.fergotools.block.BlockSilkFurnace;
 import io.github.fergoman123.fergotools.block.BlockSilkWorkbench;
@@ -45,8 +48,11 @@ import io.github.fergoman123.fergotools.common.itemblock.ItemBlockLogFT;
 import io.github.fergoman123.fergotools.common.itemblock.ItemBlockSaplingFT;
 import io.github.fergoman123.fergotools.common.itemblock.ItemBlockSlabDouble;
 import io.github.fergoman123.fergotools.common.itemblock.ItemBlockSlabSingle;
+import io.github.fergoman123.fergotools.model.Models;
 import io.github.fergoman123.fergotools.reference.BlockNames;
 import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
+import io.github.fergoman123.fergoutil.model.ModelEntry;
+import io.github.fergoman123.fergoutil.model.ModelVariant;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
@@ -186,28 +192,28 @@ public class ModBlocks {
     }
     
     private void registerModels(){
-    	addModel(oreExperience, createModel(BlockNames.oreExperience));
-    	addModel(oreObsidian, createModel(BlockNames.oreObsidian));
-    	addModel(oreGemEmerald, createModel(BlockNames.oreGemEmerald));
-    	addModel(oreGemLapis, createModel(BlockNames.oreGemLapis));
-    	addModel(oreBronze, createModel(BlockNames.oreBronze));
-    	addModel(oreAdamantium, createModel(BlockNames.oreAdamantium));
-    	addModel(oreGemRedstone, createModel(BlockNames.oreGemRedstone));
+    	registerModel(Models.oreExperience);
+    	registerModel(Models.oreObsidian);
+    	registerModel(Models.oreGemEmerald);
+    	registerModel(Models.oreGemLapis);
+    	registerModel(Models.oreBronze);
+    	registerModel(Models.oreAdamantium);
+    	registerModel(Models.oreGemRedstone);
     	
-    	addModel(storageFT, 0, createModel(BlockNames.blockExperience));
-    	addModel(storageFT, 1, createModel(BlockNames.blockExpCollector));
-    	addModel(storageFT, 2, createModel(BlockNames.blockObsidian));
-    	addModel(storageFT, 3, createModel(BlockNames.blockGemEmerald));
-    	addModel(storageFT, 4, createModel(BlockNames.blockGemLapis));
-    	addModel(storageFT, 5, createModel(BlockNames.blockBronze));
-    	addModel(storageFT, 6, createModel(BlockNames.blockCoal));
-    	addModel(storageFT, 7, createModel(BlockNames.blockGlowstone));
-    	addModel(storageFT, 8, createModel(BlockNames.blockAdamantium));
-    	addModel(storageFT, 9, createModel(BlockNames.blockGemSilk));
-    	addModel(storageFT, 10, createModel(BlockNames.blockGemRedstone));
+    	registerModel(Models.blockExperience);
+    	registerModel(Models.blockExpCollector);
+    	registerModel(Models.blockObsidian);
+    	registerModel(Models.blockGemEmerald);
+    	registerModel(Models.blockGemLapis);
+    	registerModel(Models.blockBronze);
+    	registerModel(Models.blockCoal);
+    	registerModel(Models.blockGlowstone);
+    	registerModel(Models.blockAdamantium);
+    	registerModel(Models.blockGemSilk);
+    	registerModel(Models.blockGemRedstone);
     	
-    	addModel(quartzFurnaceIdle, createModel(BlockNames.quartzFurnaceIdle));
-    	addModel(obsidianFurnaceIdle, createModel(BlockNames.obsidianFurnaceIdle));
+    	addModel(Models.quartzFurnaceIdle));
+    	addModel(Models.obsidianFurnaceIdle));
     	addModel(emeraldFurnaceIdle, createModel(BlockNames.emeraldFurnaceIdle));
     	addModel(lapisFurnaceIdle, createModel(BlockNames.lapisFurnaceIdle));
     	addModel(bronzeFurnaceIdle, createModel(BlockNames.bronzeFurnaceIdle));
@@ -341,19 +347,7 @@ public class ModBlocks {
     	addVariant(redstoneWorkbench, createModel(BlockNames.redstoneWorkbench));
     }
     
-    private static void addModel(Block block, int meta, String model){
-    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(model, "inventory"));
-    }
-    
-    private static void addModel(Block block, String model){
-    	addModel(block, 0, model);
-    }
-    
-    private static void addVariant(Block block, String variant){
-    	ModelBakery.addVariantName(Item.getItemFromBlock(block), variant);
-    }
-    
-    private static String createModel(String modelName){
-    	return "fergotools:" + modelName;
+    public static void registerModel(ModelEntry entry){
+    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(entry.item, entry.meta, new ModelResourceLocation(entry.name, "inventory"));
     }
 }

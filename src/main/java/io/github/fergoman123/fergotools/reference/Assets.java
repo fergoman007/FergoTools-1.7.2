@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.reference;
 
-import net.minecraft.util.ResourceLocation;
+import io.github.fergoman123.fergotools.util.ResLocFT;
 
 public class Assets {
 
@@ -64,23 +64,16 @@ public class Assets {
         public static final ResLocFT bronzeWorkbenchGuiTexture = getWorkbenchGui("BronzeWorkbench");
         public static final ResLocFT coalWorkbenchGuiTexture = getWorkbenchGui("coalWorkbench");
         public static final ResLocFT glowstoneWorkbenchGuiTexture = getWorkbenchGui("glowstoneWorkbench");
-        public static final ResLocFT adamantiumWorkbenchGuiTexture = getWorkbenchGui("adamantiumWorkbench");
+        public static final ResLocFT adamantiumWorkbenchGui = getWorkbenchGui("adamantiumWorkbench");
         public static final ResLocFT silkWorkbenchGuiTexture = getWorkbenchGui("silkWorkbench");
-        public static final ResLocFT redstoneWorkbenchGuiTexture = getWorkbenchGui("redstoneWorkbench");
+        public static final ResLocFT redstoneWorkbenchGui = getWorkbenchGui("redstoneWorkbench");
     }
 
-    public static class ResLocFT extends ResourceLocation{
-
-        public ResLocFT(String path) {
-            super(ModInfo.modid.toLowerCase(), path);
-        }
-    }
-
-    private static ResLocFT getFurnaceGui(String textureName){
+    public static ResLocFT getFurnaceGui(String textureName){
         return new ResLocFT("textures/gui/furnace/" + textureName + ".png");
     }
 
-    private static ResLocFT getWorkbenchGui(String textureName){
+    public static ResLocFT getWorkbenchGui(String textureName){
         return new ResLocFT("textures/gui/workbench/" + textureName + ".png");
     }
 }

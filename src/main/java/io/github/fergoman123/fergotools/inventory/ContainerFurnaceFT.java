@@ -1,4 +1,4 @@
-package io.github.fergoman123.fergotools.common.gui;
+package io.github.fergoman123.fergotools.inventory;
 
 import io.github.fergoman123.fergoutil.gui.ContainerFurnaceFergo;
 import net.minecraft.entity.player.InventoryPlayer;

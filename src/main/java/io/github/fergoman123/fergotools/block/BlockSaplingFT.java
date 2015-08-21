@@ -9,7 +9,6 @@ import io.github.fergoman123.fergotools.worldgen.WorldGenTreesFT;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockPlanks;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockState;

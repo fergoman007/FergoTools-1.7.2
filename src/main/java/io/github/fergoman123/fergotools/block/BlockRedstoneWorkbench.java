@@ -1,6 +1,5 @@
-package io.github.fergoman123.fergotools.init;
+package io.github.fergoman123.fergotools.block;
 
-import io.github.fergoman123.fergotools.block.BlockWorkbenchFT;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.reference.GuiIds;
 import net.minecraft.block.state.IBlockState;
