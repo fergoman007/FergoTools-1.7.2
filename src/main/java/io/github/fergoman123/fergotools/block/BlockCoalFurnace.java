@@ -2,10 +2,10 @@ package io.github.fergoman123.fergotools.block;
 
 import java.util.Random;
 
-import io.github.fergoman123.fergotools.common.tileentities.TileCoalFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.tileentity.TileCoalFurnace;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -34,7 +34,7 @@ public class BlockCoalFurnace extends BlockFurnaceFT {
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
         if (worldIn.isRemote && !playerIn.isSneaking()){
-            TileCoalFurnace furnace = (TileCoalFurnace)worldIn.getTileEntity(pos);
+            TileCoalFurnace furnace = (TileCoalFurnace)worldIn.getTileEntity(pos);// TODO: tile entity
             if (furnace != null){
                 FTHelper.openGui(playerIn, GuiIds.coalFurnace, worldIn, pos);
                 return true;

@@ -1,5 +1,6 @@
 package io.github.fergoman123.fergotools.common.itemblock;
 
+import io.github.fergoman123.fergotools.api.content.*;
 import io.github.fergoman123.fergotools.reference.BlockNames;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
@@ -19,6 +20,6 @@ public class ItemBlockLogFT extends ItemBlock
     }
 
     public String getUnlocalizedName(ItemStack stack){
-        return super.getUnlocalizedName() + "." + BlockNames.logs[stack.getItemDamage()];
+        return super.getUnlocalizedName() + "." + WoodTypes.getLogName(stack.getItemDamage());
     }
 }

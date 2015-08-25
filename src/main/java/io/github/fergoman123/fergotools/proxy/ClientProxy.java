@@ -10,17 +10,13 @@
 package io.github.fergoman123.fergotools.proxy;
 
 
-import io.github.fergoman123.fergotools.common.tileentities.*;
-import io.github.fergoman123.fergotools.config.ConfigHandler;
-import io.github.fergoman123.fergotools.event.ItemToolTipEvent;
-import io.github.fergoman123.fergotools.event.OnArmorTickEvent;
-import io.github.fergoman123.fergotools.event.OnPlayerLoggedInEvent;
-import io.github.fergoman123.fergotools.init.ModBlocks;
-import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergoutil.proxy.CommonProxy;
-
 import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerEvent;
 import static io.github.fergoman123.fergoutil.helper.RegisterHelper.registerTileEntity;
+
+import io.github.fergoman123.fergotools.config.*;
+import io.github.fergoman123.fergotools.event.*;
+import io.github.fergoman123.fergotools.tileentity.*;
+import io.github.fergoman123.fergoutil.proxy.*;
 
 public class ClientProxy extends CommonProxy
 {

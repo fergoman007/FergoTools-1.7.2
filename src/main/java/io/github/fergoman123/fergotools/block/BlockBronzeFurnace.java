@@ -2,10 +2,10 @@ package io.github.fergoman123.fergotools.block;
 
 import java.util.Random;
 
-import io.github.fergoman123.fergotools.common.tileentities.TileBronzeFurnace;
 import io.github.fergoman123.fergotools.helper.FTHelper;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.reference.GuiIds;
+import io.github.fergoman123.fergotools.tileentity.TileBronzeFurnace;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;

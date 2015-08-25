@@ -1,6 +1,6 @@
 package io.github.fergoman123.fergotools.api.content;
 
-import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.*;
 
 public enum WoodTypes implements IStringSerializable
 {
@@ -15,6 +15,11 @@ public enum WoodTypes implements IStringSerializable
     redstone(8, "Redstone");
 
     private static final WoodTypes[] VALUES = new WoodTypes[values().length];
+    
+    private static final String prefixLog = "log";
+    private static final String prefixPlank = "plank";
+    private static final String prefixLeaves = "leaves";
+    private static final String prefixSapling = "sapling";
 
     private final int meta;
     private final String name;
@@ -42,5 +47,21 @@ public enum WoodTypes implements IStringSerializable
     public String getName()
     {
         return this.name;
+    }
+    
+    public static String getLogName(int meta){
+    	return prefixLog + WoodTypes.values()[meta];
+    }
+    
+    public static String getPlankName(int meta){
+    	return prefixPlank + WoodTypes.values()[meta];
+    }
+    
+    public static String getLeavesName(int meta){
+    	return prefixLeaves + WoodTypes.values()[meta];
+    }
+    
+    public static String getSaplingName(int meta){
+    	return prefixSapling + WoodTypes.values()[meta];
     }
 }
