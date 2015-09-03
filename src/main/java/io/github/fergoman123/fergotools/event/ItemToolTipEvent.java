@@ -4,13 +4,7 @@ import java.util.List;
 
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
-import io.github.fergoman123.fergotools.item.ItemAxeFT;
-import io.github.fergoman123.fergotools.item.ItemGemExpBase;
-import io.github.fergoman123.fergotools.item.ItemHoeFT;
-import io.github.fergoman123.fergotools.item.ItemPickaxeFT;
-import io.github.fergoman123.fergotools.item.ItemShovelFT;
-import io.github.fergoman123.fergotools.item.ItemStaffExpBase;
-import io.github.fergoman123.fergotools.item.ItemSwordFT;
+import io.github.fergoman123.fergotools.item.*;
 import io.github.fergoman123.fergotools.reference.BlockNames;
 import io.github.fergoman123.fergotools.reference.ItemNames;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
@@ -89,47 +83,47 @@ public class ItemToolTipEvent {
 
         if (item instanceof ItemPickaxeFT){
             ItemPickaxeFT pickaxe = (ItemPickaxeFT)item;
-            list.add(NameHelper.translate("ft.tooltip.tm") + " " + pickaxe.material.toString());
-            list.add(NameHelper.translate("ft.tooltip.hvl") + " " + pickaxe.material.getHarvestLevel());
+            list.add(NameHelper.translate("ft.tooltip.tm") + " " + pickaxe.getMaterial().toString());
+            list.add(NameHelper.translate("ft.tooltip.hvl") + " " + pickaxe.getMaterial().getHarvestLevel());
             list.add(NameHelper.translate("ft.tooltip.dur") + " " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-            list.add(NameHelper.translate("ft.tooltip.eff") + " " + pickaxe.material.getEfficiencyOnProperMaterial());
-            list.add(NameHelper.translate("ft.tooltip.dve") + " " + pickaxe.material.getDamageVsEntity());
-            list.add(NameHelper.translate("ft.tooltip.ench") + " " + pickaxe.material.getEnchantability());
+            list.add(NameHelper.translate("ft.tooltip.eff") + " " + pickaxe.getMaterial().getEfficiencyOnProperMaterial());
+            list.add(NameHelper.translate("ft.tooltip.dve") + " " + pickaxe.getMaterial().getDamageVsEntity());
+            list.add(NameHelper.translate("ft.tooltip.ench") + " " + pickaxe.getMaterial().getEnchantability());
         }
 
         if (item instanceof ItemShovelFT){
             ItemShovelFT shovel = (ItemShovelFT)item;
-            list.add(NameHelper.translate("ft.tooltip.tm") + " " + shovel.material.toString());
-            list.add(NameHelper.translate("ft.tooltip.hvl") + " " + shovel.material.getHarvestLevel());
+            list.add(NameHelper.translate("ft.tooltip.tm") + " " + shovel.getMaterial().toString());
+            list.add(NameHelper.translate("ft.tooltip.hvl") + " " + shovel.getMaterial().getHarvestLevel());
             list.add(NameHelper.translate("ft.tooltip.dur") + " " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-            list.add(NameHelper.translate("ft.tooltip.eff") + " " + shovel.material.getEfficiencyOnProperMaterial());
-            list.add(NameHelper.translate("ft.tooltip.dve") + " " + shovel.material.getDamageVsEntity());
-            list.add(NameHelper.translate("ft.tooltip.ench") + " " + shovel.material.getEnchantability());
+            list.add(NameHelper.translate("ft.tooltip.eff") + " " + shovel.getMaterial().getEfficiencyOnProperMaterial());
+            list.add(NameHelper.translate("ft.tooltip.dve") + " " + shovel.getMaterial().getDamageVsEntity());
+            list.add(NameHelper.translate("ft.tooltip.ench") + " " + shovel.getMaterial().getEnchantability());
         }
 
         if (item instanceof ItemAxeFT){
             ItemAxeFT axe = (ItemAxeFT)item;
-            list.add(NameHelper.translate("ft.tooltip.tm") + " " + axe.material.toString());
-            list.add(NameHelper.translate("ft.tooltip.hvl") + " " + axe.material.getHarvestLevel());
+            list.add(NameHelper.translate("ft.tooltip.tm") + " " + axe.getMaterial().toString());
+            list.add(NameHelper.translate("ft.tooltip.hvl") + " " + axe.getMaterial().getHarvestLevel());
             list.add(NameHelper.translate("ft.tooltip.dur") + " " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-            list.add(NameHelper.translate("ft.tooltip.eff") + " " + axe.material.getEfficiencyOnProperMaterial());
-            list.add(NameHelper.translate("ft.tooltip.dve") + " " + axe.material.getDamageVsEntity());
-            list.add(NameHelper.translate("ft.tooltip.ench") + " " + axe.material.getEnchantability());
+            list.add(NameHelper.translate("ft.tooltip.eff") + " " + axe.getMaterial().getEfficiencyOnProperMaterial());
+            list.add(NameHelper.translate("ft.tooltip.dve") + " " + axe.getMaterial().getDamageVsEntity());
+            list.add(NameHelper.translate("ft.tooltip.ench") + " " + axe.getMaterial().getEnchantability());
         }
 
         if (item instanceof ItemHoeFT){
             ItemHoeFT hoe = (ItemHoeFT)item;
-            list.add(NameHelper.translate("ft.tooltip.tm") + " " + hoe.material.toString());
+            list.add(NameHelper.translate("ft.tooltip.tm") + " " + hoe.getMaterial().toString());
             list.add(NameHelper.translate("ft.tooltip.dur") + " " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-            list.add(NameHelper.translate("ft.tooltip.ench") + " " + hoe.material.getEnchantability());
+            list.add(NameHelper.translate("ft.tooltip.ench") + " " + hoe.getMaterial().getEnchantability());
         }
 
         if (item instanceof ItemSwordFT){
             ItemSwordFT sword = (ItemSwordFT)item;
-            list.add(NameHelper.translate("ft.tooltip.tm") + " " + sword.material.toString());
+            list.add(NameHelper.translate("ft.tooltip.tm") + " " + sword.getMaterial().toString());
             list.add(NameHelper.translate("ft.tooltip.dur") + " " + (stack.getMaxDamage() - stack.getItemDamage()) + "/" + stack.getMaxDamage());
-            list.add(NameHelper.translate("ft.tooltip.dve") + " " + sword.material.getDamageVsEntity());
-            list.add(NameHelper.translate("ft.tooltip.ench") + " " + sword.material.getEnchantability());
+            list.add(NameHelper.translate("ft.tooltip.dve") + " " + sword.getMaterial().getDamageVsEntity());
+            list.add(NameHelper.translate("ft.tooltip.ench") + " " + sword.getMaterial().getEnchantability());
         }
 
         if (item instanceof ItemGemExpBase){

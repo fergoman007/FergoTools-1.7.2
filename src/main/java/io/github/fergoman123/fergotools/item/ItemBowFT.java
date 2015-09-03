@@ -8,7 +8,8 @@ import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 
 public class ItemBowFT extends ItemBow {
-    public ToolMaterial material;
+    private ToolMaterial material;
+    private String name;
 
     public ItemBowFT(ToolMaterial material, String name) {
         super();
@@ -16,6 +17,7 @@ public class ItemBowFT extends ItemBow {
         this.setMaxDamage(material.getMaxUses());
         this.setCreativeTab(FergoTools.tabFergoTools);
         this.setUnlocalizedName(name);
+        this.name = name;
     }
 
     @Override
@@ -53,5 +55,13 @@ public class ItemBowFT extends ItemBow {
             }
         }
         return modelresourcelocation;
+    }
+
+    public ToolMaterial getMaterial() {
+        return material;
+    }
+
+    public String getName() {
+        return name;
     }
 }

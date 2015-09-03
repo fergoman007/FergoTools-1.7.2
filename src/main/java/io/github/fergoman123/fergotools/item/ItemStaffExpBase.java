@@ -1,21 +1,17 @@
 package io.github.fergoman123.fergotools.item;
 
-import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.reference.ItemNames;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemStaffExpBase extends Item {
+public class ItemStaffExpBase extends ItemFT {
     private int type;
 
     public ItemStaffExpBase(int type) {
-        super();
+        super(ItemNames.staffExpVariants[type], 1);
         this.type = type;
-        this.setCreativeTab(FergoTools.tabFergoTools);
-        this.setUnlocalizedName(ItemNames.staffExpVariants[type]);
     }
 
     @Override

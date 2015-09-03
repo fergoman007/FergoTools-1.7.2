@@ -1,10 +1,8 @@
 package io.github.fergoman123.fergotools.common.itemblock;
 
 import io.github.fergoman123.fergotools.api.content.*;
-import io.github.fergoman123.fergotools.reference.BlockNames;
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import net.minecraft.block.*;
+import net.minecraft.item.*;
 
 public class ItemBlockLogFT extends ItemBlock
 {

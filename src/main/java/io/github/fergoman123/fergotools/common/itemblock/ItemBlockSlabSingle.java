@@ -1,25 +1,18 @@
 package io.github.fergoman123.fergotools.common.itemblock;
 
-import io.github.fergoman123.fergotools.reference.BlockNames;
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import io.github.fergoman123.fergotools.api.content.*;
+import io.github.fergoman123.fergoutil.item.*;
+import net.minecraft.block.*;
+import net.minecraft.item.*;
 
-public class ItemBlockSlabSingle extends ItemBlock {
+public class ItemBlockSlabSingle extends ItemBlockVariants {
 
 	public ItemBlockSlabSingle(Block block) {
 		super(block);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-	}
-	
-	@Override
-	public int getMetadata(int damage) {
-		return damage;
 	}
     
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		return super.getUnlocalizedName() + "." + BlockNames.slabSingle[stack.getItemDamage()];
+		return super.getUnlocalizedName() + "." + WoodTypes.getSlabName(stack.getItemDamage(), false);
 	}
 }

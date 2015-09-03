@@ -2,34 +2,13 @@ package io.github.fergoman123.fergotools.init;
 
 import io.github.fergoman123.fergotools.common.items.ItemExpCollector;
 import io.github.fergoman123.fergotools.common.items.ItemExpShard;
-import io.github.fergoman123.fergotools.item.ItemArmorAdamantium;
-import io.github.fergoman123.fergotools.item.ItemArmorBronze;
-import io.github.fergoman123.fergotools.item.ItemArmorCoal;
-import io.github.fergoman123.fergotools.item.ItemArmorEmerald;
-import io.github.fergoman123.fergotools.item.ItemArmorFT;
-import io.github.fergoman123.fergotools.item.ItemArmorGlowstone;
-import io.github.fergoman123.fergotools.item.ItemArmorLapis;
-import io.github.fergoman123.fergotools.item.ItemArmorObsidian;
-import io.github.fergoman123.fergotools.item.ItemArmorQuartz;
-import io.github.fergoman123.fergotools.item.ItemArmorRedstone;
-import io.github.fergoman123.fergotools.item.ItemAxeFT;
-import io.github.fergoman123.fergotools.item.ItemBowFT;
-import io.github.fergoman123.fergotools.item.ItemFT;
-import io.github.fergoman123.fergotools.item.ItemGemExpBase;
-import io.github.fergoman123.fergotools.item.ItemHoeFT;
-import io.github.fergoman123.fergotools.item.ItemMultiFT;
-import io.github.fergoman123.fergotools.item.ItemPickaxeFT;
-import io.github.fergoman123.fergotools.item.ItemShearsFT;
-import io.github.fergoman123.fergotools.item.ItemShovelFT;
-import io.github.fergoman123.fergotools.item.ItemStaffExpBase;
-import io.github.fergoman123.fergotools.item.ItemSwordFT;
+import io.github.fergoman123.fergotools.item.*;
 import io.github.fergoman123.fergotools.reference.ItemNames;
 import io.github.fergoman123.fergotools.util.item.TM;
+import io.github.fergoman123.fergoutil.helper.RegisterHelper;
 import io.github.fergoman123.fergoutil.item.ArmorType;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
@@ -184,486 +163,265 @@ public class ModItems {
     public static final ItemMultiFT stickFT = new ItemMultiFT(ItemNames.sticks, ItemNames.stickFT);
 
     public void register() {
-        GameRegistry.registerItem(ingotObsidian, ItemNames.ingotObsidian);
-        GameRegistry.registerItem(gemEmerald, ItemNames.gemEmerald);
-        GameRegistry.registerItem(gemLapis, ItemNames.gemLapis);
-        GameRegistry.registerItem(ingotBronze, ItemNames.ingotBronze);
-        GameRegistry.registerItem(ingotCoal, ItemNames.ingotCoal);
-        GameRegistry.registerItem(ingotGlowstone, ItemNames.ingotGlowstone);
-        GameRegistry.registerItem(ingotAdamantium, ItemNames.ingotAdamantium);
-        GameRegistry.registerItem(gemSilk, ItemNames.gemSilk);
-        GameRegistry.registerItem(gemRedstone, ItemNames.gemRedstone);
+        ItemFT[] items = new ItemFT[]{ingotObsidian, gemEmerald, gemLapis, ingotBronze, ingotCoal, ingotGlowstone, ingotAdamantium, gemSilk, gemRedstone};
 
-        GameRegistry.registerItem(gemExp, ItemNames.gemExp);
-        GameRegistry.registerItem(gemExp2, ItemNames.gemExp2);
-        GameRegistry.registerItem(gemExp3, ItemNames.gemExp3);
+        for(ItemFT item : items) {
+            GameRegistry.registerItem(item, item.getName());
+            RegisterHelper.getModelMesher().register(item, 0, createModel(item.getName()));
+            ModelBakery.addVariantName(item, createVariant(item.getName()));
+        }
 
-        GameRegistry.registerItem(staffExp, ItemNames.staffExp);
-        GameRegistry.registerItem(staffExp2, ItemNames.staffExp2);
-        GameRegistry.registerItem(staffExp3, ItemNames.staffExp3);
+        ItemFT[] expGems = new ItemFT[]{gemExp, gemExp2, gemExp3};
 
-        GameRegistry.registerItem(shardExp, ItemNames.shardExp);
-        GameRegistry.registerItem(expCollector, ItemNames.expCollector);
+        for(ItemFT item : expGems){
+            GameRegistry.registerItem(item, item.getName());
+            RegisterHelper.getModelMesher().register(item, 0, createModel(item.getName()));
+            ModelBakery.addVariantName(item, createVariant(item.getName()));
+        }
 
-        GameRegistry.registerItem(quartzPickaxe, ItemNames.quartzPickaxe);
-        GameRegistry.registerItem(quartzShovel, ItemNames.quartzShovel);
-        GameRegistry.registerItem(quartzAxe, ItemNames.quartzAxe);
-        GameRegistry.registerItem(quartzHoe, ItemNames.quartzHoe);
-        GameRegistry.registerItem(quartzSword, ItemNames.quartzSword);
+        ItemFT[] expStaffs = new ItemFT[]{staffExp, staffExp2, staffExp3};
 
-        GameRegistry.registerItem(obsidianPickaxe, ItemNames.obsidianPickaxe);
-        GameRegistry.registerItem(obsidianShovel, ItemNames.obsidianShovel);
-        GameRegistry.registerItem(obsidianAxe, ItemNames.obsidianAxe);
-        GameRegistry.registerItem(obsidianHoe, ItemNames.obsidianHoe);
-        GameRegistry.registerItem(obsidianSword, ItemNames.obsidianSword);
+        for(ItemFT item : expStaffs){
+            GameRegistry.registerItem(item, item.getName());
+            RegisterHelper.getModelMesher().register(item, 0, createModel(item.getName()));
+            ModelBakery.addVariantName(item, createVariant(item.getName()));
+        }
 
-        GameRegistry.registerItem(emeraldPickaxe, ItemNames.emeraldPickaxe);
-        GameRegistry.registerItem(emeraldShovel, ItemNames.emeraldShovel);
-        GameRegistry.registerItem(emeraldAxe, ItemNames.emeraldAxe);
-        GameRegistry.registerItem(emeraldHoe, ItemNames.emeraldHoe);
-        GameRegistry.registerItem(emeraldSword, ItemNames.emeraldSword);
+        GameRegistry.registerItem(quartzPickaxe, quartzPickaxe.getName());
+        GameRegistry.registerItem(quartzShovel, quartzShovel.getName());
+        GameRegistry.registerItem(quartzAxe, quartzAxe.getName());
+        GameRegistry.registerItem(quartzHoe, quartzHoe.getName());
+        GameRegistry.registerItem(quartzSword, quartzSword.getName());
+        RegisterHelper.getModelMesher().register(quartzPickaxe, 0, createModel(quartzPickaxe.getName()));
+        RegisterHelper.getModelMesher().register(quartzShovel, 0, createModel(quartzShovel.getName()));
+        RegisterHelper.getModelMesher().register(quartzAxe, 0, createModel(quartzAxe.getName()));
+        RegisterHelper.getModelMesher().register(quartzHoe, 0, createModel(quartzHoe.getName()));
+        RegisterHelper.getModelMesher().register(quartzSword, 0, createModel(quartzSword.getName()));
+        ModelBakery.addVariantName(quartzPickaxe, createVariant(quartzPickaxe.getName()));
+        ModelBakery.addVariantName(quartzShovel, createVariant(quartzShovel.getName()));
+        ModelBakery.addVariantName(quartzAxe, createVariant(quartzAxe.getName()));
+        ModelBakery.addVariantName(quartzHoe, createVariant(quartzHoe.getName()));
+        ModelBakery.addVariantName(quartzSword, createVariant(quartzSword.getName()));
 
-        GameRegistry.registerItem(lapisPickaxe, ItemNames.lapisPickaxe);
-        GameRegistry.registerItem(lapisShovel, ItemNames.lapisShovel);
-        GameRegistry.registerItem(lapisAxe, ItemNames.lapisAxe);
-        GameRegistry.registerItem(lapisHoe, ItemNames.lapisHoe);
-        GameRegistry.registerItem(lapisSword, ItemNames.lapisSword);
+        GameRegistry.registerItem(obsidianPickaxe, obsidianPickaxe.getName());
+        GameRegistry.registerItem(obsidianShovel, obsidianShovel.getName());
+        GameRegistry.registerItem(obsidianAxe, obsidianAxe.getName());
+        GameRegistry.registerItem(obsidianHoe, obsidianHoe.getName());
+        GameRegistry.registerItem(obsidianSword, obsidianSword.getName());
+        RegisterHelper.getModelMesher().register(obsidianPickaxe, 0, createModel(obsidianPickaxe.getName()));
+        RegisterHelper.getModelMesher().register(obsidianShovel, 0, createModel(obsidianShovel.getName()));
+        RegisterHelper.getModelMesher().register(obsidianAxe, 0, createModel(obsidianAxe.getName()));
+        RegisterHelper.getModelMesher().register(obsidianHoe, 0, createModel(obsidianHoe.getName()));
+        RegisterHelper.getModelMesher().register(obsidianSword, 0, createModel(obsidianSword.getName()));
+        ModelBakery.addVariantName(obsidianPickaxe, createVariant(obsidianPickaxe.getName()));
+        ModelBakery.addVariantName(obsidianShovel, createVariant(obsidianShovel.getName()));
+        ModelBakery.addVariantName(obsidianAxe, createVariant(obsidianAxe.getName()));
+        ModelBakery.addVariantName(obsidianHoe, createVariant(obsidianHoe.getName()));
+        ModelBakery.addVariantName(obsidianSword, createVariant(obsidianSword.getName()));
 
-        GameRegistry.registerItem(bronzePickaxe, ItemNames.bronzePickaxe);
-        GameRegistry.registerItem(bronzeShovel, ItemNames.bronzeShovel);
-        GameRegistry.registerItem(bronzeAxe, ItemNames.bronzeAxe);
-        GameRegistry.registerItem(bronzeHoe, ItemNames.bronzeHoe);
-        GameRegistry.registerItem(bronzeSword, ItemNames.bronzeSword);
+        GameRegistry.registerItem(emeraldPickaxe, emeraldPickaxe.getName());
+        GameRegistry.registerItem(emeraldShovel, emeraldShovel.getName());
+        GameRegistry.registerItem(emeraldAxe, emeraldAxe.getName());
+        GameRegistry.registerItem(emeraldHoe, emeraldHoe.getName());
+        GameRegistry.registerItem(emeraldSword, emeraldSword.getName());
+        RegisterHelper.getModelMesher().register(emeraldPickaxe, 0, createModel(emeraldPickaxe.getName()));
+        RegisterHelper.getModelMesher().register(emeraldShovel, 0, createModel(emeraldShovel.getName()));
+        RegisterHelper.getModelMesher().register(emeraldAxe, 0, createModel(emeraldAxe.getName()));
+        RegisterHelper.getModelMesher().register(emeraldHoe, 0, createModel(emeraldHoe.getName()));
+        RegisterHelper.getModelMesher().register(emeraldSword, 0, createModel(emeraldSword.getName()));
+        ModelBakery.addVariantName(emeraldPickaxe, createVariant(emeraldPickaxe.getName()));
+        ModelBakery.addVariantName(emeraldShovel, createVariant(emeraldShovel.getName()));
+        ModelBakery.addVariantName(emeraldAxe, createVariant(emeraldAxe.getName()));
+        ModelBakery.addVariantName(emeraldHoe, createVariant(emeraldHoe.getName()));
+        ModelBakery.addVariantName(emeraldSword, createVariant(emeraldSword.getName()));
 
-        GameRegistry.registerItem(coalPickaxe, ItemNames.coalPickaxe);
-        GameRegistry.registerItem(coalShovel, ItemNames.coalShovel);
-        GameRegistry.registerItem(coalAxe, ItemNames.coalAxe);
-        GameRegistry.registerItem(coalHoe, ItemNames.coalHoe);
-        GameRegistry.registerItem(coalSword, ItemNames.coalSword);
+        GameRegistry.registerItem(lapisPickaxe, lapisPickaxe.getName());
+        GameRegistry.registerItem(lapisShovel, lapisShovel.getName());
+        GameRegistry.registerItem(lapisAxe, lapisAxe.getName());
+        GameRegistry.registerItem(lapisHoe, lapisHoe.getName());
+        GameRegistry.registerItem(lapisSword, lapisSword.getName());
+        RegisterHelper.getModelMesher().register(lapisPickaxe, 0, createModel(lapisPickaxe.getName()));
+        RegisterHelper.getModelMesher().register(lapisShovel, 0, createModel(lapisShovel.getName()));
+        RegisterHelper.getModelMesher().register(lapisAxe, 0, createModel(lapisAxe.getName()));
+        RegisterHelper.getModelMesher().register(lapisHoe, 0, createModel(lapisHoe.getName()));
+        RegisterHelper.getModelMesher().register(lapisSword, 0, createModel(lapisSword.getName()));
+        ModelBakery.addVariantName(lapisPickaxe, createVariant(lapisPickaxe.getName()));
+        ModelBakery.addVariantName(lapisShovel, createVariant(lapisShovel.getName()));
+        ModelBakery.addVariantName(lapisAxe, createVariant(lapisAxe.getName()));
+        ModelBakery.addVariantName(lapisHoe, createVariant(lapisHoe.getName()));
+        ModelBakery.addVariantName(lapisSword, createVariant(lapisSword.getName()));
 
-        GameRegistry.registerItem(glowstonePickaxe, ItemNames.glowstonePickaxe);
-        GameRegistry.registerItem(glowstoneShovel, ItemNames.glowstoneShovel);
-        GameRegistry.registerItem(glowstoneAxe, ItemNames.glowstoneAxe);
-        GameRegistry.registerItem(glowstoneHoe, ItemNames.glowstoneHoe);
-        GameRegistry.registerItem(glowstoneSword, ItemNames.glowstoneSword);
+        GameRegistry.registerItem(bronzePickaxe, bronzePickaxe.getName());
+        GameRegistry.registerItem(bronzeShovel, bronzeShovel.getName());
+        GameRegistry.registerItem(bronzeAxe, bronzeAxe.getName());
+        GameRegistry.registerItem(bronzeHoe, bronzeHoe.getName());
+        GameRegistry.registerItem(bronzeSword, bronzeSword.getName());
+        RegisterHelper.getModelMesher().register(bronzePickaxe, 0, createModel(bronzePickaxe.getName()));
+        RegisterHelper.getModelMesher().register(bronzeShovel, 0, createModel(bronzeShovel.getName()));
+        RegisterHelper.getModelMesher().register(bronzeAxe, 0, createModel(bronzeAxe.getName()));
+        RegisterHelper.getModelMesher().register(bronzeHoe, 0, createModel(bronzeHoe.getName()));
+        RegisterHelper.getModelMesher().register(bronzeSword, 0, createModel(bronzeSword.getName()));
+        ModelBakery.addVariantName(bronzePickaxe, createVariant(bronzePickaxe.getName()));
+        ModelBakery.addVariantName(bronzeShovel, createVariant(bronzeShovel.getName()));
+        ModelBakery.addVariantName(bronzeAxe, createVariant(bronzeAxe.getName()));
+        ModelBakery.addVariantName(bronzeHoe, createVariant(bronzeHoe.getName()));
+        ModelBakery.addVariantName(bronzeSword, createVariant(bronzeSword.getName()));
 
-        GameRegistry.registerItem(adamantiumPickaxe, ItemNames.adamantiumPickaxe);
-        GameRegistry.registerItem(adamantiumShovel, ItemNames.adamantiumShovel);
-        GameRegistry.registerItem(adamantiumAxe, ItemNames.adamantiumAxe);
-        GameRegistry.registerItem(adamantiumHoe, ItemNames.adamantiumHoe);
-        GameRegistry.registerItem(adamantiumSword, ItemNames.adamantiumSword);
+        GameRegistry.registerItem(coalPickaxe, coalPickaxe.getName());
+        GameRegistry.registerItem(coalShovel, coalShovel.getName());
+        GameRegistry.registerItem(coalAxe, coalAxe.getName());
+        GameRegistry.registerItem(coalHoe, coalHoe.getName());
+        GameRegistry.registerItem(coalSword, coalSword.getName());
+        RegisterHelper.getModelMesher().register(coalPickaxe, 0, createModel(coalPickaxe.getName()));
+        RegisterHelper.getModelMesher().register(coalShovel, 0, createModel(coalShovel.getName()));
+        RegisterHelper.getModelMesher().register(coalAxe, 0, createModel(coalAxe.getName()));
+        RegisterHelper.getModelMesher().register(coalHoe, 0, createModel(coalHoe.getName()));
+        RegisterHelper.getModelMesher().register(coalSword, 0, createModel(coalSword.getName()));
+        ModelBakery.addVariantName(coalPickaxe, createVariant(coalPickaxe.getName()));
+        ModelBakery.addVariantName(coalShovel, createVariant(coalShovel.getName()));
+        ModelBakery.addVariantName(coalAxe, createVariant(coalAxe.getName()));
+        ModelBakery.addVariantName(coalHoe, createVariant(coalHoe.getName()));
+        ModelBakery.addVariantName(coalSword, createVariant(coalSword.getName()));
 
-        GameRegistry.registerItem(silkPickaxe, ItemNames.silkPickaxe);
-        GameRegistry.registerItem(silkShovel, ItemNames.silkShovel);
-        GameRegistry.registerItem(silkAxe, ItemNames.silkAxe);
-        GameRegistry.registerItem(silkHoe, ItemNames.silkHoe);
-        GameRegistry.registerItem(silkSword, ItemNames.silkSword);
+        GameRegistry.registerItem(glowstonePickaxe, glowstonePickaxe.getName());
+        GameRegistry.registerItem(glowstoneShovel, glowstoneShovel.getName());
+        GameRegistry.registerItem(glowstoneAxe, glowstoneAxe.getName());
+        GameRegistry.registerItem(glowstoneHoe, glowstoneHoe.getName());
+        GameRegistry.registerItem(glowstoneSword, glowstoneSword.getName());
+        RegisterHelper.getModelMesher().register(glowstonePickaxe, 0, createModel(glowstonePickaxe.getName()));
+        RegisterHelper.getModelMesher().register(glowstoneShovel, 0, createModel(glowstoneShovel.getName()));
+        RegisterHelper.getModelMesher().register(glowstoneAxe, 0, createModel(glowstoneAxe.getName()));
+        RegisterHelper.getModelMesher().register(glowstoneHoe, 0, createModel(glowstoneHoe.getName()));
+        RegisterHelper.getModelMesher().register(glowstoneSword, 0, createModel(glowstoneSword.getName()));
+        ModelBakery.addVariantName(glowstonePickaxe, createVariant(glowstonePickaxe.getName()));
+        ModelBakery.addVariantName(glowstoneShovel, createVariant(glowstoneShovel.getName()));
+        ModelBakery.addVariantName(glowstoneAxe, createVariant(glowstoneAxe.getName()));
+        ModelBakery.addVariantName(glowstoneHoe, createVariant(glowstoneHoe.getName()));
+        ModelBakery.addVariantName(glowstoneSword, createVariant(glowstoneSword.getName()));
 
-        GameRegistry.registerItem(redstonePickaxe, ItemNames.redstonePickaxe);
-        GameRegistry.registerItem(redstoneShovel, ItemNames.redstoneShovel);
-        GameRegistry.registerItem(redstoneAxe, ItemNames.redstoneAxe);
-        GameRegistry.registerItem(redstoneHoe, ItemNames.redstoneHoe);
-        GameRegistry.registerItem(redstoneSword, ItemNames.redstoneSword);
+        GameRegistry.registerItem(adamantiumPickaxe, adamantiumPickaxe.getName());
+        GameRegistry.registerItem(adamantiumShovel, adamantiumShovel.getName());
+        GameRegistry.registerItem(adamantiumAxe, adamantiumAxe.getName());
+        GameRegistry.registerItem(adamantiumHoe, adamantiumHoe.getName());
+        GameRegistry.registerItem(adamantiumSword, adamantiumSword.getName());
+        RegisterHelper.getModelMesher().register(adamantiumPickaxe, 0, createModel(adamantiumPickaxe.getName()));
+        RegisterHelper.getModelMesher().register(adamantiumShovel, 0, createModel(adamantiumShovel.getName()));
+        RegisterHelper.getModelMesher().register(adamantiumAxe, 0, createModel(adamantiumAxe.getName()));
+        RegisterHelper.getModelMesher().register(adamantiumHoe, 0, createModel(adamantiumHoe.getName()));
+        RegisterHelper.getModelMesher().register(adamantiumSword, 0, createModel(adamantiumSword.getName()));
+        ModelBakery.addVariantName(adamantiumPickaxe, createVariant(adamantiumPickaxe.getName()));
+        ModelBakery.addVariantName(adamantiumShovel, createVariant(adamantiumShovel.getName()));
+        ModelBakery.addVariantName(adamantiumAxe, createVariant(adamantiumAxe.getName()));
+        ModelBakery.addVariantName(adamantiumHoe, createVariant(adamantiumHoe.getName()));
+        ModelBakery.addVariantName(adamantiumSword, createVariant(adamantiumSword.getName()));
 
-        GameRegistry.registerItem(quartzHelmet, ItemNames.quartzHelmet);
-        GameRegistry.registerItem(quartzChestplate, ItemNames.quartzChestplate);
-        GameRegistry.registerItem(quartzLeggings, ItemNames.quartzLeggings);
-        GameRegistry.registerItem(quartzBoots, ItemNames.quartzBoots);
+        GameRegistry.registerItem(silkPickaxe, silkPickaxe.getName());
+        GameRegistry.registerItem(silkShovel, silkShovel.getName());
+        GameRegistry.registerItem(silkAxe, silkAxe.getName());
+        GameRegistry.registerItem(silkHoe, silkHoe.getName());
+        GameRegistry.registerItem(silkSword, silkSword.getName());
+        RegisterHelper.getModelMesher().register(silkPickaxe, 0, createModel(silkPickaxe.getName()));
+        RegisterHelper.getModelMesher().register(silkShovel, 0, createModel(silkShovel.getName()));
+        RegisterHelper.getModelMesher().register(silkAxe, 0, createModel(silkAxe.getName()));
+        RegisterHelper.getModelMesher().register(silkHoe, 0, createModel(silkHoe.getName()));
+        RegisterHelper.getModelMesher().register(silkSword, 0, createModel(silkSword.getName()));
+        ModelBakery.addVariantName(silkPickaxe, createVariant(silkPickaxe.getName()));
+        ModelBakery.addVariantName(silkShovel, createVariant(silkShovel.getName()));
+        ModelBakery.addVariantName(silkAxe, createVariant(silkAxe.getName()));
+        ModelBakery.addVariantName(silkHoe, createVariant(silkHoe.getName()));
+        ModelBakery.addVariantName(silkSword, createVariant(silkSword.getName()));
 
-        GameRegistry.registerItem(obsidianHelmet, ItemNames.obsidianHelmet);
-        GameRegistry.registerItem(obsidianChestplate, ItemNames.obsidianChestplate);
-        GameRegistry.registerItem(obsidianLeggings, ItemNames.obsidianLeggings);
-        GameRegistry.registerItem(obsidianBoots, ItemNames.obsidianBoots);
-
-        GameRegistry.registerItem(emeraldHelmet, ItemNames.emeraldHelmet);
-        GameRegistry.registerItem(emeraldChestplate, ItemNames.emeraldChestplate);
-        GameRegistry.registerItem(emeraldLeggings, ItemNames.emeraldLeggings);
-        GameRegistry.registerItem(emeraldBoots, ItemNames.emeraldBoots);
-
-        GameRegistry.registerItem(lapisHelmet, ItemNames.lapisHelmet);
-        GameRegistry.registerItem(lapisChestplate, ItemNames.lapisChestplate);
-        GameRegistry.registerItem(lapisLeggings, ItemNames.lapisLeggings);
-        GameRegistry.registerItem(lapisBoots, ItemNames.lapisBoots);
-
-        GameRegistry.registerItem(bronzeHelmet, ItemNames.bronzeHelmet);
-        GameRegistry.registerItem(bronzeChestplate, ItemNames.bronzeChestplate);
-        GameRegistry.registerItem(bronzeLeggings, ItemNames.bronzeLeggings);
-        GameRegistry.registerItem(bronzeBoots, ItemNames.bronzeBoots);
-
-        GameRegistry.registerItem(coalHelmet, ItemNames.coalHelmet);
-        GameRegistry.registerItem(coalChestplate, ItemNames.coalChestplate);
-        GameRegistry.registerItem(coalLeggings, ItemNames.coalLeggings);
-        GameRegistry.registerItem(coalBoots, ItemNames.coalBoots);
-
-        GameRegistry.registerItem(glowstoneHelmet, ItemNames.glowstoneHelmet);
-        GameRegistry.registerItem(glowstoneChestplate, ItemNames.glowstoneChestplate);
-        GameRegistry.registerItem(glowstoneLeggings, ItemNames.glowstoneLeggings);
-        GameRegistry.registerItem(glowstoneBoots, ItemNames.glowstoneBoots);
-
-        GameRegistry.registerItem(adamantiumHelmet, ItemNames.adamantiumHelmet);
-        GameRegistry.registerItem(adamantiumChestplate, ItemNames.adamantiumChestplate);
-        GameRegistry.registerItem(adamantiumLeggings, ItemNames.adamantiumLeggings);
-        GameRegistry.registerItem(adamantiumBoots, ItemNames.adamantiumBoots);
-
-        GameRegistry.registerItem(redstoneHelmet, ItemNames.redstoneHelmet);
-        GameRegistry.registerItem(redstoneChestplate, ItemNames.redstoneChestplate);
-        GameRegistry.registerItem(redstoneLeggings, ItemNames.redstoneLeggings);
-        GameRegistry.registerItem(redstoneBoots, ItemNames.redstoneBoots);
-
-        GameRegistry.registerItem(bowQuartz, ItemNames.bowQuartz);
-        GameRegistry.registerItem(bowObsidian, ItemNames.bowObsidian);
-        GameRegistry.registerItem(bowEmerald, ItemNames.bowEmerald);
-        GameRegistry.registerItem(bowLapis, ItemNames.bowLapis);
-        GameRegistry.registerItem(bowBronze, ItemNames.bowBronze);
-        GameRegistry.registerItem(bowCoal, ItemNames.bowCoal);
-        GameRegistry.registerItem(bowGlowstone, ItemNames.bowGlowstone);
-        GameRegistry.registerItem(bowAdamantium, ItemNames.bowAdamantium);
-        GameRegistry.registerItem(bowSilk, ItemNames.bowSilk);
-        GameRegistry.registerItem(bowRedstone, ItemNames.bowRedstone);
-
-        GameRegistry.registerItem(quartzShears, ItemNames.quartzShears);
-        GameRegistry.registerItem(obsidianShears, ItemNames.obsidianShears);
-        GameRegistry.registerItem(emeraldShears, ItemNames.emeraldShears);
-        GameRegistry.registerItem(lapisShears, ItemNames.lapisShears);
-        GameRegistry.registerItem(bronzeShears, ItemNames.bronzeShears);
-        GameRegistry.registerItem(coalShears, ItemNames.coalShears);
-        GameRegistry.registerItem(glowstoneShears, ItemNames.glowstoneShears);
-        GameRegistry.registerItem(adamantiumShears, ItemNames.adamantiumShears);
-        GameRegistry.registerItem(silkShears, ItemNames.silkShears);
-        GameRegistry.registerItem(redstoneShears, ItemNames.redstoneShears);
-
-        GameRegistry.registerItem(stickFT, ItemNames.stickFT);
+        GameRegistry.registerItem(redstonePickaxe, redstonePickaxe.getName());
+        GameRegistry.registerItem(redstoneShovel, redstoneShovel.getName());
+        GameRegistry.registerItem(redstoneAxe, redstoneAxe.getName());
+        GameRegistry.registerItem(redstoneHoe, redstoneHoe.getName());
+        GameRegistry.registerItem(redstoneSword, redstoneSword.getName());
+        RegisterHelper.getModelMesher().register(redstonePickaxe, 0, createModel(redstonePickaxe.getName()));
+        RegisterHelper.getModelMesher().register(redstoneShovel, 0, createModel(redstoneShovel.getName()));
+        RegisterHelper.getModelMesher().register(redstoneAxe, 0, createModel(redstoneAxe.getName()));
+        RegisterHelper.getModelMesher().register(redstoneHoe, 0, createModel(redstoneHoe.getName()));
+        RegisterHelper.getModelMesher().register(redstoneSword, 0, createModel(redstoneSword.getName()));
+        ModelBakery.addVariantName(redstonePickaxe, createVariant(redstonePickaxe.getName()));
+        ModelBakery.addVariantName(redstoneShovel, createVariant(redstoneShovel.getName()));
+        ModelBakery.addVariantName(redstoneAxe, createVariant(redstoneAxe.getName()));
+        ModelBakery.addVariantName(redstoneHoe, createVariant(redstoneHoe.getName()));
+        ModelBakery.addVariantName(redstoneSword, createVariant(redstoneSword.getName()));
 
 
-        registerModels();
-        registerVariants();
+        
+
+        lapisHelmet.register();
+        quartzChestplate.register();
+        quartzLeggings.register();
+        quartzBoots.register();
+
+        obsidianHelmet.register();
+        obsidianChestplate.register();
+        obsidianLeggings.register();
+        obsidianBoots.register();
+
+        emeraldHelmet.register();
+        emeraldChestplate.register();
+        emeraldLeggings.register();
+        emeraldBoots.register();
+
+        lapisHelmet.register();
+        lapisChestplate.register();
+        lapisLeggings.register();
+        lapisBoots.register();
+
+        bronzeHelmet.register();
+        bronzeChestplate.register();
+        bronzeLeggings.register();
+        bronzeBoots.register();
+
+        coalHelmet.register();
+        coalChestplate.register();
+        coalLeggings.register();
+        coalBoots.register();
+
+        glowstoneHelmet.register();
+        glowstoneChestplate.register();
+        glowstoneLeggings.register();
+        glowstoneBoots.register();
+
+        adamantiumHelmet.register();
+        adamantiumChestplate.register();
+        adamantiumLeggings.register();
+        adamantiumBoots.register();
+
+        redstoneHelmet.register();
+        redstoneChestplate.register();
+        redstoneLeggings.register();
+        redstoneBoots.register();
+
+        ItemBowFT[] bows = new ItemBowFT[]{bowObsidian, bowEmerald, bowLapis, bowBronze, bowCoal, bowGlowstone, bowAdamantium, bowSilk, bowRedstone};
+
+        for(ItemBowFT item : bows){
+            GameRegistry.registerItem(item, item.getName());
+            RegisterHelper.getModelMesher().register(item, 0, createModel(item.getName()));
+        }
+
+        ItemShearsFT[] shears = new ItemShearsFT[]{quartzShears, obsidianShears, emeraldShears, lapisShears, bronzeShears, coalShears, glowstoneShears, adamantiumShears, silkShears, redstoneShears};
+
+        for(ItemShearsFT item : shears){
+            GameRegistry.registerItem(item, item.getName());
+            RegisterHelper.getModelMesher().register(item, 0, createModel(item.getName()));
+            ModelBakery.addVariantName(item, createVariant(item.getName()));
+        }
+
+        for (int i = 0; i < stickFT.getSubNames().length; i++) {
+            GameRegistry.registerItem(stickFT, stickFT.getName());
+            RegisterHelper.getModelMesher().register(stickFT, i, createModel(stickFT.getSubNames()[i]));
+            ModelBakery.addVariantName(stickFT, stickFT.getSubNames()[i]);
+        }
     }
 
-    private void registerModels() {
-        register(ingotObsidian, "fergotools:ingotObsidian");
-        register(gemEmerald, "fergotools:gemEmerald");
-        register(gemLapis, "fergotools:gemLapis");
-        register(ingotBronze, "fergotools:ingotBronze");
-        register(ingotCoal, "fergotools:ingotCoal");
-        register(ingotGlowstone, "fergotools:ingotGlowstone");
-        register(ingotAdamantium, "fergotools:ingotAdamantium");
-        register(gemSilk, "fergotools:gemSilk");
-        register(gemRedstone, "fergotools:gemRedstone");
-
-        register(gemExp, "fergotools:gemExp");
-        register(gemExp2, "fergotools:gemExp2");
-        register(gemExp3, "fergotools:gemExp3");
-
-        register(staffExp, "fergotools:staffExp");
-        register(staffExp2, "fergotools:staffExp2");
-        register(staffExp3, "fergotools:staffExp3");
-
-        register(shardExp, "fergotools:shardExp");
-        register(expCollector, "fergotools:expCollector");
-
-        register(quartzPickaxe, "fergotools:quartzPickaxe");
-        register(quartzShovel, "fergotools:quartzShovel");
-        register(quartzAxe, "fergotools:quartzAxe");
-        register(quartzHoe, "fergotools:quartzHoe");
-        register(quartzSword, "fergotools:quartzSword");
-
-        register(obsidianPickaxe, "fergotools:obsidianPickaxe");
-        register(obsidianShovel, "fergotools:obsidianShovel");
-        register(obsidianAxe, "fergotools:obsidianAxe");
-        register(obsidianHoe, "fergotools:obsidianHoe");
-        register(obsidianSword, "fergotools:obsidianSword");
-
-        register(emeraldPickaxe, "fergotools:emeraldPickaxe");
-        register(emeraldShovel, "fergotools:emeraldShovel");
-        register(emeraldAxe, "fergotools:emeraldAxe");
-        register(emeraldHoe, "fergotools:emeraldHoe");
-        register(emeraldSword, "fergotools:emeraldSword");
-
-        register(lapisPickaxe, "fergotools:lapisPickaxe");
-        register(lapisShovel, "fergotools:lapisShovel");
-        register(lapisAxe, "fergotools:lapisAxe");
-        register(lapisHoe, "fergotools:lapisHoe");
-        register(lapisSword, "fergotools:lapisSword");
-
-        register(bronzePickaxe, "fergotools:bronzePickaxe");
-        register(bronzeShovel, "fergotools:bronzeShovel");
-        register(bronzeAxe, "fergotools:bronzeAxe");
-        register(bronzeHoe, "fergotools:bronzeHoe");
-        register(bronzeSword, "fergotools:bronzeSword");
-
-        register(coalPickaxe, "fergotools:coalPickaxe");
-        register(coalShovel, "fergotools:coalShovel");
-        register(coalAxe, "fergotools:coalAxe");
-        register(coalHoe, "fergotools:coalHoe");
-        register(coalSword, "fergotools:coalSword");
-
-        register(glowstonePickaxe, "fergotools:glowstonePickaxe");
-        register(glowstoneShovel, "fergotools:glowstoneShovel");
-        register(glowstoneAxe, "fergotools:glowstoneAxe");
-        register(glowstoneHoe, "fergotools:glowstoneHoe");
-        register(glowstoneSword, "fergotools:glowstoneSword");
-
-        register(adamantiumPickaxe, "fergotools:adamantiumPickaxe");
-        register(adamantiumShovel, "fergotools:adamantiumShovel");
-        register(adamantiumAxe, "fergotools:adamantiumAxe");
-        register(adamantiumHoe, "fergotools:adamantiumHoe");
-        register(adamantiumSword, "fergotools:adamantiumSword");
-
-        register(silkPickaxe, "fergotools:silkPickaxe");
-        register(silkShovel, "fergotools:silkShovel");
-        register(silkAxe, "fergotools:silkAxe");
-        register(silkHoe, "fergotools:silkHoe");
-        register(silkSword, "fergotools:silkSword");
-
-        register(redstonePickaxe, "fergotools:redstonePickaxe");
-        register(redstoneShovel, "fergotools:redstoneShovel");
-        register(redstoneAxe, "fergotools:redstoneAxe");
-        register(redstoneHoe, "fergotools:redstoneHoe");
-        register(redstoneSword, "fergotools:redstoneSword");
-
-        register(quartzHelmet, "fergotools:quartzHelmet");
-        register(quartzChestplate, "fergotools:quartzChestplate");
-        register(quartzLeggings, "fergotools:quartzLeggings");
-        register(quartzBoots, "fergotools:quartzBoots");
-
-        register(obsidianHelmet, "fergotools:obsidianHelmet");
-        register(obsidianChestplate, "fergotools:obsidianChestplate");
-        register(obsidianLeggings, "fergotools:obsidianLeggings");
-        register(obsidianBoots, "fergotools:obsidianBoots");
-
-        register(emeraldHelmet, "fergotools:emeraldHelmet");
-        register(emeraldChestplate, "fergotools:emeraldChestplate");
-        register(emeraldLeggings, "fergotools:emeraldLeggings");
-        register(emeraldBoots, "fergotools:emeraldBoots");
-
-        register(lapisHelmet, "fergotools:lapisHelmet");
-        register(lapisChestplate, "fergotools:lapisChestplate");
-        register(lapisLeggings, "fergotools:lapisLeggings");
-        register(lapisBoots, "fergotools:lapisBoots");
-
-        register(bronzeHelmet, "fergotools:bronzeHelmet");
-        register(bronzeChestplate, "fergotools:bronzeChestplate");
-        register(bronzeLeggings, "fergotools:bronzeLeggings");
-        register(bronzeBoots, "fergotools:bronzeBoots");
-
-        register(coalHelmet, "fergotools:coalHelmet");
-        register(coalChestplate, "fergotools:coalChestplate");
-        register(coalLeggings, "fergotools:coalLeggings");
-        register(coalBoots, "fergotools:coalBoots");
-
-        register(glowstoneHelmet, "fergotools:glowstoneHelmet");
-        register(glowstoneChestplate, "fergotools:glowstoneChestplate");
-        register(glowstoneLeggings, "fergotools:glowstoneLeggings");
-        register(glowstoneBoots, "fergotools:glowstoneBoots");
-
-        register(adamantiumHelmet, "fergotools:adamantiumHelmet");
-        register(adamantiumChestplate, "fergotools:adamantiumChestplate");
-        register(adamantiumLeggings, "fergotools:adamantiumLeggings");
-        register(adamantiumBoots, "fergotools:adamantiumBoots");
-
-        register(redstoneHelmet, "fergotools:redstoneHelmet");
-        register(redstoneChestplate, "fergotools:redstoneChestplate");
-        register(redstoneLeggings, "fergotools:redstoneLeggings");
-        register(redstoneBoots, "fergotools:redstoneBoots");
-
-        register(bowQuartz, "fergotools:bowQuartz");
-        register(bowObsidian, "fergotools:bowObsidian");
-        register(bowEmerald, "fergotools:bowEmerald");
-        register(bowLapis, "fergotools:bowLapis");
-        register(bowBronze, "fergotools:bowBronze");
-        register(bowCoal, "fergotools:bowCoal");
-        register(bowGlowstone, "fergotools:bowGlowstone");
-        register(bowAdamantium, "fergotools:bowAdamantium");
-        register(bowSilk, "fergotools:bowSilk");
-        register(bowRedstone, "fergotools:bowRedstone");
-
-        register(quartzShears, "fergotools:quartzShears");
-        register(obsidianShears, "fergotools:obsidianShears");
-        register(emeraldShears, "fergotools:emeraldShears");
-        register(lapisShears, "fergotools:lapisShears");
-        register(bronzeShears, "fergotools:bronzeShears");
-        register(coalShears, "fergotools:coalShears");
-        register(glowstoneShears, "fergotools:glowstoneShears");
-        register(adamantiumShears, "fergotools:adamantiumShears");
-        register(silkShears, "fergotools:silkShears");
-        register(redstoneShears, "fergotools:redstoneShears");
-
-        register(stickFT, 0, "fergotools:stickObsidian");
-        register(stickFT, 1, "fergotools:stickEmerald");
-        register(stickFT, 2, "fergotools:stickLapis");
-        register(stickFT, 3, "fergotools:stickBronze");
-        register(stickFT, 4, "fergotools:stickCoal");
-        register(stickFT, 5, "fergotools:stickGlowstone");
-        register(stickFT, 6, "fergotools:stickAdamantium");
-        register(stickFT, 7, "fergotools:stickSilk");
-        register(stickFT, 8, "fergotools:stickRedstone");
+    private static ModelResourceLocation createModel(String model){
+        return new ModelResourceLocation("fergotools:" + model, "inventory");
     }
 
-    private void registerVariants() {
-        ModelBakery.addVariantName(ingotObsidian, "fergotools:ingotObsidian");
-        ModelBakery.addVariantName(gemEmerald, "fergotools:gemEmerald");
-        ModelBakery.addVariantName(gemLapis, "fergotools:gemLapis");
-        ModelBakery.addVariantName(ingotBronze, "fergotools:ingotBronze");
-        ModelBakery.addVariantName(ingotCoal, "fergotools:ingotCoal");
-        ModelBakery.addVariantName(ingotGlowstone, "fergotools:ingotGlowstone");
-        ModelBakery.addVariantName(ingotAdamantium, "fergotools:ingotAdamantium");
-        ModelBakery.addVariantName(gemSilk, "fergotools:gemSilk");
-        ModelBakery.addVariantName(gemRedstone, "fergotools:gemRedstone");
-
-        ModelBakery.addVariantName(gemExp, "fergotools:gemExp");
-        ModelBakery.addVariantName(gemExp2, "fergotools:gemExp2");
-        ModelBakery.addVariantName(gemExp3, "fergotools:gemExp3");
-
-        ModelBakery.addVariantName(staffExp, "fergotools:staffExp");
-        ModelBakery.addVariantName(staffExp2, "fergotools:staffExp2");
-        ModelBakery.addVariantName(staffExp3, "fergotools:staffExp3");
-
-        ModelBakery.addVariantName(shardExp, "fergotools:shardExp");
-        ModelBakery.addVariantName(expCollector, "fergotools:expCollector");
-
-        ModelBakery.addVariantName(quartzPickaxe, "fergotools:quartzPickaxe");
-        ModelBakery.addVariantName(quartzShovel, "fergotools:quartzShovel");
-        ModelBakery.addVariantName(quartzAxe, "fergotools:quartzAxe");
-        ModelBakery.addVariantName(quartzHoe, "fergotools:quartzHoe");
-        ModelBakery.addVariantName(quartzSword, "fergotools:quartzSword");
-
-        ModelBakery.addVariantName(obsidianPickaxe, "fergotools:obsidianPickaxe");
-        ModelBakery.addVariantName(obsidianShovel, "fergotools:obsidianShovel");
-        ModelBakery.addVariantName(obsidianAxe, "fergotools:obsidianAxe");
-        ModelBakery.addVariantName(obsidianHoe, "fergotools:obsidianHoe");
-        ModelBakery.addVariantName(obsidianSword, "fergotools:obsidianSword");
-
-        ModelBakery.addVariantName(emeraldPickaxe, "fergotools:emeraldPickaxe");
-        ModelBakery.addVariantName(emeraldShovel, "fergotools:emeraldShovel");
-        ModelBakery.addVariantName(emeraldAxe, "fergotools:emeraldAxe");
-        ModelBakery.addVariantName(emeraldHoe, "fergotools:emeraldHoe");
-        ModelBakery.addVariantName(emeraldSword, "fergotools:emeraldSword");
-
-        ModelBakery.addVariantName(lapisPickaxe, "fergotools:lapisPickaxe");
-        ModelBakery.addVariantName(lapisShovel, "fergotools:lapisShovel");
-        ModelBakery.addVariantName(lapisAxe, "fergotools:lapisAxe");
-        ModelBakery.addVariantName(lapisHoe, "fergotools:lapisHoe");
-        ModelBakery.addVariantName(lapisSword, "fergotools:lapisSword");
-
-        ModelBakery.addVariantName(bronzePickaxe, "fergotools:bronzePickaxe");
-        ModelBakery.addVariantName(bronzeShovel, "fergotools:bronzeShovel");
-        ModelBakery.addVariantName(bronzeAxe, "fergotools:bronzeAxe");
-        ModelBakery.addVariantName(bronzeHoe, "fergotools:bronzeHoe");
-        ModelBakery.addVariantName(bronzeSword, "fergotools:bronzeSword");
-
-        ModelBakery.addVariantName(coalPickaxe, "fergotools:coalPickaxe");
-        ModelBakery.addVariantName(coalShovel, "fergotools:coalShovel");
-        ModelBakery.addVariantName(coalAxe, "fergotools:coalAxe");
-        ModelBakery.addVariantName(coalHoe, "fergotools:coalHoe");
-        ModelBakery.addVariantName(coalSword, "fergotools:coalSword");
-
-        ModelBakery.addVariantName(glowstonePickaxe, "fergotools:glowstonePickaxe");
-        ModelBakery.addVariantName(glowstoneShovel, "fergotools:glowstoneShovel");
-        ModelBakery.addVariantName(glowstoneAxe, "fergotools:glowstoneAxe");
-        ModelBakery.addVariantName(glowstoneHoe, "fergotools:glowstoneHoe");
-        ModelBakery.addVariantName(glowstoneSword, "fergotools:glowstoneSword");
-
-        ModelBakery.addVariantName(adamantiumPickaxe, "fergotools:adamantiumPickaxe");
-        ModelBakery.addVariantName(adamantiumShovel, "fergotools:adamantiumShovel");
-        ModelBakery.addVariantName(adamantiumAxe, "fergotools:adamantiumAxe");
-        ModelBakery.addVariantName(adamantiumHoe, "fergotools:adamantiumHoe");
-        ModelBakery.addVariantName(adamantiumSword, "fergotools:adamantiumSword");
-
-        ModelBakery.addVariantName(silkPickaxe, "fergotools:silkPickaxe");
-        ModelBakery.addVariantName(silkShovel, "fergotools:silkShovel");
-        ModelBakery.addVariantName(silkAxe, "fergotools:silkAxe");
-        ModelBakery.addVariantName(silkHoe, "fergotools:silkHoe");
-        ModelBakery.addVariantName(silkSword, "fergotools:silkSword");
-
-        ModelBakery.addVariantName(redstonePickaxe, "fergotools:redstonePickaxe");
-        ModelBakery.addVariantName(redstoneShovel, "fergotools:redstoneShovel");
-        ModelBakery.addVariantName(redstoneAxe, "fergotools:redstoneAxe");
-        ModelBakery.addVariantName(redstoneHoe, "fergotools:redstoneHoe");
-        ModelBakery.addVariantName(redstoneSword, "fergotools:redstoneSword");
-
-        ModelBakery.addVariantName(quartzHelmet, "fergotools:quartzHelmet");
-        ModelBakery.addVariantName(quartzChestplate, "fergotools:quartzChestplate");
-        ModelBakery.addVariantName(quartzLeggings, "fergotools:quartzLeggings");
-        ModelBakery.addVariantName(quartzBoots, "fergotools:quartzBoots");
-
-        ModelBakery.addVariantName(obsidianHelmet, "fergotools:obsidianHelmet");
-        ModelBakery.addVariantName(obsidianChestplate, "fergotools:obsidianChestplate");
-        ModelBakery.addVariantName(obsidianLeggings, "fergotools:obsidianLeggings");
-        ModelBakery.addVariantName(obsidianBoots, "fergotools:obsidianBoots");
-
-        ModelBakery.addVariantName(emeraldHelmet, "fergotools:emeraldHelmet");
-        ModelBakery.addVariantName(emeraldChestplate, "fergotools:emeraldChestplate");
-        ModelBakery.addVariantName(emeraldLeggings, "fergotools:emeraldLeggings");
-        ModelBakery.addVariantName(emeraldBoots, "fergotools:emeraldBoots");
-
-        ModelBakery.addVariantName(lapisHelmet, "fergotools:lapisHelmet");
-        ModelBakery.addVariantName(lapisChestplate, "fergotools:lapisChestplate");
-        ModelBakery.addVariantName(lapisLeggings, "fergotools:lapisLeggings");
-        ModelBakery.addVariantName(lapisBoots, "fergotools:lapisBoots");
-
-        ModelBakery.addVariantName(bronzeHelmet, "fergotools:bronzeHelmet");
-        ModelBakery.addVariantName(bronzeChestplate, "fergotools:bronzeChestplate");
-        ModelBakery.addVariantName(bronzeLeggings, "fergotools:bronzeLeggings");
-        ModelBakery.addVariantName(bronzeBoots, "fergotools:bronzeBoots");
-
-        ModelBakery.addVariantName(coalHelmet, "fergotools:coalHelmet");
-        ModelBakery.addVariantName(coalChestplate, "fergotools:coalChestplate");
-        ModelBakery.addVariantName(coalLeggings, "fergotools:coalLeggings");
-        ModelBakery.addVariantName(coalBoots, "fergotools:coalBoots");
-
-        ModelBakery.addVariantName(glowstoneHelmet, "fergotools:glowstoneHelmet");
-        ModelBakery.addVariantName(glowstoneChestplate, "fergotools:glowstoneChestplate");
-        ModelBakery.addVariantName(glowstoneLeggings, "fergotools:glowstoneLeggings");
-        ModelBakery.addVariantName(glowstoneBoots, "fergotools:glowstoneBoots");
-
-        ModelBakery.addVariantName(adamantiumHelmet, "fergotools:adamantiumHelmet");
-        ModelBakery.addVariantName(adamantiumChestplate, "fergotools:adamantiumChestplate");
-        ModelBakery.addVariantName(adamantiumLeggings, "fergotools:adamantiumLeggings");
-        ModelBakery.addVariantName(adamantiumBoots, "fergotools:adamantiumBoots");
-
-        ModelBakery.addVariantName(redstoneHelmet, "fergotools:redstoneHelmet");
-        ModelBakery.addVariantName(redstoneChestplate, "fergotools:redstoneChestplate");
-        ModelBakery.addVariantName(redstoneLeggings, "fergotools:redstoneLeggings");
-        ModelBakery.addVariantName(redstoneBoots, "fergotools:redstoneBoots");
-
-        ModelBakery.addVariantName(bowQuartz, "fergotools:bowQuartz");
-        ModelBakery.addVariantName(bowObsidian, "fergotools:bowObsidian");
-        ModelBakery.addVariantName(bowEmerald, "fergotools:bowEmerald");
-        ModelBakery.addVariantName(bowLapis, "fergotools:bowLapis");
-        ModelBakery.addVariantName(bowBronze, "fergotools:bowBronze");
-        ModelBakery.addVariantName(bowCoal, "fergotools:bowCoal");
-        ModelBakery.addVariantName(bowGlowstone, "fergotools:bowGlowstone");
-        ModelBakery.addVariantName(bowAdamantium, "fergotools:bowAdamantium");
-        ModelBakery.addVariantName(bowSilk, "fergotools:bowSilk");
-        ModelBakery.addVariantName(bowRedstone, "fergotools:bowRedstone");
-
-        ModelBakery.addVariantName(quartzShears, "fergotools:quartzShears");
-        ModelBakery.addVariantName(obsidianShears, "fergotools:obsidianShears");
-        ModelBakery.addVariantName(emeraldShears, "fergotools:emeraldShears");
-        ModelBakery.addVariantName(lapisShears, "fergotools:lapisShears");
-        ModelBakery.addVariantName(bronzeShears, "fergotools:bronzeShears");
-        ModelBakery.addVariantName(coalShears, "fergotools:coalShears");
-        ModelBakery.addVariantName(glowstoneShears, "fergotools:glowstoneShears");
-        ModelBakery.addVariantName(adamantiumShears, "fergotools:adamantiumShears");
-        ModelBakery.addVariantName(silkShears, "fergotools:silkShears");
-        ModelBakery.addVariantName(redstoneShears, "fergotools:redstoneShears");
-
-        ModelBakery.addVariantName(stickFT, "fergotools:stickObsidian");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickEmerald");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickLapis");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickBronze");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickCoal");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickGlowstone");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickAdamantium");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickSilk");
-        ModelBakery.addVariantName(stickFT, "fergotools:stickRedstone");
-    }
-
-    public static void register(Item item, int meta, String model) {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(model, "inventory"));
-    }
-
-    public static void register(Item item, String model) {
-        register(item, 0, model);
+    public static String createVariant(String model){
+        return "fergotools:" + model;
     }
 }

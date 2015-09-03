@@ -14,12 +14,13 @@ public enum WoodTypes implements IStringSerializable
     silk(7, "Silk"),
     redstone(8, "Redstone");
 
-    private static final WoodTypes[] VALUES = new WoodTypes[values().length];
+    public static final WoodTypes[] VALUES = new WoodTypes[values().length];
     
     private static final String prefixLog = "log";
     private static final String prefixPlank = "plank";
     private static final String prefixLeaves = "leaves";
     private static final String prefixSapling = "sapling";
+    private static final String[] prefixSlab = {"slab", "Single", "Double"};
 
     private final int meta;
     private final String name;
@@ -63,5 +64,12 @@ public enum WoodTypes implements IStringSerializable
     
     public static String getSaplingName(int meta){
     	return prefixSapling + WoodTypes.values()[meta];
+    }
+    
+    public static String getSlabName(int meta, boolean isDouble){
+    	if(isDouble == false)
+    		return prefixSlab[0] + WoodTypes.values()[meta] + prefixSlab[1];
+    	else
+    		return prefixSlab[0] + WoodTypes.values()[meta] + prefixSlab[2];
     }
 }

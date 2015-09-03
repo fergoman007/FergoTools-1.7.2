@@ -7,6 +7,8 @@ import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
+import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -28,7 +30,6 @@ public abstract class BlockWoodSlabFT extends BlockSlab
     	super(Material.wood);
     	this.subNames = subNames;
     	this.setCreativeTab(FergoTools.tabFergoTools);
-//        super(Material.wood, 0, FergoTools.tabFergoTools, name);
         IBlockState state = this.blockState.getBaseState();
 
         if (!this.isDouble())
@@ -96,5 +97,17 @@ public abstract class BlockWoodSlabFT extends BlockSlab
     
     public String getUnlocalizedName(){
     	return String.format("tile.ft.%s", NameHelper.getUnlocalizedName(super.getUnlocalizedName()));
+    }
+
+    public static final class ItemBlockWoodPlankFT extends ItemBlockVariants{
+        public ItemBlockWoodPlankFT(Block block){
+            super(block);
+        }
+
+        @Override
+        public String getUnlocalizedName(ItemStack stack) {
+            BlockWoodSlabFT slabFT = (BlockWoodSlabFT)this.block;
+            return super.getUnlocalizedName() + "." + WoodTypes.getSlabName(stack.getItemDamage(), slabFT.isDouble());
+        }
     }
 }

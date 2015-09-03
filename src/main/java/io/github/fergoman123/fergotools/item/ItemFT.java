@@ -1,13 +1,34 @@
 package io.github.fergoman123.fergotools.item;
 
 import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergoutil.helper.NameHelper;
-import io.github.fergoman123.fergoutil.item.ItemFergo;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemFT extends ItemFergo {
+public class ItemFT extends Item {
+
+    private String name;
+
+    public ItemFT(String name, int maxStackSize){
+        super();
+        this.name = name;
+        this.setUnlocalizedName(name);
+        this.setCreativeTab(FergoTools.tabFergoTools);
+        this.setMaxStackSize(maxStackSize);
+    }
+
     public ItemFT(String name){
-        super("ft", FergoTools.tabFergoTools, name);
+        this(name, 64);
+    }
+
+    public String getUnlocalizedName(){
+        return String.format("item.ft.%s", this.name);
+    }
+
+    public String getUnlocalizedName(ItemStack stack){
+        return String.format("item.ft.%s", this.name);
+    }
+
+    public String getName() {
+        return name;
     }
 }

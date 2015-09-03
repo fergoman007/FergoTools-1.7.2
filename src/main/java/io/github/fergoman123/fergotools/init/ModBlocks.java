@@ -5,6 +5,8 @@ import io.github.fergoman123.fergotools.block.*;
 import io.github.fergoman123.fergotools.block.BlockPlankFT.*;
 import io.github.fergoman123.fergotools.common.blocks.wood.*;
 import io.github.fergoman123.fergotools.common.blocks.wood.BlockWoodLogFT;
+import io.github.fergoman123.fergotools.common.itemblock.*;
+import io.github.fergoman123.fergotools.item.*;
 import io.github.fergoman123.fergotools.reference.*;
 import io.github.fergoman123.fergoutil.helper.*;
 import net.minecraft.block.*;
@@ -52,15 +54,15 @@ public class ModBlocks {
     public static final BlockLeavesImpl leavesFT = new BlockLeavesImpl(BlockNames.leavesFT);
     public static final BlockSaplingFT saplingFT = new BlockSaplingFT(BlockNames.saplingFT);
 
-    public static final BlockStairFT stairObsidian = new BlockStairFT(BlockStates.obsidian, BlockNames.stairObsidian);
-    public static final BlockStairFT stairEmerald = new BlockStairFT(BlockStates.emerald, BlockNames.stairEmerald);
-    public static final BlockStairFT stairLapis = new BlockStairFT(BlockStates.lapis, BlockNames.stairLapis);
-    public static final BlockStairFT stairBronze = new BlockStairFT(BlockStates.bronze, BlockNames.stairBronze);
-    public static final BlockStairFT stairCoal = new BlockStairFT(BlockStates.coal, BlockNames.stairCoal);
-    public static final BlockStairFT stairGlowstone = new BlockStairFT(BlockStates.glowstone, BlockNames.stairGlowstone);
-    public static final BlockStairFT stairAdamantium = new BlockStairFT(BlockStates.adamantium, BlockNames.stairAdamantium);
-    public static final BlockStairFT stairSilk = new BlockStairFT(BlockStates.silk, BlockNames.stairSilk);
-    public static final BlockStairFT stairRedstone = new BlockStairFT(BlockStates.redstone, BlockNames.stairRedstone);
+    public static final BlockStairsFT stairObsidian = new BlockStairsFT(BlockStates.obsidian, BlockNames.stairObsidian);
+    public static final BlockStairsFT stairEmerald = new BlockStairsFT(BlockStates.emerald, BlockNames.stairEmerald);
+    public static final BlockStairsFT stairLapis = new BlockStairsFT(BlockStates.lapis, BlockNames.stairLapis);
+    public static final BlockStairsFT stairBronze = new BlockStairsFT(BlockStates.bronze, BlockNames.stairBronze);
+    public static final BlockStairsFT stairCoal = new BlockStairsFT(BlockStates.coal, BlockNames.stairCoal);
+    public static final BlockStairsFT stairGlowstone = new BlockStairsFT(BlockStates.glowstone, BlockNames.stairGlowstone);
+    public static final BlockStairsFT stairAdamantium = new BlockStairsFT(BlockStates.adamantium, BlockNames.stairAdamantium);
+    public static final BlockStairsFT stairSilk = new BlockStairsFT(BlockStates.silk, BlockNames.stairSilk);
+    public static final BlockStairsFT stairRedstone = new BlockStairsFT(BlockStates.redstone, BlockNames.stairRedstone);
 
     public static final BlockWoodSlabFT singleSlabFT = new BlockHSFT(BlockNames.slabSingleFT);
     public static final BlockWoodSlabFT doubleSlabFT = new BlockDSFT(BlockNames.slabDoubleFT);
@@ -77,55 +79,66 @@ public class ModBlocks {
 
     public void register(){
     	GameRegistry.registerBlock(oreExperience, BlockNames.oreExperience);
-    	registerModel(Item.getItemFromBlock(oreExperience), 0, BlockNames.oreExperience);
-    	addVariant(Item.getItemFromBlock(ModBlocks.oreExperience), BlockNames.oreExperience);
+    	registerModel(oreExperience, 0, BlockNames.oreExperience);
+    	addVariant(oreExperience, BlockNames.oreExperience);
     	GameRegistry.registerBlock(oreObsidian, BlockNames.oreObsidian);
-    	registerModel(Item.getItemFromBlock(oreObsidian), 0, BlockNames.oreObsidian);
-    	addVariant(Item.getItemFromBlock(oreObsidian), BlockNames.oreObsidian);
+    	registerModel(oreObsidian, 0, BlockNames.oreObsidian);
+    	addVariant(oreObsidian, BlockNames.oreObsidian);
     	GameRegistry.registerBlock(oreGemEmerald, BlockNames.oreGemEmerald);
-    	registerModel(Item.getItemFromBlock(oreGemEmerald), 0, BlockNames.oreGemEmerald);
-    	addVariant(Item.getItemFromBlock(oreGemEmerald), BlockNames.oreGemEmerald);
+    	registerModel(oreGemEmerald, 0, BlockNames.oreGemEmerald);
+    	addVariant(oreGemEmerald, BlockNames.oreGemEmerald);
     	GameRegistry.registerBlock(oreGemLapis, BlockNames.oreGemLapis);
-    	registerModel(Item.getItemFromBlock(oreGemLapis), 0, BlockNames.oreGemLapis);
-    	addVariant(Item.getItemFromBlock(oreGemLapis), BlockNames.oreGemLapis);
+    	registerModel(oreGemLapis, 0, BlockNames.oreGemLapis);
+    	addVariant(oreGemLapis, BlockNames.oreGemLapis);
     	GameRegistry.registerBlock(oreBronze, BlockNames.oreBronze);
-    	registerModel(Item.getItemFromBlock(oreBronze), 0, BlockNames.oreBronze);
-    	addVariant(Item.getItemFromBlock(oreBronze), BlockNames.oreBronze);
+    	registerModel(oreBronze, 0, BlockNames.oreBronze);
+    	addVariant(oreBronze, BlockNames.oreBronze);
     	GameRegistry.registerBlock(oreAdamantium, BlockNames.oreAdamantium);
-    	registerModel(Item.getItemFromBlock(oreAdamantium), 0, BlockNames.oreAdamantium);
-    	addVariant(Item.getItemFromBlock(oreAdamantium), BlockNames.oreAdamantium);
+    	registerModel(oreAdamantium, 0, BlockNames.oreAdamantium);
+    	addVariant(oreAdamantium, BlockNames.oreAdamantium);
     	GameRegistry.registerBlock(oreGemRedstone, BlockNames.oreGemRedstone);
-    	registerModel(Item.getItemFromBlock(oreGemRedstone), 0, BlockNames.oreGemRedstone);
-    	addVariant(Item.getItemFromBlock(oreGemRedstone), BlockNames.oreGemRedstone);
+    	registerModel(oreGemRedstone, 0, BlockNames.oreGemRedstone);
+    	addVariant(oreGemRedstone, BlockNames.oreGemRedstone);
     	
     	GameRegistry.registerBlock(storageFT, BlockNames.storageFT);
     	for(StorageTypes type : StorageTypes.values()){
-    		registerModel(Item.getItemFromBlock(storageFT), type.getMeta(), type.getName());
-    		addVariant(Item.getItemFromBlock(storageFT), type.getName());
+    		registerModel(storageFT, type.getMeta(), type.getName());
+    		addVariant(storageFT, type.getName());
     	}
     	
     	Block[] idle = new Block[]{quartzFurnaceIdle,obsidianFurnaceIdle,emeraldFurnaceIdle,lapisFurnaceIdle,bronzeFurnaceIdle,coalFurnaceIdle,glowstoneFurnaceIdle,adamantiumFurnaceIdle,silkFurnaceIdle,redstoneFurnaceIdle,maceratorIdle};
     	
     	for (int i = 0; i < idle.length; i++) {
 			GameRegistry.registerBlock(idle[i], BlockNames.furnaceIdle[i]);
-			registerModel(Item.getItemFromBlock(idle[i]), 0, BlockNames.furnaceIdle[i]);
-			addVariant(Item.getItemFromBlock(idle[i]), BlockNames.furnaceIdle[i]);
+			registerModel(idle[i], 0, BlockNames.furnaceIdle[i]);
+			addVariant(idle[i], BlockNames.furnaceIdle[i]);
 		}
     	
     	Block[] active = new Block[]{quartzFurnaceActive,obsidianFurnaceActive,emeraldFurnaceActive,lapisFurnaceActive,bronzeFurnaceActive,coalFurnaceActive,glowstoneFurnaceActive,adamantiumFurnaceActive,silkFurnaceActive,redstoneFurnaceActive,maceratorActive};
     	
     	for (int i = 0; i < active.length; i++) {
 			GameRegistry.registerBlock(active[i], BlockNames.furnaceActive[i]);
-			registerModel(Item.getItemFromBlock(active[i]), 0, BlockNames.furnaceActive[i]);
-			addVariant(Item.getItemFromBlock(active[i]), BlockNames.furnaceActive[i]);
+			registerModel(active[i], 0, BlockNames.furnaceActive[i]);
+			addVariant(active[i], BlockNames.furnaceActive[i]);
 		}
+    	
+    	GameRegistry.registerBlock(logFT, ItemBlockLogFT.class, BlockNames.logFT);
+    	GameRegistry.registerBlock(plankFT, ItemBlockPlankFT.class, BlockNames.logFT);
+    	for(WoodTypes type : WoodTypes.values()){
+    		registerModel(logFT, type.getMeta(), WoodTypes.getLogName(type.getMeta()));
+    		registerModel(plankFT, type.getMeta(), WoodTypes.getPlankName(type.getMeta()));
+    		registerModel(leavesFT, type.getMeta(), WoodTypes.getLeavesName(type.getMeta()));
+    		registerModel(saplingFT, type.getMeta(), WoodTypes.getSaplingName(type.getMeta()));
+    		registerModel(singleSlabFT, type.getMeta(), WoodTypes.getSlabName(type.getMeta(), false));
+    		registerModel(doubleSlabFT, type.getMeta(), WoodTypes.getSlabName(type.getMeta(), true));
+    	}
     }
     
-    private static void registerModel(Item item, int meta, String name){
-    	RegisterHelper.registerModel(item, meta, "fergotools:" + name);
+    private static void registerModel(Block block, int meta, String name){
+    	RegisterHelper.registerModel(Item.getItemFromBlock(block), meta, "fergotools:" + name);
     }
     
-    private static void addVariant(Item item, String name){
-    	RegisterHelper.addVariant(item, "fergotools:" + name);
+    private static void addVariant(Block block, String name){
+    	RegisterHelper.addVariant(Item.getItemFromBlock(block), "fergotools:" + name);
     }
 }
