@@ -10,6 +10,7 @@
 package io.github.fergoman123.fergotools;
 
 import io.github.fergoman123.fergotools.config.ConfigHandler;
+import io.github.fergoman123.fergotools.handler.GuiHandler;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergotools.init.ModItems;
 import io.github.fergoman123.fergotools.init.Recipes;
@@ -28,6 +29,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @Mod(modid = ModInfo.modid, name = ModInfo.name, version = ModInfo.versionMain, dependencies = ModConstants.dep, guiFactory = Reference.guiFactoryClass)
 public class FergoTools {
@@ -71,6 +73,7 @@ public class FergoTools {
     	LoggerFT.info(Messages.initMessage);
         (new ModItems()).register();
         (new ModBlocks()).register();
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
         getProxy().registerTileEntities();
         getProxy().registerRenderers();
         Recipes.init();

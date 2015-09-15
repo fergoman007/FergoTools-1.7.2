@@ -348,7 +348,7 @@ public class ModItems {
         ModelBakery.addVariantName(redstoneSword, createVariant(redstoneSword.getName()));
 
 
-        
+
 
         lapisHelmet.register();
         quartzChestplate.register();

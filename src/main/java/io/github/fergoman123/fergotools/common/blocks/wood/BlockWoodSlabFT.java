@@ -5,6 +5,7 @@ import java.util.Random;
 
 import io.github.fergoman123.fergotools.FergoTools;
 import io.github.fergoman123.fergotools.api.content.WoodTypes;
+import io.github.fergoman123.fergotools.block.BlockPlankFT;
 import io.github.fergoman123.fergotools.init.ModBlocks;
 import io.github.fergoman123.fergoutil.helper.NameHelper;
 import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
@@ -84,6 +85,10 @@ public abstract class BlockWoodSlabFT extends BlockSlab
     @Override
     protected BlockState createBlockState() {
         return this.isDouble() ? new BlockState(this, VARIANT) : new BlockState(this, HALF, VARIANT);
+    }
+
+    public String getUnlocalizedName(int meta){
+        return super.getUnlocalizedName() + "." + WoodTypes.byMetadata(meta);
     }
 
     public String[] getSubNames() {

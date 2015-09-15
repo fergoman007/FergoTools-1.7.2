@@ -8,10 +8,16 @@ import net.minecraft.world.World;
 
 public class ItemStaffExpBase extends ItemFT {
     private int type;
+    private int maxExp;
 
-    public ItemStaffExpBase(int type) {
+    public static final ItemStaffExpBase type1 = new ItemStaffExpBase(0, 50);
+    public static final ItemStaffExpBase type2 = new ItemStaffExpBase(0, 150);
+    public static final ItemStaffExpBase type3 = new ItemStaffExpBase(0, 300);
+
+    public ItemStaffExpBase(int type, int maxExp) {
         super(ItemNames.staffExpVariants[type], 1);
         this.type = type;
+        this.maxExp = maxExp;
     }
 
     @Override
@@ -44,5 +50,9 @@ public class ItemStaffExpBase extends ItemFT {
 
     public int getType() {
         return type;
+    }
+
+    public int getMaxExp() {
+        return maxExp;
     }
 }
