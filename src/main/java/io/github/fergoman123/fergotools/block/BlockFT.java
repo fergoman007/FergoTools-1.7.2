@@ -1,32 +1,24 @@
 package io.github.fergoman123.fergotools.block;
 
-import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class BlockFT extends Block{
-	private String name;
+import java.util.Random;
 
-	public BlockFT(Material material, String name){
-		super(material);
-		this.setCreativeTab(FergoTools.tabFergoTools);
-		this.setUnlocalizedName(name);
-		this.name = name;
-	}
+public abstract class BlockFT extends Block{
 
-	public String getName(){
-		return this.name;
-	}
+    public BlockFT(Material materialIn, String name) {
+        super(materialIn);
+        this.setUnlocalizedName(name);
+    }
 
-	public BlockFT register(){
-		GameRegistry.registerBlock(this, this.name);
-		RegisterHelper.getModelMesher().register(Item.getItemFromBlock(this), 0, new ModelResourceLocation("fergotools:" + this.name, "inventory"));
-		ModelBakery.addVariantName(Item.getItemFromBlock(this), "fergotools:" + this.name);
-		return this;
-	}
+    public String getUnlocalizedName(){
+        return NameHelper.getName(super.getUnlocalizedName());
+    }
+
+    public abstract Item getItemDropped(IBlockState state, Random rand, int fortune);
+    public abstract int quantityDropped(Random rand);
 }

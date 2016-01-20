@@ -1,19 +1,6 @@
-/*
-  * Fergoman123's Tools
-  * Copyright (c) 2014 fergoman123.
-  * All rights reserved. This program and the accompanying materials
-  * are made available under the terms of the GNU Lesser Public License v2.1
-  * which accompanies this distribution, and is available at
-  * http://www.gnu.org/licenses/gpl-3.0.html
-  */
-
 package io.github.fergoman123.fergotools.reference;
 
-/**
- * list of item names
- */
-public class ItemNames
-{
+public class ItemNames {
     public static final String quartzHelmet = "quartzHelmet";
     public static final String quartzChestplate = "quartzChestplate";
     public static final String quartzLeggings = "quartzLeggings";
@@ -84,12 +71,8 @@ public class ItemNames
     public static final String gemExp = "gemExp";
     public static final String gemExp2 = "gemExp2";
     public static final String gemExp3 = "gemExp3";
-    public static final String[] gemExpVariants = {gemExp, gemExp2, gemExp3};
 
     public static final String staffExp = "staffExp";
-    public static final String staffExp2 = "staffExp2";
-    public static final String staffExp3 = "staffExp3";
-    public static final String[] staffExpVariants = {"staffExp", "staffExp2", "staffExp3"};
 
     public static final String[] materials = {ingotObsidian, gemEmerald, gemLapis, ingotBronze, ingotCoal,ingotGlowstone, ingotAdamantium,gemSilk, gemRedstone, shardExp};
 
@@ -164,7 +147,6 @@ public class ItemNames
     public static final String silkShears = "silkShears";
     public static final String redstoneShears = "redstoneShears";
 
-    public static final String stickFT = "stickFT";
     public static final String stickObsidian = "stickObsidian";
     public static final String stickEmerald = "stickEmerald";
     public static final String stickLapis = "stickLapis";

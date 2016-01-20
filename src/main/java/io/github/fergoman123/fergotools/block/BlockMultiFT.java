@@ -1,78 +1,43 @@
 package io.github.fergoman123.fergotools.block;
 
-import io.github.fergoman123.fergotools.FergoTools;
-import io.github.fergoman123.fergoutil.helper.RegisterHelper;
-import io.github.fergoman123.fergoutil.item.ItemBlockVariants;
+import io.github.fergoman123.fergoutil.helper.NameHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.List;
+import java.util.Random;
 
 public abstract class BlockMultiFT extends Block {
 
-	private String[] subNames;
-	private String name;
+    private String[] subNames;
 
-	public BlockMultiFT(Material material, String[] subNames, String name) {
-		super(material);
-		this.setCreativeTab(FergoTools.tabFergoTools);
-		this.setUnlocalizedName(name);
-		this.subNames = subNames;
-		this.name = name;
-	}
+    public BlockMultiFT(Material materialIn, String[] subNames, String name) {
+        super(materialIn);
+        this.setUnlocalizedName(name);
+        this.subNames = subNames;
+    }
 
-	public String getUnlocalizedName(){
-		return String.format("item.ft.%s", this.name);
-	}
+    public String getUnlocalizedName() {
+        return NameHelper.getName(super.getUnlocalizedName());
+    }
 
-	public String[] getSubNames() {
-		return subNames;
-	}
+    public String[] getSubNames() {
+        return this.subNames;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public abstract Item getItemDropped(IBlockState state, Random rand, int fortune);
 
-	@Override
-	@SuppressWarnings("unchecked")
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
-		for (int i = 0; i < this.getSubNames().length; i++) {
-			list.add(new ItemStack(itemIn, 1, i));
-		}
-	}
+    public abstract int damageDropped(IBlockState state);
 
-	public static final class ItemBlockFT extends ItemBlockVariants{
+    public abstract IBlockState getStateFromMeta(int meta);
 
-		public ItemBlockFT(Block block){
-			super(block);
-		}
+    public abstract void getSubBlocks(Item item, CreativeTabs tab, List list);
 
-		@Override
-		public String getUnlocalizedName(ItemStack stack) {
-			BlockMultiFT multiFT = (BlockMultiFT)this.block;
-			return super.getUnlocalizedName() + "." + multiFT.getSubNames()[stack.getMetadata()];
-		}
-	}
+    public abstract int getMetaFromState(IBlockState state);
 
-	public BlockMultiFT register(){
-		GameRegistry.registerBlock(this, ItemBlockFT.class, this.name);
-		for (int i = 0; i < this.getSubNames().length; i++) {
-			RegisterHelper.getModelMesher().register(Item.getItemFromBlock(this), i, new ModelResourceLocation("fergotools:" + this.getSubNames()[i], "inventory"));
-			ModelBakery.addVariantName(Item.getItemFromBlock(this), "fergotools:" + this.getSubNames()[i]);
-		}
-		return this;
-	}
-
-	public abstract int damageDropped(IBlockState state);
-	public abstract IBlockState getStateFromMeta(int meta);
-	public abstract int getMetaFromState(IBlockState state);
-	public abstract BlockState createBlockState();
+    public abstract BlockState createBlockState();
 }

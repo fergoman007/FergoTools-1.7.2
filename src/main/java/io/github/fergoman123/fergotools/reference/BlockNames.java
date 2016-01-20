@@ -1,20 +1,6 @@
-/*
-  * Fergoman123's Tools
-  * Copyright (c) 2014 fergoman123.
-  * All rights reserved. This program and the accompanying materials
-  * are made available under the terms of the GNU Lesser Public License v2.1
-  * which accompanies this distribution, and is available at
-  * http://www.gnu.org/licenses/gpl-3.0.html
-  */
-
 package io.github.fergoman123.fergotools.reference;
 
-/**
- * a list of block names
- */
-public class BlockNames
-{
-    public static final String prefix = "fergotools.";
+public class BlockNames {
 
     public static final String oreExperience = "oreExperience";
     public static final String oreObsidian = "oreObsidian";
@@ -22,11 +8,10 @@ public class BlockNames
     public static final String oreGemLapis = "oreGemLapis";
     public static final String oreBronze = "oreBronze";
     public static final String oreAdamantium = "oreAdamantium";
-    public static final String oreGemRedstone = "oreGemRedstone";
+    public static final String oreGemRedstone = "oreCrystalRed";
 
     public static final String[] ores = {oreExperience, oreObsidian, oreGemEmerald, oreGemLapis, oreBronze, oreAdamantium, oreGemRedstone};
 
-    public static final String storageFT = "storageFT";
     public static final String blockExperience = "blockExperience";
     public static final String blockObsidian = "blockObsidian";
     public static final String blockGemEmerald = "blockGemEmerald";
@@ -39,25 +24,13 @@ public class BlockNames
     public static final String blockGemRedstone = "blockGemRedstone";
     public static final String blockExpCollector = "blockExpCollector";
 
-    public static final String[] blocks =
-            {
-                    blockExperience,
-                    blockExpCollector,
-                    blockObsidian,
-                    blockGemEmerald,
-                    blockGemLapis,
-                    blockBronze,
-                    blockCoal,
-                    blockGlowstone,
-                    blockAdamantium,
-                    blockGemSilk,
-                    blockGemRedstone
-            };
+    public static final String[] blocks = {blockObsidian, blockGemEmerald, blockGemLapis, blockBronze, blockCoal, blockGlowstone, blockAdamantium, blockGemSilk, blockGemRedstone, blockExperience, blockExpCollector};
 
     public static final String blockFergoGlass = "blockFergoGlass";
 
     public static final String quartzFurnaceIdle = "quartzFurnaceIdle";
     public static final String quartzFurnaceActive = "quartzFurnaceActive";
+    public static final String quartzFurnaceSide = "quartzFurnaceSide";
 
     public static final String obsidianFurnaceIdle = "obsidianFurnaceIdle";
     public static final String obsidianFurnaceActive = "obsidianFurnaceActive";
@@ -92,7 +65,7 @@ public class BlockNames
     public static final String[] furnaceIdle = {quartzFurnaceIdle, obsidianFurnaceIdle, emeraldFurnaceIdle, lapisFurnaceIdle, bronzeFurnaceIdle, coalFurnaceIdle, glowstoneFurnaceIdle, adamantiumFurnaceIdle, silkFurnaceIdle, redstoneFurnaceIdle, maceratorIdle};
     public static final String[] furnaceActive = {quartzFurnaceActive, obsidianFurnaceActive, emeraldFurnaceActive, lapisFurnaceActive, bronzeFurnaceActive, coalFurnaceActive, glowstoneFurnaceActive, adamantiumFurnaceActive, silkFurnaceActive, redstoneFurnaceActive, maceratorActive};
 
-    public static final String logFT = "logFT";
+    public static final String logFergo = "logFergo";
     public static final String logObsidian = "logObsidian";
     public static final String logEmerald = "logEmerald";
     public static final String logLapis = "logLapis";
@@ -105,7 +78,7 @@ public class BlockNames
 
     public static final String[] logs = {logObsidian, logEmerald, logLapis, logBronze, logCoal, logGlowstone, logAdamantium, logSilk, logRedstone};
 
-    public static final String plankFT = "plankFT";
+    public static final String plankFergo = "plankFergo";
     public static final String plankObsidian = "plankObsidian";
     public static final String plankEmerald = "plankEmerald";
     public static final String plankLapis = "plankLapis";
@@ -118,7 +91,7 @@ public class BlockNames
 
     public static final String[] planks = {plankObsidian, plankEmerald, plankLapis, plankBronze, plankCoal, plankGlowstone, plankAdamantium, plankSilk, plankRedstone};
 
-    public static final String workbenchFT = "workbenchFT";
+    public static final String fergoWorkbench = "fergoWorkbench";
     public static final String obsidianWorkbench = "obsidianWorkbench";
     public static final String emeraldWorkbench = "emeraldWorkbench";
     public static final String lapisWorkbench = "lapisWorkbench";
@@ -131,7 +104,7 @@ public class BlockNames
 
     public static final String[] workbenches = {obsidianWorkbench, emeraldWorkbench, lapisWorkbench, bronzeWorkbench, coalWorkbench, glowstoneWorkbench, adamantiumWorkbench, silkWorkbench, redstoneWorkbench};
 
-    public static final String leavesFT = "leavesFT";
+    public static final String leavesFergo = "leavesFergo";
     public static final String leavesObsidian = "leavesObsidian";
     public static final String leavesEmerald = "leavesEmerald";
     public static final String leavesLapis = "leavesLapis";
@@ -144,7 +117,7 @@ public class BlockNames
 
     public static final String[] leaves = {leavesObsidian, leavesEmerald, leavesLapis, leavesBronze, leavesCoal, leavesGlowstone, leavesAdamantium, leavesSilk, leavesRedstone};
 
-    public static final String saplingFT = "saplingFT";
+    public static final String saplingFergo = "saplingFergo";
     public static final String saplingObsidian = "saplingObsidian";
     public static final String saplingEmerald = "saplingEmerald";
     public static final String saplingLapis = "saplingLapis";
@@ -169,7 +142,6 @@ public class BlockNames
 
     public static final String[] stairs = {stairObsidian, stairEmerald, stairLapis, stairBronze, stairCoal, stairGlowstone, stairAdamantium, stairSilk, stairRedstone};
 
-    public static final String slabSingleFT = "slabSingleFT";
     public static final String slabObsidianSingle = "slabObsidianSingle";
     public static final String slabEmeraldSingle = "slabEmeraldSingle";
     public static final String slabLapisSingle = "slabLapisSingle";
@@ -182,7 +154,6 @@ public class BlockNames
 
     public static final String[] slabSingle = {slabObsidianSingle,slabEmeraldSingle,slabLapisSingle,slabBronzeSingle,slabCoalSingle,slabGlowstoneSingle, slabAdamantiumSingle, slabSilkSingle, slabRedstoneSingle};
 
-    public static final String slabDoubleFT = "slabDoubleFT";
     public static final String slabObsidianDouble = "slabObsidianDouble";
     public static final String slabEmeraldDouble = "slabEmeraldDouble";
     public static final String slabLapisDouble = "slabLapisDouble";
