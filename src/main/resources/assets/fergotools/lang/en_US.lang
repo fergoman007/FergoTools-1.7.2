@@ -1,19 +1,22 @@
-fergotools.tab.tabfergotools=Fergoman123's Tools
+fergotools:tabFergoTools=Fergoman123's Tools (Tools)
+fergotools:tabFergoItems=Fergoman123's Tools (Item)
+fergotools:tabFergoBlocks=Fergoman123's Tools (Blocks)
+fergotools:tabFergoMisc=Fergoman123's Tools (Misc)
 
 fergotools.oredict=Ore Dictionary Name:
 fergotools.tooltip.crafting=Crafting Item
 
-fergotools.tooltip.staffexp.rc=R-Click to Store 5 Levels of Experience
-fergotools.tooltip.staffexp2.rc=R-Click to Store 10 Levels of Experience
-fergotools.tooltip.staffexp3.rc=R-Click to Store 30 Levels of Experience
+fergotools:tooltip.staffexp.rc=R-Click to Store 5 Levels of Experience
+fergotools:tooltip.staffexp2.rc=R-Click to Store 10 Levels of Experience
+fergotools:tooltip.staffexp3.rc=R-Click to Store 30 Levels of Experience
 
-fergotools.tooltip.staffexp.src=Shift R-Click to Retrieve 5 Levels of Experience
-fergotools.tooltip.staffexp2.src=Shift R-Click to Retrieve 10 Levels of Experience
-fergotools.tooltip.staffexp3.src=Shift R-Click to Retrieve 30 Levels of Experience
+fergotools:tooltip.staffexp.src=Shift R-Click to Retrieve 5 Levels of Experience
+fergotools:tooltip.staffexp2.src=Shift R-Click to Retrieve 10 Levels of Experience
+fergotools:tooltip.staffexp3.src=Shift R-Click to Retrieve 30 Levels of Experience
 
-fergotools.tooltip.gemexp=Stores 5 Levels of Experience
-fergotools.tooltip.gemexp2=Stores 10 Levels of Experience
-fergotools.tooltip.gemexp3=Stores 30 Levels of Experience
+fergotools:tooltip.gemexp=Stores 5 Levels of Experience
+fergotools:tooltip.gemexp2=Stores 10 Levels of Experience
+fergotools:tooltip.gemexp3=Stores 30 Levels of Experience
 
 item.fergotools.ingotObsidian.name=Obsidian Ingot
 item.fergotools.gemEmerald.name=Emerald Gem
@@ -24,9 +27,9 @@ item.fergotools.ingotGlowstone.name=Glowstone Ingot
 item.fergotools.ingotAdamantium.name=Adamantium Ingot
 item.fergotools.gemSilk.name=Silk Gem
 item.fergotools.gemRedstone.name=Redstone Gem
-item.fergotools.staffExp.name=Basic Staff of Experience
-item.fergotools.staffExp2.name=Greater Staff of Experience
-item.fergotools.staffExp3.name=Ultimate Staff of Experience
+item.fergotools.staffExp.staffExp.name=Basic Staff of Experience
+item.fergotools.staffExp.staffExp2.name=Greater Staff of Experience
+item.fergotools.staffExp.staffExp3.name=Ultimate Staff of Experience
 item.fergotools.gemExp.gemExp.name=Experience Crystal
 item.fergotools.gemExp.gemExp2.name=Experience Crystal
 item.fergotools.gemExp.gemExp3.name=Experience Crystal
@@ -80,29 +83,6 @@ tile.fergotools.workbenchFT.bronzeWorkbench.name=Bronze Crafting Table
 container.FergoTools:quartzFurnace=Quartz Furnace
 fergotools.container.macerator=Macerator
 
-fergotools.toolmaterial=Tool Material:
-fergotools.usesleft=Uses Left:
-fergotools.harvest=Harvest Level:
-fergotools.maxuses=Max Uses:
-fergotools.eff=Efficiency:
-fergotools.damagevsentity=Damage Vs Entity:
-fergotools.enchantability=Enchantability:
+fergotools:tooltip.shardExp=R-Click to recieve 1 Level of Experience
 
-fergotools.tooltip.oredict=Ore Dictionary Name:
-
-fergotools.tooltip.shardExp.rclick=R-Click to recieve 1 Level of Experience
-fergotools.tooltip.holdShift=<Hold Shift for Info>
-fergotools.tooltip.expCollector.ctItem=Crafting Item
-
-fergotools.tooltip.oredict.ingotObsidian=ingotObsidian
-fergotools.tooltip.oredict.gemEmerald=gemEmerald
-fergotools.tooltip.oredict.gemLapis=gemLapis
-fergotools.tooltip.oredict.ingotBronze=ingotBronze
-fergotools.tooltip.oredict.ingotCoal=ingotCoal
-fergotools.tooltip.oredict.ingotGlowstone=ingotGlowstone
-fergotools.tooltip.oredict.ingotAdamantium=ingotAdamantium
-fergotools.tooltip.oredict.gemSilk=gemSilk
-fergotools.tooltip.oredict.gemRedstone=gemRedstone
-fergotools.tooltip.oredict.shardExp=shardExp
-
-container.fergotools.quartzfurnace=Quartz Furnace
+fergotools:container.quartzFurnace=Quartz Furnace

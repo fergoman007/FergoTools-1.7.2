@@ -72,6 +72,8 @@ public class ItemNames {
     public static final String gemExp2 = "gemExp2";
     public static final String gemExp3 = "gemExp3";
 
+    public static final String[] expGems = {gemExp, gemExp2, gemExp3};
+
     public static final String staffExp = "staffExp";
 
     public static final String[] materials = {ingotObsidian, gemEmerald, gemLapis, ingotBronze, ingotCoal,ingotGlowstone, ingotAdamantium,gemSilk, gemRedstone, shardExp};

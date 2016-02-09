@@ -8,10 +8,11 @@ public class BlockNames {
     public static final String oreGemLapis = "oreGemLapis";
     public static final String oreBronze = "oreBronze";
     public static final String oreAdamantium = "oreAdamantium";
-    public static final String oreGemRedstone = "oreCrystalRed";
+    public static final String oreGemRedstone = "oreGemRedstone";
 
     public static final String[] ores = {oreExperience, oreObsidian, oreGemEmerald, oreGemLapis, oreBronze, oreAdamantium, oreGemRedstone};
 
+    public static final String blockStorageFT = "blockStorageFT";
     public static final String blockExperience = "blockExperience";
     public static final String blockObsidian = "blockObsidian";
     public static final String blockGemEmerald = "blockGemEmerald";

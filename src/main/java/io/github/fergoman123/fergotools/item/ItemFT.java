@@ -1,22 +1,12 @@
 package io.github.fergoman123.fergotools.item;
 
-import io.github.fergoman123.fergoutil.helper.NameHelper;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import io.github.fergoman123.fergoutil.item.ItemFergo;
+import net.minecraft.creativetab.CreativeTabs;
 
-public class ItemFT extends Item {
+public class ItemFT extends ItemFergo {
 
-    public ItemFT(String name) {
+    public ItemFT(CreativeTabs tab, String name) {
+        super(tab, "fergotools", name);
         this.setUnlocalizedName(name);
-    }
-
-    public String getUnlocalizedName(){
-        return String.format("item.ft.%s", NameHelper.getName(super.getUnlocalizedName()));
-    }
-
-    public String getUnlocalizedName(ItemStack stack){
-        return String.format("item.ft.%s", NameHelper.getName(super.getUnlocalizedName(stack)));
     }
 }
