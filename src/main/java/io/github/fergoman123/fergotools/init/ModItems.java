@@ -155,15 +155,15 @@ public class ModItems {
         GameRegistry.registerItem(emeraldHoe, ItemNames.emeraldHoe);
         GameRegistry.registerItem(emeraldSword, ItemNames.emeraldSword);
 
-        register(ingotObsidian, 0, ItemNames.ingotObsidian);
-        register(gemEmerald, 0, ItemNames.gemEmerald);
-        register(gemLapis, 0, ItemNames.gemLapis);
-        register(ingotBronze, 0, ItemNames.ingotBronze);
-        register(ingotCoal, 0, ItemNames.ingotCoal);
-        register(ingotGlowstone, 0, ItemNames.ingotGlowstone);
-        register(ingotAdamantium, 0, ItemNames.ingotAdamantium);
-        register(gemSilk, 0, ItemNames.gemSilk);
-        register(gemRedstone, 0, ItemNames.gemRedstone);
+        register(ingotObsidian, ItemNames.ingotObsidian);
+        register(gemEmerald, ItemNames.gemEmerald);
+        register(gemLapis, ItemNames.gemLapis);
+        register(ingotBronze, ItemNames.ingotBronze);
+        register(ingotCoal, ItemNames.ingotCoal);
+        register(ingotGlowstone, ItemNames.ingotGlowstone);
+        register(ingotAdamantium, ItemNames.ingotAdamantium);
+        register(gemSilk, ItemNames.gemSilk);
+        register(gemRedstone, ItemNames.gemRedstone);
 
         register(gemExp, 0, ItemNames.gemExp);
         register(gemExp, 1, ItemNames.gemExp2);
@@ -173,26 +173,26 @@ public class ModItems {
         register(staffExp, 1, ItemStaffExp.names[1]);
         register(staffExp, 2, ItemStaffExp.names[2]);
 
-        register(shardExp, 0, ItemNames.shardExp);
-        register(expCollector, 0, ItemNames.expCollector);
+        register(shardExp, ItemNames.shardExp);
+        register(expCollector, ItemNames.expCollector);
 
-        register(quartzPickaxe, 0, ItemNames.quartzPickaxe);
-        register(quartzShovel, 0, ItemNames.quartzShovel);
-        register(quartzAxe, 0, ItemNames.quartzAxe);
-        register(quartzHoe, 0, ItemNames.quartzHoe);
-        register(quartzSword, 0, ItemNames.quartzSword);
+        register(quartzPickaxe, ItemNames.quartzPickaxe);
+        register(quartzShovel, ItemNames.quartzShovel);
+        register(quartzAxe, ItemNames.quartzAxe);
+        register(quartzHoe, ItemNames.quartzHoe);
+        register(quartzSword, ItemNames.quartzSword);
 
-        register(obsidianPickaxe, 0, ItemNames.obsidianPickaxe);
-        register(obsidianShovel, 0, ItemNames.obsidianShovel);
-        register(obsidianAxe, 0, ItemNames.obsidianAxe);
-        register(obsidianHoe, 0, ItemNames.obsidianHoe);
-        register(obsidianSword, 0, ItemNames.obsidianSword);
+        register(obsidianPickaxe, ItemNames.obsidianPickaxe);
+        register(obsidianShovel, ItemNames.obsidianShovel);
+        register(obsidianAxe, ItemNames.obsidianAxe);
+        register(obsidianHoe, ItemNames.obsidianHoe);
+        register(obsidianSword, ItemNames.obsidianSword);
 
-        register(emeraldPickaxe, 0, ItemNames.emeraldPickaxe);
-        register(emeraldShovel, 0, ItemNames.emeraldShovel);
-        register(emeraldAxe, 0, ItemNames.emeraldAxe);
-        register(emeraldHoe, 0, ItemNames.emeraldHoe);
-        register(emeraldSword, 0, ItemNames.emeraldSword);
+        register(emeraldPickaxe, ItemNames.emeraldPickaxe);
+        register(emeraldShovel, ItemNames.emeraldShovel);
+        register(emeraldAxe, ItemNames.emeraldAxe);
+        register(emeraldHoe, ItemNames.emeraldHoe);
+        register(emeraldSword, ItemNames.emeraldSword);
 
         variant(ingotObsidian, ItemNames.ingotObsidian);
         variant(gemEmerald, ItemNames.gemEmerald);
@@ -235,10 +235,14 @@ public class ModItems {
     }
 
     private static void register(Item item, int meta, String name){
-        ModelHelper.getModelMesher().register(item, meta, new ModelResLocFT(name));
+        ModelHelper.register(item, meta, new ModelResLocFT(name));
+    }
+
+    private static void register(Item item, String name){
+        ModelHelper.register(item, new ModelResLocFT(name));
     }
 
     private static void variant(Item item, String name){
-        ModelBakery.registerItemVariants(item, new ResLocFT(name));
+        ModelHelper.variant(item, new ResLocFT(name));
     }
 }

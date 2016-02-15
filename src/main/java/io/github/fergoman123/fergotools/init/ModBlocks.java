@@ -98,10 +98,10 @@ public class ModBlocks {
     }
 
     private static void register(Block block, int meta, String name){
-        ModelHelper.getModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResLocFT(name));
+        ModelHelper.register(block, meta, new ModelResLocFT(name));
     }
 
     private static void variant(Block block, String name){
-        ModelBakery.registerItemVariants(Item.getItemFromBlock(block), new ResLocFT(name));
+        ModelHelper.variant(block, new ResLocFT(name));
     }
 }

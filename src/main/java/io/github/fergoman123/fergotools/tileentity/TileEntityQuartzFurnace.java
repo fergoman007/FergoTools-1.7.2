@@ -1,36 +1,29 @@
 package io.github.fergoman123.fergotools.tileentity;
 
-import io.github.fergoman123.fergotools.block.BlockFurnaceFT;
 import io.github.fergoman123.fergotools.block.BlockQuartzFurnace;
 import io.github.fergoman123.fergotools.inventory.ContainerQuartzFurnace;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import io.github.fergoman123.fergotools.reference.ContainerNames;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.SlotFurnaceFuel;
-import net.minecraft.item.*;
-import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.tileentity.TileEntityLockable;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ITickable;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.Constants;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 
-public class TileEntityQuartzFurnace extends TileEntityFurnaceFT{
+public class TileEntityQuartzFurnace extends TileEntityFurnaceFT {
 
     public TileEntityQuartzFurnace() {
         super(200);
@@ -38,8 +31,7 @@ public class TileEntityQuartzFurnace extends TileEntityFurnaceFT{
 
     @Override
     public String getName() {
-        String name = BlockFurnaceFT.FurnaceType.quartzFurnace.getInventoryName();
-        return this.hasCustomName() ? this.inventoryName : name;
+        return this.hasCustomName() ? this.inventoryName : ContainerNames.containerQuartzFurnace;
     }
 
     @Override
@@ -125,7 +117,7 @@ public class TileEntityQuartzFurnace extends TileEntityFurnaceFT{
 
             if (flag != this.isBurning()) {
                 flag1 = true;
-                BlockFurnaceFT.setState(this.isBurning(), this.worldObj, this.pos);
+                BlockQuartzFurnace.setState(this.isBurning(), this.worldObj, this.pos);
             }
         }
 
